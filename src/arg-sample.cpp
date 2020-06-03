@@ -25,7 +25,7 @@
 #include "argweaver/recomb.h"
 
 // tskit includes
-#include <tskit.h>
+// #include <tskit.h>
 
 using namespace argweaver;
 

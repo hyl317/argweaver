@@ -131,7 +131,7 @@ tskit:
 	# NB!!! Make sure to checkout at a version tag!
 	cd tskit && git checkout C_0.99.1
 
-CFLAGS += -Ikastore/c -I tskit/c
+CFLAGS += -Ikastore/c -Itskit/c
 
 
 #=============================================================================
@@ -142,7 +142,7 @@ CFLAGS += -Ikastore/c -I tskit/c
 # default targets
 all: $(PROGS) $(LIBARGWEAVER) $(LIBARGWEAVER_SHARED)
 
-bin/arg-sample: src/arg-sample.o $(LIBARGWEAVER) libtskit.a
+bin/arg-sample: src/arg-sample.o $(LIBARGWEAVER)
 	$(CXX) $(CFLAGS) -o bin/arg-sample src/arg-sample.o $(LIBARGWEAVER)
 
 bin/smc2bed: src/smc2bed.o $(LIBARGWEAVER)

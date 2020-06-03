@@ -879,9 +879,7 @@ bool read_local_trees(FILE *infile, const double *times, int ntimes,
 bool read_local_trees(const char *filename, const double *times, int ntimes,
                       LocalTrees *trees, vector<string> &seqnames);
 bool read_local_trees_from_ts(const char *ts_fileName, const double *times, int ntimes,
-                      LocalTrees *trees, vector<string> &seqnames,
-                      vector<int> *invisible_recomb_pos=NULL,
-                      vector<Spr> *invisible_recombs=NULL);
+                      LocalTrees *trees, vector<string> &seqnames);
 void write_newick_Tree_for_bedfile(FILE *out, const LocalTree *tree,
                                    const char *const *names,
                                    const ArgModel *model,

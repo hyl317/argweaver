@@ -1,0 +1,1471 @@
+arg-sample 1.0
+start time: Wed Jun  3 16:09:27 2020
+command: ../bin/arg-sample -s ../argweaver/examples/sim1/sim1.sites -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 200e3 -c 20 -n 100 -o ../argweaver/examples/sim1.sample --ts tsinfer
+random seed: 1591214967
+read input sites (chrom=chr, start=0, end=100000, length=100000, nseqs=8, nsites=170)
+0 sites are partially masked but otherwise invariant
+masked 0 (0.0%) positions
+
+model: 
+  mu = 3.600000e-07
+  rho = 3.200000e-07
+  smc_prime = false
+  ntimes = 20
+  times = [0.000000,49.193481,122.586947,232.085215,395.449492,639.178343,1002.805899,1545.314509,2354.701987,3562.255340,5363.846221,8051.702368,12061.808515,18044.625462,26970.598323,40287.567936,60155.618452,89797.454603,134021.141756,200000.000000]
+  npop = 1
+  popsizes = [10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0,
+              10000.0]
+
+inside read_local_trees_from_tsmax memory usage: 2.2 MB
+
+Sequentially Sample Initial ARG (8 sequences)
+------------------------------------------------
+add sequence 2 of 8 (n5)
+forward ( 19 states,      1 blocks):  23.8 ms
+trace:                                 1.1 ms
+add thread:                            1.5 ms
+
+add sequence 3 of 8 (n3)
+forward ( 32 states,     73 blocks):  40.1 ms
+trace:                                 4.1 ms
+add thread:                            3.1 ms
+
+add sequence 4 of 8 (n0)
+forward ( 42 states,     95 blocks):  48.9 ms
+trace:                                 5.8 ms
+add thread:                            4.3 ms
+
+add sequence 5 of 8 (n1)
+forward ( 53 states,    125 blocks):  62.9 ms
+trace:                                 7.9 ms
+add thread:                            5.9 ms
+
+add sequence 6 of 8 (n6)
+forward ( 65 states,    148 blocks):  77.4 ms
+trace:                                10.2 ms
+add thread:                            7.4 ms
+
+add sequence 7 of 8 (n2)
+forward ( 76 states,    166 blocks):  90.1 ms
+trace:                                11.9 ms
+add thread:                            8.6 ms
+
+add sequence 8 of 8 (n4)
+forward ( 81 states,    166 blocks):  90.5 ms
+trace:                                12.8 ms
+add thread:                            9.0 ms
+
+
+prior:      -2415.932408
+likelihood: -140375.111563
+joint:      -142791.043970
+nrecombs:   181
+noncompats: 3
+arglen:     10145581153.104216
+max memory: 5.9 MB
+
+Climb Search (0 iterations)
+-----------------------------
+
+
+prior:      -2415.932408
+likelihood: -140375.111563
+joint:      -142791.043970
+nrecombs:   181
+noncompats: 3
+arglen:     10145581153.104216
+max memory: 5.9 MB
+
+Resample All Branches (100 iterations)
+--------------------------------------
+sample 1
+resample_arg_regions: accept=0.250000
+sample time: 403.9 ms
+
+prior:      -2296.728254
+likelihood: -140380.252980
+joint:      -142676.981233
+nrecombs:   172
+noncompats: 3
+arglen:     10289284037.709352
+max memory: 6.1 MB
+
+sample 2
+forward ( 84 states,    173 blocks): 100.9 ms
+trace:                                13.2 ms
+add thread:                            9.2 ms
+resample_arg_leaf: accept=1.000000
+sample time: 124.4 ms
+
+prior:      -2296.652404
+likelihood: -140379.565004
+joint:      -142676.217408
+nrecombs:   172
+noncompats: 3
+arglen:     10270994864.313002
+max memory: 6.3 MB
+
+sample 3
+resample_arg_regions: accept=0.500000
+sample time: 293.7 ms
+
+prior:      -2375.147725
+likelihood: -140362.305621
+joint:      -142737.453346
+nrecombs:   179
+noncompats: 3
+arglen:     9589014475.484293
+max memory: 6.3 MB
+
+sample 4
+resample_arg_regions: accept=0.550000
+sample time: 422.6 ms
+
+prior:      -2255.302844
+likelihood: -140359.598190
+joint:      -142614.901035
+nrecombs:   170
+noncompats: 3
+arglen:     9785075427.529943
+max memory: 6.3 MB
+
+sample 5
+resample_arg_regions: accept=0.250000
+sample time: 438.1 ms
+
+prior:      -2253.202610
+likelihood: -140358.643145
+joint:      -142611.845755
+nrecombs:   169
+noncompats: 3
+arglen:     9358447887.551737
+max memory: 6.3 MB
+
+sample 6
+resample_arg_regions: accept=0.300000
+sample time: 275.9 ms
+
+prior:      -2292.529186
+likelihood: -140361.436011
+joint:      -142653.965198
+nrecombs:   173
+noncompats: 3
+arglen:     9185547591.031378
+max memory: 6.3 MB
+
+sample 7
+forward ( 78 states,    158 blocks):  88.4 ms
+trace:                                12.0 ms
+add thread:                            8.1 ms
+resample_arg_leaf: accept=1.000000
+sample time: 109.6 ms
+
+prior:      -2268.642579
+likelihood: -140363.756944
+joint:      -142632.399523
+nrecombs:   171
+noncompats: 3
+arglen:     9112184854.092104
+max memory: 6.3 MB
+
+sample 8
+forward ( 81 states,    154 blocks):  86.9 ms
+trace:                                11.9 ms
+add thread:                            7.9 ms
+resample_arg_leaf: accept=1.000000
+sample time: 107.8 ms
+
+prior:      -2183.176304
+likelihood: -140360.916971
+joint:      -142544.093275
+nrecombs:   164
+noncompats: 3
+arglen:     8794621303.206011
+max memory: 6.3 MB
+
+sample 9
+resample_arg_regions: accept=0.500000
+sample time: 327.0 ms
+
+prior:      -2133.752068
+likelihood: -140359.632142
+joint:      -142493.384210
+nrecombs:   162
+noncompats: 3
+arglen:     8917291827.429617
+max memory: 6.3 MB
+
+sample 10
+forward ( 84 states,    131 blocks):  78.2 ms
+trace:                                10.8 ms
+add thread:                            7.1 ms
+resample_arg_leaf: accept=1.000000
+sample time:  97.2 ms
+
+prior:      -2174.072764
+likelihood: -140354.141344
+joint:      -142528.214108
+nrecombs:   164
+noncompats: 3
+arglen:     8872629537.557419
+max memory: 6.3 MB
+
+sample 11
+resample_arg_regions: accept=0.400000
+sample time: 307.3 ms
+
+prior:      -2218.697698
+likelihood: -140362.211067
+joint:      -142580.908764
+nrecombs:   167
+noncompats: 3
+arglen:     8936090949.601269
+max memory: 6.3 MB
+
+sample 12
+forward ( 84 states,    157 blocks):  87.7 ms
+trace:                                12.2 ms
+add thread:                            8.1 ms
+resample_arg_leaf: accept=1.000000
+sample time: 109.2 ms
+
+prior:      -2352.792055
+likelihood: -140356.176385
+joint:      -142708.968439
+nrecombs:   179
+noncompats: 3
+arglen:     9337787261.646261
+max memory: 6.4 MB
+
+sample 13
+forward ( 92 states,    164 blocks):  90.1 ms
+trace:                                12.1 ms
+add thread:                            8.3 ms
+resample_arg_leaf: accept=1.000000
+sample time: 111.6 ms
+
+prior:      -2223.908047
+likelihood: -140349.105400
+joint:      -142573.013448
+nrecombs:   169
+noncompats: 3
+arglen:     8972085132.698996
+max memory: 6.4 MB
+
+sample 14
+forward ( 90 states,    138 blocks):  79.0 ms
+trace:                                10.9 ms
+add thread:                            7.2 ms
+resample_arg_leaf: accept=1.000000
+sample time:  97.6 ms
+
+prior:      -2090.845032
+likelihood: -140357.499819
+joint:      -142448.344851
+nrecombs:   158
+noncompats: 3
+arglen:     9253865498.617462
+max memory: 6.4 MB
+
+sample 15
+resample_arg_regions: accept=0.200000
+sample time: 244.3 ms
+
+prior:      -2119.206477
+likelihood: -140354.111703
+joint:      -142473.318180
+nrecombs:   162
+noncompats: 3
+arglen:     9357434453.836302
+max memory: 6.4 MB
+
+sample 16
+resample_arg_regions: accept=0.350000
+sample time: 366.8 ms
+
+prior:      -1941.988152
+likelihood: -140353.182054
+joint:      -142295.170206
+nrecombs:   145
+noncompats: 3
+arglen:     9453464027.124216
+max memory: 6.4 MB
+
+sample 17
+forward ( 99 states,    146 blocks):  87.8 ms
+trace:                                11.6 ms
+add thread:                            7.5 ms
+resample_arg_leaf: accept=1.000000
+sample time: 108.4 ms
+
+prior:      -1941.296383
+likelihood: -140353.908074
+joint:      -142295.204456
+nrecombs:   145
+noncompats: 3
+arglen:     9471753200.520580
+max memory: 6.4 MB
+
+sample 18
+forward ( 89 states,    130 blocks):  76.9 ms
+trace:                                10.8 ms
+add thread:                            6.8 ms
+resample_arg_leaf: accept=1.000000
+sample time:  95.7 ms
+
+prior:      -2070.354156
+likelihood: -140356.317155
+joint:      -142426.671311
+nrecombs:   156
+noncompats: 3
+arglen:     9903294323.235504
+max memory: 6.4 MB
+
+sample 19
+forward ( 92 states,    140 blocks):  81.6 ms
+trace:                                11.3 ms
+add thread:                            7.1 ms
+resample_arg_leaf: accept=1.000000
+sample time: 101.2 ms
+
+prior:      -1973.523944
+likelihood: -140343.015256
+joint:      -142316.539200
+nrecombs:   147
+noncompats: 2
+arglen:     9749103536.205425
+max memory: 6.4 MB
+
+sample 20
+forward ( 88 states,    140 blocks):  82.7 ms
+trace:                                11.3 ms
+add thread:                            7.2 ms
+resample_arg_leaf: accept=1.000000
+sample time: 101.7 ms
+
+prior:      -2005.797091
+likelihood: -140335.954787
+joint:      -142341.751878
+nrecombs:   149
+noncompats: 1
+arglen:     9784720161.049707
+max memory: 6.4 MB
+
+sample 21
+forward ( 88 states,    140 blocks):  85.6 ms
+trace:                                11.1 ms
+add thread:                            7.1 ms
+resample_arg_leaf: accept=1.000000
+sample time: 104.4 ms
+
+prior:      -1953.827752
+likelihood: -140337.624317
+joint:      -142291.452069
+nrecombs:   146
+noncompats: 1
+arglen:     9606966614.529009
+max memory: 6.4 MB
+
+sample 22
+forward ( 83 states,    116 blocks):  71.1 ms
+trace:                                 9.7 ms
+add thread:                            5.9 ms
+resample_arg_leaf: accept=1.000000
+sample time:  87.2 ms
+
+prior:      -1759.453418
+likelihood: -140326.510151
+joint:      -142085.963570
+nrecombs:   129
+noncompats: 1
+arglen:     9099989775.384388
+max memory: 6.4 MB
+
+sample 23
+forward ( 87 states,    123 blocks):  76.0 ms
+trace:                                10.2 ms
+add thread:                            6.4 ms
+resample_arg_leaf: accept=1.000000
+sample time:  93.0 ms
+
+prior:      -1830.182349
+likelihood: -140331.391594
+joint:      -142161.573944
+nrecombs:   133
+noncompats: 1
+arglen:     9306122106.804251
+max memory: 6.4 MB
+
+sample 24
+resample_arg_regions: accept=0.000000
+sample time: 291.4 ms
+
+prior:      -1830.182349
+likelihood: -140331.391594
+joint:      -142161.573944
+nrecombs:   133
+noncompats: 1
+arglen:     9306122106.804251
+max memory: 6.4 MB
+
+sample 25
+resample_arg_regions: accept=0.150000
+sample time: 401.7 ms
+
+prior:      -1928.726744
+likelihood: -140329.720571
+joint:      -142258.447315
+nrecombs:   141
+noncompats: 1
+arglen:     9063296434.164650
+max memory: 6.4 MB
+
+sample 26
+resample_arg_regions: accept=0.200000
+sample time: 287.1 ms
+
+prior:      -2050.164891
+likelihood: -140328.964163
+joint:      -142379.129054
+nrecombs:   151
+noncompats: 1
+arglen:     9215901123.792751
+max memory: 6.4 MB
+
+sample 27
+forward ( 93 states,    145 blocks):  82.4 ms
+trace:                                11.6 ms
+add thread:                            7.4 ms
+resample_arg_leaf: accept=1.000000
+sample time: 102.5 ms
+
+prior:      -2116.059679
+likelihood: -140330.913428
+joint:      -142446.973107
+nrecombs:   157
+noncompats: 1
+arglen:     9539375385.825022
+max memory: 6.4 MB
+
+sample 28
+forward ( 97 states,    158 blocks):  94.3 ms
+trace:                                11.4 ms
+add thread:                            8.2 ms
+resample_arg_leaf: accept=1.000000
+sample time: 115.4 ms
+
+prior:      -2117.928337
+likelihood: -140330.064396
+joint:      -142447.992733
+nrecombs:   157
+noncompats: 1
+arglen:     9516166864.339321
+max memory: 6.6 MB
+
+sample 29
+forward ( 87 states,    131 blocks):  77.1 ms
+trace:                                10.6 ms
+add thread:                            6.9 ms
+resample_arg_leaf: accept=1.000000
+sample time:  95.5 ms
+
+prior:      -2179.746985
+likelihood: -140322.532352
+joint:      -142502.279337
+nrecombs:   161
+noncompats: 1
+arglen:     9420440894.425817
+max memory: 6.6 MB
+
+sample 30
+forward ( 97 states,    162 blocks):  98.7 ms
+trace:                                15.1 ms
+add thread:                            9.6 ms
+resample_arg_leaf: accept=1.000000
+sample time: 124.7 ms
+
+prior:      -2178.070614
+likelihood: -140322.941025
+joint:      -142501.011639
+nrecombs:   161
+noncompats: 1
+arglen:     9432699589.166924
+max memory: 6.6 MB
+
+sample 31
+forward ( 97 states,    162 blocks): 105.4 ms
+trace:                                13.6 ms
+add thread:                            9.2 ms
+resample_arg_leaf: accept=1.000000
+sample time: 129.6 ms
+
+prior:      -2178.070614
+likelihood: -140322.941025
+joint:      -142501.011639
+nrecombs:   161
+noncompats: 1
+arglen:     9432699589.166924
+max memory: 6.6 MB
+
+sample 32
+resample_arg_regions: accept=0.200000
+sample time: 333.3 ms
+
+prior:      -2311.497424
+likelihood: -140318.091163
+joint:      -142629.588587
+nrecombs:   173
+noncompats: 1
+arglen:     9726595052.995035
+max memory: 6.6 MB
+
+sample 33
+resample_arg_regions: accept=0.300000
+sample time: 436.2 ms
+
+prior:      -2224.339737
+likelihood: -140334.580736
+joint:      -142558.920474
+nrecombs:   167
+noncompats: 1
+arglen:     9406809151.895264
+max memory: 6.6 MB
+
+sample 34
+forward ( 89 states,    131 blocks):  85.0 ms
+trace:                                11.6 ms
+add thread:                            7.5 ms
+resample_arg_leaf: accept=1.000000
+sample time: 105.3 ms
+
+prior:      -2129.316628
+likelihood: -140337.954182
+joint:      -142467.270810
+nrecombs:   159
+noncompats: 1
+arglen:     9882132189.997501
+max memory: 6.6 MB
+
+sample 35
+forward ( 89 states,    148 blocks):  91.5 ms
+trace:                                12.5 ms
+add thread:                            8.1 ms
+resample_arg_leaf: accept=1.000000
+sample time: 112.7 ms
+
+prior:      -2127.231549
+likelihood: -140335.566465
+joint:      -142462.798014
+nrecombs:   159
+noncompats: 1
+arglen:     9592411871.927961
+max memory: 6.6 MB
+
+sample 36
+forward ( 96 states,    160 blocks): 102.1 ms
+trace:                                13.4 ms
+add thread:                            8.9 ms
+resample_arg_leaf: accept=1.000000
+sample time: 124.9 ms
+
+prior:      -2127.042986
+likelihood: -140336.077908
+joint:      -142463.120895
+nrecombs:   159
+noncompats: 1
+arglen:     9603361698.672560
+max memory: 6.6 MB
+
+sample 37
+resample_arg_regions: accept=0.100000
+sample time: 331.9 ms
+
+prior:      -2112.030365
+likelihood: -140337.615818
+joint:      -142449.646183
+nrecombs:   158
+noncompats: 1
+arglen:     9309633377.821348
+max memory: 6.6 MB
+
+sample 38
+resample_arg_regions: accept=0.400000
+sample time: 450.8 ms
+
+prior:      -2181.688460
+likelihood: -140335.809178
+joint:      -142517.497638
+nrecombs:   163
+noncompats: 1
+arglen:     9347508647.898291
+max memory: 6.6 MB
+
+sample 39
+resample_arg_regions: accept=0.500000
+sample time: 402.4 ms
+
+prior:      -2109.711791
+likelihood: -140331.253524
+joint:      -142440.965314
+nrecombs:   158
+noncompats: 1
+arglen:     9798385955.754824
+max memory: 6.6 MB
+
+sample 40
+resample_arg_regions: accept=0.300000
+sample time: 483.8 ms
+
+prior:      -2076.900118
+likelihood: -140329.036417
+joint:      -142405.936535
+nrecombs:   151
+noncompats: 1
+arglen:     9663418784.263100
+max memory: 6.6 MB
+
+sample 41
+forward ( 86 states,    136 blocks):  87.8 ms
+trace:                                11.9 ms
+add thread:                            7.7 ms
+resample_arg_leaf: accept=1.000000
+sample time: 109.0 ms
+
+prior:      -2136.723589
+likelihood: -140332.854553
+joint:      -142469.578142
+nrecombs:   156
+noncompats: 1
+arglen:     9846938853.601934
+max memory: 6.6 MB
+
+sample 42
+forward ( 94 states,    157 blocks): 101.9 ms
+trace:                                13.0 ms
+add thread:                            8.8 ms
+resample_arg_leaf: accept=1.000000
+sample time: 125.3 ms
+
+prior:      -2136.723589
+likelihood: -140332.854553
+joint:      -142469.578142
+nrecombs:   156
+noncompats: 1
+arglen:     9846938853.601934
+max memory: 6.6 MB
+
+sample 43
+forward ( 88 states,    149 blocks):  94.7 ms
+trace:                                11.8 ms
+add thread:                            7.9 ms
+resample_arg_leaf: accept=1.000000
+sample time: 115.9 ms
+
+prior:      -2121.462271
+likelihood: -140334.843254
+joint:      -142456.305525
+nrecombs:   155
+noncompats: 1
+arglen:     9761208703.026327
+max memory: 6.6 MB
+
+sample 44
+resample_arg_regions: accept=0.050000
+sample time: 448.9 ms
+
+prior:      -2095.621343
+likelihood: -140331.325458
+joint:      -142426.946801
+nrecombs:   153
+noncompats: 1
+arglen:     9736894072.699333
+max memory: 6.6 MB
+
+sample 45
+forward ( 92 states,    154 blocks):  94.4 ms
+trace:                                12.2 ms
+add thread:                            8.2 ms
+resample_arg_leaf: accept=1.000000
+sample time: 116.2 ms
+
+prior:      -2095.575855
+likelihood: -140330.857377
+joint:      -142426.433231
+nrecombs:   153
+noncompats: 1
+arglen:     9725944245.954737
+max memory: 6.6 MB
+
+sample 46
+forward ( 92 states,    154 blocks):  94.0 ms
+trace:                                12.2 ms
+add thread:                            8.2 ms
+resample_arg_leaf: accept=1.000000
+sample time: 115.7 ms
+
+prior:      -2095.845756
+likelihood: -140330.552124
+joint:      -142426.397880
+nrecombs:   153
+noncompats: 1
+arglen:     9718604899.302977
+max memory: 6.6 MB
+
+sample 47
+forward ( 92 states,    154 blocks):  94.0 ms
+trace:                                12.2 ms
+add thread:                            8.2 ms
+resample_arg_leaf: accept=1.000000
+sample time: 115.7 ms
+
+prior:      -2095.621343
+likelihood: -140331.325458
+joint:      -142426.946801
+nrecombs:   153
+noncompats: 1
+arglen:     9736894072.699333
+max memory: 6.6 MB
+
+sample 48
+resample_arg_regions: accept=0.350000
+sample time: 381.7 ms
+
+prior:      -1891.710513
+likelihood: -140333.297826
+joint:      -142225.008339
+nrecombs:   135
+noncompats: 1
+arglen:     8994123553.061205
+max memory: 6.6 MB
+
+sample 49
+resample_arg_regions: accept=0.000000
+sample time: 260.2 ms
+
+prior:      -1891.710513
+likelihood: -140333.297826
+joint:      -142225.008339
+nrecombs:   135
+noncompats: 1
+arglen:     8994123553.061205
+max memory: 6.6 MB
+
+sample 50
+resample_arg_regions: accept=0.000000
+sample time: 231.0 ms
+
+prior:      -1891.710513
+likelihood: -140333.297826
+joint:      -142225.008339
+nrecombs:   135
+noncompats: 1
+arglen:     8994123553.061205
+max memory: 6.6 MB
+
+sample 51
+resample_arg_regions: accept=0.200000
+sample time: 375.7 ms
+
+prior:      -1819.663547
+likelihood: -140337.045973
+joint:      -142156.709520
+nrecombs:   130
+noncompats: 1
+arglen:     9036303099.573526
+max memory: 6.6 MB
+
+sample 52
+forward ( 86 states,    109 blocks):  72.5 ms
+trace:                                 9.7 ms
+add thread:                            6.1 ms
+resample_arg_leaf: accept=1.000000
+sample time:  89.7 ms
+
+prior:      -1910.352424
+likelihood: -140331.599455
+joint:      -142241.951879
+nrecombs:   138
+noncompats: 1
+arglen:     8909307825.122477
+max memory: 6.6 MB
+
+sample 53
+resample_arg_regions: accept=0.200000
+sample time: 292.8 ms
+
+prior:      -1886.673617
+likelihood: -140332.070550
+joint:      -142218.744167
+nrecombs:   136
+noncompats: 1
+arglen:     8373264730.250257
+max memory: 6.6 MB
+
+sample 54
+forward ( 95 states,    137 blocks):  87.6 ms
+trace:                                11.2 ms
+add thread:                            7.4 ms
+resample_arg_leaf: accept=1.000000
+sample time: 107.5 ms
+
+prior:      -1886.905312
+likelihood: -140331.338078
+joint:      -142218.243390
+nrecombs:   136
+noncompats: 1
+arglen:     8354975556.853900
+max memory: 6.6 MB
+
+sample 55
+forward ( 85 states,    128 blocks):  81.8 ms
+trace:                                10.3 ms
+add thread:                            6.8 ms
+resample_arg_leaf: accept=1.000000
+sample time: 100.3 ms
+
+prior:      -1865.929621
+likelihood: -140330.647244
+joint:      -142196.576865
+nrecombs:   134
+noncompats: 1
+arglen:     8192561647.288967
+max memory: 6.6 MB
+
+sample 56
+resample_arg_regions: accept=0.150000
+sample time: 526.4 ms
+
+prior:      -1880.113283
+likelihood: -140330.414288
+joint:      -142210.527571
+nrecombs:   136
+noncompats: 1
+arglen:     8351337760.426908
+max memory: 6.6 MB
+
+sample 57
+resample_arg_regions: accept=0.300000
+sample time: 297.9 ms
+
+prior:      -1863.178831
+likelihood: -140328.277032
+joint:      -142191.455863
+nrecombs:   135
+noncompats: 1
+arglen:     8457833369.181148
+max memory: 6.6 MB
+
+sample 58
+forward ( 85 states,    122 blocks):  76.6 ms
+trace:                                10.0 ms
+add thread:                            6.6 ms
+resample_arg_leaf: accept=1.000000
+sample time:  94.5 ms
+
+prior:      -1803.153559
+likelihood: -140321.122086
+joint:      -142124.275645
+nrecombs:   132
+noncompats: 0
+arglen:     8456362925.101665
+max memory: 6.6 MB
+
+sample 59
+forward ( 85 states,    122 blocks):  75.9 ms
+trace:                                 9.5 ms
+add thread:                            5.7 ms
+resample_arg_leaf: accept=1.000000
+sample time:  92.4 ms
+
+prior:      -1704.099571
+likelihood: -140329.722575
+joint:      -142033.822146
+nrecombs:   124
+noncompats: 1
+arglen:     8454779064.583611
+max memory: 6.6 MB
+
+sample 60
+resample_arg_regions: accept=0.000000
+sample time: 231.4 ms
+
+prior:      -1704.099571
+likelihood: -140329.722575
+joint:      -142033.822146
+nrecombs:   124
+noncompats: 1
+arglen:     8454779064.583611
+max memory: 6.6 MB
+
+sample 61
+resample_arg_regions: accept=0.200000
+sample time: 299.5 ms
+
+prior:      -1775.638521
+likelihood: -140328.287928
+joint:      -142103.926449
+nrecombs:   131
+noncompats: 1
+arglen:     8371119345.195358
+max memory: 6.6 MB
+
+sample 62
+resample_arg_regions: accept=0.400000
+sample time: 196.6 ms
+
+prior:      -1834.029347
+likelihood: -140323.037770
+joint:      -142157.067118
+nrecombs:   138
+noncompats: 1
+arglen:     8615210643.322248
+max memory: 6.6 MB
+
+sample 63
+forward ( 88 states,    126 blocks):  77.6 ms
+trace:                                10.1 ms
+add thread:                            6.6 ms
+resample_arg_leaf: accept=1.000000
+sample time:  95.7 ms
+
+prior:      -1889.700905
+likelihood: -140318.729723
+joint:      -142208.430628
+nrecombs:   140
+noncompats: 0
+arglen:     8849778626.323929
+max memory: 6.6 MB
+
+sample 64
+resample_arg_regions: accept=0.200000
+sample time: 213.8 ms
+
+prior:      -1986.146942
+likelihood: -140321.245371
+joint:      -142307.392313
+nrecombs:   148
+noncompats: 0
+arglen:     8884577349.506205
+max memory: 6.6 MB
+
+sample 65
+resample_arg_regions: accept=0.250000
+sample time: 360.9 ms
+
+prior:      -2130.401611
+likelihood: -140319.298682
+joint:      -142449.700293
+nrecombs:   163
+noncompats: 0
+arglen:     9688207163.477522
+max memory: 6.6 MB
+
+sample 66
+resample_arg_regions: accept=0.250000
+sample time: 357.7 ms
+
+prior:      -2245.384580
+likelihood: -140316.175442
+joint:      -142561.560023
+nrecombs:   174
+noncompats: 0
+arglen:     9930536640.326336
+max memory: 6.6 MB
+
+sample 67
+forward ( 88 states,    137 blocks):  80.7 ms
+trace:                                11.0 ms
+add thread:                            7.1 ms
+resample_arg_leaf: accept=1.000000
+sample time: 100.3 ms
+
+prior:      -1995.698170
+likelihood: -140321.475277
+joint:      -142317.173447
+nrecombs:   153
+noncompats: 0
+arglen:     9389506523.059673
+max memory: 6.6 MB
+
+sample 68
+resample_arg_regions: accept=0.450000
+sample time: 341.8 ms
+
+prior:      -2008.140765
+likelihood: -140320.085484
+joint:      -142328.226249
+nrecombs:   153
+noncompats: 0
+arglen:     8982743259.529049
+max memory: 6.6 MB
+
+sample 69
+resample_arg_regions: accept=0.400000
+sample time: 245.6 ms
+
+prior:      -2057.856531
+likelihood: -140325.185093
+joint:      -142383.041624
+nrecombs:   157
+noncompats: 0
+arglen:     9862954571.271559
+max memory: 6.6 MB
+
+sample 70
+resample_arg_regions: accept=0.300000
+sample time: 257.7 ms
+
+prior:      -2142.226765
+likelihood: -140333.619876
+joint:      -142475.846641
+nrecombs:   166
+noncompats: 0
+arglen:     9542734631.638630
+max memory: 6.6 MB
+
+sample 71
+resample_arg_regions: accept=0.400000
+sample time: 256.7 ms
+
+prior:      -2046.185237
+likelihood: -140320.527482
+joint:      -142366.712720
+nrecombs:   158
+noncompats: 0
+arglen:     9476208245.054861
+max memory: 6.6 MB
+
+sample 72
+forward ( 87 states,    142 blocks):  80.4 ms
+trace:                                11.3 ms
+add thread:                            7.2 ms
+resample_arg_leaf: accept=1.000000
+sample time: 100.3 ms
+
+prior:      -2176.255192
+likelihood: -140318.428787
+joint:      -142494.683979
+nrecombs:   168
+noncompats: 0
+arglen:     9806229020.404108
+max memory: 6.6 MB
+
+sample 73
+forward ( 98 states,    169 blocks):  98.9 ms
+trace:                                13.0 ms
+add thread:                            8.6 ms
+resample_arg_leaf: accept=1.000000
+sample time: 122.0 ms
+
+prior:      -2176.236648
+likelihood: -140318.706436
+joint:      -142494.943084
+nrecombs:   168
+noncompats: 0
+arglen:     9813568367.055870
+max memory: 6.6 MB
+
+sample 74
+resample_arg_regions: accept=0.200000
+sample time: 287.6 ms
+
+prior:      -2054.844378
+likelihood: -140323.485214
+joint:      -142378.329591
+nrecombs:   157
+noncompats: 0
+arglen:     10513932357.022600
+max memory: 6.6 MB
+
+sample 75
+forward ( 91 states,    147 blocks):  85.8 ms
+trace:                                11.6 ms
+add thread:                            7.4 ms
+resample_arg_leaf: accept=1.000000
+sample time: 105.9 ms
+
+prior:      -2052.171945
+likelihood: -140324.093316
+joint:      -142376.265261
+nrecombs:   156
+noncompats: 0
+arglen:     10302586983.989044
+max memory: 6.6 MB
+
+sample 76
+resample_arg_regions: accept=0.450000
+sample time: 368.7 ms
+
+prior:      -2042.957202
+likelihood: -140324.030534
+joint:      -142366.987736
+nrecombs:   153
+noncompats: 0
+arglen:     9966662863.274996
+max memory: 6.6 MB
+
+sample 77
+resample_arg_regions: accept=0.400000
+sample time: 251.8 ms
+
+prior:      -2256.362889
+likelihood: -140338.086718
+joint:      -142594.449607
+nrecombs:   171
+noncompats: 1
+arglen:     10506632771.595348
+max memory: 6.6 MB
+
+sample 78
+resample_arg_regions: accept=0.100000
+sample time: 510.4 ms
+
+prior:      -2290.559054
+likelihood: -140330.989702
+joint:      -142621.548756
+nrecombs:   172
+noncompats: 1
+arglen:     10450345483.006756
+max memory: 6.6 MB
+
+sample 79
+resample_arg_regions: accept=0.250000
+sample time: 496.4 ms
+
+prior:      -2287.001525
+likelihood: -140329.724245
+joint:      -142616.725771
+nrecombs:   174
+noncompats: 1
+arglen:     9941165034.288778
+max memory: 6.6 MB
+
+sample 80
+resample_arg_regions: accept=0.100000
+sample time: 286.4 ms
+
+prior:      -2379.895044
+likelihood: -140325.979704
+joint:      -142705.874748
+nrecombs:   181
+noncompats: 1
+arglen:     10157641431.219027
+max memory: 6.6 MB
+
+sample 81
+resample_arg_regions: accept=0.450000
+sample time: 430.3 ms
+
+prior:      -2208.317987
+likelihood: -140323.591607
+joint:      -142531.909594
+nrecombs:   165
+noncompats: 1
+arglen:     10313945785.273691
+max memory: 6.6 MB
+
+sample 82
+forward ( 91 states,    156 blocks):  96.9 ms
+trace:                                13.1 ms
+add thread:                            8.6 ms
+resample_arg_leaf: accept=1.000000
+sample time: 120.0 ms
+
+prior:      -2243.785575
+likelihood: -140322.998075
+joint:      -142566.783650
+nrecombs:   167
+noncompats: 1
+arglen:     10360280818.586628
+max memory: 6.6 MB
+
+sample 83
+resample_arg_regions: accept=0.350000
+sample time: 405.4 ms
+
+prior:      -2267.897363
+likelihood: -140312.584939
+joint:      -142580.482302
+nrecombs:   170
+noncompats: 0
+arglen:     10222213694.723536
+max memory: 6.6 MB
+
+sample 84
+resample_arg_regions: accept=0.350000
+sample time: 426.7 ms
+
+prior:      -2129.412480
+likelihood: -140333.322067
+joint:      -142462.734547
+nrecombs:   158
+noncompats: 0
+arglen:     10236634762.323088
+max memory: 6.6 MB
+
+sample 85
+forward ( 91 states,    148 blocks):  94.3 ms
+trace:                                12.8 ms
+add thread:                            8.2 ms
+resample_arg_leaf: accept=1.000000
+sample time: 116.7 ms
+
+prior:      -2166.349162
+likelihood: -140331.300643
+joint:      -142497.649805
+nrecombs:   160
+noncompats: 0
+arglen:     10240916814.508083
+max memory: 6.6 MB
+
+sample 86
+resample_arg_regions: accept=0.300000
+sample time: 295.7 ms
+
+prior:      -2231.240285
+likelihood: -140318.627277
+joint:      -142549.867562
+nrecombs:   169
+noncompats: 0
+arglen:     9976723280.650385
+max memory: 6.6 MB
+
+sample 87
+forward ( 86 states,    162 blocks): 100.1 ms
+trace:                                13.3 ms
+add thread:                            8.9 ms
+resample_arg_leaf: accept=1.000000
+sample time: 123.4 ms
+
+prior:      -2249.173342
+likelihood: -140326.551022
+joint:      -142575.724364
+nrecombs:   171
+noncompats: 1
+arglen:     9981131612.463572
+max memory: 6.6 MB
+
+sample 88
+resample_arg_regions: accept=0.450000
+sample time: 359.5 ms
+
+prior:      -2305.634471
+likelihood: -140326.148819
+joint:      -142631.783289
+nrecombs:   173
+noncompats: 1
+arglen:     9800219827.351669
+max memory: 6.6 MB
+
+sample 89
+forward ( 91 states,    174 blocks): 110.3 ms
+trace:                                14.3 ms
+add thread:                            9.8 ms
+resample_arg_leaf: accept=1.000000
+sample time: 135.8 ms
+
+prior:      -2305.657086
+likelihood: -140325.895055
+joint:      -142631.552141
+nrecombs:   173
+noncompats: 1
+arglen:     9792880480.699902
+max memory: 6.6 MB
+
+sample 90
+forward ( 81 states,    153 blocks):  97.2 ms
+trace:                                12.8 ms
+add thread:                            8.5 ms
+resample_arg_leaf: accept=1.000000
+sample time: 119.7 ms
+
+prior:      -2254.125526
+likelihood: -140331.382238
+joint:      -142585.507765
+nrecombs:   169
+noncompats: 1
+arglen:     9586099957.247944
+max memory: 6.6 MB
+
+sample 91
+resample_arg_regions: accept=0.500000
+sample time: 239.3 ms
+
+prior:      -2266.393241
+likelihood: -140337.232107
+joint:      -142603.625347
+nrecombs:   169
+noncompats: 1
+arglen:     9915071028.078249
+max memory: 6.6 MB
+
+sample 92
+forward ( 88 states,    160 blocks):  95.7 ms
+trace:                                12.5 ms
+add thread:                            8.4 ms
+resample_arg_leaf: accept=1.000000
+sample time: 117.1 ms
+
+prior:      -2281.279989
+likelihood: -140337.943116
+joint:      -142619.223104
+nrecombs:   170
+noncompats: 1
+arglen:     9822495804.884165
+max memory: 6.6 MB
+
+sample 93
+forward ( 88 states,    154 blocks):  89.5 ms
+trace:                                11.9 ms
+add thread:                            8.0 ms
+resample_arg_leaf: accept=1.000000
+sample time: 109.9 ms
+
+prior:      -2192.350461
+likelihood: -140342.960628
+joint:      -142535.311089
+nrecombs:   163
+noncompats: 1
+arglen:     9951276321.084946
+max memory: 6.6 MB
+
+sample 94
+forward ( 87 states,    150 blocks):  87.0 ms
+trace:                                11.9 ms
+add thread:                            7.8 ms
+resample_arg_leaf: accept=1.000000
+sample time: 107.2 ms
+
+prior:      -2118.133800
+likelihood: -140355.713780
+joint:      -142473.847581
+nrecombs:   157
+noncompats: 2
+arglen:     9578948907.758575
+max memory: 6.6 MB
+
+sample 95
+forward ( 87 states,    148 blocks):  87.8 ms
+trace:                                11.6 ms
+add thread:                            7.7 ms
+resample_arg_leaf: accept=1.000000
+sample time: 107.6 ms
+
+prior:      -2144.058650
+likelihood: -140337.921807
+joint:      -142481.980457
+nrecombs:   159
+noncompats: 1
+arglen:     9643148998.825634
+max memory: 6.6 MB
+
+sample 96
+forward ( 87 states,    153 blocks):  89.2 ms
+trace:                                11.9 ms
+add thread:                            8.1 ms
+resample_arg_leaf: accept=1.000000
+sample time: 109.7 ms
+
+prior:      -2230.979574
+likelihood: -140335.861631
+joint:      -142566.841205
+nrecombs:   165
+noncompats: 1
+arglen:     9651890563.421379
+max memory: 6.6 MB
+
+sample 97
+forward ( 97 states,    166 blocks):  98.3 ms
+trace:                                13.1 ms
+add thread:                            8.8 ms
+resample_arg_leaf: accept=1.000000
+sample time: 120.6 ms
+
+prior:      -2230.682898
+likelihood: -140337.139368
+joint:      -142567.822266
+nrecombs:   165
+noncompats: 1
+arglen:     9686516164.489803
+max memory: 6.6 MB
+
+sample 98
+resample_arg_regions: accept=0.600000
+sample time: 220.9 ms
+
+prior:      -2067.474147
+likelihood: -140330.290216
+joint:      -142397.764363
+nrecombs:   151
+noncompats: 1
+arglen:     9156772863.579041
+max memory: 6.6 MB
+
+sample 99
+forward ( 85 states,    140 blocks):  84.9 ms
+trace:                                11.3 ms
+add thread:                            7.5 ms
+resample_arg_leaf: accept=1.000000
+sample time: 105.2 ms
+
+prior:      -2052.218027
+likelihood: -140335.425254
+joint:      -142387.643281
+nrecombs:   151
+noncompats: 1
+arglen:     9071661552.656551
+max memory: 6.6 MB
+
+sample 100
+resample_arg_regions: accept=0.300000
+sample time: 473.6 ms
+
+prior:      -2161.339935
+likelihood: -140336.448313
+joint:      -142497.788248
+nrecombs:   162
+noncompats: 1
+arglen:     9856495044.691896
+max memory: 6.6 MB
+
+
+sampling time:   24.6 s
+max memory usage: 6.6 MB
+FINISH
