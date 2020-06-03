@@ -102,6 +102,37 @@ TEST_SRC = \
 
 TEST_OBJS = $(TEST_SRC:.cpp=.o)
 
+#=============================================================================
+# tskit files
+TSK_OBJECTS=kastore.o tskit_tables.o tskit_core.o tskit_trees.o \
+        tskit_stats.o tskit_genotypes.o tskit_convert.o
+
+CFLAGS_tskit += -Ikastore/c -I tskit/c
+CC = gcc
+#-----------------------------
+# tskit component
+
+libtskit.a: ${TSK_OBJECTS}
+	${AR} rcs $@ ${TSK_OBJECTS} 
+
+kastore.o: kastore
+	${CC} -c ${CFLAGS_tskit} kastore/c/kastore.c -o kastore.o
+
+tskit_%.o: tskit
+	${CC} -c ${CFLAGS_tskit} tskit/c/tskit/$*.c -o $@
+
+kastore:
+	git clone https://github.com/tskit-dev/kastore.git
+	# NB!!! Make sure to checkout at a version tag!
+	cd kastore && git checkout C_1.0.1
+
+tskit: 
+	git clone https://github.com/tskit-dev/tskit.git
+	# NB!!! Make sure to checkout at a version tag!
+	cd tskit && git checkout C_0.99.1
+
+CFLAGS += -Ikastore/c -I tskit/c
+
 
 #=============================================================================
 # targets
@@ -111,7 +142,7 @@ TEST_OBJS = $(TEST_SRC:.cpp=.o)
 # default targets
 all: $(PROGS) $(LIBARGWEAVER) $(LIBARGWEAVER_SHARED)
 
-bin/arg-sample: src/arg-sample.o $(LIBARGWEAVER)
+bin/arg-sample: src/arg-sample.o $(LIBARGWEAVER) libtskit.a
 	$(CXX) $(CFLAGS) -o bin/arg-sample src/arg-sample.o $(LIBARGWEAVER)
 
 bin/smc2bed: src/smc2bed.o $(LIBARGWEAVER)

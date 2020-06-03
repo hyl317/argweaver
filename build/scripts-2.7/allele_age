@@ -1,0 +1,207 @@
+#!/bin/bash
+
+OPTIND=1
+
+show_help () {
+  echo "allele-age: Compute allele ages for arg-sample output. Either a sites"
+  echo " file should be specified, or, for unphased data, the --sample-phase"
+  echo " option needs to have been used with arg-sample, so that there is a"
+  echo " sites file corresponding to every output arg"
+  echo
+  echo " usage: allele-age [options] <baseout>"
+  echo "   where <baseout> is the base name of arg-sample output (specified with "
+  echo "   arg-sample -o). Creates a file called <baseout>.allele_age.bed.gz."
+  echo " OPTIONS:"
+  echo "   -S <sites.gz>: For pre-phased data, use this sites file for every iteration"
+  echo "   -s <startnum>: start with this MCMC rep of arg-sample (default: 0)"
+  echo "   -e <endnum>  : end with this MCMC rep (default: stop when no file exists)"
+  echo "   -i <interval>: interval betwen MCMC reps (will be auto-detected from output"
+  echo "        if not specified)"
+  echo "   -r <region>  : region (in format START-END, 1-based, inclusive) to"
+  echo "        pass to smc2bed (default: run on all coordinates)"
+  echo "   -b <hap_file>: only use lineages listed in hap_file"
+  echo "   -B <ind_file>: only use lineages from individuals listed in ind_file"
+  echo "        (assumes diploid naming convention <ind>_1 and <ind>_2)"
+  echo "   -t <tmpdir >     : directory for temporary files"
+  echo "        (by default a directory named .tmp_allele_age will be created"
+  echo "        and deleted when run is finished)"
+}
+
+startnum=0
+interval=0
+endnum=-1
+region=""
+sitesfile=""
+tmpdir=".tmp_allele_age"
+hapFile=""
+indFile=""
+while getopts "S:s:i:e:r:b:B:t:h" opt; do
+  case "$opt" in
+  h)
+    show_help
+    exit 0
+    ;;
+  S)
+    sitesfile=$OPTARG
+    ;;
+  s)
+    startnum=$OPTARG
+    ;;
+  e)
+    endnum=$OPTARG
+    ;;
+  i)
+    interval=$OPTARG
+    ;;
+  r)
+    region=$OPTARG
+    ;;
+  b)
+    if [[ -n $indFile ]]; then
+        echo "Cannot use both -b and -B"
+        exit 1
+    fi
+    hapFile=$OPTARG
+    ;;
+  B)
+    if [[ -n $hapFile ]]; then
+        echo "Cannot use both -b and -B"
+        exit 1
+    fi
+    indFile=$OPTARG
+    ;;
+  t)
+    tmpdir=$OPTARG
+    ;;
+  esac
+done
+
+shift $((OPTIND-1))
+
+if [[ "$#" -ne 1 ]]; then
+    show_help
+    exit 1
+fi
+
+
+baseout=$1
+startfile=$baseout.$startnum.smc.gz
+if [[ ! -e $startfile ]]; then
+  echo "ERROR: $startfile does not exist" >> /dev/stderr
+  exit 1
+fi
+
+if [[ $interval == 0 ]]; then
+  while [[ 1 ]]; do
+     interval=$(($interval+1))
+     nextnum=$(($startnum+$interval))
+     if [[ -e $baseout.$nextnum.smc.gz ]]; then
+         if [[ -n $sitesfile || -e $baseout.$nextnum.sites.gz ]]; then
+             break
+         fi
+     fi
+     if [[ $interval -gt 1000 ]]; then
+         echo "ERROR detecting sampling interval; try specifying with -i"
+         exit 1
+     fi
+  done
+fi
+
+echo "starting at rep startnum=$startnum" >> /dev/stderr
+echo "using sampling interval=$interval" >> /dev/stderr
+
+deleteTmpDir=0
+if [[ ! -e $tmpdir ]]; then
+    mkdir $tmpdir
+    deleteTmpDir=1
+elif [[ ! -d $tmpdir ]]; then
+    echo "Error: $tmpdir already exists and is not a directory"
+    exit 1
+fi
+
+hapArg1=""
+hapArg2=""
+if [[ -n $hapFile ]]; then
+    hapArg1=="-i $hapFile"
+    hapArg2="--subset $hapFile"
+fi
+if [[ -n $indFile ]]; then
+    indArg="--subset-inds $indFile"
+    inds=`cat $indFile`
+    ( for ind in $inds; do
+        for i in 1 2; do
+	    echo ${ind}_$i
+	done
+      done ) > $tmpdir/tmp_haps.txt
+    hapArg1="-i $tmpdir/tmp_haps.txt"
+    hapArg2="--subset-inds $indFile"
+fi
+
+if [[ -n $hapArg1 && -n $sitesfile ]]; then
+    subsites $hapArg1 -s $sitesfile -o $tmpdir/tmp.sites
+    sitesfile=$tmpdir/tmp.sites
+fi
+
+
+num=$startnum
+regionarg=""
+if [[ -n $region ]]; then
+    regionarg="--region $region"
+fi
+regionarg2=""
+while [[ 1 ]]; do
+    if [[ -n $sitesfile ]]; then
+        useSites=$sitesfile
+    else
+        useSites=$baseout.$num.sites.gz
+        if [[ -n $hapArg2 && -e $useSites ]]; then
+            subsites $hapArg1 -s $useSites -o $tmpdir/tmp.sites
+            useSites=$tmpdir/tmp.sites
+        fi
+    fi
+    file=$baseout.$num.smc.gz
+    if [[ ( $endnum -ne -1 && $num -gt $endnum) || ! -e $file || ! -e $useSites ]]; then
+      num=$(($num-$interval))
+      echo "ended at sample=$num" >> /dev/stderr
+      break
+    fi
+    smc2bed --sample $num $regionarg $file | bgzip > $tmpdir/tmp.bed.gz
+    zcat -f -- $useSites | awk -v OFS="\t" '$0 ~ /^[#]NAMES/ {print "#"$0};
+        $0 ~ /^[#]REGION/ {chr=$2};
+        NF==2 && $0 !~ /^NAMES/ && $0 !~ /^REGION/ {print chr,$1-1,$1,$2}' |
+        bgzip > $tmpdir/tmp.sites.bed.gz
+    tabix -p bed $tmpdir/tmp.bed.gz
+    tabix -p bed $tmpdir/tmp.sites.bed.gz
+    chr=`zcat $tmpdir/tmp.bed.gz | awk '$0 !~ /^#/ {print $1; exit}'`
+    if [[ -n "$regionarg" && -z "$regionarg2" ]]; then
+        regionarg2="--region $chr:$region"
+    fi
+    echo $num $file $useSites >> /dev/stderr
+    arg-summarize --log-file $baseout.log --snp-file $tmpdir/tmp.sites.bed.gz \
+         -a $tmpdir/tmp.bed.gz $regionarg2 --allele-age --min-allele-age $hapArg $indArg |
+       bgzip \
+          > $tmpdir/$num.allele_age.bed.gz
+    num=$(($num+$interval))
+    rm -f $tmpdir/tmp.sites.bed.gz $tmpdir/tmp.bed.gz
+    rm -f $tmpdir/tmp.sites.bed.gz.tbi $tmpdir/tmp.bed.gz.tbi
+done
+
+rm -f $tmpdir/tmp.sites.gz $tmpdir/tmp.bed.gz
+if [[ -n $hapArg1 ]]; then
+    rm -f $tmpdir/tmp.sites $tmpdir/tmp_haps.txt
+fi
+
+zcat $tmpdir/$startnum.allele_age.bed.gz | grep "^#" > $baseout.allele_age.bed
+( for i in `seq $startnum $interval $num`; do
+      zcat $tmpdir/$i.allele_age.bed.gz | grep -v "^#"
+      rm -f $tmpdir/$i.allele_age.bed.gz
+  done ) | sort-bed - >> $baseout.allele_age.bed
+bgzip -f $baseout.allele_age.bed
+tabix -p bed $baseout.allele_age.bed.gz
+
+if [[ $deleteTmpDir == 1 ]]; then
+    rmdir $tmpdir
+fi
+
+echo "wrote and indexed $baseout.allele_age.bed.gz" >> /dev/stderr
+

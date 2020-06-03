@@ -1,0 +1,97 @@
+#!/bin/bash
+
+OPTIND=1
+
+show_help () {
+  echo "smc2bed-all: Convert all *.smc files from a single arg-sample run into a bed.gz"
+  echo "   file which can be parsed by arg-summarize"
+  echo
+  echo " usage: smc2bed-all [options] <baseout>"
+  echo "   where <baseout> is the base name of arg-sample output (specified with "
+  echo "   arg-sample -o). Creates a file called <baseout>.bed.gz."
+  echo " OPTIONS:"
+  echo "   -s <startnum>: start with this MCMC rep of arg-sample (default: 0)"
+  echo "   -e <endnum>  : end with this MCMC rep (default: stop when no file exists)"
+  echo "   -i <interval>: sampling interval (will be auto-detected from output if not"
+  echo "        specified)"
+  echo "   -r <region>  : region (in format START-END, 1-based, inclusive) to"
+  echo "        pass to smc2bed (default: run on all coordinates)"
+}
+
+startnum=0
+interval=0
+endnum=-1
+region=""
+while getopts "s:i:e:r:h" opt; do
+  case "$opt" in
+  h)
+	show_help
+	exit 0
+	;;
+  s)
+	startnum=$OPTARG
+	;;
+  e)
+	endnum=$OPTARG
+	;;
+  i)
+	interval=$OPTARG
+	;;
+  r)
+        region=$OPTARG
+        ;;
+  esac
+done
+
+shift $((OPTIND-1))
+
+if [[ "$#" -ne 1 ]]; then
+  show_help
+  exit 1
+fi
+
+baseout=$1
+startfile=$baseout.$startnum.smc.gz
+if [[ ! -e $startfile ]]; then
+  echo "ERROR: $startfile does not exist" >> /dev/stderr
+  exit 1
+fi
+
+if [[ $interval == 0 ]]; then
+  while [[ 1 ]]; do
+     interval=$(($interval+1))
+     nextnum=$(($startnum+$interval))
+     if [[ -e $baseout.$nextnum.smc.gz ]]; then
+       break
+     fi
+     if [[ $interval -gt 1000 ]]; then
+       echo "ERROR detecting sampling interval; try specifying with -i"
+       exit 1
+     fi
+  done
+fi
+
+echo "starting at rep startnum=$startnum" >> /dev/stderr
+echo "using sampling interval=$interval" >> /dev/stderr
+
+num=$startnum
+regionarg=""
+if [[ -n $region ]]; then
+    regionarg="--region $region"
+fi
+( while [[ 1 ]]; do
+  file=$baseout.$num.smc.gz
+  if [[ ( $endnum -ne -1 && $num -gt $endnum ) || ! -e $file ]]; then
+      num=$(($num-$interval))
+      echo "ended at sample=$num" >> /dev/stderr
+      break
+  fi
+  echo $num $file >> /dev/stderr
+  smc2bed --sample $num $regionarg $file
+  num=$(($num+$interval))
+ done
+) | sort-bed - | bgzip > $baseout.bed.gz
+tabix -p bed $baseout.bed.gz
+
+echo "wrote and indexed $baseout.bed.gz" >> /dev/stderr
+

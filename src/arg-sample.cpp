@@ -24,6 +24,8 @@
 #include "argweaver/coal_records.h"
 #include "argweaver/recomb.h"
 
+// tskit includes
+#include <tskit.h>
 
 using namespace argweaver;
 
@@ -223,6 +225,8 @@ public:
                     "(for use --use-genotype-probs)"
                     " Mask any genotype if probability of most likely call < cutoff"
                     " according to PL score in VCF file", ADVANCED_OPT));
+        config.add(new ConfigParam<string>("", "--ts", "<tree sequence file>", &ts, 
+                    "path to tskit tree sequence file."));
 
 #ifdef ARGWEAVER_MPI
         config.add(new ConfigSwitch
@@ -561,6 +565,7 @@ public:
     string subsites_file;
     string out_prefix;
     string arg_file;
+    string ts;
     //    string cr_file;
     string subregion_str;
     string age_file;
@@ -990,7 +995,10 @@ bool read_init_arg(const char *arg_file, const ArgModel *model,
                             trees, seqnames);
 }
 
-
+bool read_init_ts(const char *ts_fileName, const ArgModel *model, LocalTrees *trees, vector<string> &seqnames){
+    return read_local_trees_from_ts(ts_fileName, model->times, model->ntimes,
+                            trees, seqnames);
+}
 
 //=============================================================================
 // sampling methods
@@ -2009,6 +2017,17 @@ int main(int argc, char **argv)
         // compress input ARG if compression is requested
         if (sites_mapping)
             compress_local_trees(trees, sites_mapping, true);
+
+    }else if (c.ts != ""){
+        // initialize arg from tree sequence file
+        trees = new LocalTrees();
+        trees_ptr = unique_ptr<LocalTrees>(trees);
+        vector<string> seqnames;
+
+        if (!read_init_ts(c.ts.c_str(), &c.model, trees, seqnames)) {
+                printError("could not read tree seq file");
+                return EXIT_ERROR;
+            }
 
     } else {
         // create new init ARG
