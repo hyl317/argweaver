@@ -1898,23 +1898,20 @@ bool read_local_trees(const char *filename, const double *times,
  bool read_local_trees_from_ts(const char *ts_fileName, const double *times, int ntimes, 
                                      LocalTrees *trees, vector<string> &seqnames){
     tsk_treeseq_t ts;
-    int ret;
-    tsk_table_collection_t tables;
-    //ret = tsk_table_collection_init(&tables, 0);
-    // int ret = tsk_treeseq_load(&ts, ts_fileName, 0);
-    // if (ret < 0){
-    //     // free the treeseq even if error occurs
-    //     tsk_treeseq_free(&ts);
-    //     printError("Error occurs while reading '%s'\n", ts_fileName);
-    //     return false;
-    // }
+    int ret = tsk_treeseq_load(&ts, ts_fileName, 0);
+    if (ret < 0){
+        // free the treeseq even if error occurs
+        tsk_treeseq_free(&ts);
+        printError("Error occurs while reading '%s'\n", ts_fileName);
+        return false;
+    }
 
-    // tsk_size_t numSamples = ts.num_samples;
-    // tsk_size_t numTrees = ts.num_trees;
-    // printLog(LOG_LOW, "number of samples in the tree sequences: %d\n", numSamples);
-    // printLog(LOG_LOW, "number of local trees in the tree sequences: %d\n", numTrees);
-    // tsk_treeseq_free(&ts);
-    printLog(LOG_LOW, "inside read_local_trees_from_ts");
+    tsk_size_t numSamples = ts.num_samples;
+    tsk_size_t numTrees = ts.num_trees;
+    printLog(LOG_LOW, "number of samples in the tree sequences: %d\n", numSamples);
+    printLog(LOG_LOW, "number of local trees in the tree sequences: %d\n", numTrees);
+    tsk_treeseq_free(&ts);
+    //printLog(LOG_LOW, "inside read_local_trees_from_ts");
     return true;
  }
 

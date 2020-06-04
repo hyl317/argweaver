@@ -132,7 +132,7 @@ tskit:
 	cd tskit && git checkout C_0.99.1
 
 CFLAGS += -Ikastore/c -Itskit/c
-
+CFLAGS += -L. -ltskit
 
 #=============================================================================
 # targets
@@ -140,26 +140,28 @@ CFLAGS += -Ikastore/c -Itskit/c
 .PHONY: all pkg test ctest cq install clean cleanobj lib pylib gtest
 
 # default targets
+
+
+
 all: $(PROGS) $(LIBARGWEAVER) $(LIBARGWEAVER_SHARED)
 
 bin/arg-sample: src/arg-sample.o $(LIBARGWEAVER)
-	$(CXX) $(CFLAGS) -o bin/arg-sample src/arg-sample.o $(LIBARGWEAVER)
+	$(CXX) -o bin/arg-sample src/arg-sample.o $(LIBARGWEAVER) $(CFLAGS)
 
 bin/smc2bed: src/smc2bed.o $(LIBARGWEAVER)
-	$(CXX) $(CFLAGS) -o bin/smc2bed src/smc2bed.o $(LIBARGWEAVER)
-
+	$(CXX) -o bin/smc2bed src/smc2bed.o $(LIBARGWEAVER) $(CFLAGS)
 
 bin/arg-summarize: src/arg-summarize.o $(LIBARGWEAVER)
-	$(CXX) $(CFLAGS) -o bin/arg-summarize src/arg-summarize.o $(LIBARGWEAVER)
+	$(CXX) -o bin/arg-summarize src/arg-summarize.o $(LIBARGWEAVER) $(CFLAGS)
 
 bin/popsize-post: src/popsize-post.o $(LIBARGWEAVER)
-	$(CXX) $(CFLAGS) -o bin/popsize-post src/popsize-post.o $(LIBARGWEAVER)
+	$(CXX) -o bin/popsize-post src/popsize-post.o $(LIBARGWEAVER) $(CFLAGS)
 
 bin/compress-sites: src/compress-sites.o $(LIBARGWEAVER)
-	$(CXX) $(CFLAGS) -o bin/compress-sites src/compress-sites.o $(LIBARGWEAVER)
+	$(CXX) -o bin/compress-sites src/compress-sites.o $(LIBARGWEAVER) $(CFLAGS)
 
 bin/arg-likelihood: src/arg-likelihood.o $(LIBARGWEAVER)
-	$(CXX) $(CFLAGS) -o bin/arg-likelihood src/arg-likelihood.o $(LIBARGWEAVER)
+	$(CXX) -o bin/arg-likelihood src/arg-likelihood.o $(LIBARGWEAVER) $(CFLAGS)
 
 #-----------------------------
 # ARGWEAVER C-library
