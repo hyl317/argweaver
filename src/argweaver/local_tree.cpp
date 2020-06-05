@@ -1496,7 +1496,7 @@ bool parse_local_tree(const char* newick, LocalTree *tree,
 
     // check for valid tree structure
     if (!assert_tree(tree))
-        return false;
+        return false; 
 
     return true;
 }
@@ -1900,6 +1900,72 @@ bool read_local_trees(const char *filename, const double *times,
     return result;
 }
 
+void traverse_upwards(tsk_tree_t *tree, tsk_id_t* ptree, double* ages)
+{
+    tsk_id_t *samples = tree->samples;
+    tsk_size_t num_samples = tsk_treeseq_get_num_samples(tree->tree_sequence);
+    tsk_size_t j;
+    tsk_id_t u;
+
+    auto visited = set<tsk_id_t>();
+    auto mapping = map<tsk_id_t, int>();
+    int order = 0; //denote the number of non-sample nodes encountered so far
+    for (j = 0; j < num_samples; j++) {
+        u = samples[j];
+        visited.insert(u);
+        mapping.insert(pair<tsk_id_t, int>(u, u));
+        tsk_tree_get_time(tree, u, &ages[u]);
+        while (u != TSK_NULL) {
+            tsk_id_t p = tree->parent[u];
+            if (visited.find(p) == visited.end()){
+                 if (tsk_treeseq_is_sample(tree->tree_sequence, u)){
+                    ptree[u] = p;
+                    printLog(LOG_HIGH, "%d gets parent %d\n", u, p);
+                } else{
+                    ptree[order + num_samples] = p;
+                    mapping.insert(pair<tsk_id_t, int>(u, order + num_samples));
+                    tsk_tree_get_time(tree, u, &ages[order + num_samples]);
+                    printLog(LOG_HIGH, "%d gets parent %d\n", order+num_samples, p);
+                    order++;
+                }
+                visited.insert(p);
+                u = p;
+            }else{
+                int tmp = u;
+                if (!tsk_treeseq_is_sample(tree->tree_sequence, u)){
+                    tmp = order + num_samples;
+                    order++;
+                }
+                ptree[tmp] = p;
+                mapping.insert(pair<tsk_id_t, int>(u, tmp));
+                tsk_tree_get_time(tree, u, &ages[tmp]);
+                printLog(LOG_HIGH, "%d gets parent %d\n", u, p);
+                break;
+            }
+           
+        }
+    }
+
+    // convert tskit_id_t to the numbering for argweaver
+    // also record the age of each node
+    for (int i = 0; i < 2*num_samples-1; i++){
+        if (ptree[i] != -1){
+            ptree[i] = mapping.at(ptree[i]);
+        }
+    }
+
+    // for debugging only
+    for(int i = 0; i < 2*num_samples-1; i++){
+        printLog(LOG_HIGH, "%d has parent %d\n", i, ptree[i]);\
+        printLog(LOG_HIGH, "%d is %lf generations old\n", i, ages[i]);
+    }
+    for(auto iter = mapping.begin(); iter != mapping.end(); ++iter){
+        printLog(LOG_HIGH, "%d -> %d\n", iter->first, iter->second);
+    }
+
+}
+
+
 
  bool read_local_trees_from_ts(const char *ts_fileName, const double *times, int ntimes, 
                                      LocalTrees *trees, vector<string> &seqnames){
@@ -1907,13 +1973,6 @@ bool read_local_trees(const char *filename, const double *times,
     tsk_tree_t tree;
     int ret = tsk_treeseq_load(&ts, ts_fileName, 0);
     check_tsk_error(ret);
-
-    // if (ret < 0){
-    //     // free the treeseq even if error occurs
-    //     tsk_treeseq_free(&ts);
-    //     printError("Error occurs while reading '%s'\n", ts_fileName);
-    //     return false;
-    // }
 
     tsk_size_t numSamples = ts.num_samples;
     tsk_size_t numTrees = ts.num_trees;
@@ -1923,8 +1982,16 @@ bool read_local_trees(const char *filename, const double *times,
     int iter;
     ret = tsk_tree_init(&tree, &ts, 0);
     check_tsk_error(ret);
+
+    trees->clear();
+    seqnames.clear();
+
     for (iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)) {
-        printf("tree %d\n", tsk_tree_get_index(&tree));
+        printLog(LOG_LOW, "\ntree %d\n", tsk_tree_get_index(&tree));
+        tsk_id_t ptree[2*numSamples-1];
+        double ages[2*numSamples-1];
+        traverse_upwards(&tree, ptree, ages);
+        //exit (EXIT_FAILURE);
     }
 
     check_tsk_error(iter);
