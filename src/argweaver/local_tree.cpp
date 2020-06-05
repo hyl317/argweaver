@@ -3,6 +3,7 @@
 #include "math.h"
 #include "stdio.h"
 #include "stdlib.h"
+#include "err.h"
 
 // argweaver includes
 #include "compress.h"
@@ -14,6 +15,11 @@
 
 // tskit includes
 #include <tskit.h>
+#define check_tsk_error(val)                                                            \
+    if (val < 0) {                                                                      \
+        errx(EXIT_FAILURE, "line %d: %s", __LINE__, tsk_strerror(val));                 \
+    }
+
 
 namespace argweaver {
 
@@ -1898,20 +1904,31 @@ bool read_local_trees(const char *filename, const double *times,
  bool read_local_trees_from_ts(const char *ts_fileName, const double *times, int ntimes, 
                                      LocalTrees *trees, vector<string> &seqnames){
     tsk_treeseq_t ts;
+    tsk_tree_t tree;
     int ret = tsk_treeseq_load(&ts, ts_fileName, 0);
-    if (ret < 0){
-        // free the treeseq even if error occurs
-        tsk_treeseq_free(&ts);
-        printError("Error occurs while reading '%s'\n", ts_fileName);
-        return false;
-    }
+    check_tsk_error(ret);
+
+    // if (ret < 0){
+    //     // free the treeseq even if error occurs
+    //     tsk_treeseq_free(&ts);
+    //     printError("Error occurs while reading '%s'\n", ts_fileName);
+    //     return false;
+    // }
 
     tsk_size_t numSamples = ts.num_samples;
     tsk_size_t numTrees = ts.num_trees;
     printLog(LOG_LOW, "number of samples in the tree sequences: %d\n", numSamples);
     printLog(LOG_LOW, "number of local trees in the tree sequences: %d\n", numTrees);
+
+    int iter;
+    ret = tsk_tree_init(&tree, &ts, 0);
+    check_tsk_error(ret);
+    for (iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)) {
+        printf("tree %d\n", tsk_tree_get_index(&tree));
+    }
+
+    check_tsk_error(iter);
     tsk_treeseq_free(&ts);
-    //printLog(LOG_LOW, "inside read_local_trees_from_ts");
     return true;
  }
 
