@@ -124,12 +124,12 @@ tskit_%.o: tskit
 kastore:
 	git clone https://github.com/tskit-dev/kastore.git
 	# NB!!! Make sure to checkout at a version tag!
-	cd kastore && git checkout C_1.0.1
+	cd kastore && git checkout C_2.0.0
 
 tskit: 
 	git clone https://github.com/tskit-dev/tskit.git
 	# NB!!! Make sure to checkout at a version tag!
-	cd tskit && git checkout C_0.99.1
+	cd tskit && git checkout 0.2.3
 
 CFLAGS += -Ikastore/c -Itskit/c
 CFLAGS += -L. -ltskit

@@ -1,7 +1,7 @@
 arg-sample 1.0
-start time: Fri Jun  5 15:23:45 2020
-command: ./arg-sample -s ../argweaver/examples/sim1/sim1.sites -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 200e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation_source.10000.trees --overwrite
-random seed: 1591385025
+start time: Fri Jun  5 16:11:11 2020
+command: ./arg-sample -s ../argweaver/examples/sim1/sim1.sites -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 200e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation_source.5.trees --overwrite
+random seed: 1591387871
 read input sites (chrom=chr, start=0, end=100000, length=100000, nseqs=8, nsites=170)
 0 sites are partially masked but otherwise invariant
 masked 0 (0.0%) positions
@@ -53,8 +53,604 @@ model:
               10000.0,
               10000.0]
 
-number of samples in the tree sequences: 10000
-number of local trees in the tree sequences: 3647
+right boundary of tree 0: 1039.521536
+right boundary of tree 1: 1818.786376
+right boundary of tree 2: 2270.313912
+right boundary of tree 3: 11150.172681
+right boundary of tree 4: 12295.313182
+right boundary of tree 5: 15311.387604
+right boundary of tree 6: 15343.519397
+right boundary of tree 7: 20521.525298
+right boundary of tree 8: 34825.713615
+right boundary of tree 9: 37045.845305
+right boundary of tree 10: 41776.769571
+right boundary of tree 11: 54256.783811
+right boundary of tree 12: 56025.790762
+right boundary of tree 13: 59222.758296
+right boundary of tree 14: 63192.005051
+right boundary of tree 15: 63397.433391
+right boundary of tree 16: 63797.728872
+right boundary of tree 17: 64832.075514
+right boundary of tree 18: 64888.269190
+right boundary of tree 19: 65017.357018
+right boundary of tree 20: 66662.194921
+right boundary of tree 21: 68132.585396
+right boundary of tree 22: 68387.053224
+right boundary of tree 23: 68660.493025
+right boundary of tree 24: 69685.618642
+right boundary of tree 25: 72038.781613
+right boundary of tree 26: 72054.566599
+right boundary of tree 27: 72264.909761
+right boundary of tree 28: 72505.464329
+right boundary of tree 29: 73184.812691
+right boundary of tree 30: 73304.068314
+right boundary of tree 31: 74627.951969
+right boundary of tree 32: 75370.392547
+right boundary of tree 33: 77009.104210
+right boundary of tree 34: 77184.647340
+right boundary of tree 35: 77208.187449
+right boundary of tree 36: 80411.648396
+right boundary of tree 37: 81959.628752
+right boundary of tree 38: 83595.891037
+right boundary of tree 39: 85380.868773
+right boundary of tree 40: 93318.757623
+right boundary of tree 41: 98186.431941
+right boundary of tree 42: 98818.851192
+right boundary of tree 43: 99350.180267
+right boundary of tree 44: 101508.146874
+right boundary of tree 45: 101885.613543
+right boundary of tree 46: 103056.215705
+right boundary of tree 47: 103232.053365
+right boundary of tree 48: 104425.783992
+right boundary of tree 49: 104616.839929
+right boundary of tree 50: 104821.386539
+right boundary of tree 51: 105479.882123
+right boundary of tree 52: 106104.684553
+right boundary of tree 53: 108567.862331
+right boundary of tree 54: 109880.729837
+right boundary of tree 55: 110212.305586
+right boundary of tree 56: 111858.651534
+right boundary of tree 57: 112004.980937
+right boundary of tree 58: 112316.724638
+right boundary of tree 59: 112427.876357
+right boundary of tree 60: 113561.009782
+right boundary of tree 61: 114415.089626
+right boundary of tree 62: 114692.315486
+right boundary of tree 63: 115785.125437
+right boundary of tree 64: 116499.218186
+right boundary of tree 65: 116935.104857
+right boundary of tree 66: 119565.178435
+right boundary of tree 67: 120368.013885
+right boundary of tree 68: 121377.224131
+right boundary of tree 69: 122619.260597
+right boundary of tree 70: 125864.595670
+right boundary of tree 71: 126613.176224
+right boundary of tree 72: 126709.210949
+right boundary of tree 73: 127468.094259
+right boundary of tree 74: 127878.464323
+right boundary of tree 75: 128400.542338
+right boundary of tree 76: 129570.284656
+right boundary of tree 77: 130966.075028
+right boundary of tree 78: 134122.138176
+right boundary of tree 79: 135485.679408
+right boundary of tree 80: 136592.983067
+right boundary of tree 81: 139476.399901
+right boundary of tree 82: 139723.181990
+right boundary of tree 83: 140967.792864
+right boundary of tree 84: 142980.380716
+right boundary of tree 85: 146912.532194
+right boundary of tree 86: 147810.528322
+right boundary of tree 87: 149702.029803
+right boundary of tree 88: 150080.869475
+right boundary of tree 89: 152656.768484
+right boundary of tree 90: 152825.184202
+right boundary of tree 91: 153476.175189
+right boundary of tree 92: 154213.378475
+right boundary of tree 93: 155172.803708
+right boundary of tree 94: 156911.795763
+right boundary of tree 95: 161025.122078
+right boundary of tree 96: 161468.200889
+right boundary of tree 97: 163963.668087
+right boundary of tree 98: 166601.921703
+right boundary of tree 99: 168233.733198
+right boundary of tree 100: 168356.066842
+right boundary of tree 101: 168578.380991
+right boundary of tree 102: 169814.040924
+right boundary of tree 103: 171654.836547
+right boundary of tree 104: 173656.210809
+right boundary of tree 105: 174888.626247
+right boundary of tree 106: 176015.750546
+right boundary of tree 107: 176258.389879
+right boundary of tree 108: 176979.827503
+right boundary of tree 109: 177930.513671
+right boundary of tree 110: 179176.566698
+right boundary of tree 111: 181247.979445
+right boundary of tree 112: 182325.697779
+right boundary of tree 113: 183862.874560
+right boundary of tree 114: 184421.662750
+right boundary of tree 115: 184766.888196
+right boundary of tree 116: 187530.926472
+right boundary of tree 117: 191030.731004
+right boundary of tree 118: 199787.013512
+right boundary of tree 119: 201950.792037
+right boundary of tree 120: 203942.732467
+right boundary of tree 121: 207587.611677
+right boundary of tree 122: 210407.271099
+right boundary of tree 123: 210502.102322
+right boundary of tree 124: 211594.559534
+right boundary of tree 125: 212558.316116
+right boundary of tree 126: 212669.189603
+right boundary of tree 127: 213288.050660
+right boundary of tree 128: 216445.151767
+right boundary of tree 129: 216994.770387
+right boundary of tree 130: 218993.981420
+right boundary of tree 131: 219080.298957
+right boundary of tree 132: 219931.975058
+right boundary of tree 133: 220797.849405
+right boundary of tree 134: 223162.624571
+right boundary of tree 135: 224246.696621
+right boundary of tree 136: 224713.441968
+right boundary of tree 137: 225042.254018
+right boundary of tree 138: 225948.844856
+right boundary of tree 139: 228105.771641
+right boundary of tree 140: 229402.078136
+right boundary of tree 141: 231761.670958
+right boundary of tree 142: 233519.666650
+right boundary of tree 143: 233747.661867
+right boundary of tree 144: 233827.351181
+right boundary of tree 145: 236583.578688
+right boundary of tree 146: 238868.927406
+right boundary of tree 147: 239198.574852
+right boundary of tree 148: 239529.104261
+right boundary of tree 149: 240138.399703
+right boundary of tree 150: 243539.658432
+right boundary of tree 151: 244876.358249
+right boundary of tree 152: 246525.992930
+right boundary of tree 153: 248325.259483
+right boundary of tree 154: 249474.700133
+right boundary of tree 155: 250325.425353
+right boundary of tree 156: 251801.118779
+right boundary of tree 157: 251811.731898
+right boundary of tree 158: 254595.982436
+right boundary of tree 159: 254847.253732
+right boundary of tree 160: 257685.781517
+right boundary of tree 161: 258563.679470
+right boundary of tree 162: 258830.984416
+right boundary of tree 163: 259455.429218
+right boundary of tree 164: 259495.829060
+right boundary of tree 165: 260133.347302
+right boundary of tree 166: 266560.752938
+right boundary of tree 167: 267388.897312
+right boundary of tree 168: 267799.756785
+right boundary of tree 169: 271648.061991
+right boundary of tree 170: 275455.355941
+right boundary of tree 171: 275486.252102
+right boundary of tree 172: 277350.231837
+right boundary of tree 173: 279178.121891
+right boundary of tree 174: 282102.526464
+right boundary of tree 175: 286568.595163
+right boundary of tree 176: 288448.831134
+right boundary of tree 177: 289375.481729
+right boundary of tree 178: 290111.843564
+right boundary of tree 179: 290177.771191
+right boundary of tree 180: 290301.000301
+right boundary of tree 181: 290439.081679
+right boundary of tree 182: 290703.418732
+right boundary of tree 183: 293996.985837
+right boundary of tree 184: 295555.500382
+right boundary of tree 185: 298476.489796
+right boundary of tree 186: 303158.066306
+right boundary of tree 187: 303474.253114
+right boundary of tree 188: 306739.766455
+right boundary of tree 189: 310400.391768
+right boundary of tree 190: 310556.763623
+right boundary of tree 191: 312071.217529
+right boundary of tree 192: 313930.108984
+right boundary of tree 193: 314113.302928
+right boundary of tree 194: 315295.765017
+right boundary of tree 195: 321390.974410
+right boundary of tree 196: 321902.276557
+right boundary of tree 197: 322058.270993
+right boundary of tree 198: 328280.328384
+right boundary of tree 199: 328591.750313
+right boundary of tree 200: 328652.745422
+right boundary of tree 201: 329574.091670
+right boundary of tree 202: 335539.720798
+right boundary of tree 203: 335749.476993
+right boundary of tree 204: 338315.720516
+right boundary of tree 205: 338799.912096
+right boundary of tree 206: 338916.293657
+right boundary of tree 207: 340795.352203
+right boundary of tree 208: 341528.983866
+right boundary of tree 209: 342565.688384
+right boundary of tree 210: 342787.293099
+right boundary of tree 211: 344315.639312
+right boundary of tree 212: 347031.971288
+right boundary of tree 213: 350163.496647
+right boundary of tree 214: 350689.793786
+right boundary of tree 215: 352152.562549
+right boundary of tree 216: 352403.391933
+right boundary of tree 217: 353528.870119
+right boundary of tree 218: 355486.369076
+right boundary of tree 219: 356195.290656
+right boundary of tree 220: 365971.068937
+right boundary of tree 221: 368653.890763
+right boundary of tree 222: 375674.213603
+right boundary of tree 223: 376877.858391
+right boundary of tree 224: 376998.859778
+right boundary of tree 225: 377272.062557
+right boundary of tree 226: 378933.311295
+right boundary of tree 227: 379579.908769
+right boundary of tree 228: 380385.578466
+right boundary of tree 229: 380642.982288
+right boundary of tree 230: 381849.782863
+right boundary of tree 231: 381888.683043
+right boundary of tree 232: 382754.445165
+right boundary of tree 233: 384298.083695
+right boundary of tree 234: 386495.319984
+right boundary of tree 235: 387828.579263
+right boundary of tree 236: 387979.244671
+right boundary of tree 237: 391232.713915
+right boundary of tree 238: 391354.423340
+right boundary of tree 239: 393064.722743
+right boundary of tree 240: 395889.207580
+right boundary of tree 241: 396458.809589
+right boundary of tree 242: 398444.445664
+right boundary of tree 243: 401818.424557
+right boundary of tree 244: 402215.065063
+right boundary of tree 245: 403448.297736
+right boundary of tree 246: 406646.504860
+right boundary of tree 247: 409862.397101
+right boundary of tree 248: 412119.600552
+right boundary of tree 249: 412891.117719
+right boundary of tree 250: 413337.315762
+right boundary of tree 251: 413836.552159
+right boundary of tree 252: 416704.782149
+right boundary of tree 253: 417281.462675
+right boundary of tree 254: 418073.491524
+right boundary of tree 255: 418915.580823
+right boundary of tree 256: 419705.233169
+right boundary of tree 257: 422003.247873
+right boundary of tree 258: 426711.814112
+right boundary of tree 259: 433192.630865
+right boundary of tree 260: 438304.810654
+right boundary of tree 261: 439330.602866
+right boundary of tree 262: 439347.596243
+right boundary of tree 263: 443378.858139
+right boundary of tree 264: 443575.857310
+right boundary of tree 265: 443861.463211
+right boundary of tree 266: 447977.895254
+right boundary of tree 267: 450444.633479
+right boundary of tree 268: 450978.874334
+right boundary of tree 269: 452463.465615
+right boundary of tree 270: 455643.701706
+right boundary of tree 271: 455755.465072
+right boundary of tree 272: 456449.163718
+right boundary of tree 273: 460976.214721
+right boundary of tree 274: 461645.667549
+right boundary of tree 275: 462134.355554
+right boundary of tree 276: 462439.233778
+right boundary of tree 277: 462950.273990
+right boundary of tree 278: 463540.748102
+right boundary of tree 279: 465108.696712
+right boundary of tree 280: 466060.140512
+right boundary of tree 281: 467959.818772
+right boundary of tree 282: 469484.201742
+right boundary of tree 283: 469705.629039
+right boundary of tree 284: 470787.163468
+right boundary of tree 285: 470825.752819
+right boundary of tree 286: 474668.977893
+right boundary of tree 287: 476448.037773
+right boundary of tree 288: 479768.413464
+right boundary of tree 289: 480760.247093
+right boundary of tree 290: 482602.911415
+right boundary of tree 291: 486405.391592
+right boundary of tree 292: 488310.516460
+right boundary of tree 293: 490702.386827
+right boundary of tree 294: 490986.095390
+right boundary of tree 295: 493284.578084
+right boundary of tree 296: 493497.289599
+right boundary of tree 297: 493888.329131
+right boundary of tree 298: 494611.559085
+right boundary of tree 299: 495400.702929
+right boundary of tree 300: 497791.017987
+right boundary of tree 301: 499203.823157
+right boundary of tree 302: 501177.710598
+right boundary of tree 303: 501269.543893
+right boundary of tree 304: 503131.004866
+right boundary of tree 305: 506029.605052
+right boundary of tree 306: 506741.114079
+right boundary of tree 307: 507858.732833
+right boundary of tree 308: 507982.733079
+right boundary of tree 309: 512080.688149
+right boundary of tree 310: 512929.796128
+right boundary of tree 311: 513184.730083
+right boundary of tree 312: 513795.236711
+right boundary of tree 313: 514287.182715
+right boundary of tree 314: 514426.318816
+right boundary of tree 315: 515359.816029
+right boundary of tree 316: 517505.333181
+right boundary of tree 317: 518511.167150
+right boundary of tree 318: 519091.125466
+right boundary of tree 319: 519198.951898
+right boundary of tree 320: 522422.334534
+right boundary of tree 321: 522641.705238
+right boundary of tree 322: 522890.608414
+right boundary of tree 323: 522939.031600
+right boundary of tree 324: 523268.907220
+right boundary of tree 325: 524715.050479
+right boundary of tree 326: 526165.562339
+right boundary of tree 327: 526795.581106
+right boundary of tree 328: 527101.593913
+right boundary of tree 329: 527390.792157
+right boundary of tree 330: 527584.103990
+right boundary of tree 331: 528200.569918
+right boundary of tree 332: 528713.735642
+right boundary of tree 333: 528865.528649
+right boundary of tree 334: 529324.115144
+right boundary of tree 335: 529669.584597
+right boundary of tree 336: 530321.760692
+right boundary of tree 337: 530590.230024
+right boundary of tree 338: 531439.823222
+right boundary of tree 339: 533967.539792
+right boundary of tree 340: 534510.726001
+right boundary of tree 341: 534604.966532
+right boundary of tree 342: 536077.418722
+right boundary of tree 343: 539528.584001
+right boundary of tree 344: 539616.240081
+right boundary of tree 345: 541240.461530
+right boundary of tree 346: 542556.843148
+right boundary of tree 347: 546365.457481
+right boundary of tree 348: 547378.606756
+right boundary of tree 349: 547528.294974
+right boundary of tree 350: 550172.213826
+right boundary of tree 351: 551615.191519
+right boundary of tree 352: 552370.796807
+right boundary of tree 353: 553561.875493
+right boundary of tree 354: 556952.432859
+right boundary of tree 355: 557190.962498
+right boundary of tree 356: 557893.132921
+right boundary of tree 357: 558265.319457
+right boundary of tree 358: 564498.807202
+right boundary of tree 359: 565617.353089
+right boundary of tree 360: 566428.801177
+right boundary of tree 361: 568483.197961
+right boundary of tree 362: 568772.584565
+right boundary of tree 363: 569283.364473
+right boundary of tree 364: 570109.363545
+right boundary of tree 365: 570159.197452
+right boundary of tree 366: 570593.576080
+right boundary of tree 367: 571640.300930
+right boundary of tree 368: 571764.605951
+right boundary of tree 369: 572040.011308
+right boundary of tree 370: 572043.475130
+right boundary of tree 371: 575475.747365
+right boundary of tree 372: 579812.166183
+right boundary of tree 373: 582077.995777
+right boundary of tree 374: 582482.116898
+right boundary of tree 375: 584034.581805
+right boundary of tree 376: 584231.092265
+right boundary of tree 377: 585588.830660
+right boundary of tree 378: 586019.643486
+right boundary of tree 379: 586527.498808
+right boundary of tree 380: 588519.141215
+right boundary of tree 381: 597371.633769
+right boundary of tree 382: 606372.528385
+right boundary of tree 383: 606956.346567
+right boundary of tree 384: 608613.321234
+right boundary of tree 385: 609450.934830
+right boundary of tree 386: 610975.085434
+right boundary of tree 387: 611495.917107
+right boundary of tree 388: 612106.144105
+right boundary of tree 389: 614995.645037
+right boundary of tree 390: 615622.228620
+right boundary of tree 391: 616990.837179
+right boundary of tree 392: 618945.215740
+right boundary of tree 393: 620325.444876
+right boundary of tree 394: 621338.865166
+right boundary of tree 395: 621372.294058
+right boundary of tree 396: 623093.075730
+right boundary of tree 397: 624070.758611
+right boundary of tree 398: 624074.268999
+right boundary of tree 399: 625657.532510
+right boundary of tree 400: 627838.168905
+right boundary of tree 401: 628938.055977
+right boundary of tree 402: 629018.170207
+right boundary of tree 403: 629242.333264
+right boundary of tree 404: 631444.633853
+right boundary of tree 405: 632831.020195
+right boundary of tree 406: 636168.650732
+right boundary of tree 407: 636296.214451
+right boundary of tree 408: 639049.869412
+right boundary of tree 409: 639545.314163
+right boundary of tree 410: 640781.257916
+right boundary of tree 411: 642548.381268
+right boundary of tree 412: 645184.577826
+right boundary of tree 413: 648256.697377
+right boundary of tree 414: 648460.146424
+right boundary of tree 415: 648528.389318
+right boundary of tree 416: 652778.238210
+right boundary of tree 417: 652825.878387
+right boundary of tree 418: 652930.830059
+right boundary of tree 419: 653728.892946
+right boundary of tree 420: 654033.444974
+right boundary of tree 421: 654460.983270
+right boundary of tree 422: 654714.562151
+right boundary of tree 423: 654775.869487
+right boundary of tree 424: 654850.459577
+right boundary of tree 425: 664925.306725
+right boundary of tree 426: 665828.901731
+right boundary of tree 427: 669282.955506
+right boundary of tree 428: 672731.731709
+right boundary of tree 429: 674431.248027
+right boundary of tree 430: 674609.528546
+right boundary of tree 431: 675153.271918
+right boundary of tree 432: 676135.169965
+right boundary of tree 433: 677220.198018
+right boundary of tree 434: 678324.646242
+right boundary of tree 435: 680607.645465
+right boundary of tree 436: 681199.062774
+right boundary of tree 437: 681764.279185
+right boundary of tree 438: 682228.462929
+right boundary of tree 439: 682308.718255
+right boundary of tree 440: 684286.045536
+right boundary of tree 441: 684884.111324
+right boundary of tree 442: 687172.188118
+right boundary of tree 443: 688438.620346
+right boundary of tree 444: 690727.858266
+right boundary of tree 445: 690754.190481
+right boundary of tree 446: 693036.558501
+right boundary of tree 447: 694221.999891
+right boundary of tree 448: 695059.728738
+right boundary of tree 449: 696317.548094
+right boundary of tree 450: 696720.580267
+right boundary of tree 451: 696962.246135
+right boundary of tree 452: 696978.262089
+right boundary of tree 453: 699633.013620
+right boundary of tree 454: 700646.131695
+right boundary of tree 455: 702318.782849
+right boundary of tree 456: 705199.823180
+right boundary of tree 457: 706840.206102
+right boundary of tree 458: 711767.989377
+right boundary of tree 459: 721762.405178
+right boundary of tree 460: 723289.632407
+right boundary of tree 461: 723585.844674
+right boundary of tree 462: 724744.233472
+right boundary of tree 463: 727559.443034
+right boundary of tree 464: 729119.684950
+right boundary of tree 465: 733010.668711
+right boundary of tree 466: 746863.781648
+right boundary of tree 467: 748032.597068
+right boundary of tree 468: 750261.196343
+right boundary of tree 469: 751201.560197
+right boundary of tree 470: 752361.084743
+right boundary of tree 471: 752807.588957
+right boundary of tree 472: 753708.582780
+right boundary of tree 473: 755370.692526
+right boundary of tree 474: 756839.186595
+right boundary of tree 475: 759739.360250
+right boundary of tree 476: 759840.828078
+right boundary of tree 477: 762606.996522
+right boundary of tree 478: 763188.809101
+right boundary of tree 479: 764044.945073
+right boundary of tree 480: 765092.230813
+right boundary of tree 481: 766467.881567
+right boundary of tree 482: 766934.134012
+right boundary of tree 483: 773433.536937
+right boundary of tree 484: 774545.332364
+right boundary of tree 485: 774677.253043
+right boundary of tree 486: 775409.992499
+right boundary of tree 487: 776390.563412
+right boundary of tree 488: 779896.920961
+right boundary of tree 489: 780474.306499
+right boundary of tree 490: 784325.810332
+right boundary of tree 491: 784349.303177
+right boundary of tree 492: 785381.423027
+right boundary of tree 493: 785839.115918
+right boundary of tree 494: 787129.248676
+right boundary of tree 495: 795742.590864
+right boundary of tree 496: 800373.479677
+right boundary of tree 497: 801859.905199
+right boundary of tree 498: 802791.661537
+right boundary of tree 499: 803444.027389
+right boundary of tree 500: 804809.827545
+right boundary of tree 501: 805656.665192
+right boundary of tree 502: 806074.655104
+right boundary of tree 503: 806925.478579
+right boundary of tree 504: 809209.083861
+right boundary of tree 505: 810283.050130
+right boundary of tree 506: 815425.918627
+right boundary of tree 507: 819038.531934
+right boundary of tree 508: 826488.797280
+right boundary of tree 509: 833874.189489
+right boundary of tree 510: 834062.544358
+right boundary of tree 511: 834216.400011
+right boundary of tree 512: 839050.959060
+right boundary of tree 513: 840105.227157
+right boundary of tree 514: 841627.287176
+right boundary of tree 515: 841677.335287
+right boundary of tree 516: 842723.134636
+right boundary of tree 517: 843099.848796
+right boundary of tree 518: 844222.022184
+right boundary of tree 519: 844911.308225
+right boundary of tree 520: 845435.535034
+right boundary of tree 521: 856262.282202
+right boundary of tree 522: 860538.944570
+right boundary of tree 523: 861240.759460
+right boundary of tree 524: 863751.062393
+right boundary of tree 525: 863810.294975
+right boundary of tree 526: 865008.502702
+right boundary of tree 527: 865470.109010
+right boundary of tree 528: 870562.504248
+right boundary of tree 529: 870640.280161
+right boundary of tree 530: 871638.572512
+right boundary of tree 531: 873550.134216
+right boundary of tree 532: 873861.536354
+right boundary of tree 533: 873926.915665
+right boundary of tree 534: 874539.780168
+right boundary of tree 535: 875828.753429
+right boundary of tree 536: 875979.914534
+right boundary of tree 537: 877058.924613
+right boundary of tree 538: 880135.425571
+right boundary of tree 539: 891839.474182
+right boundary of tree 540: 893965.062195
+right boundary of tree 541: 894658.288195
+right boundary of tree 542: 897673.400561
+right boundary of tree 543: 904818.052637
+right boundary of tree 544: 908046.732170
+right boundary of tree 545: 908757.392529
+right boundary of tree 546: 909025.817856
+right boundary of tree 547: 912253.640106
+right boundary of tree 548: 912993.334214
+right boundary of tree 549: 913767.821135
+right boundary of tree 550: 913866.570432
+right boundary of tree 551: 914484.647083
+right boundary of tree 552: 915775.063894
+right boundary of tree 553: 920755.347451
+right boundary of tree 554: 922974.322905
+right boundary of tree 555: 923139.029165
+right boundary of tree 556: 926503.399836
+right boundary of tree 557: 927746.603249
+right boundary of tree 558: 928654.892586
+right boundary of tree 559: 928998.736648
+right boundary of tree 560: 929654.204037
+right boundary of tree 561: 929932.864367
+right boundary of tree 562: 930088.910025
+right boundary of tree 563: 932191.360028
+right boundary of tree 564: 932230.967314
+right boundary of tree 565: 932945.929452
+right boundary of tree 566: 933488.142196
+right boundary of tree 567: 936427.453052
+right boundary of tree 568: 936480.581513
+right boundary of tree 569: 939500.595662
+right boundary of tree 570: 954807.586492
+right boundary of tree 571: 972717.817401
+right boundary of tree 572: 972930.474433
+right boundary of tree 573: 975227.713579
+right boundary of tree 574: 975445.606740
+right boundary of tree 575: 975542.205613
+right boundary of tree 576: 978619.722877
+right boundary of tree 577: 978657.706403
+right boundary of tree 578: 981187.754539
+right boundary of tree 579: 984667.340988
+right boundary of tree 580: 985977.355155
+right boundary of tree 581: 986639.668696
+right boundary of tree 582: 987806.174203
+right boundary of tree 583: 988536.044021
+right boundary of tree 584: 990628.853438
+right boundary of tree 585: 991001.018554
+right boundary of tree 586: 991461.975731
+right boundary of tree 587: 993117.309174
+right boundary of tree 588: 993176.461196
+right boundary of tree 589: 993204.962461
+right boundary of tree 590: 993539.448826
+right boundary of tree 591: 994708.263547
+right boundary of tree 592: 996338.657568
+right boundary of tree 593: 999481.626321
+right boundary of tree 594: 1000000.000000
+number of samples in the tree sequences: 5
+number of local trees in the tree sequences: 595
+tree sequence starat at 1000000.000000 and ends at 0.000000
 
 tree 0
 
@@ -1245,4917 +1841,138 @@ tree 592
 tree 593
 
 tree 594
-
-tree 595
-
-tree 596
-
-tree 597
-
-tree 598
-
-tree 599
-
-tree 600
-
-tree 601
-
-tree 602
-
-tree 603
-
-tree 604
-
-tree 605
-
-tree 606
-
-tree 607
-
-tree 608
-
-tree 609
-
-tree 610
-
-tree 611
-
-tree 612
-
-tree 613
-
-tree 614
-
-tree 615
-
-tree 616
-
-tree 617
-
-tree 618
-
-tree 619
-
-tree 620
-
-tree 621
-
-tree 622
-
-tree 623
-
-tree 624
-
-tree 625
-
-tree 626
-
-tree 627
-
-tree 628
-
-tree 629
-
-tree 630
-
-tree 631
-
-tree 632
-
-tree 633
-
-tree 634
-
-tree 635
-
-tree 636
-
-tree 637
-
-tree 638
-
-tree 639
-
-tree 640
-
-tree 641
-
-tree 642
-
-tree 643
-
-tree 644
-
-tree 645
-
-tree 646
-
-tree 647
-
-tree 648
-
-tree 649
-
-tree 650
-
-tree 651
-
-tree 652
-
-tree 653
-
-tree 654
-
-tree 655
-
-tree 656
-
-tree 657
-
-tree 658
-
-tree 659
-
-tree 660
-
-tree 661
-
-tree 662
-
-tree 663
-
-tree 664
-
-tree 665
-
-tree 666
-
-tree 667
-
-tree 668
-
-tree 669
-
-tree 670
-
-tree 671
-
-tree 672
-
-tree 673
-
-tree 674
-
-tree 675
-
-tree 676
-
-tree 677
-
-tree 678
-
-tree 679
-
-tree 680
-
-tree 681
-
-tree 682
-
-tree 683
-
-tree 684
-
-tree 685
-
-tree 686
-
-tree 687
-
-tree 688
-
-tree 689
-
-tree 690
-
-tree 691
-
-tree 692
-
-tree 693
-
-tree 694
-
-tree 695
-
-tree 696
-
-tree 697
-
-tree 698
-
-tree 699
-
-tree 700
-
-tree 701
-
-tree 702
-
-tree 703
-
-tree 704
-
-tree 705
-
-tree 706
-
-tree 707
-
-tree 708
-
-tree 709
-
-tree 710
-
-tree 711
-
-tree 712
-
-tree 713
-
-tree 714
-
-tree 715
-
-tree 716
-
-tree 717
-
-tree 718
-
-tree 719
-
-tree 720
-
-tree 721
-
-tree 722
-
-tree 723
-
-tree 724
-
-tree 725
-
-tree 726
-
-tree 727
-
-tree 728
-
-tree 729
-
-tree 730
-
-tree 731
-
-tree 732
-
-tree 733
-
-tree 734
-
-tree 735
-
-tree 736
-
-tree 737
-
-tree 738
-
-tree 739
-
-tree 740
-
-tree 741
-
-tree 742
-
-tree 743
-
-tree 744
-
-tree 745
-
-tree 746
-
-tree 747
-
-tree 748
-
-tree 749
-
-tree 750
-
-tree 751
-
-tree 752
-
-tree 753
-
-tree 754
-
-tree 755
-
-tree 756
-
-tree 757
-
-tree 758
-
-tree 759
-
-tree 760
-
-tree 761
-
-tree 762
-
-tree 763
-
-tree 764
-
-tree 765
-
-tree 766
-
-tree 767
-
-tree 768
-
-tree 769
-
-tree 770
-
-tree 771
-
-tree 772
-
-tree 773
-
-tree 774
-
-tree 775
-
-tree 776
-
-tree 777
-
-tree 778
-
-tree 779
-
-tree 780
-
-tree 781
-
-tree 782
-
-tree 783
-
-tree 784
-
-tree 785
-
-tree 786
-
-tree 787
-
-tree 788
-
-tree 789
-
-tree 790
-
-tree 791
-
-tree 792
-
-tree 793
-
-tree 794
-
-tree 795
-
-tree 796
-
-tree 797
-
-tree 798
-
-tree 799
-
-tree 800
-
-tree 801
-
-tree 802
-
-tree 803
-
-tree 804
-
-tree 805
-
-tree 806
-
-tree 807
-
-tree 808
-
-tree 809
-
-tree 810
-
-tree 811
-
-tree 812
-
-tree 813
-
-tree 814
-
-tree 815
-
-tree 816
-
-tree 817
-
-tree 818
-
-tree 819
-
-tree 820
-
-tree 821
-
-tree 822
-
-tree 823
-
-tree 824
-
-tree 825
-
-tree 826
-
-tree 827
-
-tree 828
-
-tree 829
-
-tree 830
-
-tree 831
-
-tree 832
-
-tree 833
-
-tree 834
-
-tree 835
-
-tree 836
-
-tree 837
-
-tree 838
-
-tree 839
-
-tree 840
-
-tree 841
-
-tree 842
-
-tree 843
-
-tree 844
-
-tree 845
-
-tree 846
-
-tree 847
-
-tree 848
-
-tree 849
-
-tree 850
-
-tree 851
-
-tree 852
-
-tree 853
-
-tree 854
-
-tree 855
-
-tree 856
-
-tree 857
-
-tree 858
-
-tree 859
-
-tree 860
-
-tree 861
-
-tree 862
-
-tree 863
-
-tree 864
-
-tree 865
-
-tree 866
-
-tree 867
-
-tree 868
-
-tree 869
-
-tree 870
-
-tree 871
-
-tree 872
-
-tree 873
-
-tree 874
-
-tree 875
-
-tree 876
-
-tree 877
-
-tree 878
-
-tree 879
-
-tree 880
-
-tree 881
-
-tree 882
-
-tree 883
-
-tree 884
-
-tree 885
-
-tree 886
-
-tree 887
-
-tree 888
-
-tree 889
-
-tree 890
-
-tree 891
-
-tree 892
-
-tree 893
-
-tree 894
-
-tree 895
-
-tree 896
-
-tree 897
-
-tree 898
-
-tree 899
-
-tree 900
-
-tree 901
-
-tree 902
-
-tree 903
-
-tree 904
-
-tree 905
-
-tree 906
-
-tree 907
-
-tree 908
-
-tree 909
-
-tree 910
-
-tree 911
-
-tree 912
-
-tree 913
-
-tree 914
-
-tree 915
-
-tree 916
-
-tree 917
-
-tree 918
-
-tree 919
-
-tree 920
-
-tree 921
-
-tree 922
-
-tree 923
-
-tree 924
-
-tree 925
-
-tree 926
-
-tree 927
-
-tree 928
-
-tree 929
-
-tree 930
-
-tree 931
-
-tree 932
-
-tree 933
-
-tree 934
-
-tree 935
-
-tree 936
-
-tree 937
-
-tree 938
-
-tree 939
-
-tree 940
-
-tree 941
-
-tree 942
-
-tree 943
-
-tree 944
-
-tree 945
-
-tree 946
-
-tree 947
-
-tree 948
-
-tree 949
-
-tree 950
-
-tree 951
-
-tree 952
-
-tree 953
-
-tree 954
-
-tree 955
-
-tree 956
-
-tree 957
-
-tree 958
-
-tree 959
-
-tree 960
-
-tree 961
-
-tree 962
-
-tree 963
-
-tree 964
-
-tree 965
-
-tree 966
-
-tree 967
-
-tree 968
-
-tree 969
-
-tree 970
-
-tree 971
-
-tree 972
-
-tree 973
-
-tree 974
-
-tree 975
-
-tree 976
-
-tree 977
-
-tree 978
-
-tree 979
-
-tree 980
-
-tree 981
-
-tree 982
-
-tree 983
-
-tree 984
-
-tree 985
-
-tree 986
-
-tree 987
-
-tree 988
-
-tree 989
-
-tree 990
-
-tree 991
-
-tree 992
-
-tree 993
-
-tree 994
-
-tree 995
-
-tree 996
-
-tree 997
-
-tree 998
-
-tree 999
-
-tree 1000
-
-tree 1001
-
-tree 1002
-
-tree 1003
-
-tree 1004
-
-tree 1005
-
-tree 1006
-
-tree 1007
-
-tree 1008
-
-tree 1009
-
-tree 1010
-
-tree 1011
-
-tree 1012
-
-tree 1013
-
-tree 1014
-
-tree 1015
-
-tree 1016
-
-tree 1017
-
-tree 1018
-
-tree 1019
-
-tree 1020
-
-tree 1021
-
-tree 1022
-
-tree 1023
-
-tree 1024
-
-tree 1025
-
-tree 1026
-
-tree 1027
-
-tree 1028
-
-tree 1029
-
-tree 1030
-
-tree 1031
-
-tree 1032
-
-tree 1033
-
-tree 1034
-
-tree 1035
-
-tree 1036
-
-tree 1037
-
-tree 1038
-
-tree 1039
-
-tree 1040
-
-tree 1041
-
-tree 1042
-
-tree 1043
-
-tree 1044
-
-tree 1045
-
-tree 1046
-
-tree 1047
-
-tree 1048
-
-tree 1049
-
-tree 1050
-
-tree 1051
-
-tree 1052
-
-tree 1053
-
-tree 1054
-
-tree 1055
-
-tree 1056
-
-tree 1057
-
-tree 1058
-
-tree 1059
-
-tree 1060
-
-tree 1061
-
-tree 1062
-
-tree 1063
-
-tree 1064
-
-tree 1065
-
-tree 1066
-
-tree 1067
-
-tree 1068
-
-tree 1069
-
-tree 1070
-
-tree 1071
-
-tree 1072
-
-tree 1073
-
-tree 1074
-
-tree 1075
-
-tree 1076
-
-tree 1077
-
-tree 1078
-
-tree 1079
-
-tree 1080
-
-tree 1081
-
-tree 1082
-
-tree 1083
-
-tree 1084
-
-tree 1085
-
-tree 1086
-
-tree 1087
-
-tree 1088
-
-tree 1089
-
-tree 1090
-
-tree 1091
-
-tree 1092
-
-tree 1093
-
-tree 1094
-
-tree 1095
-
-tree 1096
-
-tree 1097
-
-tree 1098
-
-tree 1099
-
-tree 1100
-
-tree 1101
-
-tree 1102
-
-tree 1103
-
-tree 1104
-
-tree 1105
-
-tree 1106
-
-tree 1107
-
-tree 1108
-
-tree 1109
-
-tree 1110
-
-tree 1111
-
-tree 1112
-
-tree 1113
-
-tree 1114
-
-tree 1115
-
-tree 1116
-
-tree 1117
-
-tree 1118
-
-tree 1119
-
-tree 1120
-
-tree 1121
-
-tree 1122
-
-tree 1123
-
-tree 1124
-
-tree 1125
-
-tree 1126
-
-tree 1127
-
-tree 1128
-
-tree 1129
-
-tree 1130
-
-tree 1131
-
-tree 1132
-
-tree 1133
-
-tree 1134
-
-tree 1135
-
-tree 1136
-
-tree 1137
-
-tree 1138
-
-tree 1139
-
-tree 1140
-
-tree 1141
-
-tree 1142
-
-tree 1143
-
-tree 1144
-
-tree 1145
-
-tree 1146
-
-tree 1147
-
-tree 1148
-
-tree 1149
-
-tree 1150
-
-tree 1151
-
-tree 1152
-
-tree 1153
-
-tree 1154
-
-tree 1155
-
-tree 1156
-
-tree 1157
-
-tree 1158
-
-tree 1159
-
-tree 1160
-
-tree 1161
-
-tree 1162
-
-tree 1163
-
-tree 1164
-
-tree 1165
-
-tree 1166
-
-tree 1167
-
-tree 1168
-
-tree 1169
-
-tree 1170
-
-tree 1171
-
-tree 1172
-
-tree 1173
-
-tree 1174
-
-tree 1175
-
-tree 1176
-
-tree 1177
-
-tree 1178
-
-tree 1179
-
-tree 1180
-
-tree 1181
-
-tree 1182
-
-tree 1183
-
-tree 1184
-
-tree 1185
-
-tree 1186
-
-tree 1187
-
-tree 1188
-
-tree 1189
-
-tree 1190
-
-tree 1191
-
-tree 1192
-
-tree 1193
-
-tree 1194
-
-tree 1195
-
-tree 1196
-
-tree 1197
-
-tree 1198
-
-tree 1199
-
-tree 1200
-
-tree 1201
-
-tree 1202
-
-tree 1203
-
-tree 1204
-
-tree 1205
-
-tree 1206
-
-tree 1207
-
-tree 1208
-
-tree 1209
-
-tree 1210
-
-tree 1211
-
-tree 1212
-
-tree 1213
-
-tree 1214
-
-tree 1215
-
-tree 1216
-
-tree 1217
-
-tree 1218
-
-tree 1219
-
-tree 1220
-
-tree 1221
-
-tree 1222
-
-tree 1223
-
-tree 1224
-
-tree 1225
-
-tree 1226
-
-tree 1227
-
-tree 1228
-
-tree 1229
-
-tree 1230
-
-tree 1231
-
-tree 1232
-
-tree 1233
-
-tree 1234
-
-tree 1235
-
-tree 1236
-
-tree 1237
-
-tree 1238
-
-tree 1239
-
-tree 1240
-
-tree 1241
-
-tree 1242
-
-tree 1243
-
-tree 1244
-
-tree 1245
-
-tree 1246
-
-tree 1247
-
-tree 1248
-
-tree 1249
-
-tree 1250
-
-tree 1251
-
-tree 1252
-
-tree 1253
-
-tree 1254
-
-tree 1255
-
-tree 1256
-
-tree 1257
-
-tree 1258
-
-tree 1259
-
-tree 1260
-
-tree 1261
-
-tree 1262
-
-tree 1263
-
-tree 1264
-
-tree 1265
-
-tree 1266
-
-tree 1267
-
-tree 1268
-
-tree 1269
-
-tree 1270
-
-tree 1271
-
-tree 1272
-
-tree 1273
-
-tree 1274
-
-tree 1275
-
-tree 1276
-
-tree 1277
-
-tree 1278
-
-tree 1279
-
-tree 1280
-
-tree 1281
-
-tree 1282
-
-tree 1283
-
-tree 1284
-
-tree 1285
-
-tree 1286
-
-tree 1287
-
-tree 1288
-
-tree 1289
-
-tree 1290
-
-tree 1291
-
-tree 1292
-
-tree 1293
-
-tree 1294
-
-tree 1295
-
-tree 1296
-
-tree 1297
-
-tree 1298
-
-tree 1299
-
-tree 1300
-
-tree 1301
-
-tree 1302
-
-tree 1303
-
-tree 1304
-
-tree 1305
-
-tree 1306
-
-tree 1307
-
-tree 1308
-
-tree 1309
-
-tree 1310
-
-tree 1311
-
-tree 1312
-
-tree 1313
-
-tree 1314
-
-tree 1315
-
-tree 1316
-
-tree 1317
-
-tree 1318
-
-tree 1319
-
-tree 1320
-
-tree 1321
-
-tree 1322
-
-tree 1323
-
-tree 1324
-
-tree 1325
-
-tree 1326
-
-tree 1327
-
-tree 1328
-
-tree 1329
-
-tree 1330
-
-tree 1331
-
-tree 1332
-
-tree 1333
-
-tree 1334
-
-tree 1335
-
-tree 1336
-
-tree 1337
-
-tree 1338
-
-tree 1339
-
-tree 1340
-
-tree 1341
-
-tree 1342
-
-tree 1343
-
-tree 1344
-
-tree 1345
-
-tree 1346
-
-tree 1347
-
-tree 1348
-
-tree 1349
-
-tree 1350
-
-tree 1351
-
-tree 1352
-
-tree 1353
-
-tree 1354
-
-tree 1355
-
-tree 1356
-
-tree 1357
-
-tree 1358
-
-tree 1359
-
-tree 1360
-
-tree 1361
-
-tree 1362
-
-tree 1363
-
-tree 1364
-
-tree 1365
-
-tree 1366
-
-tree 1367
-
-tree 1368
-
-tree 1369
-
-tree 1370
-
-tree 1371
-
-tree 1372
-
-tree 1373
-
-tree 1374
-
-tree 1375
-
-tree 1376
-
-tree 1377
-
-tree 1378
-
-tree 1379
-
-tree 1380
-
-tree 1381
-
-tree 1382
-
-tree 1383
-
-tree 1384
-
-tree 1385
-
-tree 1386
-
-tree 1387
-
-tree 1388
-
-tree 1389
-
-tree 1390
-
-tree 1391
-
-tree 1392
-
-tree 1393
-
-tree 1394
-
-tree 1395
-
-tree 1396
-
-tree 1397
-
-tree 1398
-
-tree 1399
-
-tree 1400
-
-tree 1401
-
-tree 1402
-
-tree 1403
-
-tree 1404
-
-tree 1405
-
-tree 1406
-
-tree 1407
-
-tree 1408
-
-tree 1409
-
-tree 1410
-
-tree 1411
-
-tree 1412
-
-tree 1413
-
-tree 1414
-
-tree 1415
-
-tree 1416
-
-tree 1417
-
-tree 1418
-
-tree 1419
-
-tree 1420
-
-tree 1421
-
-tree 1422
-
-tree 1423
-
-tree 1424
-
-tree 1425
-
-tree 1426
-
-tree 1427
-
-tree 1428
-
-tree 1429
-
-tree 1430
-
-tree 1431
-
-tree 1432
-
-tree 1433
-
-tree 1434
-
-tree 1435
-
-tree 1436
-
-tree 1437
-
-tree 1438
-
-tree 1439
-
-tree 1440
-
-tree 1441
-
-tree 1442
-
-tree 1443
-
-tree 1444
-
-tree 1445
-
-tree 1446
-
-tree 1447
-
-tree 1448
-
-tree 1449
-
-tree 1450
-
-tree 1451
-
-tree 1452
-
-tree 1453
-
-tree 1454
-
-tree 1455
-
-tree 1456
-
-tree 1457
-
-tree 1458
-
-tree 1459
-
-tree 1460
-
-tree 1461
-
-tree 1462
-
-tree 1463
-
-tree 1464
-
-tree 1465
-
-tree 1466
-
-tree 1467
-
-tree 1468
-
-tree 1469
-
-tree 1470
-
-tree 1471
-
-tree 1472
-
-tree 1473
-
-tree 1474
-
-tree 1475
-
-tree 1476
-
-tree 1477
-
-tree 1478
-
-tree 1479
-
-tree 1480
-
-tree 1481
-
-tree 1482
-
-tree 1483
-
-tree 1484
-
-tree 1485
-
-tree 1486
-
-tree 1487
-
-tree 1488
-
-tree 1489
-
-tree 1490
-
-tree 1491
-
-tree 1492
-
-tree 1493
-
-tree 1494
-
-tree 1495
-
-tree 1496
-
-tree 1497
-
-tree 1498
-
-tree 1499
-
-tree 1500
-
-tree 1501
-
-tree 1502
-
-tree 1503
-
-tree 1504
-
-tree 1505
-
-tree 1506
-
-tree 1507
-
-tree 1508
-
-tree 1509
-
-tree 1510
-
-tree 1511
-
-tree 1512
-
-tree 1513
-
-tree 1514
-
-tree 1515
-
-tree 1516
-
-tree 1517
-
-tree 1518
-
-tree 1519
-
-tree 1520
-
-tree 1521
-
-tree 1522
-
-tree 1523
-
-tree 1524
-
-tree 1525
-
-tree 1526
-
-tree 1527
-
-tree 1528
-
-tree 1529
-
-tree 1530
-
-tree 1531
-
-tree 1532
-
-tree 1533
-
-tree 1534
-
-tree 1535
-
-tree 1536
-
-tree 1537
-
-tree 1538
-
-tree 1539
-
-tree 1540
-
-tree 1541
-
-tree 1542
-
-tree 1543
-
-tree 1544
-
-tree 1545
-
-tree 1546
-
-tree 1547
-
-tree 1548
-
-tree 1549
-
-tree 1550
-
-tree 1551
-
-tree 1552
-
-tree 1553
-
-tree 1554
-
-tree 1555
-
-tree 1556
-
-tree 1557
-
-tree 1558
-
-tree 1559
-
-tree 1560
-
-tree 1561
-
-tree 1562
-
-tree 1563
-
-tree 1564
-
-tree 1565
-
-tree 1566
-
-tree 1567
-
-tree 1568
-
-tree 1569
-
-tree 1570
-
-tree 1571
-
-tree 1572
-
-tree 1573
-
-tree 1574
-
-tree 1575
-
-tree 1576
-
-tree 1577
-
-tree 1578
-
-tree 1579
-
-tree 1580
-
-tree 1581
-
-tree 1582
-
-tree 1583
-
-tree 1584
-
-tree 1585
-
-tree 1586
-
-tree 1587
-
-tree 1588
-
-tree 1589
-
-tree 1590
-
-tree 1591
-
-tree 1592
-
-tree 1593
-
-tree 1594
-
-tree 1595
-
-tree 1596
-
-tree 1597
-
-tree 1598
-
-tree 1599
-
-tree 1600
-
-tree 1601
-
-tree 1602
-
-tree 1603
-
-tree 1604
-
-tree 1605
-
-tree 1606
-
-tree 1607
-
-tree 1608
-
-tree 1609
-
-tree 1610
-
-tree 1611
-
-tree 1612
-
-tree 1613
-
-tree 1614
-
-tree 1615
-
-tree 1616
-
-tree 1617
-
-tree 1618
-
-tree 1619
-
-tree 1620
-
-tree 1621
-
-tree 1622
-
-tree 1623
-
-tree 1624
-
-tree 1625
-
-tree 1626
-
-tree 1627
-
-tree 1628
-
-tree 1629
-
-tree 1630
-
-tree 1631
-
-tree 1632
-
-tree 1633
-
-tree 1634
-
-tree 1635
-
-tree 1636
-
-tree 1637
-
-tree 1638
-
-tree 1639
-
-tree 1640
-
-tree 1641
-
-tree 1642
-
-tree 1643
-
-tree 1644
-
-tree 1645
-
-tree 1646
-
-tree 1647
-
-tree 1648
-
-tree 1649
-
-tree 1650
-
-tree 1651
-
-tree 1652
-
-tree 1653
-
-tree 1654
-
-tree 1655
-
-tree 1656
-
-tree 1657
-
-tree 1658
-
-tree 1659
-
-tree 1660
-
-tree 1661
-
-tree 1662
-
-tree 1663
-
-tree 1664
-
-tree 1665
-
-tree 1666
-
-tree 1667
-
-tree 1668
-
-tree 1669
-
-tree 1670
-
-tree 1671
-
-tree 1672
-
-tree 1673
-
-tree 1674
-
-tree 1675
-
-tree 1676
-
-tree 1677
-
-tree 1678
-
-tree 1679
-
-tree 1680
-
-tree 1681
-
-tree 1682
-
-tree 1683
-
-tree 1684
-
-tree 1685
-
-tree 1686
-
-tree 1687
-
-tree 1688
-
-tree 1689
-
-tree 1690
-
-tree 1691
-
-tree 1692
-
-tree 1693
-
-tree 1694
-
-tree 1695
-
-tree 1696
-
-tree 1697
-
-tree 1698
-
-tree 1699
-
-tree 1700
-
-tree 1701
-
-tree 1702
-
-tree 1703
-
-tree 1704
-
-tree 1705
-
-tree 1706
-
-tree 1707
-
-tree 1708
-
-tree 1709
-
-tree 1710
-
-tree 1711
-
-tree 1712
-
-tree 1713
-
-tree 1714
-
-tree 1715
-
-tree 1716
-
-tree 1717
-
-tree 1718
-
-tree 1719
-
-tree 1720
-
-tree 1721
-
-tree 1722
-
-tree 1723
-
-tree 1724
-
-tree 1725
-
-tree 1726
-
-tree 1727
-
-tree 1728
-
-tree 1729
-
-tree 1730
-
-tree 1731
-
-tree 1732
-
-tree 1733
-
-tree 1734
-
-tree 1735
-
-tree 1736
-
-tree 1737
-
-tree 1738
-
-tree 1739
-
-tree 1740
-
-tree 1741
-
-tree 1742
-
-tree 1743
-
-tree 1744
-
-tree 1745
-
-tree 1746
-
-tree 1747
-
-tree 1748
-
-tree 1749
-
-tree 1750
-
-tree 1751
-
-tree 1752
-
-tree 1753
-
-tree 1754
-
-tree 1755
-
-tree 1756
-
-tree 1757
-
-tree 1758
-
-tree 1759
-
-tree 1760
-
-tree 1761
-
-tree 1762
-
-tree 1763
-
-tree 1764
-
-tree 1765
-
-tree 1766
-
-tree 1767
-
-tree 1768
-
-tree 1769
-
-tree 1770
-
-tree 1771
-
-tree 1772
-
-tree 1773
-
-tree 1774
-
-tree 1775
-
-tree 1776
-
-tree 1777
-
-tree 1778
-
-tree 1779
-
-tree 1780
-
-tree 1781
-
-tree 1782
-
-tree 1783
-
-tree 1784
-
-tree 1785
-
-tree 1786
-
-tree 1787
-
-tree 1788
-
-tree 1789
-
-tree 1790
-
-tree 1791
-
-tree 1792
-
-tree 1793
-
-tree 1794
-
-tree 1795
-
-tree 1796
-
-tree 1797
-
-tree 1798
-
-tree 1799
-
-tree 1800
-
-tree 1801
-
-tree 1802
-
-tree 1803
-
-tree 1804
-
-tree 1805
-
-tree 1806
-
-tree 1807
-
-tree 1808
-
-tree 1809
-
-tree 1810
-
-tree 1811
-
-tree 1812
-
-tree 1813
-
-tree 1814
-
-tree 1815
-
-tree 1816
-
-tree 1817
-
-tree 1818
-
-tree 1819
-
-tree 1820
-
-tree 1821
-
-tree 1822
-
-tree 1823
-
-tree 1824
-
-tree 1825
-
-tree 1826
-
-tree 1827
-
-tree 1828
-
-tree 1829
-
-tree 1830
-
-tree 1831
-
-tree 1832
-
-tree 1833
-
-tree 1834
-
-tree 1835
-
-tree 1836
-
-tree 1837
-
-tree 1838
-
-tree 1839
-
-tree 1840
-
-tree 1841
-
-tree 1842
-
-tree 1843
-
-tree 1844
-
-tree 1845
-
-tree 1846
-
-tree 1847
-
-tree 1848
-
-tree 1849
-
-tree 1850
-
-tree 1851
-
-tree 1852
-
-tree 1853
-
-tree 1854
-
-tree 1855
-
-tree 1856
-
-tree 1857
-
-tree 1858
-
-tree 1859
-
-tree 1860
-
-tree 1861
-
-tree 1862
-
-tree 1863
-
-tree 1864
-
-tree 1865
-
-tree 1866
-
-tree 1867
-
-tree 1868
-
-tree 1869
-
-tree 1870
-
-tree 1871
-
-tree 1872
-
-tree 1873
-
-tree 1874
-
-tree 1875
-
-tree 1876
-
-tree 1877
-
-tree 1878
-
-tree 1879
-
-tree 1880
-
-tree 1881
-
-tree 1882
-
-tree 1883
-
-tree 1884
-
-tree 1885
-
-tree 1886
-
-tree 1887
-
-tree 1888
-
-tree 1889
-
-tree 1890
-
-tree 1891
-
-tree 1892
-
-tree 1893
-
-tree 1894
-
-tree 1895
-
-tree 1896
-
-tree 1897
-
-tree 1898
-
-tree 1899
-
-tree 1900
-
-tree 1901
-
-tree 1902
-
-tree 1903
-
-tree 1904
-
-tree 1905
-
-tree 1906
-
-tree 1907
-
-tree 1908
-
-tree 1909
-
-tree 1910
-
-tree 1911
-
-tree 1912
-
-tree 1913
-
-tree 1914
-
-tree 1915
-
-tree 1916
-
-tree 1917
-
-tree 1918
-
-tree 1919
-
-tree 1920
-
-tree 1921
-
-tree 1922
-
-tree 1923
-
-tree 1924
-
-tree 1925
-
-tree 1926
-
-tree 1927
-
-tree 1928
-
-tree 1929
-
-tree 1930
-
-tree 1931
-
-tree 1932
-
-tree 1933
-
-tree 1934
-
-tree 1935
-
-tree 1936
-
-tree 1937
-
-tree 1938
-
-tree 1939
-
-tree 1940
-
-tree 1941
-
-tree 1942
-
-tree 1943
-
-tree 1944
-
-tree 1945
-
-tree 1946
-
-tree 1947
-
-tree 1948
-
-tree 1949
-
-tree 1950
-
-tree 1951
-
-tree 1952
-
-tree 1953
-
-tree 1954
-
-tree 1955
-
-tree 1956
-
-tree 1957
-
-tree 1958
-
-tree 1959
-
-tree 1960
-
-tree 1961
-
-tree 1962
-
-tree 1963
-
-tree 1964
-
-tree 1965
-
-tree 1966
-
-tree 1967
-
-tree 1968
-
-tree 1969
-
-tree 1970
-
-tree 1971
-
-tree 1972
-
-tree 1973
-
-tree 1974
-
-tree 1975
-
-tree 1976
-
-tree 1977
-
-tree 1978
-
-tree 1979
-
-tree 1980
-
-tree 1981
-
-tree 1982
-
-tree 1983
-
-tree 1984
-
-tree 1985
-
-tree 1986
-
-tree 1987
-
-tree 1988
-
-tree 1989
-
-tree 1990
-
-tree 1991
-
-tree 1992
-
-tree 1993
-
-tree 1994
-
-tree 1995
-
-tree 1996
-
-tree 1997
-
-tree 1998
-
-tree 1999
-
-tree 2000
-
-tree 2001
-
-tree 2002
-
-tree 2003
-
-tree 2004
-
-tree 2005
-
-tree 2006
-
-tree 2007
-
-tree 2008
-
-tree 2009
-
-tree 2010
-
-tree 2011
-
-tree 2012
-
-tree 2013
-
-tree 2014
-
-tree 2015
-
-tree 2016
-
-tree 2017
-
-tree 2018
-
-tree 2019
-
-tree 2020
-
-tree 2021
-
-tree 2022
-
-tree 2023
-
-tree 2024
-
-tree 2025
-
-tree 2026
-
-tree 2027
-
-tree 2028
-
-tree 2029
-
-tree 2030
-
-tree 2031
-
-tree 2032
-
-tree 2033
-
-tree 2034
-
-tree 2035
-
-tree 2036
-
-tree 2037
-
-tree 2038
-
-tree 2039
-
-tree 2040
-
-tree 2041
-
-tree 2042
-
-tree 2043
-
-tree 2044
-
-tree 2045
-
-tree 2046
-
-tree 2047
-
-tree 2048
-
-tree 2049
-
-tree 2050
-
-tree 2051
-
-tree 2052
-
-tree 2053
-
-tree 2054
-
-tree 2055
-
-tree 2056
-
-tree 2057
-
-tree 2058
-
-tree 2059
-
-tree 2060
-
-tree 2061
-
-tree 2062
-
-tree 2063
-
-tree 2064
-
-tree 2065
-
-tree 2066
-
-tree 2067
-
-tree 2068
-
-tree 2069
-
-tree 2070
-
-tree 2071
-
-tree 2072
-
-tree 2073
-
-tree 2074
-
-tree 2075
-
-tree 2076
-
-tree 2077
-
-tree 2078
-
-tree 2079
-
-tree 2080
-
-tree 2081
-
-tree 2082
-
-tree 2083
-
-tree 2084
-
-tree 2085
-
-tree 2086
-
-tree 2087
-
-tree 2088
-
-tree 2089
-
-tree 2090
-
-tree 2091
-
-tree 2092
-
-tree 2093
-
-tree 2094
-
-tree 2095
-
-tree 2096
-
-tree 2097
-
-tree 2098
-
-tree 2099
-
-tree 2100
-
-tree 2101
-
-tree 2102
-
-tree 2103
-
-tree 2104
-
-tree 2105
-
-tree 2106
-
-tree 2107
-
-tree 2108
-
-tree 2109
-
-tree 2110
-
-tree 2111
-
-tree 2112
-
-tree 2113
-
-tree 2114
-
-tree 2115
-
-tree 2116
-
-tree 2117
-
-tree 2118
-
-tree 2119
-
-tree 2120
-
-tree 2121
-
-tree 2122
-
-tree 2123
-
-tree 2124
-
-tree 2125
-
-tree 2126
-
-tree 2127
-
-tree 2128
-
-tree 2129
-
-tree 2130
-
-tree 2131
-
-tree 2132
-
-tree 2133
-
-tree 2134
-
-tree 2135
-
-tree 2136
-
-tree 2137
-
-tree 2138
-
-tree 2139
-
-tree 2140
-
-tree 2141
-
-tree 2142
-
-tree 2143
-
-tree 2144
-
-tree 2145
-
-tree 2146
-
-tree 2147
-
-tree 2148
-
-tree 2149
-
-tree 2150
-
-tree 2151
-
-tree 2152
-
-tree 2153
-
-tree 2154
-
-tree 2155
-
-tree 2156
-
-tree 2157
-
-tree 2158
-
-tree 2159
-
-tree 2160
-
-tree 2161
-
-tree 2162
-
-tree 2163
-
-tree 2164
-
-tree 2165
-
-tree 2166
-
-tree 2167
-
-tree 2168
-
-tree 2169
-
-tree 2170
-
-tree 2171
-
-tree 2172
-
-tree 2173
-
-tree 2174
-
-tree 2175
-
-tree 2176
-
-tree 2177
-
-tree 2178
-
-tree 2179
-
-tree 2180
-
-tree 2181
-
-tree 2182
-
-tree 2183
-
-tree 2184
-
-tree 2185
-
-tree 2186
-
-tree 2187
-
-tree 2188
-
-tree 2189
-
-tree 2190
-
-tree 2191
-
-tree 2192
-
-tree 2193
-
-tree 2194
-
-tree 2195
-
-tree 2196
-
-tree 2197
-
-tree 2198
-
-tree 2199
-
-tree 2200
-
-tree 2201
-
-tree 2202
-
-tree 2203
-
-tree 2204
-
-tree 2205
-
-tree 2206
-
-tree 2207
-
-tree 2208
-
-tree 2209
-
-tree 2210
-
-tree 2211
-
-tree 2212
-
-tree 2213
-
-tree 2214
-
-tree 2215
-
-tree 2216
-
-tree 2217
-
-tree 2218
-
-tree 2219
-
-tree 2220
-
-tree 2221
-
-tree 2222
-
-tree 2223
-
-tree 2224
-
-tree 2225
-
-tree 2226
-
-tree 2227
-
-tree 2228
-
-tree 2229
-
-tree 2230
-
-tree 2231
-
-tree 2232
-
-tree 2233
-
-tree 2234
-
-tree 2235
-
-tree 2236
-
-tree 2237
-
-tree 2238
-
-tree 2239
-
-tree 2240
-
-tree 2241
-
-tree 2242
-
-tree 2243
-
-tree 2244
-
-tree 2245
-
-tree 2246
-
-tree 2247
-
-tree 2248
-
-tree 2249
-
-tree 2250
-
-tree 2251
-
-tree 2252
-
-tree 2253
-
-tree 2254
-
-tree 2255
-
-tree 2256
-
-tree 2257
-
-tree 2258
-
-tree 2259
-
-tree 2260
-
-tree 2261
-
-tree 2262
-
-tree 2263
-
-tree 2264
-
-tree 2265
-
-tree 2266
-
-tree 2267
-
-tree 2268
-
-tree 2269
-
-tree 2270
-
-tree 2271
-
-tree 2272
-
-tree 2273
-
-tree 2274
-
-tree 2275
-
-tree 2276
-
-tree 2277
-
-tree 2278
-
-tree 2279
-
-tree 2280
-
-tree 2281
-
-tree 2282
-
-tree 2283
-
-tree 2284
-
-tree 2285
-
-tree 2286
-
-tree 2287
-
-tree 2288
-
-tree 2289
-
-tree 2290
-
-tree 2291
-
-tree 2292
-
-tree 2293
-
-tree 2294
-
-tree 2295
-
-tree 2296
-
-tree 2297
-
-tree 2298
-
-tree 2299
-
-tree 2300
-
-tree 2301
-
-tree 2302
-
-tree 2303
-
-tree 2304
-
-tree 2305
-
-tree 2306
-
-tree 2307
-
-tree 2308
-
-tree 2309
-
-tree 2310
-
-tree 2311
-
-tree 2312
-
-tree 2313
-
-tree 2314
-
-tree 2315
-
-tree 2316
-
-tree 2317
-
-tree 2318
-
-tree 2319
-
-tree 2320
-
-tree 2321
-
-tree 2322
-
-tree 2323
-
-tree 2324
-
-tree 2325
-
-tree 2326
-
-tree 2327
-
-tree 2328
-
-tree 2329
-
-tree 2330
-
-tree 2331
-
-tree 2332
-
-tree 2333
-
-tree 2334
-
-tree 2335
-
-tree 2336
-
-tree 2337
-
-tree 2338
-
-tree 2339
-
-tree 2340
-
-tree 2341
-
-tree 2342
-
-tree 2343
-
-tree 2344
-
-tree 2345
-
-tree 2346
-
-tree 2347
-
-tree 2348
-
-tree 2349
-
-tree 2350
-
-tree 2351
-
-tree 2352
-
-tree 2353
-
-tree 2354
-
-tree 2355
-
-tree 2356
-
-tree 2357
-
-tree 2358
-
-tree 2359
-
-tree 2360
-
-tree 2361
-
-tree 2362
-
-tree 2363
-
-tree 2364
-
-tree 2365
-
-tree 2366
-
-tree 2367
-
-tree 2368
-
-tree 2369
-
-tree 2370
-
-tree 2371
-
-tree 2372
-
-tree 2373
-
-tree 2374
-
-tree 2375
-
-tree 2376
-
-tree 2377
-
-tree 2378
-
-tree 2379
-
-tree 2380
-
-tree 2381
-
-tree 2382
-
-tree 2383
-
-tree 2384
-
-tree 2385
-
-tree 2386
-
-tree 2387
-
-tree 2388
-
-tree 2389
-
-tree 2390
-
-tree 2391
-
-tree 2392
-
-tree 2393
-
-tree 2394
-
-tree 2395
-
-tree 2396
-
-tree 2397
-
-tree 2398
-
-tree 2399
-
-tree 2400
-
-tree 2401
-
-tree 2402
-
-tree 2403
-
-tree 2404
-
-tree 2405
-
-tree 2406
-
-tree 2407
-
-tree 2408
-
-tree 2409
-
-tree 2410
-
-tree 2411
-
-tree 2412
-
-tree 2413
-
-tree 2414
-
-tree 2415
-
-tree 2416
-
-tree 2417
-
-tree 2418
-
-tree 2419
-
-tree 2420
-
-tree 2421
-
-tree 2422
-
-tree 2423
-
-tree 2424
-
-tree 2425
-
-tree 2426
-
-tree 2427
-
-tree 2428
-
-tree 2429
-
-tree 2430
-
-tree 2431
-
-tree 2432
-
-tree 2433
-
-tree 2434
-
-tree 2435
-
-tree 2436
-
-tree 2437
-
-tree 2438
-
-tree 2439
-
-tree 2440
-
-tree 2441
-
-tree 2442
-
-tree 2443
-
-tree 2444
-
-tree 2445
-
-tree 2446
-
-tree 2447
-
-tree 2448
-
-tree 2449
-
-tree 2450
-
-tree 2451
-
-tree 2452
-
-tree 2453
-
-tree 2454
-
-tree 2455
-
-tree 2456
-
-tree 2457
-
-tree 2458
-
-tree 2459
-
-tree 2460
-
-tree 2461
-
-tree 2462
-
-tree 2463
-
-tree 2464
-
-tree 2465
-
-tree 2466
-
-tree 2467
-
-tree 2468
-
-tree 2469
-
-tree 2470
-
-tree 2471
-
-tree 2472
-
-tree 2473
-
-tree 2474
-
-tree 2475
-
-tree 2476
-
-tree 2477
-
-tree 2478
-
-tree 2479
-
-tree 2480
-
-tree 2481
-
-tree 2482
-
-tree 2483
-
-tree 2484
-
-tree 2485
-
-tree 2486
-
-tree 2487
-
-tree 2488
-
-tree 2489
-
-tree 2490
-
-tree 2491
-
-tree 2492
-
-tree 2493
-
-tree 2494
-
-tree 2495
-
-tree 2496
-
-tree 2497
-
-tree 2498
-
-tree 2499
-
-tree 2500
-
-tree 2501
-
-tree 2502
-
-tree 2503
-
-tree 2504
-
-tree 2505
-
-tree 2506
-
-tree 2507
-
-tree 2508
-
-tree 2509
-
-tree 2510
-
-tree 2511
-
-tree 2512
-
-tree 2513
-
-tree 2514
-
-tree 2515
-
-tree 2516
-
-tree 2517
-
-tree 2518
-
-tree 2519
-
-tree 2520
-
-tree 2521
-
-tree 2522
-
-tree 2523
-
-tree 2524
-
-tree 2525
-
-tree 2526
-
-tree 2527
-
-tree 2528
-
-tree 2529
-
-tree 2530
-
-tree 2531
-
-tree 2532
-
-tree 2533
-
-tree 2534
-
-tree 2535
-
-tree 2536
-
-tree 2537
-
-tree 2538
-
-tree 2539
-
-tree 2540
-
-tree 2541
-
-tree 2542
-
-tree 2543
-
-tree 2544
-
-tree 2545
-
-tree 2546
-
-tree 2547
-
-tree 2548
-
-tree 2549
-
-tree 2550
-
-tree 2551
-
-tree 2552
-
-tree 2553
-
-tree 2554
-
-tree 2555
-
-tree 2556
-
-tree 2557
-
-tree 2558
-
-tree 2559
-
-tree 2560
-
-tree 2561
-
-tree 2562
-
-tree 2563
-
-tree 2564
-
-tree 2565
-
-tree 2566
-
-tree 2567
-
-tree 2568
-
-tree 2569
-
-tree 2570
-
-tree 2571
-
-tree 2572
-
-tree 2573
-
-tree 2574
-
-tree 2575
-
-tree 2576
-
-tree 2577
-
-tree 2578
-
-tree 2579
-
-tree 2580
-
-tree 2581
-
-tree 2582
-
-tree 2583
-
-tree 2584
-
-tree 2585
-
-tree 2586
-
-tree 2587
-
-tree 2588
-
-tree 2589
-
-tree 2590
-
-tree 2591
-
-tree 2592
-
-tree 2593
-
-tree 2594
-
-tree 2595
-
-tree 2596
-
-tree 2597
-
-tree 2598
-
-tree 2599
-
-tree 2600
-
-tree 2601
-
-tree 2602
-
-tree 2603
-
-tree 2604
-
-tree 2605
-
-tree 2606
-
-tree 2607
-
-tree 2608
-
-tree 2609
-
-tree 2610
-
-tree 2611
-
-tree 2612
-
-tree 2613
-
-tree 2614
-
-tree 2615
-
-tree 2616
-
-tree 2617
-
-tree 2618
-
-tree 2619
-
-tree 2620
-
-tree 2621
-
-tree 2622
-
-tree 2623
-
-tree 2624
-
-tree 2625
-
-tree 2626
-
-tree 2627
-
-tree 2628
-
-tree 2629
-
-tree 2630
-
-tree 2631
-
-tree 2632
-
-tree 2633
-
-tree 2634
-
-tree 2635
-
-tree 2636
-
-tree 2637
-
-tree 2638
-
-tree 2639
-
-tree 2640
-
-tree 2641
-
-tree 2642
-
-tree 2643
-
-tree 2644
-
-tree 2645
-
-tree 2646
-
-tree 2647
-
-tree 2648
-
-tree 2649
-
-tree 2650
-
-tree 2651
-
-tree 2652
-
-tree 2653
-
-tree 2654
-
-tree 2655
-
-tree 2656
-
-tree 2657
-
-tree 2658
-
-tree 2659
-
-tree 2660
-
-tree 2661
-
-tree 2662
-
-tree 2663
-
-tree 2664
-
-tree 2665
-
-tree 2666
-
-tree 2667
-
-tree 2668
-
-tree 2669
-
-tree 2670
-
-tree 2671
-
-tree 2672
-
-tree 2673
-
-tree 2674
-
-tree 2675
-
-tree 2676
-
-tree 2677
-
-tree 2678
-
-tree 2679
-
-tree 2680
-
-tree 2681
-
-tree 2682
-
-tree 2683
-
-tree 2684
-
-tree 2685
-
-tree 2686
-
-tree 2687
-
-tree 2688
-
-tree 2689
-
-tree 2690
-
-tree 2691
-
-tree 2692
-
-tree 2693
-
-tree 2694
-
-tree 2695
-
-tree 2696
-
-tree 2697
-
-tree 2698
-
-tree 2699
-
-tree 2700
-
-tree 2701
-
-tree 2702
-
-tree 2703
-
-tree 2704
-
-tree 2705
-
-tree 2706
-
-tree 2707
-
-tree 2708
-
-tree 2709
-
-tree 2710
-
-tree 2711
-
-tree 2712
-
-tree 2713
-
-tree 2714
-
-tree 2715
-
-tree 2716
-
-tree 2717
-
-tree 2718
-
-tree 2719
-
-tree 2720
-
-tree 2721
-
-tree 2722
-
-tree 2723
-
-tree 2724
-
-tree 2725
-
-tree 2726
-
-tree 2727
-
-tree 2728
-
-tree 2729
-
-tree 2730
-
-tree 2731
-
-tree 2732
-
-tree 2733
-
-tree 2734
-
-tree 2735
-
-tree 2736
-
-tree 2737
-
-tree 2738
-
-tree 2739
-
-tree 2740
-
-tree 2741
-
-tree 2742
-
-tree 2743
-
-tree 2744
-
-tree 2745
-
-tree 2746
-
-tree 2747
-
-tree 2748
-
-tree 2749
-
-tree 2750
-
-tree 2751
-
-tree 2752
-
-tree 2753
-
-tree 2754
-
-tree 2755
-
-tree 2756
-
-tree 2757
-
-tree 2758
-
-tree 2759
-
-tree 2760
-
-tree 2761
-
-tree 2762
-
-tree 2763
-
-tree 2764
-
-tree 2765
-
-tree 2766
-
-tree 2767
-
-tree 2768
-
-tree 2769
-
-tree 2770
-
-tree 2771
-
-tree 2772
-
-tree 2773
-
-tree 2774
-
-tree 2775
-
-tree 2776
-
-tree 2777
-
-tree 2778
-
-tree 2779
-
-tree 2780
-
-tree 2781
-
-tree 2782
-
-tree 2783
-
-tree 2784
-
-tree 2785
-
-tree 2786
-
-tree 2787
-
-tree 2788
-
-tree 2789
-
-tree 2790
-
-tree 2791
-
-tree 2792
-
-tree 2793
-
-tree 2794
-
-tree 2795
-
-tree 2796
-
-tree 2797
-
-tree 2798
-
-tree 2799
-
-tree 2800
-
-tree 2801
-
-tree 2802
-
-tree 2803
-
-tree 2804
-
-tree 2805
-
-tree 2806
-
-tree 2807
-
-tree 2808
-
-tree 2809
-
-tree 2810
-
-tree 2811
-
-tree 2812
-
-tree 2813
-
-tree 2814
-
-tree 2815
-
-tree 2816
-
-tree 2817
-
-tree 2818
-
-tree 2819
-
-tree 2820
-
-tree 2821
-
-tree 2822
-
-tree 2823
-
-tree 2824
-
-tree 2825
-
-tree 2826
-
-tree 2827
-
-tree 2828
-
-tree 2829
-
-tree 2830
-
-tree 2831
-
-tree 2832
-
-tree 2833
-
-tree 2834
-
-tree 2835
-
-tree 2836
-
-tree 2837
-
-tree 2838
-
-tree 2839
-
-tree 2840
-
-tree 2841
-
-tree 2842
-
-tree 2843
-
-tree 2844
-
-tree 2845
-
-tree 2846
-
-tree 2847
-
-tree 2848
-
-tree 2849
-
-tree 2850
-
-tree 2851
-
-tree 2852
-
-tree 2853
-
-tree 2854
-
-tree 2855
-
-tree 2856
-
-tree 2857
-
-tree 2858
-
-tree 2859
-
-tree 2860
-
-tree 2861
-
-tree 2862
-
-tree 2863
-
-tree 2864
-
-tree 2865
-
-tree 2866
-
-tree 2867
-
-tree 2868
-
-tree 2869
-
-tree 2870
-
-tree 2871
-
-tree 2872
-
-tree 2873
-
-tree 2874
-
-tree 2875
-
-tree 2876
-
-tree 2877
-
-tree 2878
-
-tree 2879
-
-tree 2880
-
-tree 2881
-
-tree 2882
-
-tree 2883
-
-tree 2884
-
-tree 2885
-
-tree 2886
-
-tree 2887
-
-tree 2888
-
-tree 2889
-
-tree 2890
-
-tree 2891
-
-tree 2892
-
-tree 2893
-
-tree 2894
-
-tree 2895
-
-tree 2896
-
-tree 2897
-
-tree 2898
-
-tree 2899
-
-tree 2900
-
-tree 2901
-
-tree 2902
-
-tree 2903
-
-tree 2904
-
-tree 2905
-
-tree 2906
-
-tree 2907
-
-tree 2908
-
-tree 2909
-
-tree 2910
-
-tree 2911
-
-tree 2912
-
-tree 2913
-
-tree 2914
-
-tree 2915
-
-tree 2916
-
-tree 2917
-
-tree 2918
-
-tree 2919
-
-tree 2920
-
-tree 2921
-
-tree 2922
-
-tree 2923
-
-tree 2924
-
-tree 2925
-
-tree 2926
-
-tree 2927
-
-tree 2928
-
-tree 2929
-
-tree 2930
-
-tree 2931
-
-tree 2932
-
-tree 2933
-
-tree 2934
-
-tree 2935
-
-tree 2936
-
-tree 2937
-
-tree 2938
-
-tree 2939
-
-tree 2940
-
-tree 2941
-
-tree 2942
-
-tree 2943
-
-tree 2944
-
-tree 2945
-
-tree 2946
-
-tree 2947
-
-tree 2948
-
-tree 2949
-
-tree 2950
-
-tree 2951
-
-tree 2952
-
-tree 2953
-
-tree 2954
-
-tree 2955
-
-tree 2956
-
-tree 2957
-
-tree 2958
-
-tree 2959
-
-tree 2960
-
-tree 2961
-
-tree 2962
-
-tree 2963
-
-tree 2964
-
-tree 2965
-
-tree 2966
-
-tree 2967
-
-tree 2968
-
-tree 2969
-
-tree 2970
-
-tree 2971
-
-tree 2972
-
-tree 2973
-
-tree 2974
-
-tree 2975
-
-tree 2976
-
-tree 2977
-
-tree 2978
-
-tree 2979
-
-tree 2980
-
-tree 2981
-
-tree 2982
-
-tree 2983
-
-tree 2984
-
-tree 2985
-
-tree 2986
-
-tree 2987
-
-tree 2988
-
-tree 2989
-
-tree 2990
-
-tree 2991
-
-tree 2992
-
-tree 2993
-
-tree 2994
-
-tree 2995
-
-tree 2996
-
-tree 2997
-
-tree 2998
-
-tree 2999
-
-tree 3000
-
-tree 3001
-
-tree 3002
-
-tree 3003
-
-tree 3004
-
-tree 3005
-
-tree 3006
-
-tree 3007
-
-tree 3008
-
-tree 3009
-
-tree 3010
-
-tree 3011
-
-tree 3012
-
-tree 3013
-
-tree 3014
-
-tree 3015
-
-tree 3016
-
-tree 3017
-
-tree 3018
-
-tree 3019
-
-tree 3020
-
-tree 3021
-
-tree 3022
-
-tree 3023
-
-tree 3024
-
-tree 3025
-
-tree 3026
-
-tree 3027
-
-tree 3028
-
-tree 3029
-
-tree 3030
-
-tree 3031
-
-tree 3032
-
-tree 3033
-
-tree 3034
-
-tree 3035
-
-tree 3036
-
-tree 3037
-
-tree 3038
-
-tree 3039
-
-tree 3040
-
-tree 3041
-
-tree 3042
-
-tree 3043
-
-tree 3044
-
-tree 3045
-
-tree 3046
-
-tree 3047
-
-tree 3048
-
-tree 3049
-
-tree 3050
-
-tree 3051
+max memory usage: 2.5 MB
+
+Sequentially Sample Initial ARG (8 sequences)
+------------------------------------------------
+add sequence 2 of 8 (n0)
+forward ( 19 states,      1 blocks):  11.9 ms
+trace:                               466.0 us
+add thread:                          673.0 us
+
+add sequence 3 of 8 (n6)
+forward ( 36 states,     65 blocks):  20.1 ms
+trace:                                 2.3 ms
+add thread:                            1.8 ms
+
+add sequence 4 of 8 (n7)
+forward ( 50 states,    115 blocks):  30.2 ms
+trace:                                 4.0 ms
+add thread:                            3.1 ms
+
+add sequence 5 of 8 (n1)
+forward ( 64 states,    166 blocks):  43.2 ms
+trace:                                 5.9 ms
+add thread:                            4.5 ms
+
+add sequence 6 of 8 (n3)
+forward ( 75 states,    186 blocks):  49.9 ms
+trace:                                 7.0 ms
+add thread:                            5.3 ms
+
+add sequence 7 of 8 (n4)
+forward ( 85 states,    194 blocks):  54.3 ms
+trace:                                 8.1 ms
+add thread:                            5.8 ms
+
+add sequence 8 of 8 (n2)
+forward (101 states,    211 blocks):  62.2 ms
+trace:                                 8.2 ms
+add thread:                            6.5 ms
+
+
+prior:      -2718.609773
+likelihood: -140349.669254
+joint:      -143068.279027
+nrecombs:   210
+noncompats: 0
+arglen:     10905677962.193794
+max memory: 6.3 MB
+
+Climb Search (0 iterations)
+-----------------------------
+
+
+prior:      -2718.609773
+likelihood: -140349.669254
+joint:      -143068.279027
+nrecombs:   210
+noncompats: 0
+arglen:     10905677962.193794
+max memory: 6.3 MB
+
+Resample All Branches (100 iterations)
+--------------------------------------
+sample 1
+forward ( 93 states,    206 blocks):  59.8 ms
+trace:                                 8.6 ms
+add thread:                            6.1 ms
+resample_arg_leaf: accept=1.000000
+sample time:  74.7 ms
+
+prior:      -2744.310941
+likelihood: -140351.790408
+joint:      -143096.101349
+nrecombs:   212
+noncompats: 0
+arglen:     11045082941.490021
+max memory: 6.5 MB
+
+sample 2
+resample_arg_regions: accept=0.450000
+sample time: 328.5 ms
+
+prior:      -2677.565153
+likelihood: -140339.877486
+joint:      -143017.442639
+nrecombs:   206
+noncompats: 1
+arglen:     10683877033.085592
+max memory: 6.5 MB
+
+sample 3
+forward ( 87 states,    192 blocks):  57.1 ms
+trace:                                 8.1 ms
+add thread:                            5.7 ms
+resample_arg_leaf: accept=1.000000
+sample time:  71.3 ms
+
+prior:      -2514.280749
+likelihood: -140336.222307
+joint:      -142850.503055
+nrecombs:   193
+noncompats: 1
+arglen:     10324612677.081478
+max memory: 6.5 MB
+
+sample 4
+forward ( 85 states,    175 blocks):  52.1 ms
+trace:                                 7.5 ms
+add thread:                            5.1 ms
+resample_arg_leaf: accept=1.000000
+sample time:  65.1 ms
+
+prior:      -2390.915958
+likelihood: -140336.083494
+joint:      -142726.999452
+nrecombs:   182
+noncompats: 1
+arglen:     10036687636.954084
+max memory: 6.5 MB
+
+sample 5
+forward ( 89 states,    176 blocks):  53.1 ms
+trace:                                 7.5 ms
+add thread:                            5.2 ms
+resample_arg_leaf: accept=1.000000
+sample time:  65.9 ms
+
+prior:      -2411.899679
+likelihood: -140331.948305
+joint:      -142743.847985
+nrecombs:   183
+noncompats: 1
+arglen:     10040486352.234533
+max memory: 6.5 MB
+
+sample 6

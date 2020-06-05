@@ -1976,16 +1976,20 @@ void traverse_upwards(tsk_tree_t *tree, tsk_id_t* ptree, double* ages)
 
     tsk_size_t numSamples = ts.num_samples;
     tsk_size_t numTrees = ts.num_trees;
+    trees->clear();
+    seqnames.clear();
+    trees->start_coord = ts.breakpoints[0];
+    trees->end_coord = ts.breakpoints[numTrees];
+    //for(int i = 1; i <= numTrees; i++){
+    //    printLog(LOG_LOW, "right boundary of tree %d: %lf\n", i-1, ts.breakpoints[i]);
+    //}
     printLog(LOG_LOW, "number of samples in the tree sequences: %d\n", numSamples);
     printLog(LOG_LOW, "number of local trees in the tree sequences: %d\n", numTrees);
+    printLog(LOG_LOW, "tree sequence starat at %d and ends at %d\n", trees->start_coord, trees->end_coord);
 
     int iter;
     ret = tsk_tree_init(&tree, &ts, 0);
     check_tsk_error(ret);
-
-    trees->clear();
-    seqnames.clear();
-
     for (iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)) {
         printLog(LOG_LOW, "\ntree %d\n", tsk_tree_get_index(&tree));
         tsk_id_t ptree[2*numSamples-1];
