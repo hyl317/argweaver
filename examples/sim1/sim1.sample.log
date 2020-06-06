@@ -1,7 +1,7 @@
 arg-sample 1.0
-start time: Fri Jun  5 16:11:11 2020
+start time: Fri Jun  5 23:21:41 2020
 command: ./arg-sample -s ../argweaver/examples/sim1/sim1.sites -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 200e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation_source.5.trees --overwrite
-random seed: 1591387871
+random seed: 1591413701
 read input sites (chrom=chr, start=0, end=100000, length=100000, nseqs=8, nsites=170)
 0 sites are partially masked but otherwise invariant
 masked 0 (0.0%) positions
@@ -53,1926 +53,5458 @@ model:
               10000.0,
               10000.0]
 
-right boundary of tree 0: 1039.521536
-right boundary of tree 1: 1818.786376
-right boundary of tree 2: 2270.313912
-right boundary of tree 3: 11150.172681
-right boundary of tree 4: 12295.313182
-right boundary of tree 5: 15311.387604
-right boundary of tree 6: 15343.519397
-right boundary of tree 7: 20521.525298
-right boundary of tree 8: 34825.713615
-right boundary of tree 9: 37045.845305
-right boundary of tree 10: 41776.769571
-right boundary of tree 11: 54256.783811
-right boundary of tree 12: 56025.790762
-right boundary of tree 13: 59222.758296
-right boundary of tree 14: 63192.005051
-right boundary of tree 15: 63397.433391
-right boundary of tree 16: 63797.728872
-right boundary of tree 17: 64832.075514
-right boundary of tree 18: 64888.269190
-right boundary of tree 19: 65017.357018
-right boundary of tree 20: 66662.194921
-right boundary of tree 21: 68132.585396
-right boundary of tree 22: 68387.053224
-right boundary of tree 23: 68660.493025
-right boundary of tree 24: 69685.618642
-right boundary of tree 25: 72038.781613
-right boundary of tree 26: 72054.566599
-right boundary of tree 27: 72264.909761
-right boundary of tree 28: 72505.464329
-right boundary of tree 29: 73184.812691
-right boundary of tree 30: 73304.068314
-right boundary of tree 31: 74627.951969
-right boundary of tree 32: 75370.392547
-right boundary of tree 33: 77009.104210
-right boundary of tree 34: 77184.647340
-right boundary of tree 35: 77208.187449
-right boundary of tree 36: 80411.648396
-right boundary of tree 37: 81959.628752
-right boundary of tree 38: 83595.891037
-right boundary of tree 39: 85380.868773
-right boundary of tree 40: 93318.757623
-right boundary of tree 41: 98186.431941
-right boundary of tree 42: 98818.851192
-right boundary of tree 43: 99350.180267
-right boundary of tree 44: 101508.146874
-right boundary of tree 45: 101885.613543
-right boundary of tree 46: 103056.215705
-right boundary of tree 47: 103232.053365
-right boundary of tree 48: 104425.783992
-right boundary of tree 49: 104616.839929
-right boundary of tree 50: 104821.386539
-right boundary of tree 51: 105479.882123
-right boundary of tree 52: 106104.684553
-right boundary of tree 53: 108567.862331
-right boundary of tree 54: 109880.729837
-right boundary of tree 55: 110212.305586
-right boundary of tree 56: 111858.651534
-right boundary of tree 57: 112004.980937
-right boundary of tree 58: 112316.724638
-right boundary of tree 59: 112427.876357
-right boundary of tree 60: 113561.009782
-right boundary of tree 61: 114415.089626
-right boundary of tree 62: 114692.315486
-right boundary of tree 63: 115785.125437
-right boundary of tree 64: 116499.218186
-right boundary of tree 65: 116935.104857
-right boundary of tree 66: 119565.178435
-right boundary of tree 67: 120368.013885
-right boundary of tree 68: 121377.224131
-right boundary of tree 69: 122619.260597
-right boundary of tree 70: 125864.595670
-right boundary of tree 71: 126613.176224
-right boundary of tree 72: 126709.210949
-right boundary of tree 73: 127468.094259
-right boundary of tree 74: 127878.464323
-right boundary of tree 75: 128400.542338
-right boundary of tree 76: 129570.284656
-right boundary of tree 77: 130966.075028
-right boundary of tree 78: 134122.138176
-right boundary of tree 79: 135485.679408
-right boundary of tree 80: 136592.983067
-right boundary of tree 81: 139476.399901
-right boundary of tree 82: 139723.181990
-right boundary of tree 83: 140967.792864
-right boundary of tree 84: 142980.380716
-right boundary of tree 85: 146912.532194
-right boundary of tree 86: 147810.528322
-right boundary of tree 87: 149702.029803
-right boundary of tree 88: 150080.869475
-right boundary of tree 89: 152656.768484
-right boundary of tree 90: 152825.184202
-right boundary of tree 91: 153476.175189
-right boundary of tree 92: 154213.378475
-right boundary of tree 93: 155172.803708
-right boundary of tree 94: 156911.795763
-right boundary of tree 95: 161025.122078
-right boundary of tree 96: 161468.200889
-right boundary of tree 97: 163963.668087
-right boundary of tree 98: 166601.921703
-right boundary of tree 99: 168233.733198
-right boundary of tree 100: 168356.066842
-right boundary of tree 101: 168578.380991
-right boundary of tree 102: 169814.040924
-right boundary of tree 103: 171654.836547
-right boundary of tree 104: 173656.210809
-right boundary of tree 105: 174888.626247
-right boundary of tree 106: 176015.750546
-right boundary of tree 107: 176258.389879
-right boundary of tree 108: 176979.827503
-right boundary of tree 109: 177930.513671
-right boundary of tree 110: 179176.566698
-right boundary of tree 111: 181247.979445
-right boundary of tree 112: 182325.697779
-right boundary of tree 113: 183862.874560
-right boundary of tree 114: 184421.662750
-right boundary of tree 115: 184766.888196
-right boundary of tree 116: 187530.926472
-right boundary of tree 117: 191030.731004
-right boundary of tree 118: 199787.013512
-right boundary of tree 119: 201950.792037
-right boundary of tree 120: 203942.732467
-right boundary of tree 121: 207587.611677
-right boundary of tree 122: 210407.271099
-right boundary of tree 123: 210502.102322
-right boundary of tree 124: 211594.559534
-right boundary of tree 125: 212558.316116
-right boundary of tree 126: 212669.189603
-right boundary of tree 127: 213288.050660
-right boundary of tree 128: 216445.151767
-right boundary of tree 129: 216994.770387
-right boundary of tree 130: 218993.981420
-right boundary of tree 131: 219080.298957
-right boundary of tree 132: 219931.975058
-right boundary of tree 133: 220797.849405
-right boundary of tree 134: 223162.624571
-right boundary of tree 135: 224246.696621
-right boundary of tree 136: 224713.441968
-right boundary of tree 137: 225042.254018
-right boundary of tree 138: 225948.844856
-right boundary of tree 139: 228105.771641
-right boundary of tree 140: 229402.078136
-right boundary of tree 141: 231761.670958
-right boundary of tree 142: 233519.666650
-right boundary of tree 143: 233747.661867
-right boundary of tree 144: 233827.351181
-right boundary of tree 145: 236583.578688
-right boundary of tree 146: 238868.927406
-right boundary of tree 147: 239198.574852
-right boundary of tree 148: 239529.104261
-right boundary of tree 149: 240138.399703
-right boundary of tree 150: 243539.658432
-right boundary of tree 151: 244876.358249
-right boundary of tree 152: 246525.992930
-right boundary of tree 153: 248325.259483
-right boundary of tree 154: 249474.700133
-right boundary of tree 155: 250325.425353
-right boundary of tree 156: 251801.118779
-right boundary of tree 157: 251811.731898
-right boundary of tree 158: 254595.982436
-right boundary of tree 159: 254847.253732
-right boundary of tree 160: 257685.781517
-right boundary of tree 161: 258563.679470
-right boundary of tree 162: 258830.984416
-right boundary of tree 163: 259455.429218
-right boundary of tree 164: 259495.829060
-right boundary of tree 165: 260133.347302
-right boundary of tree 166: 266560.752938
-right boundary of tree 167: 267388.897312
-right boundary of tree 168: 267799.756785
-right boundary of tree 169: 271648.061991
-right boundary of tree 170: 275455.355941
-right boundary of tree 171: 275486.252102
-right boundary of tree 172: 277350.231837
-right boundary of tree 173: 279178.121891
-right boundary of tree 174: 282102.526464
-right boundary of tree 175: 286568.595163
-right boundary of tree 176: 288448.831134
-right boundary of tree 177: 289375.481729
-right boundary of tree 178: 290111.843564
-right boundary of tree 179: 290177.771191
-right boundary of tree 180: 290301.000301
-right boundary of tree 181: 290439.081679
-right boundary of tree 182: 290703.418732
-right boundary of tree 183: 293996.985837
-right boundary of tree 184: 295555.500382
-right boundary of tree 185: 298476.489796
-right boundary of tree 186: 303158.066306
-right boundary of tree 187: 303474.253114
-right boundary of tree 188: 306739.766455
-right boundary of tree 189: 310400.391768
-right boundary of tree 190: 310556.763623
-right boundary of tree 191: 312071.217529
-right boundary of tree 192: 313930.108984
-right boundary of tree 193: 314113.302928
-right boundary of tree 194: 315295.765017
-right boundary of tree 195: 321390.974410
-right boundary of tree 196: 321902.276557
-right boundary of tree 197: 322058.270993
-right boundary of tree 198: 328280.328384
-right boundary of tree 199: 328591.750313
-right boundary of tree 200: 328652.745422
-right boundary of tree 201: 329574.091670
-right boundary of tree 202: 335539.720798
-right boundary of tree 203: 335749.476993
-right boundary of tree 204: 338315.720516
-right boundary of tree 205: 338799.912096
-right boundary of tree 206: 338916.293657
-right boundary of tree 207: 340795.352203
-right boundary of tree 208: 341528.983866
-right boundary of tree 209: 342565.688384
-right boundary of tree 210: 342787.293099
-right boundary of tree 211: 344315.639312
-right boundary of tree 212: 347031.971288
-right boundary of tree 213: 350163.496647
-right boundary of tree 214: 350689.793786
-right boundary of tree 215: 352152.562549
-right boundary of tree 216: 352403.391933
-right boundary of tree 217: 353528.870119
-right boundary of tree 218: 355486.369076
-right boundary of tree 219: 356195.290656
-right boundary of tree 220: 365971.068937
-right boundary of tree 221: 368653.890763
-right boundary of tree 222: 375674.213603
-right boundary of tree 223: 376877.858391
-right boundary of tree 224: 376998.859778
-right boundary of tree 225: 377272.062557
-right boundary of tree 226: 378933.311295
-right boundary of tree 227: 379579.908769
-right boundary of tree 228: 380385.578466
-right boundary of tree 229: 380642.982288
-right boundary of tree 230: 381849.782863
-right boundary of tree 231: 381888.683043
-right boundary of tree 232: 382754.445165
-right boundary of tree 233: 384298.083695
-right boundary of tree 234: 386495.319984
-right boundary of tree 235: 387828.579263
-right boundary of tree 236: 387979.244671
-right boundary of tree 237: 391232.713915
-right boundary of tree 238: 391354.423340
-right boundary of tree 239: 393064.722743
-right boundary of tree 240: 395889.207580
-right boundary of tree 241: 396458.809589
-right boundary of tree 242: 398444.445664
-right boundary of tree 243: 401818.424557
-right boundary of tree 244: 402215.065063
-right boundary of tree 245: 403448.297736
-right boundary of tree 246: 406646.504860
-right boundary of tree 247: 409862.397101
-right boundary of tree 248: 412119.600552
-right boundary of tree 249: 412891.117719
-right boundary of tree 250: 413337.315762
-right boundary of tree 251: 413836.552159
-right boundary of tree 252: 416704.782149
-right boundary of tree 253: 417281.462675
-right boundary of tree 254: 418073.491524
-right boundary of tree 255: 418915.580823
-right boundary of tree 256: 419705.233169
-right boundary of tree 257: 422003.247873
-right boundary of tree 258: 426711.814112
-right boundary of tree 259: 433192.630865
-right boundary of tree 260: 438304.810654
-right boundary of tree 261: 439330.602866
-right boundary of tree 262: 439347.596243
-right boundary of tree 263: 443378.858139
-right boundary of tree 264: 443575.857310
-right boundary of tree 265: 443861.463211
-right boundary of tree 266: 447977.895254
-right boundary of tree 267: 450444.633479
-right boundary of tree 268: 450978.874334
-right boundary of tree 269: 452463.465615
-right boundary of tree 270: 455643.701706
-right boundary of tree 271: 455755.465072
-right boundary of tree 272: 456449.163718
-right boundary of tree 273: 460976.214721
-right boundary of tree 274: 461645.667549
-right boundary of tree 275: 462134.355554
-right boundary of tree 276: 462439.233778
-right boundary of tree 277: 462950.273990
-right boundary of tree 278: 463540.748102
-right boundary of tree 279: 465108.696712
-right boundary of tree 280: 466060.140512
-right boundary of tree 281: 467959.818772
-right boundary of tree 282: 469484.201742
-right boundary of tree 283: 469705.629039
-right boundary of tree 284: 470787.163468
-right boundary of tree 285: 470825.752819
-right boundary of tree 286: 474668.977893
-right boundary of tree 287: 476448.037773
-right boundary of tree 288: 479768.413464
-right boundary of tree 289: 480760.247093
-right boundary of tree 290: 482602.911415
-right boundary of tree 291: 486405.391592
-right boundary of tree 292: 488310.516460
-right boundary of tree 293: 490702.386827
-right boundary of tree 294: 490986.095390
-right boundary of tree 295: 493284.578084
-right boundary of tree 296: 493497.289599
-right boundary of tree 297: 493888.329131
-right boundary of tree 298: 494611.559085
-right boundary of tree 299: 495400.702929
-right boundary of tree 300: 497791.017987
-right boundary of tree 301: 499203.823157
-right boundary of tree 302: 501177.710598
-right boundary of tree 303: 501269.543893
-right boundary of tree 304: 503131.004866
-right boundary of tree 305: 506029.605052
-right boundary of tree 306: 506741.114079
-right boundary of tree 307: 507858.732833
-right boundary of tree 308: 507982.733079
-right boundary of tree 309: 512080.688149
-right boundary of tree 310: 512929.796128
-right boundary of tree 311: 513184.730083
-right boundary of tree 312: 513795.236711
-right boundary of tree 313: 514287.182715
-right boundary of tree 314: 514426.318816
-right boundary of tree 315: 515359.816029
-right boundary of tree 316: 517505.333181
-right boundary of tree 317: 518511.167150
-right boundary of tree 318: 519091.125466
-right boundary of tree 319: 519198.951898
-right boundary of tree 320: 522422.334534
-right boundary of tree 321: 522641.705238
-right boundary of tree 322: 522890.608414
-right boundary of tree 323: 522939.031600
-right boundary of tree 324: 523268.907220
-right boundary of tree 325: 524715.050479
-right boundary of tree 326: 526165.562339
-right boundary of tree 327: 526795.581106
-right boundary of tree 328: 527101.593913
-right boundary of tree 329: 527390.792157
-right boundary of tree 330: 527584.103990
-right boundary of tree 331: 528200.569918
-right boundary of tree 332: 528713.735642
-right boundary of tree 333: 528865.528649
-right boundary of tree 334: 529324.115144
-right boundary of tree 335: 529669.584597
-right boundary of tree 336: 530321.760692
-right boundary of tree 337: 530590.230024
-right boundary of tree 338: 531439.823222
-right boundary of tree 339: 533967.539792
-right boundary of tree 340: 534510.726001
-right boundary of tree 341: 534604.966532
-right boundary of tree 342: 536077.418722
-right boundary of tree 343: 539528.584001
-right boundary of tree 344: 539616.240081
-right boundary of tree 345: 541240.461530
-right boundary of tree 346: 542556.843148
-right boundary of tree 347: 546365.457481
-right boundary of tree 348: 547378.606756
-right boundary of tree 349: 547528.294974
-right boundary of tree 350: 550172.213826
-right boundary of tree 351: 551615.191519
-right boundary of tree 352: 552370.796807
-right boundary of tree 353: 553561.875493
-right boundary of tree 354: 556952.432859
-right boundary of tree 355: 557190.962498
-right boundary of tree 356: 557893.132921
-right boundary of tree 357: 558265.319457
-right boundary of tree 358: 564498.807202
-right boundary of tree 359: 565617.353089
-right boundary of tree 360: 566428.801177
-right boundary of tree 361: 568483.197961
-right boundary of tree 362: 568772.584565
-right boundary of tree 363: 569283.364473
-right boundary of tree 364: 570109.363545
-right boundary of tree 365: 570159.197452
-right boundary of tree 366: 570593.576080
-right boundary of tree 367: 571640.300930
-right boundary of tree 368: 571764.605951
-right boundary of tree 369: 572040.011308
-right boundary of tree 370: 572043.475130
-right boundary of tree 371: 575475.747365
-right boundary of tree 372: 579812.166183
-right boundary of tree 373: 582077.995777
-right boundary of tree 374: 582482.116898
-right boundary of tree 375: 584034.581805
-right boundary of tree 376: 584231.092265
-right boundary of tree 377: 585588.830660
-right boundary of tree 378: 586019.643486
-right boundary of tree 379: 586527.498808
-right boundary of tree 380: 588519.141215
-right boundary of tree 381: 597371.633769
-right boundary of tree 382: 606372.528385
-right boundary of tree 383: 606956.346567
-right boundary of tree 384: 608613.321234
-right boundary of tree 385: 609450.934830
-right boundary of tree 386: 610975.085434
-right boundary of tree 387: 611495.917107
-right boundary of tree 388: 612106.144105
-right boundary of tree 389: 614995.645037
-right boundary of tree 390: 615622.228620
-right boundary of tree 391: 616990.837179
-right boundary of tree 392: 618945.215740
-right boundary of tree 393: 620325.444876
-right boundary of tree 394: 621338.865166
-right boundary of tree 395: 621372.294058
-right boundary of tree 396: 623093.075730
-right boundary of tree 397: 624070.758611
-right boundary of tree 398: 624074.268999
-right boundary of tree 399: 625657.532510
-right boundary of tree 400: 627838.168905
-right boundary of tree 401: 628938.055977
-right boundary of tree 402: 629018.170207
-right boundary of tree 403: 629242.333264
-right boundary of tree 404: 631444.633853
-right boundary of tree 405: 632831.020195
-right boundary of tree 406: 636168.650732
-right boundary of tree 407: 636296.214451
-right boundary of tree 408: 639049.869412
-right boundary of tree 409: 639545.314163
-right boundary of tree 410: 640781.257916
-right boundary of tree 411: 642548.381268
-right boundary of tree 412: 645184.577826
-right boundary of tree 413: 648256.697377
-right boundary of tree 414: 648460.146424
-right boundary of tree 415: 648528.389318
-right boundary of tree 416: 652778.238210
-right boundary of tree 417: 652825.878387
-right boundary of tree 418: 652930.830059
-right boundary of tree 419: 653728.892946
-right boundary of tree 420: 654033.444974
-right boundary of tree 421: 654460.983270
-right boundary of tree 422: 654714.562151
-right boundary of tree 423: 654775.869487
-right boundary of tree 424: 654850.459577
-right boundary of tree 425: 664925.306725
-right boundary of tree 426: 665828.901731
-right boundary of tree 427: 669282.955506
-right boundary of tree 428: 672731.731709
-right boundary of tree 429: 674431.248027
-right boundary of tree 430: 674609.528546
-right boundary of tree 431: 675153.271918
-right boundary of tree 432: 676135.169965
-right boundary of tree 433: 677220.198018
-right boundary of tree 434: 678324.646242
-right boundary of tree 435: 680607.645465
-right boundary of tree 436: 681199.062774
-right boundary of tree 437: 681764.279185
-right boundary of tree 438: 682228.462929
-right boundary of tree 439: 682308.718255
-right boundary of tree 440: 684286.045536
-right boundary of tree 441: 684884.111324
-right boundary of tree 442: 687172.188118
-right boundary of tree 443: 688438.620346
-right boundary of tree 444: 690727.858266
-right boundary of tree 445: 690754.190481
-right boundary of tree 446: 693036.558501
-right boundary of tree 447: 694221.999891
-right boundary of tree 448: 695059.728738
-right boundary of tree 449: 696317.548094
-right boundary of tree 450: 696720.580267
-right boundary of tree 451: 696962.246135
-right boundary of tree 452: 696978.262089
-right boundary of tree 453: 699633.013620
-right boundary of tree 454: 700646.131695
-right boundary of tree 455: 702318.782849
-right boundary of tree 456: 705199.823180
-right boundary of tree 457: 706840.206102
-right boundary of tree 458: 711767.989377
-right boundary of tree 459: 721762.405178
-right boundary of tree 460: 723289.632407
-right boundary of tree 461: 723585.844674
-right boundary of tree 462: 724744.233472
-right boundary of tree 463: 727559.443034
-right boundary of tree 464: 729119.684950
-right boundary of tree 465: 733010.668711
-right boundary of tree 466: 746863.781648
-right boundary of tree 467: 748032.597068
-right boundary of tree 468: 750261.196343
-right boundary of tree 469: 751201.560197
-right boundary of tree 470: 752361.084743
-right boundary of tree 471: 752807.588957
-right boundary of tree 472: 753708.582780
-right boundary of tree 473: 755370.692526
-right boundary of tree 474: 756839.186595
-right boundary of tree 475: 759739.360250
-right boundary of tree 476: 759840.828078
-right boundary of tree 477: 762606.996522
-right boundary of tree 478: 763188.809101
-right boundary of tree 479: 764044.945073
-right boundary of tree 480: 765092.230813
-right boundary of tree 481: 766467.881567
-right boundary of tree 482: 766934.134012
-right boundary of tree 483: 773433.536937
-right boundary of tree 484: 774545.332364
-right boundary of tree 485: 774677.253043
-right boundary of tree 486: 775409.992499
-right boundary of tree 487: 776390.563412
-right boundary of tree 488: 779896.920961
-right boundary of tree 489: 780474.306499
-right boundary of tree 490: 784325.810332
-right boundary of tree 491: 784349.303177
-right boundary of tree 492: 785381.423027
-right boundary of tree 493: 785839.115918
-right boundary of tree 494: 787129.248676
-right boundary of tree 495: 795742.590864
-right boundary of tree 496: 800373.479677
-right boundary of tree 497: 801859.905199
-right boundary of tree 498: 802791.661537
-right boundary of tree 499: 803444.027389
-right boundary of tree 500: 804809.827545
-right boundary of tree 501: 805656.665192
-right boundary of tree 502: 806074.655104
-right boundary of tree 503: 806925.478579
-right boundary of tree 504: 809209.083861
-right boundary of tree 505: 810283.050130
-right boundary of tree 506: 815425.918627
-right boundary of tree 507: 819038.531934
-right boundary of tree 508: 826488.797280
-right boundary of tree 509: 833874.189489
-right boundary of tree 510: 834062.544358
-right boundary of tree 511: 834216.400011
-right boundary of tree 512: 839050.959060
-right boundary of tree 513: 840105.227157
-right boundary of tree 514: 841627.287176
-right boundary of tree 515: 841677.335287
-right boundary of tree 516: 842723.134636
-right boundary of tree 517: 843099.848796
-right boundary of tree 518: 844222.022184
-right boundary of tree 519: 844911.308225
-right boundary of tree 520: 845435.535034
-right boundary of tree 521: 856262.282202
-right boundary of tree 522: 860538.944570
-right boundary of tree 523: 861240.759460
-right boundary of tree 524: 863751.062393
-right boundary of tree 525: 863810.294975
-right boundary of tree 526: 865008.502702
-right boundary of tree 527: 865470.109010
-right boundary of tree 528: 870562.504248
-right boundary of tree 529: 870640.280161
-right boundary of tree 530: 871638.572512
-right boundary of tree 531: 873550.134216
-right boundary of tree 532: 873861.536354
-right boundary of tree 533: 873926.915665
-right boundary of tree 534: 874539.780168
-right boundary of tree 535: 875828.753429
-right boundary of tree 536: 875979.914534
-right boundary of tree 537: 877058.924613
-right boundary of tree 538: 880135.425571
-right boundary of tree 539: 891839.474182
-right boundary of tree 540: 893965.062195
-right boundary of tree 541: 894658.288195
-right boundary of tree 542: 897673.400561
-right boundary of tree 543: 904818.052637
-right boundary of tree 544: 908046.732170
-right boundary of tree 545: 908757.392529
-right boundary of tree 546: 909025.817856
-right boundary of tree 547: 912253.640106
-right boundary of tree 548: 912993.334214
-right boundary of tree 549: 913767.821135
-right boundary of tree 550: 913866.570432
-right boundary of tree 551: 914484.647083
-right boundary of tree 552: 915775.063894
-right boundary of tree 553: 920755.347451
-right boundary of tree 554: 922974.322905
-right boundary of tree 555: 923139.029165
-right boundary of tree 556: 926503.399836
-right boundary of tree 557: 927746.603249
-right boundary of tree 558: 928654.892586
-right boundary of tree 559: 928998.736648
-right boundary of tree 560: 929654.204037
-right boundary of tree 561: 929932.864367
-right boundary of tree 562: 930088.910025
-right boundary of tree 563: 932191.360028
-right boundary of tree 564: 932230.967314
-right boundary of tree 565: 932945.929452
-right boundary of tree 566: 933488.142196
-right boundary of tree 567: 936427.453052
-right boundary of tree 568: 936480.581513
-right boundary of tree 569: 939500.595662
-right boundary of tree 570: 954807.586492
-right boundary of tree 571: 972717.817401
-right boundary of tree 572: 972930.474433
-right boundary of tree 573: 975227.713579
-right boundary of tree 574: 975445.606740
-right boundary of tree 575: 975542.205613
-right boundary of tree 576: 978619.722877
-right boundary of tree 577: 978657.706403
-right boundary of tree 578: 981187.754539
-right boundary of tree 579: 984667.340988
-right boundary of tree 580: 985977.355155
-right boundary of tree 581: 986639.668696
-right boundary of tree 582: 987806.174203
-right boundary of tree 583: 988536.044021
-right boundary of tree 584: 990628.853438
-right boundary of tree 585: 991001.018554
-right boundary of tree 586: 991461.975731
-right boundary of tree 587: 993117.309174
-right boundary of tree 588: 993176.461196
-right boundary of tree 589: 993204.962461
-right boundary of tree 590: 993539.448826
-right boundary of tree 591: 994708.263547
-right boundary of tree 592: 996338.657568
-right boundary of tree 593: 999481.626321
-right boundary of tree 594: 1000000.000000
 number of samples in the tree sequences: 5
 number of local trees in the tree sequences: 595
-tree sequence starat at 1000000.000000 and ends at 0.000000
+tree sequence starat at 0 and ends at 1000000
 
 tree 0
 
 tree 1
-
+node out: 303, node in: 213
+p_prev: -1
+c1_prev: 2
+c2_prev: 140
+p_curr: -1
+c2_curr: 2
+c2_curr: 140
+case1
 tree 2
-
+node out: 213, node in: 280
+p_prev: -1
+c1_prev: 2
+c2_prev: 140
+p_curr: -1
+c2_curr: 2
+c2_curr: 140
+case1
 tree 3
-
+node out: 280, node in: 170
+p_prev: -1
+c1_prev: 2
+c2_prev: 140
+p_curr: -1
+c2_curr: 2
+c2_curr: 140
+case1
 tree 4
-
+node out: 170, node in: 121
+p_prev: -1
+c1_prev: 2
+c2_prev: 140
+p_curr: 140
+c2_curr: 2
+c2_curr: 11
+case2
 tree 5
-
+node out: 121, node in: 136
+p_prev: 140
+c1_prev: 2
+c2_prev: 11
+p_curr: 140
+c2_curr: 3
+c2_curr: 11
+case3
 tree 6
-
+node out: 140, node in: 329
+p_prev: -1
+c1_prev: 2
+c2_prev: 136
+p_curr: -1
+c2_curr: 2
+c2_curr: 136
+case1
 tree 7
-
+node out: 329, node in: 141
+p_prev: -1
+c1_prev: 2
+c2_prev: 136
+p_curr: -1
+c2_curr: 2
+c2_curr: 136
+case1
 tree 8
-
+node out: 136, node in: 128
+p_prev: 141
+c1_prev: 3
+c2_prev: 11
+p_curr: 141
+c2_curr: 2
+c2_curr: 3
+case2
 tree 9
-
+node out: 128, node in: 109
+p_prev: 141
+c1_prev: 2
+c2_prev: 3
+p_curr: 141
+c2_curr: 2
+c2_curr: 3
+case1
 tree 10
-
+node out: 11, node in: 128
+p_prev: 141
+c1_prev: 1
+c2_prev: 7
+p_curr: 141
+c2_curr: 1
+c2_curr: 109
+case2
 tree 11
-
+node out: 128, node in: 121
+p_prev: 141
+c1_prev: 1
+c2_prev: 109
+p_curr: 141
+c2_curr: 1
+c2_curr: 109
+case1
 tree 12
-
+node out: 121, node in: 25
+p_prev: 141
+c1_prev: 1
+c2_prev: 109
+p_curr: 141
+c2_curr: 1
+c2_curr: 7
+case2
 tree 13
-
+node out: 141, node in: 128
+p_prev: -1
+c1_prev: 25
+c2_prev: 109
+p_curr: -1
+c2_curr: 25
+c2_curr: 109
+case1
 tree 14
-
+node out: 109, node in: 225
+p_prev: 128
+c1_prev: 2
+c2_prev: 3
+p_curr: -1
+c2_curr: 3
+c2_curr: 128
+case3
 tree 15
-
+node out: 225, node in: 358
+p_prev: -1
+c1_prev: 3
+c2_prev: 128
+p_curr: -1
+c2_curr: 3
+c2_curr: 128
+case1
 tree 16
-
+node out: 358, node in: 395
+p_prev: -1
+c1_prev: 3
+c2_prev: 128
+p_curr: -1
+c2_curr: 3
+c2_curr: 128
+case1
 tree 17
-
+node out: 25, node in: 105
+p_prev: 128
+c1_prev: 1
+c2_prev: 7
+p_curr: 395
+c2_curr: 3
+c2_curr: 7
+case3
 tree 18
-
+node out: 395, node in: 388
+p_prev: -1
+c1_prev: 128
+c2_prev: 105
+p_curr: -1
+c2_curr: 105
+c2_curr: 128
+case1
 tree 19
-
+node out: 388, node in: 359
+p_prev: -1
+c1_prev: 105
+c2_prev: 128
+p_curr: -1
+c2_curr: 105
+c2_curr: 128
+case1
 tree 20
-
+node out: 128, node in: 73
+p_prev: 359
+c1_prev: 2
+c2_prev: 1
+p_curr: 359
+c2_curr: 1
+c2_curr: 2
+case1
 tree 21
-
+node out: 73, node in: 128
+p_prev: 359
+c1_prev: 1
+c2_prev: 2
+p_curr: 359
+c2_curr: 1
+c2_curr: 2
+case1
 tree 22
-
+node out: 128, node in: 188
+p_prev: 359
+c1_prev: 1
+c2_prev: 2
+p_curr: 359
+c2_curr: 2
+c2_curr: 105
+case3
 tree 23
-
+node out: 105, node in: 153
+p_prev: 188
+c1_prev: 3
+c2_prev: 7
+p_curr: 188
+c2_curr: 2
+c2_curr: 3
+case2
 tree 24
-
+node out: 359, node in: 368
+p_prev: -1
+c1_prev: 1
+c2_prev: 188
+p_curr: -1
+c2_curr: 1
+c2_curr: 188
+case1
 tree 25
-
+node out: 368, node in: 248
+p_prev: -1
+c1_prev: 1
+c2_prev: 188
+p_curr: -1
+c2_curr: 1
+c2_curr: 188
+case1
 tree 26
-
+node out: 153, node in: 113
+p_prev: 188
+c1_prev: 2
+c2_prev: 3
+p_curr: 188
+c2_curr: 2
+c2_curr: 3
+case1
 tree 27
-
+node out: 248, node in: 244
+p_prev: -1
+c1_prev: 1
+c2_prev: 188
+p_curr: -1
+c2_curr: 1
+c2_curr: 188
+case1
 tree 28
-
+node out: 244, node in: 330
+p_prev: -1
+c1_prev: 1
+c2_prev: 188
+p_curr: -1
+c2_curr: 1
+c2_curr: 188
+case1
 tree 29
-
+node out: 188, node in: 167
+p_prev: 330
+c1_prev: 7
+c2_prev: 113
+p_curr: 330
+c2_curr: 1
+c2_curr: 7
+case2
 tree 30
-
+node out: 113, node in: 76
+p_prev: 330
+c1_prev: 2
+c2_prev: 3
+p_curr: 167
+c2_curr: 2
+c2_curr: 7
+case2
 tree 31
-
+node out: 76, node in: 113
+p_prev: 167
+c1_prev: 2
+c2_prev: 7
+p_curr: 330
+c2_curr: 2
+c2_curr: 3
+case2
 tree 32
-
+node out: 167, node in: 215
+p_prev: 330
+c1_prev: 1
+c2_prev: 7
+p_curr: 330
+c2_curr: 1
+c2_curr: 7
+case1
 tree 33
-
+node out: 330, node in: 379
+p_prev: -1
+c1_prev: 113
+c2_prev: 215
+p_curr: -1
+c2_curr: 113
+c2_curr: 215
+case1
 tree 34
-
+node out: 379, node in: 414
+p_prev: -1
+c1_prev: 113
+c2_prev: 215
+p_curr: -1
+c2_curr: 113
+c2_curr: 215
+case1
 tree 35
-
+node out: 414, node in: 345
+p_prev: -1
+c1_prev: 113
+c2_prev: 215
+p_curr: -1
+c2_curr: 113
+c2_curr: 215
+case1
 tree 36
-
+node out: 215, node in: 75
+p_prev: 345
+c1_prev: 1
+c2_prev: 7
+p_curr: 345
+c2_curr: 1
+c2_curr: 7
+case1
 tree 37
-
+node out: 345, node in: 249
+p_prev: -1
+c1_prev: 113
+c2_prev: 75
+p_curr: -1
+c2_curr: 75
+c2_curr: 113
+case1
 tree 38
-
+node out: 75, node in: 23
+p_prev: 249
+c1_prev: 1
+c2_prev: 7
+p_curr: 113
+c2_curr: 3
+c2_curr: 7
+case3
 tree 39
-
+node out: 249, node in: 45
+p_prev: -1
+c1_prev: 113
+c2_prev: 1
+p_curr: 113
+c2_curr: 1
+c2_curr: 2
+case3
 tree 40
-
+node out: 113, node in: 157
+p_prev: -1
+c1_prev: 23
+c2_prev: 45
+p_curr: -1
+c2_curr: 23
+c2_curr: 45
+case1
 tree 41
-
+node out: 45, node in: 131
+p_prev: 157
+c1_prev: 1
+c2_prev: 2
+p_curr: 157
+c2_curr: 1
+c2_curr: 2
+case1
 tree 42
-
+node out: 157, node in: 253
+p_prev: -1
+c1_prev: 23
+c2_prev: 131
+p_curr: -1
+c2_curr: 23
+c2_curr: 131
+case1
 tree 43
-
+node out: 253, node in: 284
+p_prev: -1
+c1_prev: 23
+c2_prev: 131
+p_curr: -1
+c2_curr: 23
+c2_curr: 131
+case1
 tree 44
-
+node out: 131, node in: 121
+p_prev: 284
+c1_prev: 1
+c2_prev: 2
+p_curr: 284
+c2_curr: 1
+c2_curr: 2
+case1
 tree 45
-
+node out: 23, node in: 131
+p_prev: 284
+c1_prev: 3
+c2_prev: 7
+p_curr: 284
+c2_curr: 3
+c2_curr: 121
+case2
 tree 46
-
+node out: 121, node in: 67
+p_prev: 131
+c1_prev: 1
+c2_prev: 2
+p_curr: 131
+c2_curr: 1
+c2_curr: 3
+case2
 tree 47
-
+node out: 7, node in: 19
+p_prev: 284
+c1_prev: 0
+c2_prev: 4
+p_curr: 67
+c2_curr: 0
+c2_curr: 3
+case2
 tree 48
-
+node out: 284, node in: 264
+p_prev: -1
+c1_prev: 131
+c2_prev: 4
+p_curr: -1
+c2_curr: 4
+c2_curr: 131
+case1
 tree 49
-
+node out: 264, node in: 284
+p_prev: -1
+c1_prev: 4
+c2_prev: 131
+p_curr: -1
+c2_curr: 4
+c2_curr: 131
+case1
 tree 50
-
+node out: 284, node in: 381
+p_prev: -1
+c1_prev: 4
+c2_prev: 131
+p_curr: -1
+c2_curr: 4
+c2_curr: 131
+case1
 tree 51
-
+node out: 381, node in: 413
+p_prev: -1
+c1_prev: 4
+c2_prev: 131
+p_curr: -1
+c2_curr: 4
+c2_curr: 131
+case1
 tree 52
-
+node out: 413, node in: 406
+p_prev: -1
+c1_prev: 4
+c2_prev: 131
+p_curr: -1
+c2_curr: 4
+c2_curr: 131
+case1
 tree 53
-
+node out: 406, node in: 264
+p_prev: -1
+c1_prev: 4
+c2_prev: 131
+p_curr: -1
+c2_curr: 4
+c2_curr: 131
+case1
 tree 54
-
+node out: 264, node in: 300
+p_prev: -1
+c1_prev: 4
+c2_prev: 131
+p_curr: -1
+c2_curr: 4
+c2_curr: 131
+case1
 tree 55
-
+node out: 300, node in: 228
+p_prev: -1
+c1_prev: 4
+c2_prev: 131
+p_curr: -1
+c2_curr: 4
+c2_curr: 131
+case1
 tree 56
-
+node out: 131, node in: 128
+p_prev: 228
+c1_prev: 2
+c2_prev: 67
+p_curr: 228
+c2_curr: 2
+c2_curr: 67
+case1
 tree 57
-
+node out: 228, node in: 372
+p_prev: -1
+c1_prev: 4
+c2_prev: 128
+p_curr: -1
+c2_curr: 4
+c2_curr: 128
+case1
 tree 58
-
+node out: 372, node in: 365
+p_prev: -1
+c1_prev: 4
+c2_prev: 128
+p_curr: -1
+c2_curr: 4
+c2_curr: 128
+case1
 tree 59
-
+node out: 128, node in: 115
+p_prev: 365
+c1_prev: 2
+c2_prev: 67
+p_curr: 365
+c2_curr: 2
+c2_curr: 67
+case1
 tree 60
-
+node out: 365, node in: 210
+p_prev: -1
+c1_prev: 4
+c2_prev: 115
+p_curr: -1
+c2_curr: 4
+c2_curr: 115
+case1
 tree 61
-
+node out: 67, node in: 128
+p_prev: 115
+c1_prev: 1
+c2_prev: 19
+p_curr: 210
+c2_curr: 1
+c2_curr: 115
+case2
 tree 62
-
+node out: 115, node in: 51
+p_prev: 128
+c1_prev: 2
+c2_prev: 19
+p_curr: 128
+c2_curr: 2
+c2_curr: 19
+case1
 tree 63
-
+node out: 210, node in: 365
+p_prev: -1
+c1_prev: 4
+c2_prev: 128
+p_curr: -1
+c2_curr: 4
+c2_curr: 128
+case1
 tree 64
-
+node out: 365, node in: 348
+p_prev: -1
+c1_prev: 4
+c2_prev: 128
+p_curr: -1
+c2_curr: 4
+c2_curr: 128
+case1
 tree 65
-
+node out: 348, node in: 331
+p_prev: -1
+c1_prev: 4
+c2_prev: 128
+p_curr: -1
+c2_curr: 4
+c2_curr: 128
+case1
 tree 66
-
+node out: 331, node in: 274
+p_prev: -1
+c1_prev: 4
+c2_prev: 128
+p_curr: -1
+c2_curr: 4
+c2_curr: 128
+case1
 tree 67
-
+node out: 128, node in: 189
+p_prev: 274
+c1_prev: 1
+c2_prev: 51
+p_curr: 274
+c2_curr: 1
+c2_curr: 4
+case2
 tree 68
-
+node out: 189, node in: 128
+p_prev: 274
+c1_prev: 1
+c2_prev: 4
+p_curr: 274
+c2_curr: 4
+c2_curr: 51
+case3
 tree 69
-
+node out: 274, node in: 275
+p_prev: -1
+c1_prev: 1
+c2_prev: 128
+p_curr: -1
+c2_curr: 1
+c2_curr: 128
+case1
 tree 70
-
+node out: 19, node in: 86
+p_prev: 51
+c1_prev: 0
+c2_prev: 3
+p_curr: 275
+c2_curr: 0
+c2_curr: 1
+case2
 tree 71
-
+node out: 275, node in: 404
+p_prev: -1
+c1_prev: 128
+c2_prev: 86
+p_curr: -1
+c2_curr: 86
+c2_curr: 128
+case1
 tree 72
-
+node out: 404, node in: 407
+p_prev: -1
+c1_prev: 86
+c2_prev: 128
+p_curr: -1
+c2_curr: 86
+c2_curr: 128
+case1
 tree 73
-
+node out: 407, node in: 275
+p_prev: -1
+c1_prev: 86
+c2_prev: 128
+p_curr: -1
+c2_curr: 86
+c2_curr: 128
+case1
 tree 74
-
+node out: 86, node in: 184
+p_prev: 275
+c1_prev: 0
+c2_prev: 1
+p_curr: 275
+c2_curr: 0
+c2_curr: 1
+case1
 tree 75
-
+node out: 275, node in: 407
+p_prev: -1
+c1_prev: 128
+c2_prev: 184
+p_curr: -1
+c2_curr: 128
+c2_curr: 184
+case1
 tree 76
-
+node out: 407, node in: 304
+p_prev: -1
+c1_prev: 128
+c2_prev: 184
+p_curr: -1
+c2_curr: 128
+c2_curr: 184
+case1
 tree 77
-
+node out: 304, node in: 238
+p_prev: -1
+c1_prev: 128
+c2_prev: 184
+p_curr: -1
+c2_curr: 128
+c2_curr: 184
+case1
 tree 78
-
+node out: 184, node in: 159
+p_prev: 238
+c1_prev: 0
+c2_prev: 1
+p_curr: 238
+c2_curr: 1
+c2_curr: 128
+case3
 tree 79
-
+node out: 238, node in: 277
+p_prev: -1
+c1_prev: 0
+c2_prev: 159
+p_curr: -1
+c2_curr: 0
+c2_curr: 159
+case1
 tree 80
-
+node out: 128, node in: 189
+p_prev: 159
+c1_prev: 4
+c2_prev: 51
+p_curr: 277
+c2_curr: 0
+c2_curr: 4
+case2
 tree 81
-
+node out: 51, node in: 118
+p_prev: 159
+c1_prev: 2
+c2_prev: 3
+p_curr: 189
+c2_curr: 2
+c2_curr: 4
+case2
 tree 82
-
+node out: 277, node in: 353
+p_prev: -1
+c1_prev: 159
+c2_prev: 189
+p_curr: -1
+c2_curr: 159
+c2_curr: 189
+case1
 tree 83
-
+node out: 353, node in: 363
+p_prev: -1
+c1_prev: 159
+c2_prev: 189
+p_curr: -1
+c2_curr: 159
+c2_curr: 189
+case1
 tree 84
-
+node out: 363, node in: 283
+p_prev: -1
+c1_prev: 159
+c2_prev: 189
+p_curr: -1
+c2_curr: 159
+c2_curr: 189
+case1
 tree 85
-
+node out: 118, node in: 112
+p_prev: 189
+c1_prev: 2
+c2_prev: 4
+p_curr: 159
+c2_curr: 3
+c2_curr: 4
+case3
 tree 86
-
+node out: 159, node in: 147
+p_prev: 283
+c1_prev: 1
+c2_prev: 112
+p_curr: 283
+c2_curr: 1
+c2_curr: 112
+case1
 tree 87
-
+node out: 147, node in: 159
+p_prev: 283
+c1_prev: 1
+c2_prev: 112
+p_curr: 283
+c2_curr: 1
+c2_curr: 112
+case1
 tree 88
-
+node out: 189, node in: 176
+p_prev: 283
+c1_prev: 0
+c2_prev: 2
+p_curr: 283
+c2_curr: 0
+c2_curr: 2
+case1
 tree 89
-
+node out: 176, node in: 125
+p_prev: 283
+c1_prev: 0
+c2_prev: 2
+p_curr: 159
+c2_curr: 0
+c2_curr: 112
+case2
 tree 90
-
+node out: 283, node in: 174
+p_prev: -1
+c1_prev: 159
+c2_prev: 2
+p_curr: -1
+c2_curr: 2
+c2_curr: 159
+case1
 tree 91
-
+node out: 125, node in: 78
+p_prev: 159
+c1_prev: 0
+c2_prev: 112
+p_curr: 112
+c2_curr: 0
+c2_curr: 3
+case2
 tree 92
-
+node out: 174, node in: 318
+p_prev: -1
+c1_prev: 2
+c2_prev: 159
+p_curr: -1
+c2_curr: 2
+c2_curr: 159
+case1
 tree 93
-
+node out: 78, node in: 87
+p_prev: 112
+c1_prev: 0
+c2_prev: 3
+p_curr: 112
+c2_curr: 3
+c2_curr: 4
+case3
 tree 94
-
+node out: 159, node in: 128
+p_prev: 318
+c1_prev: 1
+c2_prev: 112
+p_curr: 318
+c2_curr: 1
+c2_curr: 112
+case1
 tree 95
-
+node out: 318, node in: 116
+p_prev: -1
+c1_prev: 2
+c2_prev: 128
+p_curr: 128
+c2_curr: 1
+c2_curr: 2
+case2
 tree 96
-
+node out: 116, node in: 63
+p_prev: 128
+c1_prev: 1
+c2_prev: 2
+p_curr: 112
+c2_curr: 0
+c2_curr: 2
+case3
 tree 97
-
+node out: 63, node in: 66
+p_prev: 112
+c1_prev: 0
+c2_prev: 2
+p_curr: 128
+c2_curr: 0
+c2_curr: 1
+case2
 tree 98
-
+node out: 87, node in: 80
+p_prev: 112
+c1_prev: 3
+c2_prev: 4
+p_curr: 128
+c2_curr: 3
+c2_curr: 66
+case2
 tree 99
-
+node out: 112, node in: 89
+p_prev: 128
+c1_prev: 2
+c2_prev: 4
+p_curr: 128
+c2_curr: 2
+c2_curr: 4
+case1
 tree 100
-
+node out: 89, node in: 125
+p_prev: 128
+c1_prev: 2
+c2_prev: 4
+p_curr: 128
+c2_curr: 2
+c2_curr: 4
+case1
 tree 101
-
+node out: 125, node in: 189
+p_prev: 128
+c1_prev: 2
+c2_prev: 4
+p_curr: -1
+c2_curr: 2
+c2_curr: 128
+case2
 tree 102
-
+node out: 66, node in: 116
+p_prev: 80
+c1_prev: 0
+c2_prev: 1
+p_curr: 128
+c2_curr: 0
+c2_curr: 80
+case2
 tree 103
-
+node out: 80, node in: 108
+p_prev: 116
+c1_prev: 3
+c2_prev: 1
+p_curr: 128
+c2_curr: 3
+c2_curr: 4
+case2
 tree 104
-
+node out: 189, node in: 292
+p_prev: -1
+c1_prev: 2
+c2_prev: 128
+p_curr: -1
+c2_curr: 2
+c2_curr: 128
+case1
 tree 105
-
+node out: 108, node in: 149
+p_prev: 128
+c1_prev: 3
+c2_prev: 4
+p_curr: 292
+c2_curr: 4
+c2_curr: 128
+case3
 tree 106
-
+node out: 116, node in: 155
+p_prev: 128
+c1_prev: 0
+c2_prev: 1
+p_curr: 292
+c2_curr: 0
+c2_curr: 2
+case2
 tree 107
-
+node out: 155, node in: 108
+p_prev: 292
+c1_prev: 0
+c2_prev: 2
+p_curr: 128
+c2_curr: 0
+c2_curr: 3
+case2
 tree 108
-
+node out: 149, node in: 125
+p_prev: 292
+c1_prev: 4
+c2_prev: 128
+p_curr: 128
+c2_curr: 4
+c2_curr: 108
+case2
 tree 109
-
+node out: 108, node in: 112
+p_prev: 125
+c1_prev: 0
+c2_prev: 3
+p_curr: 125
+c2_curr: 0
+c2_curr: 3
+case1
 tree 110
-
+node out: 292, node in: 108
+p_prev: -1
+c1_prev: 2
+c2_prev: 128
+p_curr: 112
+c2_curr: 0
+c2_curr: 2
+case2
 tree 111
-
+node out: 108, node in: 82
+p_prev: 112
+c1_prev: 0
+c2_prev: 2
+p_curr: 112
+c2_curr: 0
+c2_curr: 3
+case2
 tree 112
-
+node out: 112, node in: 49
+p_prev: 125
+c1_prev: 2
+c2_prev: 82
+p_curr: 82
+c2_curr: 0
+c2_curr: 2
+case2
 tree 113
-
+node out: 128, node in: 37
+p_prev: -1
+c1_prev: 1
+c2_prev: 125
+p_curr: 49
+c2_curr: 1
+c2_curr: 2
+case2
 tree 114
-
+node out: 37, node in: 128
+p_prev: 49
+c1_prev: 1
+c2_prev: 2
+p_curr: -1
+c2_curr: 2
+c2_curr: 125
+case3
 tree 115
-
+node out: 125, node in: 31
+p_prev: 128
+c1_prev: 4
+c2_prev: 82
+p_curr: 82
+c2_curr: 3
+c2_curr: 4
+case2
 tree 116
-
+node out: 31, node in: 33
+p_prev: 82
+c1_prev: 3
+c2_prev: 4
+p_curr: 49
+c2_curr: 0
+c2_curr: 4
+case3
 tree 117
-
+node out: 128, node in: 292
+p_prev: -1
+c1_prev: 2
+c2_prev: 82
+p_curr: -1
+c2_curr: 2
+c2_curr: 82
+case1
 tree 118
-
+node out: 292, node in: 125
+p_prev: -1
+c1_prev: 2
+c2_prev: 82
+p_curr: -1
+c2_curr: 2
+c2_curr: 82
+case1
 tree 119
-
+node out: 82, node in: 128
+p_prev: 125
+c1_prev: 49
+c2_prev: 3
+p_curr: -1
+c2_curr: 3
+c2_curr: 125
+case3
 tree 120
-
+node out: 128, node in: 308
+p_prev: -1
+c1_prev: 3
+c2_prev: 125
+p_curr: -1
+c2_curr: 3
+c2_curr: 125
+case1
 tree 121
-
+node out: 308, node in: 102
+p_prev: -1
+c1_prev: 3
+c2_prev: 125
+p_curr: 125
+c2_curr: 3
+c2_curr: 49
+case2
 tree 122
-
+node out: 49, node in: 299
+p_prev: 102
+c1_prev: 1
+c2_prev: 33
+p_curr: -1
+c2_curr: 1
+c2_curr: 125
+case2
 tree 123
-
+node out: 102, node in: 104
+p_prev: 125
+c1_prev: 3
+c2_prev: 33
+p_curr: 299
+c2_curr: 1
+c2_curr: 3
+case2
 tree 124
-
+node out: 299, node in: 279
+p_prev: -1
+c1_prev: 125
+c2_prev: 104
+p_curr: -1
+c2_curr: 104
+c2_curr: 125
+case1
 tree 125
-
+node out: 279, node in: 211
+p_prev: -1
+c1_prev: 104
+c2_prev: 125
+p_curr: -1
+c2_curr: 104
+c2_curr: 125
+case1
 tree 126
-
+node out: 211, node in: 192
+p_prev: -1
+c1_prev: 104
+c2_prev: 125
+p_curr: -1
+c2_curr: 104
+c2_curr: 125
+case1
 tree 127
-
+node out: 192, node in: 164
+p_prev: -1
+c1_prev: 104
+c2_prev: 125
+p_curr: -1
+c2_curr: 104
+c2_curr: 125
+case1
 tree 128
-
+node out: 104, node in: 279
+p_prev: 164
+c1_prev: 1
+c2_prev: 3
+p_curr: -1
+c2_curr: 3
+c2_curr: 164
+case3
 tree 129
-
+node out: 279, node in: 308
+p_prev: -1
+c1_prev: 3
+c2_prev: 164
+p_curr: -1
+c2_curr: 3
+c2_curr: 164
+case1
 tree 130
-
+node out: 308, node in: 163
+p_prev: -1
+c1_prev: 3
+c2_prev: 164
+p_curr: 164
+c2_curr: 1
+c2_curr: 3
+case2
 tree 131
-
+node out: 163, node in: 308
+p_prev: 164
+c1_prev: 1
+c2_prev: 3
+p_curr: -1
+c2_curr: 1
+c2_curr: 164
+case2
 tree 132
-
+node out: 125, node in: 128
+p_prev: 164
+c1_prev: 2
+c2_prev: 33
+p_curr: 164
+c2_curr: 2
+c2_curr: 33
+case1
 tree 133
-
+node out: 128, node in: 199
+p_prev: 164
+c1_prev: 2
+c2_prev: 33
+p_curr: 308
+c2_curr: 1
+c2_curr: 33
+case3
 tree 134
-
+node out: 199, node in: 177
+p_prev: 308
+c1_prev: 1
+c2_prev: 33
+p_curr: 308
+c2_curr: 33
+c2_curr: 164
+case3
 tree 135
-
+node out: 164, node in: 238
+p_prev: 177
+c1_prev: 3
+c2_prev: 2
+p_curr: 308
+c2_curr: 1
+c2_curr: 3
+case2
 tree 136
-
+node out: 238, node in: 299
+p_prev: 308
+c1_prev: 1
+c2_prev: 3
+p_curr: 308
+c2_curr: 1
+c2_curr: 3
+case1
 tree 137
-
+node out: 308, node in: 326
+p_prev: -1
+c1_prev: 177
+c2_prev: 299
+p_curr: -1
+c2_curr: 177
+c2_curr: 299
+case1
 tree 138
-
+node out: 177, node in: 175
+p_prev: 326
+c1_prev: 33
+c2_prev: 2
+p_curr: 326
+c2_curr: 2
+c2_curr: 33
+case1
 tree 139
-
+node out: 299, node in: 278
+p_prev: 326
+c1_prev: 1
+c2_prev: 3
+p_curr: 326
+c2_curr: 1
+c2_curr: 3
+case1
 tree 140
-
+node out: 175, node in: 172
+p_prev: 326
+c1_prev: 2
+c2_prev: 33
+p_curr: 278
+c2_curr: 3
+c2_curr: 33
+case3
 tree 141
-
+node out: 278, node in: 293
+p_prev: 326
+c1_prev: 1
+c2_prev: 172
+p_curr: 326
+c2_curr: 2
+c2_curr: 172
+case3
 tree 142
-
+node out: 326, node in: 382
+p_prev: -1
+c1_prev: 1
+c2_prev: 293
+p_curr: -1
+c2_curr: 1
+c2_curr: 293
+case1
 tree 143
-
+node out: 382, node in: 149
+p_prev: -1
+c1_prev: 1
+c2_prev: 293
+p_curr: 293
+c2_curr: 1
+c2_curr: 2
+case2
 tree 144
-
+node out: 293, node in: 296
+p_prev: -1
+c1_prev: 172
+c2_prev: 149
+p_curr: -1
+c2_curr: 149
+c2_curr: 172
+case1
 tree 145
-
+node out: 296, node in: 305
+p_prev: -1
+c1_prev: 149
+c2_prev: 172
+p_curr: -1
+c2_curr: 149
+c2_curr: 172
+case1
 tree 146
-
+node out: 149, node in: 396
+p_prev: 305
+c1_prev: 1
+c2_prev: 2
+p_curr: -1
+c2_curr: 1
+c2_curr: 305
+case2
 tree 147
-
+node out: 396, node in: 326
+p_prev: -1
+c1_prev: 1
+c2_prev: 305
+p_curr: -1
+c2_curr: 1
+c2_curr: 305
+case1
 tree 148
-
+node out: 305, node in: 241
+p_prev: 326
+c1_prev: 172
+c2_prev: 2
+p_curr: 326
+c2_curr: 2
+c2_curr: 172
+case1
 tree 149
-
+node out: 326, node in: 81
+p_prev: -1
+c1_prev: 1
+c2_prev: 241
+p_curr: 241
+c2_curr: 1
+c2_curr: 2
+case2
 tree 150
-
+node out: 241, node in: 326
+p_prev: -1
+c1_prev: 172
+c2_prev: 81
+p_curr: -1
+c2_curr: 81
+c2_curr: 172
+case1
 tree 151
-
+node out: 172, node in: 144
+p_prev: 326
+c1_prev: 3
+c2_prev: 33
+p_curr: 326
+c2_curr: 3
+c2_curr: 81
+case2
 tree 152
-
+node out: 81, node in: 114
+p_prev: 144
+c1_prev: 1
+c2_prev: 2
+p_curr: 326
+c2_curr: 2
+c2_curr: 33
+case3
 tree 153
-
+node out: 114, node in: 55
+p_prev: 326
+c1_prev: 2
+c2_prev: 33
+p_curr: 144
+c2_curr: 1
+c2_curr: 33
+case3
 tree 154
-
+node out: 144, node in: 172
+p_prev: 326
+c1_prev: 3
+c2_prev: 55
+p_curr: 326
+c2_curr: 2
+c2_curr: 3
+case2
 tree 155
-
+node out: 33, node in: 15
+p_prev: 55
+c1_prev: 0
+c2_prev: 4
+p_curr: 55
+c2_curr: 0
+c2_curr: 1
+case2
 tree 156
-
+node out: 326, node in: 243
+p_prev: -1
+c1_prev: 55
+c2_prev: 172
+p_curr: -1
+c2_curr: 55
+c2_curr: 172
+case1
 tree 157
-
+node out: 243, node in: 112
+p_prev: -1
+c1_prev: 55
+c2_prev: 172
+p_curr: 172
+c2_curr: 2
+c2_curr: 55
+case2
 tree 158
-
+node out: 172, node in: 44
+p_prev: -1
+c1_prev: 3
+c2_prev: 112
+p_curr: 55
+c2_curr: 3
+c2_curr: 15
+case2
 tree 159
-
+node out: 112, node in: 243
+p_prev: -1
+c1_prev: 2
+c2_prev: 55
+p_curr: -1
+c2_curr: 2
+c2_curr: 55
+case1
 tree 160
-
+node out: 243, node in: 326
+p_prev: -1
+c1_prev: 2
+c2_prev: 55
+p_curr: -1
+c2_curr: 2
+c2_curr: 55
+case1
 tree 161
-
+node out: 326, node in: 305
+p_prev: -1
+c1_prev: 2
+c2_prev: 55
+p_curr: -1
+c2_curr: 2
+c2_curr: 55
+case1
 tree 162
-
+node out: 44, node in: 70
+p_prev: 55
+c1_prev: 3
+c2_prev: 15
+p_curr: 305
+c2_curr: 15
+c2_curr: 55
+case3
 tree 163
-
+node out: 305, node in: 232
+p_prev: -1
+c1_prev: 2
+c2_prev: 70
+p_curr: -1
+c2_curr: 2
+c2_curr: 70
+case1
 tree 164
-
+node out: 232, node in: 227
+p_prev: -1
+c1_prev: 2
+c2_prev: 70
+p_curr: -1
+c2_curr: 2
+c2_curr: 70
+case1
 tree 165
-
+node out: 55, node in: 179
+p_prev: 70
+c1_prev: 4
+c2_prev: 3
+p_curr: 227
+c2_curr: 4
+c2_curr: 70
+case2
 tree 166
-
+node out: 179, node in: 189
+p_prev: 227
+c1_prev: 4
+c2_prev: 70
+p_curr: 227
+c2_curr: 2
+c2_curr: 4
+case2
 tree 167
-
+node out: 189, node in: 106
+p_prev: 227
+c1_prev: 2
+c2_prev: 4
+p_curr: 227
+c2_curr: 2
+c2_curr: 4
+case1
 tree 168
-
+node out: 70, node in: 95
+p_prev: 227
+c1_prev: 15
+c2_prev: 3
+p_curr: 227
+c2_curr: 3
+c2_curr: 15
+case1
 tree 169
-
+node out: 106, node in: 189
+p_prev: 227
+c1_prev: 2
+c2_prev: 4
+p_curr: 227
+c2_curr: 2
+c2_curr: 4
+case1
 tree 170
-
+node out: 227, node in: 234
+p_prev: -1
+c1_prev: 95
+c2_prev: 189
+p_curr: -1
+c2_curr: 95
+c2_curr: 189
+case1
 tree 171
-
+node out: 189, node in: 146
+p_prev: 234
+c1_prev: 2
+c2_prev: 4
+p_curr: 234
+c2_curr: 4
+c2_curr: 95
+case3
 tree 172
-
+node out: 234, node in: 214
+p_prev: -1
+c1_prev: 2
+c2_prev: 146
+p_curr: -1
+c2_curr: 2
+c2_curr: 146
+case1
 tree 173
-
+node out: 214, node in: 134
+p_prev: -1
+c1_prev: 2
+c2_prev: 146
+p_curr: 146
+c2_curr: 2
+c2_curr: 95
+case2
 tree 174
-
+node out: 95, node in: 12
+p_prev: 134
+c1_prev: 3
+c2_prev: 15
+p_curr: 15
+c2_curr: 1
+c2_curr: 3
+case2
 tree 175
-
+node out: 134, node in: 29
+p_prev: 146
+c1_prev: 2
+c2_prev: 15
+p_curr: 146
+c2_curr: 2
+c2_curr: 4
+case2
 tree 176
-
+node out: 146, node in: 220
+p_prev: -1
+c1_prev: 15
+c2_prev: 29
+p_curr: -1
+c2_curr: 15
+c2_curr: 29
+case1
 tree 177
-
+node out: 220, node in: 373
+p_prev: -1
+c1_prev: 15
+c2_prev: 29
+p_curr: -1
+c2_curr: 15
+c2_curr: 29
+case1
 tree 178
-
+node out: 373, node in: 333
+p_prev: -1
+c1_prev: 15
+c2_prev: 29
+p_curr: -1
+c2_curr: 15
+c2_curr: 29
+case1
 tree 179
-
+node out: 333, node in: 194
+p_prev: -1
+c1_prev: 15
+c2_prev: 29
+p_curr: -1
+c2_curr: 15
+c2_curr: 29
+case1
 tree 180
-
+node out: 15, node in: 83
+p_prev: 194
+c1_prev: 0
+c2_prev: 12
+p_curr: 194
+c2_curr: 0
+c2_curr: 29
+case2
 tree 181
-
+node out: 194, node in: 220
+p_prev: -1
+c1_prev: 12
+c2_prev: 83
+p_curr: -1
+c2_curr: 12
+c2_curr: 83
+case1
 tree 182
-
+node out: 83, node in: 148
+p_prev: 220
+c1_prev: 0
+c2_prev: 29
+p_curr: 220
+c2_curr: 12
+c2_curr: 29
+case3
 tree 183
-
+node out: 220, node in: 137
+p_prev: -1
+c1_prev: 0
+c2_prev: 148
+p_curr: 148
+c2_curr: 0
+c2_curr: 29
+case2
 tree 184
-
+node out: 137, node in: 333
+p_prev: 148
+c1_prev: 0
+c2_prev: 29
+p_curr: -1
+c2_curr: 29
+c2_curr: 148
+case3
 tree 185
-
+node out: 333, node in: 269
+p_prev: -1
+c1_prev: 29
+c2_prev: 148
+p_curr: -1
+c2_curr: 29
+c2_curr: 148
+case1
 tree 186
-
+node out: 269, node in: 231
+p_prev: -1
+c1_prev: 29
+c2_prev: 148
+p_curr: -1
+c2_curr: 29
+c2_curr: 148
+case1
 tree 187
-
+node out: 29, node in: 137
+p_prev: 231
+c1_prev: 2
+c2_prev: 4
+p_curr: 148
+c2_curr: 0
+c2_curr: 2
+case2
 tree 188
-
+node out: 231, node in: 232
+p_prev: -1
+c1_prev: 148
+c2_prev: 4
+p_curr: -1
+c2_curr: 4
+c2_curr: 148
+case1
 tree 189
-
+node out: 137, node in: 231
+p_prev: 148
+c1_prev: 0
+c2_prev: 2
+p_curr: 232
+c2_curr: 2
+c2_curr: 148
+case3
 tree 190
-
+node out: 231, node in: 165
+p_prev: 232
+c1_prev: 2
+c2_prev: 148
+p_curr: 232
+c2_curr: 2
+c2_curr: 148
+case1
 tree 191
-
+node out: 165, node in: 231
+p_prev: 232
+c1_prev: 2
+c2_prev: 148
+p_curr: 232
+c2_curr: 2
+c2_curr: 148
+case1
 tree 192
-
+node out: 231, node in: 165
+p_prev: 232
+c1_prev: 2
+c2_prev: 148
+p_curr: 232
+c2_curr: 2
+c2_curr: 148
+case1
 tree 193
-
+node out: 232, node in: 231
+p_prev: -1
+c1_prev: 4
+c2_prev: 165
+p_curr: -1
+c2_curr: 4
+c2_curr: 165
+case1
 tree 194
-
+node out: 165, node in: 193
+p_prev: 231
+c1_prev: 2
+c2_prev: 148
+p_curr: 231
+c2_curr: 2
+c2_curr: 4
+case2
 tree 195
-
+node out: 193, node in: 135
+p_prev: 231
+c1_prev: 2
+c2_prev: 4
+p_curr: 148
+c2_curr: 0
+c2_curr: 2
+case2
 tree 196
-
+node out: 148, node in: 91
+p_prev: 231
+c1_prev: 12
+c2_prev: 135
+p_curr: 135
+c2_curr: 0
+c2_curr: 12
+case2
 tree 197
-
+node out: 91, node in: 70
+p_prev: 135
+c1_prev: 0
+c2_prev: 12
+p_curr: 135
+c2_curr: 2
+c2_curr: 12
+case3
 tree 198
-
+node out: 231, node in: 33
+p_prev: -1
+c1_prev: 4
+c2_prev: 135
+p_curr: 135
+c2_curr: 0
+c2_curr: 4
+case2
 tree 199
-
+node out: 135, node in: 231
+p_prev: -1
+c1_prev: 70
+c2_prev: 33
+p_curr: -1
+c2_curr: 33
+c2_curr: 70
+case1
 tree 200
-
+node out: 70, node in: 143
+p_prev: 231
+c1_prev: 2
+c2_prev: 12
+p_curr: 231
+c2_curr: 2
+c2_curr: 12
+case1
 tree 201
-
+node out: 231, node in: 117
+p_prev: -1
+c1_prev: 33
+c2_prev: 143
+p_curr: 143
+c2_curr: 2
+c2_curr: 33
+case2
 tree 202
-
+node out: 117, node in: 185
+p_prev: 143
+c1_prev: 2
+c2_prev: 33
+p_curr: -1
+c2_curr: 2
+c2_curr: 143
+case2
 tree 203
-
+node out: 185, node in: 183
+p_prev: -1
+c1_prev: 2
+c2_prev: 143
+p_curr: -1
+c2_curr: 2
+c2_curr: 143
+case1
 tree 204
-
+node out: 143, node in: 111
+p_prev: 183
+c1_prev: 12
+c2_prev: 33
+p_curr: 183
+c2_curr: 2
+c2_curr: 33
+case3
 tree 205
-
+node out: 183, node in: 408
+p_prev: -1
+c1_prev: 12
+c2_prev: 111
+p_curr: -1
+c2_curr: 12
+c2_curr: 111
+case1
 tree 206
-
+node out: 408, node in: 419
+p_prev: -1
+c1_prev: 12
+c2_prev: 111
+p_curr: -1
+c2_curr: 12
+c2_curr: 111
+case1
 tree 207
-
+node out: 419, node in: 393
+p_prev: -1
+c1_prev: 12
+c2_prev: 111
+p_curr: -1
+c2_curr: 12
+c2_curr: 111
+case1
 tree 208
-
+node out: 393, node in: 390
+p_prev: -1
+c1_prev: 12
+c2_prev: 111
+p_curr: -1
+c2_curr: 12
+c2_curr: 111
+case1
 tree 209
-
+node out: 390, node in: 396
+p_prev: -1
+c1_prev: 12
+c2_prev: 111
+p_curr: -1
+c2_curr: 12
+c2_curr: 111
+case1
 tree 210
-
+node out: 111, node in: 290
+p_prev: 396
+c1_prev: 2
+c2_prev: 33
+p_curr: 396
+c2_curr: 2
+c2_curr: 33
+case1
 tree 211
-
+node out: 396, node in: 322
+p_prev: -1
+c1_prev: 12
+c2_prev: 290
+p_curr: -1
+c2_curr: 12
+c2_curr: 290
+case1
 tree 212
-
+node out: 322, node in: 160
+p_prev: -1
+c1_prev: 12
+c2_prev: 290
+p_curr: 290
+c2_curr: 12
+c2_curr: 33
+case2
 tree 213
-
+node out: 33, node in: 21
+p_prev: 160
+c1_prev: 0
+c2_prev: 4
+p_curr: 160
+c2_curr: 0
+c2_curr: 4
+case1
 tree 214
-
+node out: 160, node in: 165
+p_prev: 290
+c1_prev: 12
+c2_prev: 21
+p_curr: 290
+c2_curr: 12
+c2_curr: 21
+case1
 tree 215
-
+node out: 290, node in: 33
+p_prev: -1
+c1_prev: 2
+c2_prev: 165
+p_curr: 165
+c2_curr: 2
+c2_curr: 21
+case2
 tree 216
-
+node out: 33, node in: 290
+p_prev: 165
+c1_prev: 2
+c2_prev: 21
+p_curr: -1
+c2_curr: 2
+c2_curr: 165
+case2
 tree 217
-
+node out: 290, node in: 322
+p_prev: -1
+c1_prev: 2
+c2_prev: 165
+p_curr: -1
+c2_curr: 2
+c2_curr: 165
+case1
 tree 218
-
+node out: 322, node in: 232
+p_prev: -1
+c1_prev: 2
+c2_prev: 165
+p_curr: -1
+c2_curr: 2
+c2_curr: 165
+case1
 tree 219
-
+node out: 232, node in: 42
+p_prev: -1
+c1_prev: 2
+c2_prev: 165
+p_curr: 165
+c2_curr: 2
+c2_curr: 12
+case2
 tree 220
-
+node out: 165, node in: 232
+p_prev: -1
+c1_prev: 21
+c2_prev: 42
+p_curr: -1
+c2_curr: 21
+c2_curr: 42
+case1
 tree 221
-
+node out: 232, node in: 208
+p_prev: -1
+c1_prev: 21
+c2_prev: 42
+p_curr: -1
+c2_curr: 21
+c2_curr: 42
+case1
 tree 222
-
+node out: 12, node in: 17
+p_prev: 42
+c1_prev: 1
+c2_prev: 3
+p_curr: 21
+c2_curr: 3
+c2_curr: 4
+case3
 tree 223
-
+node out: 208, node in: 160
+p_prev: -1
+c1_prev: 21
+c2_prev: 42
+p_curr: -1
+c2_curr: 21
+c2_curr: 42
+case1
 tree 224
-
+node out: 17, node in: 257
+p_prev: 21
+c1_prev: 3
+c2_prev: 4
+p_curr: -1
+c2_curr: 4
+c2_curr: 160
+case3
 tree 225
-
+node out: 21, node in: 22
+p_prev: 160
+c1_prev: 0
+c2_prev: 3
+p_curr: 257
+c2_curr: 3
+c2_curr: 4
+case3
 tree 226
-
+node out: 257, node in: 286
+p_prev: -1
+c1_prev: 160
+c2_prev: 22
+p_curr: -1
+c2_curr: 22
+c2_curr: 160
+case1
 tree 227
-
+node out: 42, node in: 100
+p_prev: 160
+c1_prev: 2
+c2_prev: 1
+p_curr: 160
+c2_curr: 0
+c2_curr: 1
+case3
 tree 228
-
+node out: 160, node in: 208
+p_prev: 286
+c1_prev: 2
+c2_prev: 100
+p_curr: 286
+c2_curr: 2
+c2_curr: 100
+case1
 tree 229
-
+node out: 22, node in: 74
+p_prev: 286
+c1_prev: 3
+c2_prev: 4
+p_curr: 286
+c2_curr: 3
+c2_curr: 4
+case1
 tree 230
-
+node out: 208, node in: 322
+p_prev: 286
+c1_prev: 2
+c2_prev: 100
+p_curr: -1
+c2_curr: 100
+c2_curr: 286
+case3
 tree 231
-
+node out: 286, node in: 261
+p_prev: 322
+c1_prev: 74
+c2_prev: 2
+p_curr: 322
+c2_curr: 2
+c2_curr: 74
+case1
 tree 232
-
+node out: 261, node in: 143
+p_prev: 322
+c1_prev: 2
+c2_prev: 74
+p_curr: 322
+c2_curr: 2
+c2_curr: 100
+case2
 tree 233
-
+node out: 322, node in: 377
+p_prev: -1
+c1_prev: 74
+c2_prev: 143
+p_curr: -1
+c2_curr: 74
+c2_curr: 143
+case1
 tree 234
-
+node out: 377, node in: 261
+p_prev: -1
+c1_prev: 74
+c2_prev: 143
+p_curr: -1
+c2_curr: 74
+c2_curr: 143
+case1
 tree 235
-
+node out: 74, node in: 32
+p_prev: 261
+c1_prev: 3
+c2_prev: 4
+p_curr: 261
+c2_curr: 3
+c2_curr: 4
+case1
 tree 236
-
+node out: 261, node in: 315
+p_prev: -1
+c1_prev: 143
+c2_prev: 32
+p_curr: -1
+c2_curr: 32
+c2_curr: 143
+case1
 tree 237
-
+node out: 100, node in: 42
+p_prev: 143
+c1_prev: 0
+c2_prev: 1
+p_curr: 143
+c2_curr: 1
+c2_curr: 2
+case3
 tree 238
-
+node out: 315, node in: 354
+p_prev: -1
+c1_prev: 32
+c2_prev: 143
+p_curr: -1
+c2_curr: 32
+c2_curr: 143
+case1
 tree 239
-
+node out: 354, node in: 218
+p_prev: -1
+c1_prev: 32
+c2_prev: 143
+p_curr: -1
+c2_curr: 32
+c2_curr: 143
+case1
 tree 240
-
+node out: 143, node in: 5
+p_prev: 218
+c1_prev: 0
+c2_prev: 42
+p_curr: 32
+c2_curr: 0
+c2_curr: 4
+case2
 tree 241
-
+node out: 218, node in: 217
+p_prev: -1
+c1_prev: 32
+c2_prev: 42
+p_curr: -1
+c2_curr: 32
+c2_curr: 42
+case1
 tree 242
-
+node out: 217, node in: 71
+p_prev: -1
+c1_prev: 32
+c2_prev: 42
+p_curr: -1
+c2_curr: 32
+c2_curr: 42
+case1
 tree 243
-
+node out: 42, node in: 143
+p_prev: 71
+c1_prev: 1
+c2_prev: 2
+p_curr: -1
+c2_curr: 2
+c2_curr: 71
+case3
 tree 244
-
+node out: 32, node in: 160
+p_prev: 71
+c1_prev: 3
+c2_prev: 5
+p_curr: -1
+c2_curr: 3
+c2_curr: 143
+case2
 tree 245
-
+node out: 143, node in: 85
+p_prev: 160
+c1_prev: 2
+c2_prev: 71
+p_curr: 160
+c2_curr: 2
+c2_curr: 71
+case1
 tree 246
-
+node out: 85, node in: 151
+p_prev: 160
+c1_prev: 2
+c2_prev: 71
+p_curr: 160
+c2_curr: 2
+c2_curr: 3
+case2
 tree 247
-
+node out: 160, node in: 132
+p_prev: -1
+c1_prev: 71
+c2_prev: 151
+p_curr: 151
+c2_curr: 2
+c2_curr: 71
+case2
 tree 248
-
+node out: 132, node in: 160
+p_prev: 151
+c1_prev: 2
+c2_prev: 71
+p_curr: -1
+c2_curr: 71
+c2_curr: 151
+case3
 tree 249
-
+node out: 71, node in: 340
+p_prev: 160
+c1_prev: 1
+c2_prev: 5
+p_curr: -1
+c2_curr: 1
+c2_curr: 160
+case2
 tree 250
-
+node out: 340, node in: 354
+p_prev: -1
+c1_prev: 1
+c2_prev: 160
+p_curr: -1
+c2_curr: 1
+c2_curr: 160
+case1
 tree 251
-
+node out: 151, node in: 71
+p_prev: 160
+c1_prev: 3
+c2_prev: 2
+p_curr: 160
+c2_curr: 3
+c2_curr: 5
+case2
 tree 252
-
+node out: 354, node in: 362
+p_prev: -1
+c1_prev: 1
+c2_prev: 160
+p_curr: -1
+c2_curr: 1
+c2_curr: 160
+case1
 tree 253
-
+node out: 362, node in: 323
+p_prev: -1
+c1_prev: 1
+c2_prev: 160
+p_curr: -1
+c2_curr: 1
+c2_curr: 160
+case1
 tree 254
-
+node out: 323, node in: 291
+p_prev: -1
+c1_prev: 1
+c2_prev: 160
+p_curr: -1
+c2_curr: 1
+c2_curr: 160
+case1
 tree 255
-
+node out: 160, node in: 217
+p_prev: 291
+c1_prev: 2
+c2_prev: 71
+p_curr: 291
+c2_curr: 1
+c2_curr: 2
+case2
 tree 256
-
+node out: 217, node in: 55
+p_prev: 291
+c1_prev: 1
+c2_prev: 2
+p_curr: 71
+c2_curr: 2
+c2_curr: 3
+case3
 tree 257
-
+node out: 291, node in: 294
+p_prev: -1
+c1_prev: 71
+c2_prev: 1
+p_curr: -1
+c2_curr: 1
+c2_curr: 71
+case1
 tree 258
-
+node out: 294, node in: 187
+p_prev: -1
+c1_prev: 1
+c2_prev: 71
+p_curr: -1
+c2_curr: 1
+c2_curr: 71
+case1
 tree 259
-
+node out: 187, node in: 56
+p_prev: -1
+c1_prev: 1
+c2_prev: 71
+p_curr: 71
+c2_curr: 1
+c2_curr: 55
+case2
 tree 260
-
+node out: 55, node in: 187
+p_prev: 56
+c1_prev: 2
+c2_prev: 3
+p_curr: -1
+c2_curr: 2
+c2_curr: 71
+case2
 tree 261
-
+node out: 187, node in: 181
+p_prev: -1
+c1_prev: 2
+c2_prev: 71
+p_curr: -1
+c2_curr: 2
+c2_curr: 71
+case1
 tree 262
-
+node out: 71, node in: 42
+p_prev: 181
+c1_prev: 5
+c2_prev: 56
+p_curr: 181
+c2_curr: 2
+c2_curr: 5
+case2
 tree 263
-
+node out: 181, node in: 187
+p_prev: -1
+c1_prev: 42
+c2_prev: 56
+p_curr: -1
+c2_curr: 42
+c2_curr: 56
+case1
 tree 264
-
+node out: 187, node in: 339
+p_prev: -1
+c1_prev: 42
+c2_prev: 56
+p_curr: -1
+c2_curr: 42
+c2_curr: 56
+case1
 tree 265
-
+node out: 42, node in: 30
+p_prev: 339
+c1_prev: 2
+c2_prev: 5
+p_curr: 56
+c2_curr: 3
+c2_curr: 5
+case3
 tree 266
-
+node out: 339, node in: 255
+p_prev: -1
+c1_prev: 56
+c2_prev: 2
+p_curr: -1
+c2_curr: 2
+c2_curr: 56
+case1
 tree 267
-
+node out: 255, node in: 317
+p_prev: -1
+c1_prev: 2
+c2_prev: 56
+p_curr: -1
+c2_curr: 2
+c2_curr: 56
+case1
 tree 268
-
+node out: 317, node in: 339
+p_prev: -1
+c1_prev: 2
+c2_prev: 56
+p_curr: -1
+c2_curr: 2
+c2_curr: 56
+case1
 tree 269
-
+node out: 30, node in: 62
+p_prev: 56
+c1_prev: 3
+c2_prev: 5
+p_curr: 339
+c2_curr: 5
+c2_curr: 56
+case3
 tree 270
-
+node out: 339, node in: 307
+p_prev: -1
+c1_prev: 2
+c2_prev: 62
+p_curr: -1
+c2_curr: 2
+c2_curr: 62
+case1
 tree 271
-
+node out: 62, node in: 36
+p_prev: 307
+c1_prev: 5
+c2_prev: 56
+p_curr: 307
+c2_curr: 2
+c2_curr: 5
+case2
 tree 272
-
+node out: 36, node in: 154
+p_prev: 307
+c1_prev: 2
+c2_prev: 5
+p_curr: 307
+c2_curr: 5
+c2_curr: 56
+case3
 tree 273
-
+node out: 307, node in: 52
+p_prev: -1
+c1_prev: 2
+c2_prev: 154
+p_curr: 56
+c2_curr: 2
+c2_curr: 3
+case2
 tree 274
-
+node out: 56, node in: 50
+p_prev: 154
+c1_prev: 1
+c2_prev: 52
+p_curr: 52
+c2_curr: 1
+c2_curr: 2
+case2
 tree 275
-
+node out: 154, node in: 410
+p_prev: -1
+c1_prev: 5
+c2_prev: 52
+p_curr: -1
+c2_curr: 5
+c2_curr: 52
+case1
 tree 276
-
+node out: 410, node in: 307
+p_prev: -1
+c1_prev: 5
+c2_prev: 52
+p_curr: -1
+c2_curr: 5
+c2_curr: 52
+case1
 tree 277
-
+node out: 307, node in: 306
+p_prev: -1
+c1_prev: 5
+c2_prev: 52
+p_curr: -1
+c2_curr: 5
+c2_curr: 52
+case1
 tree 278
-
+node out: 306, node in: 298
+p_prev: -1
+c1_prev: 5
+c2_prev: 52
+p_curr: -1
+c2_curr: 5
+c2_curr: 52
+case1
 tree 279
-
+node out: 298, node in: 200
+p_prev: -1
+c1_prev: 5
+c2_prev: 52
+p_curr: -1
+c2_curr: 5
+c2_curr: 52
+case1
 tree 280
-
+node out: 200, node in: 236
+p_prev: -1
+c1_prev: 5
+c2_prev: 52
+p_curr: -1
+c2_curr: 5
+c2_curr: 52
+case1
 tree 281
-
+node out: 50, node in: 58
+p_prev: 52
+c1_prev: 1
+c2_prev: 2
+p_curr: 236
+c2_curr: 1
+c2_curr: 52
+case2
 tree 282
-
+node out: 236, node in: 298
+p_prev: -1
+c1_prev: 5
+c2_prev: 58
+p_curr: -1
+c2_curr: 5
+c2_curr: 58
+case1
 tree 283
-
+node out: 52, node in: 77
+p_prev: 58
+c1_prev: 3
+c2_prev: 2
+p_curr: 298
+c2_curr: 3
+c2_curr: 5
+case2
 tree 284
-
+node out: 77, node in: 307
+p_prev: 298
+c1_prev: 3
+c2_prev: 5
+p_curr: -1
+c2_curr: 5
+c2_curr: 298
+case3
 tree 285
-
+node out: 307, node in: 65
+p_prev: -1
+c1_prev: 5
+c2_prev: 298
+p_curr: 298
+c2_curr: 3
+c2_curr: 5
+case2
 tree 286
-
+node out: 298, node in: 198
+p_prev: -1
+c1_prev: 58
+c2_prev: 65
+p_curr: -1
+c2_curr: 58
+c2_curr: 65
+case1
 tree 287
-
+node out: 198, node in: 341
+p_prev: -1
+c1_prev: 58
+c2_prev: 65
+p_curr: -1
+c2_curr: 58
+c2_curr: 65
+case1
 tree 288
-
+node out: 341, node in: 288
+p_prev: -1
+c1_prev: 58
+c2_prev: 65
+p_curr: -1
+c2_curr: 58
+c2_curr: 65
+case1
 tree 289
-
+node out: 288, node in: 222
+p_prev: -1
+c1_prev: 58
+c2_prev: 65
+p_curr: -1
+c2_curr: 58
+c2_curr: 65
+case1
 tree 290
-
+node out: 222, node in: 207
+p_prev: -1
+c1_prev: 58
+c2_prev: 65
+p_curr: -1
+c2_curr: 58
+c2_curr: 65
+case1
 tree 291
-
+node out: 207, node in: 229
+p_prev: -1
+c1_prev: 58
+c2_prev: 65
+p_curr: -1
+c2_curr: 58
+c2_curr: 65
+case1
 tree 292
-
+node out: 65, node in: 50
+p_prev: 229
+c1_prev: 3
+c2_prev: 5
+p_curr: 58
+c2_curr: 2
+c2_curr: 3
+case2
 tree 293
-
+node out: 229, node in: 344
+p_prev: -1
+c1_prev: 58
+c2_prev: 5
+p_curr: -1
+c2_curr: 5
+c2_curr: 58
+case1
 tree 294
-
+node out: 344, node in: 328
+p_prev: -1
+c1_prev: 5
+c2_prev: 58
+p_curr: -1
+c2_curr: 5
+c2_curr: 58
+case1
 tree 295
-
+node out: 328, node in: 338
+p_prev: -1
+c1_prev: 5
+c2_prev: 58
+p_curr: -1
+c2_curr: 5
+c2_curr: 58
+case1
 tree 296
-
+node out: 338, node in: 366
+p_prev: -1
+c1_prev: 5
+c2_prev: 58
+p_curr: -1
+c2_curr: 5
+c2_curr: 58
+case1
 tree 297
-
+node out: 366, node in: 262
+p_prev: -1
+c1_prev: 5
+c2_prev: 58
+p_curr: -1
+c2_curr: 5
+c2_curr: 58
+case1
 tree 298
-
+node out: 262, node in: 366
+p_prev: -1
+c1_prev: 5
+c2_prev: 58
+p_curr: -1
+c2_curr: 5
+c2_curr: 58
+case1
 tree 299
-
+node out: 366, node in: 338
+p_prev: -1
+c1_prev: 5
+c2_prev: 58
+p_curr: -1
+c2_curr: 5
+c2_curr: 58
+case1
 tree 300
-
+node out: 338, node in: 236
+p_prev: -1
+c1_prev: 5
+c2_prev: 58
+p_curr: -1
+c2_curr: 5
+c2_curr: 58
+case1
 tree 301
-
+node out: 50, node in: 41
+p_prev: 58
+c1_prev: 2
+c2_prev: 3
+p_curr: 236
+c2_curr: 2
+c2_curr: 5
+case2
 tree 302
-
+node out: 236, node in: 251
+p_prev: -1
+c1_prev: 58
+c2_prev: 41
+p_curr: -1
+c2_curr: 41
+c2_curr: 58
+case1
 tree 303
-
+node out: 58, node in: 72
+p_prev: 251
+c1_prev: 1
+c2_prev: 3
+p_curr: 251
+c2_curr: 1
+c2_curr: 3
+case1
 tree 304
-
+node out: 251, node in: 309
+p_prev: -1
+c1_prev: 41
+c2_prev: 72
+p_curr: -1
+c2_curr: 41
+c2_curr: 72
+case1
 tree 305
-
+node out: 309, node in: 236
+p_prev: -1
+c1_prev: 41
+c2_prev: 72
+p_curr: -1
+c2_curr: 41
+c2_curr: 72
+case1
 tree 306
-
+node out: 236, node in: 309
+p_prev: -1
+c1_prev: 41
+c2_prev: 72
+p_curr: -1
+c2_curr: 41
+c2_curr: 72
+case1
 tree 307
-
+node out: 41, node in: 94
+p_prev: 309
+c1_prev: 2
+c2_prev: 5
+p_curr: 309
+c2_curr: 2
+c2_curr: 5
+case1
 tree 308
-
+node out: 309, node in: 332
+p_prev: -1
+c1_prev: 72
+c2_prev: 94
+p_curr: -1
+c2_curr: 72
+c2_curr: 94
+case1
 tree 309
-
+node out: 332, node in: 397
+p_prev: -1
+c1_prev: 72
+c2_prev: 94
+p_curr: -1
+c2_curr: 72
+c2_curr: 94
+case1
 tree 310
-
+node out: 397, node in: 387
+p_prev: -1
+c1_prev: 72
+c2_prev: 94
+p_curr: -1
+c2_curr: 72
+c2_curr: 94
+case1
 tree 311
-
+node out: 387, node in: 357
+p_prev: -1
+c1_prev: 72
+c2_prev: 94
+p_curr: -1
+c2_curr: 72
+c2_curr: 94
+case1
 tree 312
-
+node out: 94, node in: 138
+p_prev: 357
+c1_prev: 2
+c2_prev: 5
+p_curr: 357
+c2_curr: 2
+c2_curr: 5
+case1
 tree 313
-
+node out: 72, node in: 48
+p_prev: 357
+c1_prev: 1
+c2_prev: 3
+p_curr: 357
+c2_curr: 1
+c2_curr: 3
+case1
 tree 314
-
+node out: 357, node in: 327
+p_prev: -1
+c1_prev: 138
+c2_prev: 48
+p_curr: -1
+c2_curr: 48
+c2_curr: 138
+case1
 tree 315
-
+node out: 327, node in: 387
+p_prev: -1
+c1_prev: 48
+c2_prev: 138
+p_curr: -1
+c2_curr: 48
+c2_curr: 138
+case1
 tree 316
-
+node out: 387, node in: 191
+p_prev: -1
+c1_prev: 48
+c2_prev: 138
+p_curr: -1
+c2_curr: 48
+c2_curr: 138
+case1
 tree 317
-
+node out: 138, node in: 265
+p_prev: 191
+c1_prev: 2
+c2_prev: 5
+p_curr: -1
+c2_curr: 2
+c2_curr: 191
+case2
 tree 318
-
+node out: 265, node in: 397
+p_prev: -1
+c1_prev: 2
+c2_prev: 191
+p_curr: -1
+c2_curr: 2
+c2_curr: 191
+case1
 tree 319
-
+node out: 191, node in: 327
+p_prev: 397
+c1_prev: 48
+c2_prev: 5
+p_curr: 397
+c2_curr: 2
+c2_curr: 48
+case2
 tree 320
-
+node out: 327, node in: 311
+p_prev: 397
+c1_prev: 2
+c2_prev: 48
+p_curr: 397
+c2_curr: 2
+c2_curr: 5
+case2
 tree 321
-
+node out: 397, node in: 357
+p_prev: -1
+c1_prev: 48
+c2_prev: 311
+p_curr: -1
+c2_curr: 48
+c2_curr: 311
+case1
 tree 322
-
+node out: 357, node in: 397
+p_prev: -1
+c1_prev: 48
+c2_prev: 311
+p_curr: -1
+c2_curr: 48
+c2_curr: 311
+case1
 tree 323
-
+node out: 397, node in: 320
+p_prev: -1
+c1_prev: 48
+c2_prev: 311
+p_curr: -1
+c2_curr: 48
+c2_curr: 311
+case1
 tree 324
-
+node out: 311, node in: 236
+p_prev: 320
+c1_prev: 2
+c2_prev: 5
+p_curr: 320
+c2_curr: 2
+c2_curr: 5
+case1
 tree 325
-
+node out: 320, node in: 311
+p_prev: -1
+c1_prev: 48
+c2_prev: 236
+p_curr: -1
+c2_curr: 48
+c2_curr: 236
+case1
 tree 326
-
+node out: 236, node in: 186
+p_prev: 311
+c1_prev: 2
+c2_prev: 5
+p_curr: 311
+c2_curr: 5
+c2_curr: 48
+case3
 tree 327
-
+node out: 186, node in: 212
+p_prev: 311
+c1_prev: 5
+c2_prev: 48
+p_curr: 311
+c2_curr: 5
+c2_curr: 48
+case1
 tree 328
-
+node out: 311, node in: 310
+p_prev: -1
+c1_prev: 2
+c2_prev: 212
+p_curr: -1
+c2_curr: 2
+c2_curr: 212
+case1
 tree 329
-
+node out: 310, node in: 417
+p_prev: -1
+c1_prev: 2
+c2_prev: 212
+p_curr: -1
+c2_curr: 2
+c2_curr: 212
+case1
 tree 330
-
+node out: 417, node in: 416
+p_prev: -1
+c1_prev: 2
+c2_prev: 212
+p_curr: -1
+c2_curr: 2
+c2_curr: 212
+case1
 tree 331
-
+node out: 212, node in: 320
+p_prev: 416
+c1_prev: 5
+c2_prev: 48
+p_curr: 416
+c2_curr: 5
+c2_curr: 48
+case1
 tree 332
-
+node out: 416, node in: 384
+p_prev: -1
+c1_prev: 2
+c2_prev: 320
+p_curr: -1
+c2_curr: 2
+c2_curr: 320
+case1
 tree 333
-
+node out: 384, node in: 401
+p_prev: -1
+c1_prev: 2
+c2_prev: 320
+p_curr: -1
+c2_curr: 2
+c2_curr: 320
+case1
 tree 334
-
+node out: 320, node in: 297
+p_prev: 401
+c1_prev: 5
+c2_prev: 48
+p_curr: 401
+c2_curr: 5
+c2_curr: 48
+case1
 tree 335
-
+node out: 401, node in: 349
+p_prev: -1
+c1_prev: 2
+c2_prev: 297
+p_curr: -1
+c2_curr: 2
+c2_curr: 297
+case1
 tree 336
-
+node out: 349, node in: 94
+p_prev: -1
+c1_prev: 2
+c2_prev: 297
+p_curr: 297
+c2_curr: 2
+c2_curr: 5
+case2
 tree 337
-
+node out: 297, node in: 150
+p_prev: -1
+c1_prev: 48
+c2_prev: 94
+p_curr: -1
+c2_curr: 48
+c2_curr: 94
+case1
 tree 338
-
+node out: 94, node in: 297
+p_prev: 150
+c1_prev: 2
+c2_prev: 5
+p_curr: -1
+c2_curr: 5
+c2_curr: 150
+case3
 tree 339
-
+node out: 48, node in: 61
+p_prev: 150
+c1_prev: 1
+c2_prev: 3
+p_curr: 150
+c2_curr: 1
+c2_curr: 2
+case2
 tree 340
-
+node out: 297, node in: 401
+p_prev: -1
+c1_prev: 5
+c2_prev: 150
+p_curr: -1
+c2_curr: 5
+c2_curr: 150
+case1
 tree 341
-
+node out: 401, node in: 162
+p_prev: -1
+c1_prev: 5
+c2_prev: 150
+p_curr: -1
+c2_curr: 5
+c2_curr: 150
+case1
 tree 342
-
+node out: 150, node in: 124
+p_prev: 162
+c1_prev: 3
+c2_prev: 61
+p_curr: 162
+c2_curr: 3
+c2_curr: 61
+case1
 tree 343
-
+node out: 124, node in: 54
+p_prev: 162
+c1_prev: 3
+c2_prev: 61
+p_curr: 61
+c2_curr: 2
+c2_curr: 3
+case2
 tree 344
-
+node out: 54, node in: 124
+p_prev: 61
+c1_prev: 2
+c2_prev: 3
+p_curr: 162
+c2_curr: 3
+c2_curr: 61
+case3
 tree 345
-
+node out: 162, node in: 182
+p_prev: -1
+c1_prev: 5
+c2_prev: 124
+p_curr: -1
+c2_curr: 5
+c2_curr: 124
+case1
 tree 346
-
+node out: 182, node in: 150
+p_prev: -1
+c1_prev: 5
+c2_prev: 124
+p_curr: -1
+c2_curr: 5
+c2_curr: 124
+case1
 tree 347
-
+node out: 124, node in: 129
+p_prev: 150
+c1_prev: 3
+c2_prev: 61
+p_curr: 150
+c2_curr: 5
+c2_curr: 61
+case3
 tree 348
-
+node out: 129, node in: 289
+p_prev: 150
+c1_prev: 5
+c2_prev: 61
+p_curr: -1
+c2_curr: 61
+c2_curr: 150
+case3
 tree 349
-
+node out: 150, node in: 156
+p_prev: 289
+c1_prev: 3
+c2_prev: 5
+p_curr: 289
+c2_curr: 3
+c2_curr: 61
+case2
 tree 350
-
+node out: 289, node in: 325
+p_prev: -1
+c1_prev: 5
+c2_prev: 156
+p_curr: -1
+c2_curr: 5
+c2_curr: 156
+case1
 tree 351
-
+node out: 325, node in: 335
+p_prev: -1
+c1_prev: 5
+c2_prev: 156
+p_curr: -1
+c2_curr: 5
+c2_curr: 156
+case1
 tree 352
-
+node out: 335, node in: 119
+p_prev: -1
+c1_prev: 5
+c2_prev: 156
+p_curr: 156
+c2_curr: 5
+c2_curr: 61
+case2
 tree 353
-
+node out: 156, node in: 335
+p_prev: -1
+c1_prev: 3
+c2_prev: 119
+p_curr: -1
+c2_curr: 3
+c2_curr: 119
+case1
 tree 354
-
+node out: 335, node in: 212
+p_prev: -1
+c1_prev: 3
+c2_prev: 119
+p_curr: -1
+c2_curr: 3
+c2_curr: 119
+case1
 tree 355
-
+node out: 119, node in: 152
+p_prev: 212
+c1_prev: 5
+c2_prev: 61
+p_curr: 212
+c2_curr: 5
+c2_curr: 61
+case1
 tree 356
-
+node out: 212, node in: 335
+p_prev: -1
+c1_prev: 3
+c2_prev: 152
+p_curr: -1
+c2_curr: 3
+c2_curr: 152
+case1
 tree 357
-
+node out: 335, node in: 276
+p_prev: -1
+c1_prev: 3
+c2_prev: 152
+p_curr: -1
+c2_curr: 3
+c2_curr: 152
+case1
 tree 358
-
+node out: 276, node in: 69
+p_prev: -1
+c1_prev: 3
+c2_prev: 152
+p_curr: 152
+c2_curr: 3
+c2_curr: 61
+case2
 tree 359
-
+node out: 61, node in: 245
+p_prev: 69
+c1_prev: 1
+c2_prev: 2
+p_curr: -1
+c2_curr: 2
+c2_curr: 152
+case3
 tree 360
-
+node out: 69, node in: 321
+p_prev: 152
+c1_prev: 3
+c2_prev: 1
+p_curr: -1
+c2_curr: 1
+c2_curr: 245
+case3
 tree 361
-
+node out: 245, node in: 223
+p_prev: 321
+c1_prev: 2
+c2_prev: 152
+p_curr: 321
+c2_curr: 2
+c2_curr: 152
+case1
 tree 362
-
+node out: 223, node in: 107
+p_prev: 321
+c1_prev: 2
+c2_prev: 152
+p_curr: 321
+c2_curr: 1
+c2_curr: 2
+case2
 tree 363
-
+node out: 321, node in: 342
+p_prev: -1
+c1_prev: 107
+c2_prev: 152
+p_curr: -1
+c2_curr: 107
+c2_curr: 152
+case1
 tree 364
-
+node out: 342, node in: 343
+p_prev: -1
+c1_prev: 107
+c2_prev: 152
+p_curr: -1
+c2_curr: 107
+c2_curr: 152
+case1
 tree 365
-
+node out: 343, node in: 371
+p_prev: -1
+c1_prev: 107
+c2_prev: 152
+p_curr: -1
+c2_curr: 107
+c2_curr: 152
+case1
 tree 366
-
+node out: 371, node in: 360
+p_prev: -1
+c1_prev: 107
+c2_prev: 152
+p_curr: -1
+c2_curr: 107
+c2_curr: 152
+case1
 tree 367
-
+node out: 107, node in: 69
+p_prev: 360
+c1_prev: 1
+c2_prev: 2
+p_curr: 152
+c2_curr: 1
+c2_curr: 3
+case2
 tree 368
-
+node out: 360, node in: 371
+p_prev: -1
+c1_prev: 152
+c2_prev: 2
+p_curr: -1
+c2_curr: 2
+c2_curr: 152
+case1
 tree 369
-
+node out: 152, node in: 139
+p_prev: 371
+c1_prev: 5
+c2_prev: 69
+p_curr: 371
+c2_curr: 5
+c2_curr: 69
+case1
 tree 370
-
+node out: 371, node in: 367
+p_prev: -1
+c1_prev: 2
+c2_prev: 139
+p_curr: -1
+c2_curr: 2
+c2_curr: 139
+case1
 tree 371
-
+node out: 367, node in: 223
+p_prev: -1
+c1_prev: 2
+c2_prev: 139
+p_curr: -1
+c2_curr: 2
+c2_curr: 139
+case1
 tree 372
-
+node out: 223, node in: 205
+p_prev: -1
+c1_prev: 2
+c2_prev: 139
+p_curr: -1
+c2_curr: 2
+c2_curr: 139
+case1
 tree 373
-
+node out: 139, node in: 64
+p_prev: 205
+c1_prev: 5
+c2_prev: 69
+p_curr: 205
+c2_curr: 2
+c2_curr: 5
+case2
 tree 374
-
+node out: 69, node in: 130
+p_prev: 205
+c1_prev: 1
+c2_prev: 3
+p_curr: 205
+c2_curr: 1
+c2_curr: 64
+case2
 tree 375
-
+node out: 205, node in: 239
+p_prev: -1
+c1_prev: 3
+c2_prev: 130
+p_curr: -1
+c2_curr: 3
+c2_curr: 130
+case1
 tree 376
-
+node out: 239, node in: 328
+p_prev: -1
+c1_prev: 3
+c2_prev: 130
+p_curr: -1
+c2_curr: 3
+c2_curr: 130
+case1
 tree 377
-
+node out: 328, node in: 324
+p_prev: -1
+c1_prev: 3
+c2_prev: 130
+p_curr: -1
+c2_curr: 3
+c2_curr: 130
+case1
 tree 378
-
+node out: 324, node in: 252
+p_prev: -1
+c1_prev: 3
+c2_prev: 130
+p_curr: -1
+c2_curr: 3
+c2_curr: 130
+case1
 tree 379
-
+node out: 252, node in: 180
+p_prev: -1
+c1_prev: 3
+c2_prev: 130
+p_curr: -1
+c2_curr: 3
+c2_curr: 130
+case1
 tree 380
-
+node out: 180, node in: 182
+p_prev: -1
+c1_prev: 3
+c2_prev: 130
+p_curr: -1
+c2_curr: 3
+c2_curr: 130
+case1
 tree 381
-
+node out: 182, node in: 10
+p_prev: -1
+c1_prev: 3
+c2_prev: 130
+p_curr: 130
+c2_curr: 1
+c2_curr: 3
+case2
 tree 382
-
+node out: 64, node in: 122
+p_prev: 130
+c1_prev: 2
+c2_prev: 5
+p_curr: 130
+c2_curr: 2
+c2_curr: 5
+case1
 tree 383
-
+node out: 122, node in: 385
+p_prev: 130
+c1_prev: 2
+c2_prev: 5
+p_curr: -1
+c2_curr: 2
+c2_curr: 130
+case2
 tree 384
-
+node out: 130, node in: 260
+p_prev: 385
+c1_prev: 10
+c2_prev: 5
+p_curr: 385
+c2_curr: 5
+c2_curr: 10
+case1
 tree 385
-
+node out: 385, node in: 336
+p_prev: -1
+c1_prev: 2
+c2_prev: 260
+p_curr: -1
+c2_curr: 2
+c2_curr: 260
+case1
 tree 386
-
+node out: 336, node in: 385
+p_prev: -1
+c1_prev: 2
+c2_prev: 260
+p_curr: -1
+c2_curr: 2
+c2_curr: 260
+case1
 tree 387
-
+node out: 260, node in: 190
+p_prev: 385
+c1_prev: 5
+c2_prev: 10
+p_curr: 385
+c2_curr: 2
+c2_curr: 5
+case2
 tree 388
-
+node out: 385, node in: 391
+p_prev: -1
+c1_prev: 10
+c2_prev: 190
+p_curr: -1
+c2_curr: 10
+c2_curr: 190
+case1
 tree 389
-
+node out: 391, node in: 122
+p_prev: -1
+c1_prev: 10
+c2_prev: 190
+p_curr: 190
+c2_curr: 5
+c2_curr: 10
+case2
 tree 390
-
+node out: 122, node in: 376
+p_prev: 190
+c1_prev: 5
+c2_prev: 10
+p_curr: -1
+c2_curr: 10
+c2_curr: 190
+case3
 tree 391
-
+node out: 190, node in: 171
+p_prev: 376
+c1_prev: 2
+c2_prev: 5
+p_curr: 376
+c2_curr: 5
+c2_curr: 10
+case3
 tree 392
-
+node out: 376, node in: 195
+p_prev: -1
+c1_prev: 2
+c2_prev: 171
+p_curr: -1
+c2_curr: 2
+c2_curr: 171
+case1
 tree 393
-
+node out: 171, node in: 259
+p_prev: 195
+c1_prev: 5
+c2_prev: 10
+p_curr: -1
+c2_curr: 10
+c2_curr: 195
+case3
 tree 394
-
+node out: 259, node in: 391
+p_prev: -1
+c1_prev: 10
+c2_prev: 195
+p_curr: -1
+c2_curr: 10
+c2_curr: 195
+case1
 tree 395
-
+node out: 391, node in: 237
+p_prev: -1
+c1_prev: 10
+c2_prev: 195
+p_curr: -1
+c2_curr: 10
+c2_curr: 195
+case1
 tree 396
-
+node out: 195, node in: 64
+p_prev: 237
+c1_prev: 2
+c2_prev: 5
+p_curr: 237
+c2_curr: 2
+c2_curr: 5
+case1
 tree 397
-
+node out: 64, node in: 195
+p_prev: 237
+c1_prev: 2
+c2_prev: 5
+p_curr: 237
+c2_curr: 2
+c2_curr: 5
+case1
 tree 398
-
+node out: 195, node in: 403
+p_prev: 237
+c1_prev: 2
+c2_prev: 5
+p_curr: -1
+c2_curr: 2
+c2_curr: 237
+case2
 tree 399
-
+node out: 403, node in: 399
+p_prev: -1
+c1_prev: 2
+c2_prev: 237
+p_curr: -1
+c2_curr: 2
+c2_curr: 237
+case1
 tree 400
-
+node out: 399, node in: 223
+p_prev: -1
+c1_prev: 2
+c2_prev: 237
+p_curr: 237
+c2_curr: 2
+c2_curr: 10
+case2
 tree 401
-
+node out: 223, node in: 231
+p_prev: 237
+c1_prev: 2
+c2_prev: 10
+p_curr: 237
+c2_curr: 5
+c2_curr: 10
+case3
 tree 402
-
+node out: 231, node in: 369
+p_prev: 237
+c1_prev: 5
+c2_prev: 10
+p_curr: -1
+c2_curr: 5
+c2_curr: 237
+case2
 tree 403
-
+node out: 237, node in: 173
+p_prev: 369
+c1_prev: 2
+c2_prev: 10
+p_curr: 369
+c2_curr: 2
+c2_curr: 10
+case1
 tree 404
-
+node out: 173, node in: 57
+p_prev: 369
+c1_prev: 2
+c2_prev: 10
+p_curr: 369
+c2_curr: 2
+c2_curr: 5
+case2
 tree 405
-
+node out: 369, node in: 314
+p_prev: -1
+c1_prev: 10
+c2_prev: 57
+p_curr: -1
+c2_curr: 10
+c2_curr: 57
+case1
 tree 406
-
+node out: 314, node in: 409
+p_prev: -1
+c1_prev: 10
+c2_prev: 57
+p_curr: -1
+c2_curr: 10
+c2_curr: 57
+case1
 tree 407
-
+node out: 409, node in: 226
+p_prev: -1
+c1_prev: 10
+c2_prev: 57
+p_curr: -1
+c2_curr: 10
+c2_curr: 57
+case1
 tree 408
-
+node out: 226, node in: 411
+p_prev: -1
+c1_prev: 10
+c2_prev: 57
+p_curr: -1
+c2_curr: 10
+c2_curr: 57
+case1
 tree 409
-
+node out: 411, node in: 399
+p_prev: -1
+c1_prev: 10
+c2_prev: 57
+p_curr: -1
+c2_curr: 10
+c2_curr: 57
+case1
 tree 410
-
+node out: 399, node in: 195
+p_prev: -1
+c1_prev: 10
+c2_prev: 57
+p_curr: -1
+c2_curr: 10
+c2_curr: 57
+case1
 tree 411
-
+node out: 57, node in: 126
+p_prev: 195
+c1_prev: 2
+c2_prev: 5
+p_curr: 195
+c2_curr: 5
+c2_curr: 10
+case3
 tree 412
-
+node out: 126, node in: 123
+p_prev: 195
+c1_prev: 5
+c2_prev: 10
+p_curr: 195
+c2_curr: 2
+c2_curr: 10
+case3
 tree 413
-
+node out: 10, node in: 20
+p_prev: 123
+c1_prev: 1
+c2_prev: 3
+p_curr: 195
+c2_curr: 3
+c2_curr: 5
+case3
 tree 414
-
+node out: 20, node in: 24
+p_prev: 195
+c1_prev: 3
+c2_prev: 5
+p_curr: 195
+c2_curr: 3
+c2_curr: 5
+case1
 tree 415
-
+node out: 123, node in: 98
+p_prev: 195
+c1_prev: 2
+c2_prev: 1
+p_curr: 195
+c2_curr: 2
+c2_curr: 24
+case2
 tree 416
-
+node out: 195, node in: 221
+p_prev: -1
+c1_prev: 1
+c2_prev: 98
+p_curr: -1
+c2_curr: 1
+c2_curr: 98
+case1
 tree 417
-
+node out: 98, node in: 347
+p_prev: 221
+c1_prev: 2
+c2_prev: 24
+p_curr: -1
+c2_curr: 24
+c2_curr: 221
+case3
 tree 418
-
+node out: 221, node in: 286
+p_prev: 347
+c1_prev: 1
+c2_prev: 2
+p_curr: 347
+c2_curr: 2
+c2_curr: 24
+case3
 tree 419
-
+node out: 286, node in: 346
+p_prev: 347
+c1_prev: 2
+c2_prev: 24
+p_curr: 347
+c2_curr: 2
+c2_curr: 24
+case1
 tree 420
-
+node out: 347, node in: 59
+p_prev: -1
+c1_prev: 1
+c2_prev: 346
+p_curr: 346
+c2_curr: 1
+c2_curr: 2
+case2
 tree 421
-
+node out: 346, node in: 347
+p_prev: -1
+c1_prev: 24
+c2_prev: 59
+p_curr: -1
+c2_curr: 24
+c2_curr: 59
+case1
 tree 422
-
+node out: 347, node in: 378
+p_prev: -1
+c1_prev: 24
+c2_prev: 59
+p_curr: -1
+c2_curr: 24
+c2_curr: 59
+case1
 tree 423
-
+node out: 378, node in: 380
+p_prev: -1
+c1_prev: 24
+c2_prev: 59
+p_curr: -1
+c2_curr: 24
+c2_curr: 59
+case1
 tree 424
-
+node out: 380, node in: 378
+p_prev: -1
+c1_prev: 24
+c2_prev: 59
+p_curr: -1
+c2_curr: 24
+c2_curr: 59
+case1
 tree 425
-
+node out: 378, node in: 270
+p_prev: -1
+c1_prev: 24
+c2_prev: 59
+p_curr: -1
+c2_curr: 24
+c2_curr: 59
+case1
 tree 426
-
+node out: 270, node in: 258
+p_prev: -1
+c1_prev: 24
+c2_prev: 59
+p_curr: -1
+c2_curr: 24
+c2_curr: 59
+case1
 tree 427
-
+node out: 258, node in: 158
+p_prev: -1
+c1_prev: 24
+c2_prev: 59
+p_curr: -1
+c2_curr: 24
+c2_curr: 59
+case1
 tree 428
-
+node out: 59, node in: 97
+p_prev: 158
+c1_prev: 1
+c2_prev: 2
+p_curr: 158
+c2_curr: 1
+c2_curr: 2
+case1
 tree 429
-
+node out: 158, node in: 405
+p_prev: -1
+c1_prev: 24
+c2_prev: 97
+p_curr: -1
+c2_curr: 24
+c2_curr: 97
+case1
 tree 430
-
+node out: 405, node in: 389
+p_prev: -1
+c1_prev: 24
+c2_prev: 97
+p_curr: -1
+c2_curr: 24
+c2_curr: 97
+case1
 tree 431
-
+node out: 389, node in: 361
+p_prev: -1
+c1_prev: 24
+c2_prev: 97
+p_curr: -1
+c2_curr: 24
+c2_curr: 97
+case1
 tree 432
-
+node out: 361, node in: 350
+p_prev: -1
+c1_prev: 24
+c2_prev: 97
+p_curr: -1
+c2_curr: 24
+c2_curr: 97
+case1
 tree 433
-
+node out: 97, node in: 110
+p_prev: 350
+c1_prev: 1
+c2_prev: 2
+p_curr: 350
+c2_curr: 2
+c2_curr: 24
+case3
 tree 434
-
+node out: 110, node in: 40
+p_prev: 350
+c1_prev: 2
+c2_prev: 24
+p_curr: 350
+c2_curr: 1
+c2_curr: 2
+case2
 tree 435
-
+node out: 24, node in: 142
+p_prev: 350
+c1_prev: 3
+c2_prev: 5
+p_curr: 350
+c2_curr: 3
+c2_curr: 40
+case2
 tree 436
-
+node out: 142, node in: 158
+p_prev: 350
+c1_prev: 3
+c2_prev: 40
+p_curr: 350
+c2_curr: 5
+c2_curr: 40
+case3
 tree 437
-
+node out: 158, node in: 168
+p_prev: 350
+c1_prev: 5
+c2_prev: 40
+p_curr: 350
+c2_curr: 3
+c2_curr: 5
+case2
 tree 438
-
+node out: 350, node in: 302
+p_prev: -1
+c1_prev: 40
+c2_prev: 168
+p_curr: -1
+c2_curr: 40
+c2_curr: 168
+case1
 tree 439
-
+node out: 302, node in: 351
+p_prev: -1
+c1_prev: 40
+c2_prev: 168
+p_curr: -1
+c2_curr: 40
+c2_curr: 168
+case1
 tree 440
-
+node out: 168, node in: 143
+p_prev: 351
+c1_prev: 3
+c2_prev: 5
+p_curr: 351
+c2_curr: 5
+c2_curr: 40
+case3
 tree 441
-
+node out: 351, node in: 295
+p_prev: -1
+c1_prev: 3
+c2_prev: 143
+p_curr: -1
+c2_curr: 3
+c2_curr: 143
+case1
 tree 442
-
+node out: 295, node in: 158
+p_prev: -1
+c1_prev: 3
+c2_prev: 143
+p_curr: -1
+c2_curr: 3
+c2_curr: 143
+case1
 tree 443
-
+node out: 143, node in: 204
+p_prev: 158
+c1_prev: 5
+c2_prev: 40
+p_curr: -1
+c2_curr: 5
+c2_curr: 158
+case2
 tree 444
-
+node out: 204, node in: 263
+p_prev: -1
+c1_prev: 5
+c2_prev: 158
+p_curr: -1
+c2_curr: 5
+c2_curr: 158
+case1
 tree 445
-
+node out: 263, node in: 295
+p_prev: -1
+c1_prev: 5
+c2_prev: 158
+p_curr: -1
+c2_curr: 5
+c2_curr: 158
+case1
 tree 446
-
+node out: 295, node in: 312
+p_prev: -1
+c1_prev: 5
+c2_prev: 158
+p_curr: -1
+c2_curr: 5
+c2_curr: 158
+case1
 tree 447
-
+node out: 158, node in: 6
+p_prev: 312
+c1_prev: 3
+c2_prev: 40
+p_curr: 312
+c2_curr: 3
+c2_curr: 5
+case2
 tree 448
-
+node out: 312, node in: 311
+p_prev: -1
+c1_prev: 6
+c2_prev: 40
+p_curr: -1
+c2_curr: 6
+c2_curr: 40
+case1
 tree 449
-
+node out: 311, node in: 312
+p_prev: -1
+c1_prev: 6
+c2_prev: 40
+p_curr: -1
+c2_curr: 6
+c2_curr: 40
+case1
 tree 450
-
+node out: 312, node in: 235
+p_prev: -1
+c1_prev: 6
+c2_prev: 40
+p_curr: -1
+c2_curr: 6
+c2_curr: 40
+case1
 tree 451
-
+node out: 235, node in: 312
+p_prev: -1
+c1_prev: 6
+c2_prev: 40
+p_curr: -1
+c2_curr: 6
+c2_curr: 40
+case1
 tree 452
-
+node out: 312, node in: 281
+p_prev: -1
+c1_prev: 6
+c2_prev: 40
+p_curr: -1
+c2_curr: 6
+c2_curr: 40
+case1
 tree 453
-
+node out: 281, node in: 374
+p_prev: -1
+c1_prev: 6
+c2_prev: 40
+p_curr: -1
+c2_curr: 6
+c2_curr: 40
+case1
 tree 454
-
+node out: 374, node in: 398
+p_prev: -1
+c1_prev: 6
+c2_prev: 40
+p_curr: -1
+c2_curr: 6
+c2_curr: 40
+case1
 tree 455
-
+node out: 398, node in: 168
+p_prev: -1
+c1_prev: 6
+c2_prev: 40
+p_curr: -1
+c2_curr: 6
+c2_curr: 40
+case1
 tree 456
-
+node out: 168, node in: 243
+p_prev: -1
+c1_prev: 6
+c2_prev: 40
+p_curr: -1
+c2_curr: 6
+c2_curr: 40
+case1
 tree 457
-
+node out: 40, node in: 223
+p_prev: 243
+c1_prev: 1
+c2_prev: 2
+p_curr: 243
+c2_curr: 1
+c2_curr: 2
+case1
 tree 458
-
+node out: 223, node in: 133
+p_prev: 243
+c1_prev: 1
+c2_prev: 2
+p_curr: 243
+c2_curr: 1
+c2_curr: 2
+case1
 tree 459
-
+node out: 133, node in: 88
+p_prev: 243
+c1_prev: 1
+c2_prev: 2
+p_curr: 243
+c2_curr: 2
+c2_curr: 6
+case3
 tree 460
-
+node out: 243, node in: 256
+p_prev: -1
+c1_prev: 1
+c2_prev: 88
+p_curr: -1
+c2_curr: 1
+c2_curr: 88
+case1
 tree 461
-
+node out: 256, node in: 394
+p_prev: -1
+c1_prev: 1
+c2_prev: 88
+p_curr: -1
+c2_curr: 1
+c2_curr: 88
+case1
 tree 462
-
+node out: 394, node in: 267
+p_prev: -1
+c1_prev: 1
+c2_prev: 88
+p_curr: -1
+c2_curr: 1
+c2_curr: 88
+case1
 tree 463
-
+node out: 88, node in: 64
+p_prev: 267
+c1_prev: 2
+c2_prev: 6
+p_curr: 267
+c2_curr: 1
+c2_curr: 2
+case2
 tree 464
-
+node out: 267, node in: 169
+p_prev: -1
+c1_prev: 6
+c2_prev: 64
+p_curr: -1
+c2_curr: 6
+c2_curr: 64
+case1
 tree 465
-
+node out: 64, node in: 68
+p_prev: 169
+c1_prev: 1
+c2_prev: 2
+p_curr: 169
+c2_curr: 1
+c2_curr: 2
+case1
 tree 466
-
+node out: 68, node in: 145
+p_prev: 169
+c1_prev: 1
+c2_prev: 2
+p_curr: 169
+c2_curr: 1
+c2_curr: 6
+case2
 tree 467
-
+node out: 145, node in: 68
+p_prev: 169
+c1_prev: 1
+c2_prev: 6
+p_curr: 169
+c2_curr: 1
+c2_curr: 2
+case2
 tree 468
-
+node out: 68, node in: 243
+p_prev: 169
+c1_prev: 1
+c2_prev: 2
+p_curr: -1
+c2_curr: 2
+c2_curr: 169
+case3
 tree 469
-
+node out: 243, node in: 267
+p_prev: -1
+c1_prev: 2
+c2_prev: 169
+p_curr: -1
+c2_curr: 2
+c2_curr: 169
+case1
 tree 470
-
+node out: 169, node in: 34
+p_prev: 267
+c1_prev: 6
+c2_prev: 1
+p_curr: 267
+c2_curr: 1
+c2_curr: 6
+case1
 tree 471
-
+node out: 267, node in: 230
+p_prev: -1
+c1_prev: 2
+c2_prev: 34
+p_curr: -1
+c2_curr: 2
+c2_curr: 34
+case1
 tree 472
-
+node out: 230, node in: 301
+p_prev: -1
+c1_prev: 2
+c2_prev: 34
+p_curr: -1
+c2_curr: 2
+c2_curr: 34
+case1
 tree 473
-
+node out: 301, node in: 282
+p_prev: -1
+c1_prev: 2
+c2_prev: 34
+p_curr: -1
+c2_curr: 2
+c2_curr: 34
+case1
 tree 474
-
+node out: 34, node in: 90
+p_prev: 282
+c1_prev: 1
+c2_prev: 6
+p_curr: 282
+c2_curr: 1
+c2_curr: 2
+case2
 tree 475
-
+node out: 282, node in: 267
+p_prev: -1
+c1_prev: 6
+c2_prev: 90
+p_curr: -1
+c2_curr: 6
+c2_curr: 90
+case1
 tree 476
-
+node out: 267, node in: 219
+p_prev: -1
+c1_prev: 6
+c2_prev: 90
+p_curr: -1
+c2_curr: 6
+c2_curr: 90
+case1
 tree 477
-
+node out: 219, node in: 267
+p_prev: -1
+c1_prev: 6
+c2_prev: 90
+p_curr: -1
+c2_curr: 6
+c2_curr: 90
+case1
 tree 478
-
+node out: 267, node in: 230
+p_prev: -1
+c1_prev: 6
+c2_prev: 90
+p_curr: -1
+c2_curr: 6
+c2_curr: 90
+case1
 tree 479
-
+node out: 90, node in: 53
+p_prev: 230
+c1_prev: 1
+c2_prev: 2
+p_curr: 230
+c2_curr: 1
+c2_curr: 6
+case2
 tree 480
-
+node out: 230, node in: 247
+p_prev: -1
+c1_prev: 2
+c2_prev: 53
+p_curr: -1
+c2_curr: 2
+c2_curr: 53
+case1
 tree 481
-
+node out: 247, node in: 203
+p_prev: -1
+c1_prev: 2
+c2_prev: 53
+p_curr: -1
+c2_curr: 2
+c2_curr: 53
+case1
 tree 482
-
+node out: 203, node in: 267
+p_prev: -1
+c1_prev: 2
+c2_prev: 53
+p_curr: -1
+c2_curr: 2
+c2_curr: 53
+case1
 tree 483
-
+node out: 53, node in: 72
+p_prev: 267
+c1_prev: 1
+c2_prev: 6
+p_curr: 267
+c2_curr: 2
+c2_curr: 6
+case3
 tree 484
-
+node out: 5, node in: 8
+p_prev: 6
+c1_prev: 0
+c2_prev: 4
+p_curr: 72
+c2_curr: 2
+c2_curr: 4
+case3
 tree 485
-
+node out: 267, node in: 247
+p_prev: -1
+c1_prev: 1
+c2_prev: 72
+p_curr: -1
+c2_curr: 1
+c2_curr: 72
+case1
 tree 486
-
+node out: 247, node in: 375
+p_prev: -1
+c1_prev: 1
+c2_prev: 72
+p_curr: -1
+c2_curr: 1
+c2_curr: 72
+case1
 tree 487
-
+node out: 375, node in: 273
+p_prev: -1
+c1_prev: 1
+c2_prev: 72
+p_curr: -1
+c2_curr: 1
+c2_curr: 72
+case1
 tree 488
-
+node out: 72, node in: 77
+p_prev: 273
+c1_prev: 6
+c2_prev: 8
+p_curr: 273
+c2_curr: 6
+c2_curr: 8
+case1
 tree 489
-
+node out: 6, node in: 24
+p_prev: 77
+c1_prev: 3
+c2_prev: 0
+p_curr: 77
+c2_curr: 0
+c2_curr: 3
+case1
 tree 490
-
+node out: 273, node in: 247
+p_prev: -1
+c1_prev: 1
+c2_prev: 77
+p_curr: -1
+c2_curr: 1
+c2_curr: 77
+case1
 tree 491
-
+node out: 247, node in: 386
+p_prev: -1
+c1_prev: 1
+c2_prev: 77
+p_curr: -1
+c2_curr: 1
+c2_curr: 77
+case1
 tree 492
-
+node out: 77, node in: 161
+p_prev: 386
+c1_prev: 8
+c2_prev: 24
+p_curr: 386
+c2_curr: 1
+c2_curr: 24
+case3
 tree 493
-
+node out: 386, node in: 313
+p_prev: -1
+c1_prev: 8
+c2_prev: 161
+p_curr: -1
+c2_curr: 8
+c2_curr: 161
+case1
 tree 494
-
+node out: 313, node in: 386
+p_prev: -1
+c1_prev: 8
+c2_prev: 161
+p_curr: -1
+c2_curr: 8
+c2_curr: 161
+case1
 tree 495
-
+node out: 386, node in: 285
+p_prev: -1
+c1_prev: 8
+c2_prev: 161
+p_curr: -1
+c2_curr: 8
+c2_curr: 161
+case1
 tree 496
-
+node out: 24, node in: 53
+p_prev: 161
+c1_prev: 0
+c2_prev: 3
+p_curr: 161
+c2_curr: 0
+c2_curr: 1
+case2
 tree 497
-
+node out: 285, node in: 169
+p_prev: -1
+c1_prev: 8
+c2_prev: 161
+p_curr: -1
+c2_curr: 8
+c2_curr: 161
+case1
 tree 498
-
+node out: 161, node in: 38
+p_prev: 169
+c1_prev: 3
+c2_prev: 53
+p_curr: 53
+c2_curr: 0
+c2_curr: 3
+case2
 tree 499
-
+node out: 169, node in: 355
+p_prev: -1
+c1_prev: 8
+c2_prev: 53
+p_curr: -1
+c2_curr: 8
+c2_curr: 53
+case1
 tree 500
-
+node out: 355, node in: 337
+p_prev: -1
+c1_prev: 8
+c2_prev: 53
+p_curr: -1
+c2_curr: 8
+c2_curr: 53
+case1
 tree 501
-
+node out: 337, node in: 287
+p_prev: -1
+c1_prev: 8
+c2_prev: 53
+p_curr: -1
+c2_curr: 8
+c2_curr: 53
+case1
 tree 502
-
+node out: 287, node in: 169
+p_prev: -1
+c1_prev: 8
+c2_prev: 53
+p_curr: -1
+c2_curr: 8
+c2_curr: 53
+case1
 tree 503
-
+node out: 169, node in: 161
+p_prev: -1
+c1_prev: 8
+c2_prev: 53
+p_curr: -1
+c2_curr: 8
+c2_curr: 53
+case1
 tree 504
-
+node out: 53, node in: 127
+p_prev: 161
+c1_prev: 1
+c2_prev: 38
+p_curr: 161
+c2_curr: 1
+c2_curr: 38
+case1
 tree 505
-
+node out: 127, node in: 99
+p_prev: 161
+c1_prev: 1
+c2_prev: 38
+p_curr: 161
+c2_curr: 8
+c2_curr: 38
+case3
 tree 506
-
+node out: 161, node in: 101
+p_prev: -1
+c1_prev: 1
+c2_prev: 99
+p_curr: -1
+c2_curr: 1
+c2_curr: 99
+case1
 tree 507
-
+node out: 99, node in: 169
+p_prev: 101
+c1_prev: 8
+c2_prev: 38
+p_curr: -1
+c2_curr: 8
+c2_curr: 101
+case2
 tree 508
-
+node out: 169, node in: 88
+p_prev: -1
+c1_prev: 8
+c2_prev: 101
+p_curr: 101
+c2_curr: 8
+c2_curr: 38
+case2
 tree 509
-
+node out: 38, node in: 84
+p_prev: 88
+c1_prev: 0
+c2_prev: 3
+p_curr: 88
+c2_curr: 0
+c2_curr: 3
+case1
 tree 510
-
+node out: 88, node in: 364
+p_prev: 101
+c1_prev: 8
+c2_prev: 84
+p_curr: -1
+c2_curr: 8
+c2_curr: 101
+case2
 tree 511
-
+node out: 364, node in: 46
+p_prev: -1
+c1_prev: 8
+c2_prev: 101
+p_curr: 84
+c2_curr: 0
+c2_curr: 8
+case2
 tree 512
-
+node out: 84, node in: 60
+p_prev: 101
+c1_prev: 3
+c2_prev: 46
+p_curr: 101
+c2_curr: 3
+c2_curr: 46
+case1
 tree 513
-
+node out: 101, node in: 79
+p_prev: -1
+c1_prev: 1
+c2_prev: 60
+p_curr: -1
+c2_curr: 1
+c2_curr: 60
+case1
 tree 514
-
+node out: 46, node in: 84
+p_prev: 60
+c1_prev: 0
+c2_prev: 8
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case2
 tree 515
-
+node out: 84, node in: 216
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 516
-
+node out: 216, node in: 201
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 517
-
+node out: 201, node in: 216
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 518
-
+node out: 216, node in: 273
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 519
-
+node out: 273, node in: 352
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 520
-
+node out: 352, node in: 101
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 521
-
+node out: 60, node in: 84
+p_prev: 79
+c1_prev: 3
+c2_prev: 8
+p_curr: 101
+c2_curr: 8
+c2_curr: 79
+case3
 tree 522
-
+node out: 79, node in: 88
+p_prev: 84
+c1_prev: 1
+c2_prev: 3
+p_curr: 101
+c2_curr: 1
+c2_curr: 84
+case2
 tree 523
-
+node out: 101, node in: 415
+p_prev: -1
+c1_prev: 0
+c2_prev: 88
+p_curr: -1
+c2_curr: 0
+c2_curr: 88
+case1
 tree 524
-
+node out: 415, node in: 402
+p_prev: -1
+c1_prev: 0
+c2_prev: 88
+p_curr: -1
+c2_curr: 0
+c2_curr: 88
+case1
 tree 525
-
+node out: 402, node in: 316
+p_prev: -1
+c1_prev: 0
+c2_prev: 88
+p_curr: -1
+c2_curr: 0
+c2_curr: 88
+case1
 tree 526
-
+node out: 8, node in: 26
+p_prev: 84
+c1_prev: 2
+c2_prev: 4
+p_curr: 84
+c2_curr: 2
+c2_curr: 4
+case1
 tree 527
-
+node out: 88, node in: 47
+p_prev: 316
+c1_prev: 1
+c2_prev: 84
+p_curr: 84
+c2_curr: 1
+c2_curr: 3
+case2
 tree 528
-
+node out: 316, node in: 271
+p_prev: -1
+c1_prev: 0
+c2_prev: 84
+p_curr: -1
+c2_curr: 0
+c2_curr: 84
+case1
 tree 529
-
+node out: 271, node in: 250
+p_prev: -1
+c1_prev: 0
+c2_prev: 84
+p_curr: -1
+c2_curr: 0
+c2_curr: 84
+case1
 tree 530
-
+node out: 250, node in: 316
+p_prev: -1
+c1_prev: 0
+c2_prev: 84
+p_curr: -1
+c2_curr: 0
+c2_curr: 84
+case1
 tree 531
-
+node out: 316, node in: 319
+p_prev: -1
+c1_prev: 0
+c2_prev: 84
+p_curr: -1
+c2_curr: 0
+c2_curr: 84
+case1
 tree 532
-
+node out: 84, node in: 92
+p_prev: 319
+c1_prev: 26
+c2_prev: 47
+p_curr: 319
+c2_curr: 0
+c2_curr: 26
+case2
 tree 533
-
+node out: 92, node in: 238
+p_prev: 319
+c1_prev: 0
+c2_prev: 26
+p_curr: 319
+c2_curr: 0
+c2_curr: 26
+case1
 tree 534
-
+node out: 319, node in: 206
+p_prev: -1
+c1_prev: 47
+c2_prev: 238
+p_curr: 238
+c2_curr: 26
+c2_curr: 47
+case2
 tree 535
-
+node out: 238, node in: 271
+p_prev: -1
+c1_prev: 0
+c2_prev: 206
+p_curr: -1
+c2_curr: 0
+c2_curr: 206
+case1
 tree 536
-
+node out: 271, node in: 88
+p_prev: -1
+c1_prev: 0
+c2_prev: 206
+p_curr: 206
+c2_curr: 0
+c2_curr: 47
+case2
 tree 537
-
+node out: 47, node in: 84
+p_prev: 88
+c1_prev: 1
+c2_prev: 3
+p_curr: 88
+c2_curr: 1
+c2_curr: 3
+case1
 tree 538
-
+node out: 206, node in: 238
+p_prev: -1
+c1_prev: 26
+c2_prev: 88
+p_curr: -1
+c2_curr: 26
+c2_curr: 88
+case1
 tree 539
-
+node out: 238, node in: 250
+p_prev: -1
+c1_prev: 26
+c2_prev: 88
+p_curr: -1
+c2_curr: 26
+c2_curr: 88
+case1
 tree 540
-
+node out: 250, node in: 202
+p_prev: -1
+c1_prev: 26
+c2_prev: 88
+p_curr: -1
+c2_curr: 26
+c2_curr: 88
+case1
 tree 541
-
+node out: 88, node in: 93
+p_prev: 202
+c1_prev: 0
+c2_prev: 84
+p_curr: 202
+c2_curr: 0
+c2_curr: 84
+case1
 tree 542
-
+node out: 202, node in: 196
+p_prev: -1
+c1_prev: 26
+c2_prev: 93
+p_curr: -1
+c2_curr: 26
+c2_curr: 93
+case1
 tree 543
-
+node out: 93, node in: 39
+p_prev: 196
+c1_prev: 0
+c2_prev: 84
+p_curr: 84
+c2_curr: 0
+c2_curr: 1
+case2
 tree 544
-
+node out: 196, node in: 240
+p_prev: -1
+c1_prev: 26
+c2_prev: 84
+p_curr: -1
+c2_curr: 26
+c2_curr: 84
+case1
 tree 545
-
+node out: 240, node in: 334
+p_prev: -1
+c1_prev: 26
+c2_prev: 84
+p_curr: -1
+c2_curr: 26
+c2_curr: 84
+case1
 tree 546
-
+node out: 334, node in: 356
+p_prev: -1
+c1_prev: 26
+c2_prev: 84
+p_curr: -1
+c2_curr: 26
+c2_curr: 84
+case1
 tree 547
-
+node out: 356, node in: 233
+p_prev: -1
+c1_prev: 26
+c2_prev: 84
+p_curr: -1
+c2_curr: 26
+c2_curr: 84
+case1
 tree 548
-
+node out: 233, node in: 383
+p_prev: -1
+c1_prev: 26
+c2_prev: 84
+p_curr: -1
+c2_curr: 26
+c2_curr: 84
+case1
 tree 549
-
+node out: 383, node in: 356
+p_prev: -1
+c1_prev: 26
+c2_prev: 84
+p_curr: -1
+c2_curr: 26
+c2_curr: 84
+case1
 tree 550
-
+node out: 356, node in: 233
+p_prev: -1
+c1_prev: 26
+c2_prev: 84
+p_curr: -1
+c2_curr: 26
+c2_curr: 84
+case1
 tree 551
-
+node out: 233, node in: 383
+p_prev: -1
+c1_prev: 26
+c2_prev: 84
+p_curr: -1
+c2_curr: 26
+c2_curr: 84
+case1
 tree 552
-
+node out: 26, node in: 16
+p_prev: 383
+c1_prev: 2
+c2_prev: 4
+p_curr: 383
+c2_curr: 2
+c2_curr: 4
+case1
 tree 553
-
+node out: 39, node in: 9
+p_prev: 84
+c1_prev: 0
+c2_prev: 1
+p_curr: 84
+c2_curr: 1
+c2_curr: 3
+case3
 tree 554
-
+node out: 84, node in: 35
+p_prev: 383
+c1_prev: 0
+c2_prev: 9
+p_curr: 383
+c2_curr: 0
+c2_curr: 16
+case2
 tree 555
-
+node out: 9, node in: 93
+p_prev: 383
+c1_prev: 1
+c2_prev: 3
+p_curr: 383
+c2_curr: 1
+c2_curr: 3
+case1
 tree 556
-
+node out: 383, node in: 370
+p_prev: -1
+c1_prev: 35
+c2_prev: 93
+p_curr: -1
+c2_curr: 35
+c2_curr: 93
+case1
 tree 557
-
+node out: 370, node in: 166
+p_prev: -1
+c1_prev: 35
+c2_prev: 93
+p_curr: -1
+c2_curr: 35
+c2_curr: 93
+case1
 tree 558
-
+node out: 93, node in: 88
+p_prev: 166
+c1_prev: 1
+c2_prev: 3
+p_curr: 166
+c2_curr: 1
+c2_curr: 3
+case1
 tree 559
-
+node out: 35, node in: 272
+p_prev: 166
+c1_prev: 0
+c2_prev: 16
+p_curr: -1
+c2_curr: 16
+c2_curr: 166
+case3
 tree 560
-
+node out: 88, node in: 43
+p_prev: 166
+c1_prev: 1
+c2_prev: 3
+p_curr: 166
+c2_curr: 1
+c2_curr: 3
+case1
 tree 561
-
+node out: 272, node in: 79
+p_prev: -1
+c1_prev: 16
+c2_prev: 166
+p_curr: 166
+c2_curr: 16
+c2_curr: 43
+case2
 tree 562
-
+node out: 166, node in: 272
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 563
-
+node out: 272, node in: 166
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 564
-
+node out: 166, node in: 272
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 565
-
+node out: 272, node in: 266
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 566
-
+node out: 266, node in: 209
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 567
-
+node out: 209, node in: 272
+p_prev: -1
+c1_prev: 0
+c2_prev: 79
+p_curr: -1
+c2_curr: 0
+c2_curr: 79
+case1
 tree 568
-
+node out: 79, node in: 246
+p_prev: 272
+c1_prev: 16
+c2_prev: 43
+p_curr: 272
+c2_curr: 0
+c2_curr: 43
+case3
 tree 569
-
+node out: 246, node in: 96
+p_prev: 272
+c1_prev: 0
+c2_prev: 43
+p_curr: 272
+c2_curr: 16
+c2_curr: 43
+case3
 tree 570
-
+node out: 272, node in: 14
+p_prev: -1
+c1_prev: 0
+c2_prev: 96
+p_curr: 43
+c2_curr: 0
+c2_curr: 3
+case2
 tree 571
-
+node out: 43, node in: 28
+p_prev: 96
+c1_prev: 1
+c2_prev: 14
+p_curr: 96
+c2_curr: 1
+c2_curr: 16
+case2
 tree 572
-
+node out: 96, node in: 268
+p_prev: -1
+c1_prev: 14
+c2_prev: 28
+p_curr: -1
+c2_curr: 14
+c2_curr: 28
+case1
 tree 573
-
+node out: 268, node in: 254
+p_prev: -1
+c1_prev: 14
+c2_prev: 28
+p_curr: -1
+c2_curr: 14
+c2_curr: 28
+case1
 tree 574
-
+node out: 254, node in: 178
+p_prev: -1
+c1_prev: 14
+c2_prev: 28
+p_curr: -1
+c2_curr: 14
+c2_curr: 28
+case1
 tree 575
-
+node out: 178, node in: 268
+p_prev: -1
+c1_prev: 14
+c2_prev: 28
+p_curr: -1
+c2_curr: 14
+c2_curr: 28
+case1
 tree 576
-
+node out: 268, node in: 194
+p_prev: -1
+c1_prev: 14
+c2_prev: 28
+p_curr: -1
+c2_curr: 14
+c2_curr: 28
+case1
 tree 577
-
+node out: 194, node in: 120
+p_prev: -1
+c1_prev: 14
+c2_prev: 28
+p_curr: -1
+c2_curr: 14
+c2_curr: 28
+case1
 tree 578
-
+node out: 120, node in: 103
+p_prev: -1
+c1_prev: 14
+c2_prev: 28
+p_curr: -1
+c2_curr: 14
+c2_curr: 28
+case1
 tree 579
-
+node out: 14, node in: 59
+p_prev: 103
+c1_prev: 0
+c2_prev: 3
+p_curr: 103
+c2_curr: 0
+c2_curr: 28
+case2
 tree 580
-
+node out: 103, node in: 194
+p_prev: -1
+c1_prev: 3
+c2_prev: 59
+p_curr: -1
+c2_curr: 3
+c2_curr: 59
+case1
 tree 581
-
+node out: 194, node in: 412
+p_prev: -1
+c1_prev: 3
+c2_prev: 59
+p_curr: -1
+c2_curr: 3
+c2_curr: 59
+case1
 tree 582
-
+node out: 412, node in: 392
+p_prev: -1
+c1_prev: 3
+c2_prev: 59
+p_curr: -1
+c2_curr: 3
+c2_curr: 59
+case1
 tree 583
-
+node out: 59, node in: 242
+p_prev: 392
+c1_prev: 0
+c2_prev: 28
+p_curr: 392
+c2_curr: 0
+c2_curr: 28
+case1
 tree 584
-
+node out: 16, node in: 13
+p_prev: 28
+c1_prev: 2
+c2_prev: 4
+p_curr: 392
+c2_curr: 3
+c2_curr: 4
+case3
 tree 585
-
+node out: 242, node in: 212
+p_prev: 392
+c1_prev: 0
+c2_prev: 28
+p_curr: 392
+c2_curr: 0
+c2_curr: 13
+case2
 tree 586
-
+node out: 212, node in: 224
+p_prev: 392
+c1_prev: 0
+c2_prev: 13
+p_curr: 392
+c2_curr: 0
+c2_curr: 13
+case1
 tree 587
-
+node out: 28, node in: 27
+p_prev: 392
+c1_prev: 1
+c2_prev: 2
+p_curr: 392
+c2_curr: 1
+c2_curr: 2
+case1
 tree 588
-
+node out: 392, node in: 400
+p_prev: -1
+c1_prev: 224
+c2_prev: 27
+p_curr: -1
+c2_curr: 27
+c2_curr: 224
+case1
 tree 589
-
+node out: 400, node in: 418
+p_prev: -1
+c1_prev: 27
+c2_prev: 224
+p_curr: -1
+c2_curr: 27
+c2_curr: 224
+case1
 tree 590
-
+node out: 224, node in: 197
+p_prev: 418
+c1_prev: 0
+c2_prev: 13
+p_curr: 418
+c2_curr: 0
+c2_curr: 13
+case1
 tree 591
-
+node out: 418, node in: 266
+p_prev: -1
+c1_prev: 27
+c2_prev: 197
+p_curr: -1
+c2_curr: 27
+c2_curr: 197
+case1
 tree 592
-
+node out: 197, node in: 224
+p_prev: 266
+c1_prev: 0
+c2_prev: 13
+p_curr: 266
+c2_curr: 0
+c2_curr: 13
+case1
 tree 593
-
+node out: 266, node in: 197
+p_prev: -1
+c1_prev: 27
+c2_prev: 224
+p_curr: 224
+c2_curr: 0
+c2_curr: 27
+case2
 tree 594
-max memory usage: 2.5 MB
+node out: 197, node in: 18
+p_prev: 224
+c1_prev: 0
+c2_prev: 27
+p_curr: 224
+c2_curr: 0
+c2_curr: 13
+case2max memory usage: 9.7 MB
 
 Sequentially Sample Initial ARG (8 sequences)
 ------------------------------------------------
-add sequence 2 of 8 (n0)
-forward ( 19 states,      1 blocks):  11.9 ms
-trace:                               466.0 us
-add thread:                          673.0 us
+add sequence 2 of 8 (n4)
+forward ( 19 states,      1 blocks):  22.2 ms
+trace:                               841.0 us
+add thread:                            1.1 ms
 
-add sequence 3 of 8 (n6)
-forward ( 36 states,     65 blocks):  20.1 ms
-trace:                                 2.3 ms
-add thread:                            1.8 ms
+add sequence 3 of 8 (n5)
+forward ( 32 states,     51 blocks):  34.6 ms
+trace:                                 3.1 ms
+add thread:                            2.2 ms
 
-add sequence 4 of 8 (n7)
-forward ( 50 states,    115 blocks):  30.2 ms
-trace:                                 4.0 ms
-add thread:                            3.1 ms
+add sequence 4 of 8 (n1)
+forward ( 46 states,     63 blocks):  40.2 ms
+trace:                                 4.2 ms
+add thread:                            3.0 ms
 
-add sequence 5 of 8 (n1)
-forward ( 64 states,    166 blocks):  43.2 ms
-trace:                                 5.9 ms
+add sequence 5 of 8 (n7)
+forward ( 56 states,     87 blocks):  52.0 ms
+trace:                                 6.3 ms
 add thread:                            4.5 ms
 
-add sequence 6 of 8 (n3)
-forward ( 75 states,    186 blocks):  49.9 ms
-trace:                                 7.0 ms
-add thread:                            5.3 ms
+add sequence 6 of 8 (n0)
+forward ( 67 states,    119 blocks):  68.4 ms
+trace:                                 9.0 ms
+add thread:                            6.0 ms
 
-add sequence 7 of 8 (n4)
-forward ( 85 states,    194 blocks):  54.3 ms
-trace:                                 8.1 ms
-add thread:                            5.8 ms
+add sequence 7 of 8 (n2)
+forward ( 76 states,    132 blocks):  78.9 ms
+trace:                                 9.4 ms
+add thread:                            7.1 ms
 
-add sequence 8 of 8 (n2)
-forward (101 states,    211 blocks):  62.2 ms
-trace:                                 8.2 ms
-add thread:                            6.5 ms
+add sequence 8 of 8 (n6)
+forward ( 78 states,    132 blocks):  78.9 ms
+trace:                                10.7 ms
+add thread:                            7.4 ms
 
 
-prior:      -2718.609773
-likelihood: -140349.669254
-joint:      -143068.279027
-nrecombs:   210
-noncompats: 0
-arglen:     10905677962.193794
-max memory: 6.3 MB
+prior:      -1987.310786
+likelihood: -140337.770029
+joint:      -142325.080816
+nrecombs:   147
+noncompats: 1
+arglen:     8972397733.387316
+max memory: 13.3 MB
 
 Climb Search (0 iterations)
 -----------------------------
 
 
-prior:      -2718.609773
-likelihood: -140349.669254
-joint:      -143068.279027
-nrecombs:   210
-noncompats: 0
-arglen:     10905677962.193794
-max memory: 6.3 MB
+prior:      -1987.310786
+likelihood: -140337.770029
+joint:      -142325.080816
+nrecombs:   147
+noncompats: 1
+arglen:     8972397733.387316
+max memory: 13.3 MB
 
 Resample All Branches (100 iterations)
 --------------------------------------
 sample 1
-forward ( 93 states,    206 blocks):  59.8 ms
-trace:                                 8.6 ms
-add thread:                            6.1 ms
+forward ( 75 states,    141 blocks):  84.9 ms
+trace:                                11.5 ms
+add thread:                            7.7 ms
 resample_arg_leaf: accept=1.000000
-sample time:  74.7 ms
+sample time: 104.8 ms
 
-prior:      -2744.310941
-likelihood: -140351.790408
-joint:      -143096.101349
-nrecombs:   212
-noncompats: 0
-arglen:     11045082941.490021
-max memory: 6.5 MB
+prior:      -2066.286913
+likelihood: -140339.992147
+joint:      -142406.279060
+nrecombs:   153
+noncompats: 1
+arglen:     8981672767.510065
+max memory: 13.6 MB
 
 sample 2
-resample_arg_regions: accept=0.450000
-sample time: 328.5 ms
+resample_arg_regions: accept=0.200000
+sample time: 433.6 ms
 
-prior:      -2677.565153
-likelihood: -140339.877486
-joint:      -143017.442639
-nrecombs:   206
-noncompats: 1
-arglen:     10683877033.085592
-max memory: 6.5 MB
+prior:      -2175.064693
+likelihood: -140357.177429
+joint:      -142532.242122
+nrecombs:   162
+noncompats: 2
+arglen:     10047776026.983919
+max memory: 13.7 MB
 
 sample 3
-forward ( 87 states,    192 blocks):  57.1 ms
-trace:                                 8.1 ms
-add thread:                            5.7 ms
-resample_arg_leaf: accept=1.000000
-sample time:  71.3 ms
+resample_arg_regions: accept=0.200000
+sample time: 290.6 ms
 
-prior:      -2514.280749
-likelihood: -140336.222307
-joint:      -142850.503055
-nrecombs:   193
-noncompats: 1
-arglen:     10324612677.081478
-max memory: 6.5 MB
+prior:      -2181.775719
+likelihood: -140361.356670
+joint:      -142543.132389
+nrecombs:   164
+noncompats: 2
+arglen:     10434490413.029436
+max memory: 13.7 MB
 
 sample 4
-forward ( 85 states,    175 blocks):  52.1 ms
-trace:                                 7.5 ms
-add thread:                            5.1 ms
-resample_arg_leaf: accept=1.000000
-sample time:  65.1 ms
-
-prior:      -2390.915958
-likelihood: -140336.083494
-joint:      -142726.999452
-nrecombs:   182
-noncompats: 1
-arglen:     10036687636.954084
-max memory: 6.5 MB
-
-sample 5
-forward ( 89 states,    176 blocks):  53.1 ms
-trace:                                 7.5 ms
-add thread:                            5.2 ms
-resample_arg_leaf: accept=1.000000
-sample time:  65.9 ms
-
-prior:      -2411.899679
-likelihood: -140331.948305
-joint:      -142743.847985
-nrecombs:   183
-noncompats: 1
-arglen:     10040486352.234533
-max memory: 6.5 MB
-
-sample 6
+forward ( 85 states,    127 blocks):  82.0 ms
+trace:                                11.2 ms

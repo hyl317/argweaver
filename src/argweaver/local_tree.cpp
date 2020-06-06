@@ -4,6 +4,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "err.h"
+#include <iostream>
 
 // argweaver includes
 #include "compress.h"
@@ -1900,7 +1901,8 @@ bool read_local_trees(const char *filename, const double *times,
     return result;
 }
 
-void traverse_upwards(tsk_tree_t *tree, tsk_id_t* ptree, double* ages)
+void traverse_upwards(tsk_tree_t *tree, int* ptree, int* ages, map<tsk_id_t, int> *mapping,
+                        int nnodes, const double *times, int ntimes)
 {
     tsk_id_t *samples = tree->samples;
     tsk_size_t num_samples = tsk_treeseq_get_num_samples(tree->tree_sequence);
@@ -1908,13 +1910,13 @@ void traverse_upwards(tsk_tree_t *tree, tsk_id_t* ptree, double* ages)
     tsk_id_t u;
 
     auto visited = set<tsk_id_t>();
-    auto mapping = map<tsk_id_t, int>();
+    double ages_tmp[nnodes];
     int order = 0; //denote the number of non-sample nodes encountered so far
     for (j = 0; j < num_samples; j++) {
         u = samples[j];
         visited.insert(u);
-        mapping.insert(pair<tsk_id_t, int>(u, u));
-        tsk_tree_get_time(tree, u, &ages[u]);
+        mapping->insert(pair<tsk_id_t, int>(u, u));
+        tsk_tree_get_time(tree, u, &ages_tmp[u]);
         while (u != TSK_NULL) {
             tsk_id_t p = tree->parent[u];
             if (visited.find(p) == visited.end()){
@@ -1923,8 +1925,8 @@ void traverse_upwards(tsk_tree_t *tree, tsk_id_t* ptree, double* ages)
                     printLog(LOG_HIGH, "%d gets parent %d\n", u, p);
                 } else{
                     ptree[order + num_samples] = p;
-                    mapping.insert(pair<tsk_id_t, int>(u, order + num_samples));
-                    tsk_tree_get_time(tree, u, &ages[order + num_samples]);
+                    mapping->insert(pair<tsk_id_t, int>(u, order + num_samples));
+                    tsk_tree_get_time(tree, u, &ages_tmp[order + num_samples]);
                     printLog(LOG_HIGH, "%d gets parent %d\n", order+num_samples, p);
                     order++;
                 }
@@ -1937,8 +1939,8 @@ void traverse_upwards(tsk_tree_t *tree, tsk_id_t* ptree, double* ages)
                     order++;
                 }
                 ptree[tmp] = p;
-                mapping.insert(pair<tsk_id_t, int>(u, tmp));
-                tsk_tree_get_time(tree, u, &ages[tmp]);
+                mapping->insert(pair<tsk_id_t, int>(u, tmp));
+                tsk_tree_get_time(tree, u, &ages_tmp[tmp]);
                 printLog(LOG_HIGH, "%d gets parent %d\n", u, p);
                 break;
             }
@@ -1947,25 +1949,109 @@ void traverse_upwards(tsk_tree_t *tree, tsk_id_t* ptree, double* ages)
     }
 
     // convert tskit_id_t to the numbering for argweaver
-    // also record the age of each node
-    for (int i = 0; i < 2*num_samples-1; i++){
+    // also round the age of each node
+    for (int i = 0; i < nnodes; i++){
         if (ptree[i] != -1){
-            ptree[i] = mapping.at(ptree[i]);
+            ptree[i] = mapping->at(ptree[i]);
         }
+        ages[i] = find_time(ages_tmp[i], times, ntimes);
     }
+
 
     // for debugging only
     for(int i = 0; i < 2*num_samples-1; i++){
         printLog(LOG_HIGH, "%d has parent %d\n", i, ptree[i]);\
-        printLog(LOG_HIGH, "%d is %lf generations old\n", i, ages[i]);
+        printLog(LOG_HIGH, "%d is %lf generations old in DSMC\n", i, times[ages[i]]);
     }
-    for(auto iter = mapping.begin(); iter != mapping.end(); ++iter){
+    for(auto iter = mapping->begin(); iter != mapping->end(); ++iter){
         printLog(LOG_HIGH, "%d -> %d\n", iter->first, iter->second);
     }
 
 }
 
+bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const map<tsk_id_t, int> *curr,
+                    tsk_tree_t* prev_t, tsk_tree_t* curr_t, 
+                    const double *times, int ntimes)
+{
+    //TODO: identify spr and fill in the mapping array
+    //fill in mapping array
+    int count = 0;
+    tsk_id_t out = -1;
+    for(auto it = prev->begin(); it != prev->end(); ++it){
+        if (curr->count(it->first) == 0) {
+            mapping[it->second] = -1;
+            out = it->first;
+            count++;
+        }else{
+            mapping[prev->at(it->first)] = curr->at(it->first);
+        }
+    }
 
+    if (count == 0){
+        // maybe we can also return true in this case? Just let spr remain its null state
+        printLog(LOG_LOW, "Two consecutive trees are equivalent");
+        exit(EXIT_FAILURE);
+    }else if(count > 1){
+        return false; // a single SPR is not sufficient
+    }else{
+        // find the "in" node_id
+        tsk_id_t in = -1;
+        for(auto it = curr->begin(); it != curr->end(); ++it){
+            if (prev->count(it->first) == 0){
+                in = it->first;
+                break;
+            }
+        }
+        //compare the topology around out and in node:
+        printLog(LOG_LOW, "node out: %d, node in: %d\n", out, in);
+        tsk_id_t p_prev = prev_t->parent[out];
+        tsk_id_t c1_prev = prev_t->left_child[out];
+        tsk_id_t c2_prev = prev_t->right_child[out];
+        tsk_id_t p_curr = curr_t->parent[in];
+        tsk_id_t c1_curr = curr_t->left_child[in];
+        tsk_id_t c2_curr = curr_t->right_child[in];
+
+        // for debugging purpose only
+        printLog(LOG_LOW, "p_prev: %d\n", p_prev);
+        printLog(LOG_LOW, "c1_prev: %d\n", c1_prev);
+        printLog(LOG_LOW, "c2_prev: %d\n", c2_prev);
+        printLog(LOG_LOW, "p_curr: %d\n", p_curr);
+        printLog(LOG_LOW, "c1_curr: %d\n", c1_curr);
+        printLog(LOG_LOW, "c2_curr: %d\n", c2_curr);
+
+        double recomb_time;
+        double recoal_time;
+        if (p_prev == p_curr && ( (c1_prev == c1_curr && c2_prev == c2_curr) || (c1_prev == c2_curr && c2_prev == c1_curr) )){
+            // this is the simplest case: the tree topology remains unchanged, only coalesce time changes
+            spr->recomb_node = c1_prev; // use c2_prev should have the same effect
+            printLog(LOG_LOW, "case1");
+        }else if (curr_t->parent[c1_prev] == in){
+            spr->recomb_node = c1_prev;
+            spr->coal_node = curr_t->left_child[in] != c1_prev? curr_t->left_child[in] : curr_t->right_child[in];
+            printLog(LOG_LOW, "case2");
+        }else if(curr_t->parent[c2_prev] == in){
+            spr->recomb_node = c2_prev;
+            spr->coal_node = curr_t->left_child[in] != c2_prev? curr_t->left_child[in] : curr_t->right_child[in];
+            printLog(LOG_LOW, "case3");
+        }else{
+            printLog(LOG_LOW, "case4: single SPR is not enough");
+            return false;
+        }
+
+        //spr->coal_node = in;
+        tsk_tree_get_time(prev_t, out, &recomb_time);
+        tsk_tree_get_time(curr_t, in, &recoal_time);
+        spr->recomb_time = find_time(recomb_time, times, ntimes);
+        spr->coal_time = find_time(recoal_time, times, ntimes);
+        return true;
+
+    }
+
+
+
+
+    return true;
+}
 
  bool read_local_trees_from_ts(const char *ts_fileName, const double *times, int ntimes, 
                                      LocalTrees *trees, vector<string> &seqnames){
@@ -1990,12 +2076,35 @@ void traverse_upwards(tsk_tree_t *tree, tsk_id_t* ptree, double* ages)
     int iter;
     ret = tsk_tree_init(&tree, &ts, 0);
     check_tsk_error(ret);
+    // map<tsk_id_t, int> *prev_map = nullptr;
+    auto prev_map = map<tsk_id_t, int>();
+    // auto curr_map = map<tsk_id_t, int>();
+    tsk_tree_t prev_tree;
+    int nnodes = 2*numSamples-1;
+    Spr spr;
+    spr.set_null();
     for (iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)) {
         printLog(LOG_LOW, "\ntree %d\n", tsk_tree_get_index(&tree));
-        tsk_id_t ptree[2*numSamples-1];
-        double ages[2*numSamples-1];
-        traverse_upwards(&tree, ptree, ages);
-        //exit (EXIT_FAILURE);
+        int ptree[nnodes];
+        int ages[nnodes];
+        auto curr_map = map<tsk_id_t, int>();
+        traverse_upwards(&tree, ptree, ages, &curr_map, nnodes, times, ntimes);
+
+        // make a local tree
+        LocalTree *localtree = new LocalTree(ptree, nnodes, ages);
+        int *mapping = NULL;
+        if (prev_map.size() != 0) {
+            //printLog(LOG_LOW, "try to identify SPR");
+            mapping = new int[nnodes];
+            // need to figure out how to do the mapping and identify SPR
+            if(!identify_1SPR(&spr, mapping, &prev_map, &curr_map, &prev_tree, &tree, times, ntimes)){
+               printLog(LOG_LOW, "consecutive trees are not reachable by one SPR");
+               exit (EXIT_FAILURE);
+            }
+        }
+        prev_map = map<tsk_id_t, int>(curr_map); // copy constructor
+        tsk_tree_copy(&tree, &prev_tree, 0);
+        trees->trees.push_back(LocalTreeSpr(localtree, spr, tree.right - tree.left, mapping));
     }
 
     check_tsk_error(iter);
