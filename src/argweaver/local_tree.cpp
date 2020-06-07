@@ -4,7 +4,6 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "err.h"
-#include <iostream>
 
 // argweaver includes
 #include "compress.h"
@@ -2012,44 +2011,51 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
         tsk_id_t c2_curr = curr_t->right_child[in];
 
         // for debugging purpose only
-        printLog(LOG_LOW, "p_prev: %d\n", p_prev);
-        printLog(LOG_LOW, "c1_prev: %d\n", c1_prev);
-        printLog(LOG_LOW, "c2_prev: %d\n", c2_prev);
-        printLog(LOG_LOW, "p_curr: %d\n", p_curr);
-        printLog(LOG_LOW, "c1_curr: %d\n", c1_curr);
-        printLog(LOG_LOW, "c2_curr: %d\n", c2_curr);
+        // printLog(LOG_LOW, "p_prev: %d\n", p_prev);
+        // printLog(LOG_LOW, "c1_prev: %d\n", c1_prev);
+        // printLog(LOG_LOW, "c2_prev: %d\n", c2_prev);
+        // printLog(LOG_LOW, "p_curr: %d\n", p_curr);
+        // printLog(LOG_LOW, "c1_curr: %d\n", c1_curr);
+        // printLog(LOG_LOW, "c2_curr: %d\n", c2_curr);
 
         double recomb_time;
-        double recoal_time;
+        double coal_time;
+        tsk_id_t recomb_node;
+        tsk_id_t coal_node;
+        tsk_tree_get_time(prev_t, out, &recomb_time);
+        tsk_tree_get_time(curr_t, in, &coal_time);
+        spr->recomb_time = find_time(recomb_time, times, ntimes);
+        spr->coal_time = find_time(coal_time, times, ntimes);
         if (p_prev == p_curr && ( (c1_prev == c1_curr && c2_prev == c2_curr) || (c1_prev == c2_curr && c2_prev == c1_curr) )){
             // this is the simplest case: the tree topology remains unchanged, only coalesce time changes
-            spr->recomb_node = c1_prev; // use c2_prev should have the same effect
-            printLog(LOG_LOW, "case1");
+            recomb_node = c1_prev;
+            double out_time;
+            tsk_tree_get_time(prev_t, out, &out_time);
+            coal_node = coal_time >= out_time? out : c2_prev; 
+            //swapping c1_prev and c2_prev should have the same effect
+            printLog(LOG_LOW, "case1\n");
         }else if (curr_t->parent[c1_prev] == in){
-            spr->recomb_node = c1_prev;
-            spr->coal_node = curr_t->left_child[in] != c1_prev? curr_t->left_child[in] : curr_t->right_child[in];
-            printLog(LOG_LOW, "case2");
+            recomb_node = c1_prev;
+            coal_node = curr_t->left_child[in] != c1_prev? curr_t->left_child[in] : curr_t->right_child[in];
+            printLog(LOG_LOW, "case2\n");
         }else if(curr_t->parent[c2_prev] == in){
-            spr->recomb_node = c2_prev;
-            spr->coal_node = curr_t->left_child[in] != c2_prev? curr_t->left_child[in] : curr_t->right_child[in];
-            printLog(LOG_LOW, "case3");
+            recomb_node = c2_prev;
+            coal_node = curr_t->left_child[in] != c2_prev? curr_t->left_child[in] : curr_t->right_child[in];
+            printLog(LOG_LOW, "case3\n");
         }else{
-            printLog(LOG_LOW, "case4: single SPR is not enough");
+            printLog(LOG_LOW, "case4: single SPR is not enough\n");
             return false;
         }
+        
+        spr->recomb_node = prev->at(recomb_node);
+        spr->coal_node = prev->at(coal_node);
 
-        //spr->coal_node = in;
-        tsk_tree_get_time(prev_t, out, &recomb_time);
-        tsk_tree_get_time(curr_t, in, &recoal_time);
-        spr->recomb_time = find_time(recomb_time, times, ntimes);
-        spr->coal_time = find_time(recoal_time, times, ntimes);
-        return true;
+        printLog(LOG_LOW, "recomb_node: %d\n", recomb_node);
+        printLog(LOG_LOW, "recomb_time: %lf\n", recomb_time);
+        printLog(LOG_LOW, "coal_node: %d\n", coal_node);
+        printLog(LOG_LOW, "coal_time: %lf\n", coal_time);
 
     }
-
-
-
-
     return true;
 }
 
@@ -2066,9 +2072,7 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
     seqnames.clear();
     trees->start_coord = ts.breakpoints[0];
     trees->end_coord = ts.breakpoints[numTrees];
-    //for(int i = 1; i <= numTrees; i++){
-    //    printLog(LOG_LOW, "right boundary of tree %d: %lf\n", i-1, ts.breakpoints[i]);
-    //}
+    
     printLog(LOG_LOW, "number of samples in the tree sequences: %d\n", numSamples);
     printLog(LOG_LOW, "number of local trees in the tree sequences: %d\n", numTrees);
     printLog(LOG_LOW, "tree sequence starat at %d and ends at %d\n", trees->start_coord, trees->end_coord);
@@ -2084,7 +2088,7 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
     Spr spr;
     spr.set_null();
     for (iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)) {
-        printLog(LOG_LOW, "\ntree %d\n", tsk_tree_get_index(&tree));
+        printLog(LOG_LOW, "\ntree %d: %lf - %lf\n", tsk_tree_get_index(&tree), tree.left, tree.right);
         int ptree[nnodes];
         int ages[nnodes];
         auto curr_map = map<tsk_id_t, int>();
@@ -2104,11 +2108,20 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
         }
         prev_map = map<tsk_id_t, int>(curr_map); // copy constructor
         tsk_tree_copy(&tree, &prev_tree, 0);
-        trees->trees.push_back(LocalTreeSpr(localtree, spr, tree.right - tree.left, mapping));
+        trees->trees.push_back(LocalTreeSpr(localtree, spr, floor(tree.right) - floor(tree.left), mapping));
     }
 
     check_tsk_error(iter);
     tsk_treeseq_free(&ts);
+
+    if (trees->get_num_trees() > 0) {
+        trees->nnodes = trees->front().tree->nnodes;
+        trees->set_default_seqids();
+    }
+
+    printLog(LOG_LOW, "finish reading tree sequence file. \nNumber of leaves: %d\n", trees->get_num_leaves());
+    printLog(LOG_LOW, "Number of local trees: %d\n", trees->get_num_trees());
+
     return true;
  }
 
@@ -2274,10 +2287,12 @@ bool assert_spr(const LocalTree *last_tree, const LocalTree *tree,
             assert(i2 != -1);
             assert(!mapped[i2]);
             mapped[i2] = true;
+            // check for parental node
             assert((last_tree->nodes[i].parent == -1 &&
                     tree->nodes[i2].parent == -1) ||
                    (mapping[last_tree->nodes[i].parent] ==
                     tree->nodes[i2].parent));
+            // check  for child node
             if (last_tree->nodes[i].child[0] == -1) {
                 assert(last_tree->nodes[i].child[1] == -1);
                 assert(tree->nodes[i2].child[0] == -1);
@@ -2292,6 +2307,7 @@ bool assert_spr(const LocalTree *last_tree, const LocalTree *tree,
                         mapping[last_tree->nodes[i].child[1]] ==
                         tree->nodes[i2].child[0]));
             }
+            // check for age
             assert(last_tree->nodes[i].age ==
                    tree->nodes[i2].age);
             assert(i == last_tree->nodes[last_tree->root].child[0] ||
@@ -2318,6 +2334,7 @@ bool assert_spr(const LocalTree *last_tree, const LocalTree *tree,
         assert(false);
 
     // coal time is older than recomb time
+    // that is, we need recomb_time \leq coal_time
     if (spr->recomb_time > spr->coal_time)
         assert(false);
 

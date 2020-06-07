@@ -1008,6 +1008,8 @@ bool seq_sample_arg(ArgModel *model, Sequences *sequences, LocalTrees *trees,
                     SitesMapping* sites_mapping, Config *config,
                     const TrackNullValue *maskmap_orig)
 {
+    //for debugging purpose only
+    printLog(LOG_LOW, "number of leaves in trees: %d\n", trees->get_num_leaves());
 
     if (trees->get_num_leaves() < sequences->get_num_seqs()) {
         printLog(LOG_LOW, "Sequentially Sample Initial ARG (%d sequences)\n",
@@ -1146,6 +1148,10 @@ void resample_arg_all(ArgModel *model, Sequences *sequences, LocalTrees *trees,
                       SitesMapping* sites_mapping, Config *config,
                       const TrackNullValue *maskmap_orig)
 {
+
+    //for debugging purpose
+    printLog(LOG_LOW, "--------------resample_arg_all----------------\n");
+
     // setup search options
     bool do_leaf[config->niters+1];
     //int window = 100000;
@@ -2020,6 +2026,7 @@ int main(int argc, char **argv)
 
     }else if (c.ts != ""){
         // initialize arg from tree sequence file
+        printLog(LOG_LOW, "Start reading tree sequence file: %s\n", c.ts);
         trees = new LocalTrees();
         trees_ptr = unique_ptr<LocalTrees>(trees);
         vector<string> seqnames;
