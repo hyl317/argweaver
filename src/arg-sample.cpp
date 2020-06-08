@@ -995,9 +995,11 @@ bool read_init_arg(const char *arg_file, const ArgModel *model,
                             trees, seqnames);
 }
 
-bool read_init_ts(const char *ts_fileName, const ArgModel *model, LocalTrees *trees, vector<string> &seqnames){
+bool read_init_ts(const char *ts_fileName, const ArgModel *model, LocalTrees *trees, vector<string> &seqnames,
+                    int start_coord, int end_coord)
+{
     return read_local_trees_from_ts(ts_fileName, model->times, model->ntimes,
-                            trees, seqnames);
+                            trees, seqnames, start_coord, end_coord);
 }
 
 //=============================================================================
@@ -2029,15 +2031,30 @@ int main(int argc, char **argv)
 
     }else if (c.ts != ""){
         // initialize arg from tree sequence file
-        printLog(LOG_LOW, "Start reading tree sequence file: %s\n", c.ts);
+        printLog(LOG_LOW, "Start reading tree sequence file: %s\n", c.ts.c_str());
         trees = new LocalTrees();
         trees_ptr = unique_ptr<LocalTrees>(trees);
         vector<string> seqnames;
 
-        if (!read_init_ts(c.ts.c_str(), &c.model, trees, seqnames)) {
+        if (!read_init_ts(c.ts.c_str(), &c.model, trees, seqnames, seq_region.start, seq_region.end)) {
                 printError("could not read tree seq file");
                 return EXIT_ERROR;
             }
+
+        // check ARG matches sites/sequences
+        if (trees->start_coord != seq_region.start ||
+            trees->end_coord != seq_region.end) {
+            printError("trees range does not match sites: tree(start=%d,"
+                       " end=%d), sites(start=%d, end=%d) [compressed"
+                       " coordinates]",
+                       trees->start_coord, trees->end_coord,
+                       seq_region.start, seq_region.end);
+            return EXIT_ERROR;
+        }
+
+        // compress input ARG if compression is requested
+        if (sites_mapping)
+            compress_local_trees(trees, sites_mapping, true);
 
     } else {
         // create new init ARG

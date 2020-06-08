@@ -2050,17 +2050,19 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
         spr->recomb_node = prev->at(recomb_node);
         spr->coal_node = prev->at(coal_node);
 
-        printLog(LOG_LOW, "recomb_node: %d\n", recomb_node);
-        printLog(LOG_LOW, "recomb_time: %lf\n", recomb_time);
-        printLog(LOG_LOW, "coal_node: %d\n", coal_node);
-        printLog(LOG_LOW, "coal_time: %lf\n", coal_time);
+        //printLog(LOG_LOW, "recomb_node: %d\n", recomb_node);
+        //printLog(LOG_LOW, "recomb_time: %lf\n", recomb_time);
+        //printLog(LOG_LOW, "coal_node: %d\n", coal_node);
+        //printLog(LOG_LOW, "coal_time: %lf\n", coal_time);
 
     }
     return true;
 }
 
  bool read_local_trees_from_ts(const char *ts_fileName, const double *times, int ntimes, 
-                                     LocalTrees *trees, vector<string> &seqnames){
+                                     LocalTrees *trees, vector<string> &seqnames,
+                                     int start_coord, int end_coord)
+{
     tsk_treeseq_t ts;
     tsk_tree_t tree;
     int ret = tsk_treeseq_load(&ts, ts_fileName, 0);
@@ -2070,25 +2072,33 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
     tsk_size_t numTrees = ts.num_trees;
     trees->clear();
     seqnames.clear();
-    trees->start_coord = ts.breakpoints[0];
-    trees->end_coord = ts.breakpoints[numTrees];
-    
-    printLog(LOG_LOW, "number of samples in the tree sequences: %d\n", numSamples);
-    printLog(LOG_LOW, "number of local trees in the tree sequences: %d\n", numTrees);
-    printLog(LOG_LOW, "tree sequence starat at %d and ends at %d\n", trees->start_coord, trees->end_coord);
+    trees->start_coord = start_coord;
+    trees->end_coord = end_coord;
 
     int iter;
     ret = tsk_tree_init(&tree, &ts, 0);
     check_tsk_error(ret);
-    // map<tsk_id_t, int> *prev_map = nullptr;
     auto prev_map = map<tsk_id_t, int>();
-    // auto curr_map = map<tsk_id_t, int>();
     tsk_tree_t prev_tree;
     int nnodes = 2*numSamples-1;
     Spr spr;
     spr.set_null();
     for (iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)) {
-        printLog(LOG_LOW, "\ntree %d: %lf - %lf\n", tsk_tree_get_index(&tree), tree.left, tree.right);
+        int start = floor(tree.left);
+        int end = floor(tree.right);
+        if (end < start_coord){
+            printLog(LOG_LOW, "skipping tree %d\n", tsk_tree_get_index(&tree));
+            continue;
+        }else if (start >= end_coord){
+            printLog(LOG_LOW, "ignoring local tree from %d\n", tsk_tree_get_index(&tree));
+            break;
+        }else if (start < start_coord){
+            start = start_coord;
+        }else if(end > end_coord){
+            end = end_coord;
+        }
+
+        printLog(LOG_LOW, "\ntree %d: %d - %d\n", tsk_tree_get_index(&tree), start, end);
         int ptree[nnodes];
         int ages[nnodes];
         auto curr_map = map<tsk_id_t, int>();
@@ -2108,7 +2118,7 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
         }
         prev_map = map<tsk_id_t, int>(curr_map); // copy constructor
         tsk_tree_copy(&tree, &prev_tree, 0);
-        trees->trees.push_back(LocalTreeSpr(localtree, spr, floor(tree.right) - floor(tree.left), mapping));
+        trees->trees.push_back(LocalTreeSpr(localtree, spr, end - start, mapping));
     }
 
     check_tsk_error(iter);
@@ -2120,8 +2130,17 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
         trees->set_default_seqids();
     }
 
-    printLog(LOG_LOW, "finish reading tree sequence file. \nNumber of leaves: %d\n", trees->get_num_leaves());
-    printLog(LOG_LOW, "Number of local trees: %d\n", trees->get_num_trees());
+    //don't forget to initilize seqnames!!!
+    
+    //for(int j = 0; j < numSamples; j++){
+    //    seqnames.push_back(string());
+    //}
+
+    printLog(LOG_LOW, "number of samples in the tree sequences: %d\n", numSamples);
+    printLog(LOG_LOW, "number of local trees in the tree sequences: %d\n", numTrees);
+    printLog(LOG_LOW, "total number of local trees read: %d\n", trees->trees.size());
+    printLog(LOG_LOW, "tree sequence starat at %d and ends at %d\n", trees->start_coord, trees->end_coord);
+
 
     return true;
  }
@@ -2539,8 +2558,8 @@ bool assert_trees(const LocalTrees *trees, const PopulationTree *pop_tree,
         assert(it->blocklen >= 0);
         assert(assert_tree(tree, pop_tree));
 
-        //if (last_tree)
-        //    assert(assert_spr(last_tree, tree, spr, mapping, pop_tree, pruned_internal));
+        if (last_tree)
+            assert(assert_spr(last_tree, tree, spr, mapping, pop_tree, pruned_internal));
         last_tree = tree;
     }
 
