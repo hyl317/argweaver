@@ -1,10 +1,10 @@
 arg-sample 1.0
-start time: Sat Jun  6 18:10:11 2020
-command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 200e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --overwrite --region 1:5000-1000000
-random seed: 1591481411
+start time: Mon Jun  8 01:17:34 2020
+command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 200e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --overwrite --rename-seqs ../../simulate/arg/rename.5.txt --region 1:5000-1000000 --ts ../../simulate/arg/simulation_source.5.trees
+random seed: 1591593454
 Reading ../../simulate/arg/simulation_source.5.vcf.gz 1:5000-1000000
-Read 966 sites from 973 lines of VCF file (num skipped indels=0)
-read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=5, nsites=966)
+Read 962 sites from 969 lines of VCF file (num skipped indels=0)
+read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=5, nsites=962)
 0 sites are partially masked but otherwise invariant
 masked 0 (0.0%) positions
 
@@ -55,13 +55,5598 @@ model:
               10000.0,
               10000.0]
 
-max memory usage: 2.7 MB
+Start reading tree sequence file: °ò&
+number of samples in the tree sequences: 5
+number of local trees in the tree sequences: 695
+tree sequence starat at 0 and ends at 1000000
 
-number of leaves in trees: 0
-Sequentially Sample Initial ARG (5 sequences)
-------------------------------------------------
-seqlen: 49750
-tree seq length: 49750
-add sequence 2 of 5 (tsk_3)
-seqlen: 49750
-tree seq length: 49750
+tree 0: 0.000000 - 1206.161920
+
+tree 1: 1206.161920 - 5308.850204
+node out: 37, node in: 44
+case1
+recomb_node: 2
+recomb_time: 3245.439680
+coal_node: 37
+coal_time: 4118.038942
+
+tree 2: 5308.850204 - 5538.378378
+node out: 90, node in: 408
+case1
+recomb_node: 79
+recomb_time: 7736.476410
+coal_node: 90
+coal_time: 57856.581757
+
+tree 3: 5538.378378 - 10112.290506
+node out: 79, node in: 36
+case2
+recomb_node: 0
+recomb_time: 6635.047213
+coal_node: 2
+coal_time: 3243.443589
+
+tree 4: 10112.290506 - 10295.844174
+node out: 408, node in: 52
+case1
+recomb_node: 44
+recomb_time: 57856.581757
+coal_node: 5
+coal_time: 4662.143096
+
+tree 5: 10295.844174 - 17555.926698
+node out: 52, node in: 12
+case2
+recomb_node: 5
+recomb_time: 4662.143096
+coal_node: 4
+coal_time: 1296.907822
+
+tree 6: 17555.926698 - 28421.964969
+node out: 5, node in: 52
+case2
+recomb_node: 1
+recomb_time: 205.271007
+coal_node: 44
+coal_time: 4662.143096
+
+tree 7: 28421.964969 - 30227.987801
+node out: 52, node in: 50
+case1
+recomb_node: 1
+recomb_time: 4662.143096
+coal_node: 44
+coal_time: 4588.787094
+
+tree 8: 30227.987801 - 33038.250877
+node out: 50, node in: 93
+case1
+recomb_node: 1
+recomb_time: 4588.787094
+coal_node: 50
+coal_time: 7933.227988
+
+tree 9: 33038.250877 - 36352.840959
+node out: 12, node in: 92
+case2
+recomb_node: 4
+recomb_time: 1296.907822
+coal_node: 44
+coal_time: 7831.104076
+
+tree 10: 36352.840959 - 37213.921090
+node out: 93, node in: 223
+case1
+recomb_node: 1
+recomb_time: 7933.227988
+coal_node: 93
+coal_time: 21690.963735
+
+tree 11: 37213.921090 - 37436.135122
+node out: 36, node in: 37
+case2
+recomb_node: 0
+recomb_time: 3243.443589
+coal_node: 3
+coal_time: 3245.439680
+
+tree 12: 37436.135122 - 38091.667937
+node out: 223, node in: 243
+case1
+recomb_node: 1
+recomb_time: 21690.963735
+coal_node: 223
+coal_time: 24060.642575
+
+tree 13: 38091.667937 - 39077.132251
+node out: 92, node in: 170
+case1
+recomb_node: 4
+recomb_time: 7831.104076
+coal_node: 92
+coal_time: 14717.325999
+
+tree 14: 39077.132251 - 40747.168251
+node out: 170, node in: 180
+case2
+recomb_node: 4
+recomb_time: 14717.325999
+coal_node: 1
+coal_time: 16063.230712
+
+tree 15: 40747.168251 - 43809.400882
+node out: 44, node in: 30
+case2
+recomb_node: 2
+recomb_time: 4118.038942
+coal_node: 1
+coal_time: 2534.320688
+
+tree 16: 43809.400882 - 44090.860999
+node out: 30, node in: 97
+case3
+recomb_node: 2
+recomb_time: 2534.320688
+coal_node: 37
+coal_time: 8144.847081
+
+tree 17: 44090.860999 - 44574.327312
+node out: 97, node in: 95
+case3
+recomb_node: 37
+recomb_time: 8144.847081
+coal_node: 4
+coal_time: 8039.915668
+
+tree 18: 44574.327312 - 44577.185773
+node out: 95, node in: 70
+case1
+recomb_node: 4
+recomb_time: 8039.915668
+coal_node: 37
+coal_time: 5713.421757
+
+tree 19: 44577.185773 - 44881.715683
+node out: 243, node in: 428
+case1
+recomb_node: 180
+recomb_time: 24060.642575
+coal_node: 243
+coal_time: 65301.358541
+
+tree 20: 44881.715683 - 44937.315407
+node out: 428, node in: 432
+case1
+recomb_node: 2
+recomb_time: 65301.358541
+coal_node: 428
+coal_time: 66099.136335
+
+tree 21: 44937.315407 - 46768.758923
+node out: 70, node in: 69
+case1
+recomb_node: 4
+recomb_time: 5713.421757
+coal_node: 37
+coal_time: 5629.020098
+
+tree 22: 46768.758923 - 47737.638244
+node out: 432, node in: 423
+case1
+recomb_node: 2
+recomb_time: 66099.136335
+coal_node: 180
+coal_time: 64110.802865
+
+tree 23: 47737.638244 - 48372.910835
+node out: 180, node in: 193
+case2
+recomb_node: 1
+recomb_time: 16063.230712
+coal_node: 2
+coal_time: 17230.183715
+
+tree 24: 48372.910835 - 49536.439835
+node out: 193, node in: 81
+case3
+recomb_node: 2
+recomb_time: 17230.183715
+coal_node: 69
+coal_time: 6987.629755
+
+tree 25: 49536.439835 - 51615.647285
+node out: 423, node in: 432
+case1
+recomb_node: 1
+recomb_time: 64110.802865
+coal_node: 423
+coal_time: 66099.136335
+
+tree 26: 51615.647285 - 51924.293407
+node out: 432, node in: 371
+case1
+recomb_node: 1
+recomb_time: 66099.136335
+coal_node: 81
+coal_time: 47471.026931
+
+tree 27: 51924.293407 - 53066.885111
+node out: 371, node in: 235
+case1
+recomb_node: 1
+recomb_time: 47471.026931
+coal_node: 81
+coal_time: 22937.801124
+
+tree 28: 53066.885111 - 54316.176580
+node out: 235, node in: 371
+case1
+recomb_node: 1
+recomb_time: 22937.801124
+coal_node: 235
+coal_time: 47471.026931
+
+tree 29: 54316.176580 - 54674.027500
+node out: 69, node in: 235
+case2
+recomb_node: 4
+recomb_time: 5629.020098
+coal_node: 1
+coal_time: 22937.801124
+
+tree 30: 54674.027500 - 55209.943339
+node out: 371, node in: 313
+case1
+recomb_node: 81
+recomb_time: 47471.026931
+coal_node: 235
+coal_time: 34190.220641
+
+tree 31: 55209.943339 - 55274.616474
+node out: 235, node in: 67
+case3
+recomb_node: 4
+recomb_time: 22937.801124
+coal_node: 2
+coal_time: 5564.454462
+
+tree 32: 55274.616474 - 56275.499532
+node out: 313, node in: 371
+case1
+recomb_node: 81
+recomb_time: 34190.220641
+coal_node: 313
+coal_time: 47471.026931
+
+tree 33: 56275.499532 - 56543.072466
+node out: 371, node in: 221
+case1
+recomb_node: 1
+recomb_time: 47471.026931
+coal_node: 81
+coal_time: 20926.239461
+
+tree 34: 56543.072466 - 56890.068822
+node out: 221, node in: 371
+case1
+recomb_node: 1
+recomb_time: 20926.239461
+coal_node: 221
+coal_time: 47471.026931
+
+tree 35: 56890.068822 - 57638.496872
+node out: 371, node in: 432
+case1
+recomb_node: 1
+recomb_time: 47471.026931
+coal_node: 371
+coal_time: 66099.136335
+
+tree 36: 57638.496872 - 57926.874621
+node out: 432, node in: 340
+case1
+recomb_node: 1
+recomb_time: 66099.136335
+coal_node: 81
+coal_time: 40701.346313
+
+tree 37: 57926.874621 - 59323.724839
+node out: 340, node in: 297
+case1
+recomb_node: 1
+recomb_time: 40701.346313
+coal_node: 81
+coal_time: 30889.120727
+
+tree 38: 59323.724839 - 60591.459288
+node out: 297, node in: 432
+case1
+recomb_node: 1
+recomb_time: 30889.120727
+coal_node: 297
+coal_time: 66099.136335
+
+tree 39: 60591.459288 - 61191.232424
+node out: 432, node in: 297
+case1
+recomb_node: 1
+recomb_time: 66099.136335
+coal_node: 81
+coal_time: 30889.120727
+
+tree 40: 61191.232424 - 66394.254814
+node out: 297, node in: 187
+case1
+recomb_node: 1
+recomb_time: 30889.120727
+coal_node: 81
+coal_time: 16561.685252
+
+tree 41: 66394.254814 - 67392.733662
+node out: 67, node in: 244
+case2
+recomb_node: 2
+recomb_time: 5564.454462
+coal_node: 187
+coal_time: 24277.380892
+
+tree 42: 67392.733662 - 67516.899916
+node out: 244, node in: 291
+case1
+recomb_node: 2
+recomb_time: 24277.380892
+coal_node: 244
+coal_time: 30408.569585
+
+tree 43: 67516.899916 - 67734.600526
+node out: 81, node in: 152
+case3
+recomb_node: 4
+recomb_time: 6987.629755
+coal_node: 1
+coal_time: 13031.248318
+
+tree 44: 67734.600526 - 70155.676936
+node out: 291, node in: 426
+case1
+recomb_node: 2
+recomb_time: 30408.569585
+coal_node: 291
+coal_time: 64939.018046
+
+tree 45: 70155.676936 - 70223.272794
+node out: 37, node in: 38
+case1
+recomb_node: 0
+recomb_time: 3245.439680
+coal_node: 37
+coal_time: 3484.949225
+
+tree 46: 70223.272794 - 70755.024457
+node out: 426, node in: 121
+case2
+recomb_node: 2
+recomb_time: 64939.018046
+coal_node: 4
+coal_time: 9710.167823
+
+tree 47: 70755.024457 - 71202.996902
+node out: 121, node in: 83
+case3
+recomb_node: 4
+recomb_time: 9710.167823
+coal_node: 38
+coal_time: 7061.453914
+
+tree 48: 71202.996902 - 71229.807583
+node out: 83, node in: 426
+case2
+recomb_node: 4
+recomb_time: 7061.453914
+coal_node: 187
+coal_time: 64939.018046
+
+tree 49: 71229.807583 - 71271.377632
+node out: 426, node in: 432
+case1
+recomb_node: 4
+recomb_time: 64939.018046
+coal_node: 426
+coal_time: 66099.136335
+
+tree 50: 71271.377632 - 71531.990327
+node out: 432, node in: 206
+case1
+recomb_node: 4
+recomb_time: 66099.136335
+coal_node: 187
+coal_time: 19224.505373
+
+tree 51: 71531.990327 - 72028.556855
+node out: 152, node in: 123
+case1
+recomb_node: 1
+recomb_time: 13031.248318
+coal_node: 2
+coal_time: 9994.035902
+
+tree 52: 72028.556855 - 72099.972533
+node out: 206, node in: 357
+case1
+recomb_node: 4
+recomb_time: 19224.505373
+coal_node: 206
+coal_time: 43354.825580
+
+tree 53: 72099.972533 - 74831.926747
+node out: 357, node in: 302
+case1
+recomb_node: 4
+recomb_time: 43354.825580
+coal_node: 187
+coal_time: 31999.853768
+
+tree 54: 74831.926747 - 75008.613541
+node out: 187, node in: 308
+case3
+recomb_node: 123
+recomb_time: 16561.685252
+coal_node: 302
+coal_time: 32844.583324
+
+tree 55: 75008.613541 - 75795.631873
+node out: 308, node in: 297
+case2
+recomb_node: 123
+recomb_time: 32844.583324
+coal_node: 4
+coal_time: 30889.120727
+
+tree 56: 75795.631873 - 76832.599723
+node out: 302, node in: 71
+case2
+recomb_node: 38
+recomb_time: 31999.853768
+coal_node: 1
+coal_time: 5775.528751
+
+tree 57: 76832.599723 - 79216.953385
+node out: 297, node in: 302
+case1
+recomb_node: 4
+recomb_time: 30889.120727
+coal_node: 297
+coal_time: 31999.853768
+
+tree 58: 79216.953385 - 79708.870519
+node out: 302, node in: 375
+case1
+recomb_node: 4
+recomb_time: 31999.853768
+coal_node: 302
+coal_time: 48144.465247
+
+tree 59: 79708.870519 - 79823.070923
+node out: 375, node in: 161
+case1
+recomb_node: 4
+recomb_time: 48144.465247
+coal_node: 123
+coal_time: 14349.386143
+
+tree 60: 79823.070923 - 80232.865429
+node out: 38, node in: 375
+case2
+recomb_node: 0
+recomb_time: 3484.949225
+coal_node: 161
+coal_time: 48144.465247
+
+tree 61: 80232.865429 - 80773.130311
+node out: 71, node in: 24
+case2
+recomb_node: 1
+recomb_time: 5775.528751
+coal_node: 4
+coal_time: 2343.201710
+
+tree 62: 80773.130311 - 81033.118787
+node out: 161, node in: 302
+case3
+recomb_node: 24
+recomb_time: 14349.386143
+coal_node: 0
+coal_time: 31999.853768
+
+tree 63: 81033.118787 - 81279.956056
+node out: 375, node in: 354
+case1
+recomb_node: 123
+recomb_time: 48144.465247
+coal_node: 302
+coal_time: 42885.347625
+
+tree 64: 81279.956056 - 82443.463868
+node out: 302, node in: 385
+case2
+recomb_node: 0
+recomb_time: 31999.853768
+coal_node: 354
+coal_time: 51157.948849
+
+tree 65: 82443.463868 - 85492.945995
+node out: 354, node in: 187
+case2
+recomb_node: 123
+recomb_time: 42885.347625
+coal_node: 0
+coal_time: 16561.685252
+
+tree 66: 85492.945995 - 85883.088896
+node out: 24, node in: 152
+case3
+recomb_node: 4
+recomb_time: 2343.201710
+coal_node: 123
+coal_time: 13031.248318
+
+tree 67: 85883.088896 - 86203.772129
+node out: 385, node in: 484
+case1
+recomb_node: 187
+recomb_time: 51157.948849
+coal_node: 385
+coal_time: 112432.970488
+
+tree 68: 86203.772129 - 86348.816307
+node out: 123, node in: 205
+case2
+recomb_node: 2
+recomb_time: 9994.035902
+coal_node: 187
+coal_time: 18810.760038
+
+tree 69: 86348.816307 - 86454.667637
+node out: 205, node in: 149
+case2
+recomb_node: 2
+recomb_time: 18810.760038
+coal_node: 4
+coal_time: 12827.047675
+
+tree 70: 86454.667637 - 86748.049149
+node out: 187, node in: 205
+case1
+recomb_node: 0
+recomb_time: 16561.685252
+coal_node: 187
+coal_time: 18810.760038
+
+tree 71: 86748.049149 - 86855.153573
+node out: 205, node in: 236
+case2
+recomb_node: 0
+recomb_time: 18810.760038
+coal_node: 1
+coal_time: 23335.508171
+
+tree 72: 86855.153573 - 87185.954695
+node out: 149, node in: 59
+case3
+recomb_node: 4
+recomb_time: 12827.047675
+coal_node: 3
+coal_time: 4877.827100
+
+tree 73: 87185.954695 - 88061.801877
+node out: 152, node in: 38
+case2
+recomb_node: 2
+recomb_time: 13031.248318
+coal_node: 3
+coal_time: 3484.949225
+
+tree 74: 88061.801877 - 89204.964249
+node out: 484, node in: 447
+case1
+recomb_node: 236
+recomb_time: 112432.970488
+coal_node: 59
+coal_time: 74102.073582
+
+tree 75: 89204.964249 - 90641.035719
+node out: 447, node in: 294
+case1
+recomb_node: 59
+recomb_time: 74102.073582
+coal_node: 236
+coal_time: 30480.731692
+
+tree 76: 90641.035719 - 94101.256014
+node out: 236, node in: 152
+case3
+recomb_node: 1
+recomb_time: 23335.508171
+coal_node: 59
+coal_time: 13031.248318
+
+tree 77: 94101.256014 - 95549.432583
+node out: 59, node in: 62
+case3
+recomb_node: 38
+recomb_time: 4877.827100
+coal_node: 1
+coal_time: 5323.101291
+
+tree 78: 95549.432583 - 96078.518568
+node out: 62, node in: 112
+case1
+recomb_node: 1
+recomb_time: 5323.101291
+coal_node: 62
+coal_time: 9242.433068
+
+tree 79: 96078.518568 - 96306.256739
+node out: 112, node in: 212
+case2
+recomb_node: 1
+recomb_time: 9242.433068
+coal_node: 0
+coal_time: 19943.881054
+
+tree 80: 96306.256739 - 97631.726670
+node out: 212, node in: 284
+case3
+recomb_node: 1
+recomb_time: 19943.881054
+coal_node: 152
+coal_time: 29283.390523
+
+tree 81: 97631.726670 - 99718.296225
+node out: 284, node in: 233
+case1
+recomb_node: 1
+recomb_time: 29283.390523
+coal_node: 152
+coal_time: 22911.894677
+
+tree 82: 99718.296225 - 100056.801015
+node out: 152, node in: 83
+case2
+recomb_node: 4
+recomb_time: 13031.248318
+coal_node: 0
+coal_time: 7061.453914
+
+tree 83: 100056.801015 - 105853.867276
+node out: 233, node in: 284
+case1
+recomb_node: 1
+recomb_time: 22911.894677
+coal_node: 233
+coal_time: 29283.390523
+
+tree 84: 105853.867276 - 106832.350629
+node out: 284, node in: 366
+case2
+recomb_node: 1
+recomb_time: 29283.390523
+coal_node: 294
+coal_time: 45702.526971
+
+tree 85: 106832.350629 - 106916.231361
+node out: 366, node in: 375
+case1
+recomb_node: 1
+recomb_time: 45702.526971
+coal_node: 366
+coal_time: 48144.465247
+
+tree 86: 106916.231361 - 108655.114683
+node out: 375, node in: 337
+case1
+recomb_node: 1
+recomb_time: 48144.465247
+coal_node: 294
+coal_time: 40243.996857
+
+tree 87: 108655.114683 - 108673.231003
+node out: 294, node in: 319
+case2
+recomb_node: 83
+recomb_time: 30480.731692
+coal_node: 1
+coal_time: 35578.363685
+
+tree 88: 108673.231003 - 109807.425437
+node out: 83, node in: 37
+case2
+recomb_node: 0
+recomb_time: 7061.453914
+coal_node: 2
+coal_time: 3245.439680
+
+tree 89: 109807.425437 - 111016.171545
+node out: 319, node in: 375
+case2
+recomb_node: 1
+recomb_time: 35578.363685
+coal_node: 337
+coal_time: 48144.465247
+
+tree 90: 111016.171545 - 111496.480906
+node out: 38, node in: 286
+case2
+recomb_node: 3
+recomb_time: 3484.949225
+coal_node: 1
+coal_time: 29543.905176
+
+tree 91: 111496.480906 - 113717.779544
+node out: 337, node in: 348
+case3
+recomb_node: 37
+recomb_time: 40243.996857
+coal_node: 286
+coal_time: 41854.876978
+
+tree 92: 113717.779544 - 113897.769273
+node out: 348, node in: 319
+case2
+recomb_node: 37
+recomb_time: 41854.876978
+coal_node: 4
+coal_time: 35578.363685
+
+tree 93: 113897.769273 - 115554.802845
+node out: 319, node in: 260
+case1
+recomb_node: 4
+recomb_time: 35578.363685
+coal_node: 37
+coal_time: 26757.628202
+
+tree 94: 115554.802845 - 116749.763283
+node out: 375, node in: 369
+case1
+recomb_node: 286
+recomb_time: 48144.465247
+coal_node: 260
+coal_time: 46718.558959
+
+tree 95: 116749.763283 - 118403.333500
+node out: 369, node in: 458
+case1
+recomb_node: 260
+recomb_time: 46718.558959
+coal_node: 369
+coal_time: 86168.121626
+
+tree 96: 118403.333500 - 119012.265261
+node out: 458, node in: 467
+case1
+recomb_node: 260
+recomb_time: 86168.121626
+coal_node: 458
+coal_time: 91971.153891
+
+tree 97: 119012.265261 - 120244.832970
+node out: 286, node in: 157
+case2
+recomb_node: 1
+recomb_time: 29543.905176
+coal_node: 37
+coal_time: 13964.544343
+
+tree 98: 120244.832970 - 120642.270688
+node out: 467, node in: 316
+case1
+recomb_node: 260
+recomb_time: 91971.153891
+coal_node: 3
+coal_time: 34698.030564
+
+tree 99: 120642.270688 - 121389.456587
+node out: 260, node in: 296
+case1
+recomb_node: 4
+recomb_time: 26757.628202
+coal_node: 260
+coal_time: 30881.055742
+
+tree 100: 121389.456587 - 121857.320685
+node out: 296, node in: 41
+case2
+recomb_node: 4
+recomb_time: 30881.055742
+coal_node: 37
+coal_time: 3830.991936
+
+tree 101: 121857.320685 - 122875.304921
+node out: 316, node in: 438
+case1
+recomb_node: 3
+recomb_time: 34698.030564
+coal_node: 316
+coal_time: 67841.954289
+
+tree 102: 122875.304921 - 123573.986144
+node out: 438, node in: 327
+case1
+recomb_node: 3
+recomb_time: 67841.954289
+coal_node: 157
+coal_time: 37791.794242
+
+tree 103: 123573.986144 - 125229.900499
+node out: 327, node in: 438
+case1
+recomb_node: 3
+recomb_time: 37791.794242
+coal_node: 327
+coal_time: 67841.954289
+
+tree 104: 125229.900499 - 125938.219979
+node out: 438, node in: 393
+case1
+recomb_node: 3
+recomb_time: 67841.954289
+coal_node: 157
+coal_time: 54703.834929
+
+tree 105: 125938.219979 - 126891.484281
+node out: 393, node in: 467
+case1
+recomb_node: 3
+recomb_time: 54703.834929
+coal_node: 393
+coal_time: 91971.153891
+
+tree 106: 126891.484281 - 127420.925332
+node out: 467, node in: 232
+case1
+recomb_node: 3
+recomb_time: 91971.153891
+coal_node: 157
+coal_time: 22744.281199
+
+tree 107: 127420.925332 - 127782.062890
+node out: 157, node in: 327
+case2
+recomb_node: 1
+recomb_time: 13964.544343
+coal_node: 232
+coal_time: 37791.794242
+
+tree 108: 127782.062890 - 128254.374053
+node out: 232, node in: 462
+case2
+recomb_node: 3
+recomb_time: 22744.281199
+coal_node: 327
+coal_time: 91114.584062
+
+tree 109: 128254.374053 - 128763.723916
+node out: 327, node in: 335
+case1
+recomb_node: 1
+recomb_time: 37791.794242
+coal_node: 327
+coal_time: 39896.119235
+
+tree 110: 128763.723916 - 128863.093473
+node out: 335, node in: 251
+case2
+recomb_node: 1
+recomb_time: 39896.119235
+coal_node: 3
+coal_time: 24940.071239
+
+tree 111: 128863.093473 - 129087.360839
+node out: 462, node in: 467
+case1
+recomb_node: 41
+recomb_time: 91114.584062
+coal_node: 462
+coal_time: 91971.153891
+
+tree 112: 129087.360839 - 129414.954951
+node out: 37, node in: 46
+case3
+recomb_node: 2
+recomb_time: 3245.439680
+coal_node: 1
+coal_time: 4497.584069
+
+tree 113: 129414.954951 - 129476.466013
+node out: 467, node in: 462
+case1
+recomb_node: 41
+recomb_time: 91971.153891
+coal_node: 251
+coal_time: 91114.584062
+
+tree 114: 129476.466013 - 129814.297690
+node out: 462, node in: 366
+case1
+recomb_node: 41
+recomb_time: 91114.584062
+coal_node: 251
+coal_time: 45702.526971
+
+tree 115: 129814.297690 - 131899.685164
+node out: 251, node in: 335
+case2
+recomb_node: 3
+recomb_time: 24940.071239
+coal_node: 41
+coal_time: 39896.119235
+
+tree 116: 131899.685164 - 131923.778013
+node out: 335, node in: 68
+case3
+recomb_node: 41
+recomb_time: 39896.119235
+coal_node: 46
+coal_time: 5602.494583
+
+tree 117: 131923.778013 - 132227.250173
+node out: 366, node in: 335
+case1
+recomb_node: 3
+recomb_time: 45702.526971
+coal_node: 68
+coal_time: 39896.119235
+
+tree 118: 132227.250173 - 132310.316929
+node out: 335, node in: 366
+case1
+recomb_node: 3
+recomb_time: 39896.119235
+coal_node: 335
+coal_time: 45702.526971
+
+tree 119: 132310.316929 - 132908.217174
+node out: 366, node in: 252
+case1
+recomb_node: 3
+recomb_time: 45702.526971
+coal_node: 68
+coal_time: 25000.372661
+
+tree 120: 132908.217174 - 133211.497947
+node out: 41, node in: 106
+case3
+recomb_node: 0
+recomb_time: 3830.991936
+coal_node: 3
+coal_time: 8816.129467
+
+tree 121: 133211.497947 - 135542.648643
+node out: 68, node in: 61
+case1
+recomb_node: 46
+recomb_time: 5602.494583
+coal_node: 4
+coal_time: 5307.964490
+
+tree 122: 135542.648643 - 135932.329608
+node out: 106, node in: 154
+case1
+recomb_node: 0
+recomb_time: 8816.129467
+coal_node: 106
+coal_time: 13143.730724
+
+tree 123: 135932.329608 - 138161.474405
+node out: 252, node in: 467
+case1
+recomb_node: 61
+recomb_time: 25000.372661
+coal_node: 252
+coal_time: 91971.153891
+
+tree 124: 138161.474405 - 138514.265450
+node out: 467, node in: 460
+case1
+recomb_node: 61
+recomb_time: 91971.153891
+coal_node: 154
+coal_time: 89043.455026
+
+tree 125: 138514.265450 - 139096.281291
+node out: 46, node in: 41
+case3
+recomb_node: 2
+recomb_time: 4497.584069
+coal_node: 4
+coal_time: 3830.991936
+
+tree 126: 139096.281291 - 140218.025805
+node out: 460, node in: 467
+case1
+recomb_node: 61
+recomb_time: 89043.455026
+coal_node: 460
+coal_time: 91971.153891
+
+tree 127: 140218.025805 - 141472.678664
+node out: 467, node in: 459
+case1
+recomb_node: 61
+recomb_time: 91971.153891
+coal_node: 154
+coal_time: 88386.389684
+
+tree 128: 141472.678664 - 141611.728385
+node out: 459, node in: 467
+case1
+recomb_node: 61
+recomb_time: 88386.389684
+coal_node: 459
+coal_time: 91971.153891
+
+tree 129: 141611.728385 - 142161.094384
+node out: 467, node in: 442
+case1
+recomb_node: 61
+recomb_time: 91971.153891
+coal_node: 154
+coal_time: 71454.553250
+
+tree 130: 142161.094384 - 142822.863567
+node out: 442, node in: 459
+case1
+recomb_node: 61
+recomb_time: 71454.553250
+coal_node: 442
+coal_time: 88386.389684
+
+tree 131: 142822.863567 - 143723.037826
+node out: 459, node in: 462
+case1
+recomb_node: 61
+recomb_time: 88386.389684
+coal_node: 459
+coal_time: 91114.584062
+
+tree 132: 143723.037826 - 143898.961633
+node out: 462, node in: 288
+case1
+recomb_node: 61
+recomb_time: 91114.584062
+coal_node: 154
+coal_time: 29790.149741
+
+tree 133: 143898.961633 - 144776.945735
+node out: 288, node in: 462
+case1
+recomb_node: 61
+recomb_time: 29790.149741
+coal_node: 288
+coal_time: 91114.584062
+
+tree 134: 144776.945735 - 145035.658065
+node out: 462, node in: 467
+case1
+recomb_node: 61
+recomb_time: 91114.584062
+coal_node: 462
+coal_time: 91971.153891
+
+tree 135: 145035.658065 - 145426.098757
+node out: 154, node in: 32
+case2
+recomb_node: 0
+recomb_time: 13143.730724
+coal_node: 2
+coal_time: 2982.406419
+
+tree 136: 145426.098757 - 146929.835004
+node out: 41, node in: 27
+case2
+recomb_node: 4
+recomb_time: 3830.991936
+coal_node: 3
+coal_time: 2493.532614
+
+tree 137: 146929.835004 - 147701.335174
+node out: 467, node in: 491
+case1
+recomb_node: 61
+recomb_time: 91971.153891
+coal_node: 467
+coal_time: 172411.605148
+
+tree 138: 147701.335174 - 154606.702308
+node out: 491, node in: 404
+case1
+recomb_node: 27
+recomb_time: 172411.605148
+coal_node: 61
+coal_time: 56961.989851
+
+tree 139: 154606.702308 - 158545.323917
+node out: 32, node in: 106
+case2
+recomb_node: 0
+recomb_time: 2982.406419
+coal_node: 27
+coal_time: 8816.129467
+
+tree 140: 158545.323917 - 159524.746276
+node out: 61, node in: 154
+case2
+recomb_node: 1
+recomb_time: 5307.964490
+coal_node: 106
+coal_time: 13143.730724
+
+tree 141: 159524.746276 - 159620.401254
+node out: 106, node in: 141
+case3
+recomb_node: 27
+recomb_time: 8816.129467
+coal_node: 2
+coal_time: 11708.117963
+
+tree 142: 159620.401254 - 161627.837262
+node out: 141, node in: 126
+case3
+recomb_node: 27
+recomb_time: 11708.117963
+coal_node: 1
+coal_time: 10116.162919
+
+tree 143: 161627.837262 - 162914.639610
+node out: 154, node in: 134
+case3
+recomb_node: 126
+recomb_time: 13143.730724
+coal_node: 2
+coal_time: 10758.277692
+
+tree 144: 162914.639610 - 163166.488559
+node out: 404, node in: 435
+case1
+recomb_node: 0
+recomb_time: 56961.989851
+coal_node: 404
+coal_time: 66659.152349
+
+tree 145: 163166.488559 - 163564.785887
+node out: 435, node in: 430
+case1
+recomb_node: 0
+recomb_time: 66659.152349
+coal_node: 134
+coal_time: 66064.895757
+
+tree 146: 163564.785887 - 163806.030565
+node out: 430, node in: 342
+case1
+recomb_node: 0
+recomb_time: 66064.895757
+coal_node: 134
+coal_time: 40861.018035
+
+tree 147: 163806.030565 - 167085.223637
+node out: 342, node in: 107
+case2
+recomb_node: 0
+recomb_time: 40861.018035
+coal_node: 27
+coal_time: 8940.659633
+
+tree 148: 167085.223637 - 169166.902585
+node out: 134, node in: 430
+case1
+recomb_node: 2
+recomb_time: 10758.277692
+coal_node: 134
+coal_time: 66064.895757
+
+tree 149: 169166.902585 - 169230.152892
+node out: 126, node in: 195
+case2
+recomb_node: 1
+recomb_time: 10116.162919
+coal_node: 2
+coal_time: 17522.064327
+
+tree 150: 169230.152892 - 169415.432766
+node out: 430, node in: 368
+case1
+recomb_node: 107
+recomb_time: 66064.895757
+coal_node: 195
+coal_time: 46056.999259
+
+tree 151: 169415.432766 - 170203.675556
+node out: 368, node in: 430
+case1
+recomb_node: 107
+recomb_time: 46056.999259
+coal_node: 368
+coal_time: 66064.895757
+
+tree 152: 170203.675556 - 171217.037172
+node out: 195, node in: 135
+case1
+recomb_node: 1
+recomb_time: 17522.064327
+coal_node: 2
+coal_time: 11007.837434
+
+tree 153: 171217.037172 - 173381.490440
+node out: 27, node in: 91
+case3
+recomb_node: 4
+recomb_time: 2493.532614
+coal_node: 1
+coal_time: 7817.838736
+
+tree 154: 173381.490440 - 175203.545293
+node out: 107, node in: 13
+case2
+recomb_node: 0
+recomb_time: 8940.659633
+coal_node: 1
+coal_time: 1565.818638
+
+tree 155: 175203.545293 - 177645.382280
+node out: 430, node in: 435
+case1
+recomb_node: 135
+recomb_time: 66064.895757
+coal_node: 430
+coal_time: 66659.152349
+
+tree 156: 177645.382280 - 177817.239235
+node out: 435, node in: 401
+case1
+recomb_node: 3
+recomb_time: 66659.152349
+coal_node: 135
+coal_time: 56149.689293
+
+tree 157: 177817.239235 - 179141.539191
+node out: 401, node in: 435
+case1
+recomb_node: 3
+recomb_time: 56149.689293
+coal_node: 401
+coal_time: 66659.152349
+
+tree 158: 179141.539191 - 179806.927028
+node out: 435, node in: 475
+case1
+recomb_node: 3
+recomb_time: 66659.152349
+coal_node: 435
+coal_time: 98422.234606
+
+tree 159: 179806.927028 - 181350.742975
+node out: 475, node in: 58
+case2
+recomb_node: 3
+recomb_time: 98422.234606
+coal_node: 4
+coal_time: 4858.245622
+
+tree 160: 181350.742975 - 181392.296725
+node out: 135, node in: 475
+case1
+recomb_node: 2
+recomb_time: 11007.837434
+coal_node: 135
+coal_time: 98422.234606
+
+tree 161: 181392.296725 - 181823.367528
+node out: 475, node in: 409
+case1
+recomb_node: 2
+recomb_time: 98422.234606
+coal_node: 91
+coal_time: 58046.398177
+
+tree 162: 181823.367528 - 182510.944824
+node out: 409, node in: 430
+case1
+recomb_node: 2
+recomb_time: 58046.398177
+coal_node: 409
+coal_time: 66064.895757
+
+tree 163: 182510.944824 - 184359.396618
+node out: 58, node in: 61
+case3
+recomb_node: 4
+recomb_time: 4858.245622
+coal_node: 2
+coal_time: 5307.964490
+
+tree 164: 184359.396618 - 184836.608634
+node out: 430, node in: 427
+case1
+recomb_node: 91
+recomb_time: 66064.895757
+coal_node: 61
+coal_time: 64989.851160
+
+tree 165: 184836.608634 - 186681.424777
+node out: 427, node in: 366
+case1
+recomb_node: 61
+recomb_time: 64989.851160
+coal_node: 91
+coal_time: 45702.526971
+
+tree 166: 186681.424777 - 188262.981872
+node out: 366, node in: 252
+case1
+recomb_node: 61
+recomb_time: 45702.526971
+coal_node: 91
+coal_time: 25000.372661
+
+tree 167: 188262.981872 - 188643.029004
+node out: 61, node in: 72
+case2
+recomb_node: 2
+recomb_time: 5307.964490
+coal_node: 13
+coal_time: 6084.085802
+
+tree 168: 188643.029004 - 189659.372482
+node out: 91, node in: 109
+case1
+recomb_node: 3
+recomb_time: 7817.838736
+coal_node: 91
+coal_time: 9003.847800
+
+tree 169: 189659.372482 - 191210.793609
+node out: 252, node in: 208
+case1
+recomb_node: 4
+recomb_time: 25000.372661
+coal_node: 109
+coal_time: 19459.771312
+
+tree 170: 191210.793609 - 191236.684609
+node out: 208, node in: 192
+case1
+recomb_node: 4
+recomb_time: 19459.771312
+coal_node: 109
+coal_time: 17220.757623
+
+tree 171: 191236.684609 - 193640.813277
+node out: 192, node in: 352
+case1
+recomb_node: 4
+recomb_time: 17220.757623
+coal_node: 192
+coal_time: 42763.248840
+
+tree 172: 193640.813277 - 194101.225397
+node out: 352, node in: 307
+case1
+recomb_node: 4
+recomb_time: 42763.248840
+coal_node: 109
+coal_time: 32808.143013
+
+tree 173: 194101.225397 - 196230.944525
+node out: 307, node in: 299
+case1
+recomb_node: 4
+recomb_time: 32808.143013
+coal_node: 109
+coal_time: 31236.101877
+
+tree 174: 196230.944525 - 197265.084180
+node out: 109, node in: 145
+case1
+recomb_node: 3
+recomb_time: 9003.847800
+coal_node: 109
+coal_time: 12107.680771
+
+tree 175: 197265.084180 - 197343.734372
+node out: 299, node in: 307
+case1
+recomb_node: 4
+recomb_time: 31236.101877
+coal_node: 299
+coal_time: 32808.143013
+
+tree 176: 197343.734372 - 199805.532861
+node out: 307, node in: 126
+case2
+recomb_node: 4
+recomb_time: 32808.143013
+coal_node: 72
+coal_time: 10116.162919
+
+tree 177: 199805.532861 - 200427.647727
+node out: 126, node in: 307
+case2
+recomb_node: 4
+recomb_time: 10116.162919
+coal_node: 145
+coal_time: 32808.143013
+
+tree 178: 200427.647727 - 209755.980924
+node out: 307, node in: 183
+case1
+recomb_node: 4
+recomb_time: 32808.143013
+coal_node: 145
+coal_time: 16123.004385
+
+tree 179: 209755.980924 - 218022.631066
+node out: 72, node in: 83
+case2
+recomb_node: 2
+recomb_time: 6084.085802
+coal_node: 4
+coal_time: 7061.453914
+
+tree 180: 218022.631066 - 218218.592279
+node out: 183, node in: 296
+case1
+recomb_node: 145
+recomb_time: 16123.004385
+coal_node: 183
+coal_time: 30881.055742
+
+tree 181: 218218.592279 - 219714.101222
+node out: 145, node in: 102
+case1
+recomb_node: 3
+recomb_time: 12107.680771
+coal_node: 13
+coal_time: 8481.019641
+
+tree 182: 219714.101222 - 223210.549500
+node out: 83, node in: 70
+case1
+recomb_node: 2
+recomb_time: 7061.453914
+coal_node: 4
+coal_time: 5713.421757
+
+tree 183: 223210.549500 - 224275.935028
+node out: 296, node in: 433
+case1
+recomb_node: 102
+recomb_time: 30881.055742
+coal_node: 296
+coal_time: 66254.555657
+
+tree 184: 224275.935028 - 225262.840797
+node out: 70, node in: 58
+case3
+recomb_node: 4
+recomb_time: 5713.421757
+coal_node: 3
+coal_time: 4858.245622
+
+tree 185: 225262.840797 - 226772.212709
+node out: 433, node in: 405
+case1
+recomb_node: 102
+recomb_time: 66254.555657
+coal_node: 2
+coal_time: 57279.056738
+
+tree 186: 226772.212709 - 226799.206395
+node out: 405, node in: 345
+case1
+recomb_node: 2
+recomb_time: 57279.056738
+coal_node: 102
+coal_time: 41361.008586
+
+tree 187: 226799.206395 - 226995.241415
+node out: 58, node in: 254
+case3
+recomb_node: 4
+recomb_time: 4858.245622
+coal_node: 102
+coal_time: 25404.581604
+
+tree 188: 226995.241415 - 227424.082865
+node out: 13, node in: 34
+case3
+recomb_node: 1
+recomb_time: 1565.818638
+coal_node: 4
+coal_time: 3231.400774
+
+tree 189: 227424.082865 - 229214.204994
+node out: 102, node in: 177
+case2
+recomb_node: 3
+recomb_time: 8481.019641
+coal_node: 34
+coal_time: 15447.350023
+
+tree 190: 229214.204994 - 230637.565542
+node out: 254, node in: 405
+case2
+recomb_node: 0
+recomb_time: 25404.581604
+coal_node: 345
+coal_time: 57279.056738
+
+tree 191: 230637.565542 - 231764.783904
+node out: 405, node in: 400
+case1
+recomb_node: 0
+recomb_time: 57279.056738
+coal_node: 345
+coal_time: 55930.667195
+
+tree 192: 231764.783904 - 231800.637029
+node out: 345, node in: 311
+case1
+recomb_node: 2
+recomb_time: 41361.008586
+coal_node: 177
+coal_time: 33141.902756
+
+tree 193: 231800.637029 - 231948.875178
+node out: 311, node in: 296
+case2
+recomb_node: 2
+recomb_time: 33141.902756
+coal_node: 0
+coal_time: 30881.055742
+
+tree 194: 231948.875178 - 232186.202014
+node out: 400, node in: 470
+case1
+recomb_node: 177
+recomb_time: 55930.667195
+coal_node: 400
+coal_time: 92773.342164
+
+tree 195: 232186.202014 - 232205.472009
+node out: 296, node in: 234
+case3
+recomb_node: 2
+recomb_time: 30881.055742
+coal_node: 177
+coal_time: 22927.919935
+
+tree 196: 232205.472009 - 234805.815675
+node out: 34, node in: 7
+case3
+recomb_node: 4
+recomb_time: 3231.400774
+coal_node: 0
+coal_time: 516.949409
+
+tree 197: 234805.815675 - 235100.842136
+node out: 177, node in: 53
+case3
+recomb_node: 1
+recomb_time: 15447.350023
+coal_node: 7
+coal_time: 4698.438933
+
+tree 198: 235100.842136 - 236036.017825
+node out: 234, node in: 74
+case1
+recomb_node: 2
+recomb_time: 22927.919935
+coal_node: 3
+coal_time: 6325.310263
+
+tree 199: 236036.017825 - 236448.448905
+node out: 470, node in: 477
+case1
+recomb_node: 53
+recomb_time: 92773.342164
+coal_node: 470
+coal_time: 100672.274678
+
+tree 200: 236448.448905 - 237178.688458
+node out: 74, node in: 13
+case2
+recomb_node: 2
+recomb_time: 6325.310263
+coal_node: 7
+coal_time: 1565.818638
+
+tree 201: 237178.688458 - 238906.989628
+node out: 477, node in: 364
+case1
+recomb_node: 53
+recomb_time: 100672.274678
+coal_node: 3
+coal_time: 45121.484517
+
+tree 202: 238906.989628 - 239418.114358
+node out: 13, node in: 234
+case2
+recomb_node: 2
+recomb_time: 1565.818638
+coal_node: 3
+coal_time: 22927.919935
+
+tree 203: 239418.114358 - 240028.671976
+node out: 364, node in: 450
+case1
+recomb_node: 53
+recomb_time: 45121.484517
+coal_node: 364
+coal_time: 76947.055118
+
+tree 204: 240028.671976 - 240849.924563
+node out: 450, node in: 361
+case1
+recomb_node: 53
+recomb_time: 76947.055118
+coal_node: 234
+coal_time: 44339.818464
+
+tree 205: 240849.924563 - 242004.539874
+node out: 361, node in: 450
+case1
+recomb_node: 53
+recomb_time: 44339.818464
+coal_node: 361
+coal_time: 76947.055118
+
+tree 206: 242004.539874 - 244562.955164
+node out: 450, node in: 295
+case1
+recomb_node: 53
+recomb_time: 76947.055118
+coal_node: 234
+coal_time: 30775.446939
+
+tree 207: 244562.955164 - 250931.719144
+node out: 295, node in: 189
+case2
+recomb_node: 53
+recomb_time: 30775.446939
+coal_node: 3
+coal_time: 16688.213298
+
+tree 208: 250931.719144 - 251343.002601
+node out: 234, node in: 280
+case1
+recomb_node: 2
+recomb_time: 22927.919935
+coal_node: 234
+coal_time: 28385.134021
+
+tree 209: 251343.002601 - 255870.950468
+node out: 280, node in: 216
+case1
+recomb_node: 2
+recomb_time: 28385.134021
+coal_node: 189
+coal_time: 20384.104938
+
+tree 210: 255870.950468 - 256400.056476
+node out: 189, node in: 280
+case2
+recomb_node: 3
+recomb_time: 16688.213298
+coal_node: 216
+coal_time: 28385.134021
+
+tree 211: 256400.056476 - 256589.052094
+node out: 53, node in: 56
+case2
+recomb_node: 1
+recomb_time: 4698.438933
+coal_node: 3
+coal_time: 4731.413650
+
+tree 212: 256589.052094 - 256760.731865
+node out: 216, node in: 257
+case3
+recomb_node: 7
+recomb_time: 20384.104938
+coal_node: 56
+coal_time: 25760.646972
+
+tree 213: 256760.731865 - 258552.567628
+node out: 56, node in: 114
+case3
+recomb_node: 3
+recomb_time: 4731.413650
+coal_node: 2
+coal_time: 9362.121222
+
+tree 214: 258552.567628 - 259748.146464
+node out: 114, node in: 144
+case3
+recomb_node: 3
+recomb_time: 9362.121222
+coal_node: 1
+coal_time: 12081.420583
+
+tree 215: 259748.146464 - 259859.650456
+node out: 257, node in: 490
+case2
+recomb_node: 7
+recomb_time: 25760.646972
+coal_node: 280
+coal_time: 156332.688016
+
+tree 216: 259859.650456 - 260470.965006
+node out: 490, node in: 488
+case1
+recomb_node: 7
+recomb_time: 156332.688016
+coal_node: 280
+coal_time: 121609.910351
+
+tree 217: 260470.965006 - 261528.275037
+node out: 144, node in: 189
+case2
+recomb_node: 1
+recomb_time: 12081.420583
+coal_node: 7
+coal_time: 16688.213298
+
+tree 218: 261528.275037 - 261955.921599
+node out: 189, node in: 223
+case2
+recomb_node: 1
+recomb_time: 16688.213298
+coal_node: 2
+coal_time: 21690.963735
+
+tree 219: 261955.921599 - 261986.767003
+node out: 280, node in: 289
+case1
+recomb_node: 3
+recomb_time: 28385.134021
+coal_node: 280
+coal_time: 30238.817150
+
+tree 220: 261986.767003 - 262818.112332
+node out: 488, node in: 378
+case1
+recomb_node: 7
+recomb_time: 121609.910351
+coal_node: 289
+coal_time: 49824.866228
+
+tree 221: 262818.112332 - 263143.243097
+node out: 378, node in: 367
+case1
+recomb_node: 7
+recomb_time: 49824.866228
+coal_node: 289
+coal_time: 45917.747531
+
+tree 222: 263143.243097 - 263193.932423
+node out: 223, node in: 378
+case3
+recomb_node: 2
+recomb_time: 21690.963735
+coal_node: 367
+coal_time: 49824.866228
+
+tree 223: 263193.932423 - 264427.023769
+node out: 378, node in: 85
+case2
+recomb_node: 2
+recomb_time: 49824.866228
+coal_node: 1
+coal_time: 7149.642006
+
+tree 224: 264427.023769 - 264611.825409
+node out: 367, node in: 336
+case1
+recomb_node: 7
+recomb_time: 45917.747531
+coal_node: 289
+coal_time: 40239.728637
+
+tree 225: 264611.825409 - 265771.278941
+node out: 289, node in: 166
+case3
+recomb_node: 85
+recomb_time: 30238.817150
+coal_node: 7
+coal_time: 14479.416252
+
+tree 226: 265771.278941 - 265910.754508
+node out: 166, node in: 189
+case1
+recomb_node: 7
+recomb_time: 14479.416252
+coal_node: 166
+coal_time: 16688.213298
+
+tree 227: 265910.754508 - 268867.760494
+node out: 189, node in: 130
+case3
+recomb_node: 85
+recomb_time: 16688.213298
+coal_node: 3
+coal_time: 10322.920668
+
+tree 228: 268867.760494 - 270729.288056
+node out: 336, node in: 482
+case1
+recomb_node: 7
+recomb_time: 40239.728637
+coal_node: 336
+coal_time: 105310.633333
+
+tree 229: 270729.288056 - 271114.707988
+node out: 482, node in: 466
+case1
+recomb_node: 7
+recomb_time: 105310.633333
+coal_node: 130
+coal_time: 91958.403119
+
+tree 230: 271114.707988 - 273950.839013
+node out: 466, node in: 359
+case1
+recomb_node: 7
+recomb_time: 91958.403119
+coal_node: 130
+coal_time: 43504.772835
+
+tree 231: 273950.839013 - 274023.547832
+node out: 359, node in: 215
+case1
+recomb_node: 7
+recomb_time: 43504.772835
+coal_node: 130
+coal_time: 20372.893092
+
+tree 232: 274023.547832 - 274155.395402
+node out: 85, node in: 72
+case2
+recomb_node: 1
+recomb_time: 7149.642006
+coal_node: 7
+coal_time: 6084.085802
+
+tree 233: 274155.395402 - 275233.363797
+node out: 215, node in: 377
+case1
+recomb_node: 130
+recomb_time: 20372.893092
+coal_node: 215
+coal_time: 49172.458268
+
+tree 234: 275233.363797 - 275813.004066
+node out: 377, node in: 234
+case1
+recomb_node: 72
+recomb_time: 49172.458268
+coal_node: 130
+coal_time: 22927.919935
+
+tree 235: 275813.004066 - 276969.631965
+node out: 234, node in: 377
+case1
+recomb_node: 72
+recomb_time: 22927.919935
+coal_node: 234
+coal_time: 49172.458268
+
+tree 236: 276969.631965 - 279129.152950
+node out: 130, node in: 164
+case1
+recomb_node: 3
+recomb_time: 10322.920668
+coal_node: 130
+coal_time: 14409.759844
+
+tree 237: 279129.152950 - 279392.827367
+node out: 377, node in: 350
+case1
+recomb_node: 72
+recomb_time: 49172.458268
+coal_node: 164
+coal_time: 42476.622161
+
+tree 238: 279392.827367 - 279830.048392
+node out: 164, node in: 367
+case2
+recomb_node: 2
+recomb_time: 14409.759844
+coal_node: 350
+coal_time: 45917.747531
+
+tree 239: 279830.048392 - 281506.349864
+node out: 350, node in: 280
+case3
+recomb_node: 3
+recomb_time: 42476.622161
+coal_node: 2
+coal_time: 28385.134021
+
+tree 240: 281506.349864 - 283376.520798
+node out: 280, node in: 191
+case2
+recomb_node: 2
+recomb_time: 28385.134021
+coal_node: 72
+coal_time: 16881.090912
+
+tree 241: 283376.520798 - 284230.692844
+node out: 72, node in: 40
+case3
+recomb_node: 7
+recomb_time: 6084.085802
+coal_node: 3
+coal_time: 3828.874332
+
+tree 242: 284230.692844 - 285847.976638
+node out: 367, node in: 377
+case1
+recomb_node: 191
+recomb_time: 45917.747531
+coal_node: 367
+coal_time: 49172.458268
+
+tree 243: 285847.976638 - 286198.918309
+node out: 191, node in: 264
+case3
+recomb_node: 1
+recomb_time: 16881.090912
+coal_node: 40
+coal_time: 27191.971727
+
+tree 244: 286198.918309 - 286359.709056
+node out: 377, node in: 386
+case1
+recomb_node: 2
+recomb_time: 49172.458268
+coal_node: 377
+coal_time: 51205.477821
+
+tree 245: 286359.709056 - 287979.421273
+node out: 264, node in: 274
+case2
+recomb_node: 1
+recomb_time: 27191.971727
+coal_node: 2
+coal_time: 27925.984020
+
+tree 246: 287979.421273 - 288218.096431
+node out: 40, node in: 12
+case1
+recomb_node: 3
+recomb_time: 3828.874332
+coal_node: 7
+coal_time: 1296.907822
+
+tree 247: 288218.096431 - 289900.405633
+node out: 386, node in: 377
+case1
+recomb_node: 274
+recomb_time: 51205.477821
+coal_node: 12
+coal_time: 49172.458268
+
+tree 248: 289900.405633 - 293033.073957
+node out: 274, node in: 315
+case1
+recomb_node: 1
+recomb_time: 27925.984020
+coal_node: 274
+coal_time: 34652.141573
+
+tree 249: 293033.073957 - 294350.806459
+node out: 377, node in: 295
+case2
+recomb_node: 12
+recomb_time: 49172.458268
+coal_node: 2
+coal_time: 30775.446939
+
+tree 250: 294350.806459 - 295526.565354
+node out: 295, node in: 185
+case1
+recomb_node: 2
+recomb_time: 30775.446939
+coal_node: 12
+coal_time: 16253.012720
+
+tree 251: 295526.565354 - 296961.218188
+node out: 315, node in: 295
+case1
+recomb_node: 1
+recomb_time: 34652.141573
+coal_node: 185
+coal_time: 30775.446939
+
+tree 252: 296961.218188 - 298572.420678
+node out: 185, node in: 171
+case1
+recomb_node: 2
+recomb_time: 16253.012720
+coal_node: 12
+coal_time: 14905.200961
+
+tree 253: 298572.420678 - 306318.016561
+node out: 295, node in: 259
+case1
+recomb_node: 1
+recomb_time: 30775.446939
+coal_node: 171
+coal_time: 26700.474500
+
+tree 254: 306318.016561 - 307801.975009
+node out: 171, node in: 333
+case2
+recomb_node: 2
+recomb_time: 14905.200961
+coal_node: 259
+coal_time: 39049.782046
+
+tree 255: 307801.975009 - 308005.138139
+node out: 259, node in: 276
+case3
+recomb_node: 12
+recomb_time: 26700.474500
+coal_node: 2
+coal_time: 28097.902964
+
+tree 256: 308005.138139 - 308008.106963
+node out: 276, node in: 289
+case3
+recomb_node: 12
+recomb_time: 28097.902964
+coal_node: 1
+coal_time: 30238.817150
+
+tree 257: 308008.106963 - 308047.970363
+node out: 333, node in: 273
+case2
+recomb_node: 2
+recomb_time: 39049.782046
+coal_node: 12
+coal_time: 27880.433455
+
+tree 258: 308047.970363 - 308439.426662
+node out: 273, node in: 72
+case2
+recomb_node: 2
+recomb_time: 27880.433455
+coal_node: 1
+coal_time: 6084.085802
+
+tree 259: 308439.426662 - 310652.870990
+node out: 289, node in: 164
+case1
+recomb_node: 12
+recomb_time: 30238.817150
+coal_node: 72
+coal_time: 14409.759844
+
+tree 260: 310652.870990 - 310882.046658
+node out: 164, node in: 307
+case1
+recomb_node: 12
+recomb_time: 14409.759844
+coal_node: 164
+coal_time: 32808.143013
+
+tree 261: 310882.046658 - 312339.667536
+node out: 307, node in: 290
+case1
+recomb_node: 12
+recomb_time: 32808.143013
+coal_node: 72
+coal_time: 30301.786011
+
+tree 262: 312339.667536 - 313112.012184
+node out: 290, node in: 307
+case1
+recomb_node: 12
+recomb_time: 30301.786011
+coal_node: 290
+coal_time: 32808.143013
+
+tree 263: 313112.012184 - 315049.241137
+node out: 307, node in: 373
+case1
+recomb_node: 12
+recomb_time: 32808.143013
+coal_node: 307
+coal_time: 47929.814658
+
+tree 264: 315049.241137 - 321911.534835
+node out: 373, node in: 155
+case1
+recomb_node: 12
+recomb_time: 47929.814658
+coal_node: 72
+coal_time: 13495.239458
+
+tree 265: 321911.534835 - 323310.344555
+node out: 155, node in: 321
+case1
+recomb_node: 12
+recomb_time: 13495.239458
+coal_node: 155
+coal_time: 35836.065315
+
+tree 266: 323310.344555 - 323769.643280
+node out: 321, node in: 307
+case1
+recomb_node: 12
+recomb_time: 35836.065315
+coal_node: 72
+coal_time: 32808.143013
+
+tree 267: 323769.643280 - 324526.685366
+node out: 307, node in: 321
+case1
+recomb_node: 12
+recomb_time: 32808.143013
+coal_node: 307
+coal_time: 35836.065315
+
+tree 268: 324526.685366 - 326296.596631
+node out: 321, node in: 307
+case1
+recomb_node: 12
+recomb_time: 35836.065315
+coal_node: 72
+coal_time: 32808.143013
+
+tree 269: 326296.596631 - 331822.029625
+node out: 307, node in: 321
+case1
+recomb_node: 12
+recomb_time: 32808.143013
+coal_node: 307
+coal_time: 35836.065315
+
+tree 270: 331822.029625 - 334226.399272
+node out: 321, node in: 138
+case1
+recomb_node: 12
+recomb_time: 35836.065315
+coal_node: 72
+coal_time: 11370.518891
+
+tree 271: 334226.399272 - 338692.431417
+node out: 138, node in: 307
+case1
+recomb_node: 12
+recomb_time: 11370.518891
+coal_node: 138
+coal_time: 32808.143013
+
+tree 272: 338692.431417 - 345458.218675
+node out: 307, node in: 129
+case1
+recomb_node: 12
+recomb_time: 32808.143013
+coal_node: 72
+coal_time: 10280.057486
+
+tree 273: 345458.218675 - 345804.731675
+node out: 72, node in: 182
+case2
+recomb_node: 1
+recomb_time: 6084.085802
+coal_node: 129
+coal_time: 16117.763640
+
+tree 274: 345804.731675 - 345912.924117
+node out: 182, node in: 266
+case1
+recomb_node: 1
+recomb_time: 16117.763640
+coal_node: 182
+coal_time: 27301.386003
+
+tree 275: 345912.924117 - 347736.683057
+node out: 266, node in: 350
+case1
+recomb_node: 1
+recomb_time: 27301.386003
+coal_node: 266
+coal_time: 42476.622161
+
+tree 276: 347736.683057 - 349591.380765
+node out: 350, node in: 363
+case1
+recomb_node: 1
+recomb_time: 42476.622161
+coal_node: 350
+coal_time: 44530.181596
+
+tree 277: 349591.380765 - 357211.347054
+node out: 363, node in: 374
+case1
+recomb_node: 1
+recomb_time: 44530.181596
+coal_node: 363
+coal_time: 47930.413270
+
+tree 278: 357211.347054 - 359745.378224
+node out: 374, node in: 182
+case1
+recomb_node: 1
+recomb_time: 47930.413270
+coal_node: 129
+coal_time: 16117.763640
+
+tree 279: 359745.378224 - 359861.077126
+node out: 129, node in: 92
+case3
+recomb_node: 2
+recomb_time: 10280.057486
+coal_node: 1
+coal_time: 7831.104076
+
+tree 280: 359861.077126 - 363212.869122
+node out: 92, node in: 72
+case1
+recomb_node: 1
+recomb_time: 7831.104076
+coal_node: 2
+coal_time: 6084.085802
+
+tree 281: 363212.869122 - 363899.315094
+node out: 182, node in: 250
+case1
+recomb_node: 12
+recomb_time: 16117.763640
+coal_node: 182
+coal_time: 24914.222953
+
+tree 282: 363899.315094 - 365521.220343
+node out: 72, node in: 182
+case2
+recomb_node: 1
+recomb_time: 6084.085802
+coal_node: 12
+coal_time: 16117.763640
+
+tree 283: 365521.220343 - 365876.851456
+node out: 250, node in: 301
+case1
+recomb_node: 2
+recomb_time: 24914.222953
+coal_node: 250
+coal_time: 31591.609239
+
+tree 284: 365876.851456 - 366261.366374
+node out: 301, node in: 312
+case1
+recomb_node: 2
+recomb_time: 31591.609239
+coal_node: 301
+coal_time: 33514.302330
+
+tree 285: 366261.366374 - 366537.891879
+node out: 312, node in: 437
+case1
+recomb_node: 2
+recomb_time: 33514.302330
+coal_node: 312
+coal_time: 67468.709052
+
+tree 286: 366537.891879 - 366785.235788
+node out: 437, node in: 473
+case1
+recomb_node: 2
+recomb_time: 67468.709052
+coal_node: 437
+coal_time: 96802.999768
+
+tree 287: 366785.235788 - 368106.167616
+node out: 473, node in: 411
+case1
+recomb_node: 2
+recomb_time: 96802.999768
+coal_node: 182
+coal_time: 59233.003778
+
+tree 288: 368106.167616 - 370032.110570
+node out: 411, node in: 44
+case2
+recomb_node: 2
+recomb_time: 59233.003778
+coal_node: 12
+coal_time: 4118.038942
+
+tree 289: 370032.110570 - 370136.336742
+node out: 44, node in: 129
+case1
+recomb_node: 2
+recomb_time: 4118.038942
+coal_node: 44
+coal_time: 10280.057486
+
+tree 290: 370136.336742 - 370194.483169
+node out: 182, node in: 115
+case2
+recomb_node: 1
+recomb_time: 16117.763640
+coal_node: 12
+coal_time: 9531.669180
+
+tree 291: 370194.483169 - 372526.063438
+node out: 129, node in: 131
+case1
+recomb_node: 2
+recomb_time: 10280.057486
+coal_node: 129
+coal_time: 10425.756484
+
+tree 292: 372526.063438 - 377731.453017
+node out: 131, node in: 363
+case1
+recomb_node: 2
+recomb_time: 10425.756484
+coal_node: 131
+coal_time: 44530.181596
+
+tree 293: 377731.453017 - 378658.564151
+node out: 363, node in: 411
+case1
+recomb_node: 2
+recomb_time: 44530.181596
+coal_node: 363
+coal_time: 59233.003778
+
+tree 294: 378658.564151 - 379616.687628
+node out: 115, node in: 344
+case1
+recomb_node: 1
+recomb_time: 9531.669180
+coal_node: 115
+coal_time: 40989.067405
+
+tree 295: 379616.687628 - 381317.306864
+node out: 344, node in: 293
+case1
+recomb_node: 1
+recomb_time: 40989.067405
+coal_node: 12
+coal_time: 30463.984892
+
+tree 296: 381317.306864 - 381846.005884
+node out: 411, node in: 344
+case1
+recomb_node: 2
+recomb_time: 59233.003778
+coal_node: 293
+coal_time: 40989.067405
+
+tree 297: 381846.005884 - 383938.472575
+node out: 344, node in: 209
+case2
+recomb_node: 2
+recomb_time: 40989.067405
+coal_node: 12
+coal_time: 19554.487292
+
+tree 298: 383938.472575 - 384040.153209
+node out: 209, node in: 271
+case3
+recomb_node: 12
+recomb_time: 19554.487292
+coal_node: 1
+coal_time: 27823.479534
+
+tree 299: 384040.153209 - 384159.781128
+node out: 271, node in: 242
+case3
+recomb_node: 12
+recomb_time: 27823.479534
+coal_node: 2
+coal_time: 24024.031503
+
+tree 300: 384159.781128 - 385142.447982
+node out: 242, node in: 411
+case2
+recomb_node: 2
+recomb_time: 24024.031503
+coal_node: 293
+coal_time: 59233.003778
+
+tree 301: 385142.447982 - 386164.341677
+node out: 293, node in: 277
+case1
+recomb_node: 1
+recomb_time: 30463.984892
+coal_node: 12
+coal_time: 28215.047795
+
+tree 302: 386164.341677 - 387055.944974
+node out: 411, node in: 407
+case1
+recomb_node: 2
+recomb_time: 59233.003778
+coal_node: 277
+coal_time: 57556.039259
+
+tree 303: 387055.944974 - 387916.417184
+node out: 277, node in: 146
+case1
+recomb_node: 1
+recomb_time: 28215.047795
+coal_node: 12
+coal_time: 12345.227518
+
+tree 304: 387916.417184 - 388146.919289
+node out: 407, node in: 486
+case1
+recomb_node: 2
+recomb_time: 57556.039259
+coal_node: 407
+coal_time: 116844.142008
+
+tree 305: 388146.919289 - 389028.546724
+node out: 486, node in: 230
+case1
+recomb_node: 2
+recomb_time: 116844.142008
+coal_node: 146
+coal_time: 22664.743412
+
+tree 306: 389028.546724 - 391265.576564
+node out: 146, node in: 89
+case1
+recomb_node: 1
+recomb_time: 12345.227518
+coal_node: 12
+coal_time: 7295.724174
+
+tree 307: 391265.576564 - 392623.366181
+node out: 89, node in: 88
+case2
+recomb_node: 1
+recomb_time: 7295.724174
+coal_node: 2
+coal_time: 7284.557365
+
+tree 308: 392623.366181 - 395462.083955
+node out: 230, node in: 320
+case1
+recomb_node: 12
+recomb_time: 22664.743412
+coal_node: 230
+coal_time: 35720.628052
+
+tree 309: 395462.083955 - 395658.983475
+node out: 320, node in: 310
+case1
+recomb_node: 12
+recomb_time: 35720.628052
+coal_node: 88
+coal_time: 33107.170109
+
+tree 310: 395658.983475 - 397007.186990
+node out: 310, node in: 343
+case1
+recomb_node: 12
+recomb_time: 33107.170109
+coal_node: 310
+coal_time: 40963.584832
+
+tree 311: 397007.186990 - 399385.914765
+node out: 343, node in: 330
+case1
+recomb_node: 12
+recomb_time: 40963.584832
+coal_node: 88
+coal_time: 38498.175517
+
+tree 312: 399385.914765 - 399820.295721
+node out: 330, node in: 344
+case1
+recomb_node: 12
+recomb_time: 38498.175517
+coal_node: 330
+coal_time: 40989.067405
+
+tree 313: 399820.295721 - 402909.696894
+node out: 344, node in: 380
+case1
+recomb_node: 12
+recomb_time: 40989.067405
+coal_node: 344
+coal_time: 50011.724919
+
+tree 314: 402909.696894 - 404238.967086
+node out: 380, node in: 298
+case1
+recomb_node: 12
+recomb_time: 50011.724919
+coal_node: 88
+coal_time: 30935.816148
+
+tree 315: 404238.967086 - 405972.050597
+node out: 88, node in: 229
+case1
+recomb_node: 1
+recomb_time: 7284.557365
+coal_node: 88
+coal_time: 22293.415372
+
+tree 316: 405972.050597 - 407094.255883
+node out: 7, node in: 172
+case2
+recomb_node: 0
+recomb_time: 516.949409
+coal_node: 12
+coal_time: 15055.835700
+
+tree 317: 407094.255883 - 407445.531433
+node out: 229, node in: 197
+case1
+recomb_node: 1
+recomb_time: 22293.415372
+coal_node: 2
+coal_time: 17857.286930
+
+tree 318: 407445.531433 - 410276.466378
+node out: 197, node in: 124
+case2
+recomb_node: 1
+recomb_time: 17857.286930
+coal_node: 0
+coal_time: 10077.257938
+
+tree 319: 410276.466378 - 410713.231054
+node out: 172, node in: 241
+case1
+recomb_node: 12
+recomb_time: 15055.835700
+coal_node: 172
+coal_time: 23991.936544
+
+tree 320: 410713.231054 - 411055.553567
+node out: 298, node in: 343
+case1
+recomb_node: 2
+recomb_time: 30935.816148
+coal_node: 298
+coal_time: 40963.584832
+
+tree 321: 411055.553567 - 412187.225048
+node out: 343, node in: 99
+case2
+recomb_node: 2
+recomb_time: 40963.584832
+coal_node: 1
+coal_time: 8238.364287
+
+tree 322: 412187.225048 - 413977.759754
+node out: 241, node in: 310
+case1
+recomb_node: 12
+recomb_time: 23991.936544
+coal_node: 241
+coal_time: 33107.170109
+
+tree 323: 413977.759754 - 415512.330461
+node out: 310, node in: 283
+case1
+recomb_node: 12
+recomb_time: 33107.170109
+coal_node: 124
+coal_time: 29098.736604
+
+tree 324: 415512.330461 - 416012.295153
+node out: 124, node in: 42
+case2
+recomb_node: 0
+recomb_time: 10077.257938
+coal_node: 2
+coal_time: 3926.284128
+
+tree 325: 416012.295153 - 417569.488384
+node out: 99, node in: 147
+case1
+recomb_node: 1
+recomb_time: 8238.364287
+coal_node: 99
+coal_time: 12386.989400
+
+tree 326: 417569.488384 - 418023.813148
+node out: 283, node in: 292
+case1
+recomb_node: 12
+recomb_time: 29098.736604
+coal_node: 283
+coal_time: 30457.678437
+
+tree 327: 418023.813148 - 418852.128884
+node out: 147, node in: 211
+case2
+recomb_node: 1
+recomb_time: 12386.989400
+coal_node: 12
+coal_time: 19774.029446
+
+tree 328: 418852.128884 - 419902.433739
+node out: 211, node in: 101
+case2
+recomb_node: 1
+recomb_time: 19774.029446
+coal_node: 42
+coal_time: 8462.247027
+
+tree 329: 419902.433739 - 420631.451165
+node out: 42, node in: 72
+case2
+recomb_node: 0
+recomb_time: 3926.284128
+coal_node: 12
+coal_time: 6084.085802
+
+tree 330: 420631.451165 - 422660.527849
+node out: 101, node in: 31
+case2
+recomb_node: 1
+recomb_time: 8462.247027
+coal_node: 12
+coal_time: 2796.165237
+
+tree 331: 422660.527849 - 427046.335169
+node out: 292, node in: 64
+case3
+recomb_node: 2
+recomb_time: 30457.678437
+coal_node: 0
+coal_time: 5354.988110
+
+tree 332: 427046.335169 - 430310.257112
+node out: 64, node in: 9
+case1
+recomb_node: 0
+recomb_time: 5354.988110
+coal_node: 2
+coal_time: 665.058657
+
+tree 333: 430310.257112 - 431664.062997
+node out: 72, node in: 98
+case1
+recomb_node: 31
+recomb_time: 6084.085802
+coal_node: 72
+coal_time: 8179.470845
+
+tree 334: 431664.062997 - 435307.824620
+node out: 98, node in: 310
+case1
+recomb_node: 9
+recomb_time: 8179.470845
+coal_node: 98
+coal_time: 33107.170109
+
+tree 335: 435307.824620 - 436286.118216
+node out: 310, node in: 383
+case1
+recomb_node: 9
+recomb_time: 33107.170109
+coal_node: 310
+coal_time: 50810.430069
+
+tree 336: 436286.118216 - 437545.397886
+node out: 383, node in: 388
+case1
+recomb_node: 9
+recomb_time: 50810.430069
+coal_node: 383
+coal_time: 52508.207159
+
+tree 337: 437545.397886 - 440471.003866
+node out: 388, node in: 222
+case1
+recomb_node: 9
+recomb_time: 52508.207159
+coal_node: 31
+coal_time: 21177.152259
+
+tree 338: 440471.003866 - 442403.302631
+node out: 222, node in: 388
+case1
+recomb_node: 9
+recomb_time: 21177.152259
+coal_node: 222
+coal_time: 52508.207159
+
+tree 339: 442403.302631 - 447050.451638
+node out: 388, node in: 64
+case1
+recomb_node: 9
+recomb_time: 52508.207159
+coal_node: 31
+coal_time: 5354.988110
+
+tree 340: 447050.451638 - 448732.099135
+node out: 31, node in: 379
+case3
+recomb_node: 12
+recomb_time: 2796.165237
+coal_node: 64
+coal_time: 49972.591919
+
+tree 341: 448732.099135 - 449461.799918
+node out: 379, node in: 146
+case1
+recomb_node: 12
+recomb_time: 49972.591919
+coal_node: 64
+coal_time: 12345.227518
+
+tree 342: 449461.799918 - 449816.538591
+node out: 64, node in: 49
+case3
+recomb_node: 1
+recomb_time: 5354.988110
+coal_node: 12
+coal_time: 4550.058817
+
+tree 343: 449816.538591 - 450355.175056
+node out: 146, node in: 379
+case1
+recomb_node: 9
+recomb_time: 12345.227518
+coal_node: 146
+coal_time: 49972.591919
+
+tree 344: 450355.175056 - 451949.312923
+node out: 49, node in: 108
+case1
+recomb_node: 1
+recomb_time: 4550.058817
+coal_node: 49
+coal_time: 8991.967444
+
+tree 345: 451949.312923 - 452824.919823
+node out: 108, node in: 76
+case3
+recomb_node: 12
+recomb_time: 8991.967444
+coal_node: 9
+coal_time: 6552.273193
+
+tree 346: 452824.919823 - 453079.850053
+node out: 379, node in: 439
+case1
+recomb_node: 1
+recomb_time: 49972.591919
+coal_node: 379
+coal_time: 68083.099964
+
+tree 347: 453079.850053 - 458193.244054
+node out: 439, node in: 224
+case1
+recomb_node: 1
+recomb_time: 68083.099964
+coal_node: 76
+coal_time: 21715.789255
+
+tree 348: 458193.244054 - 461157.343225
+node out: 224, node in: 55
+case2
+recomb_node: 1
+recomb_time: 21715.789255
+coal_node: 9
+coal_time: 4708.931489
+
+tree 349: 461157.343225 - 462596.054995
+node out: 55, node in: 224
+case2
+recomb_node: 1
+recomb_time: 4708.931489
+coal_node: 76
+coal_time: 21715.789255
+
+tree 350: 462596.054995 - 465714.031240
+node out: 224, node in: 77
+case1
+recomb_node: 1
+recomb_time: 21715.789255
+coal_node: 76
+coal_time: 6571.269777
+
+tree 351: 465714.031240 - 476802.425803
+node out: 76, node in: 146
+case3
+recomb_node: 9
+recomb_time: 6552.273193
+coal_node: 77
+coal_time: 12345.227518
+
+tree 352: 476802.425803 - 477237.180685
+node out: 146, node in: 390
+case1
+recomb_node: 9
+recomb_time: 12345.227518
+coal_node: 146
+coal_time: 52822.281368
+
+tree 353: 477237.180685 - 477358.662634
+node out: 390, node in: 389
+case1
+recomb_node: 9
+recomb_time: 52822.281368
+coal_node: 77
+coal_time: 52571.910454
+
+tree 354: 477358.662634 - 478199.134459
+node out: 389, node in: 431
+case1
+recomb_node: 9
+recomb_time: 52571.910454
+coal_node: 389
+coal_time: 66074.756663
+
+tree 355: 478199.134459 - 478378.852941
+node out: 9, node in: 6
+case3
+recomb_node: 2
+recomb_time: 665.058657
+coal_node: 1
+coal_time: 378.408521
+
+tree 356: 478378.852941 - 482101.033554
+node out: 431, node in: 202
+case1
+recomb_node: 77
+recomb_time: 66074.756663
+coal_node: 0
+coal_time: 18595.065383
+
+tree 357: 482101.033554 - 482321.550483
+node out: 77, node in: 387
+case2
+recomb_node: 12
+recomb_time: 6571.269777
+coal_node: 202
+coal_time: 51755.696827
+
+tree 358: 482321.550483 - 483468.343616
+node out: 202, node in: 190
+case1
+recomb_node: 0
+recomb_time: 18595.065383
+coal_node: 6
+coal_time: 16836.219835
+
+tree 359: 483468.343616 - 483600.402596
+node out: 190, node in: 239
+case3
+recomb_node: 6
+recomb_time: 16836.219835
+coal_node: 12
+coal_time: 23718.105248
+
+tree 360: 483600.402596 - 485828.839588
+node out: 387, node in: 434
+case1
+recomb_node: 0
+recomb_time: 51755.696827
+coal_node: 387
+coal_time: 66278.651712
+
+tree 361: 485828.839588 - 486325.226139
+node out: 434, node in: 446
+case1
+recomb_node: 0
+recomb_time: 66278.651712
+coal_node: 434
+coal_time: 73358.733524
+
+tree 362: 486325.226139 - 486410.292212
+node out: 239, node in: 167
+case1
+recomb_node: 6
+recomb_time: 23718.105248
+coal_node: 12
+coal_time: 14514.090094
+
+tree 363: 486410.292212 - 487794.934187
+node out: 446, node in: 329
+case1
+recomb_node: 0
+recomb_time: 73358.733524
+coal_node: 167
+coal_time: 38382.772324
+
+tree 364: 487794.934187 - 489352.778646
+node out: 329, node in: 349
+case1
+recomb_node: 0
+recomb_time: 38382.772324
+coal_node: 329
+coal_time: 42283.837429
+
+tree 365: 489352.778646 - 489382.485275
+node out: 167, node in: 153
+case3
+recomb_node: 12
+recomb_time: 14514.090094
+coal_node: 0
+coal_time: 13037.380446
+
+tree 366: 489382.485275 - 490478.982565
+node out: 349, node in: 45
+case2
+recomb_node: 6
+recomb_time: 42283.837429
+coal_node: 12
+coal_time: 4344.142039
+
+tree 367: 490478.982565 - 494190.162396
+node out: 45, node in: 20
+case1
+recomb_node: 6
+recomb_time: 4344.142039
+coal_node: 12
+coal_time: 2094.506583
+
+tree 368: 494190.162396 - 514667.108076
+node out: 153, node in: 120
+case1
+recomb_node: 0
+recomb_time: 13037.380446
+coal_node: 20
+coal_time: 9703.651130
+
+tree 369: 514667.108076 - 517126.436233
+node out: 120, node in: 331
+case1
+recomb_node: 0
+recomb_time: 9703.651130
+coal_node: 120
+coal_time: 38580.456198
+
+tree 370: 517126.436233 - 517219.112841
+node out: 331, node in: 43
+case1
+recomb_node: 0
+recomb_time: 38580.456198
+coal_node: 20
+coal_time: 4073.004428
+
+tree 371: 517219.112841 - 518271.084763
+node out: 43, node in: 331
+case1
+recomb_node: 0
+recomb_time: 4073.004428
+coal_node: 43
+coal_time: 38580.456198
+
+tree 372: 518271.084763 - 520425.729109
+node out: 331, node in: 188
+case1
+recomb_node: 0
+recomb_time: 38580.456198
+coal_node: 20
+coal_time: 16579.926047
+
+tree 373: 520425.729109 - 522233.562433
+node out: 188, node in: 331
+case1
+recomb_node: 0
+recomb_time: 16579.926047
+coal_node: 188
+coal_time: 38580.456198
+
+tree 374: 522233.562433 - 522313.624276
+node out: 331, node in: 397
+case1
+recomb_node: 0
+recomb_time: 38580.456198
+coal_node: 331
+coal_time: 55296.070977
+
+tree 375: 522313.624276 - 522738.582576
+node out: 397, node in: 436
+case1
+recomb_node: 0
+recomb_time: 55296.070977
+coal_node: 397
+coal_time: 67447.036911
+
+tree 376: 522738.582576 - 522889.064048
+node out: 436, node in: 483
+case1
+recomb_node: 0
+recomb_time: 67447.036911
+coal_node: 436
+coal_time: 106061.885654
+
+tree 377: 522889.064048 - 526156.090090
+node out: 483, node in: 248
+case1
+recomb_node: 0
+recomb_time: 106061.885654
+coal_node: 20
+coal_time: 24865.452433
+
+tree 378: 526156.090090 - 526730.317978
+node out: 248, node in: 275
+case1
+recomb_node: 0
+recomb_time: 24865.452433
+coal_node: 248
+coal_time: 28039.249795
+
+tree 379: 526730.317978 - 528807.310045
+node out: 275, node in: 282
+case1
+recomb_node: 0
+recomb_time: 28039.249795
+coal_node: 275
+coal_time: 28960.461902
+
+tree 380: 528807.310045 - 532137.481852
+node out: 282, node in: 159
+case1
+recomb_node: 0
+recomb_time: 28960.461902
+coal_node: 20
+coal_time: 14147.941516
+
+tree 381: 532137.481852 - 532772.492974
+node out: 159, node in: 282
+case1
+recomb_node: 0
+recomb_time: 14147.941516
+coal_node: 159
+coal_time: 28960.461902
+
+tree 382: 532772.492974 - 534320.568790
+node out: 12, node in: 33
+case2
+recomb_node: 3
+recomb_time: 1296.907822
+coal_node: 0
+coal_time: 3160.485233
+
+tree 383: 534320.568790 - 537657.660790
+node out: 282, node in: 204
+case1
+recomb_node: 20
+recomb_time: 28960.461902
+coal_node: 33
+coal_time: 18706.454381
+
+tree 384: 537657.660790 - 540268.547260
+node out: 204, node in: 118
+case1
+recomb_node: 20
+recomb_time: 18706.454381
+coal_node: 33
+coal_time: 9678.693675
+
+tree 385: 540268.547260 - 540557.748065
+node out: 118, node in: 282
+case1
+recomb_node: 20
+recomb_time: 9678.693675
+coal_node: 118
+coal_time: 28960.461902
+
+tree 386: 540557.748065 - 542175.809281
+node out: 282, node in: 464
+case1
+recomb_node: 20
+recomb_time: 28960.461902
+coal_node: 282
+coal_time: 91579.522149
+
+tree 387: 542175.809281 - 542543.165279
+node out: 464, node in: 452
+case1
+recomb_node: 20
+recomb_time: 91579.522149
+coal_node: 33
+coal_time: 77898.318675
+
+tree 388: 542543.165279 - 542998.278640
+node out: 452, node in: 441
+case1
+recomb_node: 20
+recomb_time: 77898.318675
+coal_node: 33
+coal_time: 69599.608641
+
+tree 389: 542998.278640 - 546215.619321
+node out: 441, node in: 463
+case1
+recomb_node: 20
+recomb_time: 69599.608641
+coal_node: 441
+coal_time: 91416.389797
+
+tree 390: 546215.619321 - 547388.434770
+node out: 463, node in: 278
+case1
+recomb_node: 20
+recomb_time: 91416.389797
+coal_node: 33
+coal_time: 28233.492822
+
+tree 391: 547388.434770 - 547874.065709
+node out: 278, node in: 249
+case1
+recomb_node: 20
+recomb_time: 28233.492822
+coal_node: 33
+coal_time: 24867.402650
+
+tree 392: 547874.065709 - 548435.053683
+node out: 249, node in: 278
+case1
+recomb_node: 20
+recomb_time: 24867.402650
+coal_node: 249
+coal_time: 28233.492822
+
+tree 393: 548435.053683 - 550725.557737
+node out: 278, node in: 249
+case1
+recomb_node: 20
+recomb_time: 28233.492822
+coal_node: 33
+coal_time: 24867.402650
+
+tree 394: 550725.557737 - 553056.303773
+node out: 249, node in: 303
+case1
+recomb_node: 20
+recomb_time: 24867.402650
+coal_node: 249
+coal_time: 32058.748351
+
+tree 395: 553056.303773 - 555319.690741
+node out: 303, node in: 281
+case1
+recomb_node: 20
+recomb_time: 32058.748351
+coal_node: 33
+coal_time: 28510.027229
+
+tree 396: 555319.690741 - 558392.609367
+node out: 281, node in: 139
+case1
+recomb_node: 20
+recomb_time: 28510.027229
+coal_node: 33
+coal_time: 11406.719977
+
+tree 397: 558392.609367 - 572404.458554
+node out: 139, node in: 39
+case1
+recomb_node: 20
+recomb_time: 11406.719977
+coal_node: 33
+coal_time: 3631.898209
+
+tree 398: 572404.458554 - 572522.959805
+node out: 33, node in: 258
+case3
+recomb_node: 3
+recomb_time: 3160.485233
+coal_node: 39
+coal_time: 26561.446511
+
+tree 399: 572522.959805 - 573792.857717
+node out: 39, node in: 394
+case3
+recomb_node: 0
+recomb_time: 3631.898209
+coal_node: 258
+coal_time: 54708.510331
+
+tree 400: 573792.857717 - 580061.144796
+node out: 258, node in: 94
+case1
+recomb_node: 3
+recomb_time: 26561.446511
+coal_node: 20
+coal_time: 8003.109318
+
+tree 401: 580061.144796 - 585157.556596
+node out: 394, node in: 328
+case1
+recomb_node: 0
+recomb_time: 54708.510331
+coal_node: 94
+coal_time: 37863.085386
+
+tree 402: 585157.556596 - 586976.322016
+node out: 94, node in: 128
+case2
+recomb_node: 3
+recomb_time: 8003.109318
+coal_node: 0
+coal_time: 10215.364808
+
+tree 403: 586976.322016 - 587513.391531
+node out: 328, node in: 420
+case1
+recomb_node: 20
+recomb_time: 37863.085386
+coal_node: 328
+coal_time: 62511.859937
+
+tree 404: 587513.391531 - 593325.440910
+node out: 420, node in: 240
+case1
+recomb_node: 20
+recomb_time: 62511.859937
+coal_node: 128
+coal_time: 23910.305237
+
+tree 405: 593325.440910 - 595883.828494
+node out: 240, node in: 199
+case1
+recomb_node: 20
+recomb_time: 23910.305237
+coal_node: 128
+coal_time: 18279.244868
+
+tree 406: 595883.828494 - 597319.353045
+node out: 128, node in: 65
+case2
+recomb_node: 0
+recomb_time: 10215.364808
+coal_node: 20
+coal_time: 5397.467035
+
+tree 407: 597319.353045 - 597714.503435
+node out: 199, node in: 156
+case1
+recomb_node: 3
+recomb_time: 18279.244868
+coal_node: 65
+coal_time: 13537.982868
+
+tree 408: 597714.503435 - 600734.706409
+node out: 156, node in: 133
+case1
+recomb_node: 3
+recomb_time: 13537.982868
+coal_node: 65
+coal_time: 10624.776433
+
+tree 409: 600734.706409 - 601999.440138
+node out: 65, node in: 132
+case1
+recomb_node: 0
+recomb_time: 5397.467035
+coal_node: 65
+coal_time: 10554.515302
+
+tree 410: 601999.440138 - 604671.132426
+node out: 6, node in: 172
+case2
+recomb_node: 1
+recomb_time: 378.408521
+coal_node: 133
+coal_time: 15055.835700
+
+tree 411: 604671.132426 - 606503.577346
+node out: 133, node in: 199
+case2
+recomb_node: 3
+recomb_time: 10624.776433
+coal_node: 172
+coal_time: 18279.244868
+
+tree 412: 606503.577346 - 606573.277527
+node out: 199, node in: 87
+case2
+recomb_node: 3
+recomb_time: 18279.244868
+coal_node: 20
+coal_time: 7258.830865
+
+tree 413: 606573.277527 - 614669.292843
+node out: 172, node in: 57
+case2
+recomb_node: 1
+recomb_time: 15055.835700
+coal_node: 3
+coal_time: 4770.508770
+
+tree 414: 614669.292843 - 615083.052221
+node out: 132, node in: 281
+case1
+recomb_node: 0
+recomb_time: 10554.515302
+coal_node: 132
+coal_time: 28510.027229
+
+tree 415: 615083.052221 - 615616.603665
+node out: 281, node in: 261
+case1
+recomb_node: 0
+recomb_time: 28510.027229
+coal_node: 87
+coal_time: 26903.616745
+
+tree 416: 615616.603665 - 617075.171931
+node out: 261, node in: 281
+case1
+recomb_node: 0
+recomb_time: 26903.616745
+coal_node: 261
+coal_time: 28510.027229
+
+tree 417: 617075.171931 - 619925.115169
+node out: 281, node in: 54
+case2
+recomb_node: 0
+recomb_time: 28510.027229
+coal_node: 20
+coal_time: 4708.256635
+
+tree 418: 619925.115169 - 620179.573451
+node out: 54, node in: 281
+case3
+recomb_node: 20
+recomb_time: 4708.256635
+coal_node: 87
+coal_time: 28510.027229
+
+tree 419: 620179.573451 - 621376.983733
+node out: 281, node in: 261
+case1
+recomb_node: 20
+recomb_time: 28510.027229
+coal_node: 87
+coal_time: 26903.616745
+
+tree 420: 621376.983733 - 623283.974739
+node out: 87, node in: 22
+case3
+recomb_node: 0
+recomb_time: 7258.830865
+coal_node: 1
+coal_time: 2257.001744
+
+tree 421: 623283.974739 - 623459.961410
+node out: 261, node in: 163
+case1
+recomb_node: 20
+recomb_time: 26903.616745
+coal_node: 57
+coal_time: 14375.245893
+
+tree 422: 623459.961410 - 626130.466728
+node out: 163, node in: 261
+case1
+recomb_node: 20
+recomb_time: 14375.245893
+coal_node: 163
+coal_time: 26903.616745
+
+tree 423: 626130.466728 - 628515.573830
+node out: 261, node in: 166
+case1
+recomb_node: 20
+recomb_time: 26903.616745
+coal_node: 57
+coal_time: 14479.416252
+
+tree 424: 628515.573830 - 634612.407916
+node out: 166, node in: 281
+case1
+recomb_node: 20
+recomb_time: 14479.416252
+coal_node: 166
+coal_time: 28510.027229
+
+tree 425: 634612.407916 - 636867.322874
+node out: 281, node in: 261
+case1
+recomb_node: 20
+recomb_time: 28510.027229
+coal_node: 57
+coal_time: 26903.616745
+
+tree 426: 636867.322874 - 638659.325344
+node out: 261, node in: 396
+case1
+recomb_node: 20
+recomb_time: 26903.616745
+coal_node: 261
+coal_time: 55009.546188
+
+tree 427: 638659.325344 - 639772.877013
+node out: 396, node in: 384
+case1
+recomb_node: 20
+recomb_time: 55009.546188
+coal_node: 57
+coal_time: 50969.067068
+
+tree 428: 639772.877013 - 643187.044105
+node out: 384, node in: 416
+case1
+recomb_node: 20
+recomb_time: 50969.067068
+coal_node: 384
+coal_time: 61300.295206
+
+tree 429: 643187.044105 - 643436.267656
+node out: 416, node in: 341
+case1
+recomb_node: 20
+recomb_time: 61300.295206
+coal_node: 57
+coal_time: 40759.259535
+
+tree 430: 643436.267656 - 651093.754370
+node out: 341, node in: 281
+case1
+recomb_node: 20
+recomb_time: 40759.259535
+coal_node: 57
+coal_time: 28510.027229
+
+tree 431: 651093.754370 - 652452.509071
+node out: 57, node in: 87
+case1
+recomb_node: 3
+recomb_time: 4770.508770
+coal_node: 57
+coal_time: 7258.830865
+
+tree 432: 652452.509071 - 654852.581363
+node out: 281, node in: 210
+case1
+recomb_node: 20
+recomb_time: 28510.027229
+coal_node: 87
+coal_time: 19697.791272
+
+tree 433: 654852.581363 - 655859.477738
+node out: 22, node in: 8
+case1
+recomb_node: 0
+recomb_time: 2257.001744
+coal_node: 1
+coal_time: 554.649791
+
+tree 434: 655859.477738 - 657284.869034
+node out: 210, node in: 270
+case1
+recomb_node: 20
+recomb_time: 19697.791272
+coal_node: 210
+coal_time: 27715.292839
+
+tree 435: 657284.869034 - 657476.821602
+node out: 8, node in: 78
+case2
+recomb_node: 0
+recomb_time: 554.649791
+coal_node: 3
+coal_time: 6574.706004
+
+tree 436: 657476.821602 - 657489.605867
+node out: 270, node in: 415
+case1
+recomb_node: 20
+recomb_time: 27715.292839
+coal_node: 270
+coal_time: 61100.310097
+
+tree 437: 657489.605867 - 659657.173245
+node out: 415, node in: 210
+case1
+recomb_node: 20
+recomb_time: 61100.310097
+coal_node: 87
+coal_time: 19697.791272
+
+tree 438: 659657.173245 - 659962.036801
+node out: 210, node in: 415
+case1
+recomb_node: 20
+recomb_time: 19697.791272
+coal_node: 210
+coal_time: 61100.310097
+
+tree 439: 659962.036801 - 660090.388884
+node out: 415, node in: 410
+case1
+recomb_node: 20
+recomb_time: 61100.310097
+coal_node: 87
+coal_time: 59027.402994
+
+tree 440: 660090.388884 - 660187.472976
+node out: 410, node in: 199
+case1
+recomb_node: 20
+recomb_time: 59027.402994
+coal_node: 87
+coal_time: 18279.244868
+
+tree 441: 660187.472976 - 660436.881627
+node out: 87, node in: 48
+case2
+recomb_node: 1
+recomb_time: 7258.830865
+coal_node: 3
+coal_time: 4546.027953
+
+tree 442: 660436.881627 - 661158.478041
+node out: 199, node in: 410
+case1
+recomb_node: 20
+recomb_time: 18279.244868
+coal_node: 199
+coal_time: 59027.402994
+
+tree 443: 661158.478041 - 661224.454330
+node out: 410, node in: 394
+case1
+recomb_node: 20
+recomb_time: 59027.402994
+coal_node: 78
+coal_time: 54708.510331
+
+tree 444: 661224.454330 - 663024.078045
+node out: 78, node in: 136
+case1
+recomb_node: 0
+recomb_time: 6574.706004
+coal_node: 78
+coal_time: 11018.948866
+
+tree 445: 663024.078045 - 664380.250653
+node out: 394, node in: 281
+case1
+recomb_node: 20
+recomb_time: 54708.510331
+coal_node: 136
+coal_time: 28510.027229
+
+tree 446: 664380.250653 - 671235.881204
+node out: 281, node in: 87
+case2
+recomb_node: 20
+recomb_time: 28510.027229
+coal_node: 48
+coal_time: 7258.830865
+
+tree 447: 671235.881204 - 675996.552845
+node out: 136, node in: 334
+case1
+recomb_node: 0
+recomb_time: 11018.948866
+coal_node: 136
+coal_time: 39277.979988
+
+tree 448: 675996.552845 - 679954.369944
+node out: 20, node in: 28
+case3
+recomb_node: 2
+recomb_time: 2094.506583
+coal_node: 0
+coal_time: 2506.265464
+
+tree 449: 679954.369944 - 680917.806616
+node out: 87, node in: 199
+case2
+recomb_node: 48
+recomb_time: 7258.830865
+coal_node: 28
+coal_time: 18279.244868
+
+tree 450: 680917.806616 - 681042.891154
+node out: 28, node in: 21
+case1
+recomb_node: 0
+recomb_time: 2506.265464
+coal_node: 2
+coal_time: 2107.387503
+
+tree 451: 681042.891154 - 681708.879695
+node out: 199, node in: 136
+case3
+recomb_node: 21
+recomb_time: 18279.244868
+coal_node: 4
+coal_time: 11018.948866
+
+tree 452: 681708.879695 - 684241.681286
+node out: 334, node in: 309
+case1
+recomb_node: 48
+recomb_time: 39277.979988
+coal_node: 136
+coal_time: 33066.671774
+
+tree 453: 684241.681286 - 686291.685721
+node out: 309, node in: 201
+case1
+recomb_node: 48
+recomb_time: 33066.671774
+coal_node: 136
+coal_time: 18492.872407
+
+tree 454: 686291.685721 - 693846.781900
+node out: 21, node in: 51
+case3
+recomb_node: 2
+recomb_time: 2107.387503
+coal_node: 48
+coal_time: 4591.030804
+
+tree 455: 693846.781900 - 695012.769358
+node out: 201, node in: 453
+case1
+recomb_node: 136
+recomb_time: 18492.872407
+coal_node: 201
+coal_time: 79254.809555
+
+tree 456: 695012.769358 - 695698.099140
+node out: 136, node in: 128
+case3
+recomb_node: 0
+recomb_time: 11018.948866
+coal_node: 51
+coal_time: 10215.364808
+
+tree 457: 695698.099140 - 698999.574804
+node out: 453, node in: 75
+case2
+recomb_node: 4
+recomb_time: 79254.809555
+coal_node: 51
+coal_time: 6528.513941
+
+tree 458: 698999.574804 - 699972.844613
+node out: 128, node in: 406
+case1
+recomb_node: 0
+recomb_time: 10215.364808
+coal_node: 128
+coal_time: 57326.520139
+
+tree 459: 699972.844613 - 700382.241444
+node out: 48, node in: 214
+case2
+recomb_node: 1
+recomb_time: 4546.027953
+coal_node: 0
+coal_time: 20263.615064
+
+tree 460: 700382.241444 - 701068.294863
+node out: 214, node in: 175
+case3
+recomb_node: 1
+recomb_time: 20263.615064
+coal_node: 75
+coal_time: 15252.163832
+
+tree 461: 701068.294863 - 704975.073390
+node out: 406, node in: 219
+case1
+recomb_node: 0
+recomb_time: 57326.520139
+coal_node: 175
+coal_time: 20564.130707
+
+tree 462: 704975.073390 - 705468.973309
+node out: 75, node in: 392
+case2
+recomb_node: 4
+recomb_time: 6528.513941
+coal_node: 219
+coal_time: 53976.531476
+
+tree 463: 705468.973309 - 707176.339279
+node out: 219, node in: 178
+case2
+recomb_node: 0
+recomb_time: 20564.130707
+coal_node: 4
+coal_time: 15557.356298
+
+tree 464: 707176.339279 - 707318.155958
+node out: 178, node in: 265
+case1
+recomb_node: 0
+recomb_time: 15557.356298
+coal_node: 178
+coal_time: 27264.629147
+
+tree 465: 707318.155958 - 708047.626938
+node out: 392, node in: 349
+case1
+recomb_node: 175
+recomb_time: 53976.531476
+coal_node: 265
+coal_time: 42283.837429
+
+tree 466: 708047.626938 - 709917.118938
+node out: 175, node in: 131
+case1
+recomb_node: 1
+recomb_time: 15252.163832
+coal_node: 51
+coal_time: 10425.756484
+
+tree 467: 709917.118938 - 710399.176625
+node out: 349, node in: 326
+case1
+recomb_node: 265
+recomb_time: 42283.837429
+coal_node: 131
+coal_time: 37717.073339
+
+tree 468: 710399.176625 - 712515.931510
+node out: 131, node in: 317
+case2
+recomb_node: 1
+recomb_time: 10425.756484
+coal_node: 265
+coal_time: 34900.751507
+
+tree 469: 712515.931510 - 714525.497219
+node out: 317, node in: 23
+case2
+recomb_node: 1
+recomb_time: 34900.751507
+coal_node: 0
+coal_time: 2322.444646
+
+tree 470: 714525.497219 - 716153.857232
+node out: 265, node in: 268
+case1
+recomb_node: 4
+recomb_time: 27264.629147
+coal_node: 265
+coal_time: 27445.916722
+
+tree 471: 716153.857232 - 717027.226164
+node out: 268, node in: 137
+case1
+recomb_node: 4
+recomb_time: 27445.916722
+coal_node: 23
+coal_time: 11184.698969
+
+tree 472: 717027.226164 - 717079.222136
+node out: 137, node in: 317
+case1
+recomb_node: 4
+recomb_time: 11184.698969
+coal_node: 137
+coal_time: 34900.751507
+
+tree 473: 717079.222136 - 717843.265440
+node out: 317, node in: 391
+case3
+recomb_node: 23
+recomb_time: 34900.751507
+coal_node: 326
+coal_time: 53744.462385
+
+tree 474: 717843.265440 - 718133.919108
+node out: 391, node in: 323
+case2
+recomb_node: 23
+recomb_time: 53744.462385
+coal_node: 51
+coal_time: 37351.079779
+
+tree 475: 718133.919108 - 718549.203062
+node out: 326, node in: 227
+case2
+recomb_node: 4
+recomb_time: 37717.073339
+coal_node: 23
+coal_time: 22033.588125
+
+tree 476: 718549.203062 - 721485.375129
+node out: 227, node in: 116
+case1
+recomb_node: 4
+recomb_time: 22033.588125
+coal_node: 23
+coal_time: 9573.199146
+
+tree 477: 721485.375129 - 723153.649532
+node out: 323, node in: 304
+case1
+recomb_node: 51
+recomb_time: 37351.079779
+coal_node: 116
+coal_time: 32514.103907
+
+tree 478: 723153.649532 - 723240.640648
+node out: 304, node in: 218
+case1
+recomb_node: 51
+recomb_time: 32514.103907
+coal_node: 116
+coal_time: 20525.499978
+
+tree 479: 723240.640648 - 727090.535855
+node out: 23, node in: 21
+case1
+recomb_node: 0
+recomb_time: 2322.444646
+coal_node: 1
+coal_time: 2107.387503
+
+tree 480: 727090.535855 - 729429.004185
+node out: 116, node in: 326
+case3
+recomb_node: 21
+recomb_time: 9573.199146
+coal_node: 218
+coal_time: 37717.073339
+
+tree 481: 729429.004185 - 729561.482959
+node out: 218, node in: 304
+case1
+recomb_node: 51
+recomb_time: 20525.499978
+coal_node: 218
+coal_time: 32514.103907
+
+tree 482: 729561.482959 - 730853.478827
+node out: 304, node in: 267
+case1
+recomb_node: 4
+recomb_time: 32514.103907
+coal_node: 51
+coal_time: 27419.710164
+
+tree 483: 730853.478827 - 731206.605381
+node out: 326, node in: 231
+case2
+recomb_node: 21
+recomb_time: 37717.073339
+coal_node: 51
+coal_time: 22690.482377
+
+tree 484: 731206.605381 - 731966.714079
+node out: 21, node in: 19
+case2
+recomb_node: 0
+recomb_time: 2107.387503
+coal_node: 2
+coal_time: 2052.682630
+
+tree 485: 731966.714079 - 733731.090960
+node out: 231, node in: 304
+case2
+recomb_node: 51
+recomb_time: 22690.482377
+coal_node: 267
+coal_time: 32514.103907
+
+tree 486: 733731.090960 - 734282.220885
+node out: 267, node in: 143
+case1
+recomb_node: 4
+recomb_time: 27419.710164
+coal_node: 1
+coal_time: 12005.991905
+
+tree 487: 734282.220885 - 736442.020102
+node out: 143, node in: 14
+case1
+recomb_node: 1
+recomb_time: 12005.991905
+coal_node: 4
+coal_time: 1709.605300
+
+tree 488: 736442.020102 - 737406.626748
+node out: 304, node in: 365
+case1
+recomb_node: 51
+recomb_time: 32514.103907
+coal_node: 304
+coal_time: 45406.513104
+
+tree 489: 737406.626748 - 738302.680137
+node out: 365, node in: 272
+case1
+recomb_node: 14
+recomb_time: 45406.513104
+coal_node: 51
+coal_time: 27848.281735
+
+tree 490: 738302.680137 - 739610.714312
+node out: 272, node in: 326
+case1
+recomb_node: 14
+recomb_time: 27848.281735
+coal_node: 272
+coal_time: 37717.073339
+
+tree 491: 739610.714312 - 739720.869982
+node out: 326, node in: 358
+case1
+recomb_node: 14
+recomb_time: 37717.073339
+coal_node: 326
+coal_time: 43471.424193
+
+tree 492: 739720.869982 - 743491.777159
+node out: 358, node in: 225
+case1
+recomb_node: 14
+recomb_time: 43471.424193
+coal_node: 51
+coal_time: 21720.688776
+
+tree 493: 743491.777159 - 744369.631341
+node out: 225, node in: 358
+case1
+recomb_node: 14
+recomb_time: 21720.688776
+coal_node: 225
+coal_time: 43471.424193
+
+tree 494: 744369.631341 - 744807.893584
+node out: 358, node in: 351
+case1
+recomb_node: 14
+recomb_time: 43471.424193
+coal_node: 51
+coal_time: 42495.174589
+
+tree 495: 744807.893584 - 746892.797469
+node out: 351, node in: 376
+case1
+recomb_node: 14
+recomb_time: 42495.174589
+coal_node: 351
+coal_time: 48296.715899
+
+tree 496: 746892.797469 - 748348.331020
+node out: 19, node in: 16
+case2
+recomb_node: 0
+recomb_time: 2052.682630
+coal_node: 14
+coal_time: 1829.193773
+
+tree 497: 748348.331020 - 749091.829581
+node out: 51, node in: 358
+case1
+recomb_node: 3
+recomb_time: 4591.030804
+coal_node: 51
+coal_time: 43471.424193
+
+tree 498: 749091.829581 - 750130.528060
+node out: 358, node in: 23
+case3
+recomb_node: 3
+recomb_time: 43471.424193
+coal_node: 16
+coal_time: 2322.444646
+
+tree 499: 750130.528060 - 750961.783051
+node out: 376, node in: 227
+case1
+recomb_node: 2
+recomb_time: 48296.715899
+coal_node: 23
+coal_time: 22033.588125
+
+tree 500: 750961.783051 - 752309.878765
+node out: 227, node in: 376
+case1
+recomb_node: 2
+recomb_time: 22033.588125
+coal_node: 227
+coal_time: 48296.715899
+
+tree 501: 752309.878765 - 756148.006943
+node out: 376, node in: 413
+case1
+recomb_node: 2
+recomb_time: 48296.715899
+coal_node: 376
+coal_time: 60697.978472
+
+tree 502: 756148.006943 - 756589.611703
+node out: 14, node in: 140
+case2
+recomb_node: 1
+recomb_time: 1709.605300
+coal_node: 23
+coal_time: 11462.018166
+
+tree 503: 756589.611703 - 757329.812915
+node out: 413, node in: 418
+case1
+recomb_node: 2
+recomb_time: 60697.978472
+coal_node: 413
+coal_time: 61690.541269
+
+tree 504: 757329.812915 - 759268.082157
+node out: 418, node in: 203
+case1
+recomb_node: 2
+recomb_time: 61690.541269
+coal_node: 140
+coal_time: 18690.865901
+
+tree 505: 759268.082157 - 759562.768452
+node out: 203, node in: 188
+case1
+recomb_node: 2
+recomb_time: 18690.865901
+coal_node: 140
+coal_time: 16579.926047
+
+tree 506: 759562.768452 - 760114.785694
+node out: 140, node in: 412
+case2
+recomb_node: 1
+recomb_time: 11462.018166
+coal_node: 188
+coal_time: 59939.047097
+
+tree 507: 760114.785694 - 760759.477215
+node out: 412, node in: 469
+case1
+recomb_node: 1
+recomb_time: 59939.047097
+coal_node: 412
+coal_time: 92720.660631
+
+tree 508: 760759.477215 - 761304.385439
+node out: 469, node in: 472
+case1
+recomb_node: 1
+recomb_time: 92720.660631
+coal_node: 469
+coal_time: 95223.125844
+
+tree 509: 761304.385439 - 762160.871123
+node out: 472, node in: 347
+case1
+recomb_node: 1
+recomb_time: 95223.125844
+coal_node: 188
+coal_time: 41572.770659
+
+tree 510: 762160.871123 - 763267.282341
+node out: 188, node in: 282
+case1
+recomb_node: 2
+recomb_time: 16579.926047
+coal_node: 188
+coal_time: 28960.461902
+
+tree 511: 763267.282341 - 768275.645042
+node out: 347, node in: 116
+case2
+recomb_node: 1
+recomb_time: 41572.770659
+coal_node: 2
+coal_time: 9573.199146
+
+tree 512: 768275.645042 - 772382.195986
+node out: 116, node in: 203
+case1
+recomb_node: 1
+recomb_time: 9573.199146
+coal_node: 116
+coal_time: 18690.865901
+
+tree 513: 772382.195986 - 777327.584982
+node out: 16, node in: 11
+case3
+recomb_node: 4
+recomb_time: 1829.193773
+coal_node: 1
+coal_time: 1265.947260
+
+tree 514: 777327.584982 - 778525.222041
+node out: 203, node in: 184
+case1
+recomb_node: 2
+recomb_time: 18690.865901
+coal_node: 11
+coal_time: 16162.584173
+
+tree 515: 778525.222041 - 782179.328795
+node out: 184, node in: 188
+case1
+recomb_node: 2
+recomb_time: 16162.584173
+coal_node: 184
+coal_time: 16579.926047
+
+tree 516: 782179.328795 - 782311.808733
+node out: 282, node in: 332
+case1
+recomb_node: 23
+recomb_time: 28960.461902
+coal_node: 282
+coal_time: 39023.975370
+
+tree 517: 782311.808733 - 782806.331940
+node out: 188, node in: 203
+case1
+recomb_node: 2
+recomb_time: 16579.926047
+coal_node: 188
+coal_time: 18690.865901
+
+tree 518: 782806.331940 - 783820.785532
+node out: 332, node in: 160
+case2
+recomb_node: 23
+recomb_time: 39023.975370
+coal_node: 11
+coal_time: 14151.761940
+
+tree 519: 783820.785532 - 787421.720984
+node out: 160, node in: 196
+case2
+recomb_node: 11
+recomb_time: 14151.761940
+coal_node: 2
+coal_time: 17673.059701
+
+tree 520: 787421.720984 - 791867.471019
+node out: 203, node in: 176
+case2
+recomb_node: 23
+recomb_time: 18690.865901
+coal_node: 11
+coal_time: 15299.634642
+
+tree 521: 791867.471019 - 792028.362582
+node out: 23, node in: 181
+case3
+recomb_node: 0
+recomb_time: 2322.444646
+coal_node: 2
+coal_time: 16078.606123
+
+tree 522: 792028.362582 - 792132.421814
+node out: 181, node in: 174
+case2
+recomb_node: 0
+recomb_time: 16078.606123
+coal_node: 11
+coal_time: 15168.042388
+
+tree 523: 792132.421814 - 792679.824585
+node out: 174, node in: 119
+case1
+recomb_node: 0
+recomb_time: 15168.042388
+coal_node: 11
+coal_time: 9684.768743
+
+tree 524: 792679.824585 - 794795.425794
+node out: 119, node in: 165
+case1
+recomb_node: 0
+recomb_time: 9684.768743
+coal_node: 119
+coal_time: 14410.254472
+
+tree 525: 794795.425794 - 794898.218195
+node out: 176, node in: 188
+case3
+recomb_node: 165
+recomb_time: 15299.634642
+coal_node: 2
+coal_time: 16579.926047
+
+tree 526: 794898.218195 - 795017.838663
+node out: 188, node in: 325
+case3
+recomb_node: 165
+recomb_time: 16579.926047
+coal_node: 196
+coal_time: 37665.605527
+
+tree 527: 795017.838663 - 795984.633452
+node out: 165, node in: 119
+case1
+recomb_node: 0
+recomb_time: 14410.254472
+coal_node: 11
+coal_time: 9684.768743
+
+tree 528: 795984.633452 - 798732.558451
+node out: 196, node in: 186
+case3
+recomb_node: 2
+recomb_time: 17673.059701
+coal_node: 119
+coal_time: 16297.276291
+
+tree 529: 798732.558451 - 799160.883017
+node out: 325, node in: 213
+case1
+recomb_node: 3
+recomb_time: 37665.605527
+coal_node: 186
+coal_time: 20208.264542
+
+tree 530: 799160.883017 - 805783.626578
+node out: 213, node in: 17
+case2
+recomb_node: 3
+recomb_time: 20208.264542
+coal_node: 0
+coal_time: 1854.244359
+
+tree 531: 805783.626578 - 805851.354684
+node out: 186, node in: 179
+case1
+recomb_node: 2
+recomb_time: 16297.276291
+coal_node: 119
+coal_time: 15693.110068
+
+tree 532: 805851.354684 - 808601.338139
+node out: 179, node in: 196
+case1
+recomb_node: 2
+recomb_time: 15693.110068
+coal_node: 179
+coal_time: 17673.059701
+
+tree 533: 808601.338139 - 811184.039528
+node out: 119, node in: 117
+case1
+recomb_node: 11
+recomb_time: 9684.768743
+coal_node: 17
+coal_time: 9648.538899
+
+tree 534: 811184.039528 - 811825.570839
+node out: 117, node in: 105
+case3
+recomb_node: 17
+recomb_time: 9648.538899
+coal_node: 2
+coal_time: 8679.775345
+
+tree 535: 811825.570839 - 813423.618864
+node out: 105, node in: 186
+case3
+recomb_node: 17
+recomb_time: 8679.775345
+coal_node: 11
+coal_time: 16297.276291
+
+tree 536: 813423.618864 - 813633.662838
+node out: 186, node in: 116
+case3
+recomb_node: 17
+recomb_time: 16297.276291
+coal_node: 2
+coal_time: 9573.199146
+
+tree 537: 813633.662838 - 818062.353604
+node out: 116, node in: 176
+case1
+recomb_node: 2
+recomb_time: 9573.199146
+coal_node: 116
+coal_time: 15299.634642
+
+tree 538: 818062.353604 - 820103.679043
+node out: 176, node in: 263
+case3
+recomb_node: 17
+recomb_time: 15299.634642
+coal_node: 196
+coal_time: 27072.905438
+
+tree 539: 820103.679043 - 822744.479827
+node out: 196, node in: 25
+case1
+recomb_node: 11
+recomb_time: 17673.059701
+coal_node: 2
+coal_time: 2357.915798
+
+tree 540: 822744.479827 - 822801.411809
+node out: 11, node in: 228
+case2
+recomb_node: 1
+recomb_time: 1265.947260
+coal_node: 25
+coal_time: 22203.051019
+
+tree 541: 822801.411809 - 830383.493060
+node out: 263, node in: 186
+case2
+recomb_node: 17
+recomb_time: 27072.905438
+coal_node: 25
+coal_time: 16297.276291
+
+tree 542: 830383.493060 - 834737.106654
+node out: 17, node in: 15
+case2
+recomb_node: 0
+recomb_time: 1854.244359
+coal_node: 1
+coal_time: 1752.616342
+
+tree 543: 834737.106654 - 837678.453847
+node out: 15, node in: 125
+case2
+recomb_node: 0
+recomb_time: 1752.616342
+coal_node: 25
+coal_time: 10097.447343
+
+tree 544: 837678.453847 - 837914.937837
+node out: 228, node in: 285
+case1
+recomb_node: 186
+recomb_time: 22203.051019
+coal_node: 228
+coal_time: 29459.246500
+
+tree 545: 837914.937837 - 840354.360836
+node out: 285, node in: 346
+case1
+recomb_node: 1
+recomb_time: 29459.246500
+coal_node: 285
+coal_time: 41544.752557
+
+tree 546: 840354.360836 - 844987.047800
+node out: 346, node in: 399
+case1
+recomb_node: 1
+recomb_time: 41544.752557
+coal_node: 346
+coal_time: 55673.282522
+
+tree 547: 844987.047800 - 848725.205019
+node out: 399, node in: 256
+case1
+recomb_node: 1
+recomb_time: 55673.282522
+coal_node: 186
+coal_time: 25696.816197
+
+tree 548: 848725.205019 - 849075.504544
+node out: 125, node in: 119
+case1
+recomb_node: 0
+recomb_time: 10097.447343
+coal_node: 25
+coal_time: 9684.768743
+
+tree 549: 849075.504544 - 850766.168407
+node out: 256, node in: 150
+case2
+recomb_node: 1
+recomb_time: 25696.816197
+coal_node: 119
+coal_time: 12877.236816
+
+tree 550: 850766.168407 - 850870.588527
+node out: 119, node in: 29
+case1
+recomb_node: 0
+recomb_time: 9684.768743
+coal_node: 25
+coal_time: 2507.095079
+
+tree 551: 850870.588527 - 852980.412741
+node out: 186, node in: 256
+case1
+recomb_node: 3
+recomb_time: 16297.276291
+coal_node: 186
+coal_time: 25696.816197
+
+tree 552: 852980.412741 - 854702.995358
+node out: 256, node in: 429
+case1
+recomb_node: 3
+recomb_time: 25696.816197
+coal_node: 256
+coal_time: 65410.372721
+
+tree 553: 854702.995358 - 855243.666762
+node out: 150, node in: 238
+case2
+recomb_node: 1
+recomb_time: 12877.236816
+coal_node: 3
+coal_time: 23713.494915
+
+tree 554: 855243.666762 - 855323.100895
+node out: 238, node in: 162
+case1
+recomb_node: 1
+recomb_time: 23713.494915
+coal_node: 3
+coal_time: 14373.846667
+
+tree 555: 855323.100895 - 856273.110690
+node out: 429, node in: 355
+case1
+recomb_node: 29
+recomb_time: 65410.372721
+coal_node: 162
+coal_time: 42909.820240
+
+tree 556: 856273.110690 - 859789.038510
+node out: 162, node in: 247
+case1
+recomb_node: 1
+recomb_time: 14373.846667
+coal_node: 162
+coal_time: 24716.482480
+
+tree 557: 859789.038510 - 860295.938528
+node out: 355, node in: 360
+case1
+recomb_node: 29
+recomb_time: 42909.820240
+coal_node: 355
+coal_time: 43596.655544
+
+tree 558: 860295.938528 - 860564.740342
+node out: 360, node in: 305
+case1
+recomb_node: 29
+recomb_time: 43596.655544
+coal_node: 247
+coal_time: 32524.329594
+
+tree 559: 860564.740342 - 861108.517242
+node out: 247, node in: 119
+case2
+recomb_node: 1
+recomb_time: 24716.482480
+coal_node: 29
+coal_time: 9684.768743
+
+tree 560: 861108.517242 - 862199.238935
+node out: 305, node in: 360
+case1
+recomb_node: 3
+recomb_time: 32524.329594
+coal_node: 305
+coal_time: 43596.655544
+
+tree 561: 862199.238935 - 862468.645177
+node out: 119, node in: 162
+case3
+recomb_node: 29
+recomb_time: 9684.768743
+coal_node: 3
+coal_time: 14373.846667
+
+tree 562: 862468.645177 - 867771.412448
+node out: 162, node in: 113
+case1
+recomb_node: 3
+recomb_time: 14373.846667
+coal_node: 29
+coal_time: 9345.236904
+
+tree 563: 867771.412448 - 868527.719022
+node out: 360, node in: 419
+case1
+recomb_node: 1
+recomb_time: 43596.655544
+coal_node: 360
+coal_time: 62423.613799
+
+tree 564: 868527.719022 - 868622.092732
+node out: 113, node in: 119
+case3
+recomb_node: 29
+recomb_time: 9345.236904
+coal_node: 1
+coal_time: 9684.768743
+
+tree 565: 868622.092732 - 869179.978471
+node out: 119, node in: 113
+case3
+recomb_node: 29
+recomb_time: 9684.768743
+coal_node: 3
+coal_time: 9345.236904
+
+tree 566: 869179.978471 - 869273.004092
+node out: 419, node in: 468
+case1
+recomb_node: 1
+recomb_time: 62423.613799
+coal_node: 419
+coal_time: 92097.512368
+
+tree 567: 869273.004092 - 870566.439086
+node out: 468, node in: 414
+case1
+recomb_node: 1
+recomb_time: 92097.512368
+coal_node: 113
+coal_time: 61067.718137
+
+tree 568: 870566.439086 - 871215.224236
+node out: 414, node in: 419
+case1
+recomb_node: 1
+recomb_time: 61067.718137
+coal_node: 414
+coal_time: 62423.613799
+
+tree 569: 871215.224236 - 873228.923155
+node out: 419, node in: 414
+case1
+recomb_node: 1
+recomb_time: 62423.613799
+coal_node: 113
+coal_time: 61067.718137
+
+tree 570: 873228.923155 - 875832.562306
+node out: 414, node in: 425
+case1
+recomb_node: 1
+recomb_time: 61067.718137
+coal_node: 414
+coal_time: 64791.499741
+
+tree 571: 875832.562306 - 878276.210948
+node out: 425, node in: 353
+case1
+recomb_node: 1
+recomb_time: 64791.499741
+coal_node: 113
+coal_time: 42839.368361
+
+tree 572: 878276.210948 - 879339.118460
+node out: 113, node in: 66
+case3
+recomb_node: 29
+recomb_time: 9345.236904
+coal_node: 1
+coal_time: 5475.314003
+
+tree 573: 879339.118460 - 880088.828011
+node out: 25, node in: 246
+case2
+recomb_node: 2
+recomb_time: 2357.915798
+coal_node: 66
+coal_time: 24516.506477
+
+tree 574: 880088.828011 - 880916.464813
+node out: 353, node in: 188
+case2
+recomb_node: 3
+recomb_time: 42839.368361
+coal_node: 66
+coal_time: 16579.926047
+
+tree 575: 880916.464813 - 886090.826682
+node out: 29, node in: 60
+case1
+recomb_node: 0
+recomb_time: 2507.095079
+coal_node: 29
+coal_time: 5134.794444
+
+tree 576: 886090.826682 - 886423.730731
+node out: 60, node in: 63
+case1
+recomb_node: 0
+recomb_time: 5134.794444
+coal_node: 60
+coal_time: 5324.306273
+
+tree 577: 886423.730731 - 888104.242712
+node out: 188, node in: 158
+case1
+recomb_node: 3
+recomb_time: 16579.926047
+coal_node: 66
+coal_time: 13973.509932
+
+tree 578: 888104.242712 - 889684.299913
+node out: 63, node in: 26
+case2
+recomb_node: 0
+recomb_time: 5324.306273
+coal_node: 1
+coal_time: 2401.103207
+
+tree 579: 889684.299913 - 890001.336087
+node out: 246, node in: 381
+case1
+recomb_node: 2
+recomb_time: 24516.506477
+coal_node: 246
+coal_time: 50144.461247
+
+tree 580: 890001.336087 - 890411.274948
+node out: 381, node in: 457
+case1
+recomb_node: 2
+recomb_time: 50144.461247
+coal_node: 381
+coal_time: 85082.538034
+
+tree 581: 890411.274948 - 891771.035011
+node out: 26, node in: 110
+case3
+recomb_node: 1
+recomb_time: 2401.103207
+coal_node: 2
+coal_time: 9038.974018
+
+tree 582: 891771.035011 - 891783.523115
+node out: 457, node in: 448
+case1
+recomb_node: 158
+recomb_time: 85082.538034
+coal_node: 110
+coal_time: 74543.924322
+
+tree 583: 891783.523115 - 892158.944600
+node out: 110, node in: 103
+case2
+recomb_node: 1
+recomb_time: 9038.974018
+coal_node: 66
+coal_time: 8587.158756
+
+tree 584: 892158.944600 - 892594.885056
+node out: 448, node in: 461
+case1
+recomb_node: 158
+recomb_time: 74543.924322
+coal_node: 448
+coal_time: 90981.782475
+
+tree 585: 892594.885056 - 893109.607253
+node out: 66, node in: 23
+case3
+recomb_node: 0
+recomb_time: 5475.314003
+coal_node: 3
+coal_time: 2322.444646
+
+tree 586: 893109.607253 - 894121.616821
+node out: 461, node in: 444
+case1
+recomb_node: 2
+recomb_time: 90981.782475
+coal_node: 158
+coal_time: 72201.517995
+
+tree 587: 894121.616821 - 897831.507469
+node out: 444, node in: 448
+case1
+recomb_node: 2
+recomb_time: 72201.517995
+coal_node: 444
+coal_time: 74543.924322
+
+tree 588: 897831.507469 - 898722.746619
+node out: 103, node in: 220
+case2
+recomb_node: 1
+recomb_time: 8587.158756
+coal_node: 2
+coal_time: 20650.886287
+
+tree 589: 898722.746619 - 900080.364640
+node out: 448, node in: 445
+case1
+recomb_node: 158
+recomb_time: 74543.924322
+coal_node: 220
+coal_time: 72545.079041
+
+tree 590: 900080.364640 - 901231.054194
+node out: 445, node in: 300
+case1
+recomb_node: 158
+recomb_time: 72545.079041
+coal_node: 220
+coal_time: 31551.040869
+
+tree 591: 901231.054194 - 902364.856541
+node out: 220, node in: 173
+case1
+recomb_node: 1
+recomb_time: 20650.886287
+coal_node: 2
+coal_time: 15158.969943
+
+tree 592: 902364.856541 - 904615.812447
+node out: 158, node in: 287
+case3
+recomb_node: 4
+recomb_time: 13973.509932
+coal_node: 173
+coal_time: 29775.033473
+
+tree 593: 904615.812447 - 905443.443895
+node out: 287, node in: 104
+case2
+recomb_node: 4
+recomb_time: 29775.033473
+coal_node: 2
+coal_time: 8673.957771
+
+tree 594: 905443.443895 - 907359.072684
+node out: 173, node in: 217
+case1
+recomb_node: 1
+recomb_time: 15158.969943
+coal_node: 173
+coal_time: 20489.893413
+
+tree 595: 907359.072684 - 909997.666699
+node out: 104, node in: 220
+case3
+recomb_node: 4
+recomb_time: 8673.957771
+coal_node: 217
+coal_time: 20650.886287
+
+tree 596: 909997.666699 - 910716.134103
+node out: 300, node in: 207
+case2
+recomb_node: 23
+recomb_time: 31551.040869
+coal_node: 2
+coal_time: 19399.172675
+
+tree 597: 910716.134103 - 911247.974008
+node out: 217, node in: 300
+case3
+recomb_node: 207
+recomb_time: 20489.893413
+coal_node: 220
+coal_time: 31551.040869
+
+tree 598: 911247.974008 - 911748.631138
+node out: 220, node in: 80
+case1
+recomb_node: 4
+recomb_time: 20650.886287
+coal_node: 1
+coal_time: 6772.045547
+
+tree 599: 911748.631138 - 913262.438475
+node out: 207, node in: 314
+case3
+recomb_node: 23
+recomb_time: 19399.172675
+coal_node: 300
+coal_time: 34432.933709
+
+tree 600: 913262.438475 - 915159.176317
+node out: 300, node in: 119
+case1
+recomb_node: 80
+recomb_time: 31551.040869
+coal_node: 2
+coal_time: 9684.768743
+
+tree 601: 915159.176317 - 916343.403029
+node out: 119, node in: 168
+case3
+recomb_node: 80
+recomb_time: 9684.768743
+coal_node: 23
+coal_time: 14536.827048
+
+tree 602: 916343.403029 - 916890.830946
+node out: 80, node in: 217
+case2
+recomb_node: 1
+recomb_time: 6772.045547
+coal_node: 2
+coal_time: 20489.893413
+
+tree 603: 916890.830946 - 917638.006601
+node out: 314, node in: 485
+case1
+recomb_node: 168
+recomb_time: 34432.933709
+coal_node: 314
+coal_time: 113349.839339
+
+tree 604: 917638.006601 - 918073.570104
+node out: 168, node in: 96
+case2
+recomb_node: 23
+recomb_time: 14536.827048
+coal_node: 1
+coal_time: 8058.238113
+
+tree 605: 918073.570104 - 918141.203215
+node out: 485, node in: 455
+case1
+recomb_node: 217
+recomb_time: 113349.839339
+coal_node: 4
+coal_time: 84500.693049
+
+tree 606: 918141.203215 - 918181.746713
+node out: 455, node in: 485
+case1
+recomb_node: 4
+recomb_time: 84500.693049
+coal_node: 455
+coal_time: 113349.839339
+
+tree 607: 918181.746713 - 918186.873179
+node out: 96, node in: 111
+case2
+recomb_node: 1
+recomb_time: 8058.238113
+coal_node: 2
+coal_time: 9180.253365
+
+tree 608: 918186.873179 - 918309.624055
+node out: 485, node in: 487
+case1
+recomb_node: 4
+recomb_time: 113349.839339
+coal_node: 485
+coal_time: 121484.269385
+
+tree 609: 918309.624055 - 919061.544100
+node out: 487, node in: 82
+case2
+recomb_node: 4
+recomb_time: 121484.269385
+coal_node: 23
+coal_time: 6994.848918
+
+tree 610: 919061.544100 - 919474.898120
+node out: 111, node in: 18
+case1
+recomb_node: 1
+recomb_time: 9180.253365
+coal_node: 2
+coal_time: 1917.749400
+
+tree 611: 919474.898120 - 920092.458352
+node out: 217, node in: 269
+case1
+recomb_node: 82
+recomb_time: 20489.893413
+coal_node: 217
+coal_time: 27623.168423
+
+tree 612: 920092.458352 - 921794.666192
+node out: 269, node in: 370
+case1
+recomb_node: 18
+recomb_time: 27623.168423
+coal_node: 269
+coal_time: 47032.539455
+
+tree 613: 921794.666192 - 925422.247948
+node out: 370, node in: 402
+case1
+recomb_node: 18
+recomb_time: 47032.539455
+coal_node: 370
+coal_time: 56819.337919
+
+tree 614: 925422.247948 - 927111.937647
+node out: 23, node in: 168
+case2
+recomb_node: 0
+recomb_time: 2322.444646
+coal_node: 18
+coal_time: 14536.827048
+
+tree 615: 927111.937647 - 927257.738525
+node out: 82, node in: 84
+case1
+recomb_node: 4
+recomb_time: 6994.848918
+coal_node: 82
+coal_time: 7105.158706
+
+tree 616: 927257.738525 - 927579.599649
+node out: 402, node in: 324
+case1
+recomb_node: 168
+recomb_time: 56819.337919
+coal_node: 84
+coal_time: 37423.044367
+
+tree 617: 927579.599649 - 929128.000263
+node out: 324, node in: 402
+case1
+recomb_node: 84
+recomb_time: 37423.044367
+coal_node: 324
+coal_time: 56819.337919
+
+tree 618: 929128.000263 - 929723.699095
+node out: 402, node in: 403
+case1
+recomb_node: 84
+recomb_time: 56819.337919
+coal_node: 402
+coal_time: 56819.551037
+
+tree 619: 929723.699095 - 931594.705892
+node out: 168, node in: 148
+case2
+recomb_node: 0
+recomb_time: 14536.827048
+coal_node: 84
+coal_time: 12765.888628
+
+tree 620: 931594.705892 - 931953.468810
+node out: 148, node in: 479
+case2
+recomb_node: 0
+recomb_time: 12765.888628
+coal_node: 403
+coal_time: 102490.922964
+
+tree 621: 931953.468810 - 932760.019771
+node out: 479, node in: 481
+case1
+recomb_node: 0
+recomb_time: 102490.922964
+coal_node: 479
+coal_time: 105097.040848
+
+tree 622: 932760.019771 - 933509.639449
+node out: 481, node in: 151
+case2
+recomb_node: 0
+recomb_time: 105097.040848
+coal_node: 18
+coal_time: 12922.548240
+
+tree 623: 933509.639449 - 933626.469442
+node out: 403, node in: 255
+case1
+recomb_node: 84
+recomb_time: 56819.551037
+coal_node: 151
+coal_time: 25512.084857
+
+tree 624: 933626.469442 - 934427.686253
+node out: 255, node in: 449
+case1
+recomb_node: 84
+recomb_time: 25512.084857
+coal_node: 255
+coal_time: 75892.777241
+
+tree 625: 934427.686253 - 935532.997813
+node out: 18, node in: 127
+case2
+recomb_node: 1
+recomb_time: 1917.749400
+coal_node: 0
+coal_time: 10122.303298
+
+tree 626: 935532.997813 - 935759.986270
+node out: 127, node in: 228
+case3
+recomb_node: 1
+recomb_time: 10122.303298
+coal_node: 84
+coal_time: 22203.051019
+
+tree 627: 935759.986270 - 935951.829640
+node out: 84, node in: 100
+case2
+recomb_node: 3
+recomb_time: 7105.158706
+coal_node: 0
+coal_time: 8434.803424
+
+tree 628: 935951.829640 - 936498.892246
+node out: 449, node in: 403
+case1
+recomb_node: 151
+recomb_time: 75892.777241
+coal_node: 228
+coal_time: 56819.551037
+
+tree 629: 936498.892246 - 937527.750837
+node out: 403, node in: 424
+case1
+recomb_node: 151
+recomb_time: 56819.551037
+coal_node: 403
+coal_time: 64598.584449
+
+tree 630: 937527.750837 - 938370.855744
+node out: 228, node in: 255
+case2
+recomb_node: 1
+recomb_time: 22203.051019
+coal_node: 151
+coal_time: 25512.084857
+
+tree 631: 938370.855744 - 938747.397377
+node out: 255, node in: 279
+case2
+recomb_node: 1
+recomb_time: 25512.084857
+coal_node: 4
+coal_time: 28295.307664
+
+tree 632: 938747.397377 - 940364.544964
+node out: 151, node in: 86
+case2
+recomb_node: 2
+recomb_time: 12922.548240
+coal_node: 0
+coal_time: 7191.554369
+
+tree 633: 940364.544964 - 940723.564229
+node out: 424, node in: 478
+case1
+recomb_node: 279
+recomb_time: 64598.584449
+coal_node: 424
+coal_time: 100958.774890
+
+tree 634: 940723.564229 - 941164.143137
+node out: 478, node in: 474
+case1
+recomb_node: 100
+recomb_time: 100958.774890
+coal_node: 279
+coal_time: 97013.078424
+
+tree 635: 941164.143137 - 941165.347803
+node out: 474, node in: 489
+case1
+recomb_node: 100
+recomb_time: 97013.078424
+coal_node: 474
+coal_time: 131100.923473
+
+tree 636: 941165.347803 - 941555.818529
+node out: 489, node in: 421
+case1
+recomb_node: 100
+recomb_time: 131100.923473
+coal_node: 279
+coal_time: 62903.719639
+
+tree 637: 941555.818529 - 941700.023585
+node out: 421, node in: 489
+case1
+recomb_node: 100
+recomb_time: 62903.719639
+coal_node: 421
+coal_time: 131100.923473
+
+tree 638: 941700.023585 - 941780.196256
+node out: 489, node in: 465
+case1
+recomb_node: 100
+recomb_time: 131100.923473
+coal_node: 279
+coal_time: 91821.923513
+
+tree 639: 941780.196256 - 942169.230185
+node out: 465, node in: 322
+case1
+recomb_node: 100
+recomb_time: 91821.923513
+coal_node: 279
+coal_time: 36251.848108
+
+tree 640: 942169.230185 - 942209.895920
+node out: 279, node in: 253
+case3
+recomb_node: 4
+recomb_time: 28295.307664
+coal_node: 100
+coal_time: 25074.920670
+
+tree 641: 942209.895920 - 942549.868473
+node out: 253, node in: 35
+case2
+recomb_node: 4
+recomb_time: 25074.920670
+coal_node: 2
+coal_time: 3234.514238
+
+tree 642: 942549.868473 - 942619.250608
+node out: 322, node in: 356
+case1
+recomb_node: 1
+recomb_time: 36251.848108
+coal_node: 322
+coal_time: 43310.194434
+
+tree 643: 942619.250608 - 943033.408826
+node out: 86, node in: 253
+case3
+recomb_node: 35
+recomb_time: 7191.554369
+coal_node: 100
+coal_time: 25074.920670
+
+tree 644: 943033.408826 - 943289.560485
+node out: 253, node in: 262
+case2
+recomb_node: 35
+recomb_time: 25074.920670
+coal_node: 1
+coal_time: 26997.858826
+
+tree 645: 943289.560485 - 944390.657345
+node out: 356, node in: 372
+case1
+recomb_node: 100
+recomb_time: 43310.194434
+coal_node: 356
+coal_time: 47769.527922
+
+tree 646: 944390.657345 - 944604.889244
+node out: 262, node in: 200
+case1
+recomb_node: 1
+recomb_time: 26997.858826
+coal_node: 35
+coal_time: 18408.746840
+
+tree 647: 944604.889244 - 945403.339096
+node out: 372, node in: 449
+case1
+recomb_node: 100
+recomb_time: 47769.527922
+coal_node: 372
+coal_time: 75892.777241
+
+tree 648: 945403.339096 - 947320.136229
+node out: 100, node in: 262
+case3
+recomb_node: 0
+recomb_time: 8434.803424
+coal_node: 200
+coal_time: 26997.858826
+
+tree 649: 947320.136229 - 947634.779370
+node out: 449, node in: 478
+case1
+recomb_node: 3
+recomb_time: 75892.777241
+coal_node: 449
+coal_time: 100958.774890
+
+tree 650: 947634.779370 - 948922.401748
+node out: 478, node in: 480
+case1
+recomb_node: 3
+recomb_time: 100958.774890
+coal_node: 478
+coal_time: 103997.043481
+
+tree 651: 948922.401748 - 949509.639747
+node out: 262, node in: 279
+case1
+recomb_node: 0
+recomb_time: 26997.858826
+coal_node: 262
+coal_time: 28295.307664
+
+tree 652: 949509.639747 - 950233.422674
+node out: 279, node in: 226
+case2
+recomb_node: 0
+recomb_time: 28295.307664
+coal_node: 3
+coal_time: 21929.768490
+
+tree 653: 950233.422674 - 953080.968688
+node out: 200, node in: 279
+case1
+recomb_node: 1
+recomb_time: 18408.746840
+coal_node: 200
+coal_time: 28295.307664
+
+tree 654: 953080.968688 - 953779.251770
+node out: 226, node in: 200
+case2
+recomb_node: 0
+recomb_time: 21929.768490
+coal_node: 1
+coal_time: 18408.746840
+
+tree 655: 953779.251770 - 954143.560481
+node out: 480, node in: 476
+case1
+recomb_node: 279
+recomb_time: 103997.043481
+coal_node: 3
+coal_time: 100292.364156
+
+tree 656: 954143.560481 - 954622.434907
+node out: 200, node in: 122
+case3
+recomb_node: 1
+recomb_time: 18408.746840
+coal_node: 35
+coal_time: 9937.112288
+
+tree 657: 954622.434907 - 954655.764847
+node out: 476, node in: 471
+case1
+recomb_node: 3
+recomb_time: 100292.364156
+coal_node: 279
+coal_time: 94818.092900
+
+tree 658: 954655.764847 - 955859.496714
+node out: 471, node in: 476
+case1
+recomb_node: 3
+recomb_time: 94818.092900
+coal_node: 471
+coal_time: 100292.364156
+
+tree 659: 955859.496714 - 956113.402954
+node out: 279, node in: 169
+case3
+recomb_node: 122
+recomb_time: 28295.307664
+coal_node: 3
+coal_time: 14627.525176
+
+tree 660: 956113.402954 - 956710.929507
+node out: 476, node in: 443
+case1
+recomb_node: 0
+recomb_time: 100292.364156
+coal_node: 169
+coal_time: 72112.568615
+
+tree 661: 956710.929507 - 959149.312917
+node out: 169, node in: 200
+case2
+recomb_node: 3
+recomb_time: 14627.525176
+coal_node: 0
+coal_time: 18408.746840
+
+tree 662: 959149.312917 - 960347.545557
+node out: 122, node in: 73
+case3
+recomb_node: 35
+recomb_time: 9937.112288
+coal_node: 0
+coal_time: 6221.018367
+
+tree 663: 960347.545557 - 960348.621002
+node out: 73, node in: 142
+case3
+recomb_node: 35
+recomb_time: 6221.018367
+coal_node: 3
+coal_time: 11853.050509
+
+tree 664: 960348.621002 - 961003.829949
+node out: 443, node in: 424
+case1
+recomb_node: 200
+recomb_time: 72112.568615
+coal_node: 1
+coal_time: 64598.584449
+
+tree 665: 961003.829949 - 961226.608828
+node out: 424, node in: 398
+case1
+recomb_node: 1
+recomb_time: 64598.584449
+coal_node: 200
+coal_time: 55336.019566
+
+tree 666: 961226.608828 - 962331.762063
+node out: 398, node in: 443
+case1
+recomb_node: 1
+recomb_time: 55336.019566
+coal_node: 398
+coal_time: 72112.568615
+
+tree 667: 962331.762063 - 962775.913524
+node out: 443, node in: 237
+case1
+recomb_node: 1
+recomb_time: 72112.568615
+coal_node: 200
+coal_time: 23404.684185
+
+tree 668: 962775.913524 - 963724.898166
+node out: 142, node in: 279
+case3
+recomb_node: 35
+recomb_time: 11853.050509
+coal_node: 237
+coal_time: 28295.307664
+
+tree 669: 963724.898166 - 966214.712701
+node out: 279, node in: 122
+case2
+recomb_node: 35
+recomb_time: 28295.307664
+coal_node: 1
+coal_time: 9937.112288
+
+tree 670: 966214.712701 - 966580.173924
+node out: 200, node in: 417
+case2
+recomb_node: 0
+recomb_time: 18408.746840
+coal_node: 237
+coal_time: 61327.901154
+
+tree 671: 966580.173924 - 967797.790879
+node out: 417, node in: 456
+case1
+recomb_node: 0
+recomb_time: 61327.901154
+coal_node: 417
+coal_time: 84668.568860
+
+tree 672: 967797.790879 - 968253.230203
+node out: 456, node in: 213
+case2
+recomb_node: 0
+recomb_time: 84668.568860
+coal_node: 122
+coal_time: 20208.264542
+
+tree 673: 968253.230203 - 968476.996517
+node out: 35, node in: 10
+case2
+recomb_node: 2
+recomb_time: 3234.514238
+coal_node: 3
+coal_time: 1010.201001
+
+tree 674: 968476.996517 - 969163.167050
+node out: 237, node in: 339
+case1
+recomb_node: 213
+recomb_time: 23404.684185
+coal_node: 237
+coal_time: 40544.028034
+
+tree 675: 969163.167050 - 969191.267846
+node out: 339, node in: 318
+case1
+recomb_node: 10
+recomb_time: 40544.028034
+coal_node: 213
+coal_time: 35134.782996
+
+tree 676: 969191.267846 - 970025.794341
+node out: 318, node in: 362
+case1
+recomb_node: 10
+recomb_time: 35134.782996
+coal_node: 318
+coal_time: 44348.510958
+
+tree 677: 970025.794341 - 970398.471451
+node out: 213, node in: 254
+case1
+recomb_node: 0
+recomb_time: 20208.264542
+coal_node: 213
+coal_time: 25404.581604
+
+tree 678: 970398.471451 - 972608.773264
+node out: 254, node in: 198
+case1
+recomb_node: 0
+recomb_time: 25404.581604
+coal_node: 122
+coal_time: 17868.384895
+
+tree 679: 972608.773264 - 981623.839816
+node out: 198, node in: 245
+case2
+recomb_node: 0
+recomb_time: 17868.384895
+coal_node: 10
+coal_time: 24454.541898
+
+tree 680: 981623.839816 - 982631.587885
+node out: 362, node in: 454
+case1
+recomb_node: 122
+recomb_time: 44348.510958
+coal_node: 362
+coal_time: 81849.262617
+
+tree 681: 982631.587885 - 985841.846090
+node out: 454, node in: 440
+case1
+recomb_node: 122
+recomb_time: 81849.262617
+coal_node: 245
+coal_time: 68628.416755
+
+tree 682: 985841.846090 - 987378.427756
+node out: 440, node in: 454
+case1
+recomb_node: 122
+recomb_time: 68628.416755
+coal_node: 440
+coal_time: 81849.262617
+
+tree 683: 987378.427756 - 987397.789254
+node out: 245, node in: 194
+case1
+recomb_node: 0
+recomb_time: 24454.541898
+coal_node: 10
+coal_time: 17327.437618
+
+tree 684: 987397.789254 - 987822.955006
+node out: 454, node in: 382
+case1
+recomb_node: 122
+recomb_time: 81849.262617
+coal_node: 194
+coal_time: 50489.530537
+
+tree 685: 987822.955006 - 987964.782861
+node out: 122, node in: 47
+case3
+recomb_node: 4
+recomb_time: 9937.112288
+coal_node: 10
+coal_time: 4542.712403
+
+tree 686: 987964.782861 - 989469.053687
+node out: 194, node in: 255
+case3
+recomb_node: 47
+recomb_time: 17327.437618
+coal_node: 1
+coal_time: 25512.084857
+
+tree 687: 989469.053687 - 990225.723477
+node out: 255, node in: 245
+case2
+recomb_node: 1
+recomb_time: 25512.084857
+coal_node: 0
+coal_time: 24454.541898
+
+tree 688: 990225.723477 - 990329.715188
+node out: 245, node in: 306
+case1
+recomb_node: 0
+recomb_time: 24454.541898
+coal_node: 245
+coal_time: 32696.797258
+
+tree 689: 990329.715188 - 991723.568875
+node out: 382, node in: 395
+case1
+recomb_node: 47
+recomb_time: 50489.530537
+coal_node: 382
+coal_time: 54925.483013
+
+tree 690: 991723.568875 - 993385.019943
+node out: 306, node in: 23
+case3
+recomb_node: 1
+recomb_time: 32696.797258
+coal_node: 10
+coal_time: 2322.444646
+
+tree 691: 993385.019943 - 996002.027764
+node out: 395, node in: 338
+case1
+recomb_node: 47
+recomb_time: 54925.483013
+coal_node: 0
+coal_time: 40289.664005
+
+tree 692: 996002.027764 - 999315.396650
+node out: 338, node in: 451
+case1
+recomb_node: 0
+recomb_time: 40289.664005
+coal_node: 338
+coal_time: 77349.301264
+
+tree 693: 999315.396650 - 999513.598392
+node out: 451, node in: 422
+case1
+recomb_node: 0
+recomb_time: 77349.301264
+coal_node: 47
+coal_time: 63241.451920
+
+tree 694: 999513.598392 - 1000000.000000
+node out: 422, node in: 395
+case1
+recomb_node: 0
+recomb_time: 63241.451920
+coal_node: 47
+coal_time: 54925.483013
+finish reading tree sequence file. 
+Number of leaves: 5
+Number of local trees: 695
+max memory usage: 13.2 MB
+
+number of leaves in trees: 5
+Climb Search (0 iterations)
+-----------------------------
+
+--------------resample_arg_all----------------
+saving first ARG...
+start: 0, end: 1206
+start: 1206, end: 5308
+start: 5308, end: 5538
+start: 5538, end: 10112
+start: 10112, end: 10295
+start: 10295, end: 17555
+start: 17555, end: 28421
+start: 28421, end: 30227
+start: 30227, end: 33038
+start: 33038, end: 36352
+start: 36352, end: 37213
+start: 37213, end: 37436
+start: 37436, end: 38091
+start: 38091, end: 39077
+start: 39077, end: 40747
+start: 40747, end: 43809
+start: 43809, end: 44090
+start: 44090, end: 44574
+start: 44574, end: 44577
+start: 44577, end: 44881
+start: 44881, end: 44937
+start: 44937, end: 46768
+start: 46768, end: 47737
+start: 47737, end: 48372
+start: 48372, end: 49536
+start: 49536, end: 51615

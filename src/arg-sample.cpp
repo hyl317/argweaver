@@ -1170,10 +1170,13 @@ void resample_arg_all(ArgModel *model, Sequences *sequences, LocalTrees *trees,
         iter = config->resume_iter + 1;
     else {
         // save first ARG (iter=0)
+        printLog(LOG_LOW, "saving first ARG...\n");
         print_stats(config->stats_file, "resample", 0, model, sequences, trees,
                     sites_mapping, config, maskmap_orig);
+        printLog(LOG_LOW, "print stats done\n");
         log_local_trees(model, sequences, trees, sites_mapping, config, 0,
                         invisible_recomb_pos, invisible_recombs);
+        printLog(LOG_LOW, "log_local_trees done\n");
         if (config->sample_phase_step > 0)
             log_sequences(trees->chrom, sequences, config, sites_mapping, 0);
     }

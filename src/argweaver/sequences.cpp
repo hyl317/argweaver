@@ -595,6 +595,7 @@ bool read_vcf(FILE *infile, Sites *sites, double min_qual,
                     if (keep_ind[i]) {
                         nseqs += 2;
                         for (int j=0; j < 2; j++) {
+                            // append _1 and _2 suffix to distinguish two haplotypes of a diploid individual
                             char tmp[sample_names[i].length()+3];
                             sprintf(tmp, "%s_%i", sample_names[i].c_str(), j+1);
                             sites->names.push_back(string(tmp));

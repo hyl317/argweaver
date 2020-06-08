@@ -1191,6 +1191,10 @@ int count_noncompat(const LocalTrees *trees, const char * const *seqs,
     {
         int start = end;
         end += it->blocklen;
+
+        //for my debugging purposes
+        printLog(LOG_LOW, "start: %d, end: %d\n", start, end);
+
         if (end <= start_coord) continue;
         if (start >= end_coord) break;
         LocalTree *tree = it->tree;
