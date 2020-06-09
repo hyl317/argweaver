@@ -435,9 +435,18 @@ void arghmm_forward_alg(const LocalTrees *trees, const ArgModel *model,
 #endif
 
     double **fw = forward->get_table();
+#ifdef DEBUG
+    int count = 0;
+#endif
+
     // forward algorithm over local trees
     for (matrix_iter->begin(); matrix_iter->more(); matrix_iter->next()) {
         // get block information
+    
+#ifdef DEBUG
+        printLog(LOG_LOW, "arghmm forward alg: tree %d\n", count++);
+#endif
+
         tree = matrix_iter->get_tree_spr()->tree;
         ArgHmmMatrices &matrices = matrix_iter->ref_matrices(phase_pr);
         int pos = matrix_iter->get_block_start();

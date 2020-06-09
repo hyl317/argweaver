@@ -835,9 +835,6 @@ void make_sequences_from_sites(const Sites *sites, Sequences *sequences,
     bool have_pops = ( sites->pops.size() > 0);
     bool have_base_probs = ( sites->base_probs.size() > 0 );
 
-    //for my debugging purposes
-    printLog(LOG_LOW, "in make_sequence_from_sites, seqlen: %d, seq start: %d", seqlen, start);
-
     sequences->clear();
     sequences->set_owned(true);
 

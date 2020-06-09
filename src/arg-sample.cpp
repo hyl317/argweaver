@@ -1011,8 +1011,9 @@ bool seq_sample_arg(ArgModel *model, Sequences *sequences, LocalTrees *trees,
                     const TrackNullValue *maskmap_orig)
 {
     //for debugging purpose only
+#ifdef DEBUG
     printLog(LOG_LOW, "number of leaves in trees: %d\n", trees->get_num_leaves());
-
+#endif
     if (trees->get_num_leaves() < sequences->get_num_seqs()) {
         printLog(LOG_LOW, "Sequentially Sample Initial ARG (%d sequences)\n",
                  sequences->get_num_seqs());
@@ -1152,7 +1153,9 @@ void resample_arg_all(ArgModel *model, Sequences *sequences, LocalTrees *trees,
 {
 
     //for debugging purpose
+#ifdef DEBUG
     printLog(LOG_LOW, "--------------resample_arg_all----------------\n");
+#endif
 
     // setup search options
     bool do_leaf[config->niters+1];
@@ -1209,14 +1212,13 @@ void resample_arg_all(ArgModel *model, Sequences *sequences, LocalTrees *trees,
         do_leaf[i] = ( frand() < frac_leaf );
 #endif
 
-	if ( ! config->no_sample_arg) {
-	    if (config->gibbs)
-		resample_arg(model, sequences, trees);
-	    else
-		resample_arg_mcmc_all(model, sequences, trees, do_leaf[i],
-				      window, niters, heat,
-                                      config->no_resample_mig);
-	}
+	    if ( ! config->no_sample_arg) {
+	        if (config->gibbs)
+		    resample_arg(model, sequences, trees);
+	        else
+		    resample_arg_mcmc_all(model, sequences, trees, do_leaf[i],
+				        window, niters, heat, config->no_resample_mig);
+	    }
 
 
 

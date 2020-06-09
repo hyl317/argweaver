@@ -1453,7 +1453,6 @@ void add_spr_branch(const LocalTree *tree, const LocalTree *last_tree,
                 mapping[last_newcoal] = -1;
                 fix_mapping = false;
             } // if last_state.time > spr->coal_time do nothing
-
         }
     } else if (recoal == newcoal) {
         if (mapping[last_state.node] == node2) {
