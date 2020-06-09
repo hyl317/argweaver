@@ -2126,15 +2126,15 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
                printLog(LOG_LOW, "consecutive trees are not reachable by one SPR");
                exit (EXIT_FAILURE);
             }
+            tsk_tree_free(&prev_tree); //don't forget to free the copied tree
         }
         prev_map = map<tsk_id_t, int>(curr_map); // copy constructor
-        tsk_tree_free(&prev_tree);
         tsk_tree_copy(&tree, &prev_tree, 0);
         trees->trees.push_back(LocalTreeSpr(localtree, spr, end - start, mapping));
     }
 
     check_tsk_error(iter);
-    tsk_tree_free(&prev_tree);
+    tsk_tree_free(&prev_tree); //don't forget to free the copied tree
     tsk_tree_free(&tree);
     tsk_treeseq_free(&ts);
 
