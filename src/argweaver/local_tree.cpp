@@ -2060,10 +2060,10 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
         spr->coal_time = find_time(coal_time, times, ntimes);
     
     #ifdef DEBUG
-        printLog(LOG_LOW, "recomb_node: %d\n", recomb_node);
-        printLog(LOG_LOW, "recomb_time: %lf\n", recomb_time);
-        printLog(LOG_LOW, "coal_node: %d\n", coal_node);
-        printLog(LOG_LOW, "coal_time: %lf\n", coal_time);
+        //printLog(LOG_LOW, "recomb_node: %d\n", recomb_node);
+        //printLog(LOG_LOW, "recomb_time: %lf\n", recomb_time);
+        //printLog(LOG_LOW, "coal_node: %d\n", coal_node);
+        //printLog(LOG_LOW, "coal_time: %lf\n", coal_time);
     #endif
 
     }

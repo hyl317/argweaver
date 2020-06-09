@@ -444,7 +444,7 @@ void arghmm_forward_alg(const LocalTrees *trees, const ArgModel *model,
         // get block information
     
 #ifdef DEBUG
-        printLog(LOG_LOW, "arghmm forward alg: tree %d\n", count++);
+        //printLog(LOG_LOW, "arghmm forward alg: tree %d\n", count++);
 #endif
 
         tree = matrix_iter->get_tree_spr()->tree;

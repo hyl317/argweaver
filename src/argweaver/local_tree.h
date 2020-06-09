@@ -91,7 +91,9 @@ public:
 class LocalNode
 {
 public:
-    LocalNode() { }
+    LocalNode()
+    {}
+
     LocalNode(int parent, int left_child, int right_child, int age=-1,
               int pop_path=0) :
         parent(parent), age(age), pop_path(pop_path)
@@ -238,9 +240,14 @@ public:
             for (int i=0; i<nnodes; i++)
                 nodes[i].age = ages[i];
 
-        if (paths)
+        if (paths){
             for (int i=0; i<nnodes; i++)
                 nodes[i].pop_path = paths[i];
+        }else{
+            for(int i=0; i<nnodes; i++){
+                nodes[i].pop_path = 0; //need to set a default/dummy path, otherwise we get "use of uninitialized error"
+            }
+        }
 
         // populate children pointers
         for (int i=0; i<nnodes; i++) {
