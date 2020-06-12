@@ -197,6 +197,9 @@ inline void likelihood_site_node_inner(
             for (int k=0; k < 4; k++)
                 inner[j][k] = base_probs[j][pos].prob[k];
         } else {
+#ifdef DEBUG
+            //printLog(LOG_LOW, "char at seq %d pos %d is: %c\n", j, pos, c);
+#endif
             inner[j][0] = 0.0;
             inner[j][1] = 0.0;
             inner[j][2] = 0.0;
