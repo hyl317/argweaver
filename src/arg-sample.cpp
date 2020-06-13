@@ -39,6 +39,7 @@ Sampler for large ancestral recombination graphs\n\
 
 // file extensions
 const char *SMC_SUFFIX = ".smc";
+const char *TSKIT_SUFFIX = ".ts";
 const char *SITES_SUFFIX = ".sites";
 const char *STATS_SUFFIX = ".stats";
 const char *LOG_SUFFIX = ".log";
@@ -864,6 +865,12 @@ string get_out_arg_file(const Config &config, int iter)
     return config.out_prefix + config.mcmcmc_prefix + iterstr + SMC_SUFFIX;
 }
 
+string get_out_ts_file(const Config &config, int iter){
+    char iterstr[10];
+    snprintf(iterstr, 10, ".%d", iter);
+    return config.out_prefix + config.mcmcmc_prefix + iterstr + TSKIT_SUFFIX;
+}
+
 /*string get_out_cr_file(const Config &config, int iter)
 {
     char iterstr[10];
@@ -932,6 +939,10 @@ bool log_local_trees(const ArgModel *model, const Sequences *sequences,
     write_local_trees(stream.stream, trees, sequences, model->times,
                       model->pop_tree != NULL,
                       *self_recomb_ptr, self_recombs);
+    
+    string out_ts_file = get_out_ts_file(*config, iter);
+    printLog(LOG_LOW, "output tree seq file name: %s\n", out_ts_file.c_str());
+    write_local_trees_ts(out_ts_file.c_str(), trees, model->times);
 
     // testing for now; output coal records version
     /*    string out_cr_file = get_out_cr_file(*config, iter);
