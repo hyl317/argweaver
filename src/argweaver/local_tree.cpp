@@ -1658,7 +1658,7 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
         remove_edge(&edges, &(tables.edges), nodes[p], nodes[recomb_node], coord);
         // recomb node is never the root node, so we always get a valid sibling
         int sib = prev.get_sibling(recomb_node);
-        printLog(LOG_LOW, "sib of the recombed node is: %d\n", sib);
+        //printLog(LOG_LOW, "sib of the recombed node is: %d\n", sib);
         remove_edge(&edges, &(tables.edges), nodes[p], nodes[sib], coord);
         
         //printLog(LOG_LOW, "prev.root: %d\n", prev.root);
@@ -1696,12 +1696,14 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
             // }
             // assert(reverse_mapped != -1);
             //printLog(LOG_LOW, "new_node is %d, and its parent is %d in argweaver rep\n", new_node, it->tree->get_node(new_node).parent);
-            printLog(LOG_LOW, "inserted edge1: %d->%d\n", nodes[reverse_mapped], id);
+            
             edges.insert(make_pair(make_pair(nodes[reverse_mapped], id), coord));
+            printLog(LOG_LOW, "inserted edge1: %d->%d\n", nodes[reverse_mapped], id);
         }
-        if (it->spr.coal_node != sib && it->spr.coal_node != prev.get_node(sib).parent){
-            printLog(LOG_LOW, "inserted edge2: %d -> %d\n", nodes[prev.get_node(p).parent], nodes[sib]);
+        if (it->spr.coal_node != sib && it->spr.coal_node != prev.get_node(sib).parent
+            && prev.root != p){
             edges.insert(make_pair(make_pair(nodes[prev.get_node(p).parent], nodes[sib]), coord));
+            printLog(LOG_LOW, "inserted edge2: %d -> %d\n", nodes[prev.get_node(p).parent], nodes[sib]);
         }
 
         coord += it->blocklen;//set up starting coordinate of next tree
@@ -1711,12 +1713,9 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
         for (int i = 0; i < nnodes; i++){
             if(it->mapping[i] != -1){
                 nodes[it->mapping[i]] = tmp[i];
-            }else{
-                assert(i == new_node);
-                nodes[i] = id;
             }
         }
-        //nodes[new_node] = id;
+        nodes[new_node] = id;
 #ifdef DEBUG
         printLog(LOG_LOW, "mapping information");
         for(int j=0; j < nnodes; j++){

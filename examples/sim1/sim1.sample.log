@@ -1,7 +1,7 @@
 arg-sample 1.0
-start time: Sat Jun 13 17:17:51 2020
+start time: Sat Jun 13 18:48:42 2020
 command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --overwrite --ts ../../simulate/arg/simulation_source.5.trees --region 1:5000-1000000
-random seed: 1592083071
+random seed: 1592088522
 Reading ../../simulate/arg/simulation_source.5.vcf.gz 1:5000-1000000
 Read 962 sites from 969 lines of VCF file (num skipped indels=0)
 read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=5, nsites=962)
@@ -16713,7 +16713,7 @@ number of samples in the tree sequences: 5
 number of local trees in the tree sequences: 695
 total number of local trees read: 694
 tree sequence starat at 4999 and ends at 1000000
-max memory usage: 175.3 MB
+max memory usage: 175.4 MB
 
 number of leaves in trees: 5
 Climb Search (0 iterations)
@@ -16722,9 +16722,9 @@ Climb Search (0 iterations)
 --------------resample_arg_all----------------
 saving first ARG...
 
-prior:      -10128.999599
+prior:      -10123.063630
 likelihood: -1389211.132811
-joint:      -1399340.132410
+joint:      -1399334.196441
 nrecombs:   693
 noncompats: 0
 arglen:     91324953659.011780
@@ -16743,7 +16743,6 @@ edge inserted: 8->4
 at tree 0
 at tree 1
 removed edge: 6->5
-sib of the recombed node is: 8
 removed edge: 6->8
 inserted edge: 9->5
 inserted edge: 9->8
@@ -16758,7 +16757,6 @@ mapping information0: 0
 8: 8
 at tree 2
 removed edge: 5->0
-sib of the recombed node is: 7
 removed edge: 5->7
 removed edge: 9->5
 removed edge: 8->2
@@ -16777,7 +16775,6 @@ mapping information0: 0
 8: 7
 at tree 3
 removed edge: 9->8
-sib of the recombed node is: 8
 removed edge: 9->7
 inserted edge: 11->8
 inserted edge: 11->7
@@ -16792,10 +16789,130 @@ mapping information0: 0
 8: 7
 at tree 4
 removed edge: 11->7
-sib of the recombed node is: 6
 removed edge: 11->8
 removed edge: 8->4
 inserted edge: 12->4
 inserted edge: 12->7
 inserted edge1: 8->12
-inserted edge2: 0 -> 8
+mapping information0: 0
+1: 1
+2: 2
+3: 3
+4: 4
+5: 10
+6: 8
+7: 7
+8: 12
+at tree 5
+removed edge: 7->1
+removed edge: 7->3
+removed edge: 12->7
+inserted edge: 13->1
+inserted edge: 13->8
+inserted edge2: 12 -> 3
+mapping information0: 0
+1: 1
+2: 2
+3: 3
+4: 4
+5: 10
+6: 8
+7: 13
+8: 12
+at tree 6
+removed edge: 13->1
+removed edge: 13->8
+inserted edge: 14->1
+inserted edge: 14->8
+mapping information0: 0
+1: 1
+2: 2
+3: 3
+4: 4
+5: 10
+6: 8
+7: 14
+8: 12
+at tree 7
+removed edge: 14->1
+removed edge: 14->8
+inserted edge: 15->1
+inserted edge: 15->8
+mapping information0: 0
+1: 1
+2: 2
+3: 3
+4: 4
+5: 10
+6: 8
+7: 15
+8: 12
+at tree 8
+removed edge: 12->4
+removed edge: 12->3
+removed edge: 8->12
+removed edge: 15->8
+inserted edge: 16->4
+inserted edge: 16->8
+inserted edge1: 15->16
+inserted edge2: 8 -> 3
+mapping information0: 0
+1: 1
+2: 2
+3: 3
+4: 4
+5: 10
+6: 8
+7: 16
+8: 15
+at tree 9
+removed edge: 15->1
+removed edge: 15->16
+inserted edge: 17->1
+inserted edge: 17->16
+mapping information0: 0
+1: 1
+2: 2
+3: 3
+4: 4
+5: 10
+6: 8
+7: 16
+8: 17
+at tree 10
+removed edge: 10->0
+removed edge: 10->2
+removed edge: 8->10
+removed edge: 8->3
+inserted edge: 18->0
+inserted edge: 18->3
+inserted edge1: 8->18
+inserted edge2: 8 -> 2
+mapping information0: 0
+1: 1
+2: 2
+3: 3
+4: 4
+5: 18
+6: 8
+7: 16
+8: 17
+at tree 11
+removed edge: 17->1
+removed edge: 17->16
+inserted edge: 19->1
+inserted edge: 19->16
+mapping information0: 0
+1: 1
+2: 2
+3: 3
+4: 4
+5: 18
+6: 8
+7: 16
+8: 19
+at tree 12
+removed edge: 16->4
+removed edge: 16->8
+removed edge: 19->16
+removed edge: 19->16
