@@ -1613,7 +1613,7 @@ void init_nodes_mapping(const LocalTree *tree, int *nodes, tsk_table_collection_
 }
 
 
-// a simplified version of writing tree sequence file
+// a simplistic version of writing tree sequence file
 // for now, ignore population/sequence name/individuals, etc
 void write_local_trees_ts(const char *filename, const LocalTrees *trees, const double *times){
     int ret;
@@ -1658,11 +1658,8 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
         remove_edge(&edges, &(tables.edges), nodes[p], nodes[recomb_node], coord);
         // recomb node is never the root node, so we always get a valid sibling
         int sib = prev.get_sibling(recomb_node);
-        //printLog(LOG_LOW, "sib of the recombed node is: %d\n", sib);
         remove_edge(&edges, &(tables.edges), nodes[p], nodes[sib], coord);
         
-        //printLog(LOG_LOW, "prev.root: %d\n", prev.root);
-        //printLog(LOG_LOW, "p: %d\n", p);
         if (prev.root != p){
             remove_edge(&edges, &(tables.edges), nodes[prev.get_node(p).parent], nodes[p], coord);
         }
@@ -1681,10 +1678,10 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
 
         int *child = it->tree->get_node(new_node).child;
 
-        printLog(LOG_LOW, "inserted edge: %d->%d\n", id, nodes[reverse_map[child[0]]]);
+        //printLog(LOG_LOW, "inserted edge: %d->%d\n", id, nodes[reverse_map[child[0]]]);
         edges.insert(make_pair(make_pair(id, nodes[reverse_map[child[0]]]), coord));
         
-        printLog(LOG_LOW, "inserted edge: %d->%d\n", id, nodes[reverse_map[child[1]]]);
+        //printLog(LOG_LOW, "inserted edge: %d->%d\n", id, nodes[reverse_map[child[1]]]);
         edges.insert(make_pair(make_pair(id, nodes[reverse_map[child[1]]]), coord));
 
         if (it->tree->root != new_node){
@@ -1698,12 +1695,12 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
             //printLog(LOG_LOW, "new_node is %d, and its parent is %d in argweaver rep\n", new_node, it->tree->get_node(new_node).parent);
             
             edges.insert(make_pair(make_pair(nodes[reverse_mapped], id), coord));
-            printLog(LOG_LOW, "inserted edge1: %d->%d\n", nodes[reverse_mapped], id);
+            //printLog(LOG_LOW, "inserted edge1: %d->%d\n", nodes[reverse_mapped], id);
         }
         if (it->spr.coal_node != sib && it->spr.coal_node != prev.get_node(sib).parent
             && prev.root != p){
             edges.insert(make_pair(make_pair(nodes[prev.get_node(p).parent], nodes[sib]), coord));
-            printLog(LOG_LOW, "inserted edge2: %d -> %d\n", nodes[prev.get_node(p).parent], nodes[sib]);
+            //printLog(LOG_LOW, "inserted edge2: %d -> %d\n", nodes[prev.get_node(p).parent], nodes[sib]);
         }
 
         coord += it->blocklen;//set up starting coordinate of next tree
