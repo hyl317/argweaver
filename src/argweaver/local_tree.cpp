@@ -1666,7 +1666,7 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
         if (prev.root != p){
             remove_edge(&edges, &(tables.edges), nodes[prev.get_node(p).parent], nodes[p], coord);
         }
-        if (it->spr.coal_node != sib && it->spr.coal_node != prev.root){
+        if (it->spr.coal_node != sib && it->spr.coal_node != p && it->spr.coal_node != prev.root){
             remove_edge(&edges, &(tables.edges), nodes[prev.get_node(it->spr.coal_node).parent], 
                     nodes[it->spr.coal_node], coord);
         }
