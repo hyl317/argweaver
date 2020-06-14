@@ -1573,7 +1573,7 @@ void write_local_trees_as_bed(FILE *out, const LocalTrees *trees,
 void remove_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_edge_table_t *edge_table, 
     tsk_id_t p, tsk_id_t c, int coord){
     //remove the edge whose child node is tskit_id
-    printLog(LOG_LOW, "removed edge: %d->%d\n", p, c);
+    //printLog(LOG_LOW, "removed edge: %d->%d\n", p, c);
     int start = edges->at(make_pair(p, c));
     int ret = tsk_edge_table_add_row(edge_table, start, coord, p, c);
     check_tsk_error(ret);
