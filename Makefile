@@ -17,7 +17,7 @@ ifdef MPI
 else
         CXX=g++
 endif
-PYTHON = python
+PYTHON = python2
 
 # C++ compiler options
 CFLAGS := $(CFLAGS) \

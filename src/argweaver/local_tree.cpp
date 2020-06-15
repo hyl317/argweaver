@@ -1570,13 +1570,19 @@ void write_local_trees_as_bed(FILE *out, const LocalTrees *trees,
     delete [] nodeids;
 }
 
-void remove_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_edge_table_t *edge_table, 
+void remove_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_table_collection_t *tables, 
     tsk_id_t p, tsk_id_t c, int coord){
     //remove the edge whose child node is tskit_id
-    //printLog(LOG_LOW, "removed edge: %d->%d\n", p, c);
     int start = edges->at(make_pair(p, c));
-    int ret = tsk_edge_table_add_row(edge_table, start, coord, p, c);
+    int ret = tsk_edge_table_add_row(&(tables->edges), start, coord, p, c);
     check_tsk_error(ret);
+
+#ifdef DEBUG
+    if (tables->nodes.time[p] == tables->nodes.time[c]){
+        printLog(LOG_LOW, "zero branch length found, aged %lf\n", tables->nodes.time[p]);
+    }
+
+#endif
     edges->erase(make_pair(p, c));
 }
 
@@ -1602,7 +1608,6 @@ void init_nodes_mapping(const LocalTree *tree, int *nodes, tsk_table_collection_
             int p = tree->get_node(u).parent;
             if (p != -1) {
                 edges->insert(make_pair(make_pair(p, u), start_coord));
-                printLog(LOG_LOW, "edge inserted: %d->%d\n", p, u);
             }
             if (p == -1 || visited[p]) {break;}
             visited[p] = true;
@@ -1620,7 +1625,7 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
     tsk_table_collection_t tables;
     ret = tsk_table_collection_init(&tables, 0);
     check_tsk_error(ret);
-    tables.sequence_length = trees->length();
+    tables.sequence_length = trees->length() + trees->start_coord;
 
     //add nodes from the first tree
     map<pair<tsk_id_t, tsk_id_t>, int> edges;
@@ -1628,7 +1633,6 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
     int nodes[nnodes];
     int coord = trees->start_coord;
     init_nodes_mapping(trees->trees.front().tree, nodes, &tables, &edges, times, trees->start_coord);
-    //exit(EXIT_FAILURE);
 
     int id = nnodes;
     LocalTree prev;
@@ -1650,21 +1654,20 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
 
         int recomb_node = it->spr.recomb_node; // this is the id as in argweaver, not tskit
         int p = prev.get_node(recomb_node).parent;
-        //int recomb_node = nodes[it->spr.recomb_node]; // this recomb_node should be the id in tskit
         // three cases: 2 edge removed, 2 edge added
         // or 3 edge removed, 3 edge added
         // or 4 edge removed, 4 edge added
 
-        remove_edge(&edges, &(tables.edges), nodes[p], nodes[recomb_node], coord);
+        remove_edge(&edges, &tables, nodes[p], nodes[recomb_node], coord);
         // recomb node is never the root node, so we always get a valid sibling
         int sib = prev.get_sibling(recomb_node);
-        remove_edge(&edges, &(tables.edges), nodes[p], nodes[sib], coord);
+        remove_edge(&edges, &tables, nodes[p], nodes[sib], coord);
         
         if (prev.root != p){
-            remove_edge(&edges, &(tables.edges), nodes[prev.get_node(p).parent], nodes[p], coord);
+            remove_edge(&edges, &tables, nodes[prev.get_node(p).parent], nodes[p], coord);
         }
         if (it->spr.coal_node != sib && it->spr.coal_node != p && it->spr.coal_node != prev.root){
-            remove_edge(&edges, &(tables.edges), nodes[prev.get_node(it->spr.coal_node).parent], 
+            remove_edge(&edges, &tables, nodes[prev.get_node(it->spr.coal_node).parent], 
                     nodes[it->spr.coal_node], coord);
         }
 
@@ -1687,13 +1690,6 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
         if (it->tree->root != new_node){
             int parent_of_new_node = it->tree->get_node(new_node).parent;
             int reverse_mapped = reverse_map[parent_of_new_node];
-            // int reverse_mapped = -1;
-            // for(int j=0; j < nnodes; j++){
-            //     if (it->mapping[j] == parent_of_new_node){reverse_mapped = j;}
-            // }
-            // assert(reverse_mapped != -1);
-            //printLog(LOG_LOW, "new_node is %d, and its parent is %d in argweaver rep\n", new_node, it->tree->get_node(new_node).parent);
-            
             edges.insert(make_pair(make_pair(nodes[reverse_mapped], id), coord));
             //printLog(LOG_LOW, "inserted edge1: %d->%d\n", nodes[reverse_mapped], id);
         }
@@ -1713,13 +1709,12 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
             }
         }
         nodes[new_node] = id;
+
 #ifdef DEBUG
-        printLog(LOG_LOW, "mapping information");
-        for(int j=0; j < nnodes; j++){
-            printLog(LOG_LOW, "%d: %d\n", j, nodes[j]);
-        }
-
-
+        //printLog(LOG_LOW, "mapping information");
+        //for(int j=0; j < nnodes; j++){
+        //    printLog(LOG_LOW, "%d: %d\n", j, nodes[j]);
+        //}
 #endif
 
         prev.copy(*(it->tree));
@@ -1733,6 +1728,10 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
         check_tsk_error(ret);
     }
 
+    printLog(LOG_LOW, "end of sequence coord: %d\n", coord);
+    printLog(LOG_LOW, "sequence length: %lf\n", tables.sequence_length);
+    ret = tsk_table_collection_sort(&tables, NULL, 0);
+    check_tsk_error(ret);
     ret = tsk_table_collection_dump(&tables, filename, 0);
     check_tsk_error(ret);
     tsk_table_collection_free(&tables);
@@ -2133,13 +2132,13 @@ void traverse_upwards(tsk_tree_t *tree, int* ptree, int* ages, map<tsk_id_t, int
 
     // for debugging only
 #ifdef DEBUG
-    for(int i = 0; i < 2*num_samples-1; i++){
-        printLog(LOG_LOW, "%d has parent %d\n", i, ptree[i]);\
-        printLog(LOG_HIGH, "%d is %lf generations old in DSMC\n", i, times[ages[i]]);
-    }
-    for(auto iter = mapping->begin(); iter != mapping->end(); ++iter){
-        printLog(LOG_LOW, "%d -> %d\n", iter->first, iter->second);
-    }
+    // for(int i = 0; i < 2*num_samples-1; i++){
+    //     printLog(LOG_LOW, "%d has parent %d\n", i, ptree[i]);\
+    //     printLog(LOG_HIGH, "%d is %lf generations old in DSMC\n", i, times[ages[i]]);
+    // }
+    // for(auto iter = mapping->begin(); iter != mapping->end(); ++iter){
+    //     printLog(LOG_LOW, "%d -> %d\n", iter->first, iter->second);
+    // }
 #endif
 
 }
