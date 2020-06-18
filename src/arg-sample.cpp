@@ -942,7 +942,7 @@ bool log_local_trees(const ArgModel *model, const Sequences *sequences,
     
     string out_ts_file = get_out_ts_file(*config, iter);
     printLog(LOG_LOW, "output tree seq file name: %s\n", out_ts_file.c_str());
-    write_local_trees_ts(out_ts_file.c_str(), trees, model->times);
+    write_local_trees_ts(out_ts_file.c_str(), trees, sequences, sites_mapping, model->times);
 
     // testing for now; output coal records version
     /*    string out_cr_file = get_out_cr_file(*config, iter);
@@ -1025,9 +1025,9 @@ bool seq_sample_arg(ArgModel *model, Sequences *sequences, LocalTrees *trees,
 #ifdef DEBUG
     printLog(LOG_LOW, "number of leaves in trees: %d\n", trees->get_num_leaves());
 #endif
-    if (trees->get_num_leaves() < sequences->get_num_seqs()) {
-        printLog(LOG_LOW, "Sequentially Sample Initial ARG (%d sequences)\n",
-                 sequences->get_num_seqs());
+    int num_seqs = sequences->get_num_seqs();
+    if (trees->get_num_leaves() < num_seqs && sequences->names[num_seqs-1] != "REF") {
+        printLog(LOG_LOW, "Sequentially Sample Initial ARG (%d sequences)\n", num_seqs);
         printLog(LOG_LOW, "------------------------------------------------\n");
         sample_arg_seq(model, sequences, trees, true, config->num_buildup);
         print_stats(config->stats_file, "seq", trees->get_num_leaves(),
@@ -1683,9 +1683,12 @@ int main(int argc, char **argv)
             printLog(LOG_LOW, "Cannot use both --vcf-file and --vcf-list-file. Terminating\n");
             return EXIT_ERROR;
         }
+        bool add_Ref = false;
+        if (c.ts != "") {add_Ref = true;}
+        // if add_ref is true, there will be a fake column of sequence in the sites object corresponding to the ref allele
         if (!read_vcf(c.vcf_file, &sites, c.subregion_str,
                       c.vcf_min_qual, c.vcf_filter, c.use_genotype_probs,
-                      c.mask_uncertain, false, c.tabix_dir, keep_inds)) {
+                      c.mask_uncertain, add_Ref, c.tabix_dir, keep_inds)) {
             printError("Could not read VCF file");
             return EXIT_ERROR;
         }
