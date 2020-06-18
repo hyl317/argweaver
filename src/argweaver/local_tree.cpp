@@ -1572,55 +1572,126 @@ void write_local_trees_as_bed(FILE *out, const LocalTrees *trees,
 
 void remove_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_table_collection_t *tables, 
     tsk_id_t p, tsk_id_t c, int coord){
+    if (tables->nodes.time[p] == tables->nodes.time[c]) {
+        printLog(LOG_LOW, "remove edge rejected\n");
+        return;
+    } // this is the zero-length branch case
     //remove the edge whose child node is tskit_id
-    int start = edges->at(make_pair(p, c));
-    int ret = tsk_edge_table_add_row(&(tables->edges), start, coord, p, c);
-    check_tsk_error(ret);
 
-#ifdef DEBUG
-    if (tables->nodes.time[p] == tables->nodes.time[c]){
-        printLog(LOG_LOW, "zero branch length found, aged %lf\n", tables->nodes.time[p]);
+    auto it = edges->find(make_pair(p, c));
+    if (it == edges->end()){
+        return;
+        //printLog(LOG_LOW, "something wrong with the code: removing non-existing edge\n");
+        //exit(EXIT_FAILURE);
+    }else{
+        int ret = tsk_edge_table_add_row(&(tables->edges), it->second, coord, p, c);
+        check_tsk_error(ret);
+        printLog(LOG_LOW, "removed successfully\n");
+        edges->erase(make_pair(p, c));
     }
-
-#endif
-    edges->erase(make_pair(p, c));
+    
 }
 
-void init_nodes_mapping(const LocalTree *tree, int *nodes, tsk_table_collection_t *tables, 
+void insert_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_id_t p, tsk_id_t c, 
+        int coord, tsk_table_collection_t *tables){
+    if (tables->nodes.time[p] == tables->nodes.time[c]) {
+        printLog(LOG_LOW, "insert edge rejected\n");    
+        return;
+    }
+    auto it = edges->find(make_pair(p, c));
+    if(it == edges->end()){
+        edges->insert(make_pair(make_pair(p, c), coord));
+    }else{
+        return;
+        //printLog(LOG_LOW, "something wrong with the code: duplicate insertion\n");
+        //exit(EXIT_FAILURE);
+    }
+    printLog(LOG_LOW, "inserted successfully\n");
+}
+
+int init_nodes_mapping(const LocalTree *tree, int *nodes, tsk_table_collection_t *tables, 
         map<pair<tsk_id_t, tsk_id_t>, int> *edges, const double *times, int start_coord){
     int num_samples = tree->get_num_leaves();
     int j, u, ret;
     bool visited[tree->nnodes];
     fill(visited, visited + tree->nnodes, false);
 
-    for(j = 0; j < tree->nnodes; j++){
-        tsk_flags_t flag = j < num_samples? 1: 0;
-        ret = tsk_node_table_add_row(&(tables->nodes), flag, times[tree->get_node(j).age], 
+    for(int i = 0; i < num_samples; i++){
+        ret = tsk_node_table_add_row(&(tables->nodes), 1, times[tree->get_node(i).age],
                 TSK_NULL, TSK_NULL, NULL, 0);
         check_tsk_error(ret);
     }
 
-    for (j = 0; j < num_samples; j++) {
+    int counter = num_samples;
+    for(j = 0; j < num_samples; j++){
         visited[j] = true;
         nodes[j] = j;
         u = j;
-        while (u != -1) {
+        while(u != -1){
             int p = tree->get_node(u).parent;
-            if (p != -1) {
-                edges->insert(make_pair(make_pair(p, u), start_coord));
+            if (p == -1) {break;}
+            if (tree->get_node(p).age == tree->get_node(u).age){
+                nodes[p] = nodes[u];
+            }else{
+                if (!visited[p]) {
+                    nodes[p] = counter++;
+                    ret = tsk_node_table_add_row(&(tables->nodes), 0, times[tree->get_node(p).age],
+                            TSK_NULL, TSK_NULL, NULL, 0);
+                    check_tsk_error(ret);
+                }
+                edges->insert(make_pair(make_pair(nodes[p], nodes[u]), start_coord));
             }
-            if (p == -1 || visited[p]) {break;}
+            if (visited[p]) {break;}
             visited[p] = true;
-            nodes[p] = p;
             u = p;
         }
     }
+
+
+    // for(j = 0; j < tree->nnodes; j++){
+    //     tsk_flags_t flag = j < num_samples? 1: 0;
+    //     ret = tsk_node_table_add_row(&(tables->nodes), flag, times[tree->get_node(j).age], 
+    //             TSK_NULL, TSK_NULL, NULL, 0);
+    //     check_tsk_error(ret);
+    // }
+
+    // for (j = 0; j < num_samples; j++) {
+    //     visited[j] = true;
+    //     nodes[j] = j;
+    //     u = j;
+    //     while (u != -1) {
+    //         int p = tree->get_node(u).parent;
+    //         if (p != -1) {
+    //             edges->insert(make_pair(make_pair(p, u), start_coord));
+    //         }
+    //         if (p == -1 || visited[p]) {break;}
+    //         visited[p] = true;
+    //         nodes[p] = p;
+    //         u = p;
+    //     }
+    // }
+
+#ifdef DEBUG
+    printLog(LOG_LOW, "init_nodes_mapping\n");
+    for(int i = 0; i < tree->nnodes; i++){
+        printLog(LOG_LOW, "%d(age = %d)->%d\n", i, tree->get_node(i).age, nodes[i]);
+    }
+#endif
+    return counter;
 }
 
 
 // a simplistic version of writing tree sequence file
 // for now, ignore population/sequence name/individuals, etc
 void write_local_trees_ts(const char *filename, const LocalTrees *trees, const double *times){
+
+#ifdef DEBUG
+    printLog(LOG_LOW, "discrete time points\n");
+    int i = 0;
+    for(; i < 20; i++){
+        printLog(LOG_LOW, "%lf\n", times[i]);
+    }
+#endif
     int ret;
     tsk_table_collection_t tables;
     ret = tsk_table_collection_init(&tables, 0);
@@ -1628,13 +1699,18 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
     tables.sequence_length = trees->length() + trees->start_coord;
 
     //add nodes from the first tree
+    // this map is a bit complicated
+    // the first int refers to the starting position of this edge
+    // the second int refers to the multiplicity of this edge
+    // in some corner cases, <parent, child> is not enough to fully identify an edge
     map<pair<tsk_id_t, tsk_id_t>, int> edges;
     int nnodes = trees->nnodes;
     int nodes[nnodes];
     int coord = trees->start_coord;
-    init_nodes_mapping(trees->trees.front().tree, nodes, &tables, &edges, times, trees->start_coord);
+    int id = init_nodes_mapping(trees->trees.front().tree, nodes, &tables, &edges, times, trees->start_coord);
+    //exit(EXIT_FAILURE);
 
-    int id = nnodes;
+    //int id = nnodes;
     LocalTree prev;
     int tree_id = 0;
     for (LocalTrees::const_iterator it=trees->begin(); it != trees->end(); ++it){
@@ -1648,59 +1724,36 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
         }
         //add the new node to the node table
         int new_node = get_recoal_node(it->tree, it->spr, it->mapping);
-        ret = tsk_node_table_add_row(&(tables.nodes), 0, times[it->tree->get_node(new_node).age], 
-                TSK_NULL, TSK_NULL, NULL, 0);
-        check_tsk_error(ret);
-
         int recomb_node = it->spr.recomb_node; // this is the id as in argweaver, not tskit
         int p = prev.get_node(recomb_node).parent;
+        int sib = prev.get_sibling(recomb_node);
         // three cases: 2 edge removed, 2 edge added
         // or 3 edge removed, 3 edge added
         // or 4 edge removed, 4 edge added
 
+        printLog(LOG_LOW, "remove 1 attempted(%d->%d)\n", nodes[p], nodes[recomb_node]);
         remove_edge(&edges, &tables, nodes[p], nodes[recomb_node], coord);
+        
         // recomb node is never the root node, so we always get a valid sibling
-        int sib = prev.get_sibling(recomb_node);
+        printLog(LOG_LOW, "revmoe 2 attempted(%d->%d)\n", nodes[p], nodes[sib]);
         remove_edge(&edges, &tables, nodes[p], nodes[sib], coord);
         
         if (prev.root != p){
+            printLog(LOG_LOW, "remove 3 attempted(%d->%d)\n", nodes[prev.get_node(p).parent], nodes[p]);
             remove_edge(&edges, &tables, nodes[prev.get_node(p).parent], nodes[p], coord);
         }
         if (it->spr.coal_node != sib && it->spr.coal_node != p && it->spr.coal_node != prev.root){
+            printLog(LOG_LOW, "remove 4 attempted(%d->%d)\n", nodes[prev.get_node(it->spr.coal_node).parent], 
+                    nodes[it->spr.coal_node]);
             remove_edge(&edges, &tables, nodes[prev.get_node(it->spr.coal_node).parent], 
                     nodes[it->spr.coal_node], coord);
         }
 
         //now added newly created edge in this local tree to the map
-        int reverse_map[nnodes];
-        for(int j=0; j < nnodes; j++){
-            if (it->mapping[j] != -1){
-                reverse_map[it->mapping[j]] = j;
-            }     
-        }
-
         int *child = it->tree->get_node(new_node).child;
+        int parent_of_new_node = it->tree->get_node(new_node).parent;
+        int new_node_age = it->tree->get_node(new_node).age;
 
-        //printLog(LOG_LOW, "inserted edge: %d->%d\n", id, nodes[reverse_map[child[0]]]);
-        edges.insert(make_pair(make_pair(id, nodes[reverse_map[child[0]]]), coord));
-        
-        //printLog(LOG_LOW, "inserted edge: %d->%d\n", id, nodes[reverse_map[child[1]]]);
-        edges.insert(make_pair(make_pair(id, nodes[reverse_map[child[1]]]), coord));
-
-        if (it->tree->root != new_node){
-            int parent_of_new_node = it->tree->get_node(new_node).parent;
-            int reverse_mapped = reverse_map[parent_of_new_node];
-            edges.insert(make_pair(make_pair(nodes[reverse_mapped], id), coord));
-            //printLog(LOG_LOW, "inserted edge1: %d->%d\n", nodes[reverse_mapped], id);
-        }
-        if (it->spr.coal_node != sib && it->spr.coal_node != prev.get_node(sib).parent
-            && prev.root != p){
-            edges.insert(make_pair(make_pair(nodes[prev.get_node(p).parent], nodes[sib]), coord));
-            //printLog(LOG_LOW, "inserted edge2: %d -> %d\n", nodes[prev.get_node(p).parent], nodes[sib]);
-        }
-
-        coord += it->blocklen;//set up starting coordinate of next tree
-        //now update nodes map
         int tmp[nnodes];
         memcpy(tmp, nodes, nnodes*sizeof(int));
         for (int i = 0; i < nnodes; i++){
@@ -1708,24 +1761,85 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees, const d
                 nodes[it->mapping[i]] = tmp[i];
             }
         }
-        nodes[new_node] = id;
 
+        int child1_age = it->tree->get_node(child[0]).age;
+        int child2_age = it->tree->get_node(child[1]).age;
+        if(new_node_age == child1_age){
+            nodes[new_node] = nodes[child[0]];
+        }else if(new_node_age == child2_age){
+            nodes[new_node] = nodes[child[1]];
+        }else if(parent_of_new_node != -1 && new_node_age == it->tree->get_node(parent_of_new_node).age){
+            nodes[new_node] = nodes[parent_of_new_node];
+            // if (recomb_node >= prev.get_num_leaves()){
+            //     edges.insert(make_pair(make_pair(nodes[new_node], nodes[child[0]]), coord));
+            //     edges.insert(make_pair(make_pair(nodes[new_node], nodes[child[1]]), coord));
+            // }else{
+            //     edges.insert(make_pair(make_pair(nodes[new_node], nodes[it->mapping[recomb_node]]), coord));
+            // }
+            
+            // if (it->spr.coal_node != sib && it->spr.coal_node != prev.get_node(sib).parent
+            //         && prev.root != p){
+            //     edges.insert(make_pair(make_pair(nodes[it->mapping[prev.get_node(p).parent]], 
+            //                 nodes[it->mapping[sib]]), coord));
+            // }   
+        }else{
+                ret = tsk_node_table_add_row(&(tables.nodes), 0, times[it->tree->get_node(new_node).age], 
+                        TSK_NULL, TSK_NULL, NULL, 0);
+                check_tsk_error(ret);
+                nodes[new_node] = id++; 
+        }
+#ifdef DEBUG
+        for(int k=0; k < nnodes; k++){
+            printLog(LOG_LOW, "%d->%d\n", k, nodes[k]);
+        }
+#endif
+
+        //edges.insert(make_pair(make_pair(nodes[new_node], 
+        //        nodes[it->tree->get_sibling(it->mapping[recomb_node])]), coord));
+        printLog(LOG_LOW, "insert 1 attempted(%d->%d)\n", nodes[new_node], 
+                nodes[it->tree->get_sibling(it->mapping[recomb_node])]);
+        insert_edge(&edges, nodes[new_node], nodes[it->tree->get_sibling(it->mapping[recomb_node])], 
+                    coord, &tables);
+
+        //edges.insert(make_pair(make_pair(nodes[new_node], 
+        //        nodes[it->mapping[recomb_node]]), coord));
+        printLog(LOG_LOW, "insert 2 attempted(%d->%d)\n", nodes[new_node], nodes[it->mapping[recomb_node]]);
+        insert_edge(&edges, nodes[new_node], nodes[it->mapping[recomb_node]], coord, &tables);
+
+        if(it->tree->root != new_node){
+            //edges.insert(make_pair(make_pair(nodes[it->tree->get_node(new_node).parent], 
+            //        nodes[new_node]), coord));
+            printLog(LOG_LOW, "insert 3 attempted(%d->%d)\n", nodes[it->tree->get_node(new_node).parent], nodes[new_node]);
+            insert_edge(&edges, nodes[it->tree->get_node(new_node).parent], nodes[new_node], coord, &tables);
+        }
+
+        if (it->spr.coal_node != sib && it->spr.coal_node != prev.get_node(sib).parent
+                && prev.root != p){
+            //edges.insert(make_pair(make_pair(nodes[it->mapping[prev.get_node(p).parent]], 
+            //            nodes[it->mapping[sib]]), coord));
+            printLog(LOG_LOW, "insert 4 attempted(%d->%d)\n", nodes[it->mapping[prev.get_node(p).parent]], 
+                    nodes[it->mapping[sib]]);
+            insert_edge(&edges, nodes[it->mapping[prev.get_node(p).parent]], 
+                    nodes[it->mapping[sib]], coord, &tables);
+        }      
+        coord += it->blocklen;//set up starting coordinate of next tree
+        
 #ifdef DEBUG
         //printLog(LOG_LOW, "mapping information");
         //for(int j=0; j < nnodes; j++){
         //    printLog(LOG_LOW, "%d: %d\n", j, nodes[j]);
         //}
 #endif
-
         prev.copy(*(it->tree));
-        id++;
     }
 
     // flush out edges that remain at the very end of the tree sequence
     for(auto it = edges.begin(); it != edges.end(); ++it){
-        ret = tsk_edge_table_add_row(&(tables.edges), it->second, coord, 
-                it->first.first, it->first.second);
-        check_tsk_error(ret);
+        if (tables.nodes.time[it->first.first] != tables.nodes.time[it->first.second]){
+            ret = tsk_edge_table_add_row(&(tables.edges), it->second, coord, 
+                    it->first.first, it->first.second);
+            check_tsk_error(ret);    
+        }
     }
 
     printLog(LOG_LOW, "end of sequence coord: %d\n", coord);
@@ -2234,9 +2348,9 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
     
     #ifdef DEBUG
         printLog(LOG_LOW, "recomb_node: %d\n", recomb_node);
-        //printLog(LOG_LOW, "recomb_time: %lf\n", recomb_time);
+        printLog(LOG_LOW, "recomb_time: %lf\n", recomb_time);
         printLog(LOG_LOW, "coal_node: %d\n", coal_node);
-        //printLog(LOG_LOW, "coal_time: %lf\n", coal_time);
+        printLog(LOG_LOW, "coal_time: %lf\n", coal_time);
     #endif
 
     }

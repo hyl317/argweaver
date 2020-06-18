@@ -68,6 +68,7 @@ void add_tree_branch(LocalTree *tree, int node, int time, int pop_path)
     int parent2 = (parent != newleaf ? parent : displaced);
 
     // displace node
+    // Node currently named 'nleaves' will be displaced to 'nnodes' (displaced)
     if (newleaf < displaced)
         rename_node(tree, newleaf, displaced);
 
