@@ -56,8 +56,6 @@ void sample_arg_seq(const ArgModel *model, Sequences *sequences,
     fill(has_sequence, has_sequence+nseqs, false);
     for (int i=0; i<trees->get_num_leaves(); i++)
         has_sequence[trees->seqids[i]] = true;
-    // we ignore the REF sequence if there is one
-    if(sequences->names[nseqs-1] == "REF") { has_sequence[nseqs-1]=true;}
 
     // add more chromosomes one by one
     for (int i=0; i<nseqs; i++) {

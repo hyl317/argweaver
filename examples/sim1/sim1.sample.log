@@ -1,10 +1,11 @@
 arg-sample 1.0
-start time: Thu Jun 18 16:18:15 2020
+start time: Thu Jun 18 23:23:46 2020
 command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation_source.5.trees --overwrite --region 1:5000-1000000
-random seed: 1592511495
+random seed: 1592537026
 Reading ../../simulate/arg/simulation_source.5.vcf.gz 1:5000-1000000
 Read 962 sites from 969 lines of VCF file (num skipped indels=0)
-read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=6, nsites=962)
+read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=5, nsites=962)
+length of reference seq: 962
 0 sites are partially masked but otherwise invariant
 masked 0 (0.0%) positions
 
@@ -64,7 +65,7 @@ tree 2: 5308 - 5538
 node out: 90, node in: 408
 case1
 recomb_node: 79
-recomb_time: 6916.000000
+recomb_time: 7476.000000
 coal_node: 90
 coal_time: 57856.581757
 
@@ -72,7 +73,7 @@ tree 3: 5538 - 10112
 node out: 79, node in: 36
 case2
 recomb_node: 0
-recomb_time: 756.000000
+recomb_time: 719.000000
 coal_node: 2
 coal_time: 3243.443589
 
@@ -80,7 +81,7 @@ tree 4: 10112 - 10295
 node out: 408, node in: 52
 case1
 recomb_node: 44
-recomb_time: 4239.000000
+recomb_time: 4431.000000
 coal_node: 5
 coal_time: 4662.143096
 
@@ -88,7 +89,7 @@ tree 5: 10295 - 17555
 node out: 52, node in: 12
 case2
 recomb_node: 5
-recomb_time: 962.000000
+recomb_time: 275.000000
 coal_node: 4
 coal_time: 1296.907822
 
@@ -96,7 +97,7 @@ tree 6: 17555 - 28421
 node out: 5, node in: 52
 case2
 recomb_node: 1
-recomb_time: 125.000000
+recomb_time: 160.000000
 coal_node: 44
 coal_time: 4662.143096
 
@@ -104,7 +105,7 @@ tree 7: 28421 - 30227
 node out: 52, node in: 50
 case1
 recomb_node: 1
-recomb_time: 1583.000000
+recomb_time: 2446.000000
 coal_node: 44
 coal_time: 4588.787094
 
@@ -112,7 +113,7 @@ tree 8: 30227 - 33038
 node out: 50, node in: 93
 case1
 recomb_node: 1
-recomb_time: 1595.000000
+recomb_time: 3673.000000
 coal_node: 50
 coal_time: 7933.227988
 
@@ -120,7 +121,7 @@ tree 9: 33038 - 36352
 node out: 12, node in: 92
 case2
 recomb_node: 4
-recomb_time: 500.000000
+recomb_time: 869.000000
 coal_node: 44
 coal_time: 7831.104076
 
@@ -128,7 +129,7 @@ tree 10: 36352 - 37213
 node out: 93, node in: 223
 case1
 recomb_node: 1
-recomb_time: 4053.000000
+recomb_time: 2764.000000
 coal_node: 93
 coal_time: 21690.963735
 
@@ -136,7 +137,7 @@ tree 11: 37213 - 37436
 node out: 36, node in: 37
 case2
 recomb_node: 0
-recomb_time: 532.000000
+recomb_time: 1302.000000
 coal_node: 3
 coal_time: 3245.439680
 
@@ -144,7 +145,7 @@ tree 12: 37436 - 38091
 node out: 223, node in: 243
 case1
 recomb_node: 1
-recomb_time: 4723.000000
+recomb_time: 6080.000000
 coal_node: 223
 coal_time: 24060.642575
 
@@ -152,7 +153,7 @@ tree 13: 38091 - 39077
 node out: 92, node in: 170
 case1
 recomb_node: 4
-recomb_time: 3487.000000
+recomb_time: 1087.000000
 coal_node: 92
 coal_time: 14717.325999
 
@@ -160,7 +161,7 @@ tree 14: 39077 - 40747
 node out: 170, node in: 180
 case2
 recomb_node: 4
-recomb_time: 1651.000000
+recomb_time: 13858.000000
 coal_node: 1
 coal_time: 16063.230712
 
@@ -168,7 +169,7 @@ tree 15: 40747 - 43809
 node out: 44, node in: 30
 case2
 recomb_node: 2
-recomb_time: 1402.000000
+recomb_time: 760.000000
 coal_node: 1
 coal_time: 2534.320688
 
@@ -176,7 +177,7 @@ tree 16: 43809 - 44090
 node out: 30, node in: 97
 case3
 recomb_node: 2
-recomb_time: 1067.000000
+recomb_time: 2394.000000
 coal_node: 37
 coal_time: 8144.847081
 
@@ -184,7 +185,7 @@ tree 17: 44090 - 44574
 node out: 97, node in: 95
 case3
 recomb_node: 37
-recomb_time: 7073.000000
+recomb_time: 3628.000000
 coal_node: 4
 coal_time: 8039.915668
 
@@ -192,7 +193,7 @@ tree 18: 44574 - 44577
 node out: 95, node in: 70
 case1
 recomb_node: 4
-recomb_time: 4542.000000
+recomb_time: 2298.000000
 coal_node: 37
 coal_time: 5713.421757
 
@@ -200,7 +201,7 @@ tree 19: 44577 - 44881
 node out: 243, node in: 428
 case1
 recomb_node: 180
-recomb_time: 18105.000000
+recomb_time: 17408.000000
 coal_node: 243
 coal_time: 65301.358541
 
@@ -208,7 +209,7 @@ tree 20: 44881 - 44937
 node out: 428, node in: 432
 case1
 recomb_node: 2
-recomb_time: 11901.000000
+recomb_time: 36190.000000
 coal_node: 428
 coal_time: 66099.136335
 
@@ -216,7 +217,7 @@ tree 21: 44937 - 46768
 node out: 70, node in: 69
 case1
 recomb_node: 4
-recomb_time: 1115.000000
+recomb_time: 4239.000000
 coal_node: 37
 coal_time: 5629.020098
 
@@ -224,7 +225,7 @@ tree 22: 46768 - 47737
 node out: 432, node in: 423
 case1
 recomb_node: 2
-recomb_time: 50101.000000
+recomb_time: 38513.000000
 coal_node: 180
 coal_time: 64110.802865
 
@@ -232,7 +233,7 @@ tree 23: 47737 - 48372
 node out: 180, node in: 193
 case2
 recomb_node: 1
-recomb_time: 11552.000000
+recomb_time: 3423.000000
 coal_node: 2
 coal_time: 17230.183715
 
@@ -240,7 +241,7 @@ tree 24: 48372 - 49536
 node out: 193, node in: 81
 case3
 recomb_node: 2
-recomb_time: 4632.000000
+recomb_time: 1260.000000
 coal_node: 69
 coal_time: 6987.629755
 
@@ -248,7 +249,7 @@ tree 25: 49536 - 51615
 node out: 423, node in: 432
 case1
 recomb_node: 1
-recomb_time: 46646.000000
+recomb_time: 9708.000000
 coal_node: 423
 coal_time: 66099.136335
 
@@ -256,7 +257,7 @@ tree 26: 51615 - 51924
 node out: 432, node in: 371
 case1
 recomb_node: 1
-recomb_time: 43588.000000
+recomb_time: 5753.000000
 coal_node: 81
 coal_time: 47471.026931
 
@@ -264,7 +265,7 @@ tree 27: 51924 - 53066
 node out: 371, node in: 235
 case1
 recomb_node: 1
-recomb_time: 5308.000000
+recomb_time: 2949.000000
 coal_node: 81
 coal_time: 22937.801124
 
@@ -272,7 +273,7 @@ tree 28: 53066 - 54316
 node out: 235, node in: 371
 case1
 recomb_node: 1
-recomb_time: 1465.000000
+recomb_time: 19455.000000
 coal_node: 235
 coal_time: 47471.026931
 
@@ -280,7 +281,7 @@ tree 29: 54316 - 54674
 node out: 69, node in: 235
 case2
 recomb_node: 4
-recomb_time: 1083.000000
+recomb_time: 3658.000000
 coal_node: 1
 coal_time: 22937.801124
 
@@ -288,7 +289,7 @@ tree 30: 54674 - 55209
 node out: 371, node in: 313
 case1
 recomb_node: 81
-recomb_time: 27829.000000
+recomb_time: 23854.000000
 coal_node: 235
 coal_time: 34190.220641
 
@@ -296,7 +297,7 @@ tree 31: 55209 - 55274
 node out: 235, node in: 67
 case3
 recomb_node: 4
-recomb_time: 3950.000000
+recomb_time: 3810.000000
 coal_node: 2
 coal_time: 5564.454462
 
@@ -304,7 +305,7 @@ tree 32: 55274 - 56275
 node out: 313, node in: 371
 case1
 recomb_node: 81
-recomb_time: 30846.000000
+recomb_time: 12815.000000
 coal_node: 313
 coal_time: 47471.026931
 
@@ -312,7 +313,7 @@ tree 33: 56275 - 56543
 node out: 371, node in: 221
 case1
 recomb_node: 1
-recomb_time: 2944.000000
+recomb_time: 12166.000000
 coal_node: 81
 coal_time: 20926.239461
 
@@ -320,7 +321,7 @@ tree 34: 56543 - 56890
 node out: 221, node in: 371
 case1
 recomb_node: 1
-recomb_time: 13785.000000
+recomb_time: 11048.000000
 coal_node: 221
 coal_time: 47471.026931
 
@@ -328,7 +329,7 @@ tree 35: 56890 - 57638
 node out: 371, node in: 432
 case1
 recomb_node: 1
-recomb_time: 22609.000000
+recomb_time: 42352.000000
 coal_node: 371
 coal_time: 66099.136335
 
@@ -336,7 +337,7 @@ tree 36: 57638 - 57926
 node out: 432, node in: 340
 case1
 recomb_node: 1
-recomb_time: 8868.000000
+recomb_time: 14579.000000
 coal_node: 81
 coal_time: 40701.346313
 
@@ -344,7 +345,7 @@ tree 37: 57926 - 59323
 node out: 340, node in: 297
 case1
 recomb_node: 1
-recomb_time: 9147.000000
+recomb_time: 7671.000000
 coal_node: 81
 coal_time: 30889.120727
 
@@ -352,7 +353,7 @@ tree 38: 59323 - 60591
 node out: 297, node in: 432
 case1
 recomb_node: 1
-recomb_time: 15188.000000
+recomb_time: 15903.000000
 coal_node: 297
 coal_time: 66099.136335
 
@@ -360,7 +361,7 @@ tree 39: 60591 - 61191
 node out: 432, node in: 297
 case1
 recomb_node: 1
-recomb_time: 24486.000000
+recomb_time: 16019.000000
 coal_node: 81
 coal_time: 30889.120727
 
@@ -368,7 +369,7 @@ tree 40: 61191 - 66394
 node out: 297, node in: 187
 case1
 recomb_node: 1
-recomb_time: 13258.000000
+recomb_time: 12827.000000
 coal_node: 81
 coal_time: 16561.685252
 
@@ -376,7 +377,7 @@ tree 41: 66394 - 67392
 node out: 67, node in: 244
 case2
 recomb_node: 2
-recomb_time: 4589.000000
+recomb_time: 581.000000
 coal_node: 187
 coal_time: 24277.380892
 
@@ -384,7 +385,7 @@ tree 42: 67392 - 67516
 node out: 244, node in: 291
 case1
 recomb_node: 2
-recomb_time: 18386.000000
+recomb_time: 18992.000000
 coal_node: 244
 coal_time: 30408.569585
 
@@ -392,7 +393,7 @@ tree 43: 67516 - 67734
 node out: 81, node in: 152
 case3
 recomb_node: 4
-recomb_time: 4363.000000
+recomb_time: 2123.000000
 coal_node: 1
 coal_time: 13031.248318
 
@@ -400,7 +401,7 @@ tree 44: 67734 - 70155
 node out: 291, node in: 426
 case1
 recomb_node: 2
-recomb_time: 14535.000000
+recomb_time: 26606.000000
 coal_node: 291
 coal_time: 64939.018046
 
@@ -408,7 +409,7 @@ tree 45: 70155 - 70223
 node out: 37, node in: 38
 case1
 recomb_node: 0
-recomb_time: 500.000000
+recomb_time: 2681.000000
 coal_node: 37
 coal_time: 3484.949225
 
@@ -416,7 +417,7 @@ tree 46: 70223 - 70755
 node out: 426, node in: 121
 case2
 recomb_node: 2
-recomb_time: 5764.000000
+recomb_time: 8367.000000
 coal_node: 4
 coal_time: 9710.167823
 
@@ -424,7 +425,7 @@ tree 47: 70755 - 71202
 node out: 121, node in: 83
 case3
 recomb_node: 4
-recomb_time: 5912.000000
+recomb_time: 6984.000000
 coal_node: 38
 coal_time: 7061.453914
 
@@ -432,7 +433,7 @@ tree 48: 71202 - 71229
 node out: 83, node in: 426
 case2
 recomb_node: 4
-recomb_time: 5737.000000
+recomb_time: 2420.000000
 coal_node: 187
 coal_time: 64939.018046
 
@@ -440,7 +441,7 @@ tree 49: 71229 - 71271
 node out: 426, node in: 432
 case1
 recomb_node: 4
-recomb_time: 41785.000000
+recomb_time: 55692.000000
 coal_node: 426
 coal_time: 66099.136335
 
@@ -448,7 +449,7 @@ tree 50: 71271 - 71531
 node out: 432, node in: 206
 case1
 recomb_node: 4
-recomb_time: 5251.000000
+recomb_time: 15728.000000
 coal_node: 187
 coal_time: 19224.505373
 
@@ -456,7 +457,7 @@ tree 51: 71531 - 72028
 node out: 152, node in: 123
 case1
 recomb_node: 1
-recomb_time: 4708.000000
+recomb_time: 9182.000000
 coal_node: 2
 coal_time: 9994.035902
 
@@ -464,7 +465,7 @@ tree 52: 72028 - 72099
 node out: 206, node in: 357
 case1
 recomb_node: 4
-recomb_time: 13923.000000
+recomb_time: 7373.000000
 coal_node: 206
 coal_time: 43354.825580
 
@@ -472,7 +473,7 @@ tree 53: 72099 - 74831
 node out: 357, node in: 302
 case1
 recomb_node: 4
-recomb_time: 14253.000000
+recomb_time: 8912.000000
 coal_node: 187
 coal_time: 31999.853768
 
@@ -480,7 +481,7 @@ tree 54: 74831 - 75008
 node out: 187, node in: 308
 case3
 recomb_node: 123
-recomb_time: 15153.000000
+recomb_time: 10300.000000
 coal_node: 302
 coal_time: 32844.583324
 
@@ -488,7 +489,7 @@ tree 55: 75008 - 75795
 node out: 308, node in: 297
 case2
 recomb_node: 123
-recomb_time: 21983.000000
+recomb_time: 30436.000000
 coal_node: 4
 coal_time: 30889.120727
 
@@ -496,7 +497,7 @@ tree 56: 75795 - 76832
 node out: 302, node in: 71
 case2
 recomb_node: 38
-recomb_time: 4930.000000
+recomb_time: 3902.000000
 coal_node: 1
 coal_time: 5775.528751
 
@@ -504,7 +505,7 @@ tree 57: 76832 - 79216
 node out: 297, node in: 302
 case1
 recomb_node: 4
-recomb_time: 574.000000
+recomb_time: 12233.000000
 coal_node: 297
 coal_time: 31999.853768
 
@@ -512,7 +513,7 @@ tree 58: 79216 - 79708
 node out: 302, node in: 375
 case1
 recomb_node: 4
-recomb_time: 29733.000000
+recomb_time: 14366.000000
 coal_node: 302
 coal_time: 48144.465247
 
@@ -520,7 +521,7 @@ tree 59: 79708 - 79823
 node out: 375, node in: 161
 case1
 recomb_node: 4
-recomb_time: 8234.000000
+recomb_time: 4294.000000
 coal_node: 123
 coal_time: 14349.386143
 
@@ -528,7 +529,7 @@ tree 60: 79823 - 80232
 node out: 38, node in: 375
 case2
 recomb_node: 0
-recomb_time: 2012.000000
+recomb_time: 3253.000000
 coal_node: 161
 coal_time: 48144.465247
 
@@ -536,7 +537,7 @@ tree 61: 80232 - 80773
 node out: 71, node in: 24
 case2
 recomb_node: 1
-recomb_time: 1240.000000
+recomb_time: 1556.000000
 coal_node: 4
 coal_time: 2343.201710
 
@@ -544,7 +545,7 @@ tree 62: 80773 - 81033
 node out: 161, node in: 302
 case3
 recomb_node: 24
-recomb_time: 11770.000000
+recomb_time: 10768.000000
 coal_node: 0
 coal_time: 31999.853768
 
@@ -552,7 +553,7 @@ tree 63: 81033 - 81279
 node out: 375, node in: 354
 case1
 recomb_node: 123
-recomb_time: 23612.000000
+recomb_time: 20328.000000
 coal_node: 302
 coal_time: 42885.347625
 
@@ -560,7 +561,7 @@ tree 64: 81279 - 82443
 node out: 302, node in: 385
 case2
 recomb_node: 0
-recomb_time: 1339.000000
+recomb_time: 4193.000000
 coal_node: 354
 coal_time: 51157.948849
 
@@ -568,7 +569,7 @@ tree 65: 82443 - 85492
 node out: 354, node in: 187
 case2
 recomb_node: 123
-recomb_time: 11114.000000
+recomb_time: 12583.000000
 coal_node: 0
 coal_time: 16561.685252
 
@@ -576,7 +577,7 @@ tree 66: 85492 - 85883
 node out: 24, node in: 152
 case3
 recomb_node: 4
-recomb_time: 340.000000
+recomb_time: 830.000000
 coal_node: 123
 coal_time: 13031.248318
 
@@ -584,7 +585,7 @@ tree 67: 85883 - 86203
 node out: 385, node in: 484
 case1
 recomb_node: 187
-recomb_time: 46803.000000
+recomb_time: 38224.000000
 coal_node: 385
 coal_time: 112432.970488
 
@@ -592,7 +593,7 @@ tree 68: 86203 - 86348
 node out: 123, node in: 205
 case2
 recomb_node: 2
-recomb_time: 3694.000000
+recomb_time: 1634.000000
 coal_node: 187
 coal_time: 18810.760038
 
@@ -600,7 +601,7 @@ tree 69: 86348 - 86454
 node out: 205, node in: 149
 case2
 recomb_node: 2
-recomb_time: 3153.000000
+recomb_time: 5450.000000
 coal_node: 4
 coal_time: 12827.047675
 
@@ -608,7 +609,7 @@ tree 70: 86454 - 86748
 node out: 187, node in: 205
 case1
 recomb_node: 0
-recomb_time: 15690.000000
+recomb_time: 8043.000000
 coal_node: 187
 coal_time: 18810.760038
 
@@ -616,7 +617,7 @@ tree 71: 86748 - 86855
 node out: 205, node in: 236
 case2
 recomb_node: 0
-recomb_time: 13413.000000
+recomb_time: 14013.000000
 coal_node: 1
 coal_time: 23335.508171
 
@@ -624,7 +625,7 @@ tree 72: 86855 - 87185
 node out: 149, node in: 59
 case3
 recomb_node: 4
-recomb_time: 2191.000000
+recomb_time: 2754.000000
 coal_node: 3
 coal_time: 4877.827100
 
@@ -632,7 +633,7 @@ tree 73: 87185 - 88061
 node out: 152, node in: 38
 case2
 recomb_node: 2
-recomb_time: 1169.000000
+recomb_time: 301.000000
 coal_node: 3
 coal_time: 3484.949225
 
@@ -640,7 +641,7 @@ tree 74: 88061 - 89204
 node out: 484, node in: 447
 case1
 recomb_node: 236
-recomb_time: 32249.000000
+recomb_time: 55123.000000
 coal_node: 59
 coal_time: 74102.073582
 
@@ -648,7 +649,7 @@ tree 75: 89204 - 90641
 node out: 447, node in: 294
 case1
 recomb_node: 59
-recomb_time: 28881.000000
+recomb_time: 12713.000000
 coal_node: 236
 coal_time: 30480.731692
 
@@ -656,7 +657,7 @@ tree 76: 90641 - 94101
 node out: 236, node in: 152
 case3
 recomb_node: 1
-recomb_time: 2142.000000
+recomb_time: 1336.000000
 coal_node: 59
 coal_time: 13031.248318
 
@@ -664,7 +665,7 @@ tree 77: 94101 - 95549
 node out: 59, node in: 62
 case3
 recomb_node: 38
-recomb_time: 4642.000000
+recomb_time: 4769.000000
 coal_node: 1
 coal_time: 5323.101291
 
@@ -672,7 +673,7 @@ tree 78: 95549 - 96078
 node out: 62, node in: 112
 case1
 recomb_node: 1
-recomb_time: 3704.000000
+recomb_time: 1001.000000
 coal_node: 62
 coal_time: 9242.433068
 
@@ -680,7 +681,7 @@ tree 79: 96078 - 96306
 node out: 112, node in: 212
 case2
 recomb_node: 1
-recomb_time: 7719.000000
+recomb_time: 3407.000000
 coal_node: 0
 coal_time: 19943.881054
 
@@ -688,7 +689,7 @@ tree 80: 96306 - 97631
 node out: 212, node in: 284
 case3
 recomb_node: 1
-recomb_time: 18.000000
+recomb_time: 18253.000000
 coal_node: 152
 coal_time: 29283.390523
 
@@ -696,7 +697,7 @@ tree 81: 97631 - 99718
 node out: 284, node in: 233
 case1
 recomb_node: 1
-recomb_time: 1676.000000
+recomb_time: 12608.000000
 coal_node: 152
 coal_time: 22911.894677
 
@@ -704,7 +705,7 @@ tree 82: 99718 - 100056
 node out: 152, node in: 83
 case2
 recomb_node: 4
-recomb_time: 761.000000
+recomb_time: 3951.000000
 coal_node: 0
 coal_time: 7061.453914
 
@@ -712,7 +713,7 @@ tree 83: 100056 - 105853
 node out: 233, node in: 284
 case1
 recomb_node: 1
-recomb_time: 5360.000000
+recomb_time: 13667.000000
 coal_node: 233
 coal_time: 29283.390523
 
@@ -720,7 +721,7 @@ tree 84: 105853 - 106832
 node out: 284, node in: 366
 case2
 recomb_node: 1
-recomb_time: 20235.000000
+recomb_time: 10649.000000
 coal_node: 294
 coal_time: 45702.526971
 
@@ -728,7 +729,7 @@ tree 85: 106832 - 106916
 node out: 366, node in: 375
 case1
 recomb_node: 1
-recomb_time: 27938.000000
+recomb_time: 7337.000000
 coal_node: 366
 coal_time: 48144.465247
 
@@ -736,7 +737,7 @@ tree 86: 106916 - 108655
 node out: 375, node in: 337
 case1
 recomb_node: 1
-recomb_time: 32635.000000
+recomb_time: 14418.000000
 coal_node: 294
 coal_time: 40243.996857
 
@@ -744,7 +745,7 @@ tree 87: 108655 - 108673
 node out: 294, node in: 319
 case2
 recomb_node: 83
-recomb_time: 16205.000000
+recomb_time: 18092.000000
 coal_node: 1
 coal_time: 35578.363685
 
@@ -752,7 +753,7 @@ tree 88: 108673 - 109807
 node out: 83, node in: 37
 case2
 recomb_node: 0
-recomb_time: 2227.000000
+recomb_time: 2647.000000
 coal_node: 2
 coal_time: 3245.439680
 
@@ -760,7 +761,7 @@ tree 89: 109807 - 111016
 node out: 319, node in: 375
 case2
 recomb_node: 1
-recomb_time: 1789.000000
+recomb_time: 13916.000000
 coal_node: 337
 coal_time: 48144.465247
 
@@ -768,7 +769,7 @@ tree 90: 111016 - 111496
 node out: 38, node in: 286
 case2
 recomb_node: 3
-recomb_time: 2105.000000
+recomb_time: 2736.000000
 coal_node: 1
 coal_time: 29543.905176
 
@@ -776,7 +777,7 @@ tree 91: 111496 - 113717
 node out: 337, node in: 348
 case3
 recomb_node: 37
-recomb_time: 17828.000000
+recomb_time: 15359.000000
 coal_node: 286
 coal_time: 41854.876978
 
@@ -784,7 +785,7 @@ tree 92: 113717 - 113897
 node out: 348, node in: 319
 case2
 recomb_node: 37
-recomb_time: 17803.000000
+recomb_time: 17323.000000
 coal_node: 4
 coal_time: 35578.363685
 
@@ -792,7 +793,7 @@ tree 93: 113897 - 115554
 node out: 319, node in: 260
 case1
 recomb_node: 4
-recomb_time: 13505.000000
+recomb_time: 24488.000000
 coal_node: 37
 coal_time: 26757.628202
 
@@ -800,7 +801,7 @@ tree 94: 115554 - 116749
 node out: 375, node in: 369
 case1
 recomb_node: 286
-recomb_time: 40845.000000
+recomb_time: 44817.000000
 coal_node: 260
 coal_time: 46718.558959
 
@@ -808,7 +809,7 @@ tree 95: 116749 - 118403
 node out: 369, node in: 458
 case1
 recomb_node: 260
-recomb_time: 38773.000000
+recomb_time: 27405.000000
 coal_node: 369
 coal_time: 86168.121626
 
@@ -816,7 +817,7 @@ tree 96: 118403 - 119012
 node out: 458, node in: 467
 case1
 recomb_node: 260
-recomb_time: 44564.000000
+recomb_time: 44806.000000
 coal_node: 458
 coal_time: 91971.153891
 
@@ -824,7 +825,7 @@ tree 97: 119012 - 120244
 node out: 286, node in: 157
 case2
 recomb_node: 1
-recomb_time: 11539.000000
+recomb_time: 7653.000000
 coal_node: 37
 coal_time: 13964.544343
 
@@ -832,7 +833,7 @@ tree 98: 120244 - 120642
 node out: 467, node in: 316
 case1
 recomb_node: 260
-recomb_time: 34299.000000
+recomb_time: 27779.000000
 coal_node: 3
 coal_time: 34698.030564
 
@@ -840,7 +841,7 @@ tree 99: 120642 - 121389
 node out: 260, node in: 296
 case1
 recomb_node: 4
-recomb_time: 24790.000000
+recomb_time: 24078.000000
 coal_node: 260
 coal_time: 30881.055742
 
@@ -848,7 +849,7 @@ tree 100: 121389 - 121857
 node out: 296, node in: 41
 case2
 recomb_node: 4
-recomb_time: 3415.000000
+recomb_time: 3392.000000
 coal_node: 37
 coal_time: 3830.991936
 
@@ -856,7 +857,7 @@ tree 101: 121857 - 122875
 node out: 316, node in: 438
 case1
 recomb_node: 3
-recomb_time: 21575.000000
+recomb_time: 20404.000000
 coal_node: 316
 coal_time: 67841.954289
 
@@ -864,7 +865,7 @@ tree 102: 122875 - 123573
 node out: 438, node in: 327
 case1
 recomb_node: 3
-recomb_time: 1041.000000
+recomb_time: 29639.000000
 coal_node: 157
 coal_time: 37791.794242
 
@@ -872,7 +873,7 @@ tree 103: 123573 - 125229
 node out: 327, node in: 438
 case1
 recomb_node: 3
-recomb_time: 27822.000000
+recomb_time: 27633.000000
 coal_node: 327
 coal_time: 67841.954289
 
@@ -880,7 +881,7 @@ tree 104: 125229 - 125938
 node out: 438, node in: 393
 case1
 recomb_node: 3
-recomb_time: 18028.000000
+recomb_time: 12987.000000
 coal_node: 157
 coal_time: 54703.834929
 
@@ -888,7 +889,7 @@ tree 105: 125938 - 126891
 node out: 393, node in: 467
 case1
 recomb_node: 3
-recomb_time: 9090.000000
+recomb_time: 20873.000000
 coal_node: 393
 coal_time: 91971.153891
 
@@ -896,7 +897,7 @@ tree 106: 126891 - 127420
 node out: 467, node in: 232
 case1
 recomb_node: 3
-recomb_time: 16044.000000
+recomb_time: 852.000000
 coal_node: 157
 coal_time: 22744.281199
 
@@ -904,7 +905,7 @@ tree 107: 127420 - 127782
 node out: 157, node in: 327
 case2
 recomb_node: 1
-recomb_time: 8659.000000
+recomb_time: 12112.000000
 coal_node: 232
 coal_time: 37791.794242
 
@@ -912,7 +913,7 @@ tree 108: 127782 - 128254
 node out: 232, node in: 462
 case2
 recomb_node: 3
-recomb_time: 1861.000000
+recomb_time: 18584.000000
 coal_node: 327
 coal_time: 91114.584062
 
@@ -920,7 +921,7 @@ tree 109: 128254 - 128763
 node out: 327, node in: 335
 case1
 recomb_node: 1
-recomb_time: 1562.000000
+recomb_time: 26046.000000
 coal_node: 327
 coal_time: 39896.119235
 
@@ -928,7 +929,7 @@ tree 110: 128763 - 128863
 node out: 335, node in: 251
 case2
 recomb_node: 1
-recomb_time: 7598.000000
+recomb_time: 20569.000000
 coal_node: 3
 coal_time: 24940.071239
 
@@ -936,7 +937,7 @@ tree 111: 128863 - 129087
 node out: 462, node in: 467
 case1
 recomb_node: 41
-recomb_time: 22661.000000
+recomb_time: 87254.000000
 coal_node: 462
 coal_time: 91971.153891
 
@@ -944,7 +945,7 @@ tree 112: 129087 - 129414
 node out: 37, node in: 46
 case3
 recomb_node: 2
-recomb_time: 2638.000000
+recomb_time: 2016.000000
 coal_node: 1
 coal_time: 4497.584069
 
@@ -952,7 +953,7 @@ tree 113: 129414 - 129476
 node out: 467, node in: 462
 case1
 recomb_node: 41
-recomb_time: 15969.000000
+recomb_time: 4594.000000
 coal_node: 251
 coal_time: 91114.584062
 
@@ -960,7 +961,7 @@ tree 114: 129476 - 129814
 node out: 462, node in: 366
 case1
 recomb_node: 41
-recomb_time: 34770.000000
+recomb_time: 15635.000000
 coal_node: 251
 coal_time: 45702.526971
 
@@ -968,7 +969,7 @@ tree 115: 129814 - 131899
 node out: 251, node in: 335
 case2
 recomb_node: 3
-recomb_time: 8126.000000
+recomb_time: 4676.000000
 coal_node: 41
 coal_time: 39896.119235
 
@@ -976,7 +977,7 @@ tree 116: 131899 - 131923
 node out: 335, node in: 68
 case3
 recomb_node: 41
-recomb_time: 4088.000000
+recomb_time: 5551.000000
 coal_node: 46
 coal_time: 5602.494583
 
@@ -984,7 +985,7 @@ tree 117: 131923 - 132227
 node out: 366, node in: 335
 case1
 recomb_node: 3
-recomb_time: 34957.000000
+recomb_time: 28154.000000
 coal_node: 68
 coal_time: 39896.119235
 
@@ -992,7 +993,7 @@ tree 118: 132227 - 132310
 node out: 335, node in: 366
 case1
 recomb_node: 3
-recomb_time: 19755.000000
+recomb_time: 27503.000000
 coal_node: 335
 coal_time: 45702.526971
 
@@ -1000,7 +1001,7 @@ tree 119: 132310 - 132908
 node out: 366, node in: 252
 case1
 recomb_node: 3
-recomb_time: 5402.000000
+recomb_time: 6132.000000
 coal_node: 68
 coal_time: 25000.372661
 
@@ -1008,7 +1009,7 @@ tree 120: 132908 - 133211
 node out: 41, node in: 106
 case3
 recomb_node: 0
-recomb_time: 1377.000000
+recomb_time: 493.000000
 coal_node: 3
 coal_time: 8816.129467
 
@@ -1016,7 +1017,7 @@ tree 121: 133211 - 135542
 node out: 68, node in: 61
 case1
 recomb_node: 46
-recomb_time: 4827.000000
+recomb_time: 4772.000000
 coal_node: 4
 coal_time: 5307.964490
 
@@ -1024,7 +1025,7 @@ tree 122: 135542 - 135932
 node out: 106, node in: 154
 case1
 recomb_node: 0
-recomb_time: 7775.000000
+recomb_time: 7192.000000
 coal_node: 106
 coal_time: 13143.730724
 
@@ -1032,7 +1033,7 @@ tree 123: 135932 - 138161
 node out: 252, node in: 467
 case1
 recomb_node: 61
-recomb_time: 18142.000000
+recomb_time: 20261.000000
 coal_node: 252
 coal_time: 91971.153891
 
@@ -1040,7 +1041,7 @@ tree 124: 138161 - 138514
 node out: 467, node in: 460
 case1
 recomb_node: 61
-recomb_time: 53315.000000
+recomb_time: 12113.000000
 coal_node: 154
 coal_time: 89043.455026
 
@@ -1048,7 +1049,7 @@ tree 125: 138514 - 139096
 node out: 46, node in: 41
 case3
 recomb_node: 2
-recomb_time: 3127.000000
+recomb_time: 2588.000000
 coal_node: 4
 coal_time: 3830.991936
 
@@ -1056,7 +1057,7 @@ tree 126: 139096 - 140218
 node out: 460, node in: 467
 case1
 recomb_node: 61
-recomb_time: 48371.000000
+recomb_time: 16217.000000
 coal_node: 460
 coal_time: 91971.153891
 
@@ -1064,7 +1065,7 @@ tree 127: 140218 - 141472
 node out: 467, node in: 459
 case1
 recomb_node: 61
-recomb_time: 34953.000000
+recomb_time: 8141.000000
 coal_node: 154
 coal_time: 88386.389684
 
@@ -1072,7 +1073,7 @@ tree 128: 141472 - 141611
 node out: 459, node in: 467
 case1
 recomb_node: 61
-recomb_time: 75821.000000
+recomb_time: 66172.000000
 coal_node: 459
 coal_time: 91971.153891
 
@@ -1080,7 +1081,7 @@ tree 129: 141611 - 142161
 node out: 467, node in: 442
 case1
 recomb_node: 61
-recomb_time: 50709.000000
+recomb_time: 11411.000000
 coal_node: 154
 coal_time: 71454.553250
 
@@ -1088,7 +1089,7 @@ tree 130: 142161 - 142822
 node out: 442, node in: 459
 case1
 recomb_node: 61
-recomb_time: 34502.000000
+recomb_time: 70170.000000
 coal_node: 442
 coal_time: 88386.389684
 
@@ -1096,7 +1097,7 @@ tree 131: 142822 - 143723
 node out: 459, node in: 462
 case1
 recomb_node: 61
-recomb_time: 46439.000000
+recomb_time: 82883.000000
 coal_node: 459
 coal_time: 91114.584062
 
@@ -1104,7 +1105,7 @@ tree 132: 143723 - 143898
 node out: 462, node in: 288
 case1
 recomb_node: 61
-recomb_time: 7257.000000
+recomb_time: 21354.000000
 coal_node: 154
 coal_time: 29790.149741
 
@@ -1112,7 +1113,7 @@ tree 133: 143898 - 144776
 node out: 288, node in: 462
 case1
 recomb_node: 61
-recomb_time: 26456.000000
+recomb_time: 17175.000000
 coal_node: 288
 coal_time: 91114.584062
 
@@ -1120,7 +1121,7 @@ tree 134: 144776 - 145035
 node out: 462, node in: 467
 case1
 recomb_node: 61
-recomb_time: 20334.000000
+recomb_time: 66802.000000
 coal_node: 462
 coal_time: 91971.153891
 
@@ -1128,7 +1129,7 @@ tree 135: 145035 - 145426
 node out: 154, node in: 32
 case2
 recomb_node: 0
-recomb_time: 2611.000000
+recomb_time: 499.000000
 coal_node: 2
 coal_time: 2982.406419
 
@@ -1136,7 +1137,7 @@ tree 136: 145426 - 146929
 node out: 41, node in: 27
 case2
 recomb_node: 4
-recomb_time: 2027.000000
+recomb_time: 1771.000000
 coal_node: 3
 coal_time: 2493.532614
 
@@ -1144,7 +1145,7 @@ tree 137: 146929 - 147701
 node out: 467, node in: 491
 case1
 recomb_node: 61
-recomb_time: 79036.000000
+recomb_time: 14604.000000
 coal_node: 467
 coal_time: 172411.605148
 
@@ -1152,7 +1153,7 @@ tree 138: 147701 - 154606
 node out: 491, node in: 404
 case1
 recomb_node: 27
-recomb_time: 49167.000000
+recomb_time: 27896.000000
 coal_node: 61
 coal_time: 56961.989851
 
@@ -1160,7 +1161,7 @@ tree 139: 154606 - 158545
 node out: 32, node in: 106
 case2
 recomb_node: 0
-recomb_time: 2885.000000
+recomb_time: 1249.000000
 coal_node: 27
 coal_time: 8816.129467
 
@@ -1168,7 +1169,7 @@ tree 140: 158545 - 159524
 node out: 61, node in: 154
 case2
 recomb_node: 1
-recomb_time: 2995.000000
+recomb_time: 2143.000000
 coal_node: 106
 coal_time: 13143.730724
 
@@ -1176,7 +1177,7 @@ tree 141: 159524 - 159620
 node out: 106, node in: 141
 case3
 recomb_node: 27
-recomb_time: 6355.000000
+recomb_time: 5578.000000
 coal_node: 2
 coal_time: 11708.117963
 
@@ -1184,7 +1185,7 @@ tree 142: 159620 - 161627
 node out: 141, node in: 126
 case3
 recomb_node: 27
-recomb_time: 9880.000000
+recomb_time: 8480.000000
 coal_node: 1
 coal_time: 10116.162919
 
@@ -1192,7 +1193,7 @@ tree 143: 161627 - 162914
 node out: 154, node in: 134
 case3
 recomb_node: 126
-recomb_time: 10514.000000
+recomb_time: 10227.000000
 coal_node: 2
 coal_time: 10758.277692
 
@@ -1200,7 +1201,7 @@ tree 144: 162914 - 163166
 node out: 404, node in: 435
 case1
 recomb_node: 0
-recomb_time: 30192.000000
+recomb_time: 23299.000000
 coal_node: 404
 coal_time: 66659.152349
 
@@ -1208,7 +1209,7 @@ tree 145: 163166 - 163564
 node out: 435, node in: 430
 case1
 recomb_node: 0
-recomb_time: 2332.000000
+recomb_time: 24741.000000
 coal_node: 134
 coal_time: 66064.895757
 
@@ -1216,7 +1217,7 @@ tree 146: 163564 - 163806
 node out: 430, node in: 342
 case1
 recomb_node: 0
-recomb_time: 30521.000000
+recomb_time: 34354.000000
 coal_node: 134
 coal_time: 40861.018035
 
@@ -1224,7 +1225,7 @@ tree 147: 163806 - 167085
 node out: 342, node in: 107
 case2
 recomb_node: 0
-recomb_time: 7946.000000
+recomb_time: 5586.000000
 coal_node: 27
 coal_time: 8940.659633
 
@@ -1232,7 +1233,7 @@ tree 148: 167085 - 169166
 node out: 134, node in: 430
 case1
 recomb_node: 2
-recomb_time: 233.000000
+recomb_time: 52.000000
 coal_node: 134
 coal_time: 66064.895757
 
@@ -1240,7 +1241,7 @@ tree 149: 169166 - 169230
 node out: 126, node in: 195
 case2
 recomb_node: 1
-recomb_time: 2850.000000
+recomb_time: 7322.000000
 coal_node: 2
 coal_time: 17522.064327
 
@@ -1248,7 +1249,7 @@ tree 150: 169230 - 169415
 node out: 430, node in: 368
 case1
 recomb_node: 107
-recomb_time: 25237.000000
+recomb_time: 29138.000000
 coal_node: 195
 coal_time: 46056.999259
 
@@ -1256,7 +1257,7 @@ tree 151: 169415 - 170203
 node out: 368, node in: 430
 case1
 recomb_node: 107
-recomb_time: 38496.000000
+recomb_time: 17911.000000
 coal_node: 368
 coal_time: 66064.895757
 
@@ -1264,7 +1265,7 @@ tree 152: 170203 - 171217
 node out: 195, node in: 135
 case1
 recomb_node: 1
-recomb_time: 8535.000000
+recomb_time: 6947.000000
 coal_node: 2
 coal_time: 11007.837434
 
@@ -1272,7 +1273,7 @@ tree 153: 171217 - 173381
 node out: 27, node in: 91
 case3
 recomb_node: 4
-recomb_time: 2241.000000
+recomb_time: 552.000000
 coal_node: 1
 coal_time: 7817.838736
 
@@ -1280,7 +1281,7 @@ tree 154: 173381 - 175203
 node out: 107, node in: 13
 case2
 recomb_node: 0
-recomb_time: 975.000000
+recomb_time: 1498.000000
 coal_node: 1
 coal_time: 1565.818638
 
@@ -1288,7 +1289,7 @@ tree 155: 175203 - 177645
 node out: 430, node in: 435
 case1
 recomb_node: 135
-recomb_time: 18486.000000
+recomb_time: 22795.000000
 coal_node: 430
 coal_time: 66659.152349
 
@@ -1296,7 +1297,7 @@ tree 156: 177645 - 177817
 node out: 435, node in: 401
 case1
 recomb_node: 3
-recomb_time: 22207.000000
+recomb_time: 20503.000000
 coal_node: 135
 coal_time: 56149.689293
 
@@ -1304,7 +1305,7 @@ tree 157: 177817 - 179141
 node out: 401, node in: 435
 case1
 recomb_node: 3
-recomb_time: 25582.000000
+recomb_time: 51485.000000
 coal_node: 401
 coal_time: 66659.152349
 
@@ -1312,7 +1313,7 @@ tree 158: 179141 - 179806
 node out: 435, node in: 475
 case1
 recomb_node: 3
-recomb_time: 26027.000000
+recomb_time: 36091.000000
 coal_node: 435
 coal_time: 98422.234606
 
@@ -1320,7 +1321,7 @@ tree 159: 179806 - 181350
 node out: 475, node in: 58
 case2
 recomb_node: 3
-recomb_time: 3860.000000
+recomb_time: 2454.000000
 coal_node: 4
 coal_time: 4858.245622
 
@@ -1328,7 +1329,7 @@ tree 160: 181350 - 181392
 node out: 135, node in: 475
 case1
 recomb_node: 2
-recomb_time: 8759.000000
+recomb_time: 5526.000000
 coal_node: 135
 coal_time: 98422.234606
 
@@ -1336,7 +1337,7 @@ tree 161: 181392 - 181823
 node out: 475, node in: 409
 case1
 recomb_node: 2
-recomb_time: 55714.000000
+recomb_time: 36390.000000
 coal_node: 91
 coal_time: 58046.398177
 
@@ -1344,7 +1345,7 @@ tree 162: 181823 - 182510
 node out: 409, node in: 430
 case1
 recomb_node: 2
-recomb_time: 34196.000000
+recomb_time: 34080.000000
 coal_node: 409
 coal_time: 66064.895757
 
@@ -1352,7 +1353,7 @@ tree 163: 182510 - 184359
 node out: 58, node in: 61
 case3
 recomb_node: 4
-recomb_time: 85.000000
+recomb_time: 808.000000
 coal_node: 2
 coal_time: 5307.964490
 
@@ -1360,7 +1361,7 @@ tree 164: 184359 - 184836
 node out: 430, node in: 427
 case1
 recomb_node: 91
-recomb_time: 32214.000000
+recomb_time: 45339.000000
 coal_node: 61
 coal_time: 64989.851160
 
@@ -1368,7 +1369,7 @@ tree 165: 184836 - 186681
 node out: 427, node in: 366
 case1
 recomb_node: 61
-recomb_time: 38350.000000
+recomb_time: 14318.000000
 coal_node: 91
 coal_time: 45702.526971
 
@@ -1376,7 +1377,7 @@ tree 166: 186681 - 188262
 node out: 366, node in: 252
 case1
 recomb_node: 61
-recomb_time: 23578.000000
+recomb_time: 18991.000000
 coal_node: 91
 coal_time: 25000.372661
 
@@ -1384,7 +1385,7 @@ tree 167: 188262 - 188643
 node out: 61, node in: 72
 case2
 recomb_node: 2
-recomb_time: 1182.000000
+recomb_time: 180.000000
 coal_node: 13
 coal_time: 6084.085802
 
@@ -1392,7 +1393,7 @@ tree 168: 188643 - 189659
 node out: 91, node in: 109
 case1
 recomb_node: 3
-recomb_time: 5019.000000
+recomb_time: 3270.000000
 coal_node: 91
 coal_time: 9003.847800
 
@@ -1400,7 +1401,7 @@ tree 169: 189659 - 191210
 node out: 252, node in: 208
 case1
 recomb_node: 4
-recomb_time: 5369.000000
+recomb_time: 4127.000000
 coal_node: 109
 coal_time: 19459.771312
 
@@ -1408,7 +1409,7 @@ tree 170: 191210 - 191236
 node out: 208, node in: 192
 case1
 recomb_node: 4
-recomb_time: 9294.000000
+recomb_time: 6357.000000
 coal_node: 109
 coal_time: 17220.757623
 
@@ -1416,7 +1417,7 @@ tree 171: 191236 - 193640
 node out: 192, node in: 352
 case1
 recomb_node: 4
-recomb_time: 3591.000000
+recomb_time: 15678.000000
 coal_node: 192
 coal_time: 42763.248840
 
@@ -1424,7 +1425,7 @@ tree 172: 193640 - 194101
 node out: 352, node in: 307
 case1
 recomb_node: 4
-recomb_time: 18625.000000
+recomb_time: 1160.000000
 coal_node: 109
 coal_time: 32808.143013
 
@@ -1432,7 +1433,7 @@ tree 173: 194101 - 196230
 node out: 307, node in: 299
 case1
 recomb_node: 4
-recomb_time: 28834.000000
+recomb_time: 3125.000000
 coal_node: 109
 coal_time: 31236.101877
 
@@ -1440,7 +1441,7 @@ tree 174: 196230 - 197265
 node out: 109, node in: 145
 case1
 recomb_node: 3
-recomb_time: 2546.000000
+recomb_time: 1643.000000
 coal_node: 109
 coal_time: 12107.680771
 
@@ -1448,7 +1449,7 @@ tree 175: 197265 - 197343
 node out: 299, node in: 307
 case1
 recomb_node: 4
-recomb_time: 8354.000000
+recomb_time: 23629.000000
 coal_node: 299
 coal_time: 32808.143013
 
@@ -1456,7 +1457,7 @@ tree 176: 197343 - 199805
 node out: 307, node in: 126
 case2
 recomb_node: 4
-recomb_time: 9822.000000
+recomb_time: 5278.000000
 coal_node: 72
 coal_time: 10116.162919
 
@@ -1464,7 +1465,7 @@ tree 177: 199805 - 200427
 node out: 126, node in: 307
 case2
 recomb_node: 4
-recomb_time: 3366.000000
+recomb_time: 3585.000000
 coal_node: 145
 coal_time: 32808.143013
 
@@ -1472,7 +1473,7 @@ tree 178: 200427 - 209755
 node out: 307, node in: 183
 case1
 recomb_node: 4
-recomb_time: 15914.000000
+recomb_time: 3966.000000
 coal_node: 145
 coal_time: 16123.004385
 
@@ -1480,7 +1481,7 @@ tree 179: 209755 - 218022
 node out: 72, node in: 83
 case2
 recomb_node: 2
-recomb_time: 4647.000000
+recomb_time: 2102.000000
 coal_node: 4
 coal_time: 7061.453914
 
@@ -1488,7 +1489,7 @@ tree 180: 218022 - 218218
 node out: 183, node in: 296
 case1
 recomb_node: 145
-recomb_time: 12551.000000
+recomb_time: 14731.000000
 coal_node: 183
 coal_time: 30881.055742
 
@@ -1496,7 +1497,7 @@ tree 181: 218218 - 219714
 node out: 145, node in: 102
 case1
 recomb_node: 3
-recomb_time: 7603.000000
+recomb_time: 2132.000000
 coal_node: 13
 coal_time: 8481.019641
 
@@ -1504,7 +1505,7 @@ tree 182: 219714 - 223210
 node out: 83, node in: 70
 case1
 recomb_node: 2
-recomb_time: 3323.000000
+recomb_time: 4284.000000
 coal_node: 4
 coal_time: 5713.421757
 
@@ -1512,7 +1513,7 @@ tree 183: 223210 - 224275
 node out: 296, node in: 433
 case1
 recomb_node: 102
-recomb_time: 10983.000000
+recomb_time: 18302.000000
 coal_node: 296
 coal_time: 66254.555657
 
@@ -1520,7 +1521,7 @@ tree 184: 224275 - 225262
 node out: 70, node in: 58
 case3
 recomb_node: 4
-recomb_time: 2604.000000
+recomb_time: 3136.000000
 coal_node: 3
 coal_time: 4858.245622
 
@@ -1528,7 +1529,7 @@ tree 185: 225262 - 226772
 node out: 433, node in: 405
 case1
 recomb_node: 102
-recomb_time: 55422.000000
+recomb_time: 13587.000000
 coal_node: 2
 coal_time: 57279.056738
 
@@ -1536,7 +1537,7 @@ tree 186: 226772 - 226799
 node out: 405, node in: 345
 case1
 recomb_node: 2
-recomb_time: 27593.000000
+recomb_time: 15778.000000
 coal_node: 102
 coal_time: 41361.008586
 
@@ -1544,7 +1545,7 @@ tree 187: 226799 - 226995
 node out: 58, node in: 254
 case3
 recomb_node: 4
-recomb_time: 3828.000000
+recomb_time: 4497.000000
 coal_node: 102
 coal_time: 25404.581604
 
@@ -1552,7 +1553,7 @@ tree 188: 226995 - 227424
 node out: 13, node in: 34
 case3
 recomb_node: 1
-recomb_time: 961.000000
+recomb_time: 963.000000
 coal_node: 4
 coal_time: 3231.400774
 
@@ -1560,7 +1561,7 @@ tree 189: 227424 - 229214
 node out: 102, node in: 177
 case2
 recomb_node: 3
-recomb_time: 2324.000000
+recomb_time: 3394.000000
 coal_node: 34
 coal_time: 15447.350023
 
@@ -1568,7 +1569,7 @@ tree 190: 229214 - 230637
 node out: 254, node in: 405
 case2
 recomb_node: 0
-recomb_time: 16716.000000
+recomb_time: 6301.000000
 coal_node: 345
 coal_time: 57279.056738
 
@@ -1576,7 +1577,7 @@ tree 191: 230637 - 231764
 node out: 405, node in: 400
 case1
 recomb_node: 0
-recomb_time: 55099.000000
+recomb_time: 16013.000000
 coal_node: 345
 coal_time: 55930.667195
 
@@ -1584,7 +1585,7 @@ tree 192: 231764 - 231800
 node out: 345, node in: 311
 case1
 recomb_node: 2
-recomb_time: 25086.000000
+recomb_time: 18434.000000
 coal_node: 177
 coal_time: 33141.902756
 
@@ -1592,7 +1593,7 @@ tree 193: 231800 - 231948
 node out: 311, node in: 296
 case2
 recomb_node: 2
-recomb_time: 17964.000000
+recomb_time: 2747.000000
 coal_node: 0
 coal_time: 30881.055742
 
@@ -1600,7 +1601,7 @@ tree 194: 231948 - 232186
 node out: 400, node in: 470
 case1
 recomb_node: 177
-recomb_time: 44650.000000
+recomb_time: 52047.000000
 coal_node: 400
 coal_time: 92773.342164
 
@@ -1608,7 +1609,7 @@ tree 195: 232186 - 232205
 node out: 296, node in: 234
 case3
 recomb_node: 2
-recomb_time: 4520.000000
+recomb_time: 22470.000000
 coal_node: 177
 coal_time: 22927.919935
 
@@ -1616,7 +1617,7 @@ tree 196: 232205 - 234805
 node out: 34, node in: 7
 case3
 recomb_node: 4
-recomb_time: 158.000000
+recomb_time: 182.000000
 coal_node: 0
 coal_time: 516.949409
 
@@ -1624,7 +1625,7 @@ tree 197: 234805 - 235100
 node out: 177, node in: 53
 case3
 recomb_node: 1
-recomb_time: 256.000000
+recomb_time: 1093.000000
 coal_node: 7
 coal_time: 4698.438933
 
@@ -1632,7 +1633,7 @@ tree 198: 235100 - 236036
 node out: 234, node in: 74
 case1
 recomb_node: 2
-recomb_time: 1700.000000
+recomb_time: 2180.000000
 coal_node: 3
 coal_time: 6325.310263
 
@@ -1640,7 +1641,7 @@ tree 199: 236036 - 236448
 node out: 470, node in: 477
 case1
 recomb_node: 53
-recomb_time: 62551.000000
+recomb_time: 69599.000000
 coal_node: 470
 coal_time: 100672.274678
 
@@ -1648,7 +1649,7 @@ tree 200: 236448 - 237178
 node out: 74, node in: 13
 case2
 recomb_node: 2
-recomb_time: 1418.000000
+recomb_time: 1102.000000
 coal_node: 7
 coal_time: 1565.818638
 
@@ -1656,7 +1657,7 @@ tree 201: 237178 - 238906
 node out: 477, node in: 364
 case1
 recomb_node: 53
-recomb_time: 25208.000000
+recomb_time: 32922.000000
 coal_node: 3
 coal_time: 45121.484517
 
@@ -1664,7 +1665,7 @@ tree 202: 238906 - 239418
 node out: 13, node in: 234
 case2
 recomb_node: 2
-recomb_time: 784.000000
+recomb_time: 1141.000000
 coal_node: 3
 coal_time: 22927.919935
 
@@ -1672,7 +1673,7 @@ tree 203: 239418 - 240028
 node out: 364, node in: 450
 case1
 recomb_node: 53
-recomb_time: 42222.000000
+recomb_time: 20238.000000
 coal_node: 364
 coal_time: 76947.055118
 
@@ -1680,7 +1681,7 @@ tree 204: 240028 - 240849
 node out: 450, node in: 361
 case1
 recomb_node: 53
-recomb_time: 27610.000000
+recomb_time: 23942.000000
 coal_node: 234
 coal_time: 44339.818464
 
@@ -1688,7 +1689,7 @@ tree 205: 240849 - 242004
 node out: 361, node in: 450
 case1
 recomb_node: 53
-recomb_time: 22372.000000
+recomb_time: 20496.000000
 coal_node: 361
 coal_time: 76947.055118
 
@@ -1696,7 +1697,7 @@ tree 206: 242004 - 244562
 node out: 450, node in: 295
 case1
 recomb_node: 53
-recomb_time: 11820.000000
+recomb_time: 24167.000000
 coal_node: 234
 coal_time: 30775.446939
 
@@ -1704,7 +1705,7 @@ tree 207: 244562 - 250931
 node out: 295, node in: 189
 case2
 recomb_node: 53
-recomb_time: 9775.000000
+recomb_time: 8819.000000
 coal_node: 3
 coal_time: 16688.213298
 
@@ -1712,7 +1713,7 @@ tree 208: 250931 - 251343
 node out: 234, node in: 280
 case1
 recomb_node: 2
-recomb_time: 17074.000000
+recomb_time: 5597.000000
 coal_node: 234
 coal_time: 28385.134021
 
@@ -1720,7 +1721,7 @@ tree 209: 251343 - 255870
 node out: 280, node in: 216
 case1
 recomb_node: 2
-recomb_time: 1679.000000
+recomb_time: 15997.000000
 coal_node: 189
 coal_time: 20384.104938
 
@@ -1728,7 +1729,7 @@ tree 210: 255870 - 256400
 node out: 189, node in: 280
 case2
 recomb_node: 3
-recomb_time: 7166.000000
+recomb_time: 11221.000000
 coal_node: 216
 coal_time: 28385.134021
 
@@ -1736,7 +1737,7 @@ tree 211: 256400 - 256589
 node out: 53, node in: 56
 case2
 recomb_node: 1
-recomb_time: 1620.000000
+recomb_time: 446.000000
 coal_node: 3
 coal_time: 4731.413650
 
@@ -1744,7 +1745,7 @@ tree 212: 256589 - 256760
 node out: 216, node in: 257
 case3
 recomb_node: 7
-recomb_time: 6616.000000
+recomb_time: 4963.000000
 coal_node: 56
 coal_time: 25760.646972
 
@@ -1752,7 +1753,7 @@ tree 213: 256760 - 258552
 node out: 56, node in: 114
 case3
 recomb_node: 3
-recomb_time: 51.000000
+recomb_time: 4438.000000
 coal_node: 2
 coal_time: 9362.121222
 
@@ -1760,7 +1761,7 @@ tree 214: 258552 - 259748
 node out: 114, node in: 144
 case3
 recomb_node: 3
-recomb_time: 4451.000000
+recomb_time: 3167.000000
 coal_node: 1
 coal_time: 12081.420583
 
@@ -1768,7 +1769,7 @@ tree 215: 259748 - 259859
 node out: 257, node in: 490
 case2
 recomb_node: 7
-recomb_time: 10770.000000
+recomb_time: 16032.000000
 coal_node: 280
 coal_time: 156332.688016
 
@@ -1776,7 +1777,7 @@ tree 216: 259859 - 260470
 node out: 490, node in: 488
 case1
 recomb_node: 7
-recomb_time: 46102.000000
+recomb_time: 14381.000000
 coal_node: 280
 coal_time: 121609.910351
 
@@ -1784,7 +1785,7 @@ tree 217: 260470 - 261528
 node out: 144, node in: 189
 case2
 recomb_node: 1
-recomb_time: 10505.000000
+recomb_time: 10967.000000
 coal_node: 7
 coal_time: 16688.213298
 
@@ -1792,7 +1793,7 @@ tree 218: 261528 - 261955
 node out: 189, node in: 223
 case2
 recomb_node: 1
-recomb_time: 6264.000000
+recomb_time: 11653.000000
 coal_node: 2
 coal_time: 21690.963735
 
@@ -1800,7 +1801,7 @@ tree 219: 261955 - 261986
 node out: 280, node in: 289
 case1
 recomb_node: 3
-recomb_time: 3214.000000
+recomb_time: 23012.000000
 coal_node: 280
 coal_time: 30238.817150
 
@@ -1808,7 +1809,7 @@ tree 220: 261986 - 262818
 node out: 488, node in: 378
 case1
 recomb_node: 7
-recomb_time: 43464.000000
+recomb_time: 15865.000000
 coal_node: 289
 coal_time: 49824.866228
 
@@ -1816,7 +1817,7 @@ tree 221: 262818 - 263143
 node out: 378, node in: 367
 case1
 recomb_node: 7
-recomb_time: 41201.000000
+recomb_time: 19359.000000
 coal_node: 289
 coal_time: 45917.747531
 
@@ -1824,7 +1825,7 @@ tree 222: 263143 - 263193
 node out: 223, node in: 378
 case3
 recomb_node: 2
-recomb_time: 19290.000000
+recomb_time: 21202.000000
 coal_node: 367
 coal_time: 49824.866228
 
@@ -1832,7 +1833,7 @@ tree 223: 263193 - 264427
 node out: 378, node in: 85
 case2
 recomb_node: 2
-recomb_time: 5775.000000
+recomb_time: 885.000000
 coal_node: 1
 coal_time: 7149.642006
 
@@ -1840,7 +1841,7 @@ tree 224: 264427 - 264611
 node out: 367, node in: 336
 case1
 recomb_node: 7
-recomb_time: 32906.000000
+recomb_time: 12673.000000
 coal_node: 289
 coal_time: 40239.728637
 
@@ -1848,7 +1849,7 @@ tree 225: 264611 - 265771
 node out: 289, node in: 166
 case3
 recomb_node: 85
-recomb_time: 14032.000000
+recomb_time: 7713.000000
 coal_node: 7
 coal_time: 14479.416252
 
@@ -1856,7 +1857,7 @@ tree 226: 265771 - 265910
 node out: 166, node in: 189
 case1
 recomb_node: 7
-recomb_time: 13019.000000
+recomb_time: 1720.000000
 coal_node: 166
 coal_time: 16688.213298
 
@@ -1864,7 +1865,7 @@ tree 227: 265910 - 268867
 node out: 189, node in: 130
 case3
 recomb_node: 85
-recomb_time: 7372.000000
+recomb_time: 9815.000000
 coal_node: 3
 coal_time: 10322.920668
 
@@ -1872,7 +1873,7 @@ tree 228: 268867 - 270729
 node out: 336, node in: 482
 case1
 recomb_node: 7
-recomb_time: 39586.000000
+recomb_time: 37222.000000
 coal_node: 336
 coal_time: 105310.633333
 
@@ -1880,7 +1881,7 @@ tree 229: 270729 - 271114
 node out: 482, node in: 466
 case1
 recomb_node: 7
-recomb_time: 2410.000000
+recomb_time: 81281.000000
 coal_node: 130
 coal_time: 91958.403119
 
@@ -1888,7 +1889,7 @@ tree 230: 271114 - 273950
 node out: 466, node in: 359
 case1
 recomb_node: 7
-recomb_time: 35325.000000
+recomb_time: 31301.000000
 coal_node: 130
 coal_time: 43504.772835
 
@@ -1896,7 +1897,7 @@ tree 231: 273950 - 274023
 node out: 359, node in: 215
 case1
 recomb_node: 7
-recomb_time: 11872.000000
+recomb_time: 8526.000000
 coal_node: 130
 coal_time: 20372.893092
 
@@ -1904,7 +1905,7 @@ tree 232: 274023 - 274155
 node out: 85, node in: 72
 case2
 recomb_node: 1
-recomb_time: 1387.000000
+recomb_time: 2430.000000
 coal_node: 7
 coal_time: 6084.085802
 
@@ -1912,7 +1913,7 @@ tree 233: 274155 - 275233
 node out: 215, node in: 377
 case1
 recomb_node: 130
-recomb_time: 18123.000000
+recomb_time: 16221.000000
 coal_node: 215
 coal_time: 49172.458268
 
@@ -1920,7 +1921,7 @@ tree 234: 275233 - 275813
 node out: 377, node in: 234
 case1
 recomb_node: 72
-recomb_time: 10689.000000
+recomb_time: 14905.000000
 coal_node: 130
 coal_time: 22927.919935
 
@@ -1928,7 +1929,7 @@ tree 235: 275813 - 276969
 node out: 234, node in: 377
 case1
 recomb_node: 72
-recomb_time: 20494.000000
+recomb_time: 10645.000000
 coal_node: 234
 coal_time: 49172.458268
 
@@ -1936,7 +1937,7 @@ tree 236: 276969 - 279129
 node out: 130, node in: 164
 case1
 recomb_node: 3
-recomb_time: 1897.000000
+recomb_time: 1162.000000
 coal_node: 130
 coal_time: 14409.759844
 
@@ -1944,7 +1945,7 @@ tree 237: 279129 - 279392
 node out: 377, node in: 350
 case1
 recomb_node: 72
-recomb_time: 12635.000000
+recomb_time: 33201.000000
 coal_node: 164
 coal_time: 42476.622161
 
@@ -1952,7 +1953,7 @@ tree 238: 279392 - 279830
 node out: 164, node in: 367
 case2
 recomb_node: 2
-recomb_time: 7472.000000
+recomb_time: 4884.000000
 coal_node: 350
 coal_time: 45917.747531
 
@@ -1960,7 +1961,7 @@ tree 239: 279830 - 281506
 node out: 350, node in: 280
 case3
 recomb_node: 3
-recomb_time: 5032.000000
+recomb_time: 8970.000000
 coal_node: 2
 coal_time: 28385.134021
 
@@ -1968,7 +1969,7 @@ tree 240: 281506 - 283376
 node out: 280, node in: 191
 case2
 recomb_node: 2
-recomb_time: 1636.000000
+recomb_time: 3534.000000
 coal_node: 72
 coal_time: 16881.090912
 
@@ -1976,7 +1977,7 @@ tree 241: 283376 - 284230
 node out: 72, node in: 40
 case3
 recomb_node: 7
-recomb_time: 3517.000000
+recomb_time: 647.000000
 coal_node: 3
 coal_time: 3828.874332
 
@@ -1984,7 +1985,7 @@ tree 242: 284230 - 285847
 node out: 367, node in: 377
 case1
 recomb_node: 191
-recomb_time: 29270.000000
+recomb_time: 17493.000000
 coal_node: 367
 coal_time: 49172.458268
 
@@ -1992,7 +1993,7 @@ tree 243: 285847 - 286198
 node out: 191, node in: 264
 case3
 recomb_node: 1
-recomb_time: 14803.000000
+recomb_time: 15607.000000
 coal_node: 40
 coal_time: 27191.971727
 
@@ -2000,7 +2001,7 @@ tree 244: 286198 - 286359
 node out: 377, node in: 386
 case1
 recomb_node: 2
-recomb_time: 15360.000000
+recomb_time: 43262.000000
 coal_node: 377
 coal_time: 51205.477821
 
@@ -2008,7 +2009,7 @@ tree 245: 286359 - 287979
 node out: 264, node in: 274
 case2
 recomb_node: 1
-recomb_time: 22382.000000
+recomb_time: 5955.000000
 coal_node: 2
 coal_time: 27925.984020
 
@@ -2016,7 +2017,7 @@ tree 246: 287979 - 288218
 node out: 40, node in: 12
 case1
 recomb_node: 3
-recomb_time: 1257.000000
+recomb_time: 426.000000
 coal_node: 7
 coal_time: 1296.907822
 
@@ -2024,7 +2025,7 @@ tree 247: 288218 - 289900
 node out: 386, node in: 377
 case1
 recomb_node: 274
-recomb_time: 48623.000000
+recomb_time: 30768.000000
 coal_node: 12
 coal_time: 49172.458268
 
@@ -2032,7 +2033,7 @@ tree 248: 289900 - 293033
 node out: 274, node in: 315
 case1
 recomb_node: 1
-recomb_time: 7447.000000
+recomb_time: 21528.000000
 coal_node: 274
 coal_time: 34652.141573
 
@@ -2040,7 +2041,7 @@ tree 249: 293033 - 294350
 node out: 377, node in: 295
 case2
 recomb_node: 12
-recomb_time: 10597.000000
+recomb_time: 25962.000000
 coal_node: 2
 coal_time: 30775.446939
 
@@ -2048,7 +2049,7 @@ tree 250: 294350 - 295526
 node out: 295, node in: 185
 case1
 recomb_node: 2
-recomb_time: 5388.000000
+recomb_time: 6175.000000
 coal_node: 12
 coal_time: 16253.012720
 
@@ -2056,7 +2057,7 @@ tree 251: 295526 - 296961
 node out: 315, node in: 295
 case1
 recomb_node: 1
-recomb_time: 25432.000000
+recomb_time: 2291.000000
 coal_node: 185
 coal_time: 30775.446939
 
@@ -2064,7 +2065,7 @@ tree 252: 296961 - 298572
 node out: 185, node in: 171
 case1
 recomb_node: 2
-recomb_time: 10595.000000
+recomb_time: 1553.000000
 coal_node: 12
 coal_time: 14905.200961
 
@@ -2072,7 +2073,7 @@ tree 253: 298572 - 306318
 node out: 295, node in: 259
 case1
 recomb_node: 1
-recomb_time: 21601.000000
+recomb_time: 5947.000000
 coal_node: 171
 coal_time: 26700.474500
 
@@ -2080,7 +2081,7 @@ tree 254: 306318 - 307801
 node out: 171, node in: 333
 case2
 recomb_node: 2
-recomb_time: 1669.000000
+recomb_time: 12277.000000
 coal_node: 259
 coal_time: 39049.782046
 
@@ -2088,7 +2089,7 @@ tree 255: 307801 - 308005
 node out: 259, node in: 276
 case3
 recomb_node: 12
-recomb_time: 7447.000000
+recomb_time: 16212.000000
 coal_node: 2
 coal_time: 28097.902964
 
@@ -2096,7 +2097,7 @@ tree 256: 308005 - 308008
 node out: 276, node in: 289
 case3
 recomb_node: 12
-recomb_time: 12465.000000
+recomb_time: 10670.000000
 coal_node: 1
 coal_time: 30238.817150
 
@@ -2104,7 +2105,7 @@ tree 257: 308008 - 308047
 node out: 333, node in: 273
 case2
 recomb_node: 2
-recomb_time: 98.000000
+recomb_time: 6797.000000
 coal_node: 12
 coal_time: 27880.433455
 
@@ -2112,7 +2113,7 @@ tree 258: 308047 - 308439
 node out: 273, node in: 72
 case2
 recomb_node: 2
-recomb_time: 1821.000000
+recomb_time: 797.000000
 coal_node: 1
 coal_time: 6084.085802
 
@@ -2120,7 +2121,7 @@ tree 259: 308439 - 310652
 node out: 289, node in: 164
 case1
 recomb_node: 12
-recomb_time: 8187.000000
+recomb_time: 1657.000000
 coal_node: 72
 coal_time: 14409.759844
 
@@ -2128,7 +2129,7 @@ tree 260: 310652 - 310882
 node out: 164, node in: 307
 case1
 recomb_node: 12
-recomb_time: 13379.000000
+recomb_time: 2726.000000
 coal_node: 164
 coal_time: 32808.143013
 
@@ -2136,7 +2137,7 @@ tree 261: 310882 - 312339
 node out: 307, node in: 290
 case1
 recomb_node: 12
-recomb_time: 13127.000000
+recomb_time: 24183.000000
 coal_node: 72
 coal_time: 30301.786011
 
@@ -2144,7 +2145,7 @@ tree 262: 312339 - 313112
 node out: 290, node in: 307
 case1
 recomb_node: 12
-recomb_time: 22088.000000
+recomb_time: 15018.000000
 coal_node: 290
 coal_time: 32808.143013
 
@@ -2152,7 +2153,7 @@ tree 263: 313112 - 315049
 node out: 307, node in: 373
 case1
 recomb_node: 12
-recomb_time: 16857.000000
+recomb_time: 5118.000000
 coal_node: 307
 coal_time: 47929.814658
 
@@ -2160,7 +2161,7 @@ tree 264: 315049 - 321911
 node out: 373, node in: 155
 case1
 recomb_node: 12
-recomb_time: 5652.000000
+recomb_time: 5449.000000
 coal_node: 72
 coal_time: 13495.239458
 
@@ -2168,7 +2169,7 @@ tree 265: 321911 - 323310
 node out: 155, node in: 321
 case1
 recomb_node: 12
-recomb_time: 9729.000000
+recomb_time: 12921.000000
 coal_node: 155
 coal_time: 35836.065315
 
@@ -2176,7 +2177,7 @@ tree 266: 323310 - 323769
 node out: 321, node in: 307
 case1
 recomb_node: 12
-recomb_time: 23405.000000
+recomb_time: 4225.000000
 coal_node: 72
 coal_time: 32808.143013
 
@@ -2184,7 +2185,7 @@ tree 267: 323769 - 324526
 node out: 307, node in: 321
 case1
 recomb_node: 12
-recomb_time: 32647.000000
+recomb_time: 29910.000000
 coal_node: 307
 coal_time: 35836.065315
 
@@ -2192,7 +2193,7 @@ tree 268: 324526 - 326296
 node out: 321, node in: 307
 case1
 recomb_node: 12
-recomb_time: 20783.000000
+recomb_time: 19372.000000
 coal_node: 72
 coal_time: 32808.143013
 
@@ -2200,7 +2201,7 @@ tree 269: 326296 - 331822
 node out: 307, node in: 321
 case1
 recomb_node: 12
-recomb_time: 20456.000000
+recomb_time: 1583.000000
 coal_node: 307
 coal_time: 35836.065315
 
@@ -2208,7 +2209,7 @@ tree 270: 331822 - 334226
 node out: 321, node in: 138
 case1
 recomb_node: 12
-recomb_time: 5712.000000
+recomb_time: 8766.000000
 coal_node: 72
 coal_time: 11370.518891
 
@@ -2216,7 +2217,7 @@ tree 271: 334226 - 338692
 node out: 138, node in: 307
 case1
 recomb_node: 12
-recomb_time: 9387.000000
+recomb_time: 3481.000000
 coal_node: 138
 coal_time: 32808.143013
 
@@ -2224,7 +2225,7 @@ tree 272: 338692 - 345458
 node out: 307, node in: 129
 case1
 recomb_node: 12
-recomb_time: 8993.000000
+recomb_time: 4595.000000
 coal_node: 72
 coal_time: 10280.057486
 
@@ -2232,7 +2233,7 @@ tree 273: 345458 - 345804
 node out: 72, node in: 182
 case2
 recomb_node: 1
-recomb_time: 2350.000000
+recomb_time: 2688.000000
 coal_node: 129
 coal_time: 16117.763640
 
@@ -2240,7 +2241,7 @@ tree 274: 345804 - 345912
 node out: 182, node in: 266
 case1
 recomb_node: 1
-recomb_time: 10533.000000
+recomb_time: 8027.000000
 coal_node: 182
 coal_time: 27301.386003
 
@@ -2248,7 +2249,7 @@ tree 275: 345912 - 347736
 node out: 266, node in: 350
 case1
 recomb_node: 1
-recomb_time: 20656.000000
+recomb_time: 23930.000000
 coal_node: 266
 coal_time: 42476.622161
 
@@ -2256,7 +2257,7 @@ tree 276: 347736 - 349591
 node out: 350, node in: 363
 case1
 recomb_node: 1
-recomb_time: 19286.000000
+recomb_time: 7559.000000
 coal_node: 350
 coal_time: 44530.181596
 
@@ -2264,7 +2265,7 @@ tree 277: 349591 - 357211
 node out: 363, node in: 374
 case1
 recomb_node: 1
-recomb_time: 35144.000000
+recomb_time: 35564.000000
 coal_node: 363
 coal_time: 47930.413270
 
@@ -2272,7 +2273,7 @@ tree 278: 357211 - 359745
 node out: 374, node in: 182
 case1
 recomb_node: 1
-recomb_time: 10357.000000
+recomb_time: 8800.000000
 coal_node: 129
 coal_time: 16117.763640
 
@@ -2280,7 +2281,7 @@ tree 279: 359745 - 359861
 node out: 129, node in: 92
 case3
 recomb_node: 2
-recomb_time: 4251.000000
+recomb_time: 4461.000000
 coal_node: 1
 coal_time: 7831.104076
 
@@ -2288,7 +2289,7 @@ tree 280: 359861 - 363212
 node out: 92, node in: 72
 case1
 recomb_node: 1
-recomb_time: 1192.000000
+recomb_time: 5616.000000
 coal_node: 2
 coal_time: 6084.085802
 
@@ -2296,7 +2297,7 @@ tree 281: 363212 - 363899
 node out: 182, node in: 250
 case1
 recomb_node: 12
-recomb_time: 10880.000000
+recomb_time: 9947.000000
 coal_node: 182
 coal_time: 24914.222953
 
@@ -2304,7 +2305,7 @@ tree 282: 363899 - 365521
 node out: 72, node in: 182
 case2
 recomb_node: 1
-recomb_time: 3790.000000
+recomb_time: 3272.000000
 coal_node: 12
 coal_time: 16117.763640
 
@@ -2312,7 +2313,7 @@ tree 283: 365521 - 365876
 node out: 250, node in: 301
 case1
 recomb_node: 2
-recomb_time: 14587.000000
+recomb_time: 20983.000000
 coal_node: 250
 coal_time: 31591.609239
 
@@ -2320,7 +2321,7 @@ tree 284: 365876 - 366261
 node out: 301, node in: 312
 case1
 recomb_node: 2
-recomb_time: 3306.000000
+recomb_time: 14684.000000
 coal_node: 301
 coal_time: 33514.302330
 
@@ -2328,7 +2329,7 @@ tree 285: 366261 - 366537
 node out: 312, node in: 437
 case1
 recomb_node: 2
-recomb_time: 9913.000000
+recomb_time: 14333.000000
 coal_node: 312
 coal_time: 67468.709052
 
@@ -2336,7 +2337,7 @@ tree 286: 366537 - 366785
 node out: 437, node in: 473
 case1
 recomb_node: 2
-recomb_time: 18734.000000
+recomb_time: 31558.000000
 coal_node: 437
 coal_time: 96802.999768
 
@@ -2344,7 +2345,7 @@ tree 287: 366785 - 368106
 node out: 473, node in: 411
 case1
 recomb_node: 2
-recomb_time: 2971.000000
+recomb_time: 33637.000000
 coal_node: 182
 coal_time: 59233.003778
 
@@ -2352,7 +2353,7 @@ tree 288: 368106 - 370032
 node out: 411, node in: 44
 case2
 recomb_node: 2
-recomb_time: 1903.000000
+recomb_time: 1344.000000
 coal_node: 12
 coal_time: 4118.038942
 
@@ -2360,7 +2361,7 @@ tree 289: 370032 - 370136
 node out: 44, node in: 129
 case1
 recomb_node: 2
-recomb_time: 2473.000000
+recomb_time: 2719.000000
 coal_node: 44
 coal_time: 10280.057486
 
@@ -2368,7 +2369,7 @@ tree 290: 370136 - 370194
 node out: 182, node in: 115
 case2
 recomb_node: 1
-recomb_time: 6515.000000
+recomb_time: 306.000000
 coal_node: 12
 coal_time: 9531.669180
 
@@ -2376,7 +2377,7 @@ tree 291: 370194 - 372526
 node out: 129, node in: 131
 case1
 recomb_node: 2
-recomb_time: 3245.000000
+recomb_time: 5730.000000
 coal_node: 129
 coal_time: 10425.756484
 
@@ -2384,7 +2385,7 @@ tree 292: 372526 - 377731
 node out: 131, node in: 363
 case1
 recomb_node: 2
-recomb_time: 112.000000
+recomb_time: 1882.000000
 coal_node: 131
 coal_time: 44530.181596
 
@@ -2392,7 +2393,7 @@ tree 293: 377731 - 378658
 node out: 363, node in: 411
 case1
 recomb_node: 2
-recomb_time: 25481.000000
+recomb_time: 24727.000000
 coal_node: 363
 coal_time: 59233.003778
 
@@ -2400,7 +2401,7 @@ tree 294: 378658 - 379616
 node out: 115, node in: 344
 case1
 recomb_node: 1
-recomb_time: 8638.000000
+recomb_time: 4087.000000
 coal_node: 115
 coal_time: 40989.067405
 
@@ -2408,7 +2409,7 @@ tree 295: 379616 - 381317
 node out: 344, node in: 293
 case1
 recomb_node: 1
-recomb_time: 23577.000000
+recomb_time: 4174.000000
 coal_node: 12
 coal_time: 30463.984892
 
@@ -2416,7 +2417,7 @@ tree 296: 381317 - 381846
 node out: 411, node in: 344
 case1
 recomb_node: 2
-recomb_time: 4865.000000
+recomb_time: 38490.000000
 coal_node: 293
 coal_time: 40989.067405
 
@@ -2424,7 +2425,7 @@ tree 297: 381846 - 383938
 node out: 344, node in: 209
 case2
 recomb_node: 2
-recomb_time: 3331.000000
+recomb_time: 9304.000000
 coal_node: 12
 coal_time: 19554.487292
 
@@ -2432,7 +2433,7 @@ tree 298: 383938 - 384040
 node out: 209, node in: 271
 case3
 recomb_node: 12
-recomb_time: 5964.000000
+recomb_time: 18020.000000
 coal_node: 1
 coal_time: 27823.479534
 
@@ -2440,7 +2441,7 @@ tree 299: 384040 - 384159
 node out: 271, node in: 242
 case3
 recomb_node: 12
-recomb_time: 11695.000000
+recomb_time: 1577.000000
 coal_node: 2
 coal_time: 24024.031503
 
@@ -2448,7 +2449,7 @@ tree 300: 384159 - 385142
 node out: 242, node in: 411
 case2
 recomb_node: 2
-recomb_time: 18243.000000
+recomb_time: 15361.000000
 coal_node: 293
 coal_time: 59233.003778
 
@@ -2456,7 +2457,7 @@ tree 301: 385142 - 386164
 node out: 293, node in: 277
 case1
 recomb_node: 1
-recomb_time: 15239.000000
+recomb_time: 10802.000000
 coal_node: 12
 coal_time: 28215.047795
 
@@ -2464,7 +2465,7 @@ tree 302: 386164 - 387055
 node out: 411, node in: 407
 case1
 recomb_node: 2
-recomb_time: 42757.000000
+recomb_time: 18496.000000
 coal_node: 277
 coal_time: 57556.039259
 
@@ -2472,7 +2473,7 @@ tree 303: 387055 - 387916
 node out: 277, node in: 146
 case1
 recomb_node: 1
-recomb_time: 6439.000000
+recomb_time: 6025.000000
 coal_node: 12
 coal_time: 12345.227518
 
@@ -2480,7 +2481,7 @@ tree 304: 387916 - 388146
 node out: 407, node in: 486
 case1
 recomb_node: 2
-recomb_time: 49847.000000
+recomb_time: 10246.000000
 coal_node: 407
 coal_time: 116844.142008
 
@@ -2488,7 +2489,7 @@ tree 305: 388146 - 389028
 node out: 486, node in: 230
 case1
 recomb_node: 2
-recomb_time: 21281.000000
+recomb_time: 17290.000000
 coal_node: 146
 coal_time: 22664.743412
 
@@ -2496,7 +2497,7 @@ tree 306: 389028 - 391265
 node out: 146, node in: 89
 case1
 recomb_node: 1
-recomb_time: 6015.000000
+recomb_time: 2971.000000
 coal_node: 12
 coal_time: 7295.724174
 
@@ -2504,7 +2505,7 @@ tree 307: 391265 - 392623
 node out: 89, node in: 88
 case2
 recomb_node: 1
-recomb_time: 6033.000000
+recomb_time: 2065.000000
 coal_node: 2
 coal_time: 7284.557365
 
@@ -2512,7 +2513,7 @@ tree 308: 392623 - 395462
 node out: 230, node in: 320
 case1
 recomb_node: 12
-recomb_time: 3543.000000
+recomb_time: 16735.000000
 coal_node: 230
 coal_time: 35720.628052
 
@@ -2520,7 +2521,7 @@ tree 309: 395462 - 395658
 node out: 320, node in: 310
 case1
 recomb_node: 12
-recomb_time: 28428.000000
+recomb_time: 5323.000000
 coal_node: 88
 coal_time: 33107.170109
 
@@ -2528,7 +2529,7 @@ tree 310: 395658 - 397007
 node out: 310, node in: 343
 case1
 recomb_node: 12
-recomb_time: 26535.000000
+recomb_time: 8072.000000
 coal_node: 310
 coal_time: 40963.584832
 
@@ -2536,7 +2537,7 @@ tree 311: 397007 - 399385
 node out: 343, node in: 330
 case1
 recomb_node: 12
-recomb_time: 6881.000000
+recomb_time: 1421.000000
 coal_node: 88
 coal_time: 38498.175517
 
@@ -2544,7 +2545,7 @@ tree 312: 399385 - 399820
 node out: 330, node in: 344
 case1
 recomb_node: 12
-recomb_time: 10964.000000
+recomb_time: 22233.000000
 coal_node: 330
 coal_time: 40989.067405
 
@@ -2552,7 +2553,7 @@ tree 313: 399820 - 402909
 node out: 344, node in: 380
 case1
 recomb_node: 12
-recomb_time: 6820.000000
+recomb_time: 16037.000000
 coal_node: 344
 coal_time: 50011.724919
 
@@ -2560,7 +2561,7 @@ tree 314: 402909 - 404238
 node out: 380, node in: 298
 case1
 recomb_node: 12
-recomb_time: 24260.000000
+recomb_time: 19600.000000
 coal_node: 88
 coal_time: 30935.816148
 
@@ -2568,7 +2569,7 @@ tree 315: 404238 - 405972
 node out: 88, node in: 229
 case1
 recomb_node: 1
-recomb_time: 5192.000000
+recomb_time: 722.000000
 coal_node: 88
 coal_time: 22293.415372
 
@@ -2576,7 +2577,7 @@ tree 316: 405972 - 407094
 node out: 7, node in: 172
 case2
 recomb_node: 0
-recomb_time: 36.000000
+recomb_time: 250.000000
 coal_node: 12
 coal_time: 15055.835700
 
@@ -2584,7 +2585,7 @@ tree 317: 407094 - 407445
 node out: 229, node in: 197
 case1
 recomb_node: 1
-recomb_time: 15027.000000
+recomb_time: 3648.000000
 coal_node: 2
 coal_time: 17857.286930
 
@@ -2592,7 +2593,7 @@ tree 318: 407445 - 410276
 node out: 197, node in: 124
 case2
 recomb_node: 1
-recomb_time: 3972.000000
+recomb_time: 7913.000000
 coal_node: 0
 coal_time: 10077.257938
 
@@ -2600,7 +2601,7 @@ tree 319: 410276 - 410713
 node out: 172, node in: 241
 case1
 recomb_node: 12
-recomb_time: 3941.000000
+recomb_time: 13351.000000
 coal_node: 172
 coal_time: 23991.936544
 
@@ -2608,7 +2609,7 @@ tree 320: 410713 - 411055
 node out: 298, node in: 343
 case1
 recomb_node: 2
-recomb_time: 28041.000000
+recomb_time: 11867.000000
 coal_node: 298
 coal_time: 40963.584832
 
@@ -2616,7 +2617,7 @@ tree 321: 411055 - 412187
 node out: 343, node in: 99
 case2
 recomb_node: 2
-recomb_time: 5195.000000
+recomb_time: 2357.000000
 coal_node: 1
 coal_time: 8238.364287
 
@@ -2624,7 +2625,7 @@ tree 322: 412187 - 413977
 node out: 241, node in: 310
 case1
 recomb_node: 12
-recomb_time: 1896.000000
+recomb_time: 11517.000000
 coal_node: 241
 coal_time: 33107.170109
 
@@ -2632,7 +2633,7 @@ tree 323: 413977 - 415512
 node out: 310, node in: 283
 case1
 recomb_node: 12
-recomb_time: 6916.000000
+recomb_time: 8080.000000
 coal_node: 124
 coal_time: 29098.736604
 
@@ -2640,7 +2641,7 @@ tree 324: 415512 - 416012
 node out: 124, node in: 42
 case2
 recomb_node: 0
-recomb_time: 806.000000
+recomb_time: 2675.000000
 coal_node: 2
 coal_time: 3926.284128
 
@@ -2648,7 +2649,7 @@ tree 325: 416012 - 417569
 node out: 99, node in: 147
 case1
 recomb_node: 1
-recomb_time: 4835.000000
+recomb_time: 1827.000000
 coal_node: 99
 coal_time: 12386.989400
 
@@ -2656,7 +2657,7 @@ tree 326: 417569 - 418023
 node out: 283, node in: 292
 case1
 recomb_node: 12
-recomb_time: 24495.000000
+recomb_time: 9680.000000
 coal_node: 283
 coal_time: 30457.678437
 
@@ -2664,7 +2665,7 @@ tree 327: 418023 - 418852
 node out: 147, node in: 211
 case2
 recomb_node: 1
-recomb_time: 10593.000000
+recomb_time: 8407.000000
 coal_node: 12
 coal_time: 19774.029446
 
@@ -2672,7 +2673,7 @@ tree 328: 418852 - 419902
 node out: 211, node in: 101
 case2
 recomb_node: 1
-recomb_time: 3767.000000
+recomb_time: 1887.000000
 coal_node: 42
 coal_time: 8462.247027
 
@@ -2680,7 +2681,7 @@ tree 329: 419902 - 420631
 node out: 42, node in: 72
 case2
 recomb_node: 0
-recomb_time: 3778.000000
+recomb_time: 2524.000000
 coal_node: 12
 coal_time: 6084.085802
 
@@ -2688,7 +2689,7 @@ tree 330: 420631 - 422660
 node out: 101, node in: 31
 case2
 recomb_node: 1
-recomb_time: 436.000000
+recomb_time: 2268.000000
 coal_node: 12
 coal_time: 2796.165237
 
@@ -2696,7 +2697,7 @@ tree 331: 422660 - 427046
 node out: 292, node in: 64
 case3
 recomb_node: 2
-recomb_time: 1206.000000
+recomb_time: 230.000000
 coal_node: 0
 coal_time: 5354.988110
 
@@ -2704,7 +2705,7 @@ tree 332: 427046 - 430310
 node out: 64, node in: 9
 case1
 recomb_node: 0
-recomb_time: 632.000000
+recomb_time: 348.000000
 coal_node: 2
 coal_time: 665.058657
 
@@ -2712,7 +2713,7 @@ tree 333: 430310 - 431664
 node out: 72, node in: 98
 case1
 recomb_node: 31
-recomb_time: 3913.000000
+recomb_time: 4649.000000
 coal_node: 72
 coal_time: 8179.470845
 
@@ -2720,7 +2721,7 @@ tree 334: 431664 - 435307
 node out: 98, node in: 310
 case1
 recomb_node: 9
-recomb_time: 2312.000000
+recomb_time: 8104.000000
 coal_node: 98
 coal_time: 33107.170109
 
@@ -2728,7 +2729,7 @@ tree 335: 435307 - 436286
 node out: 310, node in: 383
 case1
 recomb_node: 9
-recomb_time: 32333.000000
+recomb_time: 15171.000000
 coal_node: 310
 coal_time: 50810.430069
 
@@ -2736,7 +2737,7 @@ tree 336: 436286 - 437545
 node out: 383, node in: 388
 case1
 recomb_node: 9
-recomb_time: 1533.000000
+recomb_time: 33883.000000
 coal_node: 383
 coal_time: 52508.207159
 
@@ -2744,7 +2745,7 @@ tree 337: 437545 - 440471
 node out: 388, node in: 222
 case1
 recomb_node: 9
-recomb_time: 14707.000000
+recomb_time: 8698.000000
 coal_node: 31
 coal_time: 21177.152259
 
@@ -2752,7 +2753,7 @@ tree 338: 440471 - 442403
 node out: 222, node in: 388
 case1
 recomb_node: 9
-recomb_time: 20978.000000
+recomb_time: 3464.000000
 coal_node: 222
 coal_time: 52508.207159
 
@@ -2760,7 +2761,7 @@ tree 339: 442403 - 447050
 node out: 388, node in: 64
 case1
 recomb_node: 9
-recomb_time: 1983.000000
+recomb_time: 4321.000000
 coal_node: 31
 coal_time: 5354.988110
 
@@ -2768,7 +2769,7 @@ tree 340: 447050 - 448732
 node out: 31, node in: 379
 case3
 recomb_node: 12
-recomb_time: 1608.000000
+recomb_time: 2096.000000
 coal_node: 64
 coal_time: 49972.591919
 
@@ -2776,7 +2777,7 @@ tree 341: 448732 - 449461
 node out: 379, node in: 146
 case1
 recomb_node: 12
-recomb_time: 7660.000000
+recomb_time: 3817.000000
 coal_node: 64
 coal_time: 12345.227518
 
@@ -2784,7 +2785,7 @@ tree 342: 449461 - 449816
 node out: 64, node in: 49
 case3
 recomb_node: 1
-recomb_time: 3464.000000
+recomb_time: 2795.000000
 coal_node: 12
 coal_time: 4550.058817
 
@@ -2792,7 +2793,7 @@ tree 343: 449816 - 450355
 node out: 146, node in: 379
 case1
 recomb_node: 9
-recomb_time: 10657.000000
+recomb_time: 2402.000000
 coal_node: 146
 coal_time: 49972.591919
 
@@ -2800,7 +2801,7 @@ tree 344: 450355 - 451949
 node out: 49, node in: 108
 case1
 recomb_node: 1
-recomb_time: 2364.000000
+recomb_time: 70.000000
 coal_node: 49
 coal_time: 8991.967444
 
@@ -2808,7 +2809,7 @@ tree 345: 451949 - 452824
 node out: 108, node in: 76
 case3
 recomb_node: 12
-recomb_time: 1616.000000
+recomb_time: 1486.000000
 coal_node: 9
 coal_time: 6552.273193
 
@@ -2816,7 +2817,7 @@ tree 346: 452824 - 453079
 node out: 379, node in: 439
 case1
 recomb_node: 1
-recomb_time: 38981.000000
+recomb_time: 2811.000000
 coal_node: 379
 coal_time: 68083.099964
 
@@ -2824,7 +2825,7 @@ tree 347: 453079 - 458193
 node out: 439, node in: 224
 case1
 recomb_node: 1
-recomb_time: 13882.000000
+recomb_time: 12170.000000
 coal_node: 76
 coal_time: 21715.789255
 
@@ -2832,7 +2833,7 @@ tree 348: 458193 - 461157
 node out: 224, node in: 55
 case2
 recomb_node: 1
-recomb_time: 3941.000000
+recomb_time: 1228.000000
 coal_node: 9
 coal_time: 4708.931489
 
@@ -2840,7 +2841,7 @@ tree 349: 461157 - 462596
 node out: 55, node in: 224
 case2
 recomb_node: 1
-recomb_time: 3746.000000
+recomb_time: 4035.000000
 coal_node: 76
 coal_time: 21715.789255
 
@@ -2848,7 +2849,7 @@ tree 350: 462596 - 465714
 node out: 224, node in: 77
 case1
 recomb_node: 1
-recomb_time: 2575.000000
+recomb_time: 3837.000000
 coal_node: 76
 coal_time: 6571.269777
 
@@ -2856,7 +2857,7 @@ tree 351: 465714 - 476802
 node out: 76, node in: 146
 case3
 recomb_node: 9
-recomb_time: 4347.000000
+recomb_time: 6058.000000
 coal_node: 77
 coal_time: 12345.227518
 
@@ -2864,7 +2865,7 @@ tree 352: 476802 - 477237
 node out: 146, node in: 390
 case1
 recomb_node: 9
-recomb_time: 1594.000000
+recomb_time: 2985.000000
 coal_node: 146
 coal_time: 52822.281368
 
@@ -2872,7 +2873,7 @@ tree 353: 477237 - 477358
 node out: 390, node in: 389
 case1
 recomb_node: 9
-recomb_time: 14589.000000
+recomb_time: 17996.000000
 coal_node: 77
 coal_time: 52571.910454
 
@@ -2880,7 +2881,7 @@ tree 354: 477358 - 478199
 node out: 389, node in: 431
 case1
 recomb_node: 9
-recomb_time: 44638.000000
+recomb_time: 41933.000000
 coal_node: 389
 coal_time: 66074.756663
 
@@ -2888,7 +2889,7 @@ tree 355: 478199 - 478378
 node out: 9, node in: 6
 case3
 recomb_node: 2
-recomb_time: 94.000000
+recomb_time: 45.000000
 coal_node: 1
 coal_time: 378.408521
 
@@ -2896,7 +2897,7 @@ tree 356: 478378 - 482101
 node out: 431, node in: 202
 case1
 recomb_node: 77
-recomb_time: 13655.000000
+recomb_time: 16057.000000
 coal_node: 0
 coal_time: 18595.065383
 
@@ -2904,7 +2905,7 @@ tree 357: 482101 - 482321
 node out: 77, node in: 387
 case2
 recomb_node: 12
-recomb_time: 1461.000000
+recomb_time: 5616.000000
 coal_node: 202
 coal_time: 51755.696827
 
@@ -2912,7 +2913,7 @@ tree 358: 482321 - 483468
 node out: 202, node in: 190
 case1
 recomb_node: 0
-recomb_time: 1875.000000
+recomb_time: 10607.000000
 coal_node: 6
 coal_time: 16836.219835
 
@@ -2920,7 +2921,7 @@ tree 359: 483468 - 483600
 node out: 190, node in: 239
 case3
 recomb_node: 6
-recomb_time: 9231.000000
+recomb_time: 12923.000000
 coal_node: 12
 coal_time: 23718.105248
 
@@ -2928,7 +2929,7 @@ tree 360: 483600 - 485828
 node out: 387, node in: 434
 case1
 recomb_node: 0
-recomb_time: 28925.000000
+recomb_time: 40969.000000
 coal_node: 387
 coal_time: 66278.651712
 
@@ -2936,7 +2937,7 @@ tree 361: 485828 - 486325
 node out: 434, node in: 446
 case1
 recomb_node: 0
-recomb_time: 433.000000
+recomb_time: 19663.000000
 coal_node: 434
 coal_time: 73358.733524
 
@@ -2944,7 +2945,7 @@ tree 362: 486325 - 486410
 node out: 239, node in: 167
 case1
 recomb_node: 6
-recomb_time: 11599.000000
+recomb_time: 13356.000000
 coal_node: 12
 coal_time: 14514.090094
 
@@ -2952,7 +2953,7 @@ tree 363: 486410 - 487794
 node out: 446, node in: 329
 case1
 recomb_node: 0
-recomb_time: 34024.000000
+recomb_time: 23988.000000
 coal_node: 167
 coal_time: 38382.772324
 
@@ -2960,7 +2961,7 @@ tree 364: 487794 - 489352
 node out: 329, node in: 349
 case1
 recomb_node: 0
-recomb_time: 27103.000000
+recomb_time: 21398.000000
 coal_node: 329
 coal_time: 42283.837429
 
@@ -2968,7 +2969,7 @@ tree 365: 489352 - 489382
 node out: 167, node in: 153
 case3
 recomb_node: 12
-recomb_time: 10636.000000
+recomb_time: 11859.000000
 coal_node: 0
 coal_time: 13037.380446
 
@@ -2976,7 +2977,7 @@ tree 366: 489382 - 490478
 node out: 349, node in: 45
 case2
 recomb_node: 6
-recomb_time: 2356.000000
+recomb_time: 448.000000
 coal_node: 12
 coal_time: 4344.142039
 
@@ -2984,7 +2985,7 @@ tree 367: 490478 - 494190
 node out: 45, node in: 20
 case1
 recomb_node: 6
-recomb_time: 2046.000000
+recomb_time: 1146.000000
 coal_node: 12
 coal_time: 2094.506583
 
@@ -2992,7 +2993,7 @@ tree 368: 494190 - 514667
 node out: 153, node in: 120
 case1
 recomb_node: 0
-recomb_time: 4514.000000
+recomb_time: 2639.000000
 coal_node: 20
 coal_time: 9703.651130
 
@@ -3000,7 +3001,7 @@ tree 369: 514667 - 517126
 node out: 120, node in: 331
 case1
 recomb_node: 0
-recomb_time: 6839.000000
+recomb_time: 2877.000000
 coal_node: 120
 coal_time: 38580.456198
 
@@ -3008,7 +3009,7 @@ tree 370: 517126 - 517219
 node out: 331, node in: 43
 case1
 recomb_node: 0
-recomb_time: 266.000000
+recomb_time: 1425.000000
 coal_node: 20
 coal_time: 4073.004428
 
@@ -3016,7 +3017,7 @@ tree 371: 517219 - 518271
 node out: 43, node in: 331
 case1
 recomb_node: 0
-recomb_time: 3280.000000
+recomb_time: 582.000000
 coal_node: 43
 coal_time: 38580.456198
 
@@ -3024,7 +3025,7 @@ tree 372: 518271 - 520425
 node out: 331, node in: 188
 case1
 recomb_node: 0
-recomb_time: 11379.000000
+recomb_time: 12237.000000
 coal_node: 20
 coal_time: 16579.926047
 
@@ -3032,7 +3033,7 @@ tree 373: 520425 - 522233
 node out: 188, node in: 331
 case1
 recomb_node: 0
-recomb_time: 15366.000000
+recomb_time: 10227.000000
 coal_node: 188
 coal_time: 38580.456198
 
@@ -3040,7 +3041,7 @@ tree 374: 522233 - 522313
 node out: 331, node in: 397
 case1
 recomb_node: 0
-recomb_time: 14051.000000
+recomb_time: 35955.000000
 coal_node: 331
 coal_time: 55296.070977
 
@@ -3048,7 +3049,7 @@ tree 375: 522313 - 522738
 node out: 397, node in: 436
 case1
 recomb_node: 0
-recomb_time: 15275.000000
+recomb_time: 35024.000000
 coal_node: 397
 coal_time: 67447.036911
 
@@ -3056,7 +3057,7 @@ tree 376: 522738 - 522889
 node out: 436, node in: 483
 case1
 recomb_node: 0
-recomb_time: 16903.000000
+recomb_time: 15857.000000
 coal_node: 436
 coal_time: 106061.885654
 
@@ -3064,7 +3065,7 @@ tree 377: 522889 - 526156
 node out: 483, node in: 248
 case1
 recomb_node: 0
-recomb_time: 10666.000000
+recomb_time: 756.000000
 coal_node: 20
 coal_time: 24865.452433
 
@@ -3072,7 +3073,7 @@ tree 378: 526156 - 526730
 node out: 248, node in: 275
 case1
 recomb_node: 0
-recomb_time: 21302.000000
+recomb_time: 13397.000000
 coal_node: 248
 coal_time: 28039.249795
 
@@ -3080,7 +3081,7 @@ tree 379: 526730 - 528807
 node out: 275, node in: 282
 case1
 recomb_node: 0
-recomb_time: 23707.000000
+recomb_time: 25967.000000
 coal_node: 275
 coal_time: 28960.461902
 
@@ -3088,7 +3089,7 @@ tree 380: 528807 - 532137
 node out: 282, node in: 159
 case1
 recomb_node: 0
-recomb_time: 6960.000000
+recomb_time: 4765.000000
 coal_node: 20
 coal_time: 14147.941516
 
@@ -3096,7 +3097,7 @@ tree 381: 532137 - 532772
 node out: 159, node in: 282
 case1
 recomb_node: 0
-recomb_time: 11590.000000
+recomb_time: 11368.000000
 coal_node: 159
 coal_time: 28960.461902
 
@@ -3104,7 +3105,7 @@ tree 382: 532772 - 534320
 node out: 12, node in: 33
 case2
 recomb_node: 3
-recomb_time: 923.000000
+recomb_time: 421.000000
 coal_node: 0
 coal_time: 3160.485233
 
@@ -3112,7 +3113,7 @@ tree 383: 534320 - 537657
 node out: 282, node in: 204
 case1
 recomb_node: 20
-recomb_time: 3966.000000
+recomb_time: 4964.000000
 coal_node: 33
 coal_time: 18706.454381
 
@@ -3120,7 +3121,7 @@ tree 384: 537657 - 540268
 node out: 204, node in: 118
 case1
 recomb_node: 20
-recomb_time: 5713.000000
+recomb_time: 3419.000000
 coal_node: 33
 coal_time: 9678.693675
 
@@ -3128,7 +3129,7 @@ tree 385: 540268 - 540557
 node out: 118, node in: 282
 case1
 recomb_node: 20
-recomb_time: 8140.000000
+recomb_time: 9425.000000
 coal_node: 118
 coal_time: 28960.461902
 
@@ -3136,7 +3137,7 @@ tree 386: 540557 - 542175
 node out: 282, node in: 464
 case1
 recomb_node: 20
-recomb_time: 27218.000000
+recomb_time: 27137.000000
 coal_node: 282
 coal_time: 91579.522149
 
@@ -3144,7 +3145,7 @@ tree 387: 542175 - 542543
 node out: 464, node in: 452
 case1
 recomb_node: 20
-recomb_time: 26817.000000
+recomb_time: 23034.000000
 coal_node: 33
 coal_time: 77898.318675
 
@@ -3152,7 +3153,7 @@ tree 388: 542543 - 542998
 node out: 452, node in: 441
 case1
 recomb_node: 20
-recomb_time: 37492.000000
+recomb_time: 26603.000000
 coal_node: 33
 coal_time: 69599.608641
 
@@ -3160,7 +3161,7 @@ tree 389: 542998 - 546215
 node out: 441, node in: 463
 case1
 recomb_node: 20
-recomb_time: 42341.000000
+recomb_time: 43775.000000
 coal_node: 441
 coal_time: 91416.389797
 
@@ -3168,7 +3169,7 @@ tree 390: 546215 - 547388
 node out: 463, node in: 278
 case1
 recomb_node: 20
-recomb_time: 6963.000000
+recomb_time: 8697.000000
 coal_node: 33
 coal_time: 28233.492822
 
@@ -3176,7 +3177,7 @@ tree 391: 547388 - 547874
 node out: 278, node in: 249
 case1
 recomb_node: 20
-recomb_time: 19329.000000
+recomb_time: 23906.000000
 coal_node: 33
 coal_time: 24867.402650
 
@@ -3184,7 +3185,7 @@ tree 392: 547874 - 548435
 node out: 249, node in: 278
 case1
 recomb_node: 20
-recomb_time: 2920.000000
+recomb_time: 19103.000000
 coal_node: 249
 coal_time: 28233.492822
 
@@ -3192,7 +3193,7 @@ tree 393: 548435 - 550725
 node out: 278, node in: 249
 case1
 recomb_node: 20
-recomb_time: 3638.000000
+recomb_time: 21772.000000
 coal_node: 33
 coal_time: 24867.402650
 
@@ -3200,7 +3201,7 @@ tree 394: 550725 - 553056
 node out: 249, node in: 303
 case1
 recomb_node: 20
-recomb_time: 19195.000000
+recomb_time: 8334.000000
 coal_node: 249
 coal_time: 32058.748351
 
@@ -3208,7 +3209,7 @@ tree 395: 553056 - 555319
 node out: 303, node in: 281
 case1
 recomb_node: 20
-recomb_time: 4619.000000
+recomb_time: 5142.000000
 coal_node: 33
 coal_time: 28510.027229
 
@@ -3216,7 +3217,7 @@ tree 396: 555319 - 558392
 node out: 281, node in: 139
 case1
 recomb_node: 20
-recomb_time: 10010.000000
+recomb_time: 3436.000000
 coal_node: 33
 coal_time: 11406.719977
 
@@ -3224,7 +3225,7 @@ tree 397: 558392 - 572404
 node out: 139, node in: 39
 case1
 recomb_node: 20
-recomb_time: 3422.000000
+recomb_time: 2105.000000
 coal_node: 33
 coal_time: 3631.898209
 
@@ -3232,7 +3233,7 @@ tree 398: 572404 - 572522
 node out: 33, node in: 258
 case3
 recomb_node: 3
-recomb_time: 1053.000000
+recomb_time: 2124.000000
 coal_node: 39
 coal_time: 26561.446511
 
@@ -3240,7 +3241,7 @@ tree 399: 572522 - 573792
 node out: 39, node in: 394
 case3
 recomb_node: 0
-recomb_time: 1907.000000
+recomb_time: 2117.000000
 coal_node: 258
 coal_time: 54708.510331
 
@@ -3248,7 +3249,7 @@ tree 400: 573792 - 580061
 node out: 258, node in: 94
 case1
 recomb_node: 3
-recomb_time: 1648.000000
+recomb_time: 6876.000000
 coal_node: 20
 coal_time: 8003.109318
 
@@ -3256,7 +3257,7 @@ tree 401: 580061 - 585157
 node out: 394, node in: 328
 case1
 recomb_node: 0
-recomb_time: 18496.000000
+recomb_time: 11181.000000
 coal_node: 94
 coal_time: 37863.085386
 
@@ -3264,7 +3265,7 @@ tree 402: 585157 - 586976
 node out: 94, node in: 128
 case2
 recomb_node: 3
-recomb_time: 166.000000
+recomb_time: 2419.000000
 coal_node: 0
 coal_time: 10215.364808
 
@@ -3272,7 +3273,7 @@ tree 403: 586976 - 587513
 node out: 328, node in: 420
 case1
 recomb_node: 20
-recomb_time: 32045.000000
+recomb_time: 30057.000000
 coal_node: 328
 coal_time: 62511.859937
 
@@ -3280,7 +3281,7 @@ tree 404: 587513 - 593325
 node out: 420, node in: 240
 case1
 recomb_node: 20
-recomb_time: 10062.000000
+recomb_time: 8409.000000
 coal_node: 128
 coal_time: 23910.305237
 
@@ -3288,7 +3289,7 @@ tree 405: 593325 - 595883
 node out: 240, node in: 199
 case1
 recomb_node: 20
-recomb_time: 4026.000000
+recomb_time: 16043.000000
 coal_node: 128
 coal_time: 18279.244868
 
@@ -3296,7 +3297,7 @@ tree 406: 595883 - 597319
 node out: 128, node in: 65
 case2
 recomb_node: 0
-recomb_time: 3868.000000
+recomb_time: 579.000000
 coal_node: 20
 coal_time: 5397.467035
 
@@ -3304,7 +3305,7 @@ tree 407: 597319 - 597714
 node out: 199, node in: 156
 case1
 recomb_node: 3
-recomb_time: 7932.000000
+recomb_time: 7364.000000
 coal_node: 65
 coal_time: 13537.982868
 
@@ -3312,7 +3313,7 @@ tree 408: 597714 - 600734
 node out: 156, node in: 133
 case1
 recomb_node: 3
-recomb_time: 3586.000000
+recomb_time: 780.000000
 coal_node: 65
 coal_time: 10624.776433
 
@@ -3320,7 +3321,7 @@ tree 409: 600734 - 601999
 node out: 65, node in: 132
 case1
 recomb_node: 0
-recomb_time: 540.000000
+recomb_time: 5275.000000
 coal_node: 65
 coal_time: 10554.515302
 
@@ -3328,7 +3329,7 @@ tree 410: 601999 - 604671
 node out: 6, node in: 172
 case2
 recomb_node: 1
-recomb_time: 345.000000
+recomb_time: 235.000000
 coal_node: 133
 coal_time: 15055.835700
 
@@ -3336,7 +3337,7 @@ tree 411: 604671 - 606503
 node out: 133, node in: 199
 case2
 recomb_node: 3
-recomb_time: 3421.000000
+recomb_time: 10013.000000
 coal_node: 172
 coal_time: 18279.244868
 
@@ -3344,7 +3345,7 @@ tree 412: 606503 - 606573
 node out: 199, node in: 87
 case2
 recomb_node: 3
-recomb_time: 5729.000000
+recomb_time: 5651.000000
 coal_node: 20
 coal_time: 7258.830865
 
@@ -3352,7 +3353,7 @@ tree 413: 606573 - 614669
 node out: 172, node in: 57
 case2
 recomb_node: 1
-recomb_time: 2168.000000
+recomb_time: 600.000000
 coal_node: 3
 coal_time: 4770.508770
 
@@ -3360,7 +3361,7 @@ tree 414: 614669 - 615083
 node out: 132, node in: 281
 case1
 recomb_node: 0
-recomb_time: 5971.000000
+recomb_time: 9133.000000
 coal_node: 132
 coal_time: 28510.027229
 
@@ -3368,7 +3369,7 @@ tree 415: 615083 - 615616
 node out: 281, node in: 261
 case1
 recomb_node: 0
-recomb_time: 18987.000000
+recomb_time: 11733.000000
 coal_node: 87
 coal_time: 26903.616745
 
@@ -3376,7 +3377,7 @@ tree 416: 615616 - 617075
 node out: 261, node in: 281
 case1
 recomb_node: 0
-recomb_time: 20055.000000
+recomb_time: 25998.000000
 coal_node: 261
 coal_time: 28510.027229
 
@@ -3384,7 +3385,7 @@ tree 417: 617075 - 619925
 node out: 281, node in: 54
 case2
 recomb_node: 0
-recomb_time: 1163.000000
+recomb_time: 4145.000000
 coal_node: 20
 coal_time: 4708.256635
 
@@ -3392,7 +3393,7 @@ tree 418: 619925 - 620179
 node out: 54, node in: 281
 case3
 recomb_node: 20
-recomb_time: 4285.000000
+recomb_time: 4073.000000
 coal_node: 87
 coal_time: 28510.027229
 
@@ -3400,7 +3401,7 @@ tree 419: 620179 - 621376
 node out: 281, node in: 261
 case1
 recomb_node: 20
-recomb_time: 15887.000000
+recomb_time: 9909.000000
 coal_node: 87
 coal_time: 26903.616745
 
@@ -3408,7 +3409,7 @@ tree 420: 621376 - 623283
 node out: 87, node in: 22
 case3
 recomb_node: 0
-recomb_time: 361.000000
+recomb_time: 507.000000
 coal_node: 1
 coal_time: 2257.001744
 
@@ -3416,7 +3417,7 @@ tree 421: 623283 - 623459
 node out: 261, node in: 163
 case1
 recomb_node: 20
-recomb_time: 7096.000000
+recomb_time: 4281.000000
 coal_node: 57
 coal_time: 14375.245893
 
@@ -3424,7 +3425,7 @@ tree 422: 623459 - 626130
 node out: 163, node in: 261
 case1
 recomb_node: 20
-recomb_time: 3035.000000
+recomb_time: 10158.000000
 coal_node: 163
 coal_time: 26903.616745
 
@@ -3432,7 +3433,7 @@ tree 423: 626130 - 628515
 node out: 261, node in: 166
 case1
 recomb_node: 20
-recomb_time: 9165.000000
+recomb_time: 7076.000000
 coal_node: 57
 coal_time: 14479.416252
 
@@ -3440,7 +3441,7 @@ tree 424: 628515 - 634612
 node out: 166, node in: 281
 case1
 recomb_node: 20
-recomb_time: 12069.000000
+recomb_time: 4325.000000
 coal_node: 166
 coal_time: 28510.027229
 
@@ -3448,7 +3449,7 @@ tree 425: 634612 - 636867
 node out: 281, node in: 261
 case1
 recomb_node: 20
-recomb_time: 11520.000000
+recomb_time: 13181.000000
 coal_node: 57
 coal_time: 26903.616745
 
@@ -3456,7 +3457,7 @@ tree 426: 636867 - 638659
 node out: 261, node in: 396
 case1
 recomb_node: 20
-recomb_time: 23146.000000
+recomb_time: 21135.000000
 coal_node: 261
 coal_time: 55009.546188
 
@@ -3464,7 +3465,7 @@ tree 427: 638659 - 639772
 node out: 396, node in: 384
 case1
 recomb_node: 20
-recomb_time: 16233.000000
+recomb_time: 7487.000000
 coal_node: 57
 coal_time: 50969.067068
 
@@ -3472,7 +3473,7 @@ tree 428: 639772 - 643187
 node out: 384, node in: 416
 case1
 recomb_node: 20
-recomb_time: 32587.000000
+recomb_time: 16234.000000
 coal_node: 384
 coal_time: 61300.295206
 
@@ -3480,7 +3481,7 @@ tree 429: 643187 - 643436
 node out: 416, node in: 341
 case1
 recomb_node: 20
-recomb_time: 19298.000000
+recomb_time: 3924.000000
 coal_node: 57
 coal_time: 40759.259535
 
@@ -3488,7 +3489,7 @@ tree 430: 643436 - 651093
 node out: 341, node in: 281
 case1
 recomb_node: 20
-recomb_time: 7803.000000
+recomb_time: 20449.000000
 coal_node: 57
 coal_time: 28510.027229
 
@@ -3496,7 +3497,7 @@ tree 431: 651093 - 652452
 node out: 57, node in: 87
 case1
 recomb_node: 3
-recomb_time: 2830.000000
+recomb_time: 1484.000000
 coal_node: 57
 coal_time: 7258.830865
 
@@ -3504,7 +3505,7 @@ tree 432: 652452 - 654852
 node out: 281, node in: 210
 case1
 recomb_node: 20
-recomb_time: 11890.000000
+recomb_time: 4776.000000
 coal_node: 87
 coal_time: 19697.791272
 
@@ -3512,7 +3513,7 @@ tree 433: 654852 - 655859
 node out: 22, node in: 8
 case1
 recomb_node: 0
-recomb_time: 543.000000
+recomb_time: 231.000000
 coal_node: 1
 coal_time: 554.649791
 
@@ -3520,7 +3521,7 @@ tree 434: 655859 - 657284
 node out: 210, node in: 270
 case1
 recomb_node: 20
-recomb_time: 2522.000000
+recomb_time: 8442.000000
 coal_node: 210
 coal_time: 27715.292839
 
@@ -3528,7 +3529,7 @@ tree 435: 657284 - 657476
 node out: 8, node in: 78
 case2
 recomb_node: 0
-recomb_time: 544.000000
+recomb_time: 336.000000
 coal_node: 3
 coal_time: 6574.706004
 
@@ -3536,7 +3537,7 @@ tree 436: 657476 - 657489
 node out: 270, node in: 415
 case1
 recomb_node: 20
-recomb_time: 21621.000000
+recomb_time: 3866.000000
 coal_node: 270
 coal_time: 61100.310097
 
@@ -3544,7 +3545,7 @@ tree 437: 657489 - 659657
 node out: 415, node in: 210
 case1
 recomb_node: 20
-recomb_time: 15926.000000
+recomb_time: 15196.000000
 coal_node: 87
 coal_time: 19697.791272
 
@@ -3552,7 +3553,7 @@ tree 438: 659657 - 659962
 node out: 210, node in: 415
 case1
 recomb_node: 20
-recomb_time: 7033.000000
+recomb_time: 15998.000000
 coal_node: 210
 coal_time: 61100.310097
 
@@ -3560,7 +3561,7 @@ tree 439: 659962 - 660090
 node out: 415, node in: 410
 case1
 recomb_node: 20
-recomb_time: 56610.000000
+recomb_time: 26546.000000
 coal_node: 87
 coal_time: 59027.402994
 
@@ -3568,7 +3569,7 @@ tree 440: 660090 - 660187
 node out: 410, node in: 199
 case1
 recomb_node: 20
-recomb_time: 7395.000000
+recomb_time: 4123.000000
 coal_node: 87
 coal_time: 18279.244868
 
@@ -3576,7 +3577,7 @@ tree 441: 660187 - 660436
 node out: 87, node in: 48
 case2
 recomb_node: 1
-recomb_time: 4329.000000
+recomb_time: 2835.000000
 coal_node: 3
 coal_time: 4546.027953
 
@@ -3584,7 +3585,7 @@ tree 442: 660436 - 661158
 node out: 199, node in: 410
 case1
 recomb_node: 20
-recomb_time: 3280.000000
+recomb_time: 11630.000000
 coal_node: 199
 coal_time: 59027.402994
 
@@ -3592,7 +3593,7 @@ tree 443: 661158 - 661224
 node out: 410, node in: 394
 case1
 recomb_node: 20
-recomb_time: 3503.000000
+recomb_time: 2702.000000
 coal_node: 78
 coal_time: 54708.510331
 
@@ -3600,7 +3601,7 @@ tree 444: 661224 - 663024
 node out: 78, node in: 136
 case1
 recomb_node: 0
-recomb_time: 4859.000000
+recomb_time: 2775.000000
 coal_node: 78
 coal_time: 11018.948866
 
@@ -3608,7 +3609,7 @@ tree 445: 663024 - 664380
 node out: 394, node in: 281
 case1
 recomb_node: 20
-recomb_time: 5284.000000
+recomb_time: 4034.000000
 coal_node: 136
 coal_time: 28510.027229
 
@@ -3616,7 +3617,7 @@ tree 446: 664380 - 671235
 node out: 281, node in: 87
 case2
 recomb_node: 20
-recomb_time: 5906.000000
+recomb_time: 2931.000000
 coal_node: 48
 coal_time: 7258.830865
 
@@ -3624,7 +3625,7 @@ tree 447: 671235 - 675996
 node out: 136, node in: 334
 case1
 recomb_node: 0
-recomb_time: 10.000000
+recomb_time: 5303.000000
 coal_node: 136
 coal_time: 39277.979988
 
@@ -3632,7 +3633,7 @@ tree 448: 675996 - 679954
 node out: 20, node in: 28
 case3
 recomb_node: 2
-recomb_time: 747.000000
+recomb_time: 1841.000000
 coal_node: 0
 coal_time: 2506.265464
 
@@ -3640,7 +3641,7 @@ tree 449: 679954 - 680917
 node out: 87, node in: 199
 case2
 recomb_node: 48
-recomb_time: 5181.000000
+recomb_time: 6406.000000
 coal_node: 28
 coal_time: 18279.244868
 
@@ -3648,7 +3649,7 @@ tree 450: 680917 - 681042
 node out: 28, node in: 21
 case1
 recomb_node: 0
-recomb_time: 1568.000000
+recomb_time: 1738.000000
 coal_node: 2
 coal_time: 2107.387503
 
@@ -3656,7 +3657,7 @@ tree 451: 681042 - 681708
 node out: 199, node in: 136
 case3
 recomb_node: 21
-recomb_time: 7063.000000
+recomb_time: 4924.000000
 coal_node: 4
 coal_time: 11018.948866
 
@@ -3664,7 +3665,7 @@ tree 452: 681708 - 684241
 node out: 334, node in: 309
 case1
 recomb_node: 48
-recomb_time: 24915.000000
+recomb_time: 15748.000000
 coal_node: 136
 coal_time: 33066.671774
 
@@ -3672,7 +3673,7 @@ tree 453: 684241 - 686291
 node out: 309, node in: 201
 case1
 recomb_node: 48
-recomb_time: 7298.000000
+recomb_time: 15104.000000
 coal_node: 136
 coal_time: 18492.872407
 
@@ -3680,7 +3681,7 @@ tree 454: 686291 - 693846
 node out: 21, node in: 51
 case3
 recomb_node: 2
-recomb_time: 1954.000000
+recomb_time: 1098.000000
 coal_node: 48
 coal_time: 4591.030804
 
@@ -3688,7 +3689,7 @@ tree 455: 693846 - 695012
 node out: 201, node in: 453
 case1
 recomb_node: 136
-recomb_time: 16060.000000
+recomb_time: 16964.000000
 coal_node: 201
 coal_time: 79254.809555
 
@@ -3696,7 +3697,7 @@ tree 456: 695012 - 695698
 node out: 136, node in: 128
 case3
 recomb_node: 0
-recomb_time: 1866.000000
+recomb_time: 3261.000000
 coal_node: 51
 coal_time: 10215.364808
 
@@ -3704,7 +3705,7 @@ tree 457: 695698 - 698999
 node out: 453, node in: 75
 case2
 recomb_node: 4
-recomb_time: 3443.000000
+recomb_time: 4086.000000
 coal_node: 51
 coal_time: 6528.513941
 
@@ -3712,7 +3713,7 @@ tree 458: 698999 - 699972
 node out: 128, node in: 406
 case1
 recomb_node: 0
-recomb_time: 5778.000000
+recomb_time: 5901.000000
 coal_node: 128
 coal_time: 57326.520139
 
@@ -3720,7 +3721,7 @@ tree 459: 699972 - 700382
 node out: 48, node in: 214
 case2
 recomb_node: 1
-recomb_time: 3439.000000
+recomb_time: 1816.000000
 coal_node: 0
 coal_time: 20263.615064
 
@@ -3728,7 +3729,7 @@ tree 460: 700382 - 701068
 node out: 214, node in: 175
 case3
 recomb_node: 1
-recomb_time: 3663.000000
+recomb_time: 8044.000000
 coal_node: 75
 coal_time: 15252.163832
 
@@ -3736,7 +3737,7 @@ tree 461: 701068 - 704975
 node out: 406, node in: 219
 case1
 recomb_node: 0
-recomb_time: 8584.000000
+recomb_time: 10492.000000
 coal_node: 175
 coal_time: 20564.130707
 
@@ -3744,7 +3745,7 @@ tree 462: 704975 - 705468
 node out: 75, node in: 392
 case2
 recomb_node: 4
-recomb_time: 1999.000000
+recomb_time: 2357.000000
 coal_node: 219
 coal_time: 53976.531476
 
@@ -3752,7 +3753,7 @@ tree 463: 705468 - 707176
 node out: 219, node in: 178
 case2
 recomb_node: 0
-recomb_time: 4809.000000
+recomb_time: 13010.000000
 coal_node: 4
 coal_time: 15557.356298
 
@@ -3760,7 +3761,7 @@ tree 464: 707176 - 707318
 node out: 178, node in: 265
 case1
 recomb_node: 0
-recomb_time: 10036.000000
+recomb_time: 12292.000000
 coal_node: 178
 coal_time: 27264.629147
 
@@ -3768,7 +3769,7 @@ tree 465: 707318 - 708047
 node out: 392, node in: 349
 case1
 recomb_node: 175
-recomb_time: 29815.000000
+recomb_time: 28620.000000
 coal_node: 265
 coal_time: 42283.837429
 
@@ -3776,7 +3777,7 @@ tree 466: 708047 - 709917
 node out: 175, node in: 131
 case1
 recomb_node: 1
-recomb_time: 941.000000
+recomb_time: 9236.000000
 coal_node: 51
 coal_time: 10425.756484
 
@@ -3784,7 +3785,7 @@ tree 467: 709917 - 710399
 node out: 349, node in: 326
 case1
 recomb_node: 265
-recomb_time: 29059.000000
+recomb_time: 31490.000000
 coal_node: 131
 coal_time: 37717.073339
 
@@ -3792,7 +3793,7 @@ tree 468: 710399 - 712515
 node out: 131, node in: 317
 case2
 recomb_node: 1
-recomb_time: 1430.000000
+recomb_time: 3810.000000
 coal_node: 265
 coal_time: 34900.751507
 
@@ -3800,7 +3801,7 @@ tree 469: 712515 - 714525
 node out: 317, node in: 23
 case2
 recomb_node: 1
-recomb_time: 440.000000
+recomb_time: 2228.000000
 coal_node: 0
 coal_time: 2322.444646
 
@@ -3808,7 +3809,7 @@ tree 470: 714525 - 716153
 node out: 265, node in: 268
 case1
 recomb_node: 4
-recomb_time: 21093.000000
+recomb_time: 7463.000000
 coal_node: 265
 coal_time: 27445.916722
 
@@ -3816,7 +3817,7 @@ tree 471: 716153 - 717027
 node out: 268, node in: 137
 case1
 recomb_node: 4
-recomb_time: 6551.000000
+recomb_time: 6785.000000
 coal_node: 23
 coal_time: 11184.698969
 
@@ -3824,7 +3825,7 @@ tree 472: 717027 - 717079
 node out: 137, node in: 317
 case1
 recomb_node: 4
-recomb_time: 6809.000000
+recomb_time: 4693.000000
 coal_node: 137
 coal_time: 34900.751507
 
@@ -3832,7 +3833,7 @@ tree 473: 717079 - 717843
 node out: 317, node in: 391
 case3
 recomb_node: 23
-recomb_time: 15788.000000
+recomb_time: 28730.000000
 coal_node: 326
 coal_time: 53744.462385
 
@@ -3840,7 +3841,7 @@ tree 474: 717843 - 718133
 node out: 391, node in: 323
 case2
 recomb_node: 23
-recomb_time: 32715.000000
+recomb_time: 5044.000000
 coal_node: 51
 coal_time: 37351.079779
 
@@ -3848,7 +3849,7 @@ tree 475: 718133 - 718549
 node out: 326, node in: 227
 case2
 recomb_node: 4
-recomb_time: 17780.000000
+recomb_time: 11758.000000
 coal_node: 23
 coal_time: 22033.588125
 
@@ -3856,7 +3857,7 @@ tree 476: 718549 - 721485
 node out: 227, node in: 116
 case1
 recomb_node: 4
-recomb_time: 2695.000000
+recomb_time: 9025.000000
 coal_node: 23
 coal_time: 9573.199146
 
@@ -3864,7 +3865,7 @@ tree 477: 721485 - 723153
 node out: 323, node in: 304
 case1
 recomb_node: 51
-recomb_time: 25546.000000
+recomb_time: 30460.000000
 coal_node: 116
 coal_time: 32514.103907
 
@@ -3872,7 +3873,7 @@ tree 478: 723153 - 723240
 node out: 304, node in: 218
 case1
 recomb_node: 51
-recomb_time: 17342.000000
+recomb_time: 6475.000000
 coal_node: 116
 coal_time: 20525.499978
 
@@ -3880,7 +3881,7 @@ tree 479: 723240 - 727090
 node out: 23, node in: 21
 case1
 recomb_node: 0
-recomb_time: 1555.000000
+recomb_time: 699.000000
 coal_node: 1
 coal_time: 2107.387503
 
@@ -3888,7 +3889,7 @@ tree 480: 727090 - 729429
 node out: 116, node in: 326
 case3
 recomb_node: 21
-recomb_time: 5241.000000
+recomb_time: 7943.000000
 coal_node: 218
 coal_time: 37717.073339
 
@@ -3896,7 +3897,7 @@ tree 481: 729429 - 729561
 node out: 218, node in: 304
 case1
 recomb_node: 51
-recomb_time: 15709.000000
+recomb_time: 6396.000000
 coal_node: 218
 coal_time: 32514.103907
 
@@ -3904,7 +3905,7 @@ tree 482: 729561 - 730853
 node out: 304, node in: 267
 case1
 recomb_node: 4
-recomb_time: 23535.000000
+recomb_time: 19439.000000
 coal_node: 51
 coal_time: 27419.710164
 
@@ -3912,7 +3913,7 @@ tree 483: 730853 - 731206
 node out: 326, node in: 231
 case2
 recomb_node: 21
-recomb_time: 4899.000000
+recomb_time: 5847.000000
 coal_node: 51
 coal_time: 22690.482377
 
@@ -3920,7 +3921,7 @@ tree 484: 731206 - 731966
 node out: 21, node in: 19
 case2
 recomb_node: 0
-recomb_time: 230.000000
+recomb_time: 2047.000000
 coal_node: 2
 coal_time: 2052.682630
 
@@ -3928,7 +3929,7 @@ tree 485: 731966 - 733731
 node out: 231, node in: 304
 case2
 recomb_node: 51
-recomb_time: 6141.000000
+recomb_time: 18924.000000
 coal_node: 267
 coal_time: 32514.103907
 
@@ -3936,7 +3937,7 @@ tree 486: 733731 - 734282
 node out: 267, node in: 143
 case1
 recomb_node: 4
-recomb_time: 3702.000000
+recomb_time: 8301.000000
 coal_node: 1
 coal_time: 12005.991905
 
@@ -3944,7 +3945,7 @@ tree 487: 734282 - 736442
 node out: 143, node in: 14
 case1
 recomb_node: 1
-recomb_time: 484.000000
+recomb_time: 951.000000
 coal_node: 4
 coal_time: 1709.605300
 
@@ -3952,7 +3953,7 @@ tree 488: 736442 - 737406
 node out: 304, node in: 365
 case1
 recomb_node: 51
-recomb_time: 5761.000000
+recomb_time: 10337.000000
 coal_node: 304
 coal_time: 45406.513104
 
@@ -3960,7 +3961,7 @@ tree 489: 737406 - 738302
 node out: 365, node in: 272
 case1
 recomb_node: 14
-recomb_time: 13015.000000
+recomb_time: 4967.000000
 coal_node: 51
 coal_time: 27848.281735
 
@@ -3968,7 +3969,7 @@ tree 490: 738302 - 739610
 node out: 272, node in: 326
 case1
 recomb_node: 14
-recomb_time: 16284.000000
+recomb_time: 18160.000000
 coal_node: 272
 coal_time: 37717.073339
 
@@ -3976,7 +3977,7 @@ tree 491: 739610 - 739720
 node out: 326, node in: 358
 case1
 recomb_node: 14
-recomb_time: 35535.000000
+recomb_time: 14859.000000
 coal_node: 326
 coal_time: 43471.424193
 
@@ -3984,7 +3985,7 @@ tree 492: 739720 - 743491
 node out: 358, node in: 225
 case1
 recomb_node: 14
-recomb_time: 10235.000000
+recomb_time: 3537.000000
 coal_node: 51
 coal_time: 21720.688776
 
@@ -3992,7 +3993,7 @@ tree 493: 743491 - 744369
 node out: 225, node in: 358
 case1
 recomb_node: 14
-recomb_time: 18444.000000
+recomb_time: 10852.000000
 coal_node: 225
 coal_time: 43471.424193
 
@@ -4000,7 +4001,7 @@ tree 494: 744369 - 744807
 node out: 358, node in: 351
 case1
 recomb_node: 14
-recomb_time: 22418.000000
+recomb_time: 39651.000000
 coal_node: 51
 coal_time: 42495.174589
 
@@ -4008,7 +4009,7 @@ tree 495: 744807 - 746892
 node out: 351, node in: 376
 case1
 recomb_node: 14
-recomb_time: 13328.000000
+recomb_time: 23412.000000
 coal_node: 351
 coal_time: 48296.715899
 
@@ -4016,7 +4017,7 @@ tree 496: 746892 - 748348
 node out: 19, node in: 16
 case2
 recomb_node: 0
-recomb_time: 1192.000000
+recomb_time: 1574.000000
 coal_node: 14
 coal_time: 1829.193773
 
@@ -4024,7 +4025,7 @@ tree 497: 748348 - 749091
 node out: 51, node in: 358
 case1
 recomb_node: 3
-recomb_time: 3111.000000
+recomb_time: 234.000000
 coal_node: 51
 coal_time: 43471.424193
 
@@ -4032,7 +4033,7 @@ tree 498: 749091 - 750130
 node out: 358, node in: 23
 case3
 recomb_node: 3
-recomb_time: 1507.000000
+recomb_time: 1134.000000
 coal_node: 16
 coal_time: 2322.444646
 
@@ -4040,7 +4041,7 @@ tree 499: 750130 - 750961
 node out: 376, node in: 227
 case1
 recomb_node: 2
-recomb_time: 6411.000000
+recomb_time: 12171.000000
 coal_node: 23
 coal_time: 22033.588125
 
@@ -4048,7 +4049,7 @@ tree 500: 750961 - 752309
 node out: 227, node in: 376
 case1
 recomb_node: 2
-recomb_time: 17743.000000
+recomb_time: 3442.000000
 coal_node: 227
 coal_time: 48296.715899
 
@@ -4056,7 +4057,7 @@ tree 501: 752309 - 756148
 node out: 376, node in: 413
 case1
 recomb_node: 2
-recomb_time: 24476.000000
+recomb_time: 35835.000000
 coal_node: 376
 coal_time: 60697.978472
 
@@ -4064,7 +4065,7 @@ tree 502: 756148 - 756589
 node out: 14, node in: 140
 case2
 recomb_node: 1
-recomb_time: 1473.000000
+recomb_time: 1624.000000
 coal_node: 23
 coal_time: 11462.018166
 
@@ -4072,7 +4073,7 @@ tree 503: 756589 - 757329
 node out: 413, node in: 418
 case1
 recomb_node: 2
-recomb_time: 10548.000000
+recomb_time: 14326.000000
 coal_node: 413
 coal_time: 61690.541269
 
@@ -4080,7 +4081,7 @@ tree 504: 757329 - 759268
 node out: 418, node in: 203
 case1
 recomb_node: 2
-recomb_time: 4423.000000
+recomb_time: 12881.000000
 coal_node: 140
 coal_time: 18690.865901
 
@@ -4088,7 +4089,7 @@ tree 505: 759268 - 759562
 node out: 203, node in: 188
 case1
 recomb_node: 2
-recomb_time: 3797.000000
+recomb_time: 14240.000000
 coal_node: 140
 coal_time: 16579.926047
 
@@ -4096,7 +4097,7 @@ tree 506: 759562 - 760114
 node out: 140, node in: 412
 case2
 recomb_node: 1
-recomb_time: 3047.000000
+recomb_time: 3062.000000
 coal_node: 188
 coal_time: 59939.047097
 
@@ -4104,7 +4105,7 @@ tree 507: 760114 - 760759
 node out: 412, node in: 469
 case1
 recomb_node: 1
-recomb_time: 25712.000000
+recomb_time: 23248.000000
 coal_node: 412
 coal_time: 92720.660631
 
@@ -4112,7 +4113,7 @@ tree 508: 760759 - 761304
 node out: 469, node in: 472
 case1
 recomb_node: 1
-recomb_time: 39670.000000
+recomb_time: 57628.000000
 coal_node: 469
 coal_time: 95223.125844
 
@@ -4120,7 +4121,7 @@ tree 509: 761304 - 762160
 node out: 472, node in: 347
 case1
 recomb_node: 1
-recomb_time: 26170.000000
+recomb_time: 25618.000000
 coal_node: 188
 coal_time: 41572.770659
 
@@ -4128,7 +4129,7 @@ tree 510: 762160 - 763267
 node out: 188, node in: 282
 case1
 recomb_node: 2
-recomb_time: 8754.000000
+recomb_time: 9926.000000
 coal_node: 188
 coal_time: 28960.461902
 
@@ -4136,7 +4137,7 @@ tree 511: 763267 - 768275
 node out: 347, node in: 116
 case2
 recomb_node: 1
-recomb_time: 7033.000000
+recomb_time: 655.000000
 coal_node: 2
 coal_time: 9573.199146
 
@@ -4144,7 +4145,7 @@ tree 512: 768275 - 772382
 node out: 116, node in: 203
 case1
 recomb_node: 1
-recomb_time: 6400.000000
+recomb_time: 443.000000
 coal_node: 116
 coal_time: 18690.865901
 
@@ -4152,7 +4153,7 @@ tree 513: 772382 - 777327
 node out: 16, node in: 11
 case3
 recomb_node: 4
-recomb_time: 90.000000
+recomb_time: 1172.000000
 coal_node: 1
 coal_time: 1265.947260
 
@@ -4160,7 +4161,7 @@ tree 514: 777327 - 778525
 node out: 203, node in: 184
 case1
 recomb_node: 2
-recomb_time: 9902.000000
+recomb_time: 11139.000000
 coal_node: 11
 coal_time: 16162.584173
 
@@ -4168,7 +4169,7 @@ tree 515: 778525 - 782179
 node out: 184, node in: 188
 case1
 recomb_node: 2
-recomb_time: 9764.000000
+recomb_time: 13105.000000
 coal_node: 184
 coal_time: 16579.926047
 
@@ -4176,7 +4177,7 @@ tree 516: 782179 - 782311
 node out: 282, node in: 332
 case1
 recomb_node: 23
-recomb_time: 25387.000000
+recomb_time: 2423.000000
 coal_node: 282
 coal_time: 39023.975370
 
@@ -4184,7 +4185,7 @@ tree 517: 782311 - 782806
 node out: 188, node in: 203
 case1
 recomb_node: 2
-recomb_time: 3292.000000
+recomb_time: 11755.000000
 coal_node: 188
 coal_time: 18690.865901
 
@@ -4192,7 +4193,7 @@ tree 518: 782806 - 783820
 node out: 332, node in: 160
 case2
 recomb_node: 23
-recomb_time: 7737.000000
+recomb_time: 12892.000000
 coal_node: 11
 coal_time: 14151.761940
 
@@ -4200,7 +4201,7 @@ tree 519: 783820 - 787421
 node out: 160, node in: 196
 case2
 recomb_node: 11
-recomb_time: 7874.000000
+recomb_time: 9448.000000
 coal_node: 2
 coal_time: 17673.059701
 
@@ -4208,7 +4209,7 @@ tree 520: 787421 - 791867
 node out: 203, node in: 176
 case2
 recomb_node: 23
-recomb_time: 13494.000000
+recomb_time: 12616.000000
 coal_node: 11
 coal_time: 15299.634642
 
@@ -4216,7 +4217,7 @@ tree 521: 791867 - 792028
 node out: 23, node in: 181
 case3
 recomb_node: 0
-recomb_time: 176.000000
+recomb_time: 2083.000000
 coal_node: 2
 coal_time: 16078.606123
 
@@ -4224,7 +4225,7 @@ tree 522: 792028 - 792132
 node out: 181, node in: 174
 case2
 recomb_node: 0
-recomb_time: 645.000000
+recomb_time: 6287.000000
 coal_node: 11
 coal_time: 15168.042388
 
@@ -4232,7 +4233,7 @@ tree 523: 792132 - 792679
 node out: 174, node in: 119
 case1
 recomb_node: 0
-recomb_time: 5868.000000
+recomb_time: 3696.000000
 coal_node: 11
 coal_time: 9684.768743
 
@@ -4240,7 +4241,7 @@ tree 524: 792679 - 794795
 node out: 119, node in: 165
 case1
 recomb_node: 0
-recomb_time: 5085.000000
+recomb_time: 748.000000
 coal_node: 119
 coal_time: 14410.254472
 
@@ -4248,7 +4249,7 @@ tree 525: 794795 - 794898
 node out: 176, node in: 188
 case3
 recomb_node: 165
-recomb_time: 14609.000000
+recomb_time: 15176.000000
 coal_node: 2
 coal_time: 16579.926047
 
@@ -4256,7 +4257,7 @@ tree 526: 794898 - 795017
 node out: 188, node in: 325
 case3
 recomb_node: 165
-recomb_time: 16445.000000
+recomb_time: 15628.000000
 coal_node: 196
 coal_time: 37665.605527
 
@@ -4264,7 +4265,7 @@ tree 527: 795017 - 795984
 node out: 165, node in: 119
 case1
 recomb_node: 0
-recomb_time: 6976.000000
+recomb_time: 5440.000000
 coal_node: 11
 coal_time: 9684.768743
 
@@ -4272,7 +4273,7 @@ tree 528: 795984 - 798732
 node out: 196, node in: 186
 case3
 recomb_node: 2
-recomb_time: 11089.000000
+recomb_time: 9382.000000
 coal_node: 119
 coal_time: 16297.276291
 
@@ -4280,7 +4281,7 @@ tree 529: 798732 - 799160
 node out: 325, node in: 213
 case1
 recomb_node: 3
-recomb_time: 19680.000000
+recomb_time: 12183.000000
 coal_node: 186
 coal_time: 20208.264542
 
@@ -4288,7 +4289,7 @@ tree 530: 799160 - 805783
 node out: 213, node in: 17
 case2
 recomb_node: 3
-recomb_time: 920.000000
+recomb_time: 146.000000
 coal_node: 0
 coal_time: 1854.244359
 
@@ -4296,7 +4297,7 @@ tree 531: 805783 - 805851
 node out: 186, node in: 179
 case1
 recomb_node: 2
-recomb_time: 5840.000000
+recomb_time: 10925.000000
 coal_node: 119
 coal_time: 15693.110068
 
@@ -4304,7 +4305,7 @@ tree 532: 805851 - 808601
 node out: 179, node in: 196
 case1
 recomb_node: 2
-recomb_time: 534.000000
+recomb_time: 1385.000000
 coal_node: 179
 coal_time: 17673.059701
 
@@ -4312,7 +4313,7 @@ tree 533: 808601 - 811184
 node out: 119, node in: 117
 case1
 recomb_node: 11
-recomb_time: 3828.000000
+recomb_time: 8666.000000
 coal_node: 17
 coal_time: 9648.538899
 
@@ -4320,7 +4321,7 @@ tree 534: 811184 - 811825
 node out: 117, node in: 105
 case3
 recomb_node: 17
-recomb_time: 3679.000000
+recomb_time: 3276.000000
 coal_node: 2
 coal_time: 8679.775345
 
@@ -4328,7 +4329,7 @@ tree 535: 811825 - 813423
 node out: 105, node in: 186
 case3
 recomb_node: 17
-recomb_time: 6710.000000
+recomb_time: 6085.000000
 coal_node: 11
 coal_time: 16297.276291
 
@@ -4336,7 +4337,7 @@ tree 536: 813423 - 813633
 node out: 186, node in: 116
 case3
 recomb_node: 17
-recomb_time: 4041.000000
+recomb_time: 6160.000000
 coal_node: 2
 coal_time: 9573.199146
 
@@ -4344,7 +4345,7 @@ tree 537: 813633 - 818062
 node out: 116, node in: 176
 case1
 recomb_node: 2
-recomb_time: 2188.000000
+recomb_time: 5744.000000
 coal_node: 116
 coal_time: 15299.634642
 
@@ -4352,7 +4353,7 @@ tree 538: 818062 - 820103
 node out: 176, node in: 263
 case3
 recomb_node: 17
-recomb_time: 6412.000000
+recomb_time: 3923.000000
 coal_node: 196
 coal_time: 27072.905438
 
@@ -4360,7 +4361,7 @@ tree 539: 820103 - 822744
 node out: 196, node in: 25
 case1
 recomb_node: 11
-recomb_time: 2238.000000
+recomb_time: 1596.000000
 coal_node: 2
 coal_time: 2357.915798
 
@@ -4368,7 +4369,7 @@ tree 540: 822744 - 822801
 node out: 11, node in: 228
 case2
 recomb_node: 1
-recomb_time: 393.000000
+recomb_time: 103.000000
 coal_node: 25
 coal_time: 22203.051019
 
@@ -4376,7 +4377,7 @@ tree 541: 822801 - 830383
 node out: 263, node in: 186
 case2
 recomb_node: 17
-recomb_time: 9660.000000
+recomb_time: 4095.000000
 coal_node: 25
 coal_time: 16297.276291
 
@@ -4384,7 +4385,7 @@ tree 542: 830383 - 834737
 node out: 17, node in: 15
 case2
 recomb_node: 0
-recomb_time: 502.000000
+recomb_time: 1331.000000
 coal_node: 1
 coal_time: 1752.616342
 
@@ -4392,7 +4393,7 @@ tree 543: 834737 - 837678
 node out: 15, node in: 125
 case2
 recomb_node: 0
-recomb_time: 1735.000000
+recomb_time: 1149.000000
 coal_node: 25
 coal_time: 10097.447343
 
@@ -4400,7 +4401,7 @@ tree 544: 837678 - 837914
 node out: 228, node in: 285
 case1
 recomb_node: 186
-recomb_time: 20909.000000
+recomb_time: 20405.000000
 coal_node: 228
 coal_time: 29459.246500
 
@@ -4408,7 +4409,7 @@ tree 545: 837914 - 840354
 node out: 285, node in: 346
 case1
 recomb_node: 1
-recomb_time: 23857.000000
+recomb_time: 13656.000000
 coal_node: 285
 coal_time: 41544.752557
 
@@ -4416,7 +4417,7 @@ tree 546: 840354 - 844987
 node out: 346, node in: 399
 case1
 recomb_node: 1
-recomb_time: 16715.000000
+recomb_time: 5690.000000
 coal_node: 346
 coal_time: 55673.282522
 
@@ -4424,7 +4425,7 @@ tree 547: 844987 - 848725
 node out: 399, node in: 256
 case1
 recomb_node: 1
-recomb_time: 4691.000000
+recomb_time: 24130.000000
 coal_node: 186
 coal_time: 25696.816197
 
@@ -4432,7 +4433,7 @@ tree 548: 848725 - 849075
 node out: 125, node in: 119
 case1
 recomb_node: 0
-recomb_time: 9619.000000
+recomb_time: 9566.000000
 coal_node: 25
 coal_time: 9684.768743
 
@@ -4440,7 +4441,7 @@ tree 549: 849075 - 850766
 node out: 256, node in: 150
 case2
 recomb_node: 1
-recomb_time: 4313.000000
+recomb_time: 8053.000000
 coal_node: 119
 coal_time: 12877.236816
 
@@ -4448,7 +4449,7 @@ tree 550: 850766 - 850870
 node out: 119, node in: 29
 case1
 recomb_node: 0
-recomb_time: 1489.000000
+recomb_time: 2103.000000
 coal_node: 25
 coal_time: 2507.095079
 
@@ -4456,7 +4457,7 @@ tree 551: 850870 - 852980
 node out: 186, node in: 256
 case1
 recomb_node: 3
-recomb_time: 10118.000000
+recomb_time: 6483.000000
 coal_node: 186
 coal_time: 25696.816197
 
@@ -4464,7 +4465,7 @@ tree 552: 852980 - 854702
 node out: 256, node in: 429
 case1
 recomb_node: 3
-recomb_time: 15635.000000
+recomb_time: 13685.000000
 coal_node: 256
 coal_time: 65410.372721
 
@@ -4472,7 +4473,7 @@ tree 553: 854702 - 855243
 node out: 150, node in: 238
 case2
 recomb_node: 1
-recomb_time: 9343.000000
+recomb_time: 2814.000000
 coal_node: 3
 coal_time: 23713.494915
 
@@ -4480,7 +4481,7 @@ tree 554: 855243 - 855323
 node out: 238, node in: 162
 case1
 recomb_node: 1
-recomb_time: 11536.000000
+recomb_time: 1314.000000
 coal_node: 3
 coal_time: 14373.846667
 
@@ -4488,7 +4489,7 @@ tree 555: 855323 - 856273
 node out: 429, node in: 355
 case1
 recomb_node: 29
-recomb_time: 27739.000000
+recomb_time: 25622.000000
 coal_node: 162
 coal_time: 42909.820240
 
@@ -4496,7 +4497,7 @@ tree 556: 856273 - 859789
 node out: 162, node in: 247
 case1
 recomb_node: 1
-recomb_time: 4420.000000
+recomb_time: 13368.000000
 coal_node: 162
 coal_time: 24716.482480
 
@@ -4504,7 +4505,7 @@ tree 557: 859789 - 860295
 node out: 355, node in: 360
 case1
 recomb_node: 29
-recomb_time: 15848.000000
+recomb_time: 37081.000000
 coal_node: 355
 coal_time: 43596.655544
 
@@ -4512,7 +4513,7 @@ tree 558: 860295 - 860564
 node out: 360, node in: 305
 case1
 recomb_node: 29
-recomb_time: 9199.000000
+recomb_time: 3966.000000
 coal_node: 247
 coal_time: 32524.329594
 
@@ -4520,7 +4521,7 @@ tree 559: 860564 - 861108
 node out: 247, node in: 119
 case2
 recomb_node: 1
-recomb_time: 2304.000000
+recomb_time: 8342.000000
 coal_node: 29
 coal_time: 9684.768743
 
@@ -4528,7 +4529,7 @@ tree 560: 861108 - 862199
 node out: 305, node in: 360
 case1
 recomb_node: 3
-recomb_time: 16028.000000
+recomb_time: 4247.000000
 coal_node: 305
 coal_time: 43596.655544
 
@@ -4536,7 +4537,7 @@ tree 561: 862199 - 862468
 node out: 119, node in: 162
 case3
 recomb_node: 29
-recomb_time: 3856.000000
+recomb_time: 9471.000000
 coal_node: 3
 coal_time: 14373.846667
 
@@ -4544,7 +4545,7 @@ tree 562: 862468 - 867771
 node out: 162, node in: 113
 case1
 recomb_node: 3
-recomb_time: 189.000000
+recomb_time: 2774.000000
 coal_node: 29
 coal_time: 9345.236904
 
@@ -4552,7 +4553,7 @@ tree 563: 867771 - 868527
 node out: 360, node in: 419
 case1
 recomb_node: 1
-recomb_time: 12137.000000
+recomb_time: 43174.000000
 coal_node: 360
 coal_time: 62423.613799
 
@@ -4560,7 +4561,7 @@ tree 564: 868527 - 868622
 node out: 113, node in: 119
 case3
 recomb_node: 29
-recomb_time: 9164.000000
+recomb_time: 8253.000000
 coal_node: 1
 coal_time: 9684.768743
 
@@ -4568,7 +4569,7 @@ tree 565: 868622 - 869179
 node out: 119, node in: 113
 case3
 recomb_node: 29
-recomb_time: 8379.000000
+recomb_time: 5475.000000
 coal_node: 3
 coal_time: 9345.236904
 
@@ -4576,7 +4577,7 @@ tree 566: 869179 - 869273
 node out: 419, node in: 468
 case1
 recomb_node: 1
-recomb_time: 56222.000000
+recomb_time: 32037.000000
 coal_node: 419
 coal_time: 92097.512368
 
@@ -4584,7 +4585,7 @@ tree 567: 869273 - 870566
 node out: 468, node in: 414
 case1
 recomb_node: 1
-recomb_time: 7113.000000
+recomb_time: 27233.000000
 coal_node: 113
 coal_time: 61067.718137
 
@@ -4592,7 +4593,7 @@ tree 568: 870566 - 871215
 node out: 414, node in: 419
 case1
 recomb_node: 1
-recomb_time: 30637.000000
+recomb_time: 18574.000000
 coal_node: 414
 coal_time: 62423.613799
 
@@ -4600,7 +4601,7 @@ tree 569: 871215 - 873228
 node out: 419, node in: 414
 case1
 recomb_node: 1
-recomb_time: 41841.000000
+recomb_time: 18032.000000
 coal_node: 113
 coal_time: 61067.718137
 
@@ -4608,7 +4609,7 @@ tree 570: 873228 - 875832
 node out: 414, node in: 425
 case1
 recomb_node: 1
-recomb_time: 16354.000000
+recomb_time: 32980.000000
 coal_node: 414
 coal_time: 64791.499741
 
@@ -4616,7 +4617,7 @@ tree 571: 875832 - 878276
 node out: 425, node in: 353
 case1
 recomb_node: 1
-recomb_time: 23359.000000
+recomb_time: 18202.000000
 coal_node: 113
 coal_time: 42839.368361
 
@@ -4624,7 +4625,7 @@ tree 572: 878276 - 879339
 node out: 113, node in: 66
 case3
 recomb_node: 29
-recomb_time: 4092.000000
+recomb_time: 5392.000000
 coal_node: 1
 coal_time: 5475.314003
 
@@ -4632,7 +4633,7 @@ tree 573: 879339 - 880088
 node out: 25, node in: 246
 case2
 recomb_node: 2
-recomb_time: 38.000000
+recomb_time: 1048.000000
 coal_node: 66
 coal_time: 24516.506477
 
@@ -4640,7 +4641,7 @@ tree 574: 880088 - 880916
 node out: 353, node in: 188
 case2
 recomb_node: 3
-recomb_time: 1946.000000
+recomb_time: 13816.000000
 coal_node: 66
 coal_time: 16579.926047
 
@@ -4648,7 +4649,7 @@ tree 575: 880916 - 886090
 node out: 29, node in: 60
 case1
 recomb_node: 0
-recomb_time: 782.000000
+recomb_time: 636.000000
 coal_node: 29
 coal_time: 5134.794444
 
@@ -4656,7 +4657,7 @@ tree 576: 886090 - 886423
 node out: 60, node in: 63
 case1
 recomb_node: 0
-recomb_time: 1364.000000
+recomb_time: 2589.000000
 coal_node: 60
 coal_time: 5324.306273
 
@@ -4664,7 +4665,7 @@ tree 577: 886423 - 888104
 node out: 188, node in: 158
 case1
 recomb_node: 3
-recomb_time: 4162.000000
+recomb_time: 9116.000000
 coal_node: 66
 coal_time: 13973.509932
 
@@ -4672,7 +4673,7 @@ tree 578: 888104 - 889684
 node out: 63, node in: 26
 case2
 recomb_node: 0
-recomb_time: 1594.000000
+recomb_time: 1678.000000
 coal_node: 1
 coal_time: 2401.103207
 
@@ -4680,7 +4681,7 @@ tree 579: 889684 - 890001
 node out: 246, node in: 381
 case1
 recomb_node: 2
-recomb_time: 17481.000000
+recomb_time: 7902.000000
 coal_node: 246
 coal_time: 50144.461247
 
@@ -4688,7 +4689,7 @@ tree 580: 890001 - 890411
 node out: 381, node in: 457
 case1
 recomb_node: 2
-recomb_time: 27664.000000
+recomb_time: 23268.000000
 coal_node: 381
 coal_time: 85082.538034
 
@@ -4696,7 +4697,7 @@ tree 581: 890411 - 891771
 node out: 26, node in: 110
 case3
 recomb_node: 1
-recomb_time: 2036.000000
+recomb_time: 2109.000000
 coal_node: 2
 coal_time: 9038.974018
 
@@ -4704,7 +4705,7 @@ tree 582: 891771 - 891783
 node out: 457, node in: 448
 case1
 recomb_node: 158
-recomb_time: 55106.000000
+recomb_time: 36719.000000
 coal_node: 110
 coal_time: 74543.924322
 
@@ -4712,7 +4713,7 @@ tree 583: 891783 - 892158
 node out: 110, node in: 103
 case2
 recomb_node: 1
-recomb_time: 5728.000000
+recomb_time: 6944.000000
 coal_node: 66
 coal_time: 8587.158756
 
@@ -4720,7 +4721,7 @@ tree 584: 892158 - 892594
 node out: 448, node in: 461
 case1
 recomb_node: 158
-recomb_time: 68096.000000
+recomb_time: 53182.000000
 coal_node: 448
 coal_time: 90981.782475
 
@@ -4728,7 +4729,7 @@ tree 585: 892594 - 893109
 node out: 66, node in: 23
 case3
 recomb_node: 0
-recomb_time: 1423.000000
+recomb_time: 2245.000000
 coal_node: 3
 coal_time: 2322.444646
 
@@ -4736,7 +4737,7 @@ tree 586: 893109 - 894121
 node out: 461, node in: 444
 case1
 recomb_node: 2
-recomb_time: 14182.000000
+recomb_time: 14378.000000
 coal_node: 158
 coal_time: 72201.517995
 
@@ -4744,7 +4745,7 @@ tree 587: 894121 - 897831
 node out: 444, node in: 448
 case1
 recomb_node: 2
-recomb_time: 59333.000000
+recomb_time: 49332.000000
 coal_node: 444
 coal_time: 74543.924322
 
@@ -4752,7 +4753,7 @@ tree 588: 897831 - 898722
 node out: 103, node in: 220
 case2
 recomb_node: 1
-recomb_time: 5785.000000
+recomb_time: 6579.000000
 coal_node: 2
 coal_time: 20650.886287
 
@@ -4760,7 +4761,7 @@ tree 589: 898722 - 900080
 node out: 448, node in: 445
 case1
 recomb_node: 158
-recomb_time: 64820.000000
+recomb_time: 31509.000000
 coal_node: 220
 coal_time: 72545.079041
 
@@ -4768,7 +4769,7 @@ tree 590: 900080 - 901231
 node out: 445, node in: 300
 case1
 recomb_node: 158
-recomb_time: 23307.000000
+recomb_time: 29011.000000
 coal_node: 220
 coal_time: 31551.040869
 
@@ -4776,7 +4777,7 @@ tree 591: 901231 - 902364
 node out: 220, node in: 173
 case1
 recomb_node: 1
-recomb_time: 12883.000000
+recomb_time: 9512.000000
 coal_node: 2
 coal_time: 15158.969943
 
@@ -4784,7 +4785,7 @@ tree 592: 902364 - 904615
 node out: 158, node in: 287
 case3
 recomb_node: 4
-recomb_time: 9375.000000
+recomb_time: 11082.000000
 coal_node: 173
 coal_time: 29775.033473
 
@@ -4792,7 +4793,7 @@ tree 593: 904615 - 905443
 node out: 287, node in: 104
 case2
 recomb_node: 4
-recomb_time: 8323.000000
+recomb_time: 486.000000
 coal_node: 2
 coal_time: 8673.957771
 
@@ -4800,7 +4801,7 @@ tree 594: 905443 - 907359
 node out: 173, node in: 217
 case1
 recomb_node: 1
-recomb_time: 2106.000000
+recomb_time: 7883.000000
 coal_node: 173
 coal_time: 20489.893413
 
@@ -4808,7 +4809,7 @@ tree 595: 907359 - 909997
 node out: 104, node in: 220
 case3
 recomb_node: 4
-recomb_time: 6368.000000
+recomb_time: 1000.000000
 coal_node: 217
 coal_time: 20650.886287
 
@@ -4816,7 +4817,7 @@ tree 596: 909997 - 910716
 node out: 300, node in: 207
 case2
 recomb_node: 23
-recomb_time: 11770.000000
+recomb_time: 9025.000000
 coal_node: 2
 coal_time: 19399.172675
 
@@ -4824,7 +4825,7 @@ tree 597: 910716 - 911247
 node out: 217, node in: 300
 case3
 recomb_node: 207
-recomb_time: 19486.000000
+recomb_time: 19819.000000
 coal_node: 220
 coal_time: 31551.040869
 
@@ -4832,7 +4833,7 @@ tree 598: 911247 - 911748
 node out: 220, node in: 80
 case1
 recomb_node: 4
-recomb_time: 6373.000000
+recomb_time: 5965.000000
 coal_node: 1
 coal_time: 6772.045547
 
@@ -4840,7 +4841,7 @@ tree 599: 911748 - 913262
 node out: 207, node in: 314
 case3
 recomb_node: 23
-recomb_time: 15564.000000
+recomb_time: 6112.000000
 coal_node: 300
 coal_time: 34432.933709
 
@@ -4848,7 +4849,7 @@ tree 600: 913262 - 915159
 node out: 300, node in: 119
 case1
 recomb_node: 80
-recomb_time: 8303.000000
+recomb_time: 7473.000000
 coal_node: 2
 coal_time: 9684.768743
 
@@ -4856,7 +4857,7 @@ tree 601: 915159 - 916343
 node out: 119, node in: 168
 case3
 recomb_node: 80
-recomb_time: 9203.000000
+recomb_time: 6958.000000
 coal_node: 23
 coal_time: 14536.827048
 
@@ -4864,7 +4865,7 @@ tree 602: 916343 - 916890
 node out: 80, node in: 217
 case2
 recomb_node: 1
-recomb_time: 547.000000
+recomb_time: 4961.000000
 coal_node: 2
 coal_time: 20489.893413
 
@@ -4872,7 +4873,7 @@ tree 603: 916890 - 917638
 node out: 314, node in: 485
 case1
 recomb_node: 168
-recomb_time: 23004.000000
+recomb_time: 20554.000000
 coal_node: 314
 coal_time: 113349.839339
 
@@ -4880,7 +4881,7 @@ tree 604: 917638 - 918073
 node out: 168, node in: 96
 case2
 recomb_node: 23
-recomb_time: 4957.000000
+recomb_time: 2789.000000
 coal_node: 1
 coal_time: 8058.238113
 
@@ -4888,7 +4889,7 @@ tree 605: 918073 - 918141
 node out: 485, node in: 455
 case1
 recomb_node: 217
-recomb_time: 81702.000000
+recomb_time: 73361.000000
 coal_node: 4
 coal_time: 84500.693049
 
@@ -4896,7 +4897,7 @@ tree 606: 918141 - 918181
 node out: 455, node in: 485
 case1
 recomb_node: 4
-recomb_time: 80797.000000
+recomb_time: 66914.000000
 coal_node: 455
 coal_time: 113349.839339
 
@@ -4904,7 +4905,7 @@ tree 607: 918181 - 918186
 node out: 96, node in: 111
 case2
 recomb_node: 1
-recomb_time: 8013.000000
+recomb_time: 4975.000000
 coal_node: 2
 coal_time: 9180.253365
 
@@ -4912,7 +4913,7 @@ tree 608: 918186 - 918309
 node out: 485, node in: 487
 case1
 recomb_node: 4
-recomb_time: 110702.000000
+recomb_time: 95997.000000
 coal_node: 485
 coal_time: 121484.269385
 
@@ -4920,7 +4921,7 @@ tree 609: 918309 - 919061
 node out: 487, node in: 82
 case2
 recomb_node: 4
-recomb_time: 2902.000000
+recomb_time: 1318.000000
 coal_node: 23
 coal_time: 6994.848918
 
@@ -4928,7 +4929,7 @@ tree 610: 919061 - 919474
 node out: 111, node in: 18
 case1
 recomb_node: 1
-recomb_time: 937.000000
+recomb_time: 1687.000000
 coal_node: 2
 coal_time: 1917.749400
 
@@ -4936,7 +4937,7 @@ tree 611: 919474 - 920092
 node out: 217, node in: 269
 case1
 recomb_node: 82
-recomb_time: 13122.000000
+recomb_time: 7547.000000
 coal_node: 217
 coal_time: 27623.168423
 
@@ -4944,7 +4945,7 @@ tree 612: 920092 - 921794
 node out: 269, node in: 370
 case1
 recomb_node: 18
-recomb_time: 24594.000000
+recomb_time: 11598.000000
 coal_node: 269
 coal_time: 47032.539455
 
@@ -4952,7 +4953,7 @@ tree 613: 921794 - 925422
 node out: 370, node in: 402
 case1
 recomb_node: 18
-recomb_time: 28749.000000
+recomb_time: 23770.000000
 coal_node: 370
 coal_time: 56819.337919
 
@@ -4960,7 +4961,7 @@ tree 614: 925422 - 927111
 node out: 23, node in: 168
 case2
 recomb_node: 0
-recomb_time: 956.000000
+recomb_time: 2295.000000
 coal_node: 18
 coal_time: 14536.827048
 
@@ -4968,7 +4969,7 @@ tree 615: 927111 - 927257
 node out: 82, node in: 84
 case1
 recomb_node: 4
-recomb_time: 3222.000000
+recomb_time: 4494.000000
 coal_node: 82
 coal_time: 7105.158706
 
@@ -4976,7 +4977,7 @@ tree 616: 927257 - 927579
 node out: 402, node in: 324
 case1
 recomb_node: 168
-recomb_time: 27986.000000
+recomb_time: 20577.000000
 coal_node: 84
 coal_time: 37423.044367
 
@@ -4984,7 +4985,7 @@ tree 617: 927579 - 929128
 node out: 324, node in: 402
 case1
 recomb_node: 84
-recomb_time: 7862.000000
+recomb_time: 11127.000000
 coal_node: 324
 coal_time: 56819.337919
 
@@ -4992,7 +4993,7 @@ tree 618: 929128 - 929723
 node out: 402, node in: 403
 case1
 recomb_node: 84
-recomb_time: 9270.000000
+recomb_time: 49089.000000
 coal_node: 402
 coal_time: 56819.551037
 
@@ -5000,7 +5001,7 @@ tree 619: 929723 - 931594
 node out: 168, node in: 148
 case2
 recomb_node: 0
-recomb_time: 10048.000000
+recomb_time: 1622.000000
 coal_node: 84
 coal_time: 12765.888628
 
@@ -5008,7 +5009,7 @@ tree 620: 931594 - 931953
 node out: 148, node in: 479
 case2
 recomb_node: 0
-recomb_time: 3026.000000
+recomb_time: 406.000000
 coal_node: 403
 coal_time: 102490.922964
 
@@ -5016,7 +5017,7 @@ tree 621: 931953 - 932760
 node out: 479, node in: 481
 case1
 recomb_node: 0
-recomb_time: 82203.000000
+recomb_time: 58241.000000
 coal_node: 479
 coal_time: 105097.040848
 
@@ -5024,7 +5025,7 @@ tree 622: 932760 - 933509
 node out: 481, node in: 151
 case2
 recomb_node: 0
-recomb_time: 11938.000000
+recomb_time: 5604.000000
 coal_node: 18
 coal_time: 12922.548240
 
@@ -5032,7 +5033,7 @@ tree 623: 933509 - 933626
 node out: 403, node in: 255
 case1
 recomb_node: 84
-recomb_time: 11548.000000
+recomb_time: 25430.000000
 coal_node: 151
 coal_time: 25512.084857
 
@@ -5040,7 +5041,7 @@ tree 624: 933626 - 934427
 node out: 255, node in: 449
 case1
 recomb_node: 84
-recomb_time: 17090.000000
+recomb_time: 24226.000000
 coal_node: 255
 coal_time: 75892.777241
 
@@ -5048,7 +5049,7 @@ tree 625: 934427 - 935532
 node out: 18, node in: 127
 case2
 recomb_node: 1
-recomb_time: 1283.000000
+recomb_time: 116.000000
 coal_node: 0
 coal_time: 10122.303298
 
@@ -5056,7 +5057,7 @@ tree 626: 935532 - 935759
 node out: 127, node in: 228
 case3
 recomb_node: 1
-recomb_time: 5942.000000
+recomb_time: 8191.000000
 coal_node: 84
 coal_time: 22203.051019
 
@@ -5064,7 +5065,7 @@ tree 627: 935759 - 935951
 node out: 84, node in: 100
 case2
 recomb_node: 3
-recomb_time: 4991.000000
+recomb_time: 6230.000000
 coal_node: 0
 coal_time: 8434.803424
 
@@ -5072,7 +5073,7 @@ tree 628: 935951 - 936498
 node out: 449, node in: 403
 case1
 recomb_node: 151
-recomb_time: 25926.000000
+recomb_time: 14033.000000
 coal_node: 228
 coal_time: 56819.551037
 
@@ -5080,7 +5081,7 @@ tree 629: 936498 - 937527
 node out: 403, node in: 424
 case1
 recomb_node: 151
-recomb_time: 37719.000000
+recomb_time: 21966.000000
 coal_node: 403
 coal_time: 64598.584449
 
@@ -5088,7 +5089,7 @@ tree 630: 937527 - 938370
 node out: 228, node in: 255
 case2
 recomb_node: 1
-recomb_time: 19180.000000
+recomb_time: 18601.000000
 coal_node: 151
 coal_time: 25512.084857
 
@@ -5096,7 +5097,7 @@ tree 631: 938370 - 938747
 node out: 255, node in: 279
 case2
 recomb_node: 1
-recomb_time: 19606.000000
+recomb_time: 1992.000000
 coal_node: 4
 coal_time: 28295.307664
 
@@ -5104,7 +5105,7 @@ tree 632: 938747 - 940364
 node out: 151, node in: 86
 case2
 recomb_node: 2
-recomb_time: 2465.000000
+recomb_time: 417.000000
 coal_node: 0
 coal_time: 7191.554369
 
@@ -5112,7 +5113,7 @@ tree 633: 940364 - 940723
 node out: 424, node in: 478
 case1
 recomb_node: 279
-recomb_time: 46730.000000
+recomb_time: 60074.000000
 coal_node: 424
 coal_time: 100958.774890
 
@@ -5120,7 +5121,7 @@ tree 634: 940723 - 941164
 node out: 478, node in: 474
 case1
 recomb_node: 100
-recomb_time: 22192.000000
+recomb_time: 86541.000000
 coal_node: 279
 coal_time: 97013.078424
 
@@ -5128,7 +5129,7 @@ tree 635: 941164 - 941165
 node out: 474, node in: 489
 case1
 recomb_node: 100
-recomb_time: 11491.000000
+recomb_time: 56751.000000
 coal_node: 474
 coal_time: 131100.923473
 
@@ -5136,7 +5137,7 @@ tree 636: 941165 - 941555
 node out: 489, node in: 421
 case1
 recomb_node: 100
-recomb_time: 17422.000000
+recomb_time: 23850.000000
 coal_node: 279
 coal_time: 62903.719639
 
@@ -5144,7 +5145,7 @@ tree 637: 941555 - 941700
 node out: 421, node in: 489
 case1
 recomb_node: 100
-recomb_time: 29338.000000
+recomb_time: 55159.000000
 coal_node: 421
 coal_time: 131100.923473
 
@@ -5152,7 +5153,7 @@ tree 638: 941700 - 941780
 node out: 489, node in: 465
 case1
 recomb_node: 100
-recomb_time: 56611.000000
+recomb_time: 33027.000000
 coal_node: 279
 coal_time: 91821.923513
 
@@ -5160,7 +5161,7 @@ tree 639: 941780 - 942169
 node out: 465, node in: 322
 case1
 recomb_node: 100
-recomb_time: 19995.000000
+recomb_time: 29438.000000
 coal_node: 279
 coal_time: 36251.848108
 
@@ -5168,7 +5169,7 @@ tree 640: 942169 - 942209
 node out: 279, node in: 253
 case3
 recomb_node: 4
-recomb_time: 4278.000000
+recomb_time: 15103.000000
 coal_node: 100
 coal_time: 25074.920670
 
@@ -5176,7 +5177,7 @@ tree 641: 942209 - 942549
 node out: 253, node in: 35
 case2
 recomb_node: 4
-recomb_time: 565.000000
+recomb_time: 2976.000000
 coal_node: 2
 coal_time: 3234.514238
 
@@ -5184,7 +5185,7 @@ tree 642: 942549 - 942619
 node out: 322, node in: 356
 case1
 recomb_node: 1
-recomb_time: 26258.000000
+recomb_time: 7547.000000
 coal_node: 322
 coal_time: 43310.194434
 
@@ -5192,7 +5193,7 @@ tree 643: 942619 - 943033
 node out: 86, node in: 253
 case3
 recomb_node: 35
-recomb_time: 3930.000000
+recomb_time: 4735.000000
 coal_node: 100
 coal_time: 25074.920670
 
@@ -5200,7 +5201,7 @@ tree 644: 943033 - 943289
 node out: 253, node in: 262
 case2
 recomb_node: 35
-recomb_time: 9393.000000
+recomb_time: 14538.000000
 coal_node: 1
 coal_time: 26997.858826
 
@@ -5208,7 +5209,7 @@ tree 645: 943289 - 944390
 node out: 356, node in: 372
 case1
 recomb_node: 100
-recomb_time: 27654.000000
+recomb_time: 18710.000000
 coal_node: 356
 coal_time: 47769.527922
 
@@ -5216,7 +5217,7 @@ tree 646: 944390 - 944604
 node out: 262, node in: 200
 case1
 recomb_node: 1
-recomb_time: 795.000000
+recomb_time: 3707.000000
 coal_node: 35
 coal_time: 18408.746840
 
@@ -5224,7 +5225,7 @@ tree 647: 944604 - 945403
 node out: 372, node in: 449
 case1
 recomb_node: 100
-recomb_time: 29327.000000
+recomb_time: 13572.000000
 coal_node: 372
 coal_time: 75892.777241
 
@@ -5232,7 +5233,7 @@ tree 648: 945403 - 947320
 node out: 100, node in: 262
 case3
 recomb_node: 0
-recomb_time: 223.000000
+recomb_time: 8178.000000
 coal_node: 200
 coal_time: 26997.858826
 
@@ -5240,7 +5241,7 @@ tree 649: 947320 - 947634
 node out: 449, node in: 478
 case1
 recomb_node: 3
-recomb_time: 6897.000000
+recomb_time: 26384.000000
 coal_node: 449
 coal_time: 100958.774890
 
@@ -5248,7 +5249,7 @@ tree 650: 947634 - 948922
 node out: 478, node in: 480
 case1
 recomb_node: 3
-recomb_time: 51046.000000
+recomb_time: 81094.000000
 coal_node: 478
 coal_time: 103997.043481
 
@@ -5256,7 +5257,7 @@ tree 651: 948922 - 949509
 node out: 262, node in: 279
 case1
 recomb_node: 0
-recomb_time: 5928.000000
+recomb_time: 9354.000000
 coal_node: 262
 coal_time: 28295.307664
 
@@ -5264,7 +5265,7 @@ tree 652: 949509 - 950233
 node out: 279, node in: 226
 case2
 recomb_node: 0
-recomb_time: 21852.000000
+recomb_time: 3668.000000
 coal_node: 3
 coal_time: 21929.768490
 
@@ -5272,7 +5273,7 @@ tree 653: 950233 - 953080
 node out: 200, node in: 279
 case1
 recomb_node: 1
-recomb_time: 18394.000000
+recomb_time: 664.000000
 coal_node: 200
 coal_time: 28295.307664
 
@@ -5280,7 +5281,7 @@ tree 654: 953080 - 953779
 node out: 226, node in: 200
 case2
 recomb_node: 0
-recomb_time: 1209.000000
+recomb_time: 13608.000000
 coal_node: 1
 coal_time: 18408.746840
 
@@ -5288,7 +5289,7 @@ tree 655: 953779 - 954143
 node out: 480, node in: 476
 case1
 recomb_node: 279
-recomb_time: 83490.000000
+recomb_time: 34483.000000
 coal_node: 3
 coal_time: 100292.364156
 
@@ -5296,7 +5297,7 @@ tree 656: 954143 - 954622
 node out: 200, node in: 122
 case3
 recomb_node: 1
-recomb_time: 2966.000000
+recomb_time: 5169.000000
 coal_node: 35
 coal_time: 9937.112288
 
@@ -5304,7 +5305,7 @@ tree 657: 954622 - 954655
 node out: 476, node in: 471
 case1
 recomb_node: 3
-recomb_time: 12569.000000
+recomb_time: 65699.000000
 coal_node: 279
 coal_time: 94818.092900
 
@@ -5312,7 +5313,7 @@ tree 658: 954655 - 955859
 node out: 471, node in: 476
 case1
 recomb_node: 3
-recomb_time: 89957.000000
+recomb_time: 71588.000000
 coal_node: 471
 coal_time: 100292.364156
 
@@ -5320,7 +5321,7 @@ tree 659: 955859 - 956113
 node out: 279, node in: 169
 case3
 recomb_node: 122
-recomb_time: 11222.000000
+recomb_time: 11923.000000
 coal_node: 3
 coal_time: 14627.525176
 
@@ -5328,7 +5329,7 @@ tree 660: 956113 - 956710
 node out: 476, node in: 443
 case1
 recomb_node: 0
-recomb_time: 1843.000000
+recomb_time: 50416.000000
 coal_node: 169
 coal_time: 72112.568615
 
@@ -5336,7 +5337,7 @@ tree 661: 956710 - 959149
 node out: 169, node in: 200
 case2
 recomb_node: 3
-recomb_time: 3316.000000
+recomb_time: 226.000000
 coal_node: 0
 coal_time: 18408.746840
 
@@ -5344,7 +5345,7 @@ tree 662: 959149 - 960347
 node out: 122, node in: 73
 case3
 recomb_node: 35
-recomb_time: 6099.000000
+recomb_time: 3917.000000
 coal_node: 0
 coal_time: 6221.018367
 
@@ -5352,7 +5353,7 @@ tree 663: 960347 - 960348
 node out: 73, node in: 142
 case3
 recomb_node: 35
-recomb_time: 4504.000000
+recomb_time: 4876.000000
 coal_node: 3
 coal_time: 11853.050509
 
@@ -5360,7 +5361,7 @@ tree 664: 960348 - 961003
 node out: 443, node in: 424
 case1
 recomb_node: 200
-recomb_time: 43069.000000
+recomb_time: 19348.000000
 coal_node: 1
 coal_time: 64598.584449
 
@@ -5368,7 +5369,7 @@ tree 665: 961003 - 961226
 node out: 424, node in: 398
 case1
 recomb_node: 1
-recomb_time: 45999.000000
+recomb_time: 15130.000000
 coal_node: 200
 coal_time: 55336.019566
 
@@ -5376,7 +5377,7 @@ tree 666: 961226 - 962331
 node out: 398, node in: 443
 case1
 recomb_node: 1
-recomb_time: 39232.000000
+recomb_time: 17269.000000
 coal_node: 398
 coal_time: 72112.568615
 
@@ -5384,7 +5385,7 @@ tree 667: 962331 - 962775
 node out: 443, node in: 237
 case1
 recomb_node: 1
-recomb_time: 21671.000000
+recomb_time: 10671.000000
 coal_node: 200
 coal_time: 23404.684185
 
@@ -5392,7 +5393,7 @@ tree 668: 962775 - 963724
 node out: 142, node in: 279
 case3
 recomb_node: 35
-recomb_time: 10744.000000
+recomb_time: 7570.000000
 coal_node: 237
 coal_time: 28295.307664
 
@@ -5400,7 +5401,7 @@ tree 669: 963724 - 966214
 node out: 279, node in: 122
 case2
 recomb_node: 35
-recomb_time: 6844.000000
+recomb_time: 9668.000000
 coal_node: 1
 coal_time: 9937.112288
 
@@ -5408,7 +5409,7 @@ tree 670: 966214 - 966580
 node out: 200, node in: 417
 case2
 recomb_node: 0
-recomb_time: 4722.000000
+recomb_time: 16947.000000
 coal_node: 237
 coal_time: 61327.901154
 
@@ -5416,7 +5417,7 @@ tree 671: 966580 - 967797
 node out: 417, node in: 456
 case1
 recomb_node: 0
-recomb_time: 43703.000000
+recomb_time: 22686.000000
 coal_node: 417
 coal_time: 84668.568860
 
@@ -5424,7 +5425,7 @@ tree 672: 967797 - 968253
 node out: 456, node in: 213
 case2
 recomb_node: 0
-recomb_time: 14079.000000
+recomb_time: 13545.000000
 coal_node: 122
 coal_time: 20208.264542
 
@@ -5432,7 +5433,7 @@ tree 673: 968253 - 968476
 node out: 35, node in: 10
 case2
 recomb_node: 2
-recomb_time: 582.000000
+recomb_time: 442.000000
 coal_node: 3
 coal_time: 1010.201001
 
@@ -5440,7 +5441,7 @@ tree 674: 968476 - 969163
 node out: 237, node in: 339
 case1
 recomb_node: 213
-recomb_time: 21133.000000
+recomb_time: 20884.000000
 coal_node: 237
 coal_time: 40544.028034
 
@@ -5448,7 +5449,7 @@ tree 675: 969163 - 969191
 node out: 339, node in: 318
 case1
 recomb_node: 10
-recomb_time: 27721.000000
+recomb_time: 30391.000000
 coal_node: 213
 coal_time: 35134.782996
 
@@ -5456,7 +5457,7 @@ tree 676: 969191 - 970025
 node out: 318, node in: 362
 case1
 recomb_node: 10
-recomb_time: 27852.000000
+recomb_time: 23273.000000
 coal_node: 318
 coal_time: 44348.510958
 
@@ -5464,7 +5465,7 @@ tree 677: 970025 - 970398
 node out: 213, node in: 254
 case1
 recomb_node: 0
-recomb_time: 6069.000000
+recomb_time: 13015.000000
 coal_node: 213
 coal_time: 25404.581604
 
@@ -5472,7 +5473,7 @@ tree 678: 970398 - 972608
 node out: 254, node in: 198
 case1
 recomb_node: 0
-recomb_time: 14622.000000
+recomb_time: 1864.000000
 coal_node: 122
 coal_time: 17868.384895
 
@@ -5480,7 +5481,7 @@ tree 679: 972608 - 981623
 node out: 198, node in: 245
 case2
 recomb_node: 0
-recomb_time: 58.000000
+recomb_time: 2175.000000
 coal_node: 10
 coal_time: 24454.541898
 
@@ -5488,7 +5489,7 @@ tree 680: 981623 - 982631
 node out: 362, node in: 454
 case1
 recomb_node: 122
-recomb_time: 18104.000000
+recomb_time: 22023.000000
 coal_node: 362
 coal_time: 81849.262617
 
@@ -5496,7 +5497,7 @@ tree 681: 982631 - 985841
 node out: 454, node in: 440
 case1
 recomb_node: 122
-recomb_time: 52273.000000
+recomb_time: 67147.000000
 coal_node: 245
 coal_time: 68628.416755
 
@@ -5504,7 +5505,7 @@ tree 682: 985841 - 987378
 node out: 440, node in: 454
 case1
 recomb_node: 122
-recomb_time: 13237.000000
+recomb_time: 24702.000000
 coal_node: 440
 coal_time: 81849.262617
 
@@ -5512,7 +5513,7 @@ tree 683: 987378 - 987397
 node out: 245, node in: 194
 case1
 recomb_node: 0
-recomb_time: 4635.000000
+recomb_time: 16709.000000
 coal_node: 10
 coal_time: 17327.437618
 
@@ -5520,7 +5521,7 @@ tree 684: 987397 - 987822
 node out: 454, node in: 382
 case1
 recomb_node: 122
-recomb_time: 46398.000000
+recomb_time: 14797.000000
 coal_node: 194
 coal_time: 50489.530537
 
@@ -5528,7 +5529,7 @@ tree 685: 987822 - 987964
 node out: 122, node in: 47
 case3
 recomb_node: 4
-recomb_time: 1868.000000
+recomb_time: 4412.000000
 coal_node: 10
 coal_time: 4542.712403
 
@@ -5536,7 +5537,7 @@ tree 686: 987964 - 989469
 node out: 194, node in: 255
 case3
 recomb_node: 47
-recomb_time: 5997.000000
+recomb_time: 16231.000000
 coal_node: 1
 coal_time: 25512.084857
 
@@ -5544,7 +5545,7 @@ tree 687: 989469 - 990225
 node out: 255, node in: 245
 case2
 recomb_node: 1
-recomb_time: 21356.000000
+recomb_time: 15807.000000
 coal_node: 0
 coal_time: 24454.541898
 
@@ -5552,7 +5553,7 @@ tree 688: 990225 - 990329
 node out: 245, node in: 306
 case1
 recomb_node: 0
-recomb_time: 19911.000000
+recomb_time: 18228.000000
 coal_node: 245
 coal_time: 32696.797258
 
@@ -5560,7 +5561,7 @@ tree 689: 990329 - 991723
 node out: 382, node in: 395
 case1
 recomb_node: 47
-recomb_time: 5151.000000
+recomb_time: 22757.000000
 coal_node: 382
 coal_time: 54925.483013
 
@@ -5568,7 +5569,7 @@ tree 690: 991723 - 993385
 node out: 306, node in: 23
 case3
 recomb_node: 1
-recomb_time: 1893.000000
+recomb_time: 1337.000000
 coal_node: 10
 coal_time: 2322.444646
 
@@ -5576,7 +5577,7 @@ tree 691: 993385 - 996002
 node out: 395, node in: 338
 case1
 recomb_node: 47
-recomb_time: 38462.000000
+recomb_time: 39981.000000
 coal_node: 0
 coal_time: 40289.664005
 
@@ -5584,7 +5585,7 @@ tree 692: 996002 - 999315
 node out: 338, node in: 451
 case1
 recomb_node: 0
-recomb_time: 33907.000000
+recomb_time: 33482.000000
 coal_node: 338
 coal_time: 77349.301264
 
@@ -5592,7 +5593,7 @@ tree 693: 999315 - 999513
 node out: 451, node in: 422
 case1
 recomb_node: 0
-recomb_time: 17122.000000
+recomb_time: 60319.000000
 coal_node: 47
 coal_time: 63241.451920
 
@@ -5600,14 +5601,14 @@ tree 694: 999513 - 1000000
 node out: 422, node in: 395
 case1
 recomb_node: 0
-recomb_time: 6783.000000
+recomb_time: 2555.000000
 coal_node: 47
 coal_time: 54925.483013
 number of samples in the tree sequences: 5
 number of local trees in the tree sequences: 695
 total number of local trees read: 694
 tree sequence starat at 4999 and ends at 1000000
-max memory usage: 3.4 MB
+max memory usage: 175.5 MB
 
 number of leaves in trees: 5
 Climb Search (0 iterations)
@@ -5616,13 +5617,13 @@ Climb Search (0 iterations)
 --------------resample_arg_all----------------
 saving first ARG...
 
-prior:      -10081.980756
+prior:      -10109.721648
 likelihood: -1389211.132811
-joint:      -1399293.113568
+joint:      -1399320.854460
 nrecombs:   693
 noncompats: 0
 arglen:     91324953659.011780
-max memory: 3.7 MB
+max memory: 175.7 MB
 
 print stats done
 output tree seq file name: ../argweaver/examples/sim1/sim1.sample.0.ts
@@ -5647,16 +5648,6 @@ discrete time points
 109653.281406
 165578.289705
 250000.000000
-init_nodes_mapping
-0(age = 0)->0
-1(age = 0)->1
-2(age = 0)->2
-3(age = 0)->3
-4(age = 0)->4
-5(age = 10)->5
-6(age = 11)->6
-7(age = 3)->7
-8(age = 9)->8
 at tree 0
 at tree 1
 at tree 2
@@ -6489,972 +6480,969 @@ at tree 690
 at tree 691
 at tree 692
 at tree 693
-end of sequence coord: 1000000
-sequence length: 1000000.000000
-number of sequences: 6
-number of sites: 962
-length: 995001
-start coord: 4999
-end coord: 1000000
-sites 0 is at pos 6569
-sites 1 is at pos 6875
-sites 2 is at pos 7272
-sites 3 is at pos 7276
-sites 4 is at pos 7939
-sites 5 is at pos 7976
-sites 6 is at pos 9018
-sites 7 is at pos 16371
-sites 8 is at pos 27478
-sites 9 is at pos 30515
-sites 10 is at pos 31279
-sites 11 is at pos 31628
-sites 12 is at pos 34880
-sites 13 is at pos 37331
-sites 14 is at pos 38477
-sites 15 is at pos 39324
-sites 16 is at pos 44000
-sites 17 is at pos 44523
-sites 18 is at pos 44786
-sites 19 is at pos 46951
-sites 20 is at pos 47516
-sites 21 is at pos 47952
-sites 22 is at pos 48101
-sites 23 is at pos 48276
-sites 24 is at pos 48872
-sites 25 is at pos 49017
-sites 26 is at pos 49536
-sites 27 is at pos 54140
-sites 28 is at pos 55443
-sites 29 is at pos 55496
-sites 30 is at pos 56391
-sites 31 is at pos 56828
-sites 32 is at pos 57268
-sites 33 is at pos 58699
-sites 34 is at pos 59689
-sites 35 is at pos 59784
-sites 36 is at pos 59812
-sites 37 is at pos 60473
-sites 38 is at pos 60552
-sites 39 is at pos 63069
-sites 40 is at pos 63204
-sites 41 is at pos 63660
-sites 42 is at pos 65743
-sites 43 is at pos 67831
-sites 44 is at pos 68506
-sites 45 is at pos 71388
-sites 46 is at pos 72691
-sites 47 is at pos 73498
-sites 48 is at pos 73968
-sites 49 is at pos 75172
-sites 50 is at pos 76034
-sites 51 is at pos 77886
-sites 52 is at pos 80378
-sites 53 is at pos 80618
-sites 54 is at pos 81639
-sites 55 is at pos 81827
-sites 56 is at pos 83239
-sites 57 is at pos 85092
-sites 58 is at pos 85601
-sites 59 is at pos 85778
-sites 60 is at pos 86059
-sites 61 is at pos 86244
-sites 62 is at pos 86617
-sites 63 is at pos 86839
-sites 64 is at pos 87426
-sites 65 is at pos 87438
-sites 66 is at pos 88248
-sites 67 is at pos 88254
-sites 68 is at pos 88609
-sites 69 is at pos 88828
-sites 70 is at pos 89549
-sites 71 is at pos 90872
-sites 72 is at pos 91792
-sites 73 is at pos 91800
-sites 74 is at pos 92427
-sites 75 is at pos 93788
-sites 76 is at pos 94204
-sites 77 is at pos 96011
-sites 78 is at pos 96957
-sites 79 is at pos 97022
-sites 80 is at pos 97060
-sites 81 is at pos 97458
-sites 82 is at pos 97828
-sites 83 is at pos 99459
-sites 84 is at pos 101130
-sites 85 is at pos 102914
-sites 86 is at pos 104398
-sites 87 is at pos 105114
-sites 88 is at pos 105919
-sites 89 is at pos 106827
-sites 90 is at pos 108414
-sites 91 is at pos 109525
-sites 92 is at pos 111615
-sites 93 is at pos 111794
-sites 94 is at pos 114259
-sites 95 is at pos 114697
-sites 96 is at pos 114810
-sites 97 is at pos 115497
-sites 98 is at pos 115687
-sites 99 is at pos 116900
-sites 100 is at pos 116987
-sites 101 is at pos 117140
-sites 102 is at pos 118015
-sites 103 is at pos 118207
-sites 104 is at pos 118740
-sites 105 is at pos 119301
-sites 106 is at pos 120765
-sites 107 is at pos 121717
-sites 108 is at pos 121749
-sites 109 is at pos 122166
-sites 110 is at pos 123609
-sites 111 is at pos 123787
-sites 112 is at pos 124145
-sites 113 is at pos 124308
-sites 114 is at pos 124781
-sites 115 is at pos 125266
-sites 116 is at pos 125425
-sites 117 is at pos 125666
-sites 118 is at pos 125916
-sites 119 is at pos 127806
-sites 120 is at pos 128274
-sites 121 is at pos 128278
-sites 122 is at pos 128864
-sites 123 is at pos 130723
-sites 124 is at pos 131361
-sites 125 is at pos 131736
-sites 126 is at pos 131750
-sites 127 is at pos 132021
-sites 128 is at pos 132037
-sites 129 is at pos 132552
-sites 130 is at pos 134109
-sites 131 is at pos 134754
-sites 132 is at pos 135722
-sites 133 is at pos 136409
-sites 134 is at pos 136595
-sites 135 is at pos 139372
-sites 136 is at pos 139966
-sites 137 is at pos 140775
-sites 138 is at pos 140943
-sites 139 is at pos 141106
-sites 140 is at pos 141383
-sites 141 is at pos 141460
-sites 142 is at pos 141563
-sites 143 is at pos 141786
-sites 144 is at pos 141952
-sites 145 is at pos 141961
-sites 146 is at pos 141968
-sites 147 is at pos 142458
-sites 148 is at pos 143164
-sites 149 is at pos 143852
-sites 150 is at pos 143990
-sites 151 is at pos 144043
-sites 152 is at pos 145449
-sites 153 is at pos 145866
-sites 154 is at pos 146041
-sites 155 is at pos 146180
-sites 156 is at pos 146302
-sites 157 is at pos 146333
-sites 158 is at pos 147069
-sites 159 is at pos 147118
-sites 160 is at pos 147122
-sites 161 is at pos 147244
-sites 162 is at pos 148102
-sites 163 is at pos 149112
-sites 164 is at pos 150384
-sites 165 is at pos 150745
-sites 166 is at pos 151650
-sites 167 is at pos 151704
-sites 168 is at pos 151918
-sites 169 is at pos 152951
-sites 170 is at pos 154505
-sites 171 is at pos 155041
-sites 172 is at pos 155099
-sites 173 is at pos 155649
-sites 174 is at pos 156049
-sites 175 is at pos 157751
-sites 176 is at pos 158070
-sites 177 is at pos 159861
-sites 178 is at pos 161971
-sites 179 is at pos 162753
-sites 180 is at pos 163160
-sites 181 is at pos 163229
-sites 182 is at pos 163571
-sites 183 is at pos 163734
-sites 184 is at pos 164487
-sites 185 is at pos 164591
-sites 186 is at pos 167325
-sites 187 is at pos 167384
-sites 188 is at pos 167539
-sites 189 is at pos 167995
-sites 190 is at pos 168074
-sites 191 is at pos 169390
-sites 192 is at pos 169931
-sites 193 is at pos 171238
-sites 194 is at pos 171871
-sites 195 is at pos 172737
-sites 196 is at pos 173362
-sites 197 is at pos 173834
-sites 198 is at pos 174301
-sites 199 is at pos 175337
-sites 200 is at pos 176172
-sites 201 is at pos 177413
-sites 202 is at pos 178467
-sites 203 is at pos 178472
-sites 204 is at pos 179495
-sites 205 is at pos 181725
-sites 206 is at pos 182065
-sites 207 is at pos 182462
-sites 208 is at pos 182612
-sites 209 is at pos 183367
-sites 210 is at pos 183723
-sites 211 is at pos 183927
-sites 212 is at pos 184023
-sites 213 is at pos 185163
-sites 214 is at pos 186184
-sites 215 is at pos 186518
-sites 216 is at pos 186766
-sites 217 is at pos 189321
-sites 218 is at pos 189358
-sites 219 is at pos 192638
-sites 220 is at pos 193441
-sites 221 is at pos 194181
-sites 222 is at pos 194682
-sites 223 is at pos 196205
-sites 224 is at pos 196874
-sites 225 is at pos 201336
-sites 226 is at pos 202182
-sites 227 is at pos 202873
-sites 228 is at pos 205074
-sites 229 is at pos 205448
-sites 230 is at pos 206372
-sites 231 is at pos 209943
-sites 232 is at pos 210040
-sites 233 is at pos 210411
-sites 234 is at pos 214262
-sites 235 is at pos 215021
-sites 236 is at pos 216545
-sites 237 is at pos 216765
-sites 238 is at pos 220311
-sites 239 is at pos 222092
-sites 240 is at pos 223252
-sites 241 is at pos 223871
-sites 242 is at pos 225170
-sites 243 is at pos 226756
-sites 244 is at pos 228130
-sites 245 is at pos 228447
-sites 246 is at pos 228678
-sites 247 is at pos 228900
-sites 248 is at pos 230004
-sites 249 is at pos 230240
-sites 250 is at pos 231246
-sites 251 is at pos 231548
-sites 252 is at pos 231567
-sites 253 is at pos 232140
-sites 254 is at pos 232932
-sites 255 is at pos 233311
-sites 256 is at pos 233682
-sites 257 is at pos 234232
-sites 258 is at pos 234476
-sites 259 is at pos 234839
-sites 260 is at pos 235027
-sites 261 is at pos 235039
-sites 262 is at pos 235822
-sites 263 is at pos 236026
-sites 264 is at pos 236079
-sites 265 is at pos 236754
-sites 266 is at pos 236820
-sites 267 is at pos 238653
-sites 268 is at pos 239594
-sites 269 is at pos 240004
-sites 270 is at pos 241388
-sites 271 is at pos 241702
-sites 272 is at pos 241742
-sites 273 is at pos 241889
-sites 274 is at pos 242592
-sites 275 is at pos 243224
-sites 276 is at pos 243292
-sites 277 is at pos 243386
-sites 278 is at pos 243593
-sites 279 is at pos 243637
-sites 280 is at pos 245813
-sites 281 is at pos 246401
-sites 282 is at pos 246986
-sites 283 is at pos 247400
-sites 284 is at pos 248718
-sites 285 is at pos 252826
-sites 286 is at pos 253491
-sites 287 is at pos 253857
-sites 288 is at pos 254305
-sites 289 is at pos 255122
-sites 290 is at pos 255172
-sites 291 is at pos 255511
-sites 292 is at pos 255518
-sites 293 is at pos 255583
-sites 294 is at pos 255785
-sites 295 is at pos 257456
-sites 296 is at pos 259157
-sites 297 is at pos 259227
-sites 298 is at pos 260194
-sites 299 is at pos 260338
-sites 300 is at pos 260372
-sites 301 is at pos 260458
-sites 302 is at pos 261506
-sites 303 is at pos 261912
-sites 304 is at pos 261923
-sites 305 is at pos 262287
-sites 306 is at pos 262478
-sites 307 is at pos 262592
-sites 308 is at pos 263236
-sites 309 is at pos 263963
-sites 310 is at pos 265709
-sites 311 is at pos 266717
-sites 312 is at pos 266728
-sites 313 is at pos 267613
-sites 314 is at pos 268618
-sites 315 is at pos 269102
-sites 316 is at pos 269512
-sites 317 is at pos 269633
-sites 318 is at pos 269725
-sites 319 is at pos 270328
-sites 320 is at pos 270482
-sites 321 is at pos 271000
-sites 322 is at pos 271314
-sites 323 is at pos 272364
-sites 324 is at pos 273110
-sites 325 is at pos 275083
-sites 326 is at pos 275120
-sites 327 is at pos 277050
-sites 328 is at pos 277534
-sites 329 is at pos 279681
-sites 330 is at pos 280380
-sites 331 is at pos 281223
-sites 332 is at pos 281459
-sites 333 is at pos 281830
-sites 334 is at pos 283629
-sites 335 is at pos 284202
-sites 336 is at pos 285340
-sites 337 is at pos 285350
-sites 338 is at pos 285649
-sites 339 is at pos 286767
-sites 340 is at pos 287065
-sites 341 is at pos 288152
-sites 342 is at pos 289080
-sites 343 is at pos 289358
-sites 344 is at pos 291613
-sites 345 is at pos 292123
-sites 346 is at pos 292220
-sites 347 is at pos 294163
-sites 348 is at pos 294355
-sites 349 is at pos 295873
-sites 350 is at pos 299164
-sites 351 is at pos 299169
-sites 352 is at pos 300743
-sites 353 is at pos 301083
-sites 354 is at pos 303606
-sites 355 is at pos 304111
-sites 356 is at pos 304146
-sites 357 is at pos 307216
-sites 358 is at pos 307263
-sites 359 is at pos 308193
-sites 360 is at pos 309796
-sites 361 is at pos 309808
-sites 362 is at pos 312894
-sites 363 is at pos 313245
-sites 364 is at pos 313539
-sites 365 is at pos 313658
-sites 366 is at pos 314786
-sites 367 is at pos 315573
-sites 368 is at pos 316244
-sites 369 is at pos 322588
-sites 370 is at pos 322598
-sites 371 is at pos 324707
-sites 372 is at pos 325605
-sites 373 is at pos 325858
-sites 374 is at pos 326862
-sites 375 is at pos 330515
-sites 376 is at pos 334657
-sites 377 is at pos 335136
-sites 378 is at pos 335522
-sites 379 is at pos 336428
-sites 380 is at pos 337558
-sites 381 is at pos 337727
-sites 382 is at pos 339154
-sites 383 is at pos 339450
-sites 384 is at pos 339797
-sites 385 is at pos 342899
-sites 386 is at pos 343553
-sites 387 is at pos 345918
-sites 388 is at pos 348324
-sites 389 is at pos 348873
-sites 390 is at pos 350740
-sites 391 is at pos 351534
-sites 392 is at pos 351924
-sites 393 is at pos 353920
-sites 394 is at pos 355489
-sites 395 is at pos 356328
-sites 396 is at pos 359649
-sites 397 is at pos 360327
-sites 398 is at pos 364885
-sites 399 is at pos 367025
-sites 400 is at pos 367631
-sites 401 is at pos 371707
-sites 402 is at pos 372496
-sites 403 is at pos 372954
-sites 404 is at pos 374889
-sites 405 is at pos 375385
-sites 406 is at pos 375653
-sites 407 is at pos 376322
-sites 408 is at pos 376432
-sites 409 is at pos 377317
-sites 410 is at pos 377931
-sites 411 is at pos 379743
-sites 412 is at pos 380670
-sites 413 is at pos 381044
-sites 414 is at pos 381207
-sites 415 is at pos 381293
-sites 416 is at pos 381642
-sites 417 is at pos 382856
-sites 418 is at pos 382920
-sites 419 is at pos 382965
-sites 420 is at pos 385084
-sites 421 is at pos 385760
-sites 422 is at pos 385989
-sites 423 is at pos 387784
-sites 424 is at pos 387830
-sites 425 is at pos 387949
-sites 426 is at pos 390628
-sites 427 is at pos 391563
-sites 428 is at pos 391693
-sites 429 is at pos 392808
-sites 430 is at pos 394581
-sites 431 is at pos 396113
-sites 432 is at pos 400093
-sites 433 is at pos 402878
-sites 434 is at pos 403557
-sites 435 is at pos 404194
-sites 436 is at pos 405442
-sites 437 is at pos 406638
-sites 438 is at pos 407656
-sites 439 is at pos 410339
-sites 440 is at pos 410450
-sites 441 is at pos 410483
-sites 442 is at pos 410934
-sites 443 is at pos 412201
-sites 444 is at pos 413317
-sites 445 is at pos 413678
-sites 446 is at pos 415166
-sites 447 is at pos 415868
-sites 448 is at pos 420064
-sites 449 is at pos 421671
-sites 450 is at pos 421998
-sites 451 is at pos 423807
-sites 452 is at pos 423893
-sites 453 is at pos 425549
-sites 454 is at pos 427231
-sites 455 is at pos 431200
-sites 456 is at pos 432729
-sites 457 is at pos 432895
-sites 458 is at pos 433535
-sites 459 is at pos 437050
-sites 460 is at pos 437275
-sites 461 is at pos 437461
-sites 462 is at pos 440333
-sites 463 is at pos 441337
-sites 464 is at pos 447359
-sites 465 is at pos 447929
-sites 466 is at pos 448999
-sites 467 is at pos 451204
-sites 468 is at pos 452962
-sites 469 is at pos 452991
-sites 470 is at pos 453552
-sites 471 is at pos 455957
-sites 472 is at pos 456717
-sites 473 is at pos 457031
-sites 474 is at pos 457221
-sites 475 is at pos 457734
-sites 476 is at pos 460138
-sites 477 is at pos 462067
-sites 478 is at pos 462289
-sites 479 is at pos 467061
-sites 480 is at pos 467641
-sites 481 is at pos 469090
-sites 482 is at pos 476853
-sites 483 is at pos 477516
-sites 484 is at pos 478302
-sites 485 is at pos 483163
-sites 486 is at pos 483268
-sites 487 is at pos 484112
-sites 488 is at pos 484639
-sites 489 is at pos 485060
-sites 490 is at pos 485421
-sites 491 is at pos 485700
-sites 492 is at pos 485717
-sites 493 is at pos 486173
-sites 494 is at pos 486397
-sites 495 is at pos 486474
-sites 496 is at pos 486614
-sites 497 is at pos 488378
-sites 498 is at pos 488623
-sites 499 is at pos 496037
-sites 500 is at pos 496602
-sites 501 is at pos 497682
-sites 502 is at pos 498304
-sites 503 is at pos 504778
-sites 504 is at pos 511852
-sites 505 is at pos 514881
-sites 506 is at pos 514960
-sites 507 is at pos 521721
-sites 508 is at pos 521733
-sites 509 is at pos 522636
-sites 510 is at pos 524662
-sites 511 is at pos 526424
-sites 512 is at pos 528363
-sites 513 is at pos 528584
-sites 514 is at pos 533557
-sites 515 is at pos 535799
-sites 516 is at pos 536066
-sites 517 is at pos 540316
-sites 518 is at pos 540731
-sites 519 is at pos 541036
-sites 520 is at pos 541388
-sites 521 is at pos 543817
-sites 522 is at pos 543948
-sites 523 is at pos 545383
-sites 524 is at pos 545671
-sites 525 is at pos 545725
-sites 526 is at pos 547795
-sites 527 is at pos 549389
-sites 528 is at pos 553759
-sites 529 is at pos 554634
-sites 530 is at pos 554973
-sites 531 is at pos 557440
-sites 532 is at pos 557764
-sites 533 is at pos 557798
-sites 534 is at pos 564355
-sites 535 is at pos 574531
-sites 536 is at pos 574846
-sites 537 is at pos 576240
-sites 538 is at pos 576268
-sites 539 is at pos 576896
-sites 540 is at pos 578015
-sites 541 is at pos 581102
-sites 542 is at pos 581839
-sites 543 is at pos 582122
-sites 544 is at pos 584704
-sites 545 is at pos 585788
-sites 546 is at pos 586898
-sites 547 is at pos 591799
-sites 548 is at pos 595049
-sites 549 is at pos 595851
-sites 550 is at pos 596668
-sites 551 is at pos 597776
-sites 552 is at pos 598642
-sites 553 is at pos 602858
-sites 554 is at pos 604219
-sites 555 is at pos 608624
-sites 556 is at pos 611212
-sites 557 is at pos 617125
-sites 558 is at pos 617461
-sites 559 is at pos 617740
-sites 560 is at pos 621452
-sites 561 is at pos 621509
-sites 562 is at pos 621708
-sites 563 is at pos 621732
-sites 564 is at pos 625076
-sites 565 is at pos 627822
-sites 566 is at pos 629666
-sites 567 is at pos 629815
-sites 568 is at pos 631523
-sites 569 is at pos 631651
-sites 570 is at pos 634782
-sites 571 is at pos 634959
-sites 572 is at pos 635007
-sites 573 is at pos 636966
-sites 574 is at pos 637387
-sites 575 is at pos 637394
-sites 576 is at pos 638184
-sites 577 is at pos 640215
-sites 578 is at pos 640317
-sites 579 is at pos 641841
-sites 580 is at pos 642325
-sites 581 is at pos 642371
-sites 582 is at pos 642902
-sites 583 is at pos 644607
-sites 584 is at pos 645000
-sites 585 is at pos 646850
-sites 586 is at pos 649417
-sites 587 is at pos 652959
-sites 588 is at pos 653294
-sites 589 is at pos 653722
-sites 590 is at pos 655063
-sites 591 is at pos 656961
-sites 592 is at pos 657136
-sites 593 is at pos 657520
-sites 594 is at pos 659277
-sites 595 is at pos 661240
-sites 596 is at pos 661522
-sites 597 is at pos 661807
-sites 598 is at pos 661872
-sites 599 is at pos 662127
-sites 600 is at pos 662212
-sites 601 is at pos 663822
-sites 602 is at pos 664591
-sites 603 is at pos 665114
-sites 604 is at pos 668444
-sites 605 is at pos 670374
-sites 606 is at pos 673691
-sites 607 is at pos 675212
-sites 608 is at pos 675696
-sites 609 is at pos 676225
-sites 610 is at pos 676825
-sites 611 is at pos 678196
-sites 612 is at pos 679042
-sites 613 is at pos 679252
-sites 614 is at pos 680083
-sites 615 is at pos 680576
-sites 616 is at pos 682041
-sites 617 is at pos 682258
-sites 618 is at pos 682903
-sites 619 is at pos 683340
-sites 620 is at pos 684056
-sites 621 is at pos 685603
-sites 622 is at pos 694280
-sites 623 is at pos 695150
-sites 624 is at pos 695592
-sites 625 is at pos 696652
-sites 626 is at pos 697545
-sites 627 is at pos 697916
-sites 628 is at pos 700626
-sites 629 is at pos 700790
-sites 630 is at pos 701276
-sites 631 is at pos 707118
-sites 632 is at pos 707144
-sites 633 is at pos 707210
-sites 634 is at pos 707302
-sites 635 is at pos 707799
-sites 636 is at pos 707950
-sites 637 is at pos 708115
-sites 638 is at pos 708599
-sites 639 is at pos 709812
-sites 640 is at pos 709943
-sites 641 is at pos 711174
-sites 642 is at pos 711377
-sites 643 is at pos 711627
-sites 644 is at pos 711928
-sites 645 is at pos 713294
-sites 646 is at pos 715122
-sites 647 is at pos 715433
-sites 648 is at pos 716666
-sites 649 is at pos 716756
-sites 650 is at pos 717073
-sites 651 is at pos 717322
-sites 652 is at pos 720475
-sites 653 is at pos 720554
-sites 654 is at pos 722773
-sites 655 is at pos 722942
-sites 656 is at pos 724087
-sites 657 is at pos 725403
-sites 658 is at pos 725608
-sites 659 is at pos 727489
-sites 660 is at pos 727752
-sites 661 is at pos 728114
-sites 662 is at pos 729636
-sites 663 is at pos 729789
-sites 664 is at pos 730409
-sites 665 is at pos 731104
-sites 666 is at pos 732159
-sites 667 is at pos 732863
-sites 668 is at pos 734128
-sites 669 is at pos 734465
-sites 670 is at pos 735041
-sites 671 is at pos 736431
-sites 672 is at pos 736666
-sites 673 is at pos 737937
-sites 674 is at pos 739200
-sites 675 is at pos 740018
-sites 676 is at pos 743688
-sites 677 is at pos 743837
-sites 678 is at pos 746881
-sites 679 is at pos 747101
-sites 680 is at pos 747453
-sites 681 is at pos 748591
-sites 682 is at pos 748740
-sites 683 is at pos 748845
-sites 684 is at pos 749107
-sites 685 is at pos 749474
-sites 686 is at pos 752142
-sites 687 is at pos 752392
-sites 688 is at pos 752423
-sites 689 is at pos 753039
-sites 690 is at pos 753207
-sites 691 is at pos 753475
-sites 692 is at pos 754289
-sites 693 is at pos 755008
-sites 694 is at pos 755020
-sites 695 is at pos 755638
-sites 696 is at pos 756464
-sites 697 is at pos 756703
-sites 698 is at pos 757578
-sites 699 is at pos 758340
-sites 700 is at pos 760165
-sites 701 is at pos 760737
-sites 702 is at pos 761271
-sites 703 is at pos 761793
-sites 704 is at pos 762351
-sites 705 is at pos 762724
-sites 706 is at pos 764802
-sites 707 is at pos 769838
-sites 708 is at pos 771113
-sites 709 is at pos 773493
-sites 710 is at pos 774939
-sites 711 is at pos 779807
-sites 712 is at pos 781710
-sites 713 is at pos 781967
-sites 714 is at pos 782278
-sites 715 is at pos 782434
-sites 716 is at pos 782995
-sites 717 is at pos 783681
-sites 718 is at pos 783891
-sites 719 is at pos 785754
-sites 720 is at pos 788342
-sites 721 is at pos 790163
-sites 722 is at pos 790547
-sites 723 is at pos 794778
-sites 724 is at pos 795169
-sites 725 is at pos 796278
-sites 726 is at pos 800864
-sites 727 is at pos 802107
-sites 728 is at pos 802884
-sites 729 is at pos 803520
-sites 730 is at pos 803705
-sites 731 is at pos 805157
-sites 732 is at pos 806155
-sites 733 is at pos 807670
-sites 734 is at pos 807930
-sites 735 is at pos 810043
-sites 736 is at pos 810243
-sites 737 is at pos 814035
-sites 738 is at pos 815365
-sites 739 is at pos 816489
-sites 740 is at pos 818156
-sites 741 is at pos 818229
-sites 742 is at pos 819517
-sites 743 is at pos 819592
-sites 744 is at pos 824110
-sites 745 is at pos 824218
-sites 746 is at pos 824867
-sites 747 is at pos 825991
-sites 748 is at pos 826044
-sites 749 is at pos 828067
-sites 750 is at pos 829602
-sites 751 is at pos 833465
-sites 752 is at pos 834707
-sites 753 is at pos 834941
-sites 754 is at pos 837993
-sites 755 is at pos 838766
-sites 756 is at pos 839985
-sites 757 is at pos 840218
-sites 758 is at pos 840424
-sites 759 is at pos 842483
-sites 760 is at pos 842595
-sites 761 is at pos 842733
-sites 762 is at pos 843064
-sites 763 is at pos 843332
-sites 764 is at pos 843420
-sites 765 is at pos 844990
-sites 766 is at pos 848791
-sites 767 is at pos 850519
-sites 768 is at pos 851607
-sites 769 is at pos 853933
-sites 770 is at pos 855409
-sites 771 is at pos 856329
-sites 772 is at pos 856797
-sites 773 is at pos 858369
-sites 774 is at pos 859481
-sites 775 is at pos 859721
-sites 776 is at pos 862892
-sites 777 is at pos 863215
-sites 778 is at pos 865881
-sites 779 is at pos 866835
-sites 780 is at pos 869217
-sites 781 is at pos 869456
-sites 782 is at pos 869894
-sites 783 is at pos 870260
-sites 784 is at pos 872425
-sites 785 is at pos 872826
-sites 786 is at pos 873256
-sites 787 is at pos 874764
-sites 788 is at pos 875202
-sites 789 is at pos 875339
-sites 790 is at pos 877112
-sites 791 is at pos 877923
-sites 792 is at pos 878501
-sites 793 is at pos 880268
-sites 794 is at pos 880351
-sites 795 is at pos 883178
-sites 796 is at pos 884445
-sites 797 is at pos 884846
-sites 798 is at pos 884860
-sites 799 is at pos 885008
-sites 800 is at pos 885765
-sites 801 is at pos 885865
-sites 802 is at pos 886493
-sites 803 is at pos 887862
-sites 804 is at pos 889547
-sites 805 is at pos 889646
-sites 806 is at pos 890739
-sites 807 is at pos 890799
-sites 808 is at pos 891022
-sites 809 is at pos 891070
-sites 810 is at pos 891106
-sites 811 is at pos 892195
-sites 812 is at pos 892464
-sites 813 is at pos 892477
-sites 814 is at pos 893361
-sites 815 is at pos 893655
-sites 816 is at pos 893930
-sites 817 is at pos 894107
-sites 818 is at pos 895361
-sites 819 is at pos 895921
-sites 820 is at pos 897715
-sites 821 is at pos 897959
-sites 822 is at pos 898275
-sites 823 is at pos 899447
-sites 824 is at pos 899729
-sites 825 is at pos 899835
-sites 826 is at pos 900334
-sites 827 is at pos 901534
-sites 828 is at pos 903489
-sites 829 is at pos 904871
-sites 830 is at pos 906197
-sites 831 is at pos 906706
-sites 832 is at pos 907591
-sites 833 is at pos 908258
-sites 834 is at pos 908617
-sites 835 is at pos 908924
-sites 836 is at pos 908944
-sites 837 is at pos 909315
-sites 838 is at pos 910340
-sites 839 is at pos 911754
-sites 840 is at pos 915816
-sites 841 is at pos 915969
-sites 842 is at pos 917628
-sites 843 is at pos 918105
-sites 844 is at pos 918141
-sites 845 is at pos 918945
-sites 846 is at pos 920850
-sites 847 is at pos 922313
-sites 848 is at pos 925295
-sites 849 is at pos 925531
-sites 850 is at pos 925577
-sites 851 is at pos 926524
-sites 852 is at pos 928158
-sites 853 is at pos 930161
-sites 854 is at pos 930181
-sites 855 is at pos 932514
-sites 856 is at pos 933114
-sites 857 is at pos 933411
-sites 858 is at pos 933841
-sites 859 is at pos 933982
-sites 860 is at pos 934872
-sites 861 is at pos 935470
-sites 862 is at pos 936808
-sites 863 is at pos 937000
-sites 864 is at pos 938631
-sites 865 is at pos 939271
-sites 866 is at pos 939312
-sites 867 is at pos 939575
-sites 868 is at pos 939668
-sites 869 is at pos 939799
-sites 870 is at pos 940541
-sites 871 is at pos 940944
-sites 872 is at pos 941391
-sites 873 is at pos 943456
-sites 874 is at pos 943603
-sites 875 is at pos 946380
-sites 876 is at pos 946488
-sites 877 is at pos 946512
-sites 878 is at pos 946544
-sites 879 is at pos 947307
-sites 880 is at pos 947654
-sites 881 is at pos 947805
-sites 882 is at pos 948921
-sites 883 is at pos 949338
-sites 884 is at pos 949455
-sites 885 is at pos 949457
-sites 886 is at pos 949853
-sites 887 is at pos 950042
-sites 888 is at pos 950145
-sites 889 is at pos 950198
-sites 890 is at pos 951184
-sites 891 is at pos 951523
-sites 892 is at pos 951561
-sites 893 is at pos 951601
-sites 894 is at pos 951739
-sites 895 is at pos 953449
-sites 896 is at pos 954030
-sites 897 is at pos 954082
-sites 898 is at pos 955170
-sites 899 is at pos 955428
-sites 900 is at pos 957517
-sites 901 is at pos 957586
-sites 902 is at pos 957606
-sites 903 is at pos 959814
-sites 904 is at pos 960338
-sites 905 is at pos 960712
-sites 906 is at pos 960836
-sites 907 is at pos 961329
-sites 908 is at pos 961330
-sites 909 is at pos 961984
-sites 910 is at pos 963858
-sites 911 is at pos 966590
-sites 912 is at pos 966690
-sites 913 is at pos 966708
-sites 914 is at pos 966925
-sites 915 is at pos 966971
-sites 916 is at pos 967519
-sites 917 is at pos 968008
-sites 918 is at pos 968127
-sites 919 is at pos 968826
-sites 920 is at pos 969050
-sites 921 is at pos 970527
-sites 922 is at pos 971437
-sites 923 is at pos 972047
-sites 924 is at pos 972354
-sites 925 is at pos 972915
-sites 926 is at pos 973294
-sites 927 is at pos 975487
-sites 928 is at pos 975789
-sites 929 is at pos 978001
-sites 930 is at pos 979358
-sites 931 is at pos 979660
-sites 932 is at pos 979691
-sites 933 is at pos 981785
-sites 934 is at pos 981944
-sites 935 is at pos 981972
-sites 936 is at pos 982333
-sites 937 is at pos 982730
-sites 938 is at pos 983129
-sites 939 is at pos 983517
-sites 940 is at pos 983696
-sites 941 is at pos 984175
-sites 942 is at pos 985695
-sites 943 is at pos 985752
-sites 944 is at pos 987264
-sites 945 is at pos 987687
-sites 946 is at pos 988003
-sites 947 is at pos 988033
-sites 948 is at pos 988380
-sites 949 is at pos 988959
-sites 950 is at pos 990582
-sites 951 is at pos 991053
-sites 952 is at pos 992686
-sites 953 is at pos 993081
-sites 954 is at pos 994834
-sites 955 is at pos 995492
-sites 956 is at pos 996285
-sites 957 is at pos 996470
-sites 958 is at pos 996705
-sites 959 is at pos 998029
-sites 960 is at pos 998630
-sites 961 is at pos 998908
+sites 0, ref: A, alt: G
+sites 1, ref: A, alt: G
+sites 2, ref: A, alt: G
+sites 3, ref: A, alt: G
+sites 4, ref: A, alt: G
+sites 5, ref: A, alt: G
+sites 6, ref: A, alt: G
+sites 7, ref: A, alt: G
+sites 8, ref: A, alt: G
+sites 9, ref: A, alt: G
+sites 10, ref: A, alt: G
+sites 11, ref: A, alt: G
+sites 12, ref: A, alt: G
+sites 13, ref: A, alt: G
+sites 14, ref: A, alt: G
+sites 15, ref: A, alt: G
+sites 16, ref: A, alt: G
+sites 17, ref: A, alt: G
+sites 18, ref: A, alt: G
+sites 19, ref: A, alt: G
+sites 20, ref: A, alt: G
+sites 21, ref: A, alt: G
+sites 22, ref: A, alt: G
+sites 23, ref: A, alt: G
+sites 24, ref: A, alt: G
+sites 25, ref: A, alt: G
+sites 26, ref: A, alt: G
+sites 27, ref: A, alt: G
+sites 28, ref: A, alt: G
+sites 29, ref: A, alt: G
+sites 30, ref: A, alt: G
+sites 31, ref: A, alt: G
+sites 32, ref: A, alt: G
+sites 33, ref: A, alt: G
+sites 34, ref: A, alt: G
+sites 35, ref: A, alt: G
+sites 36, ref: A, alt: G
+sites 37, ref: A, alt: G
+sites 38, ref: A, alt: G
+sites 39, ref: A, alt: G
+sites 40, ref: A, alt: G
+sites 41, ref: A, alt: G
+sites 42, ref: A, alt: G
+sites 43, ref: A, alt: G
+sites 44, ref: A, alt: G
+sites 45, ref: A, alt: G
+sites 46, ref: A, alt: G
+sites 47, ref: A, alt: G
+sites 48, ref: A, alt: G
+sites 49, ref: A, alt: G
+sites 50, ref: A, alt: G
+sites 51, ref: A, alt: G
+sites 52, ref: A, alt: G
+sites 53, ref: A, alt: G
+sites 54, ref: A, alt: G
+sites 55, ref: A, alt: G
+sites 56, ref: A, alt: G
+sites 57, ref: A, alt: G
+sites 58, ref: A, alt: G
+sites 59, ref: A, alt: G
+sites 60, ref: A, alt: G
+sites 61, ref: A, alt: G
+sites 62, ref: A, alt: G
+sites 63, ref: A, alt: G
+sites 64, ref: A, alt: G
+sites 65, ref: A, alt: G
+sites 66, ref: A, alt: G
+sites 67, ref: A, alt: G
+sites 68, ref: A, alt: G
+sites 69, ref: A, alt: G
+sites 70, ref: A, alt: G
+sites 71, ref: A, alt: G
+sites 72, ref: A, alt: G
+sites 73, ref: A, alt: G
+sites 74, ref: A, alt: G
+sites 75, ref: A, alt: G
+sites 76, ref: A, alt: G
+sites 77, ref: A, alt: G
+sites 78, ref: A, alt: G
+sites 79, ref: A, alt: G
+sites 80, ref: A, alt: G
+sites 81, ref: A, alt: G
+sites 82, ref: A, alt: G
+sites 83, ref: A, alt: G
+sites 84, ref: A, alt: G
+sites 85, ref: A, alt: G
+sites 86, ref: A, alt: G
+sites 87, ref: A, alt: G
+sites 88, ref: A, alt: G
+sites 89, ref: A, alt: G
+sites 90, ref: A, alt: G
+sites 91, ref: A, alt: G
+sites 92, ref: A, alt: G
+sites 93, ref: A, alt: G
+sites 94, ref: A, alt: G
+sites 95, ref: A, alt: G
+sites 96, ref: A, alt: G
+sites 97, ref: A, alt: G
+sites 98, ref: A, alt: G
+sites 99, ref: A, alt: G
+sites 100, ref: A, alt: G
+sites 101, ref: A, alt: G
+sites 102, ref: A, alt: G
+sites 103, ref: A, alt: G
+sites 104, ref: A, alt: G
+sites 105, ref: A, alt: G
+sites 106, ref: A, alt: G
+sites 107, ref: A, alt: G
+sites 108, ref: A, alt: G
+sites 109, ref: A, alt: G
+sites 110, ref: A, alt: G
+sites 111, ref: A, alt: G
+sites 112, ref: A, alt: G
+sites 113, ref: A, alt: G
+sites 114, ref: A, alt: G
+sites 115, ref: A, alt: G
+sites 116, ref: A, alt: G
+sites 117, ref: A, alt: G
+sites 118, ref: A, alt: G
+sites 119, ref: A, alt: G
+sites 120, ref: A, alt: G
+sites 121, ref: A, alt: G
+sites 122, ref: A, alt: G
+sites 123, ref: A, alt: G
+sites 124, ref: A, alt: G
+sites 125, ref: A, alt: G
+sites 126, ref: A, alt: G
+sites 127, ref: A, alt: G
+sites 128, ref: A, alt: G
+sites 129, ref: A, alt: G
+sites 130, ref: A, alt: G
+sites 131, ref: A, alt: G
+sites 132, ref: A, alt: G
+sites 133, ref: A, alt: G
+sites 134, ref: A, alt: G
+sites 135, ref: A, alt: G
+sites 136, ref: A, alt: G
+sites 137, ref: A, alt: G
+sites 138, ref: A, alt: G
+sites 139, ref: A, alt: G
+sites 140, ref: A, alt: G
+sites 141, ref: A, alt: G
+sites 142, ref: A, alt: G
+sites 143, ref: A, alt: G
+sites 144, ref: A, alt: G
+sites 145, ref: A, alt: G
+sites 146, ref: A, alt: G
+sites 147, ref: A, alt: G
+sites 148, ref: A, alt: G
+sites 149, ref: A, alt: G
+sites 150, ref: A, alt: G
+sites 151, ref: A, alt: G
+sites 152, ref: A, alt: G
+sites 153, ref: A, alt: G
+sites 154, ref: A, alt: G
+sites 155, ref: A, alt: G
+sites 156, ref: A, alt: G
+sites 157, ref: A, alt: G
+sites 158, ref: A, alt: G
+sites 159, ref: A, alt: G
+sites 160, ref: A, alt: G
+sites 161, ref: A, alt: G
+sites 162, ref: A, alt: G
+sites 163, ref: A, alt: G
+sites 164, ref: A, alt: G
+sites 165, ref: A, alt: G
+sites 166, ref: A, alt: G
+sites 167, ref: A, alt: G
+sites 168, ref: A, alt: G
+sites 169, ref: A, alt: G
+sites 170, ref: A, alt: G
+sites 171, ref: A, alt: G
+sites 172, ref: A, alt: G
+sites 173, ref: A, alt: G
+sites 174, ref: A, alt: G
+sites 175, ref: A, alt: G
+sites 176, ref: A, alt: G
+sites 177, ref: A, alt: G
+sites 178, ref: A, alt: G
+sites 179, ref: A, alt: G
+sites 180, ref: A, alt: G
+sites 181, ref: A, alt: G
+sites 182, ref: A, alt: G
+sites 183, ref: A, alt: G
+sites 184, ref: A, alt: G
+sites 185, ref: A, alt: G
+sites 186, ref: A, alt: G
+sites 187, ref: A, alt: G
+sites 188, ref: A, alt: G
+sites 189, ref: A, alt: G
+sites 190, ref: A, alt: G
+sites 191, ref: A, alt: G
+sites 192, ref: A, alt: G
+sites 193, ref: A, alt: G
+sites 194, ref: A, alt: G
+sites 195, ref: A, alt: G
+sites 196, ref: A, alt: G
+sites 197, ref: A, alt: G
+sites 198, ref: A, alt: G
+sites 199, ref: A, alt: G
+sites 200, ref: A, alt: G
+sites 201, ref: A, alt: G
+sites 202, ref: A, alt: G
+sites 203, ref: A, alt: G
+sites 204, ref: A, alt: G
+sites 205, ref: A, alt: G
+sites 206, ref: A, alt: G
+sites 207, ref: A, alt: G
+sites 208, ref: A, alt: G
+sites 209, ref: A, alt: G
+sites 210, ref: A, alt: G
+sites 211, ref: A, alt: G
+sites 212, ref: A, alt: G
+sites 213, ref: A, alt: G
+sites 214, ref: A, alt: G
+sites 215, ref: A, alt: G
+sites 216, ref: A, alt: G
+sites 217, ref: A, alt: G
+sites 218, ref: A, alt: G
+sites 219, ref: A, alt: G
+sites 220, ref: A, alt: G
+sites 221, ref: A, alt: G
+sites 222, ref: A, alt: G
+sites 223, ref: A, alt: G
+sites 224, ref: A, alt: G
+sites 225, ref: A, alt: G
+sites 226, ref: A, alt: G
+sites 227, ref: A, alt: G
+sites 228, ref: A, alt: G
+sites 229, ref: A, alt: G
+sites 230, ref: A, alt: G
+sites 231, ref: A, alt: G
+sites 232, ref: A, alt: G
+sites 233, ref: A, alt: G
+sites 234, ref: A, alt: G
+sites 235, ref: A, alt: G
+sites 236, ref: A, alt: G
+sites 237, ref: A, alt: G
+sites 238, ref: A, alt: G
+sites 239, ref: A, alt: G
+sites 240, ref: A, alt: G
+sites 241, ref: A, alt: G
+sites 242, ref: A, alt: G
+sites 243, ref: A, alt: G
+sites 244, ref: A, alt: G
+sites 245, ref: A, alt: G
+sites 246, ref: A, alt: G
+sites 247, ref: A, alt: G
+sites 248, ref: A, alt: G
+sites 249, ref: A, alt: G
+sites 250, ref: A, alt: G
+sites 251, ref: A, alt: G
+sites 252, ref: A, alt: G
+sites 253, ref: A, alt: G
+sites 254, ref: A, alt: G
+sites 255, ref: A, alt: G
+sites 256, ref: A, alt: G
+sites 257, ref: A, alt: G
+sites 258, ref: A, alt: G
+sites 259, ref: A, alt: G
+sites 260, ref: A, alt: G
+sites 261, ref: A, alt: G
+sites 262, ref: A, alt: G
+sites 263, ref: A, alt: G
+sites 264, ref: A, alt: G
+sites 265, ref: A, alt: G
+sites 266, ref: A, alt: G
+sites 267, ref: A, alt: G
+sites 268, ref: A, alt: G
+sites 269, ref: A, alt: G
+sites 270, ref: A, alt: G
+sites 271, ref: A, alt: G
+sites 272, ref: A, alt: G
+sites 273, ref: A, alt: G
+sites 274, ref: A, alt: G
+sites 275, ref: A, alt: G
+sites 276, ref: A, alt: G
+sites 277, ref: A, alt: G
+sites 278, ref: A, alt: G
+sites 279, ref: A, alt: G
+sites 280, ref: A, alt: G
+sites 281, ref: A, alt: G
+sites 282, ref: A, alt: G
+sites 283, ref: A, alt: G
+sites 284, ref: A, alt: G
+sites 285, ref: A, alt: G
+sites 286, ref: A, alt: G
+sites 287, ref: A, alt: G
+sites 288, ref: A, alt: G
+sites 289, ref: A, alt: G
+sites 290, ref: A, alt: G
+sites 291, ref: A, alt: G
+sites 292, ref: A, alt: G
+sites 293, ref: A, alt: G
+sites 294, ref: A, alt: G
+sites 295, ref: A, alt: G
+sites 296, ref: A, alt: G
+sites 297, ref: A, alt: G
+sites 298, ref: A, alt: G
+sites 299, ref: A, alt: G
+sites 300, ref: A, alt: G
+sites 301, ref: A, alt: G
+sites 302, ref: A, alt: G
+sites 303, ref: A, alt: G
+sites 304, ref: A, alt: G
+sites 305, ref: A, alt: G
+sites 306, ref: A, alt: G
+sites 307, ref: A, alt: G
+sites 308, ref: A, alt: G
+sites 309, ref: A, alt: G
+sites 310, ref: A, alt: G
+sites 311, ref: A, alt: G
+sites 312, ref: A, alt: G
+sites 313, ref: A, alt: G
+sites 314, ref: A, alt: G
+sites 315, ref: A, alt: G
+sites 316, ref: A, alt: G
+sites 317, ref: A, alt: G
+sites 318, ref: A, alt: G
+sites 319, ref: A, alt: G
+sites 320, ref: A, alt: G
+sites 321, ref: A, alt: G
+sites 322, ref: A, alt: G
+sites 323, ref: A, alt: G
+sites 324, ref: A, alt: G
+sites 325, ref: A, alt: G
+sites 326, ref: A, alt: G
+sites 327, ref: A, alt: G
+sites 328, ref: A, alt: G
+sites 329, ref: A, alt: G
+sites 330, ref: A, alt: G
+sites 331, ref: A, alt: G
+sites 332, ref: A, alt: G
+sites 333, ref: A, alt: G
+sites 334, ref: A, alt: G
+sites 335, ref: A, alt: G
+sites 336, ref: A, alt: G
+sites 337, ref: A, alt: G
+sites 338, ref: A, alt: G
+sites 339, ref: A, alt: G
+sites 340, ref: A, alt: G
+sites 341, ref: A, alt: G
+sites 342, ref: A, alt: G
+sites 343, ref: A, alt: G
+sites 344, ref: A, alt: G
+sites 345, ref: A, alt: G
+sites 346, ref: A, alt: G
+sites 347, ref: A, alt: G
+sites 348, ref: A, alt: G
+sites 349, ref: A, alt: G
+sites 350, ref: A, alt: G
+sites 351, ref: A, alt: G
+sites 352, ref: A, alt: G
+sites 353, ref: A, alt: G
+sites 354, ref: A, alt: G
+sites 355, ref: A, alt: G
+sites 356, ref: A, alt: G
+sites 357, ref: A, alt: G
+sites 358, ref: A, alt: G
+sites 359, ref: A, alt: G
+sites 360, ref: A, alt: G
+sites 361, ref: A, alt: G
+sites 362, ref: A, alt: G
+sites 363, ref: A, alt: G
+sites 364, ref: A, alt: G
+sites 365, ref: A, alt: G
+sites 366, ref: A, alt: G
+sites 367, ref: A, alt: G
+sites 368, ref: A, alt: G
+sites 369, ref: A, alt: G
+sites 370, ref: A, alt: G
+sites 371, ref: A, alt: G
+sites 372, ref: A, alt: G
+sites 373, ref: A, alt: G
+sites 374, ref: A, alt: G
+sites 375, ref: A, alt: G
+sites 376, ref: A, alt: G
+sites 377, ref: A, alt: G
+sites 378, ref: A, alt: G
+sites 379, ref: A, alt: G
+sites 380, ref: A, alt: G
+sites 381, ref: A, alt: G
+sites 382, ref: A, alt: G
+sites 383, ref: A, alt: G
+sites 384, ref: A, alt: G
+sites 385, ref: A, alt: G
+sites 386, ref: A, alt: G
+sites 387, ref: A, alt: G
+sites 388, ref: A, alt: G
+sites 389, ref: A, alt: G
+sites 390, ref: A, alt: G
+sites 391, ref: A, alt: G
+sites 392, ref: A, alt: G
+sites 393, ref: A, alt: G
+sites 394, ref: A, alt: G
+sites 395, ref: A, alt: G
+sites 396, ref: A, alt: G
+sites 397, ref: A, alt: G
+sites 398, ref: A, alt: G
+sites 399, ref: A, alt: G
+sites 400, ref: A, alt: G
+sites 401, ref: A, alt: G
+sites 402, ref: A, alt: G
+sites 403, ref: A, alt: G
+sites 404, ref: A, alt: G
+sites 405, ref: A, alt: G
+sites 406, ref: A, alt: G
+sites 407, ref: A, alt: G
+sites 408, ref: A, alt: G
+sites 409, ref: A, alt: G
+sites 410, ref: A, alt: G
+sites 411, ref: A, alt: G
+sites 412, ref: A, alt: G
+sites 413, ref: A, alt: G
+sites 414, ref: A, alt: G
+sites 415, ref: A, alt: G
+sites 416, ref: A, alt: G
+sites 417, ref: A, alt: G
+sites 418, ref: A, alt: G
+sites 419, ref: A, alt: G
+sites 420, ref: A, alt: G
+sites 421, ref: A, alt: G
+sites 422, ref: A, alt: G
+sites 423, ref: A, alt: G
+sites 424, ref: A, alt: G
+sites 425, ref: A, alt: G
+sites 426, ref: A, alt: G
+sites 427, ref: A, alt: G
+sites 428, ref: A, alt: G
+sites 429, ref: A, alt: G
+sites 430, ref: A, alt: G
+sites 431, ref: A, alt: G
+sites 432, ref: A, alt: G
+sites 433, ref: A, alt: G
+sites 434, ref: A, alt: G
+sites 435, ref: A, alt: G
+sites 436, ref: A, alt: G
+sites 437, ref: A, alt: G
+sites 438, ref: A, alt: G
+sites 439, ref: A, alt: G
+sites 440, ref: A, alt: G
+sites 441, ref: A, alt: G
+sites 442, ref: A, alt: G
+sites 443, ref: A, alt: G
+sites 444, ref: A, alt: G
+sites 445, ref: A, alt: G
+sites 446, ref: A, alt: G
+sites 447, ref: A, alt: G
+sites 448, ref: A, alt: G
+sites 449, ref: A, alt: G
+sites 450, ref: A, alt: G
+sites 451, ref: A, alt: G
+sites 452, ref: A, alt: G
+sites 453, ref: A, alt: G
+sites 454, ref: A, alt: G
+sites 455, ref: A, alt: G
+sites 456, ref: A, alt: G
+sites 457, ref: A, alt: G
+sites 458, ref: A, alt: G
+sites 459, ref: A, alt: G
+sites 460, ref: A, alt: G
+sites 461, ref: A, alt: G
+sites 462, ref: A, alt: G
+sites 463, ref: A, alt: G
+sites 464, ref: A, alt: G
+sites 465, ref: A, alt: G
+sites 466, ref: A, alt: G
+sites 467, ref: A, alt: G
+sites 468, ref: A, alt: G
+sites 469, ref: A, alt: G
+sites 470, ref: A, alt: G
+sites 471, ref: A, alt: G
+sites 472, ref: A, alt: G
+sites 473, ref: A, alt: G
+sites 474, ref: A, alt: G
+sites 475, ref: A, alt: G
+sites 476, ref: A, alt: G
+sites 477, ref: A, alt: G
+sites 478, ref: A, alt: G
+sites 479, ref: A, alt: G
+sites 480, ref: A, alt: G
+sites 481, ref: A, alt: G
+sites 482, ref: A, alt: G
+sites 483, ref: A, alt: G
+sites 484, ref: A, alt: G
+sites 485, ref: A, alt: G
+sites 486, ref: A, alt: G
+sites 487, ref: A, alt: G
+sites 488, ref: A, alt: G
+sites 489, ref: A, alt: G
+sites 490, ref: A, alt: G
+sites 491, ref: A, alt: G
+sites 492, ref: A, alt: G
+sites 493, ref: A, alt: G
+sites 494, ref: A, alt: G
+sites 495, ref: A, alt: G
+sites 496, ref: A, alt: G
+sites 497, ref: A, alt: G
+sites 498, ref: A, alt: G
+sites 499, ref: A, alt: G
+sites 500, ref: A, alt: G
+sites 501, ref: A, alt: G
+sites 502, ref: A, alt: G
+sites 503, ref: A, alt: G
+sites 504, ref: A, alt: G
+sites 505, ref: A, alt: G
+sites 506, ref: A, alt: G
+sites 507, ref: A, alt: G
+sites 508, ref: A, alt: G
+sites 509, ref: A, alt: G
+sites 510, ref: A, alt: G
+sites 511, ref: A, alt: G
+sites 512, ref: A, alt: G
+sites 513, ref: A, alt: G
+sites 514, ref: A, alt: G
+sites 515, ref: A, alt: G
+sites 516, ref: A, alt: G
+sites 517, ref: A, alt: G
+sites 518, ref: A, alt: G
+sites 519, ref: A, alt: G
+sites 520, ref: A, alt: G
+sites 521, ref: A, alt: G
+sites 522, ref: A, alt: G
+sites 523, ref: A, alt: G
+sites 524, ref: A, alt: G
+sites 525, ref: A, alt: G
+sites 526, ref: A, alt: G
+sites 527, ref: A, alt: G
+sites 528, ref: A, alt: G
+sites 529, ref: A, alt: G
+sites 530, ref: A, alt: G
+sites 531, ref: A, alt: G
+sites 532, ref: A, alt: G
+sites 533, ref: A, alt: G
+sites 534, ref: A, alt: G
+sites 535, ref: A, alt: G
+sites 536, ref: A, alt: G
+sites 537, ref: A, alt: G
+sites 538, ref: A, alt: G
+sites 539, ref: A, alt: G
+sites 540, ref: A, alt: G
+sites 541, ref: A, alt: G
+sites 542, ref: A, alt: G
+sites 543, ref: A, alt: G
+sites 544, ref: A, alt: G
+sites 545, ref: A, alt: G
+sites 546, ref: A, alt: G
+sites 547, ref: A, alt: G
+sites 548, ref: A, alt: G
+sites 549, ref: A, alt: G
+sites 550, ref: A, alt: G
+sites 551, ref: A, alt: G
+sites 552, ref: A, alt: G
+sites 553, ref: A, alt: G
+sites 554, ref: A, alt: G
+sites 555, ref: A, alt: G
+sites 556, ref: A, alt: G
+sites 557, ref: A, alt: G
+sites 558, ref: A, alt: G
+sites 559, ref: A, alt: G
+sites 560, ref: A, alt: G
+sites 561, ref: A, alt: G
+sites 562, ref: A, alt: G
+sites 563, ref: A, alt: G
+sites 564, ref: A, alt: G
+sites 565, ref: A, alt: G
+sites 566, ref: A, alt: G
+sites 567, ref: A, alt: G
+sites 568, ref: A, alt: G
+sites 569, ref: A, alt: G
+sites 570, ref: A, alt: G
+sites 571, ref: A, alt: G
+sites 572, ref: A, alt: G
+sites 573, ref: A, alt: G
+sites 574, ref: A, alt: G
+sites 575, ref: A, alt: G
+sites 576, ref: A, alt: G
+sites 577, ref: A, alt: G
+sites 578, ref: A, alt: G
+sites 579, ref: A, alt: G
+sites 580, ref: A, alt: G
+sites 581, ref: A, alt: G
+sites 582, ref: A, alt: G
+sites 583, ref: A, alt: G
+sites 584, ref: A, alt: G
+sites 585, ref: A, alt: G
+sites 586, ref: A, alt: G
+sites 587, ref: A, alt: G
+sites 588, ref: A, alt: G
+sites 589, ref: A, alt: G
+sites 590, ref: A, alt: G
+sites 591, ref: A, alt: G
+sites 592, ref: A, alt: G
+sites 593, ref: A, alt: G
+sites 594, ref: A, alt: G
+sites 595, ref: A, alt: G
+sites 596, ref: A, alt: G
+sites 597, ref: A, alt: G
+sites 598, ref: A, alt: G
+sites 599, ref: A, alt: G
+sites 600, ref: A, alt: G
+sites 601, ref: A, alt: G
+sites 602, ref: A, alt: G
+sites 603, ref: A, alt: G
+sites 604, ref: A, alt: G
+sites 605, ref: A, alt: G
+sites 606, ref: A, alt: G
+sites 607, ref: A, alt: G
+sites 608, ref: A, alt: G
+sites 609, ref: A, alt: G
+sites 610, ref: A, alt: G
+sites 611, ref: A, alt: G
+sites 612, ref: A, alt: G
+sites 613, ref: A, alt: G
+sites 614, ref: A, alt: G
+sites 615, ref: A, alt: G
+sites 616, ref: A, alt: G
+sites 617, ref: A, alt: G
+sites 618, ref: A, alt: G
+sites 619, ref: A, alt: G
+sites 620, ref: A, alt: G
+sites 621, ref: A, alt: G
+sites 622, ref: A, alt: G
+sites 623, ref: A, alt: G
+sites 624, ref: A, alt: G
+sites 625, ref: A, alt: G
+sites 626, ref: A, alt: G
+sites 627, ref: A, alt: G
+sites 628, ref: A, alt: G
+sites 629, ref: A, alt: G
+sites 630, ref: A, alt: G
+sites 631, ref: A, alt: G
+sites 632, ref: A, alt: G
+sites 633, ref: A, alt: G
+sites 634, ref: A, alt: G
+sites 635, ref: A, alt: G
+sites 636, ref: A, alt: G
+sites 637, ref: A, alt: G
+sites 638, ref: A, alt: G
+sites 639, ref: A, alt: G
+sites 640, ref: A, alt: G
+sites 641, ref: A, alt: G
+sites 642, ref: A, alt: G
+sites 643, ref: A, alt: G
+sites 644, ref: A, alt: G
+sites 645, ref: A, alt: G
+sites 646, ref: A, alt: G
+sites 647, ref: A, alt: G
+sites 648, ref: A, alt: G
+sites 649, ref: A, alt: G
+sites 650, ref: A, alt: G
+sites 651, ref: A, alt: G
+sites 652, ref: A, alt: G
+sites 653, ref: A, alt: G
+sites 654, ref: A, alt: G
+sites 655, ref: A, alt: G
+sites 656, ref: A, alt: G
+sites 657, ref: A, alt: G
+sites 658, ref: A, alt: G
+sites 659, ref: A, alt: G
+sites 660, ref: A, alt: G
+sites 661, ref: A, alt: G
+sites 662, ref: A, alt: G
+sites 663, ref: A, alt: G
+sites 664, ref: A, alt: G
+sites 665, ref: A, alt: G
+sites 666, ref: A, alt: G
+sites 667, ref: A, alt: G
+sites 668, ref: A, alt: G
+sites 669, ref: A, alt: G
+sites 670, ref: A, alt: G
+sites 671, ref: A, alt: G
+sites 672, ref: A, alt: G
+sites 673, ref: A, alt: G
+sites 674, ref: A, alt: G
+sites 675, ref: A, alt: G
+sites 676, ref: A, alt: G
+sites 677, ref: A, alt: G
+sites 678, ref: A, alt: G
+sites 679, ref: A, alt: G
+sites 680, ref: A, alt: G
+sites 681, ref: A, alt: G
+sites 682, ref: A, alt: G
+sites 683, ref: A, alt: G
+sites 684, ref: A, alt: G
+sites 685, ref: A, alt: G
+sites 686, ref: A, alt: G
+sites 687, ref: A, alt: G
+sites 688, ref: A, alt: G
+sites 689, ref: A, alt: G
+sites 690, ref: A, alt: G
+sites 691, ref: A, alt: G
+sites 692, ref: A, alt: G
+sites 693, ref: A, alt: G
+sites 694, ref: A, alt: G
+sites 695, ref: A, alt: G
+sites 696, ref: A, alt: G
+sites 697, ref: A, alt: G
+sites 698, ref: A, alt: G
+sites 699, ref: A, alt: G
+sites 700, ref: A, alt: G
+sites 701, ref: A, alt: G
+sites 702, ref: A, alt: G
+sites 703, ref: A, alt: G
+sites 704, ref: A, alt: G
+sites 705, ref: A, alt: G
+sites 706, ref: A, alt: G
+sites 707, ref: A, alt: G
+sites 708, ref: A, alt: G
+sites 709, ref: A, alt: G
+sites 710, ref: A, alt: G
+sites 711, ref: A, alt: G
+sites 712, ref: A, alt: G
+sites 713, ref: A, alt: G
+sites 714, ref: A, alt: G
+sites 715, ref: A, alt: G
+sites 716, ref: A, alt: G
+sites 717, ref: A, alt: G
+sites 718, ref: A, alt: G
+sites 719, ref: A, alt: G
+sites 720, ref: A, alt: G
+sites 721, ref: A, alt: G
+sites 722, ref: A, alt: G
+sites 723, ref: A, alt: G
+sites 724, ref: A, alt: G
+sites 725, ref: A, alt: G
+sites 726, ref: A, alt: G
+sites 727, ref: A, alt: G
+sites 728, ref: A, alt: G
+sites 729, ref: A, alt: G
+sites 730, ref: A, alt: G
+sites 731, ref: A, alt: G
+sites 732, ref: A, alt: G
+sites 733, ref: A, alt: G
+sites 734, ref: A, alt: G
+sites 735, ref: A, alt: G
+sites 736, ref: A, alt: G
+sites 737, ref: A, alt: G
+sites 738, ref: A, alt: G
+sites 739, ref: A, alt: G
+sites 740, ref: A, alt: G
+sites 741, ref: A, alt: G
+sites 742, ref: A, alt: G
+sites 743, ref: A, alt: G
+sites 744, ref: A, alt: G
+sites 745, ref: A, alt: G
+sites 746, ref: A, alt: G
+sites 747, ref: A, alt: G
+sites 748, ref: A, alt: G
+sites 749, ref: A, alt: G
+sites 750, ref: A, alt: G
+sites 751, ref: A, alt: G
+sites 752, ref: A, alt: G
+sites 753, ref: A, alt: G
+sites 754, ref: A, alt: G
+sites 755, ref: A, alt: G
+sites 756, ref: A, alt: G
+sites 757, ref: A, alt: G
+sites 758, ref: A, alt: G
+sites 759, ref: A, alt: G
+sites 760, ref: A, alt: G
+sites 761, ref: A, alt: G
+sites 762, ref: A, alt: G
+sites 763, ref: A, alt: G
+sites 764, ref: A, alt: G
+sites 765, ref: A, alt: G
+sites 766, ref: A, alt: G
+sites 767, ref: A, alt: G
+sites 768, ref: A, alt: G
+sites 769, ref: A, alt: G
+sites 770, ref: A, alt: G
+sites 771, ref: A, alt: G
+sites 772, ref: A, alt: G
+sites 773, ref: A, alt: G
+sites 774, ref: A, alt: G
+sites 775, ref: A, alt: G
+sites 776, ref: A, alt: G
+sites 777, ref: A, alt: G
+sites 778, ref: A, alt: G
+sites 779, ref: A, alt: G
+sites 780, ref: A, alt: G
+sites 781, ref: A, alt: G
+sites 782, ref: A, alt: G
+sites 783, ref: A, alt: G
+sites 784, ref: A, alt: G
+sites 785, ref: A, alt: G
+sites 786, ref: A, alt: G
+sites 787, ref: A, alt: G
+sites 788, ref: A, alt: G
+sites 789, ref: A, alt: G
+sites 790, ref: A, alt: G
+sites 791, ref: A, alt: G
+sites 792, ref: A, alt: G
+sites 793, ref: A, alt: G
+sites 794, ref: A, alt: G
+sites 795, ref: A, alt: G
+sites 796, ref: A, alt: G
+sites 797, ref: A, alt: G
+sites 798, ref: A, alt: G
+sites 799, ref: A, alt: G
+sites 800, ref: A, alt: G
+sites 801, ref: A, alt: G
+sites 802, ref: A, alt: G
+sites 803, ref: A, alt: G
+sites 804, ref: A, alt: G
+sites 805, ref: A, alt: G
+sites 806, ref: A, alt: G
+sites 807, ref: A, alt: G
+sites 808, ref: A, alt: G
+sites 809, ref: A, alt: G
+sites 810, ref: A, alt: G
+sites 811, ref: A, alt: G
+sites 812, ref: A, alt: G
+sites 813, ref: A, alt: G
+sites 814, ref: A, alt: G
+sites 815, ref: A, alt: G
+sites 816, ref: A, alt: G
+sites 817, ref: A, alt: G
+sites 818, ref: A, alt: G
+sites 819, ref: A, alt: G
+sites 820, ref: A, alt: G
+sites 821, ref: A, alt: G
+sites 822, ref: A, alt: G
+sites 823, ref: A, alt: G
+sites 824, ref: A, alt: G
+sites 825, ref: A, alt: G
+sites 826, ref: A, alt: G
+sites 827, ref: A, alt: G
+sites 828, ref: A, alt: G
+sites 829, ref: A, alt: G
+sites 830, ref: A, alt: G
+sites 831, ref: A, alt: G
+sites 832, ref: A, alt: G
+sites 833, ref: A, alt: G
+sites 834, ref: A, alt: G
+sites 835, ref: A, alt: G
+sites 836, ref: A, alt: G
+sites 837, ref: A, alt: G
+sites 838, ref: A, alt: G
+sites 839, ref: A, alt: G
+sites 840, ref: A, alt: G
+sites 841, ref: A, alt: G
+sites 842, ref: A, alt: G
+sites 843, ref: A, alt: G
+sites 844, ref: A, alt: G
+sites 845, ref: A, alt: G
+sites 846, ref: A, alt: G
+sites 847, ref: A, alt: G
+sites 848, ref: A, alt: G
+sites 849, ref: A, alt: G
+sites 850, ref: A, alt: G
+sites 851, ref: A, alt: G
+sites 852, ref: A, alt: G
+sites 853, ref: A, alt: G
+sites 854, ref: A, alt: G
+sites 855, ref: A, alt: G
+sites 856, ref: A, alt: G
+sites 857, ref: A, alt: G
+sites 858, ref: A, alt: G
+sites 859, ref: A, alt: G
+sites 860, ref: A, alt: G
+sites 861, ref: A, alt: G
+sites 862, ref: A, alt: G
+sites 863, ref: A, alt: G
+sites 864, ref: A, alt: G
+sites 865, ref: A, alt: G
+sites 866, ref: A, alt: G
+sites 867, ref: A, alt: G
+sites 868, ref: A, alt: G
+sites 869, ref: A, alt: G
+sites 870, ref: A, alt: G
+sites 871, ref: A, alt: G
+sites 872, ref: A, alt: G
+sites 873, ref: A, alt: G
+sites 874, ref: A, alt: G
+sites 875, ref: A, alt: G
+sites 876, ref: A, alt: G
+sites 877, ref: A, alt: G
+sites 878, ref: A, alt: G
+sites 879, ref: A, alt: G
+sites 880, ref: A, alt: G
+sites 881, ref: A, alt: G
+sites 882, ref: A, alt: G
+sites 883, ref: A, alt: G
+sites 884, ref: A, alt: G
+sites 885, ref: A, alt: G
+sites 886, ref: A, alt: G
+sites 887, ref: A, alt: G
+sites 888, ref: A, alt: G
+sites 889, ref: A, alt: G
+sites 890, ref: A, alt: G
+sites 891, ref: A, alt: G
+sites 892, ref: A, alt: G
+sites 893, ref: A, alt: G
+sites 894, ref: A, alt: G
+sites 895, ref: A, alt: G
+sites 896, ref: A, alt: G
+sites 897, ref: A, alt: G
+sites 898, ref: A, alt: G
+sites 899, ref: A, alt: G
+sites 900, ref: A, alt: G
+sites 901, ref: A, alt: G
+sites 902, ref: A, alt: G
+sites 903, ref: A, alt: G
+sites 904, ref: A, alt: G
+sites 905, ref: A, alt: G
+sites 906, ref: A, alt: G
+sites 907, ref: A, alt: G
+sites 908, ref: A, alt: G
+sites 909, ref: A, alt: G
+sites 910, ref: A, alt: G
+sites 911, ref: A, alt: G
+sites 912, ref: A, alt: G
+sites 913, ref: A, alt: G
+sites 914, ref: A, alt: G
+sites 915, ref: A, alt: G
+sites 916, ref: A, alt: G
+sites 917, ref: A, alt: G
+sites 918, ref: A, alt: G
+sites 919, ref: A, alt: G
+sites 920, ref: A, alt: G
+sites 921, ref: A, alt: G
+sites 922, ref: A, alt: G
+sites 923, ref: A, alt: G
+sites 924, ref: A, alt: G
+sites 925, ref: A, alt: G
+sites 926, ref: A, alt: G
+sites 927, ref: A, alt: G
+sites 928, ref: A, alt: G
+sites 929, ref: A, alt: G
+sites 930, ref: A, alt: G
+sites 931, ref: A, alt: G
+sites 932, ref: A, alt: G
+sites 933, ref: A, alt: G
+sites 934, ref: A, alt: G
+sites 935, ref: A, alt: G
+sites 936, ref: A, alt: G
+sites 937, ref: A, alt: G
+sites 938, ref: A, alt: G
+sites 939, ref: A, alt: G
+sites 940, ref: A, alt: G
+sites 941, ref: A, alt: G
+sites 942, ref: A, alt: G
+sites 943, ref: A, alt: G
+sites 944, ref: A, alt: G
+sites 945, ref: A, alt: G
+sites 946, ref: A, alt: G
+sites 947, ref: A, alt: G
+sites 948, ref: A, alt: G
+sites 949, ref: A, alt: G
+sites 950, ref: A, alt: G
+sites 951, ref: A, alt: G
+sites 952, ref: A, alt: G
+sites 953, ref: A, alt: G
+sites 954, ref: A, alt: G
+sites 955, ref: A, alt: G
+sites 956, ref: A, alt: G
+sites 957, ref: A, alt: G
+sites 958, ref: A, alt: G
+sites 959, ref: A, alt: G
+sites 960, ref: A, alt: G
+sites 961, ref: A, alt: G
+log_local_trees done
+Resample All Branches (100 iterations)
+--------------------------------------
+sample 1

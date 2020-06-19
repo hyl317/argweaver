@@ -720,6 +720,10 @@ bool read_vcf(FILE *infile, Sites *sites, double min_qual,
                 idx++;
             }
         }
+        sites->ref.push_back(alleles[0]);
+        //TODO: What to do when it's not bi-allelic? For the purpose of making it compatible with tskit,
+        //we should only keep biallelic sites and skip all others, not just those indels
+        sites->alt.push_back(alleles[1]);
         if (add_ref) {
             assert(idx == nseqs-1);
             col[idx] = alleles[0];
@@ -837,6 +841,8 @@ void make_sequences_from_sites(const Sites *sites, Sequences *sequences,
 
     sequences->clear();
     sequences->set_owned(true);
+    sequences->ref = sites->ref;
+    sequences->alt = sites->alt;
 
     for (int i=0; i<nseqs; i++) {
         char *seq = new char [seqlen+1];
@@ -1417,6 +1423,8 @@ void make_sites_from_sequences(const Sequences *sequences, Sites *sites)
     sites->end_coord = seqlen;
     sites->names.insert(sites->names.begin(),
                         sequences->names.begin(), sequences->names.end());
+    sites->ref = sequences->ref;
+    sites->alt = sequences->alt;
 
     for (int i=0; i<seqlen; i++) {
         bool isSite=false;  //need to make site if position is N or varaint or

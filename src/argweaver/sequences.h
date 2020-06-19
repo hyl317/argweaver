@@ -206,6 +206,8 @@ public:
             append(sequences->names[i], &sequences->seqs[i][offset],
                    vector<BaseProbs>());
 
+        ref = vector<char>(sequences->ref);
+
 	if (sequences->pairs.size() > 0) {
 	  pairs = vector<int>(nseqs);
 	  for (int i = 0; i < nseqs; i++)
@@ -309,6 +311,8 @@ public:
                 delete [] seqs[i];
         }
         seqs.clear();
+        ref.clear();
+        alt.clear();
         names.clear();
         pops.clear();
         pairs.clear();
@@ -392,6 +396,8 @@ public:
         const;
 
     vector <char*> seqs;
+    vector<char> ref;
+    vector<char> alt;
     vector <string> names;
     vector <int> pops;
     vector <int> pairs; // index of diploid pair partner
@@ -494,6 +500,8 @@ public:
         names.clear();
         positions.clear();
         cols.clear();
+        ref.clear();
+        alt.clear();
         pops.clear();
         base_probs.clear();
     }
@@ -552,6 +560,8 @@ public:
     vector<int> pops;
     vector<int> positions;
     vector<char*> cols;
+    vector<char> ref;
+    vector<char> alt;
     vector<vector<BaseProbs> > base_probs;
 };
 

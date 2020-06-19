@@ -1610,7 +1610,8 @@ void insert_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_id_t p, tsk_id_t
 }
 
 int init_nodes_mapping(const LocalTree *tree, int *nodes, tsk_table_collection_t *tables, 
-        map<pair<tsk_id_t, tsk_id_t>, int> *edges, const double *times, int start_coord){
+        map<pair<tsk_id_t, tsk_id_t>, int> *edges, vector<tsk_id_t*> *node_maps, 
+        const double *times, int start_coord){
     int num_samples = tree->get_num_leaves();
     int j, u, ret;
     bool visited[tree->nnodes];
@@ -1647,36 +1648,11 @@ int init_nodes_mapping(const LocalTree *tree, int *nodes, tsk_table_collection_t
         }
     }
 
-
-    // for(j = 0; j < tree->nnodes; j++){
-    //     tsk_flags_t flag = j < num_samples? 1: 0;
-    //     ret = tsk_node_table_add_row(&(tables->nodes), flag, times[tree->get_node(j).age], 
-    //             TSK_NULL, TSK_NULL, NULL, 0);
-    //     check_tsk_error(ret);
-    // }
-
-    // for (j = 0; j < num_samples; j++) {
-    //     visited[j] = true;
-    //     nodes[j] = j;
-    //     u = j;
-    //     while (u != -1) {
-    //         int p = tree->get_node(u).parent;
-    //         if (p != -1) {
-    //             edges->insert(make_pair(make_pair(p, u), start_coord));
-    //         }
-    //         if (p == -1 || visited[p]) {break;}
-    //         visited[p] = true;
-    //         nodes[p] = p;
-    //         u = p;
-    //     }
-    // }
-
-#ifdef DEBUG
-    printLog(LOG_LOW, "init_nodes_mapping\n");
+    tsk_id_t *tmp = new tsk_id_t[tree->nnodes];
     for(int i = 0; i < tree->nnodes; i++){
-        printLog(LOG_LOW, "%d(age = %d)->%d\n", i, tree->get_node(i).age, nodes[i]);
+        tmp[i] = nodes[i];
     }
-#endif
+    node_maps->push_back(tmp);
     return counter;
 }
 
@@ -1706,11 +1682,14 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees,
     // the first int refers to the starting position of this edge
     // the second int refers to the multiplicity of this edge
     // in some corner cases, <parent, child> is not enough to fully identify an edge
-    map<pair<tsk_id_t, tsk_id_t>, int> edges;
+    
     int nnodes = trees->nnodes;
     int nodes[nnodes];
     int coord = trees->start_coord;
-    int id = init_nodes_mapping(trees->trees.front().tree, nodes, &tables, &edges, times, trees->start_coord);
+    map<pair<tsk_id_t, tsk_id_t>, int> edges;
+    vector<tsk_id_t*> node_maps;
+    int id = init_nodes_mapping(trees->trees.front().tree, nodes, &tables, &edges, &node_maps, 
+                                    times, trees->start_coord);
 
     LocalTree prev;
     int tree_id = 0;
@@ -1799,12 +1778,11 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees,
         }      
         coord += it->blocklen;//set up starting coordinate of next tree
         
-#ifdef DEBUG
-        //printLog(LOG_LOW, "mapping information");
-        //for(int j=0; j < nnodes; j++){
-        //    printLog(LOG_LOW, "%d: %d\n", j, nodes[j]);
-        //}
-#endif
+        tsk_id_t* curr_map = new tsk_id_t[nnodes];
+        for(int j=0; j < nnodes; j++){
+            curr_map[j] = nodes[j];
+        }
+        node_maps.push_back(curr_map);
         prev.copy(*(it->tree));
     }
 
@@ -1817,8 +1795,6 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees,
         }
     }
 
-    printLog(LOG_LOW, "end of sequence coord: %d\n", coord);
-    printLog(LOG_LOW, "sequence length: %lf\n", tables.sequence_length);
     ret = tsk_table_collection_sort(&tables, NULL, 0);
     check_tsk_error(ret);
 
@@ -1826,43 +1802,45 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees,
     Sites sites;
     make_sites_from_sequences(sequences, &sites);
     uncompress_sites(&sites, sitesmapping);
-    int nseqs = sites.get_num_seqs();
-    if (sites.names[nseqs-1] != "REF"){
-        printLog(LOG_LOW, "Can't output tree sequecne without ancestral allele info\n");
+    if (sites.ref.size() != sites.get_num_sites() || sites.alt.size() != sites.get_num_sites()){
+        printLog(LOG_LOW, "Can't output tree sequecne without ancestral allele info for every SNP site\n");
         exit(EXIT_FAILURE);
     }
-    printLog(LOG_LOW, "number of sequences: %d\n", nseqs);
-    printLog(LOG_LOW, "number of sites: %d\n", sites.get_num_sites());
-    printLog(LOG_LOW, "length: %d\n", sites.length());
-    printLog(LOG_LOW, "start coord: %d\n", sites.start_coord);
-    printLog(LOG_LOW, "end coord: %d\n", sites.end_coord);
     
-    LocalTree *curr_tree = trees->trees.front().tree;
     int end = trees->start_coord + trees->trees.front().blocklen; // this is the right coordinate of the first tree
+    int curr_tree = 0;
     LocalTrees::const_iterator it = trees->begin();
     for(int i = 0; i < sites.get_num_sites(); i++){
         ret = tsk_site_table_add_row(&(tables.sites), sites.positions[i], 
-                        &(sites.cols[i][nseqs-1]), sizeof(char), NULL, NULL);
+                        &(sites.ref[i]), sizeof(char), NULL, NULL);
         check_tsk_error(ret);
+        printLog(LOG_LOW, "sites %d, ref: %c, alt: %c\n", i, sites.ref[i], sites.alt[i]);
         // add mutation
         int site_pos = sites.positions[i];
-        while(end < site_pos && it != trees->begin()){
-            ++it;
+        while(end < site_pos && it != trees->end()){
+            it++;
+            curr_tree++;
             end += it->blocklen;
         }
 
         // now we determine which branch should this mutation reside
         // may not be unique, may not be completely compatible ...
-        
-
+        tsk_id_t *node_map = node_maps[curr_tree];
+        //printLog(LOG_LOW, "at tree %d\n", curr_tree);
+        for(int j = 0; j < nnodes; j++){
+            //printLog(LOG_LOW, "%d->%d\n", j, node_map[j]);
+        }
 
     }
-
 
     ret = tsk_table_collection_dump(&tables, filename, 0);
     check_tsk_error(ret);
     tsk_table_collection_free(&tables);
-    exit(EXIT_FAILURE);
+    for(int i = 0; i < trees->get_num_trees(); i++){
+        delete [] node_maps[i];
+    }
+
+    //exit(EXIT_FAILURE);
 }
 
 

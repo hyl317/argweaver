@@ -1026,7 +1026,7 @@ bool seq_sample_arg(ArgModel *model, Sequences *sequences, LocalTrees *trees,
     printLog(LOG_LOW, "number of leaves in trees: %d\n", trees->get_num_leaves());
 #endif
     int num_seqs = sequences->get_num_seqs();
-    if (trees->get_num_leaves() < num_seqs && sequences->names[num_seqs-1] != "REF") {
+    if (trees->get_num_leaves() < num_seqs) {
         printLog(LOG_LOW, "Sequentially Sample Initial ARG (%d sequences)\n", num_seqs);
         printLog(LOG_LOW, "------------------------------------------------\n");
         sample_arg_seq(model, sequences, trees, true, config->num_buildup);
@@ -1683,12 +1683,10 @@ int main(int argc, char **argv)
             printLog(LOG_LOW, "Cannot use both --vcf-file and --vcf-list-file. Terminating\n");
             return EXIT_ERROR;
         }
-        bool add_Ref = false;
-        if (c.ts != "") {add_Ref = true;}
-        // if add_ref is true, there will be a fake column of sequence in the sites object corresponding to the ref allele
+        
         if (!read_vcf(c.vcf_file, &sites, c.subregion_str,
                       c.vcf_min_qual, c.vcf_filter, c.use_genotype_probs,
-                      c.mask_uncertain, add_Ref, c.tabix_dir, keep_inds)) {
+                      c.mask_uncertain, false, c.tabix_dir, keep_inds)) {
             printError("Could not read VCF file");
             return EXIT_ERROR;
         }
@@ -1739,6 +1737,7 @@ int main(int argc, char **argv)
         }
     }
 
+    printLog(LOG_LOW, "length of reference seq: %d\n", sites.ref.size());
     //read in masks
     vector<TrackNullValue> ind_maskmap;
     for (int i=0; i < sites.get_num_seqs(); i++)
