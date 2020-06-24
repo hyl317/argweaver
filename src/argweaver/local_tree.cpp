@@ -1573,7 +1573,7 @@ void write_local_trees_as_bed(FILE *out, const LocalTrees *trees,
 void remove_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_table_collection_t *tables, 
     tsk_id_t p, tsk_id_t c, int coord){
     if (tables->nodes.time[p] == tables->nodes.time[c]) {
-        printLog(LOG_LOW, "remove edge rejected\n");
+        //printLog(LOG_LOW, "remove edge rejected\n");
         return;
     } // this is the zero-length branch case
     //remove the edge whose child node is tskit_id
@@ -1582,7 +1582,6 @@ void remove_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_table_collection
     if (it == edges->end()){
         return;
         //printLog(LOG_LOW, "something wrong with the code: removing non-existing edge\n");
-        //exit(EXIT_FAILURE);
     }else{
         int ret = tsk_edge_table_add_row(&(tables->edges), it->second, coord, p, c);
         check_tsk_error(ret);
@@ -1595,7 +1594,7 @@ void remove_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_table_collection
 void insert_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_id_t p, tsk_id_t c, 
         int coord, tsk_table_collection_t *tables){
     if (tables->nodes.time[p] == tables->nodes.time[c]) {
-        printLog(LOG_LOW, "insert edge rejected\n");    
+        //printLog(LOG_LOW, "insert edge rejected\n");    
         return;
     }
     auto it = edges->find(make_pair(p, c));
@@ -1604,7 +1603,6 @@ void insert_edge(map<pair<tsk_id_t, tsk_id_t>, int> *edges, tsk_id_t p, tsk_id_t
     }else{
         return;
         //printLog(LOG_LOW, "something wrong with the code: duplicate insertion\n");
-        //exit(EXIT_FAILURE);
     }
     //printLog(LOG_LOW, "inserted successfully\n");
 }
@@ -1694,7 +1692,7 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees,
     LocalTree prev;
     int tree_id = 0;
     for (LocalTrees::const_iterator it=trees->begin(); it != trees->end(); ++it){
-        printLog(LOG_LOW, "at tree %d\n", tree_id);
+        //printLog(LOG_LOW, "at tree %d\n", tree_id);
         tree_id++;
 
         if(it == trees->begin()) {
@@ -1802,6 +1800,7 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees,
     Sites sites;
     make_sites_from_sequences(sequences, &sites);
     uncompress_sites(&sites, sitesmapping);
+    int nseqs = sites.get_num_seqs();
     if (sites.ref.size() != sites.get_num_sites() || sites.alt.size() != sites.get_num_sites()){
         printLog(LOG_LOW, "Can't output tree sequecne without ancestral allele info for every SNP site\n");
         exit(EXIT_FAILURE);
@@ -1814,7 +1813,7 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees,
         ret = tsk_site_table_add_row(&(tables.sites), sites.positions[i], 
                         &(sites.ref[i]), sizeof(char), NULL, NULL);
         check_tsk_error(ret);
-        printLog(LOG_LOW, "sites %d, ref: %c, alt: %c\n", i, sites.ref[i], sites.alt[i]);
+        //printLog(LOG_LOW, "sites %d, ref: %c, alt: %c\n", i, sites.ref[i], sites.alt[i]);
         // add mutation
         int site_pos = sites.positions[i];
         while(end < site_pos && it != trees->end()){
@@ -1823,12 +1822,49 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees,
             end += it->blocklen;
         }
 
+        //printLog(LOG_LOW, "current tree: %d\n", curr_tree);
         // now we determine which branch should this mutation reside
         // may not be unique, may not be completely compatible ...
         tsk_id_t *node_map = node_maps[curr_tree];
-        //printLog(LOG_LOW, "at tree %d\n", curr_tree);
+        char *site = sites.cols[i];
+        set<tsk_id_t> derived;
+        for(int k = 0; k < nseqs; k++){
+            if(site[k] == sites.alt[i]){derived.insert(k);}
+        }
+        
+        map<int, set<tsk_id_t>*> descent_map;
+        int postorder[nnodes];
+        it->tree->get_postorder(postorder);
+        bool mapped = false;
         for(int j = 0; j < nnodes; j++){
-            //printLog(LOG_LOW, "%d->%d\n", j, node_map[j]);
+            //determine the set of leaf nodes that carry the derived alleles
+            int node = postorder[j];
+            //printLog(LOG_LOW, "postorder: %d\n", node);
+            if (node < it->tree->get_num_leaves()){
+                descent_map.insert(make_pair(node, new set<tsk_id_t>{node}));
+            }else{
+                int *child = it->tree->nodes[node].child;
+                auto descent_union = new set<tsk_id_t>(*descent_map.at(child[0]));
+                descent_union->insert(descent_map.at(child[1])->begin(), descent_map.at(child[1])->end());
+                descent_map.insert(make_pair(node, descent_union));
+            }
+
+            if(*descent_map.at(node) == derived){
+                mapped = true;
+                ret = tsk_mutation_table_add_row(&(tables.mutations), i, node_map[node], 
+                        -1, &(sites.alt[i]), sizeof(char), NULL, 0);
+                check_tsk_error(ret);
+                //printLog(LOG_LOW, "map mutation to %d at tree %d\n", node, curr_tree);
+                break;
+            }
+        }
+        if(!mapped){
+            printLog(LOG_LOW, "can't unambiguous map mutation at site %d\n", sites.positions[i]);
+        }
+
+        // clean up
+        for(int j = 0; j < nnodes; j++){
+            delete descent_map[j];
         }
 
     }
@@ -1840,7 +1876,6 @@ void write_local_trees_ts(const char *filename, const LocalTrees *trees,
         delete [] node_maps[i];
     }
 
-    //exit(EXIT_FAILURE);
 }
 
 
@@ -2178,6 +2213,55 @@ bool read_local_trees(const char *filename, const double *times,
     fclose(infile);
     return result;
 }
+
+/////////////////////////////////// read from tsinfer ////////////////////////////////////
+
+bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times, int ntimes, 
+                            LocalTrees *trees, vector<string> &seqnames,
+                            int start_coord, int end_coord)
+{
+    tsk_treeseq_t ts;
+    tsk_tree_t tree;
+    int ret = tsk_treeseq_load(&ts, ts_fileName, 0);
+    check_tsk_error(ret);
+
+    tsk_size_t numSamples = ts.num_samples;
+    tsk_size_t numTrees = ts.num_trees;
+    trees->clear();
+    seqnames.clear();
+    trees->start_coord = start_coord;
+    trees->end_coord = end_coord;
+
+    tsk_diff_iter_t diff_iter;
+    ret = tsk_diff_iter_init(&diff_iter, &ts);
+    check_tsk_error(ret);
+
+    int iter;
+    double left, right;
+    tsk_edge_list_t in, out;
+    for(iter = tsk_diff_iter_next(&diff_iter, &left, &right, &out, &in); iter == 1; 
+            iter = tsk_diff_iter_next(&diff_iter, &left, &right, &out, &in)){
+        printLog(LOG_LOW, "left: %lf, right: %lf\n", left, right);
+        printLog(LOG_LOW, "fuck");
+    }
+
+    ret = tsk_diff_iter_free(&diff_iter);
+    check_tsk_error(ret);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 void traverse_upwards(tsk_tree_t *tree, int* ptree, int* ages, map<tsk_id_t, int> *mapping,
                         int nnodes, const double *times, int ntimes)
