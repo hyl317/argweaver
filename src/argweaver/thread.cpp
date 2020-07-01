@@ -63,8 +63,10 @@ void add_tree_branch(LocalTree *tree, int node, int time, int pop_path)
     int newcoal = nnodes + 1;
 
     // determine node displacement
+    // node2 is the sibling of the newly added leaf
     int node2 = (node != newleaf ? node : displaced);
     int parent = nodes[node].parent;
+    // parent 2 is the parent of the sibling of the newly added leaf
     int parent2 = (parent != newleaf ? parent : displaced);
 
     // displace node
@@ -120,6 +122,7 @@ void remove_tree_branch(LocalTree *tree, int remove_leaf,
     int *c = nodes[remove_coal].child;
     int coal_child = (c[0] == remove_leaf ? c[1] : c[0]);
     int coal_parent = nodes[remove_coal].parent;
+    // fix up parent-child relationship after a leaf branch is removed
     nodes[coal_child].parent = coal_parent;
     if (model->pop_tree != NULL) {
         nodes[coal_child].pop_path = model->pop_tree->consistent_path(

@@ -2232,32 +2232,9 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     trees->start_coord = start_coord;
     trees->end_coord = end_coord;
 
-    tsk_diff_iter_t diff_iter;
-    ret = tsk_diff_iter_init(&diff_iter, &ts);
+    ret = tsk_treeseq_free(&ts);
     check_tsk_error(ret);
-
-    int iter;
-    double left, right;
-    tsk_edge_list_t in, out;
-    for(iter = tsk_diff_iter_next(&diff_iter, &left, &right, &out, &in); iter == 1; 
-            iter = tsk_diff_iter_next(&diff_iter, &left, &right, &out, &in)){
-        printLog(LOG_LOW, "left: %lf, right: %lf\n", left, right);
-        printLog(LOG_LOW, "fuck");
-    }
-
-    ret = tsk_diff_iter_free(&diff_iter);
-    check_tsk_error(ret);
-
-
 }
-
-
-
-
-
-
-
-
 
 
 
