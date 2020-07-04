@@ -1087,7 +1087,8 @@ void write_newick_node(FILE *out, const LocalTree *tree,
                        const char *const *names,
                        const double *times, int node, int depth, bool oneline,
                        bool pop_model)
-{
+{   
+    //printLog(LOG_LOW, "accessing node %d\n", node);
     if (tree->nodes[node].is_leaf()) {
         if (!oneline)
             for (int i=0; i<depth; i++) fprintf(out, "  ");
@@ -1167,6 +1168,51 @@ void write_newick_tree(FILE *out, const LocalTree *tree,
             delete [] default_names[i];
         delete [] default_names;
     }
+}
+
+void write_newick_node_rSPR(FILE *out, const LocalTree *tree,
+                        const char *const *names,
+                       const double *times, int node, int depth)
+{
+    if (tree->nodes[node].is_leaf()) {
+        fprintf(out, "%s", names[node]);
+    } else {
+        fprintf(out, "(");
+        write_newick_node_rSPR(out, tree, names, times,
+                          tree->nodes[node].child[0], depth+1);
+        fprintf(out, ",");
+        write_newick_node_rSPR(out, tree, names, times,
+                          tree->nodes[node].child[1], depth+1);
+        fprintf(out, ")");
+
+        // for rSPR, don't print internal nodes
+        // or do we want this?
+        //fprintf(out, "%s", names[node]);
+    }
+}
+
+// write out newick notation of a local tree to a file stream for rSPR program to use
+// this is a simplified newick format
+void write_newick_tree_rSPR(FILE *out, const LocalTree *tree, const double *times)
+{   
+    // setup default names
+    char **default_names;
+    default_names = new char* [tree->nnodes];
+    for (int i=0; i<tree->nnodes; i++) {
+        default_names[i] = new char [16];
+        snprintf(default_names[i], 15, "%d", i);
+    }
+
+    write_newick_node_rSPR(out, tree, default_names, times, tree->root, 0);
+    fprintf(out, ";\n");
+    // clean up default names
+    if (default_names) {
+        for (int i=0; i<tree->nnodes; i++)
+            delete [] default_names[i];
+        delete [] default_names;
+    }
+
+
 }
 
 // write out the newick notation of a tree to a file
@@ -2216,10 +2262,122 @@ bool read_local_trees(const char *filename, const double *times,
 
 /////////////////////////////////// read from tsinfer ////////////////////////////////////
 
+bool read_local_tree_from_tsinfer(tsk_tree_t *tree, int *ptree, int *ages,
+                                    const double *times, int ntimes){
+    // maybe first traverse the tree upwards as you would normally do
+    tsk_id_t *samples = tree->samples;
+    tsk_size_t num_samples = tsk_treeseq_get_num_samples(tree->tree_sequence);
+    int nnodes = 2*num_samples-1;
+    double age_tmp[nnodes];
+    fill(age_tmp, age_tmp+nnodes, -1);
+    // map parent to all its children
+    auto pcmap = map<int, set<int>>();
+    auto visited = set<int>();
+    auto id_mapping = map<int, int>(); //mapping between tsk_id_t and the id as in argweaver
+    int index = num_samples; // keep track of how many non-sample nodes have been visited
+    for(int j = 0; j < num_samples; j++){
+        int u = samples[j];
+        visited.insert(u);
+        tsk_tree_get_time(tree, u, &age_tmp[u]);
+        id_mapping.insert(pair<int, int>(u, j));
+        tsk_tree_get_time(tree, u, &age_tmp[j]);
+        while (u != TSK_NULL){
+            tsk_id_t p = tree->parent[u];
+            if (p == TSK_NULL) {
+                ptree[id_mapping[u]] = -1;
+                break;
+            }
+            if (visited.find(p) != visited.end()){
+                // this parent node is already visited
+                assert(pcmap.find(p) != pcmap.end());
+                pcmap[p].insert(u);
+                break;
+            }else{
+                pcmap.insert(pair<tsk_id_t, set<int>>(p, set<int>()));
+                pcmap[p].insert(u);
+                visited.insert(p);
+                tsk_tree_get_time(tree, p, &age_tmp[index]);
+                id_mapping.insert(pair<int, int>(p, index));
+                index++;
+                u = p;
+            }
+        }
+    }
+
+
+#ifdef DEBUG
+    for(auto it = pcmap.begin(); it != pcmap.end(); it++){
+        int p = it->first;
+        auto children = it->second;
+        printLog(LOG_LOW, "%d(->%d) has %d children\n", p, id_mapping[p], children.size());
+        for(int child : children){
+            printLog(LOG_LOW, "%d\n", child);
+        }
+    }
+
+    //printLog(LOG_LOW, "index: %d\n", index);
+    //for(int i = 0; i < index; i++){
+    //    printLog(LOG_LOW, "age of node %d is %lf\n", i, age_tmp[i]);
+    //}
+#endif
+
+    // now resolve polytomy
+    // we want to resolve from bottom up; since C++ map is ordered, this should be fine
+    // we make use of the node labeling rule in tskit: older node has bigger ids
+    map<int, int> polynode_map;
+    for(auto it = pcmap.begin(); it != pcmap.end(); ++it){
+        int p_id = id_mapping[it->first];
+        if (it->second.size() > 2){
+            int prev_p = tree->parent[it->first] == TSK_NULL? -1:id_mapping[tree->parent[it->first]];
+            int counter = 0;
+            //printLog(LOG_LOW, "prev_p is %d\n", prev_p);
+            // the C++ set is sorted in ascending order
+            for(int child : it->second){
+                int c_id = id_mapping[child];
+                if (polynode_map.find(child) != polynode_map.end()) {c_id = polynode_map[child];}
+                if (counter <= 1){ptree[c_id] = p_id;}
+                else{
+                    if (counter == 2) {
+                        ptree[p_id] = index;
+                    } else {
+                        ptree[index-1] = index;
+                    }
+                    ptree[c_id] = index;
+                    age_tmp[index] = age_tmp[p_id];
+                    index++;
+                }
+                counter++;
+            }
+            ptree[index-1] = prev_p;
+            polynode_map.insert(pair<int, int>(it->first, index-1));
+        }else{
+            assert(it->second.size() == 2);
+            for(int child : it->second){
+                if (pcmap.find(child) == pcmap.end() || pcmap[child].size() == 2){
+                    ptree[id_mapping[child]] = p_id;
+                }
+            }
+        }
+    }
+
+    assert(index == nnodes);
+
+    //finally, discrete time
+    for(int i = 0; i < nnodes; i++){
+        assert(age_tmp[i] != -1);
+        ages[i] = find_time(age_tmp[i], times, ntimes);
+    }
+
+
+}
+
+
 bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times, int ntimes, 
                             LocalTrees *trees, vector<string> &seqnames,
                             int start_coord, int end_coord)
 {
+    // for testing purpose, for now this function will write a file containing the newick rep of
+    // each of the local tree with polytomy resolved
     tsk_treeseq_t ts;
     tsk_tree_t tree;
     int ret = tsk_treeseq_load(&ts, ts_fileName, 0);
@@ -2231,9 +2389,41 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     seqnames.clear();
     trees->start_coord = start_coord;
     trees->end_coord = end_coord;
+    int nnodes = 2*numSamples -1;
+    int iter;
+    ret = tsk_tree_init(&tree, &ts, 0);
+    check_tsk_error(ret);
+    int index = 0;
 
+    vector<LocalTree*> localtrees;
+    for(iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)){
+        int ptree[nnodes];
+        int ages[nnodes];
+        read_local_tree_from_tsinfer(&tree, ptree, ages, times, ntimes);
+
+#ifdef DEBUG
+        for(int j = 0; j < nnodes; j++){
+            printLog(LOG_LOW, "node %d has parent %d\n", j, ptree[j]);
+        }
+#endif
+        LocalTree *localtree = new LocalTree(ptree, nnodes, ages);
+        localtrees.push_back(localtree);
+    }
+
+    // write local tree in newick format to try rSPR program
+    FILE *out = fopen("tsdate.newick.txt", "w");
+    int id = 0;
+    for (auto it = localtrees.begin(); it != localtrees.end(); ++it){
+        write_newick_tree_rSPR(out, *it, times);
+    }
+    fclose(out);
+
+    ret = tsk_tree_free(&tree);
+    check_tsk_error(ret);
     ret = tsk_treeseq_free(&ts);
     check_tsk_error(ret);
+    exit(EXIT_FAILURE);
+    
 }
 
 

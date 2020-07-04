@@ -1013,6 +1013,13 @@ bool read_init_ts(const char *ts_fileName, const ArgModel *model, LocalTrees *tr
                             trees, seqnames, start_coord, end_coord);
 }
 
+bool read_init_tsinfer(const char *ts_fileName, const ArgModel *model, LocalTrees *trees, vector<string> &seqnames,
+                    int start_coord, int end_coord)
+{
+    return read_local_trees_from_tsinfer(ts_fileName, model->times, model->ntimes,
+                            trees, seqnames, start_coord, end_coord);
+}
+
 //=============================================================================
 // sampling methods
 
@@ -2050,6 +2057,12 @@ int main(int argc, char **argv)
         trees = new LocalTrees();
         trees_ptr = unique_ptr<LocalTrees>(trees);
         vector<string> seqnames;
+
+        if(!read_init_tsinfer(c.ts.c_str(), &c.model, trees, seqnames, seq_region.start, seq_region.end)){
+            printError("could not read tree seq file");
+            return EXIT_ERROR;
+        }
+
 
         if (!read_init_ts(c.ts.c_str(), &c.model, trees, seqnames, seq_region.start, seq_region.end)) {
                 printError("could not read tree seq file");
