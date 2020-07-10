@@ -1,7 +1,7 @@
 arg-sample 1.0
-start time: Thu Jul  9 15:36:18 2020
+start time: Fri Jul 10 16:33:56 2020
 command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation.5.tsinfer.trees --overwrite --region 1:5000-1000000
-random seed: 1594323378
+random seed: 1594413237
 Reading ../../simulate/arg/simulation_source.5.vcf.gz 1:5000-1000000
 Read 962 sites from 969 lines of VCF file (num skipped indels=0)
 read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=5, nsites=962)
@@ -57,3 +57,2928 @@ model:
               10000.0]
 
 Start reading tree sequence file: ../../simulate/arg/simulation.5.tsinfer.trees
+26(->7) has 2 children
+1
+3
+83(->5) has 3 children
+0
+2
+4
+108(->6) has 2 children
+26
+83
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 5
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent 8
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 6
+20(->8) has 2 children
+1
+4
+44(->5) has 2 children
+0
+3
+88(->6) has 2 children
+2
+44
+108(->7) has 2 children
+20
+88
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 6
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+44(->5) has 2 children
+0
+3
+88(->6) has 2 children
+2
+44
+108(->7) has 2 children
+4
+88
+111(->8) has 2 children
+1
+108
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 6
+node 3 has parent 5
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+44(->5) has 2 children
+0
+3
+108(->6) has 2 children
+4
+44
+111(->7) has 2 children
+1
+108
+114(->8) has 2 children
+2
+111
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+8(->8) has 2 children
+2
+4
+44(->5) has 2 children
+0
+3
+108(->6) has 2 children
+8
+44
+114(->7) has 2 children
+1
+108
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+44(->5) has 2 children
+0
+3
+111(->6) has 3 children
+1
+4
+44
+114(->7) has 2 children
+2
+111
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 6
+node 5 has parent 8
+node 6 has parent 8
+node 7 has parent -1
+node 8 has parent 7
+30(->8) has 2 children
+1
+2
+44(->5) has 2 children
+0
+3
+113(->6) has 2 children
+30
+44
+114(->7) has 2 children
+4
+113
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+30(->7) has 2 children
+1
+2
+89(->8) has 2 children
+3
+30
+113(->5) has 2 children
+0
+89
+114(->6) has 2 children
+4
+113
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 5
+30(->6) has 2 children
+1
+2
+89(->7) has 2 children
+3
+30
+104(->8) has 2 children
+4
+89
+114(->5) has 2 children
+0
+104
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 6
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent 5
+14(->8) has 2 children
+2
+3
+89(->6) has 2 children
+1
+14
+104(->7) has 2 children
+4
+89
+114(->5) has 2 children
+0
+104
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 6
+14(->8) has 2 children
+2
+3
+89(->5) has 2 children
+0
+14
+104(->6) has 2 children
+4
+89
+114(->7) has 2 children
+1
+104
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 5
+14(->7) has 2 children
+2
+3
+67(->8) has 2 children
+4
+14
+104(->5) has 2 children
+0
+67
+114(->6) has 2 children
+1
+104
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 5
+14(->7) has 2 children
+2
+3
+67(->8) has 2 children
+4
+14
+110(->5) has 2 children
+0
+67
+114(->6) has 2 children
+1
+110
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 5
+14(->7) has 2 children
+2
+3
+59(->5) has 2 children
+0
+1
+67(->8) has 2 children
+4
+14
+102(->6) has 2 children
+59
+67
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 7
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+14(->7) has 2 children
+2
+3
+67(->8) has 2 children
+4
+14
+102(->6) has 2 children
+1
+67
+114(->5) has 2 children
+0
+102
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 5
+node 7 has parent 8
+node 8 has parent 6
+14(->8) has 2 children
+2
+3
+67(->6) has 2 children
+1
+4
+102(->7) has 2 children
+14
+67
+114(->5) has 2 children
+0
+102
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 6
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 7
+14(->8) has 2 children
+2
+3
+84(->5) has 2 children
+0
+14
+102(->6) has 2 children
+1
+84
+114(->7) has 2 children
+4
+102
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 5
+27(->8) has 2 children
+1
+3
+54(->5) has 2 children
+0
+2
+102(->6) has 2 children
+27
+54
+114(->7) has 2 children
+4
+102
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 5
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+27(->8) has 2 children
+1
+3
+54(->5) has 2 children
+0
+2
+65(->6) has 2 children
+4
+54
+102(->7) has 2 children
+27
+65
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 5
+node 3 has parent 8
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+27(->8) has 2 children
+1
+3
+40(->5) has 2 children
+0
+4
+65(->6) has 2 children
+2
+40
+102(->7) has 2 children
+27
+65
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+27(->8) has 2 children
+1
+3
+40(->5) has 2 children
+0
+4
+84(->6) has 2 children
+2
+40
+102(->7) has 2 children
+27
+84
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+40(->5) has 2 children
+0
+4
+84(->6) has 2 children
+2
+40
+102(->7) has 2 children
+1
+84
+114(->8) has 2 children
+3
+102
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+31(->8) has 2 children
+1
+2
+40(->5) has 2 children
+0
+4
+71(->6) has 2 children
+31
+40
+114(->7) has 2 children
+3
+71
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 8
+node 3 has parent 7
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+31(->7) has 2 children
+1
+2
+71(->8) has 2 children
+4
+31
+102(->5) has 2 children
+0
+71
+114(->6) has 2 children
+3
+102
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 5
+31(->7) has 2 children
+1
+2
+45(->5) has 2 children
+0
+3
+71(->8) has 2 children
+4
+31
+102(->6) has 2 children
+45
+71
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+31(->7) has 2 children
+1
+2
+71(->8) has 2 children
+4
+31
+99(->5) has 2 children
+0
+3
+102(->6) has 2 children
+71
+99
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+5(->8) has 2 children
+3
+4
+31(->7) has 2 children
+1
+2
+99(->5) has 2 children
+0
+31
+102(->6) has 2 children
+5
+99
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 5
+node 8 has parent 6
+5(->8) has 2 children
+3
+4
+31(->7) has 2 children
+1
+2
+79(->5) has 2 children
+0
+5
+102(->6) has 2 children
+31
+79
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 5
+5(->8) has 2 children
+3
+4
+31(->6) has 2 children
+1
+2
+102(->7) has 2 children
+5
+31
+114(->5) has 2 children
+0
+102
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 7
+5(->7) has 2 children
+3
+4
+111(->5) has 3 children
+0
+1
+5
+114(->6) has 2 children
+2
+111
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 6
+node 3 has parent 7
+node 4 has parent 7
+node 5 has parent 8
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+46(->5) has 2 children
+0
+3
+111(->6) has 3 children
+1
+4
+46
+114(->7) has 2 children
+2
+111
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 6
+node 5 has parent 8
+node 6 has parent 8
+node 7 has parent -1
+node 8 has parent 7
+46(->5) has 2 children
+0
+3
+72(->8) has 2 children
+1
+4
+111(->6) has 2 children
+46
+72
+114(->7) has 2 children
+2
+111
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+32(->7) has 2 children
+1
+2
+46(->5) has 2 children
+0
+3
+72(->8) has 2 children
+4
+32
+105(->6) has 2 children
+46
+72
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+46(->5) has 2 children
+0
+3
+72(->7) has 3 children
+1
+2
+4
+105(->6) has 2 children
+46
+72
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+46(->5) has 2 children
+0
+3
+105(->6) has 4 children
+1
+2
+4
+46
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 6
+node 3 has parent 5
+node 4 has parent 7
+node 5 has parent 8
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+60(->5) has 2 children
+0
+1
+105(->6) has 3 children
+2
+4
+60
+114(->7) has 2 children
+3
+105
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 6
+node 3 has parent 7
+node 4 has parent 6
+node 5 has parent 8
+node 6 has parent 8
+node 7 has parent -1
+node 8 has parent 7
+60(->5) has 2 children
+0
+1
+97(->6) has 2 children
+3
+60
+105(->7) has 2 children
+4
+97
+114(->8) has 2 children
+2
+105
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+9(->8) has 2 children
+2
+4
+60(->5) has 2 children
+0
+1
+97(->6) has 2 children
+3
+60
+105(->7) has 2 children
+9
+97
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+60(->5) has 2 children
+0
+1
+97(->6) has 2 children
+3
+60
+105(->7) has 2 children
+2
+97
+114(->8) has 2 children
+4
+105
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 7
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+10(->8) has 2 children
+2
+4
+60(->5) has 2 children
+0
+1
+97(->6) has 2 children
+3
+60
+105(->7) has 2 children
+10
+97
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+10(->7) has 2 children
+2
+4
+97(->5) has 3 children
+0
+1
+3
+105(->6) has 2 children
+10
+97
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent 8
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 6
+10(->8) has 2 children
+2
+4
+64(->5) has 2 children
+0
+1
+93(->6) has 2 children
+10
+64
+105(->7) has 2 children
+3
+93
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 8
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+21(->8) has 2 children
+1
+4
+64(->5) has 2 children
+0
+21
+105(->6) has 2 children
+3
+64
+114(->7) has 2 children
+2
+105
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 7
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 5
+21(->6) has 2 children
+1
+4
+93(->7) has 2 children
+2
+21
+105(->8) has 2 children
+3
+93
+114(->5) has 2 children
+0
+105
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 6
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent 5
+93(->6) has 3 children
+1
+2
+4
+105(->7) has 2 children
+3
+93
+114(->5) has 2 children
+0
+105
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 6
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 8
+node 7 has parent 5
+node 8 has parent 7
+55(->5) has 2 children
+0
+2
+93(->6) has 3 children
+1
+4
+55
+105(->7) has 2 children
+3
+93
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 5
+node 3 has parent 7
+node 4 has parent 6
+node 5 has parent 8
+node 6 has parent 8
+node 7 has parent -1
+node 8 has parent 7
+15(->8) has 2 children
+2
+3
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+105(->7) has 2 children
+15
+93
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+112(->7) has 2 children
+2
+93
+114(->8) has 2 children
+3
+112
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+41(->5) has 2 children
+0
+4
+105(->6) has 2 children
+1
+41
+112(->7) has 2 children
+2
+105
+114(->8) has 2 children
+3
+112
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+41(->5) has 2 children
+0
+4
+85(->6) has 2 children
+2
+41
+103(->7) has 2 children
+1
+85
+114(->8) has 2 children
+3
+103
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+16(->8) has 2 children
+2
+3
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+103(->7) has 2 children
+16
+93
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+103(->7) has 2 children
+3
+93
+114(->8) has 2 children
+2
+103
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 7
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+41(->5) has 2 children
+0
+4
+77(->8) has 2 children
+1
+3
+103(->6) has 2 children
+41
+77
+114(->7) has 2 children
+2
+103
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+17(->8) has 2 children
+2
+3
+41(->5) has 2 children
+0
+4
+77(->7) has 2 children
+1
+17
+103(->6) has 2 children
+41
+77
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 7
+17(->8) has 2 children
+2
+3
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+103(->7) has 2 children
+17
+93
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+103(->7) has 2 children
+2
+93
+114(->8) has 2 children
+3
+103
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+33(->8) has 2 children
+1
+2
+80(->5) has 2 children
+0
+4
+103(->6) has 2 children
+33
+80
+114(->7) has 2 children
+3
+103
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 8
+node 3 has parent 7
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+6(->8) has 2 children
+3
+4
+33(->7) has 2 children
+1
+2
+80(->5) has 2 children
+0
+6
+103(->6) has 2 children
+33
+80
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 5
+6(->8) has 2 children
+3
+4
+80(->5) has 2 children
+0
+6
+103(->6) has 2 children
+1
+80
+114(->7) has 2 children
+2
+103
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 5
+6(->8) has 2 children
+3
+4
+34(->7) has 2 children
+1
+2
+80(->5) has 2 children
+0
+6
+103(->6) has 2 children
+34
+80
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 5
+6(->8) has 2 children
+3
+4
+80(->5) has 2 children
+0
+6
+111(->6) has 2 children
+1
+80
+114(->7) has 2 children
+2
+111
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 5
+6(->8) has 2 children
+3
+4
+35(->7) has 2 children
+1
+2
+80(->5) has 2 children
+0
+6
+111(->6) has 2 children
+35
+80
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 5
+6(->8) has 2 children
+3
+4
+80(->5) has 2 children
+0
+6
+103(->6) has 2 children
+1
+80
+114(->7) has 2 children
+2
+103
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 5
+6(->8) has 2 children
+3
+4
+69(->7) has 2 children
+1
+6
+103(->5) has 2 children
+0
+69
+114(->6) has 2 children
+2
+103
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 5
+node 8 has parent 7
+6(->8) has 2 children
+3
+4
+56(->5) has 2 children
+0
+2
+69(->7) has 2 children
+1
+6
+103(->6) has 2 children
+56
+69
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 5
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 7
+6(->8) has 2 children
+3
+4
+56(->5) has 2 children
+0
+2
+100(->6) has 2 children
+1
+56
+103(->7) has 2 children
+6
+100
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 5
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+6(->8) has 2 children
+3
+4
+56(->5) has 2 children
+0
+2
+103(->6) has 2 children
+6
+56
+114(->7) has 2 children
+1
+103
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 5
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+6(->8) has 2 children
+3
+4
+56(->5) has 2 children
+0
+2
+101(->6) has 2 children
+1
+56
+103(->7) has 2 children
+6
+101
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 5
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+6(->8) has 2 children
+3
+4
+36(->7) has 2 children
+1
+2
+101(->5) has 2 children
+0
+36
+103(->6) has 2 children
+6
+101
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 5
+node 8 has parent 6
+6(->8) has 2 children
+3
+4
+36(->6) has 2 children
+1
+2
+73(->7) has 2 children
+6
+36
+114(->5) has 2 children
+0
+73
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 7
+36(->6) has 2 children
+1
+2
+73(->7) has 3 children
+3
+4
+36
+114(->5) has 2 children
+0
+73
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 6
+node 3 has parent 7
+node 4 has parent 7
+node 5 has parent -1
+node 6 has parent 8
+node 7 has parent 8
+node 8 has parent 5
+36(->6) has 2 children
+1
+2
+73(->7) has 2 children
+4
+36
+109(->8) has 2 children
+3
+73
+114(->5) has 2 children
+0
+109
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent 5
+36(->7) has 2 children
+1
+2
+47(->5) has 2 children
+0
+3
+73(->8) has 2 children
+4
+36
+109(->6) has 2 children
+47
+73
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+11(->8) has 2 children
+2
+4
+47(->5) has 2 children
+0
+3
+73(->7) has 2 children
+1
+11
+109(->6) has 2 children
+47
+73
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 7
+11(->8) has 2 children
+2
+4
+73(->6) has 2 children
+1
+11
+109(->7) has 2 children
+3
+73
+114(->5) has 2 children
+0
+109
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 6
+11(->8) has 2 children
+2
+4
+73(->6) has 2 children
+1
+11
+103(->7) has 2 children
+3
+73
+114(->5) has 2 children
+0
+103
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 6
+11(->8) has 2 children
+2
+4
+48(->5) has 2 children
+0
+3
+73(->7) has 2 children
+1
+11
+103(->6) has 2 children
+48
+73
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 7
+11(->8) has 2 children
+2
+4
+48(->5) has 2 children
+0
+3
+98(->6) has 2 children
+1
+48
+103(->7) has 2 children
+11
+98
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+11(->8) has 2 children
+2
+4
+98(->5) has 2 children
+0
+1
+103(->6) has 2 children
+11
+98
+114(->7) has 2 children
+3
+103
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 8
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+11(->8) has 2 children
+2
+4
+98(->5) has 2 children
+0
+3
+103(->6) has 2 children
+11
+98
+114(->7) has 2 children
+1
+103
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+11(->8) has 2 children
+2
+4
+98(->6) has 2 children
+1
+3
+103(->7) has 2 children
+11
+98
+114(->5) has 2 children
+0
+103
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 7
+11(->8) has 2 children
+2
+4
+61(->5) has 2 children
+0
+1
+98(->6) has 2 children
+3
+61
+103(->7) has 2 children
+11
+98
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+11(->8) has 2 children
+2
+4
+28(->7) has 2 children
+1
+3
+98(->5) has 2 children
+0
+28
+103(->6) has 2 children
+11
+98
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 5
+node 8 has parent 6
+11(->8) has 2 children
+2
+4
+28(->6) has 2 children
+1
+3
+70(->7) has 2 children
+11
+28
+114(->5) has 2 children
+0
+70
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 7
+28(->6) has 2 children
+1
+3
+70(->7) has 3 children
+2
+4
+28
+114(->5) has 2 children
+0
+70
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 6
+node 4 has parent 7
+node 5 has parent -1
+node 6 has parent 8
+node 7 has parent 8
+node 8 has parent 5
+28(->6) has 2 children
+1
+3
+70(->7) has 2 children
+4
+28
+103(->8) has 2 children
+2
+70
+114(->5) has 2 children
+0
+103
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 7
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent 5
+28(->7) has 2 children
+1
+3
+57(->5) has 2 children
+0
+2
+70(->8) has 2 children
+4
+28
+103(->6) has 2 children
+57
+70
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 5
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+28(->8) has 2 children
+1
+3
+57(->5) has 2 children
+0
+2
+86(->6) has 2 children
+4
+57
+103(->7) has 2 children
+28
+86
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 5
+node 3 has parent 8
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+28(->8) has 2 children
+1
+3
+57(->5) has 2 children
+0
+2
+78(->6) has 2 children
+28
+57
+103(->7) has 2 children
+4
+78
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 5
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+57(->5) has 2 children
+0
+2
+78(->6) has 3 children
+1
+3
+57
+103(->7) has 2 children
+4
+78
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 5
+node 3 has parent 6
+node 4 has parent 7
+node 5 has parent 8
+node 6 has parent 8
+node 7 has parent -1
+node 8 has parent 7
+18(->8) has 2 children
+2
+3
+78(->6) has 2 children
+1
+18
+103(->7) has 2 children
+4
+78
+114(->5) has 2 children
+0
+103
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 6
+18(->8) has 2 children
+2
+3
+42(->5) has 2 children
+0
+4
+78(->7) has 2 children
+1
+18
+103(->6) has 2 children
+42
+78
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 7
+18(->8) has 2 children
+2
+3
+62(->5) has 2 children
+0
+1
+66(->6) has 2 children
+4
+62
+103(->7) has 2 children
+18
+66
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+18(->7) has 2 children
+2
+3
+62(->5) has 2 children
+0
+1
+68(->8) has 2 children
+4
+18
+103(->6) has 2 children
+62
+68
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 7
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+18(->8) has 2 children
+2
+3
+62(->5) has 2 children
+0
+1
+90(->6) has 2 children
+18
+62
+103(->7) has 2 children
+4
+90
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+18(->8) has 2 children
+2
+3
+22(->7) has 2 children
+1
+4
+90(->5) has 2 children
+0
+18
+103(->6) has 2 children
+22
+90
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 5
+22(->8) has 2 children
+1
+4
+58(->5) has 2 children
+0
+2
+90(->6) has 2 children
+3
+58
+103(->7) has 2 children
+22
+90
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 5
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+22(->8) has 2 children
+1
+4
+94(->5) has 2 children
+0
+22
+103(->6) has 2 children
+3
+94
+114(->7) has 2 children
+2
+103
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 7
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 5
+49(->5) has 2 children
+0
+3
+81(->6) has 2 children
+4
+49
+103(->7) has 2 children
+1
+81
+114(->8) has 2 children
+2
+103
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+49(->5) has 2 children
+0
+3
+81(->6) has 2 children
+4
+49
+103(->7) has 2 children
+2
+81
+114(->8) has 2 children
+1
+103
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+49(->5) has 2 children
+0
+3
+74(->8) has 2 children
+2
+4
+103(->6) has 2 children
+49
+74
+114(->7) has 2 children
+1
+103
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+37(->7) has 2 children
+1
+2
+49(->5) has 2 children
+0
+3
+74(->8) has 2 children
+4
+37
+103(->6) has 2 children
+49
+74
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+23(->7) has 2 children
+1
+4
+49(->5) has 2 children
+0
+3
+74(->8) has 2 children
+2
+23
+103(->6) has 2 children
+49
+74
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+23(->8) has 2 children
+1
+4
+49(->5) has 2 children
+0
+3
+95(->6) has 2 children
+23
+49
+114(->7) has 2 children
+2
+95
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+23(->7) has 2 children
+1
+4
+95(->5) has 2 children
+0
+23
+114(->6) has 3 children
+2
+3
+95
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 6
+node 3 has parent 6
+node 4 has parent 7
+node 5 has parent 8
+node 6 has parent 8
+node 7 has parent 5
+node 8 has parent -1
+23(->8) has 2 children
+1
+4
+50(->5) has 2 children
+0
+3
+95(->6) has 2 children
+23
+50
+114(->7) has 2 children
+2
+95
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+23(->8) has 2 children
+1
+4
+50(->5) has 2 children
+0
+3
+95(->6) has 2 children
+23
+50
+103(->7) has 2 children
+2
+95
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 7
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+12(->8) has 2 children
+2
+4
+50(->5) has 2 children
+0
+3
+103(->6) has 2 children
+12
+50
+114(->7) has 2 children
+1
+103
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+12(->8) has 2 children
+2
+4
+87(->5) has 2 children
+0
+12
+103(->6) has 2 children
+3
+87
+114(->7) has 2 children
+1
+103
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 5
+12(->8) has 2 children
+2
+4
+87(->5) has 2 children
+0
+12
+112(->6) has 2 children
+1
+87
+114(->7) has 2 children
+3
+112
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 5
+43(->5) has 2 children
+0
+4
+87(->6) has 2 children
+2
+43
+112(->7) has 2 children
+1
+87
+114(->8) has 2 children
+3
+112
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+29(->8) has 2 children
+1
+3
+43(->5) has 2 children
+0
+4
+87(->6) has 2 children
+2
+43
+110(->7) has 2 children
+29
+87
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+29(->8) has 2 children
+1
+3
+43(->5) has 2 children
+0
+4
+107(->6) has 2 children
+2
+43
+110(->7) has 2 children
+29
+107
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 6
+node 3 has parent 8
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+43(->5) has 2 children
+0
+4
+82(->6) has 2 children
+3
+43
+107(->7) has 2 children
+2
+82
+114(->8) has 2 children
+1
+107
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 7
+node 3 has parent 6
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+43(->5) has 2 children
+0
+4
+82(->6) has 2 children
+3
+43
+111(->7) has 2 children
+1
+82
+114(->8) has 2 children
+2
+111
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 5
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+51(->5) has 2 children
+0
+3
+82(->6) has 2 children
+4
+51
+111(->7) has 2 children
+1
+82
+114(->8) has 2 children
+2
+111
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+38(->8) has 2 children
+1
+2
+51(->5) has 2 children
+0
+3
+82(->6) has 2 children
+4
+51
+111(->7) has 2 children
+38
+82
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+51(->5) has 2 children
+0
+3
+82(->6) has 2 children
+4
+51
+111(->7) has 2 children
+1
+82
+114(->8) has 2 children
+2
+111
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent -1
+39(->8) has 2 children
+1
+2
+51(->5) has 2 children
+0
+3
+82(->6) has 2 children
+4
+51
+106(->7) has 2 children
+39
+82
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 6
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+39(->8) has 2 children
+1
+2
+51(->5) has 2 children
+0
+3
+91(->6) has 2 children
+39
+51
+106(->7) has 2 children
+4
+91
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+24(->8) has 2 children
+1
+4
+51(->5) has 2 children
+0
+3
+91(->6) has 2 children
+2
+51
+106(->7) has 2 children
+24
+91
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 6
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+24(->7) has 2 children
+1
+4
+91(->5) has 3 children
+0
+2
+3
+106(->6) has 2 children
+24
+91
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 5
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent 8
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 6
+7(->7) has 2 children
+3
+4
+39(->6) has 2 children
+1
+2
+91(->5) has 3 children
+0
+7
+39
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 6
+node 3 has parent 7
+node 4 has parent 7
+node 5 has parent 8
+node 6 has parent 8
+node 7 has parent 5
+node 8 has parent -1
+7(->7) has 2 children
+3
+4
+91(->5) has 3 children
+0
+2
+7
+106(->6) has 2 children
+1
+91
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 5
+node 3 has parent 7
+node 4 has parent 7
+node 5 has parent 8
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+24(->8) has 2 children
+1
+4
+51(->5) has 2 children
+0
+3
+91(->6) has 2 children
+2
+51
+106(->7) has 2 children
+24
+91
+node 0 has parent 5
+node 1 has parent 8
+node 2 has parent 6
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 7
+13(->8) has 2 children
+2
+4
+51(->5) has 2 children
+0
+3
+75(->7) has 2 children
+1
+13
+106(->6) has 2 children
+51
+75
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 7
+13(->8) has 2 children
+2
+4
+75(->7) has 2 children
+1
+13
+112(->5) has 2 children
+0
+75
+114(->6) has 2 children
+3
+112
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 5
+node 8 has parent 7
+13(->8) has 2 children
+2
+4
+52(->5) has 2 children
+0
+3
+75(->7) has 2 children
+1
+13
+112(->6) has 2 children
+52
+75
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 7
+13(->8) has 2 children
+2
+4
+75(->7) has 2 children
+1
+13
+112(->5) has 2 children
+0
+75
+114(->6) has 2 children
+3
+112
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 5
+node 8 has parent 7
+13(->8) has 2 children
+2
+4
+75(->7) has 2 children
+1
+13
+106(->5) has 2 children
+0
+75
+114(->6) has 2 children
+3
+106
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 6
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 5
+node 8 has parent 7
+13(->8) has 2 children
+2
+4
+53(->5) has 2 children
+0
+3
+75(->7) has 2 children
+1
+13
+106(->6) has 2 children
+53
+75
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 7
+13(->8) has 2 children
+2
+4
+53(->5) has 2 children
+0
+3
+106(->6) has 2 children
+13
+53
+114(->7) has 2 children
+1
+106
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 8
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+13(->8) has 2 children
+2
+4
+76(->6) has 2 children
+1
+13
+106(->7) has 2 children
+3
+76
+114(->5) has 2 children
+0
+106
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 6
+25(->6) has 2 children
+1
+4
+76(->7) has 2 children
+2
+25
+106(->8) has 2 children
+3
+76
+114(->5) has 2 children
+0
+106
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 8
+node 4 has parent 6
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 8
+node 8 has parent 5
+25(->7) has 2 children
+1
+4
+76(->8) has 2 children
+2
+25
+96(->5) has 2 children
+0
+3
+106(->6) has 2 children
+76
+96
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 5
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 8
+node 8 has parent 6
+19(->8) has 2 children
+2
+3
+25(->7) has 2 children
+1
+4
+96(->5) has 2 children
+0
+25
+106(->6) has 2 children
+19
+96
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 5
+node 8 has parent 6
+19(->8) has 2 children
+2
+3
+25(->7) has 2 children
+1
+4
+92(->5) has 2 children
+0
+19
+106(->6) has 2 children
+25
+92
+node 0 has parent 5
+node 1 has parent 7
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent -1
+node 7 has parent 6
+node 8 has parent 5
+19(->8) has 2 children
+2
+3
+25(->6) has 2 children
+1
+4
+106(->7) has 2 children
+19
+25
+114(->5) has 2 children
+0
+106
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 6
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 7
+19(->8) has 2 children
+2
+3
+92(->6) has 2 children
+1
+19
+106(->7) has 2 children
+4
+92
+114(->5) has 2 children
+0
+106
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent -1
+node 6 has parent 7
+node 7 has parent 5
+node 8 has parent 6
+19(->8) has 2 children
+2
+3
+63(->5) has 2 children
+0
+1
+92(->6) has 2 children
+19
+63
+106(->7) has 2 children
+4
+92
+node 0 has parent 5
+node 1 has parent 5
+node 2 has parent 8
+node 3 has parent 8
+node 4 has parent 7
+node 5 has parent 6
+node 6 has parent 7
+node 7 has parent -1
+node 8 has parent 6
+19(->7) has 2 children
+2
+3
+106(->8) has 2 children
+4
+19
+109(->6) has 2 children
+1
+106
+114(->5) has 2 children
+0
+109
+node 0 has parent 5
+node 1 has parent 6
+node 2 has parent 7
+node 3 has parent 7
+node 4 has parent 8
+node 5 has parent -1
+node 6 has parent 5
+node 7 has parent 8
+node 8 has parent 6

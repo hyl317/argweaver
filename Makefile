@@ -135,6 +135,33 @@ CFLAGS += -Ikastore/c -Itskit/c
 CFLAGS += -L. -ltskit
 
 #=============================================================================
+
+# rSPR component
+
+# TODO: need to figure out why this part of makefile doesn't work!!!
+
+# rSPR_OBJECTS=rspr.o spr_supertree.o fill_matrix.o
+# CFLAGS_rSPR=-O2 -std=c++0x -march=native
+
+
+# librspr.a: $(rSPR_OBJECTS)
+# 	$(AR) rcs $@ $(rSPR_OBJECTS) 
+
+# rspr.o: rspr
+# 	$(CXX) -c $(CFLAGS_rSPR) rspr/rspr.cpp -o rspr.o
+
+# spr_supertree.o: rspr
+# 	$(CXX) -c $(CFLAGS_rSPR) rspr/spr_supertree.cpp -o spr_supretree.o
+
+# fill_matrix.o: rspr
+# 	$(CXX) -c $(CFLAGS_rSPR) -o rspr/fill_matrix.cpp -o fill_matrix.o
+
+# rspr:
+# 	git clone https://github.com/cwhidden/rspr.git
+
+CFLAGS += -Irspr -lrspr -L./rspr
+
+#==============================================================================
 # targets
 
 .PHONY: all pkg test ctest cq install clean cleanobj lib pylib gtest

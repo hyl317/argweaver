@@ -4,6 +4,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "err.h"
+#include <iostream>
 
 // argweaver includes
 #include "compress.h"
@@ -15,6 +16,9 @@
 
 // tskit includes
 #include <tskit.h>
+#include "rspr.h"
+#include "lgt.h"
+
 #define check_tsk_error(val)                                                            \
     if (val < 0) {                                                                      \
         errx(EXIT_FAILURE, "line %d: %s", __LINE__, tsk_strerror(val));                 \
@@ -1169,6 +1173,28 @@ void write_newick_tree(FILE *out, const LocalTree *tree,
         delete [] default_names;
     }
 }
+
+string get_newick_rep_rSPR(const LocalTree *tree){
+    string s;
+    get_newick_rep_rSPR_helper(&s, tree, tree->root);
+    s += ";";
+    return s;
+}
+
+void get_newick_rep_rSPR_helper(string *s, const LocalTree *tree, int node){
+    if (tree->nodes[node].is_leaf()){
+        char str[50];
+        sprintf(str, "%d", node);
+        *s += str;
+    }else{
+        *s += "(";
+        get_newick_rep_rSPR_helper(s, tree, tree->nodes[node].child[0]);
+		*s += ",";
+        get_newick_rep_rSPR_helper(s, tree, tree->nodes[node].child[1]);
+		*s += ")";
+	}
+}
+
 
 void write_newick_node_rSPR(FILE *out, const LocalTree *tree,
                         const char *const *names,
@@ -2413,19 +2439,45 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     }
 
     // write local tree in newick format to try rSPR program
-    FILE *out = fopen("tsdate.newick.txt", "w");
+    //FILE *out = fopen("tsdate.newick.txt", "w");
     int id = 0;
+    string s_prev;
     for (auto it = localtrees.begin(); it != localtrees.end(); ++it){
-        write_newick_tree_rSPR(out, *it, times);
+        cout << "tree: "<< id++ << " :" << get_newick_rep_rSPR(*it) << endl;
+        string s_curr = get_newick_rep_rSPR(*it);
+        if (s_prev.empty()){
+            s_prev = s_curr;
+            continue;
+        }
+        Node *prev = build_tree(s_prev);
+        Node *curr = build_tree(s_curr);
+        map<string, int> label_map= map<string, int>();
+	    map<int, string> reverse_label_map = map<int, string>();
+        prev->labels_to_numbers(&label_map, &reverse_label_map);
+		curr->labels_to_numbers(&label_map, &reverse_label_map);
+        //show_moves(prev, curr, &label_map, &reverse_label_map);
+        queue<set<int>*> q1, q2;
+        get_moves(prev, curr, &label_map, &reverse_label_map, &q1, &q2);
+        assert(q1.size() == q2.size());
+        cout << "SPR distance: " << q1.size() << endl;
+        while(!q1.empty()){
+            set<int> *s1 = q1.front();
+            set<int> *s2 = q2.front();
+            delete s1;
+            delete s2;
+            q1.pop();
+            q2.pop();
+        }
+        s_prev = s_curr;
+        
     }
-    fclose(out);
-
+    
     ret = tsk_tree_free(&tree);
     check_tsk_error(ret);
     ret = tsk_treeseq_free(&ts);
     check_tsk_error(ret);
     exit(EXIT_FAILURE);
-    
+    return true;
 }
 
 

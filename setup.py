@@ -153,7 +153,7 @@ setup(
     ext_modules=[
         Extension(
             'libargweaver',
-            lib_src, include_dirs=['tskit/c','kastore/c']
+            lib_src, include_dirs=['tskit/c','kastore/c', 'rspr']
         )
     ],
 )

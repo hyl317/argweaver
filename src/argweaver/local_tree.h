@@ -14,6 +14,7 @@
 // arghmm includes
 #include "sequences.h"
 #include "model.h"
+//#include "rspr.h"
 
 namespace argweaver {
 
@@ -623,7 +624,7 @@ public:
         LocalTree *tree = new LocalTree(ptree, 1, ages, NULL, capacity);
         tree->nodes[0].pop_path = pop_path;
         trees.push_back(
-         LocalTreeSpr(tree, Spr(-1, -1, -1, -1, -1), end - start, NULL));
+        LocalTreeSpr(tree, Spr(-1, -1, -1, -1, -1), end - start, NULL));
         seqids.clear();
         seqids.push_back(seqid);
     }
@@ -900,6 +901,8 @@ void write_newick_Tree_for_bedfile(FILE *out, const LocalTree *tree,
 void write_local_trees_as_bed(FILE *out, const LocalTrees *trees,
                               const vector<string> seqnames,
                               const ArgModel *model, int sample);
+string get_newick_rep_rSPR(const LocalTree *tree);
+void get_newick_rep_rSPR_helper(string *s, const LocalTree *tree, int node);
 
 
 //=============================================================================
