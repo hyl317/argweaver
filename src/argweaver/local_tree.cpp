@@ -1177,6 +1177,11 @@ void write_newick_node_rSPR(FILE *out, const LocalTree *tree,
     if (tree->nodes[node].is_leaf()) {
         fprintf(out, "%s", names[node]);
     } else {
+        // for rSPR, don't print internal nodes
+        // or do we want this?
+        // looks like Chris's code assumes internal node's label comes from its pair of parenthesis,
+        // which seems inconsistent with the convention, but whatever.
+        
         fprintf(out, "(");
         write_newick_node_rSPR(out, tree, names, times,
                           tree->nodes[node].child[0], depth+1);
@@ -1184,9 +1189,6 @@ void write_newick_node_rSPR(FILE *out, const LocalTree *tree,
         write_newick_node_rSPR(out, tree, names, times,
                           tree->nodes[node].child[1], depth+1);
         fprintf(out, ")");
-
-        // for rSPR, don't print internal nodes
-        // or do we want this?
         //fprintf(out, "%s", names[node]);
     }
 }

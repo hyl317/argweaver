@@ -1,7 +1,7 @@
 arg-sample 1.0
-start time: Thu Jul  2 16:01:21 2020
-command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation.1000.tsinfer.trees --overwrite --region 1:5000-1000000
-random seed: 1593720081
+start time: Thu Jul  9 15:36:18 2020
+command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation.5.tsinfer.trees --overwrite --region 1:5000-1000000
+random seed: 1594323378
 Reading ../../simulate/arg/simulation_source.5.vcf.gz 1:5000-1000000
 Read 962 sites from 969 lines of VCF file (num skipped indels=0)
 read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=5, nsites=962)
@@ -56,4 +56,4 @@ model:
               10000.0,
               10000.0]
 
-Start reading tree sequence file: ../../simulate/arg/simulation.1000.tsinfer.trees
+Start reading tree sequence file: ../../simulate/arg/simulation.5.tsinfer.trees
