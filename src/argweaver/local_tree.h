@@ -453,6 +453,31 @@ public:
         return childi;
     }
 
+    inline void descent_leaf_map(map<int, set<int>*> *descent_map){
+        int order[nnodes];
+        get_postorder(order);
+        int num_leaves = get_num_leaves();
+        for(int i = 0; i < nnodes; i++){
+            int j = order[i];
+            printLog(LOG_LOW, "calculating for node %d\n", j);
+            auto tmp = new set<int>();
+            if (j < num_leaves){
+                tmp->insert(j);
+                descent_map->insert(pair<int, set<int>*>(j, tmp));
+            }else{
+                int *child = nodes[j].child;
+                set<int> *leaf_set1 = descent_map->find(child[0])->second;
+                set<int> *leaf_set2 = descent_map->find(child[1])->second;
+                //set_union(leaf_set1->begin(), leaf_set1->end(),
+                //            leaf_set2->begin(), leaf_set2->end(),
+                //            insert_iterator<set<int>>(*tmp, tmp->begin()));
+                tmp->insert(leaf_set1->begin(), leaf_set1->end());
+                tmp->insert(leaf_set2->begin(), leaf_set2->end());
+                descent_map->insert(pair<int, set<int>*>(j, tmp));
+            }
+        }
+    }
+
     int nnodes;        // number of nodes in tree
     int capacity;      // capacity of nodes array
     int root;          // id of root node
