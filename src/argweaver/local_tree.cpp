@@ -2291,7 +2291,7 @@ bool read_local_trees(const char *filename, const double *times,
 /////////////////////////////////// read from tsinfer ////////////////////////////////////
 
 bool read_local_tree_from_tsinfer(tsk_tree_t *tree, int *ptree, int *ages,
-                                    const double *times, int ntimes, map<tsk_id_t, int> *id_map){
+                                    const double *times, int ntimes, map<int, tsk_id_t> *curr_map){
     // maybe first traverse the tree upwards as you would normally do
     tsk_id_t *samples = tree->samples;
     tsk_size_t num_samples = tsk_treeseq_get_num_samples(tree->tree_sequence);
@@ -2349,6 +2349,10 @@ bool read_local_tree_from_tsinfer(tsk_tree_t *tree, int *ptree, int *ages,
     //}
 #endif
 
+    for(auto it = id_mapping.begin(); it != id_mapping.end(); it++){
+        curr_map->insert(pair<int, tsk_id_t>(it->second, it->first));
+    }
+
     // now resolve polytomy
     // we want to resolve from bottom up; since C++ map is ordered, this should be fine
     // we make use of the node labeling rule in tskit: older node has bigger ids
@@ -2372,6 +2376,7 @@ bool read_local_tree_from_tsinfer(tsk_tree_t *tree, int *ptree, int *ages,
                     }
                     ptree[c_id] = index;
                     age_tmp[index] = age_tmp[p_id];
+                    curr_map->insert(pair<int, tsk_id_t>(index, it->first));
                     index++;
                 }
                 counter++;
@@ -2396,7 +2401,24 @@ bool read_local_tree_from_tsinfer(tsk_tree_t *tree, int *ptree, int *ages,
         ages[i] = find_time(age_tmp[i], times, ntimes);
     }
 
+    for(auto it = curr_map->begin(); it != curr_map->end(); ++it){
+        cout << it->first << "->" << it->second << endl;
+    }
+}
 
+int find_recoal_node_id(map<set<int>, int> *descent_map, set<int> *recomb_node_set, set<int> *recoal_node_set){
+    auto it = descent_map->find(*recoal_node_set);
+    if (it == descent_map->end()){
+        set<int> tmp;
+        set_union(recomb_node_set->begin(), recomb_node_set->end(),
+                    recoal_node_set->begin(), recoal_node_set->end(),
+                    insert_iterator<set<int>>(tmp, tmp.begin()));
+        auto it2 = descent_map->find(tmp);
+        assert(it2 != descent_map->end());
+        return it2->second;
+    }else{
+        return it->second;
+    }
 }
 
 
@@ -2423,10 +2445,11 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     check_tsk_error(ret);
 
     string s_prev;
-    auto prev_map = map<tsk_id_t, int>(); // map from tsk_id_t to 
+    LocalTree *prev_localtree;
     Spr spr;
     spr.set_null();
     int *mapping = NULL;
+    map<int, tsk_id_t> prev_map;
     int id = 0;
     for(iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)){
         int start = floor(tree.left);
@@ -2445,14 +2468,15 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
 
         int ptree[nnodes];
         int ages[nnodes];
-        auto curr_map = map<tsk_id_t, int>();
+        map<int, tsk_id_t> curr_map;
         read_local_tree_from_tsinfer(&tree, ptree, ages, times, ntimes, &curr_map);
         LocalTree *localtree = new LocalTree(ptree, nnodes, ages);
         string s_curr = get_newick_rep_rSPR(localtree);
-        printLog(LOG_LOW, "parsing tree %d\n", id++);
+        printLog(LOG_LOW, "\nparsing tree %d: %s\n", id++, s_curr.c_str());
         if (s_prev.empty()){
             s_prev = s_curr;
             trees->trees.push_back(LocalTreeSpr(localtree, spr, end - start, mapping));
+            prev_localtree = localtree;
             continue;
         }
         Node *prev = build_tree(s_prev);
@@ -2464,37 +2488,54 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         queue<set<int>*> q1, q2;
         get_moves(prev, curr, &label_map, &reverse_label_map, &q1, &q2);
         assert(q1.size() == q2.size());
+        int num_SPR = q1.size();
         cout << "SPR distance: " << q1.size() << endl;
-
         mapping = new int[nnodes];
-        if (q1.empty()){
+        if (num_SPR == 0){
             // internal node has age changes
             continue;
         }else{
-            map<int, set<int>*> descent_map;
-            localtree->descent_leaf_map(&descent_map);
+            // NOTE: need to update descent_map as SPR is applied sequentially
+            map<set<int>, int> descent_map = prev_localtree->descent_leaf_map();
+            for(auto it = descent_map.begin(); it != descent_map.end(); ++it){
+                cout << it->second << ": ";
+                for(int descent : (it->first)){
+                    cout << descent << " ";
+                }
+                cout << endl;
+            }
             while(!q1.empty()){
                 set<int> *s1 = q1.front();
                 set<int> *s2 = q2.front();
+                cout << "recombination node's descendants" << endl;
+                for(int child : *s1){
+                    cout << child << " ";
+                }
+                cout << endl;
+                cout << "recoal node's descendants" << endl;
+                for(int child : *s2){
+                    cout << child << " ";
+                }
+                cout << endl;
                 // determine corresponding internal node with leaves s1 and s2 as its descendants
+                auto tmp = descent_map.find(*s1);
+                assert(tmp != descent_map.end());
+                int recomb_node = tmp->second;
+                int recoal_node = find_recoal_node_id(&descent_map, s1, s2);
+                cout << "recomb node: " << recomb_node << endl;
+                cout << "recoal node: " << recoal_node << endl;
                 delete s1;
                 delete s2;
                 q1.pop();
                 q2.pop();
-            }
-            for(auto it = descent_map.begin(); it != descent_map.end(); ++it){
-                cout << it->first << ": ";
-                for(int descent : *(it->second)){
-                    cout << descent << " ";
-                }
-                cout << endl;
-                delete it->second;
+                break;
             }
         }
         
         
         s_prev = s_curr;
-        prev_map = map<tsk_id_t, int>(curr_map);
+        prev_localtree = localtree;
+        prev_map = curr_map;
     }
     
     ret = tsk_tree_free(&tree);
