@@ -468,6 +468,88 @@ void apply_spr(LocalTree *tree, const Spr &spr,
     tree->root = root;
 }
 
+LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr){
+    LocalTree *new_tree = new LocalTree(*prev_tree); // use copy constructor
+    // trival case
+    if (spr.recomb_node == prev_tree->root) {
+        assert(0); // Melissa added: how can this happen?
+        assert(spr.coal_node == prev_tree->root);
+        return new_tree;
+    }
+    assert(spr.recomb_node != spr.coal_node); //this will create a loop
+    // recoal is the node that disappears after this SPR
+    // let's follow the convention that, in the new tree, the newly created edge has the same id as recoal in the previous tree
+    LocalNode *nodes = prev_tree->nodes;
+    LocalNode *new_nodes = new_tree->nodes;
+    int recoal = nodes[spr.recomb_node].parent;
+
+    // find recomb node sibling and broke node parent
+    int *c = nodes[recoal].child;
+    int other = (c[0] == spr.recomb_node ? 1 : 0);
+    int recomb_sib = c[other];
+    int broke_parent =  nodes[recoal].parent;
+
+    // fix recomb sib pointer
+    new_nodes[recomb_sib].parent = broke_parent;
+
+    // fix parent of broken node
+    int x = 0;
+    if (broke_parent != -1) {
+        c = nodes[broke_parent].child;
+        x = (c[0] == recoal ? 0 : 1);
+        new_nodes[broke_parent].child[x] = recomb_sib;
+    }
+
+    // reuse node as recoal
+    if (spr.coal_node == recoal) {
+        // we just broke coal_node, so use recomb_sib
+        new_nodes[recoal].child[other] = recomb_sib;
+        new_nodes[recoal].parent = nodes[recomb_sib].parent;
+        new_nodes[recomb_sib].parent = recoal;
+        if (broke_parent != -1)
+            new_nodes[broke_parent].child[x] = recoal;
+    } else {
+        new_nodes[recoal].child[other] = spr.coal_node;
+        new_nodes[recoal].parent = nodes[spr.coal_node].parent;
+        new_nodes[spr.coal_node].parent = recoal;
+
+        // fix coal_node parent
+        int parent = new_nodes[recoal].parent;
+        if (parent != -1) {
+            c = new_nodes[parent].child;
+            if (c[0] == spr.coal_node)
+                c[0] = recoal;
+            else
+                c[1] = recoal;
+        }
+    }
+    
+    new_nodes[recoal].age = spr.coal_time;
+
+    // set new root
+    int root;
+    if (spr.coal_node == prev_tree->root)
+        root = recoal;
+    else if (recoal == prev_tree->root) {
+        if (spr.coal_node == recomb_sib)
+            root = recoal;
+        else
+            root = recomb_sib;
+    } else {
+        root = prev_tree->root;
+    }
+    new_tree->root = root;
+    return new_tree;
+}
+
+
+
+
+
+
+
+
+
 
 //=============================================================================
 // local trees methods
@@ -2401,9 +2483,10 @@ bool read_local_tree_from_tsinfer(tsk_tree_t *tree, int *ptree, int *ages,
         ages[i] = find_time(age_tmp[i], times, ntimes);
     }
 
-    for(auto it = curr_map->begin(); it != curr_map->end(); ++it){
-        cout << it->first << "->" << it->second << endl;
-    }
+    // check the correctness of the map (argweaver id -> tsk_id_t)
+    //for(auto it = curr_map->begin(); it != curr_map->end(); ++it){
+    //    cout << it->first << "->" << it->second << endl;
+    //}
 }
 
 int find_recoal_node_id(map<set<int>, int> *descent_map, set<int> *recomb_node_set, set<int> *recoal_node_set){
@@ -2446,10 +2529,11 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
 
     string s_prev;
     LocalTree *prev_localtree;
+    map<int, tsk_id_t> prev_map;
+    map<set<int>, int> descent_map_prev;
     Spr spr;
     spr.set_null();
     int *mapping = NULL;
-    map<int, tsk_id_t> prev_map;
     int id = 0;
     for(iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)){
         int start = floor(tree.left);
@@ -2472,11 +2556,14 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         read_local_tree_from_tsinfer(&tree, ptree, ages, times, ntimes, &curr_map);
         LocalTree *localtree = new LocalTree(ptree, nnodes, ages);
         string s_curr = get_newick_rep_rSPR(localtree);
+        map<set<int>, int> descent_map_curr = localtree->descent_leaf_map();
         printLog(LOG_LOW, "\nparsing tree %d: %s\n", id++, s_curr.c_str());
         if (s_prev.empty()){
             s_prev = s_curr;
             trees->trees.push_back(LocalTreeSpr(localtree, spr, end - start, mapping));
             prev_localtree = localtree;
+            descent_map_prev = descent_map_curr;
+            prev_map = curr_map;
             continue;
         }
         Node *prev = build_tree(s_prev);
@@ -2490,20 +2577,20 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         assert(q1.size() == q2.size());
         int num_SPR = q1.size();
         cout << "SPR distance: " << q1.size() << endl;
-        mapping = new int[nnodes];
+        //mapping = new int[nnodes];
         if (num_SPR == 0){
             // internal node has age changes
             continue;
         }else{
             // NOTE: need to update descent_map as SPR is applied sequentially
-            map<set<int>, int> descent_map = prev_localtree->descent_leaf_map();
-            for(auto it = descent_map.begin(); it != descent_map.end(); ++it){
-                cout << it->second << ": ";
-                for(int descent : (it->first)){
-                    cout << descent << " ";
-                }
-                cout << endl;
-            }
+            // //map<set<int>, int> descent_map = prev_localtree->descent_leaf_map();
+            // for(auto it = descent_map.begin(); it != descent_map.end(); ++it){
+            //     cout << it->second << ": ";
+            //     for(int descent : (it->first)){
+            //         cout << descent << " ";
+            //     }
+            //     cout << endl;
+            // }
             while(!q1.empty()){
                 set<int> *s1 = q1.front();
                 set<int> *s2 = q2.front();
@@ -2518,12 +2605,42 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                 }
                 cout << endl;
                 // determine corresponding internal node with leaves s1 and s2 as its descendants
-                auto tmp = descent_map.find(*s1);
-                assert(tmp != descent_map.end());
+                auto tmp = descent_map_prev.find(*s1);
+                assert(tmp != descent_map_prev.end());
+                // NOTE: recomb_node and recoal_node could be swapped, need to check which one's parent disappears
                 int recomb_node = tmp->second;
-                int recoal_node = find_recoal_node_id(&descent_map, s1, s2);
-                cout << "recomb node: " << recomb_node << endl;
-                cout << "recoal node: " << recoal_node << endl;
+                int recoal_node = find_recoal_node_id(&descent_map_prev, s1, s2);
+                printLog(LOG_LOW, "recomb node %d(->%d)\n", recomb_node, prev_map[recomb_node]);
+                printLog(LOG_LOW, "recoal node %d(->%d)\n", recoal_node, prev_map[recoal_node]);
+
+                int recomb_time_lower_bound = prev_localtree->nodes[recomb_node].age;
+                double recoal_time_tmp;
+                // NOTE: descent_map_curr[*s1] may not exist! Want to perform multiple SPR in a bottom up order
+                // and the same for descent_map_curr[*s2]
+                assert(descent_map_curr.find(*s1) != descent_map_curr.end());
+                assert(descent_map_curr.find(*s2) != descent_map_curr.end());
+                // sanity check
+                // first check if s1 is a subset of s2
+                // if so, do a setminus on s2
+                if (includes(s2->begin(), s2->end(), s1->begin(), s1->end())){
+                    set<int> tmp = *s2;
+                    s2->clear();
+                    set_difference(tmp.begin(), tmp.end(), s1->begin(), s1->end(),
+                        insert_iterator<set<int>>(*s2, s2->begin()));
+                    printLog(LOG_LOW, "after set difference the recoal set contains");
+                    for(int child : *s2){
+                        cout << child << " ";
+                    }
+                    cout << endl;
+                }
+                assert(localtree->nodes[descent_map_curr[*s1]].parent == 
+                                localtree->nodes[descent_map_curr[*s2]].parent);
+                tsk_tree_get_time(&tree, curr_map[descent_map_curr[*s1]], &recoal_time_tmp);
+                int recoal_time = find_time(recoal_time_tmp, times, ntimes);
+                if (recomb_time_lower_bound > recoal_time){
+                    printLog(LOG_LOW, "Invalid SPR moves proposed by rSPR\n");
+                }
+
                 delete s1;
                 delete s2;
                 q1.pop();
@@ -2536,6 +2653,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         s_prev = s_curr;
         prev_localtree = localtree;
         prev_map = curr_map;
+        descent_map_prev = descent_map_curr;
     }
     
     ret = tsk_tree_free(&tree);

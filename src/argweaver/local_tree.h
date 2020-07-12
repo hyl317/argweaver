@@ -817,6 +817,10 @@ void count_mig_events(int from_pop, int to_pop, int time_idx2,
 
 void apply_spr(LocalTree *tree, const Spr &spr,
                const PopulationTree *pop_tree=NULL);
+               
+// return a new local tree that results from applying spr to prev_tree
+LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr);
+
 double get_treelen(const LocalTree *tree, const double *times, int ntimes,
                     bool use_basal=true);
 double get_treelen_internal(const LocalTree *tree, const double *times,
