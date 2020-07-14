@@ -468,8 +468,18 @@ void apply_spr(LocalTree *tree, const Spr &spr,
     tree->root = root;
 }
 
-LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr){
+LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping){
     LocalTree *new_tree = new LocalTree(*prev_tree); // use copy constructor
+
+    for(int i = 0; i < prev_tree->nnodes; i++){
+        // this assumes that the recomb node is not the root node, which should always be true
+        if(i != prev_tree->nodes[spr.recomb_node].parent){
+            mapping[i] = i;
+        }else{
+            mapping[i] = -1;
+        }
+    }
+
     // trival case
     if (spr.recomb_node == prev_tree->root) {
         assert(0); // Melissa added: how can this happen?
@@ -477,7 +487,7 @@ LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr){
         return new_tree;
     }
     assert(spr.recomb_node != spr.coal_node); //this will create a loop
-    // recoal is the node that disappears after this SPR
+    // recoal is the node that disappears after this SPR (ie, parent of the recomb node)
     // let's follow the convention that, in the new tree, the newly created edge has the same id as recoal in the previous tree
     LocalNode *nodes = prev_tree->nodes;
     LocalNode *new_nodes = new_tree->nodes;
@@ -2580,7 +2590,56 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         //mapping = new int[nnodes];
         if (num_SPR == 0){
             // internal node has age changes
-            continue;
+            // first let's identify which set of nodes disappear and which are newly created
+            set<tsk_id_t> curr_tree_node_set;
+            for(auto it = curr_map.begin(); it != curr_map.end(); ++it){
+                curr_tree_node_set.insert(it->second);
+            }
+            // iterating over previous tree in preorder
+            int preorder[nnodes];
+            int norder;
+            prev_localtree->get_preorder(prev_localtree->root, preorder, norder);
+            for(int i = 0; i < nnodes; i++){
+                int node_arg_id1 = preorder[i];
+                int node_arg_id2 = descent_map_curr.at(prev_localtree->get_descent_leaves(node_arg_id1));
+                int node_tsk_id = prev_map.at(node_arg_id1);
+                if(curr_tree_node_set.find(node_tsk_id) == curr_tree_node_set.end()){
+                    printLog(LOG_LOW, "node_arg_id1: %d, node_arg_id2: %d, node_tsk_id: %d\n", node_arg_id1, node_arg_id2, node_tsk_id);
+                    // the following three assert check is quite expensive
+                    // could be removed later after enough testing
+                    assert(prev_localtree->get_descent_leaves(prev_localtree->nodes[node_arg_id1].parent) == 
+                                localtree->get_descent_leaves(localtree->nodes[node_arg_id2].parent));
+                    assert(prev_localtree->get_descent_leaves(prev_localtree->nodes[node_arg_id1].child[0]) == 
+                                localtree->get_descent_leaves(localtree->nodes[node_arg_id2].child[0]));
+                    assert(prev_localtree->get_descent_leaves(prev_localtree->nodes[node_arg_id1].child[1]) == 
+                                localtree->get_descent_leaves(localtree->nodes[node_arg_id2].child[1]));
+                    int coal_time = localtree->nodes[node_arg_id2].age;
+                    int recomb_node = prev_localtree->nodes[node_arg_id1].child[0];
+                    int recoal_node = prev_localtree->nodes[node_arg_id1].child[1];
+                    int recomb_time_upper_bound = prev_localtree->nodes[node_arg_id1].age;
+                    int recomb_time_lower_bound = prev_localtree->nodes[recomb_node].age;
+                    printLog(LOG_LOW, "upper: %d\n", min(coal_time, recomb_time_upper_bound));
+                    printLog(LOG_LOW, "lower: %d\n", recomb_time_lower_bound);
+                    int diff = min(coal_time, recomb_time_upper_bound) - recomb_time_lower_bound;
+                    assert(diff >= 0);
+                    int recomb_time = diff == 0 ? recomb_time_lower_bound : recomb_time_lower_bound + rand() % diff;
+                    spr.coal_node = recoal_node;
+                    spr.recomb_node = recomb_node;
+                    spr.coal_time = coal_time;
+                    spr.recomb_time = recomb_time;
+                    auto mapping = new int[nnodes];
+                    LocalTree *intermediary_tree = apply_spr_new(prev_localtree, spr, mapping);
+                    // for now, assume only one internal node is changed 
+                    // TODO: to be fixed later
+                    trees->trees.push_back(LocalTreeSpr(intermediary_tree, spr, end-start, mapping));
+                    printLog(LOG_LOW, "recomb_node: %d\n", recomb_node);
+                    printLog(LOG_LOW, "recomb_time: %lf\n", times[recomb_time]);
+                    printLog(LOG_LOW, "coal_node: %d\n", recoal_node);
+                    printLog(LOG_LOW, "coal_time: %lf\n", times[coal_time]);
+                    spr.set_null();
+                }
+
+            }
         }else{
             // NOTE: need to update descent_map as SPR is applied sequentially
             // //map<set<int>, int> descent_map = prev_localtree->descent_leaf_map();
@@ -2614,32 +2673,42 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                 printLog(LOG_LOW, "recoal node %d(->%d)\n", recoal_node, prev_map[recoal_node]);
 
                 int recomb_time_lower_bound = prev_localtree->nodes[recomb_node].age;
-                double recoal_time_tmp;
+                if (recoal_node == prev_localtree->root){
+                    //since root node is always the oldest, this move is always valid
+                    break;
+                }else{
+                    int p_recoal_node = prev_localtree->nodes[recoal_node].parent;
+                    int recoal_time_upper_bound = prev_localtree->nodes[p_recoal_node].age;
+                    if (recoal_time_upper_bound < recomb_time_lower_bound){
+                        printLog(LOG_LOW, "-----------------------Invlid SPR moves----------------------");
+                    }
+                }
+                //double recoal_time_tmp;
                 // NOTE: descent_map_curr[*s1] may not exist! Want to perform multiple SPR in a bottom up order
                 // and the same for descent_map_curr[*s2]
-                assert(descent_map_curr.find(*s1) != descent_map_curr.end());
-                assert(descent_map_curr.find(*s2) != descent_map_curr.end());
+                //assert(descent_map_curr.find(*s1) != descent_map_curr.end());
+                //assert(descent_map_curr.find(*s2) != descent_map_curr.end());
                 // sanity check
                 // first check if s1 is a subset of s2
                 // if so, do a setminus on s2
-                if (includes(s2->begin(), s2->end(), s1->begin(), s1->end())){
-                    set<int> tmp = *s2;
-                    s2->clear();
-                    set_difference(tmp.begin(), tmp.end(), s1->begin(), s1->end(),
-                        insert_iterator<set<int>>(*s2, s2->begin()));
-                    printLog(LOG_LOW, "after set difference the recoal set contains");
-                    for(int child : *s2){
-                        cout << child << " ";
-                    }
-                    cout << endl;
-                }
-                assert(localtree->nodes[descent_map_curr[*s1]].parent == 
-                                localtree->nodes[descent_map_curr[*s2]].parent);
-                tsk_tree_get_time(&tree, curr_map[descent_map_curr[*s1]], &recoal_time_tmp);
-                int recoal_time = find_time(recoal_time_tmp, times, ntimes);
-                if (recomb_time_lower_bound > recoal_time){
-                    printLog(LOG_LOW, "Invalid SPR moves proposed by rSPR\n");
-                }
+                // if (includes(s2->begin(), s2->end(), s1->begin(), s1->end())){
+                //     set<int> tmp = *s2;
+                //     s2->clear();
+                //     set_difference(tmp.begin(), tmp.end(), s1->begin(), s1->end(),
+                //         insert_iterator<set<int>>(*s2, s2->begin()));
+                //     printLog(LOG_LOW, "after set difference the recoal set contains");
+                //     for(int child : *s2){
+                //         cout << child << " ";
+                //     }
+                //     cout << endl;
+                // }
+                // assert(localtree->nodes[descent_map_curr[*s1]].parent == 
+                //                 localtree->nodes[descent_map_curr[*s2]].parent);
+                // tsk_tree_get_time(&tree, curr_map[descent_map_curr[*s1]], &recoal_time_tmp);
+                //int recoal_time = find_time(recoal_time_tmp, times, ntimes);
+                //if (recomb_time_lower_bound > recoal_time){
+                //    printLog(LOG_LOW, "Invalid SPR moves proposed by rSPR\n");
+                //}
 
                 delete s1;
                 delete s2;

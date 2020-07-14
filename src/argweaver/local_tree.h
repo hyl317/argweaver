@@ -482,6 +482,20 @@ public:
         return descent_map;
     }
 
+    inline set<int> get_descent_leaves(int node){
+        set<int> leaves;
+        if (node < get_num_leaves()){
+            leaves.insert(node);
+        }else{
+            set<int> leaves1 = get_descent_leaves(nodes[node].child[0]);
+            set<int> leaves2 = get_descent_leaves(nodes[node].child[1]);
+            set_union(leaves1.begin(), leaves1.end(),
+                        leaves2.begin(), leaves2.end(),
+                        insert_iterator<set<int>>(leaves, leaves.begin()));
+        }
+        return leaves;
+    }
+
     int nnodes;        // number of nodes in tree
     int capacity;      // capacity of nodes array
     int root;          // id of root node
