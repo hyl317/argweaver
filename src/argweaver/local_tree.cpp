@@ -2545,6 +2545,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     spr.set_null();
     int *mapping = NULL;
     int id = 0;
+    int num_invalid_spr = 0;
     for(iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)){
         int start = floor(tree.left);
         int end = floor(tree.right);
@@ -2601,9 +2602,10 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
             prev_localtree->get_preorder(prev_localtree->root, preorder, norder);
             for(int i = 0; i < nnodes; i++){
                 int node_arg_id1 = preorder[i];
-                int node_arg_id2 = descent_map_curr.at(prev_localtree->get_descent_leaves(node_arg_id1));
                 int node_tsk_id = prev_map.at(node_arg_id1);
                 if(curr_tree_node_set.find(node_tsk_id) == curr_tree_node_set.end()){
+                    set<int> leaves = prev_localtree->get_descent_leaves(node_arg_id1);
+                    int node_arg_id2 = localtree->find_mrca(&leaves);
                     printLog(LOG_LOW, "node_arg_id1: %d, node_arg_id2: %d, node_tsk_id: %d\n", node_arg_id1, node_arg_id2, node_tsk_id);
                     // the following three assert check is quite expensive
                     // could be removed later after enough testing
@@ -2681,6 +2683,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                     int recoal_time_upper_bound = prev_localtree->nodes[p_recoal_node].age;
                     if (recoal_time_upper_bound < recomb_time_lower_bound){
                         printLog(LOG_LOW, "-----------------------Invlid SPR moves----------------------");
+                        num_invalid_spr++;
                     }
                 }
                 //double recoal_time_tmp;
@@ -2718,7 +2721,6 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
             }
         }
         
-        
         s_prev = s_curr;
         prev_localtree = localtree;
         prev_map = curr_map;
@@ -2729,6 +2731,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     check_tsk_error(ret);
     ret = tsk_treeseq_free(&ts);
     check_tsk_error(ret);
+    printLog(LOG_LOW, "number of invalid SPR moves: %d\n", num_invalid_spr);
     exit(EXIT_FAILURE);
     return true;
 }

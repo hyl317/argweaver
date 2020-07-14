@@ -10,6 +10,7 @@
 #include <vector>
 #include <string.h>
 #include <stdio.h>
+#include <iostream>
 
 // arghmm includes
 #include "sequences.h"
@@ -494,6 +495,37 @@ public:
                         insert_iterator<set<int>>(leaves, leaves.begin()));
         }
         return leaves;
+    }
+
+    inline int find_mrca(set<int> *leaves){
+
+        cout << "finding mrca for";
+        for(int leaf : *leaves){
+            cout << leaf << " ";
+        }
+        cout << endl;
+
+        // find mrca of leaves contained in the given set
+        if (leaves->size() == get_num_leaves()){
+            return root;
+        }else{
+            set<int> leaves_so_far;
+            int curr = *(leaves->begin());
+            leaves_so_far.insert(curr);
+            //cout << "size of leaves_so_far: " << leaves_so_far.size() << endl;
+            while (!includes(leaves_so_far.begin(), leaves_so_far.end(), leaves->begin(), leaves->end())){
+                int p = nodes[curr].parent;
+                //cout << "p: " << p;
+                assert(p != -1);
+                int *child = nodes[p].child;
+                int other = (child[1] == curr ? child[0] : child[1]);
+                //cout << ", other: " << other << endl;
+                set<int> leaves_to_insert = get_descent_leaves(other);
+                leaves_so_far.insert(leaves_to_insert.begin(), leaves_to_insert.end());
+                curr = p;
+            }
+            return curr;
+        }
     }
 
     int nnodes;        // number of nodes in tree
