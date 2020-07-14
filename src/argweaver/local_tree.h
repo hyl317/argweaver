@@ -498,13 +498,6 @@ public:
     }
 
     inline int find_mrca(set<int> *leaves){
-
-        cout << "finding mrca for";
-        for(int leaf : *leaves){
-            cout << leaf << " ";
-        }
-        cout << endl;
-
         // find mrca of leaves contained in the given set
         if (leaves->size() == get_num_leaves()){
             return root;
@@ -512,7 +505,6 @@ public:
             set<int> leaves_so_far;
             int curr = *(leaves->begin());
             leaves_so_far.insert(curr);
-            //cout << "size of leaves_so_far: " << leaves_so_far.size() << endl;
             while (!includes(leaves_so_far.begin(), leaves_so_far.end(), leaves->begin(), leaves->end())){
                 int p = nodes[curr].parent;
                 //cout << "p: " << p;

@@ -2540,7 +2540,6 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     string s_prev;
     LocalTree *prev_localtree;
     map<int, tsk_id_t> prev_map;
-    map<set<int>, int> descent_map_prev;
     Spr spr;
     spr.set_null();
     int *mapping = NULL;
@@ -2567,13 +2566,11 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         read_local_tree_from_tsinfer(&tree, ptree, ages, times, ntimes, &curr_map);
         LocalTree *localtree = new LocalTree(ptree, nnodes, ages);
         string s_curr = get_newick_rep_rSPR(localtree);
-        map<set<int>, int> descent_map_curr = localtree->descent_leaf_map();
         printLog(LOG_LOW, "\nparsing tree %d: %s\n", id++, s_curr.c_str());
         if (s_prev.empty()){
             s_prev = s_curr;
             trees->trees.push_back(LocalTreeSpr(localtree, spr, end - start, mapping));
             prev_localtree = localtree;
-            descent_map_prev = descent_map_curr;
             prev_map = curr_map;
             continue;
         }
@@ -2665,12 +2662,9 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                     cout << child << " ";
                 }
                 cout << endl;
-                // determine corresponding internal node with leaves s1 and s2 as its descendants
-                auto tmp = descent_map_prev.find(*s1);
-                assert(tmp != descent_map_prev.end());
                 // NOTE: recomb_node and recoal_node could be swapped, need to check which one's parent disappears
-                int recomb_node = tmp->second;
-                int recoal_node = find_recoal_node_id(&descent_map_prev, s1, s2);
+                int recomb_node = prev_localtree->find_mrca(s1);
+                int recoal_node = prev_localtree->find_mrca(s2);
                 printLog(LOG_LOW, "recomb node %d(->%d)\n", recomb_node, prev_map[recomb_node]);
                 printLog(LOG_LOW, "recoal node %d(->%d)\n", recoal_node, prev_map[recoal_node]);
 
@@ -2679,9 +2673,8 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                     //since root node is always the oldest, this move is always valid
                     break;
                 }else{
-                    int p_recoal_node = prev_localtree->nodes[recoal_node].parent;
-                    int recoal_time_upper_bound = prev_localtree->nodes[p_recoal_node].age;
-                    if (recoal_time_upper_bound < recomb_time_lower_bound){
+                    int recoal_time = localtree->nodes[localtree->find_mrca(s1)].age;
+                    if (recoal_time < recomb_time_lower_bound){
                         printLog(LOG_LOW, "-----------------------Invlid SPR moves----------------------");
                         num_invalid_spr++;
                     }
@@ -2724,7 +2717,6 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         s_prev = s_curr;
         prev_localtree = localtree;
         prev_map = curr_map;
-        descent_map_prev = descent_map_curr;
     }
     
     ret = tsk_tree_free(&tree);
