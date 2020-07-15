@@ -34,6 +34,15 @@ struct edge
     int start;
 };
 
+// this struct is a temporary form of a LocalTreeSpr object
+// it has all the necessary info for creating a LocalTreeSpr object except for blocklen
+// blocklen will be calculated later and cann't be determined at this stage 
+struct LocalTreeSpr_tmp{
+    LocalTree *localtree;
+    int *mapping;
+    Spr spr;
+};
+
 //=============================================================================
 // tree methods
 
@@ -468,6 +477,27 @@ void apply_spr(LocalTree *tree, const Spr &spr,
     tree->root = root;
 }
 
+// NOTE: the last argument int *times is there only for debugging purpose
+// remove it when done debugging
+void set_up_spr(Spr *spr, int coal_node, int recomb_node, int recomb_time_upper_bound,
+                int recomb_time_lower_bound, int recoal_time, const double *times){
+    // up to now, we have the guarantee that recoal_time >= recomb_time_lower_bound
+    int diff = min(recoal_time, recomb_time_upper_bound) - recomb_time_lower_bound;
+    assert(diff >= 0);
+    int recomb_time = diff == 0 ? recomb_time_lower_bound : recomb_time_lower_bound + rand() % diff;
+    spr->coal_node = coal_node;
+    spr->recomb_node = recomb_node;
+    spr->coal_time = recoal_time;
+    spr->recomb_time = recomb_time;
+
+    printLog(LOG_LOW, "recomb_node: %d\n", recomb_node);
+    printLog(LOG_LOW, "recomb_time: %lf\n", times[recomb_time]);
+    printLog(LOG_LOW, "coal_node: %d\n", coal_node);
+    printLog(LOG_LOW, "coal_time: %lf\n", times[recoal_time]);
+
+}
+
+// NOTE: the last argument int *times is there only for debugging purpose
 LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping){
     LocalTree *new_tree = new LocalTree(*prev_tree); // use copy constructor
 
@@ -2584,8 +2614,8 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         get_moves(prev, curr, &label_map, &reverse_label_map, &q1, &q2);
         assert(q1.size() == q2.size());
         int num_SPR = q1.size();
+        vector<LocalTreeSpr_tmp> intermediaryTrees;
         cout << "SPR distance: " << q1.size() << endl;
-        //mapping = new int[nnodes];
         if (num_SPR == 0){
             // internal node has age changes
             // first let's identify which set of nodes disappear and which are newly created
@@ -2619,27 +2649,18 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                     int recomb_time_lower_bound = prev_localtree->nodes[recomb_node].age;
                     printLog(LOG_LOW, "upper: %d\n", min(recoal_time, recomb_time_upper_bound));
                     printLog(LOG_LOW, "lower: %d\n", recomb_time_lower_bound);
-                    int diff = min(recoal_time, recomb_time_upper_bound) - recomb_time_lower_bound;
-                    assert(diff >= 0);
-                    int recomb_time = diff == 0 ? recomb_time_lower_bound : recomb_time_lower_bound + rand() % diff;
-                    spr.coal_node = recoal_node;
-                    spr.recomb_node = recomb_node;
-                    spr.coal_time = recoal_time;
-                    spr.recomb_time = recomb_time;
                     auto mapping = new int[nnodes];
+                    set_up_spr(&spr, recoal_node, recomb_node, recomb_time_upper_bound,
+                            recomb_time_lower_bound, recoal_time, times);
                     LocalTree *intermediary_tree = apply_spr_new(prev_localtree, spr, mapping);
                     // for now, assume only one internal node is changed 
                     // TODO: to be fixed later
-                    trees->trees.push_back(LocalTreeSpr(intermediary_tree, spr, end-start, mapping));
-                    printLog(LOG_LOW, "recomb_node: %d\n", recomb_node);
-                    printLog(LOG_LOW, "recomb_time: %lf\n", times[recomb_time]);
-                    printLog(LOG_LOW, "coal_node: %d\n", recoal_node);
-                    printLog(LOG_LOW, "coal_time: %lf\n", times[recoal_time]);
+                    intermediaryTrees.push_back(LocalTreeSpr_tmp{intermediary_tree, mapping, Spr(spr)});
                     spr.set_null();
                 }
-
             }
         }else{
+            bool success = true;
             while(!q1.empty()){
                 set<int> *s1 = q1.front();
                 set<int> *s2 = q2.front();
@@ -2672,24 +2693,17 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                             recoal_time > prev_localtree->nodes[prev_localtree->nodes[recoal_node].parent].age)){
                     printLog(LOG_LOW, "-----------------------Invlid SPR moves----------------------\n");
                     num_invalid_spr++;
+                    success = false;
                     break;
                 }
-                // up to now, we have the guarantee that recoal_time >= recomb_time_lower_bound
-                int diff = min(recoal_time, recomb_time_upper_bound) - recomb_time_lower_bound;
-                assert(diff >= 0);
-                int recomb_time = diff == 0 ? recomb_time_lower_bound : recomb_time_lower_bound + rand() % diff;
-                spr.coal_node = recoal_node;
-                spr.recomb_node = recomb_node;
-                spr.coal_time = recoal_time;
-                spr.recomb_time = recomb_time;
                 int *mapping = new int[nnodes];
+                set_up_spr(&spr, recoal_node, recomb_node, recomb_time_upper_bound,
+                            recomb_time_lower_bound, recoal_time, times);
+                // need to store these intermediary trees somewhere because I cannot determine blocklen at this stage
                 LocalTree *intermediary_tree = apply_spr_new(prev_localtree, spr, mapping);
+                intermediaryTrees.push_back(LocalTreeSpr_tmp{intermediary_tree, mapping, Spr(spr)});
                 prev_localtree = intermediary_tree;
-                printLog(LOG_LOW, "recomb_node: %d\n", recomb_node);
-                printLog(LOG_LOW, "recomb_time: %lf\n", times[recomb_time]);
-                printLog(LOG_LOW, "coal_node: %d\n", recoal_node);
-                printLog(LOG_LOW, "coal_time: %lf\n", times[recoal_time]);
-
+                spr.set_null();
                 delete s1;
                 delete s2;
                 q1.pop();

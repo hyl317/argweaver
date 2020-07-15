@@ -1,7 +1,7 @@
 arg-sample 1.0
-start time: Tue Jul 14 23:07:35 2020
-command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation.5.tsdate.trees --overwrite --region 1:5000-1000000
-random seed: 1594782455
+start time: Wed Jul 15 00:10:18 2020
+command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation.20.tsdate.trees --overwrite --region 1:5000-1000000
+random seed: 1594786219
 Reading ../../simulate/arg/simulation_source.5.vcf.gz 1:5000-1000000
 Read 962 sites from 969 lines of VCF file (num skipped indels=0)
 read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=5, nsites=962)
@@ -56,2861 +56,4077 @@ model:
               10000.0,
               10000.0]
 
-Start reading tree sequence file: ../../simulate/arg/simulation.5.tsdate.trees
-26(->7) has 2 children
-1
-3
-83(->5) has 3 children
-0
-2
-4
-108(->6) has 2 children
-26
-83
+Start reading tree sequence file: ../../simulate/arg/simulation.20.tsdate.trees
 
-parsing tree 0: ((1,3),(4,(0,2)));
-20(->8) has 2 children
-1
-4
-44(->5) has 2 children
-0
-3
-88(->6) has 2 children
-2
-44
-108(->7) has 2 children
-20
-88
+parsing tree 0: ((15,(12,14)),(((16,(0,1)),(18,((2,3),(7,11)))),(((4,17),(19,(8,(5,6)))),(13,(9,10)))));
 
-parsing tree 1: ((2,(0,3)),(1,4));
-recomb node 3(->3)
-recoal node 0(->0)
-recomb_node: 3
-recomb_time: 50.955204
-coal_node: 0
-coal_time: 3970.359808
-recomb node 4(->4)
-recoal node 1(->1)
-recomb_node: 4
-recomb_time: 1083.282752
-coal_node: 1
-coal_time: 2596.402445
-44(->5) has 2 children
-0
-3
-88(->6) has 2 children
-2
-44
-108(->7) has 2 children
-4
-88
-111(->8) has 2 children
-1
-108
-
-parsing tree 2: (1,(4,(2,(0,3))));
-recomb node 1(->1)
-recoal node 7(->108)
-recomb_node: 1
-recomb_time: 683.863505
-coal_node: 7
-coal_time: 21036.114721
-44(->5) has 2 children
-0
-3
-108(->6) has 2 children
-4
-44
-111(->7) has 2 children
-1
-108
-114(->8) has 2 children
-2
-111
-
-parsing tree 3: (2,(1,(4,(0,3))));
-recomb node 2(->2)
-recoal node 8(->111)
-recomb_node: 2
-recomb_time: 3970.359808
-coal_node: 8
-coal_time: 48063.865571
-8(->8) has 2 children
-2
-4
-44(->5) has 2 children
-0
-3
-108(->6) has 2 children
-8
-44
-114(->7) has 2 children
-1
-108
-
-parsing tree 4: (1,((0,3),(2,4)));
-recomb node 2(->2)
-recoal node 4(->4)
-recomb_node: 2
-recomb_time: 1686.226891
-coal_node: 4
-coal_time: 2596.402445
-44(->5) has 2 children
-0
-3
-111(->6) has 3 children
-1
-4
-44
-114(->7) has 2 children
-2
-111
-
-parsing tree 5: (2,((0,3),(1,4)));
-recomb node 4(->4)
-recoal node 1(->1)
-recomb_node: 4
-recomb_time: 243.988772
-coal_node: 1
-coal_time: 21036.114721
-recomb node 2(->2)
-recoal node 7(->114)
-recomb_node: 2
-recomb_time: 419.268952
-coal_node: 7
-coal_time: 48063.865571
-30(->8) has 2 children
-1
-2
-44(->5) has 2 children
-0
-3
-113(->6) has 2 children
-30
-44
-114(->7) has 2 children
-4
-113
-
-parsing tree 6: (4,((0,3),(1,2)));
-recomb node 4(->4)
-recoal node 8(->111)
-recomb_node: 4
-recomb_time: 419.268952
-coal_node: 8
-coal_time: 48063.865571
-recomb node 2(->2)
-recoal node 1(->1)
-recomb_node: 2
-recomb_time: 1083.282752
-coal_node: 1
-coal_time: 3970.359808
-30(->7) has 2 children
-1
-2
-89(->8) has 2 children
-3
-30
-113(->5) has 2 children
-0
-89
-114(->6) has 2 children
-4
-113
-
-parsing tree 7: (4,(0,(3,(1,2))));
-recomb node 0(->0)
-recoal node 6(->113)
-recomb_node: 0
-recomb_time: 0.000000
-coal_node: 6
-coal_time: 21036.114721
-30(->6) has 2 children
-1
-2
-89(->7) has 2 children
-3
-30
-104(->8) has 2 children
-4
-89
-114(->5) has 2 children
-0
-104
-
-parsing tree 8: (0,(4,(3,(1,2))));
-recomb node 0(->0)
-recoal node 6(->114)
-recomb_node: 0
-recomb_time: 9175.321658
-coal_node: 6
-coal_time: 48063.865571
-14(->8) has 2 children
-2
-3
-89(->6) has 2 children
-1
-14
-104(->7) has 2 children
-4
-89
-114(->5) has 2 children
-0
-104
-
-parsing tree 9: (0,(4,(1,(2,3))));
-recomb node 3(->3)
-recoal node 2(->2)
-recomb_node: 3
-recomb_time: 243.988772
-coal_node: 2
-coal_time: 2596.402445
-14(->8) has 2 children
-2
-3
-89(->5) has 2 children
-0
-14
-104(->6) has 2 children
-4
-89
-114(->7) has 2 children
-1
-104
-
-parsing tree 10: (1,(4,(0,(2,3))));
-recomb node 8(->14)
-recoal node 0(->0)
-recomb_node: 8
-recomb_time: 2596.402445
-coal_node: 0
-coal_time: 6044.419947
-recomb node 4(->4)
-recoal node 6(->89)
-recomb_node: 4
-recomb_time: 127.874736
-coal_node: 6
-coal_time: 13901.580719
-14(->7) has 2 children
-2
-3
-67(->8) has 2 children
-4
-14
-104(->5) has 2 children
-0
-67
-114(->6) has 2 children
-1
-104
-
-parsing tree 11: (1,(0,(4,(2,3))));
-recomb node 4(->4)
-recoal node 8(->14)
-recomb_node: 4
-recomb_time: 683.863505
-coal_node: 8
-coal_time: 6044.419947
-14(->7) has 2 children
-2
-3
-67(->8) has 2 children
-4
-14
-110(->5) has 2 children
-0
-67
-114(->6) has 2 children
-1
-110
-
-parsing tree 12: (1,(0,(4,(2,3))));
-node_arg_id1: 5, node_arg_id2: 5, node_tsk_id: 104
-upper: 12
-lower: 0
-recomb_node: 0
-recomb_time: 9175.321658
-coal_node: 8
-coal_time: 31806.065068
-14(->7) has 2 children
-2
-3
-59(->5) has 2 children
-0
-1
-67(->8) has 2 children
-4
-14
-102(->6) has 2 children
-59
-67
-
-parsing tree 13: ((0,1),(4,(2,3)));
-recomb node 1(->1)
-recoal node 0(->0)
-recomb_node: 1
-recomb_time: 50.955204
-coal_node: 0
-coal_time: 2596.402445
-14(->7) has 2 children
-2
-3
-67(->8) has 2 children
-4
-14
-102(->6) has 2 children
-1
-67
-114(->5) has 2 children
-0
-102
-
-parsing tree 14: (0,(1,(4,(2,3))));
-recomb node 8(->67)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-14(->8) has 2 children
-2
-3
-67(->6) has 2 children
-1
-4
-102(->7) has 2 children
-14
-67
-114(->5) has 2 children
-0
-102
-
-parsing tree 15: (0,((1,4),(2,3)));
-recomb node 7(->14)
-recoal node 6(->102)
-recomb_node: 7
-recomb_time: 3970.359808
-coal_node: 6
-coal_time: 31806.065068
-14(->8) has 2 children
-2
-3
-84(->5) has 2 children
-0
-14
-102(->6) has 2 children
-1
-84
-114(->7) has 2 children
-4
-102
-
-parsing tree 16: (4,(1,(0,(2,3))));
-recomb node 8(->14)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-27(->8) has 2 children
-1
-3
-54(->5) has 2 children
-0
-2
-102(->6) has 2 children
-27
-54
-114(->7) has 2 children
-4
-102
-
-parsing tree 17: (4,((0,2),(1,3)));
-recomb node 3(->3)
-recoal node 1(->1)
-recomb_node: 3
-recomb_time: 127.874736
-coal_node: 1
-coal_time: 13901.580719
-27(->8) has 2 children
-1
-3
-54(->5) has 2 children
-0
-2
-65(->6) has 2 children
-4
-54
-102(->7) has 2 children
-27
-65
-
-parsing tree 18: ((4,(0,2)),(1,3));
-recomb node 4(->4)
-recoal node 5(->54)
-recomb_node: 4
-recomb_time: 419.268952
-coal_node: 5
-coal_time: 9175.321658
-27(->8) has 2 children
-1
-3
-40(->5) has 2 children
-0
-4
-65(->6) has 2 children
-2
-40
-102(->7) has 2 children
-27
-65
-
-parsing tree 19: ((2,(0,4)),(1,3));
-recomb node 2(->2)
-recoal node 6(->65)
-recomb_node: 2
-recomb_time: 1686.226891
-coal_node: 6
-coal_time: 9175.321658
-27(->8) has 2 children
-1
-3
-40(->5) has 2 children
-0
-4
-84(->6) has 2 children
-2
-40
-102(->7) has 2 children
-27
-84
-
-parsing tree 20: ((2,(0,4)),(1,3));
-node_arg_id1: 6, node_arg_id2: 6, node_tsk_id: 65
-upper: 11
-lower: 0
-recomb_node: 2
-recomb_time: 419.268952
-coal_node: 5
-coal_time: 13901.580719
-40(->5) has 2 children
-0
-4
-84(->6) has 2 children
-2
-40
-102(->7) has 2 children
-1
-84
-114(->8) has 2 children
-3
-102
-
-parsing tree 21: (3,(1,(2,(0,4))));
-recomb node 3(->3)
-recoal node 7(->102)
-recomb_node: 3
-recomb_time: 50.955204
-coal_node: 7
-coal_time: 48063.865571
-31(->8) has 2 children
-1
-2
-40(->5) has 2 children
-0
-4
-71(->6) has 2 children
-31
-40
-114(->7) has 2 children
-3
-71
-
-parsing tree 22: (3,((0,4),(1,2)));
-recomb node 1(->1)
-recoal node 2(->2)
-recomb_node: 1
-recomb_time: 0.000000
-coal_node: 2
-coal_time: 6044.419947
-31(->7) has 2 children
-1
-2
-71(->8) has 2 children
-4
-31
-102(->5) has 2 children
-0
-71
-114(->6) has 2 children
-3
-102
-
-parsing tree 23: (3,(0,(4,(1,2))));
-recomb node 0(->0)
-recoal node 6(->71)
-recomb_node: 0
-recomb_time: 683.863505
-coal_node: 6
-coal_time: 31806.065068
-31(->7) has 2 children
-1
-2
-45(->5) has 2 children
-0
-3
-71(->8) has 2 children
-4
-31
-102(->6) has 2 children
-45
-71
-
-parsing tree 24: ((0,3),(4,(1,2)));
-recomb node 8(->71)
-recoal node 6(->114)
-recomb_node: 8
-recomb_time: 13901.580719
-coal_node: 6
-coal_time: 31806.065068
-31(->7) has 2 children
-1
-2
-71(->8) has 2 children
-4
-31
-99(->5) has 2 children
-0
-3
-102(->6) has 2 children
-71
-99
-
-parsing tree 25: ((0,3),(4,(1,2)));
-node_arg_id1: 5, node_arg_id2: 5, node_tsk_id: 45
-upper: 10
-lower: 0
-recomb_node: 0
-recomb_time: 50.955204
-coal_node: 3
-coal_time: 6044.419947
-5(->8) has 2 children
-3
-4
-31(->7) has 2 children
-1
-2
-99(->5) has 2 children
-0
-31
-102(->6) has 2 children
-5
-99
-
-parsing tree 26: ((0,(1,2)),(3,4));
-recomb node 3(->3)
-recoal node 4(->4)
-recomb_node: 3
-recomb_time: 50.955204
-coal_node: 4
-coal_time: 1686.226891
-recomb node 5(->99)
-recoal node 6(->102)
-recomb_node: 5
-recomb_time: 1686.226891
-coal_node: 6
-coal_time: 31806.065068
-5(->8) has 2 children
-3
-4
-31(->7) has 2 children
-1
-2
-79(->5) has 2 children
-0
-5
-102(->6) has 2 children
-31
-79
-
-parsing tree 27: ((0,(3,4)),(1,2));
-recomb node 8(->5)
-recoal node 0(->0)
------------------------Invlid SPR moves----------------------
-5(->8) has 2 children
-3
-4
-31(->6) has 2 children
-1
-2
-102(->7) has 2 children
-5
-31
-114(->5) has 2 children
-0
-102
-
-parsing tree 28: (0,((1,2),(3,4)));
-recomb node 8(->5)
-recoal node 7(->31)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 7
-coal_time: 31806.065068
-5(->7) has 2 children
-3
-4
-111(->5) has 3 children
-0
-1
-5
-114(->6) has 2 children
-2
-111
-
-parsing tree 29: (2,((0,1),(3,4)));
-recomb node 8(->5)
-recoal node 5(->114)
-recomb_node: 8
-recomb_time: 1686.226891
-coal_node: 5
-coal_time: 48063.865571
-recomb node 2(->2)
-recoal node 7(->102)
-recomb_node: 2
-recomb_time: 50.955204
-coal_node: 7
-coal_time: 48063.865571
-46(->5) has 2 children
-0
-3
-111(->6) has 3 children
-1
-4
-46
-114(->7) has 2 children
-2
-111
-
-parsing tree 30: (2,((0,3),(1,4)));
-recomb node 1(->1)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-46(->5) has 2 children
-0
-3
-72(->8) has 2 children
-1
-4
-111(->6) has 2 children
-46
-72
-114(->7) has 2 children
-2
-111
-
-parsing tree 31: (2,((0,3),(1,4)));
-32(->7) has 2 children
-1
-2
-46(->5) has 2 children
-0
-3
-72(->8) has 2 children
-4
-32
-105(->6) has 2 children
-46
-72
-
-parsing tree 32: ((0,3),(4,(1,2)));
-recomb node 2(->2)
-recoal node 1(->1)
-recomb_node: 2
-recomb_time: 243.988772
-coal_node: 1
-coal_time: 1686.226891
-46(->5) has 2 children
-0
-3
-72(->7) has 3 children
-1
-2
-4
-105(->6) has 2 children
-46
-72
-
-parsing tree 33: ((0,3),(4,(1,2)));
-node_arg_id1: 7, node_arg_id2: 7, node_tsk_id: 32
-upper: 7
-lower: 0
-recomb_node: 1
-recomb_time: 0.000000
-coal_node: 2
-coal_time: 6044.419947
-46(->5) has 2 children
-0
-3
-105(->6) has 4 children
-1
-2
-4
-46
-
-parsing tree 34: ((0,3),(4,(1,2)));
-node_arg_id1: 8, node_arg_id2: 7, node_tsk_id: 72
-upper: 10
-lower: 0
-recomb_node: 4
-recomb_time: 1083.282752
-coal_node: 7
-coal_time: 21036.114721
-node_arg_id1: 7, node_arg_id2: 6, node_tsk_id: 72
-upper: 10
-lower: 0
-recomb_node: 1
-recomb_time: 419.268952
-coal_node: 2
-coal_time: 21036.114721
-60(->5) has 2 children
-0
-1
-105(->6) has 3 children
-2
-4
-60
-114(->7) has 2 children
-3
-105
-
-parsing tree 35: (3,((0,1),(2,4)));
-recomb node 1(->1)
-recoal node 0(->0)
-recomb_node: 1
-recomb_time: 243.988772
-coal_node: 0
-coal_time: 1083.282752
-recomb node 6(->105)
-recoal node 7(->105)
-recomb_node: 6
-recomb_time: 1083.282752
-coal_node: 7
-coal_time: 21036.114721
-60(->5) has 2 children
-0
-1
-97(->6) has 2 children
-3
-60
-105(->7) has 2 children
-4
-97
-114(->8) has 2 children
-2
-105
-
-parsing tree 36: (2,(4,(3,(0,1))));
-recomb node 4(->4)
-recoal node 5(->60)
-recomb_node: 4
-recomb_time: 127.874736
-coal_node: 5
-coal_time: 21036.114721
-recomb node 3(->3)
-recoal node 5(->60)
-recomb_node: 3
+parsing tree 1: (10,((((0,1),(16,(15,(12,14)))),(18,((2,3),(7,11)))),((9,13),((4,17),(19,(8,(5,6)))))));
+recomb node 10(->10)
+recoal node 38(->452)
+recomb_node: 10
 recomb_time: 6044.419947
-coal_node: 5
+coal_node: 38
+coal_time: 31806.065068
+recomb node 31(->67)
+recoal node 16(->16)
+recomb_node: 31
+recomb_time: 3970.359808
+coal_node: 16
 coal_time: 9175.321658
-9(->8) has 2 children
-2
-4
-60(->5) has 2 children
-0
-1
-97(->6) has 2 children
-3
-60
-105(->7) has 2 children
-9
-97
 
-parsing tree 37: ((3,(0,1)),(2,4));
-recomb node 4(->4)
-recoal node 2(->2)
-recomb_node: 4
-recomb_time: 243.988772
-coal_node: 2
+parsing tree 2: ((((0,1),(16,(15,(12,14)))),((10,18),((2,3),(7,11)))),((9,13),((4,17),(19,(8,(5,6))))));
+recomb node 10(->10)
+recoal node 18(->18)
+recomb_node: 10
+recomb_time: 2596.402445
+coal_node: 18
+coal_time: 9175.321658
+
+parsing tree 3: (8,((9,((4,17),(19,(5,6)))),(((0,1),((13,16),(15,(12,14)))),((10,18),((2,3),(7,11))))));
+recomb node 8(->8)
+recoal node 23(->456)
+recomb_node: 8
+recomb_time: 127.874736
+coal_node: 23
+coal_time: 31806.065068
+recomb node 13(->13)
+recoal node 16(->16)
+recomb_node: 13
+recomb_time: 2596.402445
+coal_node: 16
+coal_time: 3970.359808
+
+parsing tree 4: (8,((9,((4,17),(19,(5,6)))),((((0,1),(2,3)),((13,16),(15,(12,14)))),((10,18),(7,11)))));
+recomb node 25(->117)
+recoal node 20(->63)
+recomb_node: 25
+recomb_time: 1083.282752
+coal_node: 20
+coal_time: 3970.359808
+
+parsing tree 5: (8,(9,(((4,17),(19,(5,6))),((((0,1),(2,3)),((13,16),(15,(12,14)))),((10,18),(7,11))))));
+recomb node 38(->410)
+recoal node 36(->203)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 6: (8,(9,(((4,17),(19,(5,6))),((((13,16),(15,(12,14))),((18,(0,1)),(2,3))),(10,(7,11))))));
+recomb node 18(->18)
+recoal node 20(->63)
+recomb_node: 18
+recomb_time: 50.955204
+coal_node: 20
+coal_time: 3970.359808
+
+parsing tree 7: (8,((((13,16),(15,(12,14))),(((0,1),(9,18)),(2,3))),(10,((7,11),((4,17),(19,(5,6)))))));
+recomb node 36(->203)
+recoal node 30(->42)
+recomb_node: 36
+recomb_time: 1686.226891
+coal_node: 30
+coal_time: 2596.402445
+recomb node 9(->9)
+recoal node 18(->18)
+recomb_node: 9
+recomb_time: 127.874736
+coal_node: 18
+coal_time: 419.268952
+
+parsing tree 8: ((((16,(8,13)),(15,(12,14))),(((0,1),(9,18)),(2,3))),(10,((7,11),((4,17),(19,(5,6))))));
+recomb node 8(->8)
+recoal node 13(->13)
+recomb_node: 8
+recomb_time: 50.955204
+coal_node: 13
 coal_time: 1686.226891
-60(->5) has 2 children
-0
-1
-97(->6) has 2 children
-3
-60
-105(->7) has 2 children
-2
-97
-114(->8) has 2 children
-4
-105
 
-parsing tree 38: (4,(2,(3,(0,1))));
-recomb node 2(->2)
-recoal node 6(->97)
-recomb_node: 2
-recomb_time: 0.000000
-coal_node: 6
-coal_time: 21036.114721
-10(->8) has 2 children
-2
-4
-60(->5) has 2 children
-0
-1
-97(->6) has 2 children
-3
-60
-105(->7) has 2 children
-10
-97
+parsing tree 9: ((((8,(15,(12,14))),(16,(10,13))),(((0,1),(9,18)),(2,3))),((7,11),((4,17),(19,(5,6)))));
+recomb node 10(->10)
+recoal node 13(->13)
+recomb_node: 10
+recomb_time: 419.268952
+coal_node: 13
+coal_time: 1686.226891
+recomb node 8(->8)
+recoal node 34(->67)
+recomb_node: 8
+recomb_time: 419.268952
+coal_node: 34
+coal_time: 9175.321658
 
-parsing tree 39: ((3,(0,1)),(2,4));
-recomb node 6(->97)
-recoal node 8(->114)
-recomb_node: 6
+parsing tree 10: ((((0,1),(9,18)),((2,3),((7,11),((4,17),(19,(5,6)))))),((8,(15,(12,14))),(16,(10,13))));
+recomb node 27(->239)
+recoal node 24(->117)
+recomb_node: 27
+recomb_time: 2596.402445
+coal_node: 24
+coal_time: 3970.359808
+
+parsing tree 11: (((8,(15,(12,14))),(16,(10,13))),(((0,1),(9,18)),((2,3),((7,11),((4,17),(19,(5,6)))))));
+node_arg_id1: 21, node_arg_id2: 21, node_tsk_id: 233
+upper: 9
+lower: 2
+recomb_node: 20
+recomb_time: 683.863505
+coal_node: 31
+coal_time: 13901.580719
+
+parsing tree 12: ((((0,1),(9,18)),((2,3),((7,11),((4,17),(19,(5,6)))))),((8,(15,(12,14))),(16,(10,13))));
+node_arg_id1: 38, node_arg_id2: 22, node_tsk_id: 418
+upper: 12
+lower: 12
+recomb_node: 21
 recomb_time: 13901.580719
-coal_node: 8
+coal_node: 24
 coal_time: 21036.114721
-10(->7) has 2 children
-2
-4
-97(->5) has 3 children
-0
-1
-3
-105(->6) has 2 children
-10
-97
+node_arg_id1: 21, node_arg_id2: 21, node_tsk_id: 418
+upper: 11
+lower: 2
+recomb_node: 20
+recomb_time: 6044.419947
+coal_node: 30
+coal_time: 9175.321658
 
-parsing tree 40: ((2,4),(3,(0,1)));
-node_arg_id1: 5, node_arg_id2: 5, node_tsk_id: 60
+parsing tree 13: ((((12,(0,1)),(9,18)),((2,3),((7,11),((4,17),(19,(5,6)))))),((8,(14,15)),(16,(10,13))));
+recomb node 12(->12)
+recoal node 20(->63)
+recomb_node: 12
+recomb_time: 50.955204
+coal_node: 20
+coal_time: 1083.282752
+
+parsing tree 14: ((((12,(0,1)),(9,18)),((2,3),((7,11),((4,17),(19,(5,6)))))),((14,15),((8,16),(10,13))));
+recomb node 8(->8)
+recoal node 16(->16)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 15: (((5,(10,13)),(8,(14,15))),(((12,(0,1)),(9,18)),(16,((2,3),((7,11),((4,17),(6,19)))))));
+recomb node 16(->16)
+recoal node 26(->283)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 16: (((2,3),((7,11),((4,17),(6,19)))),((12,(0,1)),(((5,(10,13)),(18,(8,9))),(16,(14,15)))));
+recomb node 26(->283)
+recoal node 38(->462)
+recomb_node: 26
+recomb_time: 13901.580719
+coal_node: 38
+coal_time: 21036.114721
+recomb node 16(->16)
+recoal node 35(->65)
+recomb_node: 16
+recomb_time: 0.000000
+coal_node: 35
+coal_time: 683.863505
+recomb node 33(->78)
+recoal node 30(->86)
+recomb_node: 33
+recomb_time: 683.863505
+coal_node: 30
+coal_time: 2596.402445
+recomb node 8(->8)
+recoal node 9(->9)
+recomb_node: 8
+recomb_time: 50.955204
+coal_node: 9
+coal_time: 419.268952
+
+parsing tree 17: (((2,3),((7,11),((4,17),(6,19)))),((10,(12,(0,1))),((16,(14,15)),((5,13),(18,(8,9))))));
+recomb node 10(->10)
+recoal node 21(->191)
+recomb_node: 10
+recomb_time: 1083.282752
+coal_node: 21
+coal_time: 2596.402445
+
+parsing tree 18: ((((10,(12,(0,1))),((2,3),((7,11),((4,17),(6,19))))),(16,(14,15))),((5,13),(18,(8,9))));
+recomb node 22(->230)
+recoal node 26(->283)
+recomb_node: 22
+recomb_time: 3970.359808
+coal_node: 26
+coal_time: 9175.321658
+recomb node 38(->391)
+recoal node 34(->65)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 19: ((18,(((10,(12,(0,1))),((2,3),((7,11),((4,17),(6,19))))),(16,(14,15)))),((5,13),(8,9)));
+recomb node 18(->18)
+recoal node 24(->414)
+recomb_node: 18
+recomb_time: 243.988772
+coal_node: 24
+coal_time: 13901.580719
+
+parsing tree 20: (((16,(14,15)),((18,(10,((0,1),(12,(7,11))))),((2,3),((4,17),(6,19))))),((5,13),(8,9)));
+recomb node 33(->42)
+recoal node 12(->12)
+recomb_node: 33
+recomb_time: 243.988772
+coal_node: 12
+coal_time: 1083.282752
+recomb node 18(->18)
+recoal node 22(->230)
+recomb_node: 18
+recomb_time: 3970.359808
+coal_node: 22
+coal_time: 9175.321658
+
+parsing tree 21: ((((2,3),((10,((0,1),(12,(7,11)))),(18,((4,17),(6,19))))),(16,(14,15))),((5,13),(8,9)));
+recomb node 37(->203)
+recoal node 18(->18)
+recomb_node: 37
+recomb_time: 1686.226891
+coal_node: 18
+coal_time: 9175.321658
+
+parsing tree 22: (((16,(14,15)),(((3,8),(9,13)),((10,((0,1),(12,(7,11)))),(18,((4,17),(6,19)))))),(2,5));
+recomb node 9(->9)
+recoal node 13(->13)
+recomb_node: 9
+recomb_time: 243.988772
+coal_node: 13
+coal_time: 2596.402445
+recomb node 8(->8)
+recoal node 3(->3)
+recomb_node: 8
+recomb_time: 683.863505
+coal_node: 3
+coal_time: 1686.226891
+recomb node 32(->78)
+recoal node 35(->128)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 23: ((19,(16,(14,15))),(((9,(13,(2,5))),(3,8)),((10,((0,1),(12,(7,11)))),(18,(6,(4,17))))));
+recomb node 27(->54)
+recoal node 13(->13)
+recomb_node: 27
+recomb_time: 683.863505
+coal_node: 13
+coal_time: 1083.282752
+recomb node 19(->19)
+recoal node 34(->65)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 24: (((((10,((0,1),(12,(7,11)))),(18,19)),((9,(13,(2,5))),(3,8))),(6,(4,17))),(16,(14,15)));
+recomb node 31(->203)
+recoal node 37(->365)
+recomb_node: 31
+recomb_time: 2596.402445
+coal_node: 37
+coal_time: 21036.114721
+recomb node 19(->19)
+recoal node 18(->18)
+recomb_node: 19
+recomb_time: 50.955204
+coal_node: 18
+coal_time: 683.863505
+
+parsing tree 25: (((((10,((0,1),(12,(7,11)))),(18,19)),((9,(13,(2,5))),(3,8))),(6,(4,17))),(16,(14,15)));
+node_arg_id1: 27, node_arg_id2: 27, node_tsk_id: 54
+upper: 4
+lower: 0
+recomb_node: 2
+recomb_time: 243.988772
+coal_node: 5
+coal_time: 1083.282752
+
+parsing tree 26: (((((10,((0,1),(12,(7,11)))),(18,19)),(((6,9),(13,(2,5))),(3,8))),(4,17)),(16,(14,15)));
+recomb node 6(->6)
+recoal node 9(->9)
+recomb_node: 6
+recomb_time: 0.000000
+coal_node: 9
+coal_time: 1083.282752
+
+parsing tree 27: ((((10,((0,1),(12,(7,11)))),(((6,9),(13,(2,5))),(3,8))),(4,17)),((18,19),(16,(14,15))));
+recomb node 35(->20)
+recoal node 36(->65)
+recomb_node: 35
+recomb_time: 2596.402445
+coal_node: 36
+coal_time: 13901.580719
+
+parsing tree 28: ((((10,((0,1),(12,(7,11)))),(((6,9),(13,(2,5))),(3,8))),(4,17)),(19,(18,(16,(14,15)))));
+recomb node 36(->65)
+recoal node 18(->18)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 29: ((((((6,9),(13,(2,5))),(10,(3,8))),((0,1),(12,(7,11)))),(4,17)),(19,(18,(16,(14,15)))));
+recomb node 10(->10)
+recoal node 29(->50)
+recomb_node: 10
+recomb_time: 1083.282752
+coal_node: 29
+coal_time: 3970.359808
+
+parsing tree 30: (19,((((4,17),(16,(14,15))),((0,1),(12,(7,11)))),(((6,9),(13,(2,5))),((3,8),(10,18)))));
+recomb node 35(->65)
+recoal node 30(->45)
+recomb_node: 35
+recomb_time: 1083.282752
+coal_node: 30
+coal_time: 2596.402445
+recomb node 18(->18)
+recoal node 10(->10)
+recomb_node: 18
+recomb_time: 127.874736
+coal_node: 10
+coal_time: 419.268952
+recomb node 37(->191)
+recoal node 34(->260)
+recomb_node: 37
+recomb_time: 2596.402445
+coal_node: 34
+coal_time: 13901.580719
+
+parsing tree 31: (19,(((12,(0,1)),((4,17),(16,(14,15)))),((((6,9),(13,(2,5))),(7,11)),((3,8),(10,18)))));
+recomb node 33(->42)
+recoal node 26(->128)
+recomb_node: 33
+recomb_time: 683.863505
+coal_node: 26
+coal_time: 9175.321658
+
+parsing tree 32: (19,(((12,(0,1)),((4,17),(16,(14,15)))),((((6,9),(13,(2,5))),(7,11)),((3,8),(10,18)))));
+node_arg_id1: 31, node_arg_id2: 31, node_tsk_id: 164
+upper: 8
+lower: 3
+recomb_node: 30
+recomb_time: 243.988772
+coal_node: 36
+coal_time: 2596.402445
+
+parsing tree 33: (19,((((12,(0,1)),((4,17),(16,(14,15)))),(((6,9),(13,(2,5))),(7,11))),((3,8),(10,18))));
+recomb node 22(->260)
+recoal node 27(->247)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 34: (19,((((12,(0,1)),((4,17),(16,(14,15)))),(((6,9),(13,(2,5))),(7,11))),((3,8),(10,18))));
+node_arg_id1: 28, node_arg_id2: 28, node_tsk_id: 247
+upper: 11
+lower: 8
+recomb_node: 27
+recomb_time: 3970.359808
+coal_node: 34
+coal_time: 13901.580719
+
+parsing tree 35: ((((12,(0,1)),((4,17),(16,(14,15)))),(((6,9),(13,(2,5))),(7,11))),(19,((3,8),(10,18))));
+recomb node 30(->132)
+recoal node 19(->19)
+recomb_node: 30
+recomb_time: 9175.321658
+coal_node: 19
+coal_time: 31806.065068
+
+parsing tree 36: ((((12,(0,1)),((4,17),(15,16))),((14,((6,9),(13,(2,5)))),(7,11))),(19,((3,8),(10,18))));
+recomb node 14(->14)
+recoal node 26(->128)
+recomb_node: 14
+recomb_time: 419.268952
+coal_node: 26
+coal_time: 3970.359808
+
+parsing tree 37: ((((0,1),((12,(4,17)),(15,16))),((14,((6,9),(13,(2,5)))),(7,11))),(19,((3,8),(10,18))));
+recomb node 12(->12)
+recoal node 31(->45)
+recomb_node: 12
+recomb_time: 419.268952
+coal_node: 31
+coal_time: 1083.282752
+
+parsing tree 38: (((19,((0,1),((12,(4,17)),(15,16)))),((14,((6,9),(13,(2,5)))),(7,11))),((3,8),(10,18)));
+recomb node 19(->19)
+recoal node 21(->259)
+recomb_node: 19
+recomb_time: 419.268952
+coal_node: 21
+coal_time: 13901.580719
+
+parsing tree 39: (((19,(8,((0,1),((12,(4,17)),(15,16))))),((14,((6,9),(13,(2,5)))),(7,11))),(3,(10,18)));
+recomb node 8(->8)
+recoal node 21(->259)
+recomb_node: 8
+recomb_time: 50.955204
+coal_node: 21
+coal_time: 3970.359808
+
+parsing tree 40: ((19,(((0,1),((12,(4,17)),(15,16))),(8,(10,18)))),(3,((14,((6,9),(13,(2,5)))),(7,11))));
+recomb node 35(->31)
+recoal node 8(->8)
+recomb_node: 35
+recomb_time: 419.268952
+coal_node: 8
+coal_time: 3970.359808
+recomb node 29(->277)
+recoal node 3(->3)
+recomb_node: 29
+recomb_time: 13901.580719
+coal_node: 3
+coal_time: 13901.580719
+
+parsing tree 41: ((19,(((0,1),((12,(4,17)),(15,16))),(8,(10,18)))),(3,((14,((6,9),(13,(2,5)))),(7,11))));
+
+parsing tree 42: ((19,(((14,(0,1)),((12,(4,17)),(15,16))),(8,(10,18)))),(((6,9),(13,(2,5))),(3,(7,11))));
+recomb node 34(->42)
+recoal node 3(->3)
+recomb_node: 34
+recomb_time: 419.268952
+coal_node: 3
+coal_time: 3970.359808
+recomb node 14(->14)
+recoal node 20(->63)
+recomb_node: 14
+recomb_time: 683.863505
+coal_node: 20
+coal_time: 1083.282752
+
+parsing tree 43: ((19,(((14,(0,1)),((12,(4,17)),(15,16))),(8,(((6,9),(13,(2,5))),(3,(7,11)))))),(10,18));
+recomb node 38(->282)
+recoal node 8(->8)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 44: (((8,(((6,9),(13,(2,5))),(3,(7,11)))),((15,(14,(0,1))),(16,((4,17),(12,19))))),(10,18));
+recomb node 15(->15)
+recoal node 21(->105)
+recomb_node: 15
+recomb_time: 50.955204
+coal_node: 21
+coal_time: 3970.359808
+recomb node 19(->19)
+recoal node 12(->12)
+recomb_node: 19
+recomb_time: 243.988772
+coal_node: 12
+coal_time: 1083.282752
+
+parsing tree 45: (((10,18),((15,(14,(0,1))),(16,((4,17),(12,19))))),(8,(((6,9),(13,(2,5))),(3,(7,11)))));
+recomb node 28(->316)
+recoal node 24(->462)
+recomb_node: 28
+recomb_time: 9175.321658
+coal_node: 24
+coal_time: 31806.065068
+
+parsing tree 46: (((10,18),((15,(14,(0,1))),(16,((4,17),(12,19))))),((((6,9),(13,(2,5))),(7,11)),(3,8)));
+recomb node 3(->3)
+recoal node 8(->8)
+recomb_node: 3
+recomb_time: 127.874736
+coal_node: 8
+coal_time: 1083.282752
+
+parsing tree 47: (((3,(8,16)),((15,(14,(0,1))),((4,17),(12,19)))),((((6,9),(13,(2,5))),(7,11)),(10,18)));
+recomb node 16(->16)
+recoal node 8(->8)
+recomb_node: 16
+recomb_time: 50.955204
+coal_node: 8
+coal_time: 419.268952
+recomb node 26(->282)
+recoal node 38(->462)
+recomb_node: 26
+recomb_time: 6044.419947
+coal_node: 38
+coal_time: 31806.065068
+recomb node 34(->31)
+recoal node 26(->282)
+recomb_node: 34
+recomb_time: 2596.402445
+coal_node: 26
+coal_time: 6044.419947
+
+parsing tree 48: (((14,(3,(8,16))),((15,(0,1)),((4,17),(12,19)))),((((6,9),(13,(2,5))),(7,11)),(10,18)));
+recomb node 14(->14)
+recoal node 29(->92)
+recomb_node: 14
+recomb_time: 683.863505
+coal_node: 29
+coal_time: 6044.419947
+
+parsing tree 49: ((((7,11),((15,(0,1)),((4,17),(12,19)))),(14,(3,(8,16)))),(((6,9),(13,(2,5))),(10,18)));
+recomb node 33(->42)
+recoal node 38(->259)
+recomb_node: 33
+recomb_time: 1083.282752
+coal_node: 38
+coal_time: 9175.321658
+
+parsing tree 50: ((((7,11),((15,(0,1)),((4,17),(12,19)))),(14,(3,(8,16)))),((6,9),((10,18),(13,(2,5)))));
+recomb node 31(->44)
+recoal node 24(->462)
+recomb_node: 31
+recomb_time: 1686.226891
+coal_node: 24
+coal_time: 3970.359808
+
+parsing tree 51: ((((7,11),((15,(0,1)),((4,17),(12,19)))),(3,(8,16))),((10,14),((6,9),(18,(13,(2,5))))));
+recomb node 10(->10)
+recoal node 14(->14)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 52: ((((2,((15,(0,1)),((4,17),(12,19)))),(7,11)),(3,(8,16))),((10,14),((6,9),(18,(5,13)))));
+recomb node 2(->2)
+recoal node 36(->259)
+recomb_node: 2
+recomb_time: 419.268952
+coal_node: 36
+coal_time: 3970.359808
+
+parsing tree 53: ((((2,((15,(0,1)),((4,17),(12,19)))),(7,11)),(3,(8,16))),((10,14),((6,9),(18,(5,13)))));
+node_arg_id1: 24, node_arg_id2: 24, node_tsk_id: 401
+upper: 12
+lower: 11
+recomb_node: 23
+recomb_time: 9175.321658
+coal_node: 26
+coal_time: 21036.114721
+
+parsing tree 54: (((((0,1),(7,11)),(2,(15,((4,17),(12,19))))),(3,(8,16))),((10,14),((6,9),(18,(5,13)))));
+recomb node 20(->63)
+recoal node 32(->42)
+recomb_node: 20
+recomb_time: 127.874736
+coal_node: 32
+coal_time: 2596.402445
+
+parsing tree 55: (((((0,1),(7,11)),(2,(15,((4,17),(12,19))))),(3,(8,16))),((10,14),((6,9),(18,(5,13)))));
+node_arg_id1: 26, node_arg_id2: 26, node_tsk_id: 92
 upper: 6
 lower: 0
-recomb_node: 0
-recomb_time: 683.863505
-coal_node: 1
-coal_time: 9175.321658
-10(->8) has 2 children
-2
-4
-64(->5) has 2 children
-0
-1
-93(->6) has 2 children
-10
-64
-105(->7) has 2 children
-3
-93
-
-parsing tree 41: (3,((0,1),(2,4)));
-recomb node 5(->97)
-recoal node 7(->10)
-recomb_node: 5
-recomb_time: 9175.321658
-coal_node: 7
-coal_time: 13901.580719
-21(->8) has 2 children
-1
-4
-64(->5) has 2 children
-0
-21
-105(->6) has 2 children
-3
-64
-114(->7) has 2 children
-2
-105
-
-parsing tree 42: (2,(3,(0,(1,4))));
-recomb node 4(->4)
-recoal node 1(->1)
-recomb_node: 4
-recomb_time: 50.955204
-coal_node: 1
-coal_time: 2596.402445
-recomb node 2(->2)
-recoal node 7(->105)
-recomb_node: 2
-recomb_time: 0.000000
-coal_node: 7
-coal_time: 48063.865571
-21(->6) has 2 children
-1
-4
-93(->7) has 2 children
-2
-21
-105(->8) has 2 children
-3
-93
-114(->5) has 2 children
-0
-105
-
-parsing tree 43: (0,(3,(2,(1,4))));
-recomb node 8(->21)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 13901.580719
-recomb node 3(->3)
-recoal node 5(->64)
 recomb_node: 3
-recomb_time: 2596.402445
-coal_node: 5
-coal_time: 21036.114721
-93(->6) has 3 children
-1
-2
-4
-105(->7) has 2 children
-3
-93
-114(->5) has 2 children
-0
-105
+recomb_time: 0.000000
+coal_node: 34
+coal_time: 2596.402445
 
-parsing tree 44: (0,(3,(4,(1,2))));
-recomb node 2(->2)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-55(->5) has 2 children
-0
-2
-93(->6) has 3 children
-1
-4
-55
-105(->7) has 2 children
-3
-93
+parsing tree 56: (((3,(8,16)),((((0,1),(7,11)),(6,9)),(2,(15,((4,17),(12,19)))))),((10,14),(18,(5,13))));
+recomb node 32(->44)
+recoal node 21(->155)
+recomb_node: 32
+recomb_time: 1083.282752
+coal_node: 21
+coal_time: 6044.419947
 
-parsing tree 45: (3,((0,2),(1,4)));
+parsing tree 57: (((2,(3,(8,16))),((((0,1),(7,11)),(6,9)),(15,((4,17),(12,19))))),((10,14),(18,(5,13))));
 recomb node 2(->2)
-recoal node 0(->0)
+recoal node 26(->133)
 recomb_node: 2
-recomb_time: 1686.226891
-coal_node: 0
-coal_time: 3970.359808
-recomb node 6(->93)
-recoal node 8(->93)
-recomb_node: 6
-recomb_time: 6044.419947
-coal_node: 8
-coal_time: 13901.580719
-15(->8) has 2 children
-2
-3
-41(->5) has 2 children
-0
-4
-93(->6) has 2 children
-1
-41
-105(->7) has 2 children
-15
-93
-
-parsing tree 46: ((1,(0,4)),(2,3));
-recomb node 1(->1)
-recoal node 8(->93)
-recomb_node: 1
 recomb_time: 127.874736
-coal_node: 8
+coal_node: 26
+coal_time: 6044.419947
+
+parsing tree 58: (14,((2,((3,(8,16)),(10,(18,(5,13))))),((((0,1),(7,11)),(6,9)),(15,((4,17),(12,19))))));
+recomb node 34(->85)
+recoal node 10(->10)
+recomb_node: 34
+recomb_time: 1083.282752
+coal_node: 10
+coal_time: 1686.226891
+recomb node 37(->462)
+recoal node 26(->133)
+recomb_node: 37
+recomb_time: 2596.402445
+coal_node: 26
+coal_time: 3970.359808
+
+parsing tree 59: (((15,(((0,1),(7,11)),((6,9),((4,17),(12,19))))),(10,14)),(2,((3,(8,16)),(18,(5,13)))));
+recomb node 37(->129)
+recoal node 33(->44)
+recomb_node: 37
+recomb_time: 1083.282752
+coal_node: 33
+coal_time: 6044.419947
+recomb node 10(->10)
+recoal node 14(->14)
+recomb_node: 10
+recomb_time: 0.000000
+coal_node: 14
+coal_time: 1686.226891
+recomb node 38(->354)
+recoal node 32(->127)
+recomb_node: 38
+recomb_time: 13901.580719
+coal_node: 32
 coal_time: 21036.114721
+
+parsing tree 60: (((15,(((0,1),(7,11)),((6,9),((4,17),(12,19))))),(10,14)),(2,((3,(8,16)),(18,(5,13)))));
+
+parsing tree 61: (((14,(10,15)),(((0,1),(7,11)),((6,9),((4,17),(12,19))))),(2,((3,(8,16)),(18,(5,13)))));
+recomb node 15(->15)
+recoal node 10(->10)
+recomb_node: 15
+recomb_time: 0.000000
+coal_node: 10
+coal_time: 419.268952
+
+parsing tree 62: (((2,((3,(8,16)),(18,(5,13)))),(((0,1),(7,11)),((6,9),((4,17),(12,19))))),(14,(10,15)));
+recomb node 38(->354)
+recoal node 25(->251)
+recomb_node: 38
+recomb_time: 13901.580719
+coal_node: 25
+coal_time: 21036.114721
+
+parsing tree 63: ((((2,(18,(3,(8,16)))),(((0,1),(7,11)),((6,9),((4,17),(12,19))))),(5,13)),(14,(10,15)));
+recomb node 30(->85)
+recoal node 23(->420)
+recomb_node: 30
+recomb_time: 1083.282752
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 64: ((14,(((2,(18,(3,(8,16)))),(((0,1),(7,11)),((6,9),((4,17),(12,19))))),(5,13))),(10,15));
+recomb node 35(->33)
+recoal node 25(->462)
+recomb_node: 35
+recomb_time: 1083.282752
+coal_node: 25
+coal_time: 31806.065068
+
+parsing tree 65: ((14,(((18,(3,(8,16))),(((0,1),(7,11)),((6,9),((4,17),(12,19))))),(5,13))),(2,(10,15)));
 recomb node 2(->2)
-recoal node 3(->3)
+recoal node 36(->33)
 recomb_node: 2
 recomb_time: 243.988772
-coal_node: 3
+coal_node: 36
+coal_time: 3970.359808
+
+parsing tree 66: (14,((((2,(10,15)),(18,(3,(8,16)))),(((0,1),(7,11)),((6,9),((4,17),(12,19))))),(5,13)));
+recomb node 27(->96)
+recoal node 29(->208)
+recomb_node: 27
+recomb_time: 3970.359808
+coal_node: 29
 coal_time: 6044.419947
-41(->5) has 2 children
-0
-4
-93(->6) has 2 children
-1
-41
-112(->7) has 2 children
-2
-93
-114(->8) has 2 children
-3
-112
 
-parsing tree 47: (3,(2,(1,(0,4))));
-recomb node 6(->93)
-recoal node 2(->2)
+parsing tree 67: ((((0,1),(7,11)),((5,13),(14,(6,9)))),((18,(2,(10,15))),((3,(8,16)),((4,17),(12,19)))));
+recomb node 33(->44)
+recoal node 14(->14)
+recomb_node: 33
+recomb_time: 1686.226891
+coal_node: 14
+coal_time: 2596.402445
+recomb node 21(->155)
+recoal node 25(->455)
+recomb_node: 21
+recomb_time: 3970.359808
+coal_node: 25
+coal_time: 13901.580719
+recomb node 28(->133)
+recoal node 37(->129)
+recomb_node: 28
+recomb_time: 2596.402445
+coal_node: 37
+coal_time: 9175.321658
+recomb node 23(->420)
+recoal node 38(->354)
 -----------------------Invlid SPR moves----------------------
-41(->5) has 2 children
-0
-4
-105(->6) has 2 children
-1
-41
-112(->7) has 2 children
-2
-105
-114(->8) has 2 children
-3
-112
 
-parsing tree 48: (3,(2,(1,(0,4))));
-node_arg_id1: 6, node_arg_id2: 6, node_tsk_id: 93
+parsing tree 68: (2,((((0,1),(7,11)),((5,13),(14,(6,9)))),(((3,(8,16)),(10,18)),(15,((4,17),(12,19))))));
+recomb node 37(->129)
+recoal node 38(->270)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 69: (2,(18,((((0,1),(7,11)),((5,13),(14,(6,9)))),((10,(3,(8,16))),(15,((4,17),(12,19)))))));
+recomb node 18(->18)
+recoal node 23(->398)
+recomb_node: 18
+recomb_time: 1686.226891
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 70: (((((0,1),(7,11)),((5,13),(14,(6,9)))),(2,18)),((10,(3,(8,16))),(15,((4,17),(12,19)))));
+recomb node 38(->270)
+recoal node 24(->431)
+recomb_node: 38
+recomb_time: 9175.321658
+coal_node: 24
+coal_time: 31806.065068
+recomb node 2(->2)
+recoal node 18(->18)
+recomb_node: 2
+recomb_time: 50.955204
+coal_node: 18
+coal_time: 683.863505
+
+parsing tree 71: (((10,((0,1),(7,11))),((2,18),((5,13),(14,(6,9))))),((3,(8,16)),(15,((4,17),(12,19)))));
+recomb node 10(->10)
+recoal node 21(->155)
+recomb_node: 10
+recomb_time: 1083.282752
+coal_node: 21
+coal_time: 2596.402445
+recomb node 32(->163)
+recoal node 25(->52)
+recomb_node: 32
+recomb_time: 2596.402445
+coal_node: 25
+coal_time: 3970.359808
+
+parsing tree 72: ((((10,((0,1),(7,11))),(3,(8,16))),((2,18),((5,13),(14,(6,9))))),(15,((4,17),(12,19))));
+recomb node 27(->133)
+recoal node 22(->192)
+recomb_node: 27
+recomb_time: 3970.359808
+coal_node: 22
+coal_time: 6044.419947
+
+parsing tree 73: (((10,(((0,1),(7,11)),(3,(8,16)))),((2,18),((5,13),(14,(6,9))))),(15,((4,17),(12,19))));
+recomb node 28(->133)
+recoal node 21(->155)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 74: (((((0,1),(7,11)),(3,(8,16))),(10,(15,((4,17),(12,19))))),((2,18),((5,13),(14,(6,9)))));
+recomb node 31(->259)
+recoal node 10(->10)
+recomb_node: 31
+recomb_time: 3970.359808
+coal_node: 10
+coal_time: 6044.419947
+
+parsing tree 75: (((((0,1),(7,11)),(3,(8,16))),(10,(15,((4,17),(12,19))))),((2,18),((5,13),(14,(6,9)))));
+node_arg_id1: 26, node_arg_id2: 26, node_tsk_id: 246
+upper: 9
+lower: 5
+recomb_node: 25
+recomb_time: 1083.282752
+coal_node: 33
+coal_time: 9175.321658
+
+parsing tree 76: ((0,1),(((2,18),((5,13),(14,(6,9)))),(((3,(8,16)),(7,11)),(10,(15,((4,17),(12,19)))))));
+recomb node 20(->63)
+recoal node 24(->431)
+recomb_node: 20
+recomb_time: 243.988772
+coal_node: 24
+coal_time: 31806.065068
+
+parsing tree 77: ((0,1),(((2,18),((5,13),(14,(6,9)))),((3,(10,(8,16))),((15,((4,17),(12,19))),(7,11)))));
+recomb node 10(->10)
+recoal node 37(->39)
+recomb_node: 10
+recomb_time: 127.874736
+coal_node: 37
+coal_time: 2596.402445
+recomb node 36(->42)
+recoal node 30(->259)
+recomb_node: 36
+recomb_time: 419.268952
+coal_node: 30
+coal_time: 6044.419947
+
+parsing tree 78: ((0,1),((2,((5,13),(18,(14,(6,9))))),((3,(10,(8,16))),((15,((4,17),(12,19))),(7,11)))));
+recomb node 18(->18)
+recoal node 34(->84)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 79: ((0,1),((2,((5,13),(18,(14,(6,9))))),((3,(10,(8,16))),((15,((4,17),(12,19))),(7,11)))));
+node_arg_id1: 26, node_arg_id2: 26, node_tsk_id: 45
+upper: 3
+lower: 0
+recomb_node: 4
+recomb_time: 0.000000
+coal_node: 17
+coal_time: 243.988772
+
+parsing tree 80: (((0,1),(3,(10,(8,16)))),(((15,((2,(4,17)),(12,19))),(7,11)),((5,13),(18,(14,(6,9))))));
+recomb node 24(->133)
+recoal node 20(->63)
+recomb_node: 24
+recomb_time: 3970.359808
+coal_node: 20
+coal_time: 31806.065068
+recomb node 2(->2)
+recoal node 26(->97)
+recomb_node: 2
+recomb_time: 0.000000
+coal_node: 26
+coal_time: 1686.226891
+
+parsing tree 81: (((0,1),(3,(10,(8,16)))),((15,((2,(4,17)),(12,19))),((7,11),((5,13),(18,(14,(6,9)))))));
+recomb node 32(->42)
+recoal node 36(->161)
+recomb_node: 32
+recomb_time: 243.988772
+coal_node: 36
+coal_time: 6044.419947
+
+parsing tree 82: (((0,1),(3,(10,(8,16)))),((15,((2,(12,19)),(4,17))),((7,11),((5,13),(18,(14,(6,9)))))));
+recomb node 35(->129)
+recoal node 2(->2)
+recomb_node: 35
+recomb_time: 1083.282752
+coal_node: 2
+coal_time: 1686.226891
+
+parsing tree 83: ((((0,1),(15,((2,(12,19)),(4,17)))),((7,11),((5,13),(18,(14,(6,9)))))),(3,(10,(8,16))));
+recomb node 20(->63)
+recoal node 24(->259)
+recomb_node: 20
+recomb_time: 1686.226891
+coal_node: 24
+coal_time: 6044.419947
+
+parsing tree 84: (((((0,1),(7,11)),((2,19),(12,(4,17)))),((5,13),(18,(14,(6,9))))),(15,(3,(10,(8,16)))));
+recomb node 34(->42)
+recoal node 20(->63)
+recomb_node: 34
+recomb_time: 243.988772
+coal_node: 20
+coal_time: 2596.402445
+recomb node 12(->12)
+recoal node 28(->97)
+recomb_node: 12
+recomb_time: 419.268952
+coal_node: 28
+coal_time: 2596.402445
+recomb node 15(->15)
+recoal node 27(->133)
+recomb_node: 15
+recomb_time: 127.874736
+coal_node: 27
+coal_time: 31806.065068
+
+parsing tree 85: (((((0,1),(7,11)),((2,(12,(3,19))),(4,17))),((5,13),(18,(14,(6,9))))),(15,(10,(8,16))));
+recomb node 3(->3)
+recoal node 19(->19)
+recomb_node: 3
+recomb_time: 0.000000
+coal_node: 19
+coal_time: 243.988772
+recomb node 12(->12)
+recoal node 27(->133)
+recomb_node: 12
+recomb_time: 127.874736
+coal_node: 27
+coal_time: 1083.282752
+
+parsing tree 86: (15,(((((0,1),(7,11)),((2,(12,(3,19))),(4,17))),(10,(8,16))),((5,13),(18,(14,(6,9))))));
+recomb node 35(->77)
+recoal node 22(->319)
+recomb_node: 35
+recomb_time: 9175.321658
+coal_node: 22
+coal_time: 13901.580719
+
+parsing tree 87: ((((15,((0,1),(7,11))),((2,(12,(3,19))),(4,17))),((5,13),(18,(14,(6,9))))),(10,(8,16)));
+recomb node 22(->319)
+recoal node 37(->161)
+recomb_node: 22
+recomb_time: 9175.321658
+coal_node: 37
+coal_time: 21036.114721
+recomb node 15(->15)
+recoal node 21(->156)
+recomb_node: 15
+recomb_time: 419.268952
+coal_node: 21
+coal_time: 2596.402445
+
+parsing tree 88: ((((15,((0,1),(7,11))),((2,(12,(3,19))),(4,17))),((5,13),(18,(6,(9,14))))),(10,(8,16)));
+recomb node 9(->9)
+recoal node 14(->14)
+recomb_node: 9
+recomb_time: 683.863505
+coal_node: 14
+coal_time: 1686.226891
+
+parsing tree 89: ((((5,13),(18,(6,(9,14)))),(((15,(0,1)),(7,11)),((2,(12,(3,19))),(4,17)))),(10,(8,16)));
+recomb node 33(->42)
+recoal node 22(->190)
+recomb_node: 33
+recomb_time: 1686.226891
+coal_node: 22
+coal_time: 9175.321658
+
+parsing tree 90: ((((5,13),(18,(6,(9,14)))),(((15,(0,1)),(2,(4,17))),((12,(3,19)),(7,11)))),(10,(8,16)));
+recomb node 27(->90)
+recoal node 32(->42)
+recomb_node: 27
+recomb_time: 1083.282752
+coal_node: 32
+coal_time: 9175.321658
+recomb node 21(->190)
+recoal node 37(->220)
+recomb_node: 21
+recomb_time: 3970.359808
+coal_node: 37
+coal_time: 6044.419947
+
+parsing tree 91: ((((5,18),(6,(9,14))),(((15,(0,1)),(2,(4,17))),((12,(3,19)),(7,11)))),(13,(10,(8,16))));
+recomb node 18(->18)
+recoal node 5(->5)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 92: ((((5,18),(6,(9,14))),(((15,(0,1)),(2,(4,17))),((12,(3,19)),(7,11)))),(13,(16,(8,10))));
+recomb node 10(->10)
+recoal node 8(->8)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 93: (((15,((0,1),((5,18),(6,(9,14))))),((2,(4,17)),((12,(3,19)),(7,11)))),(13,(16,(8,10))));
+recomb node 21(->190)
+recoal node 37(->319)
+recomb_node: 21
+recomb_time: 2596.402445
+coal_node: 37
+coal_time: 21036.114721
+recomb node 36(->161)
+recoal node 20(->63)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 94: ((15,(((0,1),((5,18),(6,(9,14)))),((2,(4,17)),((12,(3,19)),(7,11))))),(13,(16,(8,10))));
+recomb node 15(->15)
+recoal node 23(->415)
+recomb_node: 15
+recomb_time: 419.268952
+coal_node: 23
+coal_time: 21036.114721
+
+parsing tree 95: ((((0,1),((5,18),(6,(9,14)))),((2,(4,17)),((12,(3,19)),(7,11)))),((16,(8,10)),(13,15)));
+recomb node 15(->15)
+recoal node 13(->13)
+recomb_node: 15
+recomb_time: 0.000000
+coal_node: 13
+coal_time: 419.268952
+
+parsing tree 96: ((((0,1),((5,18),(6,(9,14)))),((16,(8,10)),(13,15))),((2,(4,17)),((12,(3,19)),(7,11))));
+recomb node 21(->231)
+recoal node 34(->160)
+recomb_node: 21
+recomb_time: 6044.419947
+coal_node: 34
+coal_time: 13901.580719
+
+parsing tree 97: ((((0,1),(18,(6,(9,14)))),((16,(8,10)),(13,15))),(((12,(3,19)),(7,11)),((2,5),(4,17))));
+recomb node 5(->5)
+recoal node 2(->2)
+recomb_node: 5
+recomb_time: 50.955204
+coal_node: 2
+coal_time: 127.874736
+
+parsing tree 98: (((0,1),(18,(6,(9,14)))),(((16,(8,10)),(13,15)),(((12,(3,19)),(7,11)),((2,5),(4,17)))));
+recomb node 21(->231)
+recoal node 23(->415)
+recomb_node: 21
+recomb_time: 6044.419947
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 99: ((((0,1),(18,(6,(9,14)))),((2,5),(4,17))),((12,(3,19)),((7,11),((16,(8,10)),(13,15)))));
+recomb node 37(->97)
+recoal node 21(->231)
+recomb_node: 37
+recomb_time: 6044.419947
+coal_node: 21
+coal_time: 21036.114721
+recomb node 34(->160)
+recoal node 31(->42)
+recomb_node: 34
+recomb_time: 6044.419947
+coal_node: 31
+coal_time: 6044.419947
+
+parsing tree 100: ((((0,1),(18,((2,5),(4,17)))),(6,(9,14))),((12,(3,19)),((7,11),((16,(8,10)),(13,15)))));
+recomb node 38(->97)
+recoal node 18(->18)
+recomb_node: 38
+recomb_time: 683.863505
+coal_node: 18
+coal_time: 2596.402445
+recomb node 20(->63)
+recoal node 22(->415)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 101: (((6,(9,14)),(((0,1),(12,(3,19))),(18,((2,5),(4,17))))),((7,11),((16,(8,10)),(13,15))));
+recomb node 28(->90)
+recoal node 20(->63)
+recomb_node: 28
+recomb_time: 1686.226891
+coal_node: 20
+coal_time: 6044.419947
+
+parsing tree 102: (((6,(9,14)),(((0,1),(12,(3,19))),(18,((2,5),(4,17))))),((7,11),((16,(8,10)),(13,15))));
+node_arg_id1: 26, node_arg_id2: 26, node_tsk_id: 180
+upper: 8
+lower: 0
+recomb_node: 18
+recomb_time: 683.863505
+coal_node: 37
+coal_time: 2596.402445
+
+parsing tree 103: (((6,(9,14)),(((0,1),(12,(3,19))),((2,5),(4,17)))),(18,((7,11),((16,(8,10)),(13,15)))));
+recomb node 18(->18)
+recoal node 31(->237)
+recomb_node: 18
+recomb_time: 50.955204
+coal_node: 31
+coal_time: 9175.321658
+
+parsing tree 104: (((16,(((0,1),(12,(3,19))),((2,5),(4,17)))),(6,(9,14))),(((7,11),(13,15)),(18,(8,10))));
+recomb node 32(->76)
+recoal node 18(->18)
+recomb_node: 32
+recomb_time: 2596.402445
+coal_node: 18
+coal_time: 6044.419947
+recomb node 16(->16)
+recoal node 38(->262)
+recomb_node: 16
+recomb_time: 3970.359808
+coal_node: 38
+coal_time: 13901.580719
+
+parsing tree 105: ((16,(((0,1),(12,(3,19))),((2,5),(4,17)))),(((6,(9,14)),(18,(8,10))),((7,11),(13,15))));
+recomb node 29(->84)
+recoal node 34(->122)
+recomb_node: 29
+recomb_time: 6044.419947
+coal_node: 34
+coal_time: 9175.321658
+
+parsing tree 106: ((16,(((0,1),((2,5),(4,17))),(12,(3,19)))),(((6,(9,14)),(18,(8,10))),((7,11),(13,15))));
+recomb node 20(->63)
+recoal node 36(->97)
+recomb_node: 20
+recomb_time: 1083.282752
+coal_node: 36
+coal_time: 6044.419947
+
+parsing tree 107: (((16,(((0,1),((2,5),(4,17))),(12,(3,19)))),(13,15)),(((6,(9,14)),(7,11)),(18,(8,10))));
+recomb node 36(->25)
+recoal node 23(->359)
+recomb_node: 36
+recomb_time: 419.268952
+coal_node: 23
+coal_time: 21036.114721
+recomb node 29(->84)
+recoal node 31(->42)
+recomb_node: 29
+recomb_time: 2596.402445
+coal_node: 31
+coal_time: 9175.321658
+
+parsing tree 108: ((((0,1),((2,5),(4,17))),((12,(3,19)),(13,15))),(((6,(9,14)),(16,(7,11))),(18,(8,10))));
+recomb node 21(->262)
+recoal node 24(->383)
+recomb_node: 21
+recomb_time: 6044.419947
+coal_node: 24
+coal_time: 31806.065068
+recomb node 16(->16)
+recoal node 32(->42)
+recomb_node: 16
+recomb_time: 243.988772
+coal_node: 32
+coal_time: 1083.282752
+
+parsing tree 109: ((((0,1),((2,5),(4,17))),((12,(3,19)),(13,15))),(((6,(9,14)),(18,(8,10))),(16,(7,11))));
+recomb node 34(->122)
+recoal node 29(->84)
+recomb_node: 34
+recomb_time: 6044.419947
+coal_node: 29
+coal_time: 6044.419947
+
+parsing tree 110: ((((0,1),((2,5),(4,17))),((12,(3,19)),(13,15))),((10,((9,14),(18,(6,8)))),(16,(7,11))));
+recomb node 10(->10)
+recoal node 30(->122)
+recomb_node: 10
+recomb_time: 1686.226891
+coal_node: 30
+coal_time: 6044.419947
+recomb node 6(->6)
+recoal node 8(->8)
+recomb_node: 6
+recomb_time: 1083.282752
+coal_node: 8
+coal_time: 1686.226891
+
+parsing tree 111: ((((6,(0,1)),((2,5),(4,17))),((12,(3,19)),(13,15))),((16,(7,11)),(10,((8,18),(9,14)))));
+recomb node 6(->6)
+recoal node 20(->63)
+recomb_node: 6
+recomb_time: 1083.282752
+coal_node: 20
+coal_time: 2596.402445
+
+parsing tree 112: ((((6,(0,1)),((2,5),(4,17))),((12,(3,19)),(13,15))),((14,(16,(7,11))),(10,(8,(9,18)))));
+recomb node 14(->14)
+recoal node 31(->82)
+recomb_node: 14
+recomb_time: 419.268952
+coal_node: 31
+coal_time: 9175.321658
+recomb node 8(->8)
+recoal node 37(->79)
+recomb_node: 8
+recomb_time: 243.988772
+coal_node: 37
+coal_time: 1686.226891
+
+parsing tree 113: (((6,(0,1)),(((12,(3,19)),(13,15)),((2,5),(4,17)))),((14,(16,(7,11))),(10,(8,(9,18)))));
+recomb node 29(->168)
+recoal node 37(->97)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 114: (((6,(0,1)),(((12,(3,19)),(13,15)),((2,5),(4,17)))),((14,(16,(7,11))),(10,(8,(9,18)))));
+node_arg_id1: 21, node_arg_id2: 21, node_tsk_id: 108
+upper: 8
+lower: 0
+recomb_node: 6
+recomb_time: 1083.282752
+coal_node: 20
+coal_time: 6044.419947
+
+parsing tree 115: (((6,(0,1)),((12,(3,19)),(13,15))),(((2,5),(4,17)),((14,(16,(7,11))),(10,(8,(9,18))))));
+recomb node 37(->97)
+recoal node 38(->267)
+recomb_node: 37
+recomb_time: 6044.419947
+coal_node: 38
+coal_time: 9175.321658
+
+parsing tree 116: (((6,(14,(0,1))),((12,(3,19)),(13,15))),(((16,(7,11)),(10,(8,(9,18)))),((2,5),(4,17))));
+recomb node 14(->14)
+recoal node 20(->63)
+recomb_node: 14
+recomb_time: 1083.282752
+coal_node: 20
+coal_time: 2596.402445
+
+parsing tree 117: (((6,(14,(0,1))),((12,(3,19)),(13,15))),(((2,5),(4,17)),(((7,11),(10,16)),(8,(9,18)))));
+recomb node 10(->10)
+recoal node 16(->16)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 118: (((6,(14,(0,1))),((12,(3,19)),(13,15))),((8,((7,11),((9,18),(10,16)))),((2,5),(4,17))));
+recomb node 34(->37)
+recoal node 35(->32)
+recomb_node: 34
+recomb_time: 683.863505
+coal_node: 35
+coal_time: 9175.321658
+
+parsing tree 119: (((6,(14,(0,1))),((12,(3,19)),(13,15))),((8,((7,11),((9,18),(10,16)))),((2,5),(4,17))));
+node_arg_id1: 30, node_arg_id2: 30, node_tsk_id: 168
+upper: 8
+lower: 6
+recomb_node: 29
+recomb_time: 1083.282752
+coal_node: 36
+coal_time: 3970.359808
+
+parsing tree 120: ((6,(14,(0,1))),((((7,11),((2,5),(4,17))),(8,((9,18),(10,16)))),((12,(3,19)),(13,15))));
+recomb node 31(->42)
+recoal node 37(->97)
+recomb_node: 31
+recomb_time: 3970.359808
+coal_node: 37
+coal_time: 6044.419947
+recomb node 30(->195)
+recoal node 27(->363)
+recomb_node: 30
+recomb_time: 3970.359808
+coal_node: 27
+coal_time: 31806.065068
+
+parsing tree 121: (((((2,5),(4,17)),((7,11),(13,15))),(12,(3,19))),((8,(6,(14,(0,1)))),((9,18),(10,16))));
+recomb node 37(->25)
+recoal node 32(->42)
+recomb_node: 37
+recomb_time: 419.268952
+coal_node: 32
+coal_time: 1083.282752
+recomb node 33(->330)
+recoal node 28(->400)
+recomb_node: 33
+recomb_time: 9175.321658
+coal_node: 28
+coal_time: 31806.065068
+recomb node 22(->116)
+recoal node 8(->8)
+recomb_node: 22
+recomb_time: 6044.419947
+coal_node: 8
+coal_time: 9175.321658
+
+parsing tree 122: (((((2,5),(4,17)),((7,11),(13,15))),(12,(3,19))),((8,((0,1),(6,14))),((9,18),(10,16))));
+recomb node 20(->63)
+recoal node 22(->116)
+recomb_node: 20
+recomb_time: 683.863505
+coal_node: 22
+coal_time: 6044.419947
+
+parsing tree 123: (((((2,5),(4,17)),((7,11),(13,15))),(12,(3,19))),((8,((0,1),(6,(14,16)))),(10,(9,18))));
+recomb node 16(->16)
+recoal node 14(->14)
+recomb_node: 16
+recomb_time: 243.988772
+coal_node: 14
+coal_time: 1686.226891
+
+parsing tree 124: (((((2,5),(4,17)),((7,11),(13,15))),(12,(3,19))),((8,((0,1),(6,(14,16)))),(10,(9,18))));
+node_arg_id1: 27, node_arg_id2: 27, node_tsk_id: 367
+upper: 11
+lower: 10
+recomb_node: 26
+recomb_time: 6044.419947
+coal_node: 29
+coal_time: 31806.065068
+
+parsing tree 125: (((((2,5),(4,17)),((7,11),(13,15))),(12,(3,19))),(((0,1),(6,(14,16))),((8,10),(9,18))));
+recomb node 8(->8)
+recoal node 10(->10)
+recomb_node: 8
+recomb_time: 127.874736
+coal_node: 10
+coal_time: 9175.321658
+
+parsing tree 126: ((8,((0,1),(14,16))),(((((7,11),(13,15)),((6,10),((2,5),(4,17)))),(9,18)),(12,(3,19))));
+recomb node 32(->37)
+recoal node 26(->266)
+recomb_node: 32
+recomb_time: 1686.226891
+coal_node: 26
+coal_time: 21036.114721
+recomb node 10(->10)
+recoal node 6(->6)
+recomb_node: 10
+recomb_time: 127.874736
+coal_node: 6
+coal_time: 2596.402445
+recomb node 22(->330)
+recoal node 34(->97)
+recomb_node: 22
+recomb_time: 2596.402445
+coal_node: 34
+coal_time: 2596.402445
+
+parsing tree 127: (((12,(3,19)),(((9,18),((6,10),((2,5),(4,17)))),(((0,1),(14,16)),(8,13)))),(15,(7,11)));
+recomb node 13(->13)
+recoal node 8(->8)
+recomb_node: 13
+recomb_time: 50.955204
+coal_node: 8
+coal_time: 9175.321658
+recomb node 37(->124)
+recoal node 23(->462)
+recomb_node: 37
+recomb_time: 1686.226891
+coal_node: 23
+coal_time: 31806.065068
+recomb node 22(->330)
+recoal node 28(->427)
+recomb_node: 22
+recomb_time: 9175.321658
+coal_node: 28
+coal_time: 21036.114721
+
+parsing tree 128: (((12,(3,19)),((8,((0,1),(14,16))),((6,((2,5),(4,17))),((9,18),(10,13))))),(15,(7,11)));
+recomb node 13(->13)
+recoal node 10(->10)
+recomb_node: 13
+recomb_time: 243.988772
+coal_node: 10
+coal_time: 683.863505
+recomb node 22(->330)
+recoal node 33(->37)
+recomb_node: 22
+recomb_time: 683.863505
+coal_node: 33
+coal_time: 6044.419947
+
+parsing tree 129: (((6,((2,5),(4,17))),((9,18),(10,13))),((((0,1),(14,16)),(15,(7,11))),(8,(12,(3,19)))));
+recomb node 23(->427)
+recoal node 25(->462)
+recomb_node: 23
+recomb_time: 21036.114721
+coal_node: 25
+coal_time: 31806.065068
+recomb node 21(->116)
+recoal node 32(->124)
+recomb_node: 21
+recomb_time: 6044.419947
+coal_node: 32
+coal_time: 9175.321658
+
+parsing tree 130: (((6,((2,5),(4,17))),((9,18),(10,13))),((((0,1),(14,16)),(15,(7,11))),(8,(12,(3,19)))));
+node_arg_id1: 28, node_arg_id2: 28, node_tsk_id: 427
+upper: 10
+lower: 8
+recomb_node: 27
+recomb_time: 3970.359808
+coal_node: 34
+coal_time: 6044.419947
+
+parsing tree 131: (((((0,1),(14,16)),(15,(7,11))),(12,(3,19))),(((9,18),(10,13)),((6,8),((2,5),(4,17)))));
+recomb node 8(->8)
+recoal node 6(->6)
+recomb_node: 8
+recomb_time: 419.268952
+coal_node: 6
+coal_time: 2596.402445
+
+parsing tree 132: (((((0,1),(14,16)),(15,(7,11))),(((9,18),(10,13)),((6,8),((2,5),(4,17))))),(12,(3,19)));
+recomb node 22(->256)
+recoal node 28(->344)
+recomb_node: 22
+recomb_time: 9175.321658
+coal_node: 28
+coal_time: 21036.114721
+
+parsing tree 133: (((((0,1),(14,16)),(((9,18),(10,13)),((6,8),((2,5),(4,17))))),(15,(7,11))),(12,(3,19)));
+recomb node 32(->124)
+recoal node 23(->427)
+recomb_node: 32
+recomb_time: 1686.226891
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 134: ((((0,1),(14,16)),(((9,18),(10,13)),((6,8),((2,5),(4,17))))),((12,(3,19)),(15,(7,11))));
+recomb node 22(->427)
+recoal node 24(->462)
+recomb_node: 22
+recomb_time: 21036.114721
+coal_node: 24
+coal_time: 31806.065068
+
+parsing tree 135: (((0,1),(14,16)),(((((9,18),(10,13)),((6,8),((2,5),(4,17)))),(12,(3,19))),(15,(7,11))));
+recomb node 27(->344)
+recoal node 29(->90)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 136: ((((((0,1),(14,16)),((6,8),((2,5),(4,17)))),(19,(3,12))),((15,(7,11)),(10,13))),(9,18));
+recomb node 3(->3)
+recoal node 12(->12)
+recomb_node: 3
+recomb_time: 127.874736
+coal_node: 12
+coal_time: 1083.282752
+recomb node 35(->36)
+recoal node 32(->124)
+recomb_node: 35
+recomb_time: 3970.359808
+coal_node: 32
+coal_time: 6044.419947
+recomb node 33(->37)
+recoal node 28(->422)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 137: ((((((0,1),(14,16)),(8,((2,5),(4,17)))),((3,6),(12,19))),((15,(7,11)),(10,13))),(9,18));
+recomb node 3(->3)
+recoal node 6(->6)
+recomb_node: 3
+recomb_time: 50.955204
+coal_node: 6
+coal_time: 243.988772
+recomb node 29(->90)
+recoal node 36(->90)
+recomb_node: 29
+recomb_time: 243.988772
+coal_node: 36
+coal_time: 1686.226891
+
+parsing tree 138: ((((0,1),((9,18),(14,16))),(8,((2,5),(4,17)))),(((3,6),(12,19)),((15,(7,11)),(10,13))));
+recomb node 34(->37)
+recoal node 37(->22)
+recomb_node: 34
+recomb_time: 1686.226891
+coal_node: 37
+coal_time: 2596.402445
+recomb node 22(->313)
+recoal node 24(->422)
+recomb_node: 22
+recomb_time: 9175.321658
+coal_node: 24
+coal_time: 31806.065068
+
+parsing tree 139: ((0,1),(((8,((2,5),(4,17))),((9,18),(14,16))),(((3,6),(12,19)),((15,(7,11)),(10,13)))));
+recomb node 20(->63)
+recoal node 23(->402)
+recomb_node: 20
+recomb_time: 127.874736
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 140: ((0,1),(((8,((2,5),(4,17))),((9,18),(14,16))),(((3,6),(12,19)),((15,(7,11)),(10,13)))));
+node_arg_id1: 25, node_arg_id2: 25, node_tsk_id: 313
+upper: 11
+lower: 8
+recomb_node: 24
+recomb_time: 3970.359808
+coal_node: 33
+coal_time: 13901.580719
+
+parsing tree 141: ((0,1),((((3,6),(12,19)),(10,13)),((8,((2,5),(4,17))),((15,(7,11)),((9,18),(14,16))))));
+recomb node 31(->124)
+recoal node 33(->119)
+recomb_node: 31
+recomb_time: 1083.282752
+coal_node: 33
+coal_time: 13901.580719
+
+parsing tree 142: ((0,1),(((8,((2,5),(4,17))),((9,18),(14,16))),(((15,((3,6),(12,19))),(7,11)),(10,13))));
+recomb node 29(->42)
+recoal node 28(->135)
+recomb_node: 29
+recomb_time: 419.268952
+coal_node: 28
+coal_time: 3970.359808
+recomb node 15(->15)
+recoal node 28(->135)
+recomb_node: 15
+recomb_time: 1686.226891
+coal_node: 28
+coal_time: 3970.359808
+
+parsing tree 143: (((0,1),(8,((2,5),(4,17)))),(((15,((3,6),(12,19))),(7,11)),(((9,18),(14,16)),(10,13))));
+recomb node 30(->241)
+recoal node 38(->402)
+recomb_node: 30
+recomb_time: 9175.321658
+coal_node: 38
+coal_time: 31806.065068
+recomb node 24(->218)
+recoal node 20(->63)
+recomb_node: 24
+recomb_time: 6044.419947
+coal_node: 20
+coal_time: 31806.065068
+
+parsing tree 144: (((0,1),(8,((2,5),(4,17)))),(((15,((3,6),(12,19))),(7,11)),(((9,18),(14,16)),(10,13))));
+node_arg_id1: 24, node_arg_id2: 24, node_tsk_id: 218
+upper: 8
+lower: 0
+recomb_node: 8
+recomb_time: 50.955204
+coal_node: 36
+coal_time: 3970.359808
+
+parsing tree 145: (((0,1),(8,((2,5),(4,17)))),((((15,((3,6),(12,19))),(7,11)),(10,13)),((9,18),(14,16))));
+recomb node 32(->119)
+recoal node 37(->402)
+recomb_node: 32
+recomb_time: 21036.114721
+coal_node: 37
+coal_time: 31806.065068
+
+parsing tree 146: ((0,1),((((15,((3,6),(12,19))),(7,11)),(10,13)),((8,((2,5),(4,17))),((9,18),(14,16)))));
+recomb node 24(->214)
+recoal node 33(->119)
+recomb_node: 24
+recomb_time: 3970.359808
+coal_node: 33
+coal_time: 3970.359808
+
+parsing tree 147: ((0,1),((((15,((3,6),(12,19))),(7,11)),(10,13)),((8,((2,5),(4,17))),((9,18),(14,16)))));
+node_arg_id1: 31, node_arg_id2: 31, node_tsk_id: 342
+upper: 11
+lower: 9
+recomb_node: 30
+recomb_time: 6044.419947
+coal_node: 34
+coal_time: 13901.580719
+
+parsing tree 148: (((8,((2,5),(4,17))),(9,18)),((((0,1),(14,16)),(10,13)),((15,((3,6),(12,19))),(7,11))));
+recomb node 36(->22)
+recoal node 34(->36)
+recomb_node: 36
+recomb_time: 2596.402445
+coal_node: 34
+coal_time: 13901.580719
+recomb node 20(->63)
+recoal node 36(->22)
+recomb_node: 20
+recomb_time: 419.268952
+coal_node: 36
+coal_time: 6044.419947
+
+parsing tree 149: (16,(14,((((0,1),(10,13)),((15,((3,6),(12,19))),(7,11))),((8,((2,5),(4,17))),(9,18)))));
+recomb node 36(->22)
+recoal node 23(->422)
+recomb_node: 36
+recomb_time: 1686.226891
+coal_node: 23
+coal_time: 31806.065068
+recomb node 16(->16)
+recoal node 21(->116)
+recomb_node: 16
+recomb_time: 127.874736
+coal_node: 21
+coal_time: 31806.065068
+
+parsing tree 150: (((((0,1),(10,13)),((15,((3,6),(12,19))),(7,11))),((8,((2,5),(4,17))),(9,18))),(14,16));
+recomb node 14(->14)
+recoal node 16(->16)
+recomb_node: 14
+recomb_time: 1083.282752
+coal_node: 16
+coal_time: 1686.226891
+
+parsing tree 151: (14,((((0,1),(10,13)),((15,((3,6),(12,19))),(7,11))),(16,((8,((2,5),(4,17))),(9,18)))));
+recomb node 16(->16)
+recoal node 28(->248)
+recomb_node: 16
+recomb_time: 419.268952
+coal_node: 28
+coal_time: 9175.321658
+
+parsing tree 152: (14,((((0,1),(10,13)),((15,((3,6),(12,19))),(7,11))),(16,((8,((2,5),(4,17))),(9,18)))));
+node_arg_id1: 31, node_arg_id2: 31, node_tsk_id: 135
+upper: 6
+lower: 3
+recomb_node: 30
+recomb_time: 243.988772
+coal_node: 37
+coal_time: 1083.282752
+
+parsing tree 153: (14,((16,(((0,1),(10,13)),((15,((3,6),(12,19))),(7,11)))),((8,((2,5),(4,17))),(9,18))));
+recomb node 16(->16)
+recoal node 22(->379)
+recomb_node: 16
+recomb_time: 6044.419947
+coal_node: 22
+coal_time: 13901.580719
+
+parsing tree 154: (14,((16,((((0,1),(10,13)),(7,11)),(15,((3,6),(12,19))))),((8,((2,5),(4,17))),(9,18))));
+recomb node 21(->154)
+recoal node 34(->42)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 155: ((16,((15,((3,6),(12,19))),(((0,1),(10,13)),(14,(7,11))))),((8,((2,5),(4,17))),(9,18)));
+recomb node 14(->14)
+recoal node 34(->42)
+recomb_node: 14
+recomb_time: 127.874736
+coal_node: 34
+coal_time: 6044.419947
+
+parsing tree 156: ((16,((14,((0,1),(10,13))),((15,((3,6),(12,19))),(7,11)))),((8,((2,5),(4,17))),(9,18)));
+recomb node 33(->42)
+recoal node 32(->170)
+recomb_node: 33
+recomb_time: 3970.359808
+coal_node: 32
+coal_time: 9175.321658
+
+parsing tree 157: (((14,((0,1),(10,13))),((8,((2,5),(4,17))),(9,18))),(16,((15,((3,6),(12,19))),(7,11))));
+recomb node 22(->379)
+recoal node 28(->248)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 158: (((14,((0,1),(10,13))),((9,18),((2,5),(4,17)))),(16,((15,(8,((3,6),(12,19)))),(7,11))));
+recomb node 8(->8)
+recoal node 30(->112)
+recomb_node: 8
+recomb_time: 243.988772
+coal_node: 30
+coal_time: 2596.402445
+
+parsing tree 159: (((14,((0,1),(10,13))),((9,18),((2,5),(4,17)))),((15,(8,(16,((3,6),(12,19))))),(7,11)));
+recomb node 16(->16)
+recoal node 29(->112)
+recomb_node: 16
+recomb_time: 683.863505
+coal_node: 29
+coal_time: 1083.282752
+
+parsing tree 160: (((14,(((0,1),(10,13)),(7,11))),((9,18),((2,5),(4,17)))),(15,(8,(16,((3,6),(12,19))))));
+recomb node 34(->42)
+recoal node 21(->154)
+recomb_node: 34
+recomb_time: 419.268952
+coal_node: 21
+coal_time: 6044.419947
+
+parsing tree 161: ((14,(((0,1),(10,13)),(7,11))),(((9,18),((2,5),(4,17))),(15,(8,(16,((3,6),(12,19)))))));
+recomb node 23(->303)
+recoal node 25(->422)
+recomb_node: 23
+recomb_time: 6044.419947
+coal_node: 25
+coal_time: 31806.065068
+
+parsing tree 162: ((14,(((0,1),(10,13)),(7,11))),(((9,18),((2,5),(4,17))),(12,(15,(8,(16,(19,(3,6))))))));
+recomb node 12(->12)
+recoal node 33(->196)
+recomb_node: 12
+recomb_time: 683.863505
+coal_node: 33
+coal_time: 9175.321658
+
+parsing tree 163: ((14,(((0,1),(10,13)),(7,11))),(((9,18),((2,5),(4,17))),(12,(15,(16,(8,(19,(3,6))))))));
+recomb node 8(->8)
+recoal node 30(->112)
+recomb_node: 8
+recomb_time: 50.955204
+coal_node: 30
+coal_time: 1083.282752
+
+parsing tree 164: ((((0,1),(10,13)),(7,11)),((((15,(16,(8,(19,(3,6))))),(9,18)),(12,14)),((2,5),(4,17))));
+recomb node 36(->37)
+recoal node 33(->196)
+recomb_node: 36
+recomb_time: 419.268952
+coal_node: 33
+coal_time: 6044.419947
+recomb node 14(->14)
+recoal node 12(->12)
+recomb_node: 14
+recomb_time: 0.000000
+coal_node: 12
+coal_time: 2596.402445
+
+parsing tree 165: ((((0,1),(10,13)),(7,11)),((15,((2,5),(4,17))),(((16,(8,(19,(3,6)))),(9,18)),(12,14))));
+recomb node 15(->15)
+recoal node 38(->97)
+recomb_node: 15
+recomb_time: 2596.402445
+coal_node: 38
+coal_time: 13901.580719
+
+parsing tree 166: ((((0,1),(10,13)),(7,11)),(15,((((16,(8,(19,(3,6)))),(9,18)),(12,14)),((2,5),(4,17)))));
+recomb node 37(->97)
+recoal node 32(->240)
+recomb_node: 37
+recomb_time: 683.863505
+coal_node: 32
+coal_time: 9175.321658
+
+parsing tree 167: ((((0,1),(10,13)),(7,11)),(16,(15,((((8,(19,(3,6))),(9,18)),(12,14)),((2,5),(4,17))))));
+recomb node 16(->16)
+recoal node 27(->404)
+recomb_node: 16
+recomb_time: 1686.226891
+coal_node: 27
+coal_time: 13901.580719
+
+parsing tree 168: (((0,1),(10,13)),(16,(15,(((7,11),((2,5),(4,17))),(((8,(19,(3,6))),(9,18)),(12,14))))));
+recomb node 34(->42)
+recoal node 38(->97)
+recomb_node: 34
+recomb_time: 2596.402445
+coal_node: 38
+coal_time: 9175.321658
+
+parsing tree 169: (((0,1),(10,13)),(16,(15,(((4,(17,(2,5))),(7,11)),(((8,(19,(3,6))),(9,18)),(12,14))))));
+recomb node 4(->4)
+recoal node 38(->97)
+recomb_node: 4
+recomb_time: 127.874736
+coal_node: 38
+coal_time: 1686.226891
+
+parsing tree 170: (((0,1),(10,13)),(16,(15,((((4,(17,(2,5))),(9,18)),(7,11)),((8,(19,(3,6))),(12,14))))));
+recomb node 36(->37)
+recoal node 25(->142)
+recomb_node: 36
+recomb_time: 1686.226891
+coal_node: 25
+coal_time: 3970.359808
+
+parsing tree 171: ((((0,1),(10,13)),(12,14)),(16,(15,((((4,(17,(2,5))),(9,18)),(7,11)),(8,(19,(3,6)))))));
+recomb node 38(->109)
+recoal node 21(->154)
+recomb_node: 38
+recomb_time: 3970.359808
+coal_node: 21
+coal_time: 6044.419947
+
+parsing tree 172: ((16,(((0,1),(10,13)),(12,14))),(15,((((4,(17,(2,5))),(9,18)),(7,11)),(8,(19,(3,6))))));
+recomb node 16(->16)
+recoal node 22(->229)
+recomb_node: 16
+recomb_time: 419.268952
+coal_node: 22
+coal_time: 9175.321658
+
+parsing tree 173: ((16,(((0,1),(10,13)),(12,14))),(15,((((17,(2,5)),(9,18)),(4,(7,11))),(8,(19,(3,6))))));
+recomb node 4(->4)
+recoal node 35(->42)
+recomb_node: 4
+recomb_time: 127.874736
+coal_node: 35
+coal_time: 2596.402445
+
+parsing tree 174: ((16,(((0,1),(10,13)),(12,14))),(15,((((17,(2,5)),(9,18)),(4,(7,11))),(8,(19,(3,6))))));
+node_arg_id1: 30, node_arg_id2: 30, node_tsk_id: 404
 upper: 12
 lower: 0
-recomb_node: 1
-recomb_time: 2596.402445
-coal_node: 5
+recomb_node: 15
+recomb_time: 50.955204
+coal_node: 29
 coal_time: 21036.114721
-41(->5) has 2 children
-0
-4
-85(->6) has 2 children
-2
-41
-103(->7) has 2 children
-1
-85
-114(->8) has 2 children
-3
-103
 
-parsing tree 49: (3,(1,(2,(0,4))));
-recomb node 5(->41)
-recoal node 2(->2)
-recomb_node: 5
-recomb_time: 2596.402445
-coal_node: 2
-coal_time: 6044.419947
-16(->8) has 2 children
-2
-3
-41(->5) has 2 children
-0
-4
-93(->6) has 2 children
-1
-41
-103(->7) has 2 children
-16
-93
+parsing tree 175: ((((0,1),(10,13)),(12,14)),(15,(((4,(7,11)),((17,(2,5)),(16,(9,18)))),(8,(19,(3,6))))));
+recomb node 16(->16)
+recoal node 36(->37)
+recomb_node: 16
+recomb_time: 243.988772
+coal_node: 36
+coal_time: 3970.359808
 
-parsing tree 50: ((1,(0,4)),(2,3));
-recomb node 2(->2)
-recoal node 3(->3)
-recomb_node: 2
-recomb_time: 1083.282752
-coal_node: 3
-coal_time: 9175.321658
-41(->5) has 2 children
-0
-4
-93(->6) has 2 children
-1
-41
-103(->7) has 2 children
-3
-93
-114(->8) has 2 children
-2
-103
-
-parsing tree 51: (2,(3,(1,(0,4))));
-recomb node 2(->2)
-recoal node 7(->103)
-recomb_node: 2
-recomb_time: 1686.226891
-coal_node: 7
-coal_time: 48063.865571
-41(->5) has 2 children
-0
-4
-77(->8) has 2 children
-1
-3
-103(->6) has 2 children
-41
-77
-114(->7) has 2 children
-2
-103
-
-parsing tree 52: (2,((0,4),(1,3)));
-recomb node 5(->41)
-recoal node 7(->103)
-recomb_node: 5
-recomb_time: 2596.402445
-coal_node: 7
-coal_time: 31806.065068
-17(->8) has 2 children
-2
-3
-41(->5) has 2 children
-0
-4
-77(->7) has 2 children
-1
-17
-103(->6) has 2 children
-41
-77
-
-parsing tree 53: ((0,4),(1,(2,3)));
-recomb node 2(->2)
-recoal node 3(->3)
-recomb_node: 2
+parsing tree 176: ((12,((14,(0,1)),(10,13))),(15,(((4,(7,11)),((17,(2,5)),(16,(9,18)))),(8,(19,(3,6))))));
+recomb node 14(->14)
+recoal node 20(->63)
+recomb_node: 14
 recomb_time: 683.863505
-coal_node: 3
-coal_time: 6044.419947
-17(->8) has 2 children
-2
-3
-41(->5) has 2 children
-0
-4
-93(->6) has 2 children
-1
-41
-103(->7) has 2 children
-17
-93
-
-parsing tree 54: ((1,(0,4)),(2,3));
-recomb node 5(->41)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-41(->5) has 2 children
-0
-4
-93(->6) has 2 children
-1
-41
-103(->7) has 2 children
-2
-93
-114(->8) has 2 children
-3
-103
-
-parsing tree 55: (3,(2,(1,(0,4))));
-recomb node 3(->3)
-recoal node 7(->103)
-recomb_node: 3
-recomb_time: 2596.402445
-coal_node: 7
-coal_time: 48063.865571
-33(->8) has 2 children
-1
-2
-80(->5) has 2 children
-0
-4
-103(->6) has 2 children
-33
-80
-114(->7) has 2 children
-3
-103
-
-parsing tree 56: (3,((0,4),(1,2)));
-recomb node 1(->1)
-recoal node 2(->2)
-recomb_node: 1
-recomb_time: 1083.282752
-coal_node: 2
-coal_time: 13901.580719
-6(->8) has 2 children
-3
-4
-33(->7) has 2 children
-1
-2
-80(->5) has 2 children
-0
-6
-103(->6) has 2 children
-33
-80
-
-parsing tree 57: ((0,(3,4)),(1,2));
-recomb node 3(->3)
-recoal node 4(->4)
-recomb_node: 3
-recomb_time: 0.000000
-coal_node: 4
+coal_node: 20
 coal_time: 1686.226891
-6(->8) has 2 children
-3
-4
-80(->5) has 2 children
-0
-6
-103(->6) has 2 children
-1
-80
-114(->7) has 2 children
-2
-103
 
-parsing tree 58: (2,(1,(0,(3,4))));
-recomb node 5(->80)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-6(->8) has 2 children
-3
-4
-34(->7) has 2 children
-1
-2
-80(->5) has 2 children
-0
-6
-103(->6) has 2 children
-34
-80
-
-parsing tree 59: ((0,(3,4)),(1,2));
-recomb node 1(->1)
-recoal node 2(->2)
-recomb_node: 1
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 9175.321658
-6(->8) has 2 children
-3
-4
-80(->5) has 2 children
-0
-6
-111(->6) has 2 children
-1
-80
-114(->7) has 2 children
-2
-111
-
-parsing tree 60: (2,(1,(0,(3,4))));
-recomb node 2(->2)
-recoal node 6(->103)
-recomb_node: 2
-recomb_time: 1686.226891
-coal_node: 6
-coal_time: 48063.865571
-6(->8) has 2 children
-3
-4
-35(->7) has 2 children
-1
-2
-80(->5) has 2 children
-0
-6
-111(->6) has 2 children
-35
-80
-
-parsing tree 61: ((0,(3,4)),(1,2));
-recomb node 5(->80)
-recoal node 7(->114)
-recomb_node: 5
-recomb_time: 6044.419947
-coal_node: 7
-coal_time: 21036.114721
-6(->8) has 2 children
-3
-4
-80(->5) has 2 children
-0
-6
-103(->6) has 2 children
-1
-80
-114(->7) has 2 children
-2
-103
-
-parsing tree 62: (2,(1,(0,(3,4))));
-recomb node 2(->2)
-recoal node 6(->111)
-recomb_node: 2
-recomb_time: 1083.282752
-coal_node: 6
-coal_time: 48063.865571
-6(->8) has 2 children
-3
-4
-69(->7) has 2 children
-1
-6
-103(->5) has 2 children
-0
-69
-114(->6) has 2 children
-2
-103
-
-parsing tree 63: (2,(0,(1,(3,4))));
-recomb node 8(->6)
-recoal node 1(->1)
-recomb_node: 8
-recomb_time: 1686.226891
-coal_node: 1
+parsing tree 177: ((12,((14,(0,1)),(10,13))),(15,(((4,(7,11)),((17,(2,5)),(16,(9,18)))),(8,(19,(3,6))))));
+node_arg_id1: 29, node_arg_id2: 29, node_tsk_id: 381
+upper: 11
+lower: 11
+recomb_node: 28
+recomb_time: 9175.321658
+coal_node: 33
 coal_time: 13901.580719
-6(->8) has 2 children
-3
-4
-56(->5) has 2 children
-0
-2
-69(->7) has 2 children
-1
-6
-103(->6) has 2 children
-56
-69
 
-parsing tree 64: ((0,2),(1,(3,4)));
-recomb node 2(->2)
-recoal node 0(->0)
-recomb_node: 2
-recomb_time: 2596.402445
-coal_node: 0
+parsing tree 178: ((15,(12,((14,(0,1)),(10,13)))),(((4,(7,11)),((17,(2,5)),(16,(9,18)))),(8,(19,(3,6)))));
+recomb node 29(->403)
+recoal node 24(->421)
+recomb_node: 29
+recomb_time: 13901.580719
+coal_node: 24
+coal_time: 31806.065068
+
+parsing tree 179: (15,((12,((14,(0,1)),(10,13))),(((16,((17,(2,5)),(9,18))),(4,(7,11))),(8,(19,(3,6))))));
+recomb node 27(->97)
+recoal node 36(->37)
+recomb_node: 27
+recomb_time: 1686.226891
+coal_node: 36
 coal_time: 3970.359808
-6(->8) has 2 children
-3
-4
-56(->5) has 2 children
-0
-2
-100(->6) has 2 children
-1
-56
-103(->7) has 2 children
-6
-100
-
-parsing tree 65: ((1,(0,2)),(3,4));
-recomb node 5(->56)
-recoal node 1(->1)
-recomb_node: 5
-recomb_time: 3970.359808
-coal_node: 1
-coal_time: 9175.321658
-6(->8) has 2 children
-3
-4
-56(->5) has 2 children
-0
-2
-103(->6) has 2 children
-6
-56
-114(->7) has 2 children
-1
-103
-
-parsing tree 66: (1,((0,2),(3,4)));
-recomb node 1(->1)
-recoal node 7(->103)
-recomb_node: 1
-recomb_time: 6044.419947
-coal_node: 7
-coal_time: 48063.865571
-6(->8) has 2 children
-3
-4
-56(->5) has 2 children
-0
-2
-101(->6) has 2 children
-1
-56
-103(->7) has 2 children
-6
-101
-
-parsing tree 67: ((1,(0,2)),(3,4));
-recomb node 5(->56)
-recoal node 1(->1)
-recomb_node: 5
-recomb_time: 6044.419947
-coal_node: 1
-coal_time: 13901.580719
-6(->8) has 2 children
-3
-4
-36(->7) has 2 children
-1
-2
-101(->5) has 2 children
-0
-36
-103(->6) has 2 children
-6
-101
-
-parsing tree 68: ((0,(1,2)),(3,4));
-recomb node 1(->1)
-recoal node 2(->2)
-recomb_node: 1
-recomb_time: 243.988772
-coal_node: 2
-coal_time: 1083.282752
-6(->8) has 2 children
-3
-4
-36(->6) has 2 children
-1
-2
-73(->7) has 2 children
-6
-36
-114(->5) has 2 children
-0
-73
-
-parsing tree 69: (0,((1,2),(3,4)));
-recomb node 7(->36)
-recoal node 8(->6)
-recomb_node: 7
+recomb node 15(->15)
+recoal node 25(->421)
+recomb_node: 15
 recomb_time: 2596.402445
-coal_node: 8
-coal_time: 3970.359808
-36(->6) has 2 children
-1
-2
-73(->7) has 3 children
-3
-4
-36
-114(->5) has 2 children
-0
-73
+coal_node: 25
+coal_time: 31806.065068
 
-parsing tree 70: (0,((1,2),(3,4)));
-node_arg_id1: 8, node_arg_id2: 7, node_tsk_id: 6
-upper: 7
+parsing tree 180: (15,(((12,(10,(14,(0,1)))),((((17,(2,5)),(9,18)),(13,16)),(4,(7,11)))),(8,(19,(3,6)))));
+recomb node 34(->137)
+recoal node 24(->421)
+recomb_node: 34
+recomb_time: 1686.226891
+coal_node: 24
+coal_time: 31806.065068
+recomb node 13(->13)
+recoal node 16(->16)
+recomb_node: 13
+recomb_time: 0.000000
+coal_node: 16
+coal_time: 683.863505
+
+parsing tree 181: (15,(((12,(10,(14,(0,1)))),((((17,(2,5)),(9,18)),(13,16)),(4,(7,11)))),(8,(19,(3,6)))));
+node_arg_id1: 35, node_arg_id2: 35, node_tsk_id: 88
+upper: 8
 lower: 0
-recomb_node: 3
-recomb_time: 243.988772
-coal_node: 4
-coal_time: 3970.359808
-36(->6) has 2 children
-1
-2
-73(->7) has 2 children
-4
-36
-109(->8) has 2 children
-3
-73
-114(->5) has 2 children
-0
-109
+recomb_node: 4
+recomb_time: 50.955204
+coal_node: 36
+coal_time: 2596.402445
 
-parsing tree 71: (0,(3,(4,(1,2))));
-recomb node 6(->36)
-recoal node 4(->4)
-recomb_node: 6
+parsing tree 182: (15,(((12,(14,(0,1))),((4,(7,11)),(((17,(2,5)),(9,18)),(10,(13,16))))),(8,(19,(3,6)))));
+recomb node 10(->10)
+recoal node 38(->24)
+recomb_node: 10
+recomb_time: 1083.282752
+coal_node: 38
+coal_time: 6044.419947
+
+parsing tree 183: ((14,(0,1)),((((4,(7,11)),(((17,(2,5)),(9,18)),(10,(13,16)))),(12,15)),(8,(19,(3,6)))));
+recomb node 21(->107)
+recoal node 24(->458)
+recomb_node: 21
 recomb_time: 2596.402445
-coal_node: 4
-coal_time: 3970.359808
-36(->7) has 2 children
-1
-2
-47(->5) has 2 children
-0
-3
-73(->8) has 2 children
-4
-36
-109(->6) has 2 children
-47
-73
+coal_node: 24
+coal_time: 31806.065068
+recomb node 15(->15)
+recoal node 12(->12)
+recomb_node: 15
+recomb_time: 0.000000
+coal_node: 12
+coal_time: 2596.402445
 
-parsing tree 72: ((0,3),(4,(1,2)));
-recomb node 0(->0)
-recoal node 3(->3)
-recomb_node: 0
+parsing tree 184: ((0,1),((((4,(7,11)),(((17,(2,5)),(9,18)),(10,(13,16)))),(15,(12,14))),(8,(19,(3,6)))));
+recomb node 14(->14)
+recoal node 12(->12)
+recomb_node: 14
+recomb_time: 0.000000
+coal_node: 12
+coal_time: 243.988772
+
+parsing tree 185: ((0,1),((((((17,(2,5)),(9,18)),(10,(13,16))),(4,(7,11))),(15,(12,14))),(8,(19,(3,6)))));
+node_arg_id1: 36, node_arg_id2: 37, node_tsk_id: 68
+upper: 8
+lower: 0
+recomb_node: 15
+recomb_time: 1083.282752
+coal_node: 35
+coal_time: 2596.402445
+
+parsing tree 186: (((((0,1),(4,(7,11))),(8,(19,(3,6)))),(((17,(2,5)),(9,18)),(10,(13,16)))),(15,(12,14)));
+recomb node 31(->137)
+recoal node 32(->130)
+recomb_node: 31
+recomb_time: 1083.282752
+coal_node: 32
+coal_time: 9175.321658
+recomb node 20(->63)
+recoal node 32(->130)
+recomb_node: 20
+recomb_time: 1686.226891
+coal_node: 32
+coal_time: 3970.359808
+
+parsing tree 187: (((((0,1),(11,(4,7))),(8,(19,(3,6)))),(((17,(2,5)),(9,18)),(10,(13,16)))),(15,(12,14)));
+recomb node 4(->4)
+recoal node 7(->7)
+recomb_node: 4
+recomb_time: 0.000000
+coal_node: 7
+coal_time: 243.988772
+
+parsing tree 188: (((((0,1),(11,(4,7))),(8,(19,(3,6)))),(((17,(2,5)),(9,18)),((10,15),(13,16)))),(12,14));
+recomb node 15(->15)
+recoal node 10(->10)
+recomb_node: 15
 recomb_time: 419.268952
-coal_node: 3
-coal_time: 3970.359808
-11(->8) has 2 children
-2
-4
-47(->5) has 2 children
-0
-3
-73(->7) has 2 children
-1
-11
-109(->6) has 2 children
-47
-73
+coal_node: 10
+coal_time: 1083.282752
 
-parsing tree 73: ((0,3),(1,(2,4)));
-recomb node 1(->1)
-recoal node 8(->73)
-recomb_node: 1
-recomb_time: 683.863505
-coal_node: 8
-coal_time: 3970.359808
-11(->8) has 2 children
-2
-4
-73(->6) has 2 children
-1
-11
-109(->7) has 2 children
-3
-73
-114(->5) has 2 children
-0
-109
-
-parsing tree 74: (0,(3,(1,(2,4))));
-recomb node 7(->73)
-recoal node 3(->3)
------------------------Invlid SPR moves----------------------
-11(->8) has 2 children
-2
-4
-73(->6) has 2 children
-1
-11
-103(->7) has 2 children
-3
-73
-114(->5) has 2 children
-0
-103
-
-parsing tree 75: (0,(3,(1,(2,4))));
-node_arg_id1: 7, node_arg_id2: 7, node_tsk_id: 109
-upper: 14
-lower: 0
-recomb_node: 3
-recomb_time: 6044.419947
-coal_node: 6
-coal_time: 31806.065068
-11(->8) has 2 children
-2
-4
-48(->5) has 2 children
-0
-3
-73(->7) has 2 children
-1
-11
-103(->6) has 2 children
-48
-73
-
-parsing tree 76: ((0,3),(1,(2,4)));
-recomb node 3(->3)
-recoal node 0(->0)
-recomb_node: 3
-recomb_time: 1686.226891
-coal_node: 0
-coal_time: 3970.359808
-11(->8) has 2 children
-2
-4
-48(->5) has 2 children
-0
-3
-98(->6) has 2 children
-1
-48
-103(->7) has 2 children
-11
-98
-
-parsing tree 77: ((1,(0,3)),(2,4));
-recomb node 1(->1)
-recoal node 5(->48)
-recomb_node: 1
-recomb_time: 127.874736
-coal_node: 5
-coal_time: 9175.321658
-11(->8) has 2 children
-2
-4
-98(->5) has 2 children
-0
-1
-103(->6) has 2 children
-11
-98
-114(->7) has 2 children
-3
-103
-
-parsing tree 78: (3,((0,1),(2,4)));
-recomb node 3(->3)
-recoal node 7(->103)
-recomb_node: 3
+parsing tree 189: (((((0,1),(11,(4,7))),(8,(19,(3,6)))),(((13,(17,(2,5))),(9,18)),(16,(10,15)))),(12,14));
+recomb node 13(->13)
+recoal node 26(->97)
+recomb_node: 13
 recomb_time: 0.000000
-coal_node: 7
-coal_time: 48063.865571
-11(->8) has 2 children
-2
-4
-98(->5) has 2 children
-0
-3
-103(->6) has 2 children
-11
-98
-114(->7) has 2 children
-1
-103
-
-parsing tree 79: (1,((0,3),(2,4)));
-recomb node 0(->0)
-recoal node 3(->3)
-recomb_node: 0
-recomb_time: 243.988772
-coal_node: 3
-coal_time: 9175.321658
-recomb node 1(->1)
-recoal node 7(->114)
-recomb_node: 1
-recomb_time: 127.874736
-coal_node: 7
-coal_time: 48063.865571
-11(->8) has 2 children
-2
-4
-98(->6) has 2 children
-1
-3
-103(->7) has 2 children
-11
-98
-114(->5) has 2 children
-0
-103
-
-parsing tree 80: (0,((1,3),(2,4)));
-recomb node 3(->3)
-recoal node 8(->11)
-recomb_node: 3
-recomb_time: 3970.359808
-coal_node: 8
-coal_time: 31806.065068
-recomb node 1(->1)
-recoal node 3(->3)
-recomb_node: 1
-recomb_time: 0.000000
-coal_node: 3
-coal_time: 9175.321658
-11(->8) has 2 children
-2
-4
-61(->5) has 2 children
-0
-1
-98(->6) has 2 children
-3
-61
-103(->7) has 2 children
-11
-98
-
-parsing tree 81: ((3,(0,1)),(2,4));
-recomb node 0(->0)
-recoal node 1(->1)
-recomb_node: 0
-recomb_time: 1083.282752
-coal_node: 1
+coal_node: 26
 coal_time: 2596.402445
-11(->8) has 2 children
-2
-4
-28(->7) has 2 children
-1
-3
-98(->5) has 2 children
-0
-28
-103(->6) has 2 children
-11
-98
 
-parsing tree 82: ((0,(1,3)),(2,4));
-recomb node 1(->1)
-recoal node 3(->3)
-recomb_node: 1
-recomb_time: 683.863505
-coal_node: 3
-coal_time: 3970.359808
-11(->8) has 2 children
-2
-4
-28(->6) has 2 children
-1
-3
-70(->7) has 2 children
-11
-28
-114(->5) has 2 children
-0
-70
+parsing tree 190: (((((0,1),(11,(4,7))),(8,(19,(3,6)))),(12,14)),(((13,(17,(2,5))),(9,18)),(16,(10,15))));
+recomb node 38(->27)
+recoal node 22(->240)
+recomb_node: 38
+recomb_time: 1686.226891
+coal_node: 22
+coal_time: 13901.580719
 
-parsing tree 83: (0,((1,3),(2,4)));
-recomb node 8(->11)
-recoal node 7(->28)
+parsing tree 191: (((0,1),(((13,(17,(2,5))),(9,18)),(16,(10,15)))),(((8,(19,(3,6))),(11,(4,7))),(12,14)));
+recomb node 20(->63)
+recoal node 29(->274)
+recomb_node: 20
+recomb_time: 2596.402445
+coal_node: 29
+coal_time: 9175.321658
+
+parsing tree 192: ((((0,1),(((13,(17,(2,5))),(9,18)),(16,(10,15)))),(12,14)),((8,(19,(3,6))),(11,(4,7))));
+recomb node 21(->356)
+recoal node 38(->27)
 -----------------------Invlid SPR moves----------------------
-28(->6) has 2 children
-1
-3
-70(->7) has 3 children
-2
-4
-28
-114(->5) has 2 children
-0
-70
 
-parsing tree 84: (0,((1,3),(2,4)));
-node_arg_id1: 8, node_arg_id2: 7, node_tsk_id: 11
+parsing tree 193: (((0,1),(((13,(17,(2,5))),(9,18)),(10,15))),(((8,(19,(3,6))),((4,7),(11,16))),(12,14)));
+recomb node 32(->240)
+recoal node 38(->27)
+recomb_node: 32
+recomb_time: 9175.321658
+coal_node: 38
+coal_time: 9175.321658
+recomb node 16(->16)
+recoal node 11(->11)
+recomb_node: 16
+recomb_time: 419.268952
+coal_node: 11
+coal_time: 2596.402445
+
+parsing tree 194: ((13,(17,(2,5))),(((0,1),((9,18),(10,15))),(((8,(19,(3,6))),((4,7),(11,16))),(12,14))));
+recomb node 25(->140)
+recoal node 22(->393)
+recomb_node: 25
+recomb_time: 2596.402445
+coal_node: 22
+coal_time: 31806.065068
+
+parsing tree 195: ((13,(17,(2,5))),(((0,1),((9,18),(10,15))),(((8,(19,(3,6))),((4,7),(11,16))),(12,14))));
+node_arg_id1: 28, node_arg_id2: 28, node_tsk_id: 137
+upper: 6
+lower: 0
+recomb_node: 8
+recomb_time: 50.955204
+coal_node: 27
+coal_time: 2596.402445
+node_arg_id1: 27, node_arg_id2: 27, node_tsk_id: 112
+upper: 6
+lower: 0
+recomb_node: 19
+recomb_time: 127.874736
+coal_node: 26
+coal_time: 1686.226891
+
+parsing tree 196: (((8,(19,(3,6))),(((9,18),(10,15)),(((0,1),(12,14)),((4,7),(11,16))))),(13,(17,(2,5))));
+recomb node 28(->172)
+recoal node 38(->393)
+recomb_node: 28
+recomb_time: 6044.419947
+coal_node: 38
+coal_time: 13901.580719
+recomb node 20(->63)
+recoal node 36(->27)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 197: (((13,(17,(2,5))),(8,(19,(3,6)))),(((9,18),(10,15)),(((0,1),(12,14)),((4,7),(11,16)))));
+recomb node 26(->140)
+recoal node 29(->172)
+recomb_node: 26
+recomb_time: 2596.402445
+coal_node: 29
+coal_time: 9175.321658
+
+parsing tree 198: (((17,(2,5)),((19,(3,6)),(8,13))),(((9,18),(10,15)),(((0,1),(12,14)),((4,7),(11,16)))));
+recomb node 13(->13)
+recoal node 8(->8)
+recomb_node: 13
+recomb_time: 1686.226891
+coal_node: 8
+coal_time: 2596.402445
+
+parsing tree 199: (((17,(2,5)),((19,(3,6)),(8,13))),(((9,18),(10,15)),(((0,1),(12,14)),((4,7),(11,16)))));
+node_arg_id1: 33, node_arg_id2: 33, node_tsk_id: 34
+upper: 6
+lower: 0
+recomb_node: 10
+recomb_time: 683.863505
+coal_node: 15
+coal_time: 1686.226891
+
+parsing tree 200: (((17,(2,5)),((19,(3,6)),(8,13))),(((9,18),(10,15)),(((0,1),(12,14)),((4,7),(11,16)))));
+node_arg_id1: 25, node_arg_id2: 25, node_tsk_id: 280
+upper: 11
+lower: 3
+recomb_node: 24
+recomb_time: 419.268952
+coal_node: 36
+coal_time: 9175.321658
+
+parsing tree 201: (((((0,1),(17,(2,5))),((19,(3,6)),(8,13))),(12,14)),(((9,18),(10,15)),((4,7),(11,16))));
+recomb node 34(->27)
+recoal node 25(->305)
+recomb_node: 34
+recomb_time: 3970.359808
+coal_node: 25
+coal_time: 21036.114721
+recomb node 20(->63)
+recoal node 24(->97)
+recomb_node: 20
+recomb_time: 1686.226891
+coal_node: 24
+coal_time: 6044.419947
+
+parsing tree 202: (((0,1),(17,(2,5))),(((((9,18),(10,15)),((19,(3,6)),(8,13))),(12,14)),((4,7),(11,16))));
+recomb node 34(->295)
+recoal node 38(->172)
+recomb_node: 34
+recomb_time: 9175.321658
+coal_node: 38
+coal_time: 9175.321658
+recomb node 21(->194)
+recoal node 24(->409)
+recomb_node: 21
+recomb_time: 6044.419947
+coal_node: 24
+coal_time: 31806.065068
+
+parsing tree 203: (((0,1),(17,(2,5))),((((16,(4,7)),((19,(11,(3,6))),(8,13))),((10,15),(12,14))),(9,18)));
+recomb node 11(->11)
+recoal node 25(->51)
+recomb_node: 11
+recomb_time: 127.874736
+coal_node: 25
+coal_time: 683.863505
+recomb node 38(->172)
+recoal node 37(->130)
+recomb_node: 38
+recomb_time: 2596.402445
+coal_node: 37
+coal_time: 6044.419947
+recomb node 33(->37)
+recoal node 30(->409)
+recomb_node: 33
+recomb_time: 3970.359808
+coal_node: 30
+coal_time: 21036.114721
+
+parsing tree 204: ((((((0,1),(17,(2,5))),(16,((19,(11,(3,6))),(8,13)))),(10,15)),(9,18)),((4,7),(12,14)));
+recomb node 37(->27)
+recoal node 31(->409)
+recomb_node: 37
+recomb_time: 1083.282752
+coal_node: 31
+coal_time: 31806.065068
+recomb node 32(->47)
+recoal node 37(->27)
+recomb_node: 32
+recomb_time: 1686.226891
+coal_node: 37
+coal_time: 31806.065068
+recomb node 21(->194)
+recoal node 29(->269)
+recomb_node: 21
+recomb_time: 6044.419947
+coal_node: 29
+coal_time: 13901.580719
+
+parsing tree 205: ((((((0,1),(2,5)),(16,(17,((19,(11,(3,6))),(8,13))))),(10,15)),(9,18)),((4,7),(12,14)));
+recomb node 17(->17)
+recoal node 37(->172)
+recomb_node: 17
+recomb_time: 127.874736
+coal_node: 37
+coal_time: 3970.359808
+
+parsing tree 206: ((((((0,1),(2,5)),(16,(17,((19,(11,(3,6))),(8,13))))),((4,7),(10,15))),(9,18)),(12,14));
+recomb node 33(->47)
+recoal node 35(->70)
+recomb_node: 33
+recomb_time: 1083.282752
+coal_node: 35
+coal_time: 6044.419947
+
+parsing tree 207: (((0,1),(((2,5),(16,(17,((19,(11,(3,6))),(8,13))))),((4,7),(10,15)))),((9,18),(12,14)));
+recomb node 20(->63)
+recoal node 23(->364)
+recomb_node: 20
+recomb_time: 1686.226891
+coal_node: 23
+coal_time: 21036.114721
+recomb node 35(->37)
+recoal node 37(->27)
+recomb_node: 35
+recomb_time: 683.863505
+coal_node: 37
+coal_time: 6044.419947
+
+parsing tree 208: ((0,1),(((2,5),(16,(17,((19,(11,(3,6))),(8,13))))),(((4,7),(10,15)),((9,18),(12,14)))));
+recomb node 35(->120)
+recoal node 33(->167)
+recomb_node: 35
+recomb_time: 13901.580719
+coal_node: 33
+coal_time: 21036.114721
+
+parsing tree 209: (((0,1),(12,14)),(((2,5),(16,(17,((19,(11,(3,6))),(8,13))))),(((4,7),(10,15)),(9,18))));
+recomb node 36(->27)
+recoal node 20(->63)
+recomb_node: 36
+recomb_time: 683.863505
+coal_node: 20
+coal_time: 2596.402445
+
+parsing tree 210: ((((0,1),(12,14)),((4,7),(10,15))),(((2,5),(16,(17,((19,(11,(3,6))),(8,13))))),(9,18)));
+recomb node 33(->167)
+recoal node 21(->153)
+recomb_node: 33
+recomb_time: 6044.419947
+coal_node: 21
+coal_time: 9175.321658
+
+parsing tree 211: ((((0,1),(12,14)),((4,7),(16,(10,15)))),(((2,5),(17,((19,(11,(3,6))),(8,13)))),(9,18)));
+recomb node 16(->16)
+recoal node 36(->70)
+recomb_node: 16
+recomb_time: 1083.282752
+coal_node: 36
+coal_time: 1686.226891
+
+parsing tree 212: ((((0,1),((4,7),(16,(10,15)))),(12,14)),(((2,5),(17,((19,(11,(3,6))),(8,13)))),(9,18)));
+recomb node 36(->27)
+recoal node 22(->295)
+recomb_node: 36
+recomb_time: 1686.226891
+coal_node: 22
+coal_time: 21036.114721
+
+parsing tree 213: ((((2,5),(17,((19,(11,(3,6))),(8,13)))),(12,14)),(((0,1),(9,18)),((4,7),(16,(10,15)))));
+recomb node 33(->37)
+recoal node 20(->63)
+recomb_node: 33
+recomb_time: 127.874736
+coal_node: 20
+coal_time: 9175.321658
+recomb node 21(->295)
+recoal node 38(->409)
+recomb_node: 21
+recomb_time: 13901.580719
+coal_node: 38
+coal_time: 21036.114721
+
+parsing tree 214: (((((0,1),(16,(10,15))),(9,18)),(4,7)),(((2,5),(17,((19,(11,(3,6))),(8,13)))),(12,14)));
+recomb node 35(->70)
+recoal node 20(->63)
+recomb_node: 35
+recomb_time: 1686.226891
+coal_node: 20
+coal_time: 2596.402445
+
+parsing tree 215: (((4,7),(((0,1),(16,(10,15))),(13,(9,18)))),(((2,5),(17,(8,(19,(11,(3,6)))))),(12,14)));
+recomb node 13(->13)
+recoal node 33(->37)
+recomb_node: 13
+recomb_time: 1083.282752
+coal_node: 33
+coal_time: 9175.321658
+
+parsing tree 216: ((((2,5),(17,(8,(19,(11,(3,6)))))),(12,14)),(((0,1),(10,16)),((15,(9,18)),(13,(4,7)))));
+recomb node 15(->15)
+recoal node 33(->37)
+recomb_node: 15
+recomb_time: 243.988772
+coal_node: 33
+coal_time: 9175.321658
+recomb node 32(->47)
+recoal node 13(->13)
+recomb_node: 32
+recomb_time: 683.863505
+coal_node: 13
+coal_time: 1083.282752
+
+parsing tree 217: ((13,(4,7)),((((0,1),(10,16)),(9,18)),((12,14),(((2,5),(15,17)),(8,(19,(11,(3,6))))))));
+recomb node 32(->87)
+recoal node 38(->409)
+recomb_node: 32
+recomb_time: 3970.359808
+coal_node: 38
+coal_time: 31806.065068
+recomb node 15(->15)
+recoal node 17(->17)
+recomb_node: 15
+recomb_time: 0.000000
+coal_node: 17
+coal_time: 683.863505
+recomb node 24(->55)
+recoal node 22(->352)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 218: ((13,(4,7)),(((((0,1),(16,(8,10))),(2,5)),(12,14)),((19,(11,(3,6))),((9,18),(15,17)))));
+recomb node 8(->8)
+recoal node 10(->10)
+recomb_node: 8
+recomb_time: 50.955204
+coal_node: 10
+coal_time: 1686.226891
+recomb node 25(->55)
+recoal node 21(->189)
+recomb_node: 25
+recomb_time: 127.874736
+coal_node: 21
+coal_time: 9175.321658
+recomb node 33(->37)
+recoal node 36(->21)
+recomb_node: 33
+recomb_time: 1083.282752
+coal_node: 36
+coal_time: 1686.226891
+recomb node 37(->315)
+recoal node 38(->409)
+recomb_node: 37
+recomb_time: 13901.580719
+coal_node: 38
+coal_time: 21036.114721
+
+parsing tree 219: (((19,(11,(3,6))),(13,(4,7))),((((0,1),(16,(8,10))),(2,5)),(((9,18),(15,17)),(12,14))));
+recomb node 28(->136)
+recoal node 31(->87)
+recomb_node: 28
+recomb_time: 3970.359808
+coal_node: 31
+coal_time: 31806.065068
+recomb node 22(->232)
+recoal node 38(->409)
+recomb_node: 22
+recomb_time: 9175.321658
+coal_node: 38
+coal_time: 21036.114721
+
+parsing tree 220: ((((((0,1),(16,(8,10))),(2,5)),((19,(11,(3,6))),(13,(4,7)))),(12,14)),((9,18),(15,17)));
+recomb node 33(->118)
+recoal node 37(->409)
+recomb_node: 33
+recomb_time: 6044.419947
+coal_node: 37
+coal_time: 31806.065068
+recomb node 24(->462)
+recoal node 22(->232)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 221: ((((((0,1),(8,10)),(2,5)),((19,(11,(3,6))),(16,(13,(4,7))))),(12,14)),((9,18),(15,17)));
+recomb node 16(->16)
+recoal node 32(->87)
+recomb_node: 16
+recomb_time: 1083.282752
+coal_node: 32
+coal_time: 6044.419947
+
+parsing tree 222: (((((((0,1),(8,10)),(2,5)),(13,(4,7))),(16,(19,(11,(3,6))))),(12,14)),((9,18),(15,17)));
+recomb node 32(->87)
+recoal node 22(->232)
+recomb_node: 32
+recomb_time: 1083.282752
+coal_node: 22
+coal_time: 13901.580719
+
+parsing tree 223: (((((16,(0,1)),(((2,5),(8,10)),(13,(4,7)))),(19,(11,(3,6)))),(12,14)),((9,18),(15,17)));
+recomb node 30(->136)
+recoal node 24(->409)
+recomb_node: 30
+recomb_time: 1686.226891
+coal_node: 24
+coal_time: 21036.114721
+recomb node 20(->63)
+recoal node 16(->16)
+recomb_node: 20
+recomb_time: 683.863505
+coal_node: 16
+coal_time: 1083.282752
+
+parsing tree 224: (((16,(0,1)),(((2,5),(8,10)),(13,(4,7)))),((19,(11,(3,6))),(((9,18),(15,17)),(12,14))));
+recomb node 35(->118)
+recoal node 36(->27)
+recomb_node: 35
+recomb_time: 1686.226891
+coal_node: 36
+coal_time: 9175.321658
+recomb node 22(->339)
+recoal node 24(->447)
+recomb_node: 22
+recomb_time: 13901.580719
+coal_node: 24
+coal_time: 21036.114721
+
+parsing tree 225: (((16,(0,1)),(((2,5),(8,10)),(13,(4,7)))),((11,(3,6)),((19,((9,18),(15,17))),(12,14))));
+recomb node 19(->19)
+recoal node 34(->118)
+recomb_node: 19
+recomb_time: 50.955204
+coal_node: 34
+coal_time: 6044.419947
+
+parsing tree 226: (((16,(0,1)),((10,(2,5)),(13,(4,7)))),((11,(3,6)),((19,((8,(15,17)),(9,18))),(12,14))));
+recomb node 8(->8)
+recoal node 37(->21)
+recomb_node: 8
+recomb_time: 1083.282752
+coal_node: 37
+coal_time: 1686.226891
+
+parsing tree 227: (((16,(0,1)),((10,(2,5)),(13,(4,7)))),(((11,(8,(3,6))),(19,((9,18),(15,17)))),(12,14)));
+recomb node 8(->8)
+recoal node 26(->51)
+recomb_node: 8
+recomb_time: 0.000000
+coal_node: 26
+coal_time: 683.863505
+recomb node 27(->113)
+recoal node 32(->159)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 228: (((16,(0,1)),((10,(2,5)),(13,(4,7)))),(((11,(8,(3,6))),(12,14)),(19,((9,18),(15,17)))));
+recomb node 36(->27)
+recoal node 28(->113)
+recomb_node: 36
+recomb_time: 2596.402445
+coal_node: 28
+coal_time: 13901.580719
+
+parsing tree 229: (10,(((16,(0,1)),(13,(4,7))),((2,5),(((11,(8,(3,6))),(12,14)),(19,((9,18),(15,17)))))));
+recomb node 24(->55)
+recoal node 38(->360)
+recomb_node: 24
+recomb_time: 243.988772
+coal_node: 38
+coal_time: 13901.580719
+recomb node 10(->10)
+recoal node 23(->409)
+recomb_node: 10
+recomb_time: 2596.402445
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 230: (10,(((16,(0,1)),(13,(4,7))),((2,5),(((11,(8,(3,6))),(15,17)),((19,(9,18)),(12,14))))));
+recomb node 37(->21)
+recoal node 29(->113)
+recomb_node: 37
+recomb_time: 683.863505
+coal_node: 29
+coal_time: 2596.402445
+recomb node 34(->118)
+recoal node 38(->360)
+recomb_node: 34
+recomb_time: 3970.359808
+coal_node: 38
+coal_time: 13901.580719
+
+parsing tree 231: (10,(((((16,(0,1)),((11,(8,(3,6))),(15,17))),(19,(9,18))),(2,5)),((13,(4,7)),(12,14))));
+recomb node 36(->27)
+recoal node 33(->87)
+recomb_node: 36
+recomb_time: 3970.359808
+coal_node: 33
+coal_time: 6044.419947
+recomb node 21(->104)
+recoal node 30(->206)
+recomb_node: 21
+recomb_time: 2596.402445
+coal_node: 30
+coal_time: 6044.419947
+
+parsing tree 232: (10,(((16,(0,1)),((13,(4,7)),(12,14))),(((2,5),(19,(9,18))),((11,(8,(3,6))),(15,17)))));
+recomb node 27(->55)
+recoal node 36(->73)
+recomb_node: 27
+recomb_time: 243.988772
+coal_node: 36
+coal_time: 13901.580719
+recomb node 21(->104)
+recoal node 34(->166)
+recomb_node: 21
+recomb_time: 2596.402445
+coal_node: 34
+coal_time: 6044.419947
+
+parsing tree 233: (10,(((16,(0,1)),((13,(4,7)),(19,(12,14)))),(((2,5),(9,18)),((11,(8,(3,6))),(15,17)))));
+recomb node 19(->19)
+recoal node 36(->27)
+recomb_node: 19
+recomb_time: 0.000000
+coal_node: 36
+coal_time: 2596.402445
+
+parsing tree 234: (((16,(0,1)),((13,(4,7)),(12,14))),((((2,5),(10,19)),(9,18)),((11,(8,(3,6))),(15,17))));
+recomb node 19(->19)
+recoal node 10(->10)
+recomb_node: 19
+recomb_time: 0.000000
+coal_node: 10
+coal_time: 1686.226891
+recomb node 36(->66)
+recoal node 25(->55)
+recomb_node: 36
+recomb_time: 1686.226891
+coal_node: 25
+coal_time: 2596.402445
+
+parsing tree 235: ((((16,(0,1)),((13,(4,7)),(12,14))),((11,(8,(3,6))),(15,17))),(((2,5),(10,19)),(9,18)));
+recomb node 26(->386)
+recoal node 23(->409)
+recomb_node: 26
+recomb_time: 13901.580719
+coal_node: 23
+coal_time: 21036.114721
+
+parsing tree 236: ((((13,(4,7)),(12,14)),((0,(1,16)),((11,(8,(3,6))),(15,17)))),(((2,5),(10,19)),(9,18)));
+recomb node 34(->166)
+recoal node 23(->396)
+recomb_node: 34
+recomb_time: 6044.419947
+coal_node: 23
+coal_time: 13901.580719
+recomb node 0(->0)
+recoal node 21(->104)
+recomb_node: 0
+recomb_time: 0.000000
+coal_node: 21
+coal_time: 6044.419947
+
+parsing tree 237: ((((13,(4,7)),(12,14)),((0,(1,16)),(11,(8,(3,6))))),(((2,5),(10,19)),((9,18),(15,17))));
+recomb node 37(->21)
+recoal node 34(->37)
+recomb_node: 37
+recomb_time: 1686.226891
+coal_node: 34
+coal_time: 3970.359808
+
+parsing tree 238: ((((13,(4,7)),(12,14)),((0,(1,16)),(11,(8,(3,6))))),(((2,5),(10,19)),((9,18),(15,17))));
+node_arg_id1: 26, node_arg_id2: 37, node_tsk_id: 386
+upper: 9
+lower: 8
+recomb_node: 25
+recomb_time: 2596.402445
+coal_node: 34
+coal_time: 3970.359808
+
+parsing tree 239: (((((2,5),(10,19)),(9,18)),((13,(4,7)),(12,14))),((0,(1,16)),((11,(8,(3,6))),(15,17))));
+recomb node 36(->21)
+recoal node 29(->113)
+recomb_node: 36
+recomb_time: 1083.282752
+coal_node: 29
+coal_time: 3970.359808
+recomb node 38(->294)
+recoal node 22(->409)
+recomb_node: 38
+recomb_time: 6044.419947
+coal_node: 22
+coal_time: 21036.114721
+
+parsing tree 240: ((((19,(10,(2,5))),(9,18)),((13,(4,7)),(12,14))),((0,(1,16)),((11,(8,(3,6))),(15,17))));
+recomb node 23(->55)
+recoal node 10(->10)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 241: ((((19,(10,(2,5))),(9,18)),((13,(4,7)),(12,14))),((0,(1,16)),((11,(8,(3,6))),(15,17))));
+node_arg_id1: 24, node_arg_id2: 24, node_tsk_id: 99
+upper: 8
+lower: 0
+recomb_node: 10
+recomb_time: 683.863505
+coal_node: 23
+coal_time: 3970.359808
+
+parsing tree 242: (((((10,(2,5)),(13,19)),(9,18)),((4,7),(12,14))),((0,(1,16)),((11,(8,(3,6))),(15,17))));
+recomb node 13(->13)
+recoal node 19(->19)
+recomb_node: 13
+recomb_time: 683.863505
+coal_node: 19
+coal_time: 1686.226891
+
+parsing tree 243: (((((4,7),(9,18)),((1,(13,19)),(10,(2,5)))),((0,16),((11,(8,(3,6))),(15,17)))),(12,14));
+recomb node 1(->1)
+recoal node 35(->23)
+recomb_node: 1
+recomb_time: 243.988772
+coal_node: 35
+coal_time: 3970.359808
+recomb node 31(->47)
+recoal node 33(->37)
+recomb_node: 31
+recomb_time: 683.863505
+coal_node: 33
+coal_time: 9175.321658
+recomb node 26(->289)
+recoal node 38(->294)
+recomb_node: 26
+recomb_time: 9175.321658
+coal_node: 38
+coal_time: 21036.114721
+
+parsing tree 244: (((((4,7),(9,18)),((1,(13,19)),(10,(2,5)))),((0,16),((11,(8,(3,6))),(15,17)))),(12,14));
+node_arg_id1: 25, node_arg_id2: 25, node_tsk_id: 55
+upper: 2
+lower: 0
+recomb_node: 2
+recomb_time: 0.000000
+coal_node: 5
+coal_time: 419.268952
+
+parsing tree 245: ((((1,((5,(2,13)),(10,19))),((4,7),(9,18))),((0,16),((11,(8,(3,6))),(15,17)))),(12,14));
+recomb node 19(->19)
+recoal node 10(->10)
+recomb_node: 19
+recomb_time: 127.874736
+coal_node: 10
+coal_time: 1686.226891
+recomb node 13(->13)
+recoal node 2(->2)
+recomb_node: 13
+recomb_time: 0.000000
+coal_node: 2
+coal_time: 127.874736
+
+parsing tree 246: ((((0,16),((8,(3,6)),(15,17))),(11,(((1,((5,(2,13)),(10,19))),(4,7)),(9,18)))),(12,14));
+recomb node 11(->11)
+recoal node 37(->289)
+recomb_node: 11
+recomb_time: 0.000000
+coal_node: 37
+coal_time: 13901.580719
+recomb node 32(->47)
+recoal node 23(->149)
+recomb_node: 32
+recomb_time: 1083.282752
+coal_node: 23
+coal_time: 9175.321658
+
+parsing tree 247: (((8,(3,6)),(15,17)),(((0,16),(((1,(5,(2,13))),((4,7),(12,14))),(9,18))),(11,(10,19))));
+recomb node 37(->27)
+recoal node 34(->47)
+recomb_node: 37
+recomb_time: 1083.282752
+coal_node: 34
+coal_time: 6044.419947
+recomb node 36(->29)
+recoal node 11(->11)
+recomb_node: 36
+recomb_time: 2596.402445
+coal_node: 11
+coal_time: 13901.580719
+recomb node 20(->294)
+recoal node 26(->349)
+recomb_node: 20
+recomb_time: 6044.419947
+coal_node: 26
+coal_time: 13901.580719
+
+parsing tree 248: (((8,(3,6)),(15,17)),(((0,16),(((1,(5,(2,13))),((4,7),(12,14))),(9,18))),(11,(10,19))));
+node_arg_id1: 24, node_arg_id2: 24, node_tsk_id: 149
 upper: 7
 lower: 0
-recomb_node: 2
-recomb_time: 243.988772
-coal_node: 4
-coal_time: 13901.580719
-28(->6) has 2 children
-1
-3
-70(->7) has 2 children
-4
-28
-103(->8) has 2 children
-2
-70
-114(->5) has 2 children
-0
-103
-
-parsing tree 85: (0,(2,(4,(1,3))));
-recomb node 6(->28)
-recoal node 4(->4)
-recomb_node: 6
-recomb_time: 3970.359808
-coal_node: 4
-coal_time: 13901.580719
-28(->7) has 2 children
-1
-3
-57(->5) has 2 children
-0
-2
-70(->8) has 2 children
-4
-28
-103(->6) has 2 children
-57
-70
-
-parsing tree 86: ((0,2),(4,(1,3)));
-recomb node 2(->2)
-recoal node 0(->0)
-recomb_node: 2
+recomb_node: 1
 recomb_time: 1083.282752
-coal_node: 0
-coal_time: 2596.402445
-28(->8) has 2 children
-1
-3
-57(->5) has 2 children
-0
-2
-86(->6) has 2 children
-4
-57
-103(->7) has 2 children
-28
-86
+coal_node: 28
+coal_time: 1686.226891
 
-parsing tree 87: ((4,(0,2)),(1,3));
-recomb node 7(->28)
-recoal node 6(->103)
-recomb_node: 7
-recomb_time: 3970.359808
-coal_node: 6
+parsing tree 249: (((8,(3,6)),(15,17)),((0,(((1,(5,(2,13))),((4,7),(12,14))),(16,(9,18)))),(11,(10,19))));
+recomb node 16(->16)
+recoal node 34(->37)
+recomb_node: 16
+recomb_time: 243.988772
+coal_node: 34
+coal_time: 419.268952
+
+parsing tree 250: (19,(((8,(3,6)),(15,17)),((0,(((1,(5,(2,13))),((4,7),(12,14))),(16,(9,18)))),(10,11))));
+recomb node 19(->19)
+recoal node 22(->454)
+recomb_node: 19
+recomb_time: 50.955204
+coal_node: 22
 coal_time: 31806.065068
-28(->8) has 2 children
-1
-3
-57(->5) has 2 children
-0
-2
-78(->6) has 2 children
-28
-57
-103(->7) has 2 children
-4
-78
 
-parsing tree 88: (4,((0,2),(1,3)));
-recomb node 8(->28)
-recoal node 5(->57)
+parsing tree 251: (((8,(3,6)),((0,19),(10,(15,17)))),(11,(((1,(5,(2,13))),((4,7),(12,14))),(16,(9,18)))));
+recomb node 10(->10)
+recoal node 37(->21)
+recomb_node: 10
+recomb_time: 1083.282752
+coal_node: 37
+coal_time: 3970.359808
+recomb node 0(->0)
+recoal node 19(->19)
+recomb_node: 0
+recomb_time: 0.000000
+coal_node: 19
+coal_time: 419.268952
+recomb node 20(->362)
+recoal node 21(->426)
+recomb_node: 20
+recomb_time: 683.863505
+coal_node: 21
+coal_time: 3970.359808
+
+parsing tree 252: ((10,(((0,19),(15,17)),(8,(3,6)))),(((1,(5,(2,13))),((4,7),(12,14))),(11,(16,(9,18)))));
+recomb node 11(->11)
+recoal node 35(->74)
+recomb_node: 11
+recomb_time: 419.268952
+coal_node: 35
+coal_time: 2596.402445
+recomb node 10(->10)
+recoal node 22(->171)
+recomb_node: 10
+recomb_time: 1686.226891
+coal_node: 22
+coal_time: 21036.114721
+
+parsing tree 253: (10,(((((0,19),(15,17)),(8,(3,6))),((1,(5,(2,13))),((4,7),(12,14)))),(11,(16,(9,18)))));
+recomb node 22(->210)
+recoal node 25(->289)
+recomb_node: 22
+recomb_time: 6044.419947
+coal_node: 25
+coal_time: 9175.321658
+
+parsing tree 254: (10,(((((0,19),(15,17)),((3,11),(6,8))),((1,(5,(2,13))),((4,7),(12,14)))),(16,(9,18))));
+recomb node 11(->11)
+recoal node 31(->94)
+recomb_node: 11
+recomb_time: 0.000000
+coal_node: 31
+coal_time: 683.863505
+recomb node 3(->3)
+recoal node 11(->11)
+recomb_node: 3
+recomb_time: 0.000000
+coal_node: 11
+coal_time: 127.874736
+
+parsing tree 255: (((0,19),(15,17)),(10,((((3,11),(6,8)),((4,(1,(5,(2,13)))),(7,(12,14)))),(16,(9,18)))));
+recomb node 4(->4)
+recoal node 26(->158)
+recomb_node: 4
+recomb_time: 50.955204
+coal_node: 26
+coal_time: 9175.321658
+recomb node 21(->150)
+recoal node 25(->454)
+recomb_node: 21
+recomb_time: 3970.359808
+coal_node: 25
+coal_time: 31806.065068
+
+parsing tree 256: (((0,19),(15,17)),(10,(((1,(5,(2,13))),((7,(12,14)),((8,(3,11)),(4,6)))),(16,(9,18)))));
+recomb node 23(->158)
+recoal node 25(->399)
+recomb_node: 23
+recomb_time: 2596.402445
+coal_node: 25
+coal_time: 9175.321658
+recomb node 4(->4)
+recoal node 6(->6)
+recomb_node: 4
+recomb_time: 0.000000
+coal_node: 6
+coal_time: 419.268952
+recomb node 30(->49)
+recoal node 8(->8)
+recomb_node: 30
+recomb_time: 419.268952
+coal_node: 8
+coal_time: 683.863505
+
+parsing tree 257: ((0,(19,(15,17))),(10,(((1,(5,(2,13))),((7,(12,14)),((8,(3,11)),(4,6)))),(16,(9,18)))));
+recomb node 0(->0)
+recoal node 21(->150)
+recomb_node: 0
+recomb_time: 127.874736
+coal_node: 21
+coal_time: 3970.359808
+
+parsing tree 258: ((10,((16,(9,18)),((0,(1,(5,(2,13)))),((7,(12,14)),((8,(3,11)),(4,6)))))),(19,(15,17)));
+recomb node 0(->0)
+recoal node 22(->158)
+recomb_node: 0
+recomb_time: 1686.226891
+coal_node: 22
+coal_time: 9175.321658
+
+parsing tree 259: (((16,(9,18)),(10,(19,(15,17)))),((0,(1,(5,(2,13)))),((7,(12,14)),((8,(3,11)),(4,6)))));
+recomb node 38(->399)
+recoal node 23(->462)
+recomb_node: 38
+recomb_time: 9175.321658
+coal_node: 23
+coal_time: 21036.114721
+recomb node 36(->64)
+recoal node 10(->10)
+recomb_node: 36
+recomb_time: 2596.402445
+coal_node: 10
+coal_time: 9175.321658
+
+parsing tree 260: (((16,(9,18)),(19,(10,(15,17)))),((0,(1,(5,(2,13)))),((7,(12,14)),((8,(3,11)),(4,6)))));
+recomb node 19(->19)
+recoal node 33(->110)
+recomb_node: 19
+recomb_time: 127.874736
+coal_node: 33
+coal_time: 9175.321658
+
+parsing tree 261: (19,(((16,(9,18)),(10,(15,17))),((0,(1,(5,(2,13)))),((7,(12,14)),((8,(3,11)),(4,6))))));
+recomb node 19(->19)
+recoal node 21(->409)
+recomb_node: 19
+recomb_time: 0.000000
+coal_node: 21
+coal_time: 31806.065068
+
+parsing tree 262: (19,(10,(((7,(16,(9,18))),((0,(1,(5,(2,13)))),((8,((3,11),(4,6))),(12,14)))),(15,17))));
+recomb node 26(->49)
+recoal node 29(->89)
+recomb_node: 26
+recomb_time: 127.874736
+coal_node: 29
+coal_time: 683.863505
+recomb node 7(->7)
+recoal node 32(->74)
+recomb_node: 7
+recomb_time: 683.863505
+coal_node: 32
+coal_time: 13901.580719
+recomb node 34(->69)
+recoal node 19(->19)
+recomb_node: 34
+recomb_time: 6044.419947
+coal_node: 19
+coal_time: 31806.065068
+recomb node 21(->409)
+recoal node 36(->21)
 -----------------------Invlid SPR moves----------------------
-57(->5) has 2 children
-0
-2
-78(->6) has 3 children
-1
-3
-57
-103(->7) has 2 children
-4
-78
 
-parsing tree 89: (4,((0,2),(1,3)));
-node_arg_id1: 8, node_arg_id2: 6, node_tsk_id: 28
+parsing tree 263: (((15,17),((0,(1,(5,(2,13)))),((8,((3,11),(4,6))),(12,14)))),((7,(16,(9,18))),(10,19)));
+recomb node 33(->201)
+recoal node 24(->462)
+recomb_node: 33
+recomb_time: 13901.580719
+coal_node: 24
+coal_time: 21036.114721
+recomb node 22(->429)
+recoal node 21(->409)
+recomb_node: 22
+recomb_time: 21036.114721
+coal_node: 21
+coal_time: 21036.114721
+
+parsing tree 264: (((0,(1,(5,(2,13)))),(((8,((3,11),(4,6))),(15,17)),(12,14))),((7,(16,(9,18))),(10,19)));
+recomb node 36(->21)
+recoal node 28(->210)
+recomb_node: 36
+recomb_time: 1083.282752
+coal_node: 28
+coal_time: 6044.419947
+
+parsing tree 265: ((((8,((3,11),(4,6))),(15,17)),(12,14)),(((0,7),(16,(9,18))),((10,19),(1,(5,(2,13))))));
+recomb node 23(->158)
+recoal node 33(->380)
+recomb_node: 23
+recomb_time: 3970.359808
+coal_node: 33
+coal_time: 9175.321658
+recomb node 0(->0)
+recoal node 7(->7)
+recomb_node: 0
+recomb_time: 1083.282752
+coal_node: 7
+coal_time: 3970.359808
+
+parsing tree 266: ((((8,((3,11),(4,6))),(15,17)),(12,14)),(((0,7),(16,(9,18))),((10,19),(1,(5,(2,13))))));
+node_arg_id1: 30, node_arg_id2: 30, node_tsk_id: 308
+upper: 11
+lower: 10
+recomb_node: 29
+recomb_time: 6044.419947
+coal_node: 34
+coal_time: 9175.321658
+
+parsing tree 267: (((0,(16,(9,18))),(((15,17),(((3,11),(4,6)),(7,8))),(12,14))),((1,(5,(2,13))),(10,19)));
+recomb node 7(->7)
+recoal node 8(->8)
+recomb_node: 7
+recomb_time: 1686.226891
+coal_node: 8
+coal_time: 3970.359808
+recomb node 36(->255)
+recoal node 30(->361)
+recomb_node: 36
+recomb_time: 3970.359808
+coal_node: 30
+coal_time: 31806.065068
+
+parsing tree 268: (((0,(16,(9,18))),(((15,17),((7,8),((19,(3,11)),(4,6)))),(12,14))),(10,(1,(5,(2,13)))));
+recomb node 19(->19)
+recoal node 26(->49)
+recomb_node: 19
+recomb_time: 243.988772
+coal_node: 26
+coal_time: 683.863505
+
+parsing tree 269: (((19,(5,(2,13))),((16,(9,18)),((0,1),(12,14)))),(10,((15,17),(((3,11),(4,6)),(7,8)))));
+recomb node 25(->98)
+recoal node 21(->424)
+recomb_node: 25
+recomb_time: 683.863505
+coal_node: 21
+coal_time: 31806.065068
+recomb node 1(->1)
+recoal node 0(->0)
+recomb_node: 1
+recomb_time: 0.000000
+coal_node: 0
+coal_time: 3970.359808
+recomb node 34(->27)
+recoal node 23(->380)
+recomb_node: 34
+recomb_time: 2596.402445
+coal_node: 23
+coal_time: 3970.359808
+recomb node 19(->19)
+recoal node 25(->98)
+recomb_node: 19
+recomb_time: 419.268952
+coal_node: 25
+coal_time: 1686.226891
+recomb node 29(->263)
+recoal node 10(->10)
+recomb_node: 29
+recomb_time: 6044.419947
+coal_node: 10
+coal_time: 9175.321658
+
+parsing tree 270: (((0,(19,(5,(2,13)))),((1,(12,14)),(16,(9,18)))),(10,((15,17),(((3,11),(4,6)),(7,8)))));
+recomb node 0(->0)
+recoal node 24(->139)
+recomb_node: 0
+recomb_time: 127.874736
+coal_node: 24
+coal_time: 9175.321658
+
+parsing tree 271: (((0,(19,(5,(2,13)))),((1,(12,14)),(16,(9,18)))),((17,(7,((3,11),(4,6)))),(10,(8,15))));
+recomb node 8(->8)
+recoal node 10(->10)
+recomb_node: 8
+recomb_time: 0.000000
+coal_node: 10
+coal_time: 2596.402445
+recomb node 15(->15)
+recoal node 8(->8)
+recomb_node: 15
+recomb_time: 127.874736
+coal_node: 8
+coal_time: 683.863505
+
+parsing tree 272: ((0,(19,(5,(2,13)))),(((1,(12,14)),(16,(9,18))),((17,(7,((3,11),(4,6)))),(10,(8,15)))));
+recomb node 20(->188)
+recoal node 38(->424)
+recomb_node: 20
+recomb_time: 9175.321658
+coal_node: 38
+coal_time: 31806.065068
+
+parsing tree 273: ((0,(19,(17,(5,(2,13))))),(((1,(12,14)),(16,(9,18))),((7,((3,11),(4,6))),(10,(8,15)))));
+recomb node 17(->17)
+recoal node 26(->98)
+recomb_node: 17
+recomb_time: 683.863505
+coal_node: 26
+coal_time: 1083.282752
+
+parsing tree 274: ((((1,(0,(19,(17,(5,(2,13)))))),(16,(9,18))),((7,((3,11),(4,6))),(10,(8,15)))),(12,14));
+recomb node 38(->27)
+recoal node 24(->424)
+recomb_node: 38
+recomb_time: 419.268952
+coal_node: 24
+coal_time: 31806.065068
+recomb node 20(->200)
+recoal node 1(->1)
+recomb_node: 20
+recomb_time: 3970.359808
+coal_node: 1
+coal_time: 9175.321658
+
+parsing tree 275: ((((1,(0,(19,(17,(5,(2,13)))))),(16,(9,18))),((7,((3,11),(4,6))),(10,(8,15)))),(12,14));
+node_arg_id1: 20, node_arg_id2: 20, node_tsk_id: 200
 upper: 9
 lower: 0
-recomb_node: 1
-recomb_time: 1083.282752
-coal_node: 3
-coal_time: 13901.580719
-18(->8) has 2 children
-2
-3
-78(->6) has 2 children
-1
-18
-103(->7) has 2 children
-4
-78
-114(->5) has 2 children
-0
-103
-
-parsing tree 90: (0,(4,(1,(2,3))));
-recomb node 2(->2)
-recoal node 3(->3)
-recomb_node: 2
-recomb_time: 127.874736
-coal_node: 3
+recomb_node: 0
+recomb_time: 2596.402445
+coal_node: 28
 coal_time: 3970.359808
-recomb node 6(->78)
-recoal node 4(->4)
-recomb_node: 6
-recomb_time: 13901.580719
-coal_node: 4
+
+parsing tree 276: ((0,(12,14)),(((1,(16,(9,18))),(19,(17,(5,(2,13))))),((7,((3,11),(4,6))),(10,(8,15)))));
+recomb node 28(->139)
+recoal node 22(->322)
+recomb_node: 28
+recomb_time: 2596.402445
+coal_node: 22
 coal_time: 31806.065068
-18(->8) has 2 children
-2
-3
-42(->5) has 2 children
-0
-4
-78(->7) has 2 children
-1
-18
-103(->6) has 2 children
-42
-78
+recomb node 0(->0)
+recoal node 38(->27)
+recomb_node: 0
+recomb_time: 3970.359808
+coal_node: 38
+coal_time: 31806.065068
 
-parsing tree 91: ((0,4),(1,(2,3)));
-recomb node 4(->4)
-recoal node 0(->0)
-recomb_node: 4
-recomb_time: 127.874736
-coal_node: 0
-coal_time: 13901.580719
-18(->8) has 2 children
-2
-3
-62(->5) has 2 children
-0
-1
-66(->6) has 2 children
-4
-62
-103(->7) has 2 children
-18
-66
-
-parsing tree 92: ((4,(0,1)),(2,3));
-recomb node 1(->1)
-recoal node 0(->0)
-recomb_node: 1
-recomb_time: 127.874736
-coal_node: 0
-coal_time: 2596.402445
-18(->7) has 2 children
-2
-3
-62(->5) has 2 children
-0
-1
-68(->8) has 2 children
-4
-18
-103(->6) has 2 children
-62
-68
-
-parsing tree 93: ((0,1),(4,(2,3)));
-recomb node 4(->4)
-recoal node 8(->18)
-recomb_node: 4
-recomb_time: 243.988772
-coal_node: 8
-coal_time: 9175.321658
-18(->8) has 2 children
-2
-3
-62(->5) has 2 children
-0
-1
-90(->6) has 2 children
-18
-62
-103(->7) has 2 children
-4
-90
-
-parsing tree 94: (4,((0,1),(2,3)));
-recomb node 5(->62)
-recoal node 7(->18)
------------------------Invlid SPR moves----------------------
-18(->8) has 2 children
-2
-3
-22(->7) has 2 children
-1
-4
-90(->5) has 2 children
-0
-18
-103(->6) has 2 children
-22
-90
-
-parsing tree 95: ((0,(2,3)),(1,4));
-recomb node 1(->1)
-recoal node 4(->4)
-recomb_node: 1
+parsing tree 277: (0,(((19,(17,(5,(2,13)))),((12,(1,14)),(16,(9,18)))),((7,((3,11),(4,6))),(10,(8,15)))));
+recomb node 14(->14)
+recoal node 1(->1)
+recomb_node: 14
 recomb_time: 0.000000
-coal_node: 4
-coal_time: 3970.359808
-22(->8) has 2 children
-1
-4
-58(->5) has 2 children
-0
-2
-90(->6) has 2 children
-3
-58
-103(->7) has 2 children
-22
-90
+coal_node: 1
+coal_time: 419.268952
+recomb node 12(->12)
+recoal node 37(->27)
+recomb_node: 12
+recomb_time: 50.955204
+coal_node: 37
+coal_time: 2596.402445
 
-parsing tree 96: ((3,(0,2)),(1,4));
-recomb node 2(->2)
+parsing tree 278: ((0,(19,(17,(5,(2,13))))),((7,((12,(1,14)),(16,(9,18)))),(((3,11),(4,6)),(10,(8,15)))));
+recomb node 7(->7)
+recoal node 38(->199)
+recomb_node: 7
+recomb_time: 1083.282752
+coal_node: 38
+coal_time: 3970.359808
+recomb node 28(->139)
 recoal node 0(->0)
-recomb_node: 2
+recomb_node: 28
+recomb_time: 1686.226891
+coal_node: 0
+coal_time: 31806.065068
+
+parsing tree 279: ((0,((3,11),(4,6))),((7,((1,14),(16,(9,18)))),(12,((19,(17,(5,(2,13)))),(10,(8,15))))));
+recomb node 30(->138)
+recoal node 0(->0)
+recomb_node: 30
+recomb_time: 6044.419947
+coal_node: 0
+coal_time: 31806.065068
+recomb node 12(->12)
+recoal node 34(->126)
+recomb_node: 12
+recomb_time: 0.000000
+coal_node: 34
+coal_time: 13901.580719
+recomb node 28(->139)
+recoal node 34(->126)
+recomb_node: 28
+recomb_time: 2596.402445
+coal_node: 34
+coal_time: 6044.419947
+
+parsing tree 280: ((0,12),((7,((1,14),(16,(9,18)))),(((19,(17,(5,(2,13)))),(10,(8,15))),((3,11),(4,6)))));
+recomb node 12(->12)
+recoal node 0(->0)
+recomb_node: 12
 recomb_time: 683.863505
 coal_node: 0
-coal_time: 2596.402445
-22(->8) has 2 children
-1
-4
-94(->5) has 2 children
-0
-22
-103(->6) has 2 children
-3
-94
-114(->7) has 2 children
-2
-103
-
-parsing tree 97: (2,(3,(0,(1,4))));
-recomb node 8(->22)
-recoal node 0(->0)
------------------------Invlid SPR moves----------------------
-49(->5) has 2 children
-0
-3
-81(->6) has 2 children
-4
-49
-103(->7) has 2 children
-1
-81
-114(->8) has 2 children
-2
-103
-
-parsing tree 98: (2,(1,(4,(0,3))));
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-49(->5) has 2 children
-0
-3
-81(->6) has 2 children
-4
-49
-103(->7) has 2 children
-2
-81
-114(->8) has 2 children
-1
-103
-
-parsing tree 99: (1,(2,(4,(0,3))));
-recomb node 1(->1)
-recoal node 8(->114)
-recomb_node: 1
+coal_time: 1083.282752
+recomb node 32(->138)
+recoal node 29(->275)
+recomb_node: 32
 recomb_time: 1686.226891
-coal_node: 8
-coal_time: 48063.865571
-49(->5) has 2 children
-0
-3
-74(->8) has 2 children
-2
-4
-103(->6) has 2 children
-49
-74
-114(->7) has 2 children
-1
-103
+coal_node: 29
+coal_time: 13901.580719
 
-parsing tree 100: (1,((0,3),(2,4)));
-recomb node 5(->49)
-recoal node 7(->103)
-recomb_node: 5
-recomb_time: 2596.402445
-coal_node: 7
+parsing tree 281: ((0,12),((7,((1,14),(16,(9,18)))),(((19,(5,(17,(2,13)))),(10,(8,15))),((3,11),(4,6)))));
+recomb node 17(->17)
+recoal node 26(->53)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 282: ((0,12),((7,((1,14),(16,(9,18)))),((19,(5,(17,(2,13)))),(((3,11),(4,6)),(10,(8,15))))));
+recomb node 33(->138)
+recoal node 36(->126)
+recomb_node: 33
+recomb_time: 3970.359808
+coal_node: 36
+coal_time: 6044.419947
+
+parsing tree 283: ((0,12),((7,((1,14),(16,(9,18)))),((19,(5,(17,(2,13)))),(((3,11),(4,6)),(10,(8,15))))));
+node_arg_id1: 33, node_arg_id2: 33, node_tsk_id: 243
+upper: 10
+lower: 5
+recomb_node: 32
+recomb_time: 1083.282752
+coal_node: 36
+coal_time: 6044.419947
+
+parsing tree 284: (((0,12),(7,((1,14),(16,(9,18))))),((19,(5,(17,(2,13)))),(((3,11),(4,6)),(10,(8,15)))));
+recomb node 30(->368)
+recoal node 21(->462)
+recomb_node: 30
+recomb_time: 21036.114721
+coal_node: 21
 coal_time: 31806.065068
-37(->7) has 2 children
-1
-2
-49(->5) has 2 children
-0
-3
-74(->8) has 2 children
-4
-37
-103(->6) has 2 children
-49
-74
 
-parsing tree 101: ((0,3),(4,(1,2)));
-recomb node 1(->1)
-recoal node 2(->2)
-recomb_node: 1
+parsing tree 285: ((7,((0,12),((1,14),(16,(9,18))))),((19,(5,(17,(2,13)))),(((3,11),(4,6)),(10,(8,15)))));
+recomb node 7(->7)
+recoal node 21(->235)
+recomb_node: 7
+recomb_time: 243.988772
+coal_node: 21
+coal_time: 9175.321658
+
+parsing tree 286: (12,((7,(0,((1,14),(16,(9,18))))),((19,(5,(17,(2,13)))),(((3,11),(4,6)),(10,(8,15))))));
+recomb node 12(->12)
+recoal node 23(->424)
+recomb_node: 12
 recomb_time: 419.268952
-coal_node: 2
-coal_time: 2596.402445
-23(->7) has 2 children
-1
-4
-49(->5) has 2 children
-0
-3
-74(->8) has 2 children
-2
-23
-103(->6) has 2 children
-49
-74
+coal_node: 23
+coal_time: 31806.065068
 
-parsing tree 102: ((0,3),(2,(1,4)));
-recomb node 2(->2)
-recoal node 8(->74)
-recomb_node: 2
+parsing tree 287: ((0,(7,(12,((1,14),(16,(9,18)))))),((19,(5,(17,(2,13)))),(((3,11),(4,6)),(10,(8,15)))));
+recomb node 0(->0)
+recoal node 21(->235)
+recomb_node: 0
+recomb_time: 1083.282752
+coal_node: 21
+coal_time: 9175.321658
+recomb node 12(->12)
+recoal node 25(->199)
+recomb_node: 12
+recomb_time: 1083.282752
+coal_node: 25
+coal_time: 2596.402445
+
+parsing tree 288: ((0,(12,(7,((1,14),(16,(9,18)))))),((19,(5,(17,(2,13)))),(((3,11),(4,6)),(10,(8,15)))));
+recomb node 12(->12)
+recoal node 25(->235)
+recomb_node: 12
+recomb_time: 0.000000
+coal_node: 25
+coal_time: 9175.321658
+
+parsing tree 289: ((0,((7,((1,14),(16,(9,18)))),(12,19))),((5,(17,(2,13))),(((3,11),(4,6)),(10,(8,15)))));
+recomb node 19(->19)
+recoal node 12(->12)
+recomb_node: 19
+recomb_time: 243.988772
+coal_node: 12
+coal_time: 2596.402445
+
+parsing tree 290: ((0,((7,((1,14),(16,(9,18)))),(12,19))),((5,(17,(2,13))),(((3,11),(4,6)),(10,(8,15)))));
+node_arg_id1: 29, node_arg_id2: 29, node_tsk_id: 368
+upper: 11
+lower: 6
+recomb_node: 28
+recomb_time: 1686.226891
+coal_node: 32
+coal_time: 9175.321658
+
+parsing tree 291: ((0,((1,14),((7,(16,(9,18))),(12,19)))),((5,(17,(2,13))),(((3,11),(4,6)),(10,(8,15)))));
+recomb node 22(->57)
+recoal node 25(->264)
+recomb_node: 22
+recomb_time: 683.863505
+coal_node: 25
+coal_time: 9175.321658
+
+parsing tree 292: ((0,(((1,14),((7,10),(8,15))),((16,(9,18)),(12,19)))),((5,(17,(2,13))),((3,11),(4,6))));
+recomb node 35(->126)
+recoal node 22(->57)
+recomb_node: 35
+recomb_time: 3970.359808
+coal_node: 22
+coal_time: 6044.419947
+recomb node 7(->7)
+recoal node 10(->10)
+recomb_node: 7
+recomb_time: 50.955204
+coal_node: 10
+coal_time: 2596.402445
+
+parsing tree 293: (0,((((1,14),((7,10),(8,15))),(16,(9,18))),((5,(17,(2,13))),(((3,11),(4,6)),(12,19)))));
+recomb node 37(->26)
+recoal node 30(->138)
+recomb_node: 37
+recomb_time: 3970.359808
+coal_node: 30
+coal_time: 6044.419947
+recomb node 24(->284)
+recoal node 28(->346)
+recomb_node: 24
+recomb_time: 13901.580719
+coal_node: 28
+coal_time: 31806.065068
+
+parsing tree 294: (((0,(16,(9,18))),((1,14),((7,10),(8,15)))),((5,(17,(2,13))),(((3,11),(4,6)),(12,19))));
+recomb node 0(->0)
+recoal node 36(->74)
+recomb_node: 0
+recomb_time: 50.955204
+coal_node: 36
+coal_time: 2596.402445
+
+parsing tree 295: (10,((8,((0,(16,(9,18))),(1,14))),(((5,(17,(2,13))),(((3,11),(4,6)),(12,19))),(7,15))));
+recomb node 8(->8)
+recoal node 21(->284)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 296: (10,((7,((19,(5,(17,(2,13)))),(15,((3,11),(4,6))))),(((0,(16,(9,18))),(1,14)),(8,12))));
+recomb node 15(->15)
+recoal node 32(->138)
+recomb_node: 15
+recomb_time: 50.955204
+coal_node: 32
+coal_time: 1083.282752
+recomb node 12(->12)
+recoal node 8(->8)
+recomb_node: 12
 recomb_time: 50.955204
 coal_node: 8
-coal_time: 13901.580719
-23(->8) has 2 children
-1
-4
-49(->5) has 2 children
-0
-3
-95(->6) has 2 children
-23
-49
-114(->7) has 2 children
-2
-95
-
-parsing tree 103: (2,((0,3),(1,4)));
-recomb node 2(->2)
-recoal node 6(->103)
-recomb_node: 2
-recomb_time: 419.268952
-coal_node: 6
-coal_time: 48063.865571
-23(->7) has 2 children
-1
-4
-95(->5) has 2 children
-0
-23
-114(->6) has 3 children
-2
-3
-95
-
-parsing tree 104: ((0,(1,4)),(2,3));
-recomb node 3(->3)
-recoal node 2(->2)
-recomb_node: 3
-recomb_time: 0.000000
-coal_node: 2
-coal_time: 48063.865571
-23(->8) has 2 children
-1
-4
-50(->5) has 2 children
-0
-3
-95(->6) has 2 children
-23
-50
-114(->7) has 2 children
-2
-95
-
-parsing tree 105: (2,((0,3),(1,4)));
-recomb node 3(->3)
-recoal node 0(->0)
-recomb_node: 3
-recomb_time: 1083.282752
-coal_node: 0
-coal_time: 6044.419947
-23(->8) has 2 children
-1
-4
-50(->5) has 2 children
-0
-3
-95(->6) has 2 children
-23
-50
-103(->7) has 2 children
-2
-95
-
-parsing tree 106: (2,((0,3),(1,4)));
-node_arg_id1: 7, node_arg_id2: 7, node_tsk_id: 114
-upper: 14
-lower: 0
-recomb_node: 2
-recomb_time: 419.268952
-coal_node: 6
-coal_time: 31806.065068
-12(->8) has 2 children
-2
-4
-50(->5) has 2 children
-0
-3
-103(->6) has 2 children
-12
-50
-114(->7) has 2 children
-1
-103
-
-parsing tree 107: (1,((0,3),(2,4)));
-recomb node 5(->50)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-12(->8) has 2 children
-2
-4
-87(->5) has 2 children
-0
-12
-103(->6) has 2 children
-3
-87
-114(->7) has 2 children
-1
-103
-
-parsing tree 108: (1,(3,(0,(2,4))));
-recomb node 3(->3)
-recoal node 6(->103)
-recomb_node: 3
-recomb_time: 419.268952
-coal_node: 6
-coal_time: 31806.065068
-12(->8) has 2 children
-2
-4
-87(->5) has 2 children
-0
-12
-112(->6) has 2 children
-1
-87
-114(->7) has 2 children
-3
-112
-
-parsing tree 109: (3,(1,(0,(2,4))));
-recomb node 5(->87)
-recoal node 1(->1)
-recomb_node: 5
-recomb_time: 9175.321658
-coal_node: 1
-coal_time: 21036.114721
-43(->5) has 2 children
-0
-4
-87(->6) has 2 children
-2
-43
-112(->7) has 2 children
-1
-87
-114(->8) has 2 children
-3
-112
-
-parsing tree 110: (3,(1,(2,(0,4))));
-recomb node 2(->2)
-recoal node 5(->87)
-recomb_node: 2
-recomb_time: 1686.226891
-coal_node: 5
 coal_time: 9175.321658
-29(->8) has 2 children
-1
-3
-43(->5) has 2 children
-0
-4
-87(->6) has 2 children
-2
-43
-110(->7) has 2 children
-29
-87
+recomb node 30(->369)
+recoal node 29(->346)
+recomb_node: 30
+recomb_time: 1083.282752
+coal_node: 29
+coal_time: 3970.359808
 
-parsing tree 111: ((2,(0,4)),(1,3));
-recomb node 3(->3)
-recoal node 1(->1)
-recomb_node: 3
-recomb_time: 243.988772
-coal_node: 1
-coal_time: 6044.419947
-29(->8) has 2 children
-1
-3
-43(->5) has 2 children
-0
-4
-107(->6) has 2 children
-2
-43
-110(->7) has 2 children
-29
-107
+parsing tree 297: ((7,((19,(5,(17,(2,13)))),(15,((3,11),(4,6))))),(((0,(16,(9,18))),(1,14)),(12,(8,10))));
+recomb node 10(->10)
+recoal node 8(->8)
+recomb_node: 10
+recomb_time: 683.863505
+coal_node: 8
+coal_time: 9175.321658
 
-parsing tree 112: ((2,(0,4)),(1,3));
-node_arg_id1: 6, node_arg_id2: 6, node_tsk_id: 87
+parsing tree 298: (((0,(16,(9,18))),(1,14)),((7,(((5,(17,(2,13))),(10,19)),(15,((3,11),(4,6))))),(8,12)));
+recomb node 10(->10)
+recoal node 19(->19)
+recomb_node: 10
+recomb_time: 683.863505
+coal_node: 19
+coal_time: 1686.226891
+recomb node 36(->329)
+recoal node 29(->369)
+recomb_node: 36
+recomb_time: 9175.321658
+coal_node: 29
+coal_time: 21036.114721
+
+parsing tree 299: (((0,(16,(9,18))),(1,14)),((7,(((5,(17,(2,13))),(10,19)),(15,((3,11),(4,6))))),(8,12)));
+node_arg_id1: 28, node_arg_id2: 28, node_tsk_id: 369
 upper: 11
 lower: 0
-recomb_node: 2
-recomb_time: 243.988772
-coal_node: 5
-coal_time: 9175.321658
-43(->5) has 2 children
-0
-4
-82(->6) has 2 children
-3
-43
-107(->7) has 2 children
-2
-82
-114(->8) has 2 children
-1
-107
-
-parsing tree 113: (1,(2,(3,(0,4))));
-recomb node 3(->3)
-recoal node 5(->43)
-recomb_node: 3
-recomb_time: 243.988772
-coal_node: 5
-coal_time: 9175.321658
-43(->5) has 2 children
-0
-4
-82(->6) has 2 children
-3
-43
-111(->7) has 2 children
-1
-82
-114(->8) has 2 children
-2
-111
-
-parsing tree 114: (2,(1,(3,(0,4))));
-recomb node 6(->82)
-recoal node 1(->1)
-recomb_node: 6
-recomb_time: 9175.321658
-coal_node: 1
-coal_time: 21036.114721
-51(->5) has 2 children
-0
-3
-82(->6) has 2 children
-4
-51
-111(->7) has 2 children
-1
-82
-114(->8) has 2 children
-2
-111
-
-parsing tree 115: (2,(1,(4,(0,3))));
-recomb node 3(->3)
-recoal node 0(->0)
------------------------Invlid SPR moves----------------------
-38(->8) has 2 children
-1
-2
-51(->5) has 2 children
-0
-3
-82(->6) has 2 children
-4
-51
-111(->7) has 2 children
-38
-82
-
-parsing tree 116: ((4,(0,3)),(1,2));
-recomb node 1(->1)
-recoal node 2(->2)
-recomb_node: 1
-recomb_time: 1686.226891
-coal_node: 2
-coal_time: 9175.321658
-51(->5) has 2 children
-0
-3
-82(->6) has 2 children
-4
-51
-111(->7) has 2 children
-1
-82
-114(->8) has 2 children
-2
-111
-
-parsing tree 117: (2,(1,(4,(0,3))));
-recomb node 6(->82)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-39(->8) has 2 children
-1
-2
-51(->5) has 2 children
-0
-3
-82(->6) has 2 children
-4
-51
-106(->7) has 2 children
-39
-82
-
-parsing tree 118: ((4,(0,3)),(1,2));
-recomb node 2(->2)
-recoal node 1(->1)
-recomb_node: 2
-recomb_time: 1686.226891
-coal_node: 1
-coal_time: 6044.419947
-39(->8) has 2 children
-1
-2
-51(->5) has 2 children
-0
-3
-91(->6) has 2 children
-39
-51
-106(->7) has 2 children
-4
-91
-
-parsing tree 119: (4,((0,3),(1,2)));
-recomb node 5(->51)
-recoal node 8(->39)
-recomb_node: 5
-recomb_time: 6044.419947
-coal_node: 8
-coal_time: 21036.114721
-24(->8) has 2 children
-1
-4
-51(->5) has 2 children
-0
-3
-91(->6) has 2 children
-2
-51
-106(->7) has 2 children
-24
-91
-
-parsing tree 120: ((2,(0,3)),(1,4));
-recomb node 1(->1)
-recoal node 4(->4)
-recomb_node: 1
-recomb_time: 0.000000
-coal_node: 4
-coal_time: 13901.580719
-24(->7) has 2 children
-1
-4
-91(->5) has 3 children
-0
-2
-3
-106(->6) has 2 children
-24
-91
-
-parsing tree 121: ((1,4),(3,(0,2)));
-recomb node 0(->0)
-recoal node 2(->2)
-recomb_node: 0
-recomb_time: 683.863505
-coal_node: 2
-coal_time: 21036.114721
-7(->7) has 2 children
-3
-4
-39(->6) has 2 children
-1
-2
-91(->5) has 3 children
-0
-7
-39
-
-parsing tree 122: ((0,(3,4)),(1,2));
-recomb node 2(->2)
-recoal node 1(->1)
-recomb_node: 2
-recomb_time: 683.863505
-coal_node: 1
-coal_time: 6044.419947
-recomb node 4(->4)
-recoal node 3(->3)
-recomb_node: 4
-recomb_time: 127.874736
-coal_node: 3
-coal_time: 1686.226891
-7(->7) has 2 children
-3
-4
-91(->5) has 3 children
-0
-2
-7
-106(->6) has 2 children
-1
-91
-
-parsing tree 123: (1,((0,2),(3,4)));
-recomb node 2(->2)
-recoal node 0(->0)
-recomb_node: 2
-recomb_time: 1686.226891
-coal_node: 0
-coal_time: 21036.114721
-24(->8) has 2 children
-1
-4
-51(->5) has 2 children
-0
-3
-91(->6) has 2 children
-2
-51
-106(->7) has 2 children
-24
-91
-
-parsing tree 124: ((2,(0,3)),(1,4));
-recomb node 4(->4)
-recoal node 1(->1)
-recomb_node: 4
-recomb_time: 683.863505
-coal_node: 1
-coal_time: 13901.580719
-recomb node 0(->0)
-recoal node 3(->3)
-recomb_node: 0
-recomb_time: 127.874736
-coal_node: 3
-coal_time: 6044.419947
-13(->8) has 2 children
-2
-4
-51(->5) has 2 children
-0
-3
-75(->7) has 2 children
-1
-13
-106(->6) has 2 children
-51
-75
-
-parsing tree 125: ((0,3),(1,(2,4)));
-recomb node 2(->2)
-recoal node 4(->4)
-recomb_node: 2
-recomb_time: 1083.282752
-coal_node: 4
-coal_time: 2596.402445
-13(->8) has 2 children
-2
-4
-75(->7) has 2 children
-1
-13
-112(->5) has 2 children
-0
-75
-114(->6) has 2 children
-3
-112
-
-parsing tree 126: (3,(0,(1,(2,4))));
-recomb node 7(->75)
-recoal node 0(->0)
------------------------Invlid SPR moves----------------------
-13(->8) has 2 children
-2
-4
-52(->5) has 2 children
-0
-3
-75(->7) has 2 children
-1
-13
-112(->6) has 2 children
-52
-75
-
-parsing tree 127: ((0,3),(1,(2,4)));
-recomb node 7(->75)
-recoal node 6(->114)
 recomb_node: 7
-recomb_time: 13901.580719
-coal_node: 6
-coal_time: 21036.114721
-13(->8) has 2 children
-2
-4
-75(->7) has 2 children
-1
-13
-112(->5) has 2 children
-0
-75
-114(->6) has 2 children
-3
-112
-
-parsing tree 128: (3,(0,(1,(2,4))));
-recomb node 7(->75)
-recoal node 0(->0)
------------------------Invlid SPR moves----------------------
-13(->8) has 2 children
-2
-4
-75(->7) has 2 children
-1
-13
-106(->5) has 2 children
-0
-75
-114(->6) has 2 children
-3
-106
-
-parsing tree 129: (3,(0,(1,(2,4))));
-node_arg_id1: 5, node_arg_id2: 5, node_tsk_id: 112
-upper: 13
+recomb_time: 419.268952
+coal_node: 27
+coal_time: 9175.321658
+node_arg_id1: 20, node_arg_id2: 20, node_tsk_id: 151
+upper: 8
 lower: 0
 recomb_node: 0
-recomb_time: 243.988772
-coal_node: 7
-coal_time: 31806.065068
-13(->8) has 2 children
-2
-4
-53(->5) has 2 children
-0
-3
-75(->7) has 2 children
-1
-13
-106(->6) has 2 children
-53
-75
-
-parsing tree 130: ((0,3),(1,(2,4)));
-recomb node 7(->75)
-recoal node 6(->114)
-recomb_node: 7
-recomb_time: 21036.114721
-coal_node: 6
-coal_time: 31806.065068
-13(->8) has 2 children
-2
-4
-53(->5) has 2 children
-0
-3
-106(->6) has 2 children
-13
-53
-114(->7) has 2 children
-1
-106
-
-parsing tree 131: (1,((0,3),(2,4)));
-recomb node 5(->53)
-recoal node 8(->13)
------------------------Invlid SPR moves----------------------
-13(->8) has 2 children
-2
-4
-76(->6) has 2 children
-1
-13
-106(->7) has 2 children
-3
-76
-114(->5) has 2 children
-0
-106
-
-parsing tree 132: (0,(3,(1,(2,4))));
-recomb node 0(->0)
-recoal node 6(->106)
-recomb_node: 0
-recomb_time: 1686.226891
-coal_node: 6
-coal_time: 48063.865571
-recomb node 1(->1)
-recoal node 8(->13)
-recomb_node: 1
-recomb_time: 419.268952
-coal_node: 8
-coal_time: 9175.321658
-25(->6) has 2 children
-1
-4
-76(->7) has 2 children
-2
-25
-106(->8) has 2 children
-3
-76
-114(->5) has 2 children
-0
-106
-
-parsing tree 133: (0,(3,(2,(1,4))));
-recomb node 2(->2)
-recoal node 6(->76)
-recomb_node: 2
-recomb_time: 1686.226891
-coal_node: 6
-coal_time: 9175.321658
-25(->7) has 2 children
-1
-4
-76(->8) has 2 children
-2
-25
-96(->5) has 2 children
-0
-3
-106(->6) has 2 children
-76
-96
-
-parsing tree 134: ((0,3),(2,(1,4)));
-recomb node 0(->0)
-recoal node 3(->3)
-recomb_node: 0
-recomb_time: 6044.419947
-coal_node: 3
-coal_time: 9175.321658
-19(->8) has 2 children
-2
-3
-25(->7) has 2 children
-1
-4
-96(->5) has 2 children
-0
-25
-106(->6) has 2 children
-19
-96
-
-parsing tree 135: ((0,(1,4)),(2,3));
-recomb node 7(->25)
-recoal node 0(->0)
-recomb_node: 7
-recomb_time: 6044.419947
-coal_node: 0
-coal_time: 9175.321658
-recomb node 8(->76)
-recoal node 6(->106)
-recomb_node: 8
-recomb_time: 9175.321658
-coal_node: 6
-coal_time: 31806.065068
-19(->8) has 2 children
-2
-3
-25(->7) has 2 children
-1
-4
-92(->5) has 2 children
-0
-19
-106(->6) has 2 children
-25
-92
-
-parsing tree 136: ((0,(2,3)),(1,4));
-recomb node 0(->0)
-recoal node 8(->19)
-recomb_node: 0
-recomb_time: 127.874736
-coal_node: 8
-coal_time: 21036.114721
-19(->8) has 2 children
-2
-3
-25(->6) has 2 children
-1
-4
-106(->7) has 2 children
-19
-25
-114(->5) has 2 children
-0
-106
-
-parsing tree 137: (0,((1,4),(2,3)));
-recomb node 8(->19)
-recoal node 7(->25)
-recomb_node: 8
-recomb_time: 6044.419947
-coal_node: 7
-coal_time: 31806.065068
-19(->8) has 2 children
-2
-3
-92(->6) has 2 children
-1
-19
-106(->7) has 2 children
-4
-92
-114(->5) has 2 children
-0
-106
-
-parsing tree 138: (0,(4,(1,(2,3))));
-recomb node 8(->19)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-19(->8) has 2 children
-2
-3
-63(->5) has 2 children
-0
-1
-92(->6) has 2 children
-19
-63
-106(->7) has 2 children
-4
-92
-
-parsing tree 139: (4,((0,1),(2,3)));
-recomb node 0(->0)
-recoal node 1(->1)
-recomb_node: 0
 recomb_time: 1083.282752
-coal_node: 1
+coal_node: 36
 coal_time: 3970.359808
-19(->7) has 2 children
-2
-3
-106(->8) has 2 children
-4
-19
-109(->6) has 2 children
-1
-106
-114(->5) has 2 children
-0
-109
 
-parsing tree 140: (0,(1,(4,(2,3))));
-recomb node 8(->19)
-recoal node 4(->4)
-recomb_node: 8
-recomb_time: 2596.402445
-coal_node: 4
+parsing tree 300: (((0,7),(16,(9,18))),(10,((15,((3,11),(4,6))),((19,(5,(17,(2,13)))),((1,14),(8,12))))));
+recomb node 34(->329)
+recoal node 26(->177)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 301: (((0,7),(16,(9,18))),(10,(((1,14),(15,((3,11),(4,6)))),((19,(5,(17,(2,13)))),(8,12)))));
+recomb node 23(->57)
+recoal node 33(->173)
+recomb_node: 23
+recomb_time: 683.863505
+coal_node: 33
+coal_time: 13901.580719
+
+parsing tree 302: ((10,(((0,7),(16,(9,18))),((1,14),(15,((3,11),(4,6)))))),((19,(5,(17,(2,13)))),(8,12)));
+recomb node 37(->276)
+recoal node 25(->437)
+recomb_node: 37
+recomb_time: 9175.321658
+coal_node: 25
 coal_time: 31806.065068
-recomb node 0(->0)
-recoal node 7(->106)
-recomb_node: 0
+recomb node 21(->187)
+recoal node 24(->395)
+recomb_node: 21
+recomb_time: 3970.359808
+coal_node: 24
+coal_time: 13901.580719
+
+parsing tree 303: ((10,(((0,7),(16,(9,18))),((1,14),(15,((3,11),(4,6)))))),((19,(5,(17,(2,13)))),(8,12)));
+node_arg_id1: 21, node_arg_id2: 21, node_tsk_id: 187
+upper: 8
+lower: 5
+recomb_node: 20
+recomb_time: 1083.282752
+coal_node: 36
+coal_time: 2596.402445
+
+parsing tree 304: ((((5,(17,(2,13))),(10,19)),(8,12)),(((0,7),(16,(9,18))),((1,14),(15,((3,11),(4,6))))));
+recomb node 10(->10)
+recoal node 19(->19)
+recomb_node: 10
+recomb_time: 419.268952
+coal_node: 19
+coal_time: 1686.226891
+
+parsing tree 305: (12,((8,((5,(17,(2,13))),(10,19))),(((0,7),(16,(9,18))),((1,14),(15,((3,11),(4,6)))))));
+recomb node 12(->12)
+recoal node 23(->460)
+recomb_node: 12
+recomb_time: 2596.402445
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 306: (12,((((0,7),(16,(9,18))),((1,14),(15,((3,11),(4,6))))),(8,((5,(17,(2,13))),(10,19)))));
+
+parsing tree 307: (12,((((0,7),(16,(9,18))),((5,(17,(2,13))),(10,19))),((1,14),(8,(15,((3,11),(4,6)))))));
+recomb node 30(->198)
+recoal node 21(->199)
+recomb_node: 30
+recomb_time: 6044.419947
+coal_node: 21
+coal_time: 13901.580719
+recomb node 8(->8)
+recoal node 34(->173)
+recomb_node: 8
 recomb_time: 127.874736
+coal_node: 34
+coal_time: 9175.321658
+
+parsing tree 308: (12,((((0,7),(16,(9,18))),(5,(17,(2,13)))),(((1,14),(10,19)),(8,(15,((3,11),(4,6)))))));
+recomb node 38(->30)
+recoal node 25(->57)
+recomb_node: 38
+recomb_time: 2596.402445
+coal_node: 25
+coal_time: 9175.321658
+
+parsing tree 309: ((((0,7),(16,(9,18))),(5,(17,(2,13)))),(((12,(1,14)),(10,19)),(8,(15,((3,11),(4,6))))));
+recomb node 12(->12)
+recoal node 25(->57)
+recomb_node: 12
+recomb_time: 0.000000
+coal_node: 25
+coal_time: 6044.419947
+
+parsing tree 310: ((((0,7),(16,(9,18))),(5,(17,(2,13)))),((10,(12,(1,14))),(8,(19,(15,((3,11),(4,6)))))));
+recomb node 19(->19)
+recoal node 33(->173)
+recomb_node: 19
+recomb_time: 1083.282752
+coal_node: 33
+coal_time: 6044.419947
+
+parsing tree 311: ((((0,7),(16,(9,18))),(5,(17,(2,13)))),((12,(1,14)),(8,((15,((3,11),(4,6))),(10,19)))));
+recomb node 10(->10)
+recoal node 19(->19)
+recomb_node: 10
+recomb_time: 243.988772
+coal_node: 19
+coal_time: 6044.419947
+
+parsing tree 312: ((((0,7),(16,(9,18))),(5,(17,(2,13)))),((1,(12,14)),(8,((15,((3,11),(4,6))),(10,19)))));
+recomb node 12(->12)
+recoal node 14(->14)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 313: (5,((((0,7),(16,(9,18))),(17,(2,13))),((1,(12,14)),(8,((15,((3,11),(4,6))),(10,19))))));
+recomb node 5(->5)
+recoal node 23(->424)
+recomb_node: 5
+recomb_time: 243.988772
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 314: (5,(((((0,7),(16,(9,18))),(17,(2,13))),(1,(12,14))),(8,((15,((3,11),(4,6))),(10,19)))));
+recomb node 33(->320)
+recoal node 23(->424)
+recomb_node: 33
+recomb_time: 9175.321658
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 315: (((((5,(0,7)),(16,(9,18))),(17,(2,13))),(12,14)),((1,8),((15,((3,11),(4,6))),(10,19))));
+recomb node 1(->1)
+recoal node 8(->8)
+recomb_node: 1
+recomb_time: 127.874736
+coal_node: 8
+coal_time: 9175.321658
+recomb node 5(->5)
+recoal node 20(->62)
+recomb_node: 5
+recomb_time: 683.863505
+coal_node: 20
+coal_time: 1686.226891
+
+parsing tree 316: ((1,((8,(5,(0,7))),((15,((3,11),(4,6))),(10,19)))),(((17,(2,13)),(16,(9,18))),(12,14)));
+recomb node 8(->8)
+recoal node 37(->209)
+recomb_node: 8
+recomb_time: 50.955204
+coal_node: 37
+coal_time: 9175.321658
+recomb node 21(->103)
+recoal node 8(->8)
+recomb_node: 21
+recomb_time: 1686.226891
+coal_node: 8
+coal_time: 9175.321658
+
+parsing tree 317: (1,((((17,(2,13)),(16,(9,18))),(12,14)),((8,(5,(0,7))),((15,((3,11),(4,6))),(10,19)))));
+recomb node 28(->273)
+recoal node 38(->320)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 318: (1,((14,((12,(17,(2,13))),(16,(9,18)))),((8,(5,(0,7))),((15,((3,11),(4,6))),(10,19)))));
+recomb node 12(->12)
+recoal node 26(->95)
+recomb_node: 12
+recomb_time: 243.988772
+coal_node: 26
+coal_time: 2596.402445
+
+parsing tree 319: (1,(((12,(17,(2,13))),(14,(16,(9,18)))),((8,(5,(0,7))),((15,((3,11),(4,6))),(10,19)))));
+recomb node 36(->74)
+recoal node 14(->14)
+recomb_node: 36
+recomb_time: 1083.282752
+coal_node: 14
+coal_time: 9175.321658
+
+parsing tree 320: (14,(((5,(0,7)),((15,((3,11),(4,6))),(10,19))),((8,(1,(16,(9,18)))),(12,(17,(2,13))))));
+recomb node 8(->8)
+recoal node 35(->74)
+recomb_node: 8
+recomb_time: 1686.226891
+coal_node: 35
+coal_time: 3970.359808
+recomb node 14(->14)
+recoal node 23(->389)
+recomb_node: 14
+recomb_time: 3970.359808
+coal_node: 23
+coal_time: 31806.065068
+recomb node 1(->1)
+recoal node 35(->74)
+recomb_node: 1
+recomb_time: 243.988772
+coal_node: 35
+coal_time: 1686.226891
+
+parsing tree 321: (((5,(0,7)),(14,((15,((3,11),(4,6))),(10,19)))),((8,(1,(16,(9,18)))),(12,(17,(2,13)))));
+recomb node 14(->14)
+recoal node 38(->209)
+recomb_node: 14
+recomb_time: 243.988772
+coal_node: 38
+coal_time: 6044.419947
+
+parsing tree 322: ((((5,(0,7)),(14,(19,(15,((3,11),(4,6)))))),(8,(1,(16,(9,18))))),((17,(2,13)),(10,12)));
+recomb node 25(->181)
+recoal node 22(->320)
+recomb_node: 25
+recomb_time: 3970.359808
+coal_node: 22
+coal_time: 31806.065068
+recomb node 10(->10)
+recoal node 12(->12)
+recomb_node: 10
+recomb_time: 1083.282752
+coal_node: 12
+coal_time: 2596.402445
+
+parsing tree 323: ((((5,(0,7)),((15,((3,11),(4,6))),(14,19))),(8,(1,(16,(9,18))))),((17,(2,13)),(10,12)));
+recomb node 32(->173)
+recoal node 34(->242)
+recomb_node: 32
+recomb_time: 1686.226891
+coal_node: 34
+coal_time: 6044.419947
+
+parsing tree 324: (((5,(0,7)),((15,((3,11),(4,6))),(14,19))),((8,(1,(16,(9,18)))),((17,(2,13)),(10,12))));
+recomb node 26(->181)
+recoal node 37(->175)
+recomb_node: 26
+recomb_time: 3970.359808
+coal_node: 37
+coal_time: 13901.580719
+
+parsing tree 325: (((5,(0,7)),((15,((3,11),(4,6))),(14,19))),((8,(1,(16,(9,18)))),((17,(2,13)),(10,12))));
+node_arg_id1: 25, node_arg_id2: 25, node_tsk_id: 181
+upper: 8
+lower: 0
+recomb_node: 8
+recomb_time: 50.955204
+coal_node: 24
+coal_time: 2596.402445
+
+parsing tree 326: (((5,(0,7)),((14,(8,(1,(16,(9,18))))),((17,(2,13)),(10,12)))),(19,(15,((3,11),(4,6)))));
+recomb node 14(->14)
+recoal node 25(->199)
+recomb_node: 14
+recomb_time: 2596.402445
+coal_node: 25
+coal_time: 6044.419947
+recomb node 38(->242)
+recoal node 23(->389)
+recomb_node: 38
+recomb_time: 6044.419947
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 327: (((5,(0,7)),((1,(16,(9,18))),(14,19))),(8,((15,((3,11),(4,6))),((17,(2,13)),(10,12)))));
+recomb node 19(->19)
+recoal node 14(->14)
+recomb_node: 19
+recomb_time: 2596.402445
+coal_node: 14
+coal_time: 6044.419947
+recomb node 38(->175)
+recoal node 33(->173)
+recomb_node: 38
+recomb_time: 3970.359808
+coal_node: 33
+coal_time: 9175.321658
+recomb node 8(->8)
+recoal node 27(->372)
+recomb_node: 8
+recomb_time: 0.000000
+coal_node: 27
+coal_time: 9175.321658
+
+parsing tree 328: ((((0,5),(7,8)),((1,(16,(9,18))),(14,19))),((15,((3,11),(4,6))),((17,(2,13)),(10,12))));
+recomb node 8(->8)
+recoal node 7(->7)
+recomb_node: 8
+recomb_time: 50.955204
 coal_node: 7
-coal_time: 48063.865571
-number of invalid SPR moves: 21
+coal_time: 419.268952
+recomb node 30(->366)
+recoal node 21(->103)
+recomb_node: 30
+recomb_time: 419.268952
+coal_node: 21
+coal_time: 1686.226891
+
+parsing tree 329: ((((0,5),(7,8)),((1,(16,(9,18))),(14,19))),((15,((3,11),(4,6))),((17,(2,13)),(10,12))));
+node_arg_id1: 31, node_arg_id2: 31, node_tsk_id: 173
+upper: 6
+lower: 0
+recomb_node: 15
+recomb_time: 243.988772
+coal_node: 30
+coal_time: 3970.359808
+
+parsing tree 330: ((((0,5),(7,8)),((1,(16,(9,18))),(14,19))),((12,(17,(2,13))),(15,(10,((3,11),(4,6))))));
+recomb node 10(->10)
+recoal node 30(->138)
+recomb_node: 10
+recomb_time: 243.988772
+coal_node: 30
+coal_time: 1686.226891
+
+parsing tree 331: (((12,(17,(2,13))),(15,(10,((3,11),(4,6))))),((1,((0,5),(7,8))),((16,(9,18)),(14,19))));
+recomb node 1(->1)
+recoal node 37(->103)
+recomb_node: 1
+recomb_time: 683.863505
+coal_node: 37
+coal_time: 21036.114721
+
+parsing tree 332: ((((0,5),(7,8)),((16,(9,18)),(14,19))),((1,15),((12,(17,(2,13))),(10,((3,11),(4,6))))));
+recomb node 1(->1)
+recoal node 15(->15)
+recomb_node: 1
+recomb_time: 50.955204
+coal_node: 15
+coal_time: 1083.282752
+recomb node 25(->175)
+recoal node 29(->174)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 333: ((((1,15),((16,(9,18)),(14,19))),((0,5),(7,8))),((12,(17,(2,13))),(10,((3,11),(4,6)))));
+recomb node 23(->100)
+recoal node 37(->222)
+recomb_node: 23
+recomb_time: 1083.282752
+coal_node: 37
+coal_time: 9175.321658
+
+parsing tree 334: (((10,((3,11),(4,6))),((0,5),(7,8))),((17,(15,(1,12))),((2,13),((16,(9,18)),(14,19)))));
+recomb node 12(->12)
+recoal node 1(->1)
+recomb_node: 12
+recomb_time: 243.988772
+coal_node: 1
+coal_time: 1083.282752
+recomb node 31(->174)
+recoal node 37(->103)
+recomb_node: 31
+recomb_time: 2596.402445
+coal_node: 37
+coal_time: 6044.419947
+recomb node 38(->222)
+recoal node 25(->53)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 335: ((((10,((3,11),(4,6))),(5,(7,8))),(((14,(0,19)),(2,13)),(17,(15,(1,12))))),(16,(9,18)));
+recomb node 33(->74)
+recoal node 22(->462)
+recomb_node: 33
+recomb_time: 2596.402445
+coal_node: 22
+coal_time: 21036.114721
+recomb node 0(->0)
+recoal node 19(->19)
+recomb_node: 0
+recomb_time: 50.955204
+coal_node: 19
+coal_time: 419.268952
+
+parsing tree 336: ((((10,((3,11),(4,6))),(((14,(0,19)),(2,13)),(17,(15,(1,12))))),(16,(9,18))),(5,(7,8)));
+recomb node 33(->103)
+recoal node 24(->451)
+recomb_node: 33
+recomb_time: 1686.226891
+coal_node: 24
+coal_time: 31806.065068
+
+parsing tree 337: (((((0,19),(17,(10,(15,(1,12))))),(14,(((2,13),(4,6)),(3,11)))),(16,(9,18))),(5,(7,8)));
+recomb node 28(->53)
+recoal node 32(->89)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 338: ((((0,19),(17,(10,(15,(1,12))))),(((((2,13),(4,6)),(3,11)),(7,8)),(5,14))),(16,(9,18)));
+recomb node 35(->43)
+recoal node 30(->221)
+recomb_node: 35
+recomb_time: 683.863505
+coal_node: 30
+coal_time: 13901.580719
+recomb node 5(->5)
+recoal node 14(->14)
+recomb_node: 5
+recomb_time: 2596.402445
+coal_node: 14
+coal_time: 6044.419947
+
+parsing tree 339: ((((0,19),((17,(10,(15,(1,12)))),(3,11))),((((2,13),(4,6)),(7,8)),(5,14))),(16,(9,18)));
+recomb node 31(->49)
+recoal node 26(->226)
+recomb_node: 31
+recomb_time: 419.268952
+coal_node: 26
+coal_time: 6044.419947
+
+parsing tree 340: ((((0,19),((17,(10,(15,(1,12)))),(3,11))),(((2,13),(4,6)),((7,8),(16,(9,18))))),(5,14));
+recomb node 36(->74)
+recoal node 34(->43)
+recomb_node: 36
+recomb_time: 419.268952
+coal_node: 34
+coal_time: 13901.580719
+recomb node 33(->272)
+recoal node 22(->370)
+recomb_node: 33
+recomb_time: 9175.321658
+coal_node: 22
+coal_time: 31806.065068
+
+parsing tree 341: ((((0,19),((17,(10,(15,(1,12)))),(3,11))),(((2,13),(4,6)),(7,8))),((5,14),(16,(9,18))));
+recomb node 35(->74)
+recoal node 23(->462)
+recomb_node: 35
+recomb_time: 1686.226891
+coal_node: 23
+coal_time: 31806.065068
+
+parsing tree 342: ((((0,19),((17,((1,12),(10,15))),(3,11))),(((2,13),(4,6)),(7,8))),((5,14),(16,(9,18))));
+recomb node 24(->100)
+recoal node 25(->182)
+recomb_node: 24
+recomb_time: 1083.282752
+coal_node: 25
+coal_time: 1686.226891
+
+parsing tree 343: (((0,19),(16,(9,18))),(((2,13),(4,6)),((14,(17,((1,12),(5,(10,15))))),((3,11),(7,8)))));
+recomb node 14(->14)
+recoal node 26(->226)
+recomb_node: 14
+recomb_time: 683.863505
+coal_node: 26
+coal_time: 3970.359808
+recomb node 5(->5)
+recoal node 36(->83)
+recomb_node: 5
+recomb_time: 1083.282752
+coal_node: 36
+coal_time: 1686.226891
+recomb node 33(->43)
+recoal node 31(->49)
+recomb_node: 33
+recomb_time: 2596.402445
+coal_node: 31
+coal_time: 6044.419947
+recomb node 20(->60)
+recoal node 35(->74)
+recomb_node: 20
+recomb_time: 1083.282752
+coal_node: 35
+coal_time: 2596.402445
+
+parsing tree 344: (((0,19),(16,(9,18))),((8,((2,13),(4,6))),((14,(17,((1,12),(5,(10,15))))),(7,(3,11)))));
+recomb node 8(->8)
+recoal node 30(->141)
+recomb_node: 8
+recomb_time: 0.000000
+coal_node: 30
+coal_time: 21036.114721
+
+parsing tree 345: (((0,19),(16,(9,18))),((8,((2,13),(4,6))),((14,((5,(1,12)),(17,(10,15)))),(7,(3,11)))));
+recomb node 35(->83)
+recoal node 17(->17)
+recomb_node: 35
+recomb_time: 1083.282752
+coal_node: 17
+coal_time: 2596.402445
+
+parsing tree 346: ((((0,19),(16,(9,18))),(8,((6,(4,14)),((7,(3,11)),((5,(1,12)),(17,(10,15))))))),(2,13));
+recomb node 14(->14)
+recoal node 4(->4)
+recomb_node: 14
+recomb_time: 127.874736
+coal_node: 4
+coal_time: 243.988772
+recomb node 32(->89)
+recoal node 37(->287)
+recomb_node: 32
+recomb_time: 683.863505
+coal_node: 37
+coal_time: 13901.580719
+recomb node 29(->53)
+recoal node 22(->424)
+recomb_node: 29
+recomb_time: 1686.226891
+coal_node: 22
+coal_time: 31806.065068
+
+parsing tree 347: ((((0,19),(16,(9,18))),(8,((((5,(1,12)),(15,(7,10))),(3,11)),(6,(4,14))))),(17,(2,13)));
+recomb node 17(->17)
+recoal node 30(->53)
+recomb_node: 17
+recomb_time: 127.874736
+coal_node: 30
+coal_time: 31806.065068
+recomb node 7(->7)
+recoal node 10(->10)
+recomb_node: 7
+recomb_time: 243.988772
+coal_node: 10
+coal_time: 1083.282752
+
+parsing tree 348: (((((0,19),(16,(9,18))),(8,(((15,(7,10)),((1,12),(5,17))),(6,(4,14))))),(3,11)),(2,13));
+recomb node 17(->17)
+recoal node 5(->5)
+recomb_node: 17
+recomb_time: 243.988772
+coal_node: 5
+coal_time: 1686.226891
+recomb node 31(->49)
+recoal node 22(->424)
+recomb_node: 31
+recomb_time: 1083.282752
+coal_node: 22
+coal_time: 31806.065068
+
+parsing tree 349: ((((0,19),(16,(9,18))),(8,(((15,(7,10)),((1,12),(5,17))),(6,(4,14))))),((2,13),(3,11)));
+recomb node 30(->53)
+recoal node 31(->49)
+recomb_node: 30
+recomb_time: 683.863505
+coal_node: 31
+coal_time: 3970.359808
+
+parsing tree 350: ((((0,19),(16,(9,18))),((2,13),(3,11))),(8,(((15,(7,10)),((1,12),(5,17))),(6,(4,14)))));
+recomb node 28(->370)
+recoal node 23(->459)
+recomb_node: 28
+recomb_time: 21036.114721
+coal_node: 23
+coal_time: 21036.114721
+
+parsing tree 351: ((((0,19),(16,(9,18))),((2,13),(3,11))),(8,(((15,(7,10)),((1,12),(5,17))),(6,(4,14)))));
+node_arg_id1: 21, node_arg_id2: 21, node_tsk_id: 185
+upper: 8
+lower: 4
+recomb_node: 20
+recomb_time: 419.268952
+coal_node: 36
+coal_time: 2596.402445
+
+parsing tree 352: (((((0,19),(16,(9,18))),(3,11)),(2,13)),(8,(((15,(7,10)),((1,12),(5,17))),(6,(4,14)))));
+recomb node 29(->53)
+recoal node 22(->328)
+recomb_node: 29
+recomb_time: 243.988772
+coal_node: 22
+coal_time: 13901.580719
+
+parsing tree 353: ((((8,((0,19),(16,(9,18)))),(3,11)),(2,13)),(((15,(7,10)),((1,12),(5,17))),(6,(4,14))));
+recomb node 8(->8)
+recoal node 21(->199)
+recomb_node: 8
+recomb_time: 683.863505
+coal_node: 21
+coal_time: 3970.359808
+
+parsing tree 354: ((((8,((0,19),(16,(9,18)))),(3,11)),(2,13)),(((6,(4,14)),(15,(7,10))),((1,12),(5,17))));
+recomb node 38(->182)
+recoal node 29(->347)
+recomb_node: 38
+recomb_time: 1686.226891
+coal_node: 29
+coal_time: 9175.321658
+
+parsing tree 355: (((8,((0,19),(16,(9,18)))),(3,11)),((((2,13),(15,(7,10))),(6,(4,14))),((1,12),(5,17))));
+recomb node 29(->53)
+recoal node 37(->83)
+recomb_node: 29
+recomb_time: 127.874736
+coal_node: 37
+coal_time: 3970.359808
+
+parsing tree 356: (((8,((0,19),(16,(9,18)))),((((2,13),(15,(7,10))),(6,(4,14))),(5,12))),((1,17),(3,11)));
+recomb node 17(->17)
+recoal node 31(->49)
+recomb_node: 17
+recomb_time: 243.988772
+coal_node: 31
+coal_time: 3970.359808
+recomb node 1(->1)
+recoal node 17(->17)
+recomb_node: 1
+recomb_time: 50.955204
+coal_node: 17
+coal_time: 3970.359808
+recomb node 22(->227)
+recoal node 27(->384)
+recomb_node: 22
+recomb_time: 6044.419947
+coal_node: 27
+coal_time: 21036.114721
+
+parsing tree 357: (((8,((0,19),(16,(9,18)))),((((2,13),(15,(7,10))),(6,(4,14))),(5,12))),((1,17),(3,11)));
+
+parsing tree 358: ((((0,19),(16,(9,18))),((((2,13),(15,(7,10))),(6,(4,14))),(5,12))),((17,(1,8)),(3,11)));
+recomb node 8(->8)
+recoal node 1(->1)
+recomb_node: 8
+recomb_time: 127.874736
+coal_node: 1
+coal_time: 2596.402445
+
+parsing tree 359: (((0,19),((17,(1,8)),(3,11))),(((((2,13),(15,(7,10))),(6,(4,14))),(5,12)),(16,(9,18))));
+recomb node 20(->60)
+recoal node 26(->184)
+recomb_node: 20
+recomb_time: 419.268952
+coal_node: 26
+coal_time: 31806.065068
+
+parsing tree 360: (((0,19),(17,(1,8))),((((6,(4,14)),(((2,13),(3,11)),(15,(7,10)))),(5,12)),(16,(9,18))));
+recomb node 30(->49)
+recoal node 25(->53)
+recomb_node: 30
+recomb_time: 127.874736
+coal_node: 25
+coal_time: 3970.359808
+
+parsing tree 361: ((((0,19),(16,(9,18))),(((6,(4,14)),(((2,13),(3,11)),(15,(7,10)))),(5,12))),(17,(1,8)));
+recomb node 20(->60)
+recoal node 35(->74)
+recomb_node: 20
+recomb_time: 1083.282752
+coal_node: 35
+coal_time: 6044.419947
+
+parsing tree 362: (((0,19),(16,(9,18))),((17,(1,8)),(((6,(4,14)),(((2,13),(3,11)),(15,(7,10)))),(5,12))));
+recomb node 25(->102)
+recoal node 29(->384)
+recomb_node: 25
+recomb_time: 9175.321658
+coal_node: 29
+coal_time: 13901.580719
+
+parsing tree 363: (((0,19),(16,(9,18))),((17,(1,8)),(((6,(4,14)),(((2,13),(3,11)),(15,(7,10)))),(5,12))));
+node_arg_id1: 36, node_arg_id2: 36, node_tsk_id: 74
+upper: 4
+lower: 0
+recomb_node: 16
+recomb_time: 127.874736
+coal_node: 35
+coal_time: 1686.226891
+
+parsing tree 364: (((0,19),(16,(9,18))),((17,(1,8)),(((6,(4,14)),(((2,13),(3,11)),(15,(7,10)))),(5,12))));
+node_arg_id1: 22, node_arg_id2: 22, node_tsk_id: 442
+upper: 13
+lower: 10
+recomb_node: 21
+recomb_time: 13901.580719
+coal_node: 25
+coal_time: 21036.114721
+
+parsing tree 365: ((((0,19),(16,(9,18))),(((6,(4,14)),(((2,13),(3,11)),(15,(7,10)))),(5,12))),(17,(1,8)));
+recomb node 24(->102)
+recoal node 22(->449)
+recomb_node: 24
+recomb_time: 3970.359808
+coal_node: 22
+coal_time: 31806.065068
+
+parsing tree 366: ((((6,(4,14)),(((2,13),(3,11)),(15,(7,10)))),(((0,19),(16,(9,18))),(5,12))),(17,(1,8)));
+recomb node 21(->186)
+recoal node 33(->182)
+recomb_node: 21
+recomb_time: 6044.419947
+coal_node: 33
+coal_time: 6044.419947
+
+parsing tree 367: (((17,(1,8)),(((0,19),(16,(9,18))),(5,12))),((6,(4,14)),(((2,13),(3,11)),(15,(7,10)))));
+recomb node 26(->102)
+recoal node 37(->238)
+recomb_node: 26
+recomb_time: 6044.419947
+coal_node: 37
+coal_time: 13901.580719
+
+parsing tree 368: (((0,19),((6,(4,14)),(((2,13),(3,11)),(15,(7,10))))),((17,(1,8)),((5,12),(16,(9,18)))));
+recomb node 20(->60)
+recoal node 29(->374)
+recomb_node: 20
+recomb_time: 2596.402445
+coal_node: 29
+coal_time: 13901.580719
+
+parsing tree 369: (((0,19),((6,(4,14)),(((2,13),(3,11)),(15,(7,10))))),((1,8),((5,12),(17,(16,(9,18))))));
+recomb node 17(->17)
+recoal node 35(->111)
+recomb_node: 17
+recomb_time: 50.955204
+coal_node: 35
+coal_time: 2596.402445
+
+parsing tree 370: ((((0,19),((6,(4,14)),(((2,13),(3,11)),(15,(7,10))))),((5,12),(17,(16,(9,18))))),(1,8));
+recomb node 21(->390)
+recoal node 37(->238)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 371: (((0,19),((6,(4,14)),((15,(7,10)),((1,(3,11)),(2,13))))),((5,12),(17,(16,(8,(9,18))))));
+recomb node 8(->8)
+recoal node 33(->37)
+recomb_node: 8
+recomb_time: 50.955204
+coal_node: 33
+coal_time: 1686.226891
+recomb node 1(->1)
+recoal node 28(->49)
+recomb_node: 1
+recomb_time: 50.955204
+coal_node: 28
+coal_time: 3970.359808
+
+parsing tree 372: (((0,19),((6,(4,14)),((15,(7,10)),((1,(3,11)),(2,13))))),((5,12),(17,(16,(8,(9,18))))));
+node_arg_id1: 21, node_arg_id2: 21, node_tsk_id: 390
+upper: 11
+lower: 4
+recomb_node: 20
+recomb_time: 1083.282752
+coal_node: 24
+coal_time: 9175.321658
+
+parsing tree 373: (((0,19),((6,(4,14)),((15,(7,10)),((1,(3,11)),(2,13))))),(16,((5,12),(17,(8,(9,18))))));
+recomb node 16(->16)
+recoal node 36(->238)
+recomb_node: 16
+recomb_time: 127.874736
+coal_node: 36
+coal_time: 6044.419947
+
+parsing tree 374: (((16,((0,19),(5,12))),(17,(8,(9,18)))),((6,(4,14)),((15,(7,10)),((1,(3,11)),(2,13)))));
+recomb node 29(->238)
+recoal node 16(->16)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 375: (((16,((0,19),(5,12))),((6,(4,14)),((15,(7,10)),((1,(3,11)),(2,13))))),(17,(8,(9,18))));
+recomb node 33(->123)
+recoal node 24(->384)
+recomb_node: 33
+recomb_time: 3970.359808
+coal_node: 24
+coal_time: 31806.065068
+
+parsing tree 376: ((((15,(7,10)),((1,(3,11)),(2,13))),((16,(6,(4,14))),((0,19),(5,12)))),(17,(8,(9,18))));
+recomb node 30(->89)
+recoal node 16(->16)
+recomb_node: 30
+recomb_time: 683.863505
+coal_node: 16
+coal_time: 2596.402445
+
+parsing tree 377: (((17,((15,(7,10)),((1,(3,11)),(2,13)))),((16,(6,(4,14))),((0,19),(5,12)))),(8,(9,18)));
+recomb node 17(->17)
+recoal node 37(->290)
+recomb_node: 17
+recomb_time: 1083.282752
+coal_node: 37
+coal_time: 6044.419947
+
+parsing tree 378: ((((16,((0,19),(5,12))),(6,(4,14))),(17,((15,(7,10)),((1,(3,11)),(2,13))))),(8,(9,18)));
+recomb node 35(->152)
+recoal node 16(->16)
+recomb_node: 35
+recomb_time: 1686.226891
+coal_node: 16
+coal_time: 2596.402445
+
+parsing tree 379: (((8,(9,18)),((15,(7,10)),((1,(3,11)),(2,13)))),((16,((0,19),(5,12))),(17,(6,(4,14)))));
+recomb node 38(->290)
+recoal node 33(->80)
+recomb_node: 38
+recomb_time: 3970.359808
+coal_node: 33
+coal_time: 31806.065068
+recomb node 17(->17)
+recoal node 31(->89)
+recomb_node: 17
+recomb_time: 1083.282752
+coal_node: 31
+coal_time: 6044.419947
+
+parsing tree 380: (((8,(9,18)),((15,(7,10)),((1,(3,11)),(2,13)))),((16,((0,19),(5,12))),(17,(6,(4,14)))));
+node_arg_id1: 31, node_arg_id2: 31, node_tsk_id: 80
+upper: 7
+lower: 0
+recomb_node: 8
+recomb_time: 243.988772
+coal_node: 32
+coal_time: 2596.402445
+
+parsing tree 381: (((16,((0,19),(5,12))),(6,(4,14))),((17,(8,(9,18))),((15,(7,10)),((1,(3,11)),(2,13)))));
+recomb node 17(->17)
+recoal node 31(->176)
+recomb_node: 17
+recomb_time: 419.268952
+coal_node: 31
+coal_time: 31806.065068
+
+parsing tree 382: (((((16,((0,19),(5,12))),(6,(4,14))),(1,17)),((3,11),((2,13),(8,(9,18))))),(15,(7,10)));
+recomb node 1(->1)
+recoal node 35(->290)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 383: (((3,11),((2,13),(8,(9,18)))),(((16,((0,19),(5,12))),(1,(6,(4,14)))),(17,(15,(7,10)))));
+recomb node 36(->83)
+recoal node 17(->17)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 384: (((3,11),((2,13),(8,(9,18)))),(((0,19),((1,(6,(4,14))),(16,(5,12)))),(17,(15,(7,10)))));
+recomb node 20(->60)
+recoal node 23(->301)
+recomb_node: 20
+recomb_time: 419.268952
+coal_node: 23
+coal_time: 9175.321658
+
+parsing tree 385: ((17,(((0,19),(16,(15,(7,10)))),(12,(5,(1,(6,(4,14))))))),((3,11),((2,13),(8,(9,18)))));
+recomb node 36(->83)
+recoal node 16(->16)
+recomb_node: 36
+recomb_time: 1083.282752
+coal_node: 16
+coal_time: 2596.402445
+recomb node 12(->12)
+recoal node 25(->301)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 386: ((((0,19),(16,(15,(7,10)))),(12,(5,(1,(6,(4,14)))))),((17,((2,13),(8,(9,18)))),(3,11)));
+recomb node 17(->17)
+recoal node 38(->176)
+recomb_node: 17
+recomb_time: 683.863505
+coal_node: 38
+coal_time: 3970.359808
+
+parsing tree 387: ((((0,19),(10,(16,(7,15)))),(12,(5,(1,(6,(4,14)))))),((17,((2,13),(8,(9,18)))),(3,11)));
+recomb node 10(->10)
+recoal node 35(->125)
+recomb_node: 10
+recomb_time: 419.268952
+coal_node: 35
+coal_time: 2596.402445
+
+parsing tree 388: ((((0,19),(10,(16,(7,15)))),((1,(6,(4,14))),(12,(5,(3,11))))),(17,((2,13),(8,(9,18)))));
+recomb node 31(->49)
+recoal node 5(->5)
+recomb_node: 31
+recomb_time: 243.988772
+coal_node: 5
+coal_time: 3970.359808
+recomb node 24(->147)
+recoal node 26(->321)
+recomb_node: 24
+recomb_time: 2596.402445
+coal_node: 26
+coal_time: 6044.419947
+
+parsing tree 389: (((0,19),(10,(16,(7,15)))),(((2,13),(8,(9,18))),((17,(1,(6,(4,14)))),(12,(5,(3,11))))));
+recomb node 37(->176)
+recoal node 38(->321)
+-----------------------Invlid SPR moves----------------------
+
+parsing tree 390: (((0,19),(10,(16,(7,15)))),((((17,(1,(6,(4,14)))),(12,(9,18))),(5,(3,11))),(8,(2,13))));
+recomb node 24(->183)
+recoal node 12(->12)
+recomb_node: 24
+recomb_time: 3970.359808
+coal_node: 12
+coal_time: 6044.419947
+recomb node 35(->37)
+recoal node 12(->12)
+recomb_node: 35
+recomb_time: 127.874736
+coal_node: 12
+coal_time: 1083.282752
+
+parsing tree 391: (((17,(1,(6,(4,14)))),(12,(9,18))),(((0,19),(5,(3,11))),((8,(2,13)),(10,(16,(7,15))))));
+recomb node 29(->176)
+recoal node 35(->125)
+recomb_node: 29
+recomb_time: 6044.419947
+coal_node: 35
+coal_time: 9175.321658
+recomb node 31(->91)
+recoal node 20(->60)
+recomb_node: 31
+recomb_time: 3970.359808
+coal_node: 20
+coal_time: 13901.580719
+
+parsing tree 392: ((((0,19),(3,11)),((17,(1,(6,(4,14)))),(12,(9,18)))),(5,((8,(2,13)),(10,(16,(7,15))))));
+recomb node 29(->49)
+recoal node 20(->60)
+recomb_node: 29
+recomb_time: 419.268952
+coal_node: 20
+coal_time: 13901.580719
+recomb node 30(->91)
+recoal node 25(->286)
+recomb_node: 30
+recomb_time: 13901.580719
+coal_node: 25
+coal_time: 21036.114721
+
+parsing tree 393: (((((0,19),(12,(9,18))),(3,11)),(17,(1,(6,(4,14))))),(5,((8,(2,13)),(10,(16,(7,15))))));
+recomb node 36(->75)
+recoal node 20(->60)
+recomb_node: 36
+recomb_time: 1686.226891
+coal_node: 20
+coal_time: 9175.321658
+
+parsing tree 394: (5,((((0,19),(12,(9,18))),(10,(3,11))),((17,(1,(6,(4,14)))),((8,(2,13)),(16,(7,15))))));
+recomb node 10(->10)
+recoal node 30(->49)
+recomb_node: 10
+recomb_time: 50.955204
+coal_node: 30
+coal_time: 3970.359808
+recomb node 29(->244)
+recoal node 26(->183)
+recomb_node: 29
+recomb_time: 9175.321658
+coal_node: 26
+coal_time: 9175.321658
+
+parsing tree 395: (5,((((0,19),(12,(9,18))),(10,(3,11))),((17,(1,(4,14))),((8,(2,13)),(6,(16,(7,15)))))));
+recomb node 6(->6)
+recoal node 38(->81)
+recomb_node: 6
+recomb_time: 127.874736
+coal_node: 38
+coal_time: 2596.402445
+
+parsing tree 396: (5,(((10,(3,11)),(((0,19),(12,(9,18))),(16,(7,15)))),((17,(1,(4,14))),(6,(8,(2,13))))));
+recomb node 37(->81)
+recoal node 21(->291)
+recomb_node: 37
+recomb_time: 1686.226891
+coal_node: 21
+coal_time: 9175.321658
+
+parsing tree 397: (((5,(((0,19),(12,(9,18))),(16,(7,15)))),(10,(3,11))),((17,(1,(4,14))),(6,(8,(2,13)))));
+recomb node 5(->5)
+recoal node 38(->291)
+recomb_node: 5
+recomb_time: 6044.419947
+coal_node: 38
+coal_time: 9175.321658
+number of invalid SPR moves: 45

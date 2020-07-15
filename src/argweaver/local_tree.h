@@ -20,6 +20,7 @@
 namespace argweaver {
 
 using namespace std;
+
 //class PopulationTree;
 
 
@@ -856,8 +857,10 @@ void count_mig_events(int from_pop, int to_pop, int time_idx2,
 void apply_spr(LocalTree *tree, const Spr &spr,
                const PopulationTree *pop_tree=NULL);
                
+void set_up_spr(Spr *spr, int coal_node, int recomb_node, int recomb_time_upper_bound,
+                int recomb_time_lower_bound, int recoal_time, const double *times);
 // return a new local tree that results from applying spr to prev_tree
-LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr);
+LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping);
 
 double get_treelen(const LocalTree *tree, const double *times, int ntimes,
                     bool use_basal=true);
