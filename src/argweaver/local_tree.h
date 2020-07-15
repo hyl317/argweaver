@@ -454,34 +454,34 @@ public:
         return childi;
     }
 
-    inline map<set<int>, int> descent_leaf_map(){
-        int order[nnodes];
-        get_postorder(order);
-        int num_leaves = get_num_leaves();
-        map<set<int>, int> descent_map;
-        map<int, set<int>> reverse_descent_map;
-        for(int i = 0; i < nnodes; i++){
-            int j = order[i];
-            set<int> tmp;
-            if (j < num_leaves){
-                tmp.insert(j);
-                descent_map.insert(pair<set<int>, int>(tmp, j));
-                reverse_descent_map.insert(pair<int, set<int>>(j, tmp));
-            }else{
-                int *child = nodes[j].child;
-                set<int> leaf_set1 = reverse_descent_map.find(child[0])->second;
-                set<int> leaf_set2 = reverse_descent_map.find(child[1])->second;
-                //set_union(leaf_set1->begin(), leaf_set1->end(),
-                //            leaf_set2->begin(), leaf_set2->end(),
-                //            insert_iterator<set<int>>(*tmp, tmp->begin()));
-                tmp.insert(leaf_set1.begin(), leaf_set1.end());
-                tmp.insert(leaf_set2.begin(), leaf_set2.end());
-                descent_map.insert(pair<set<int>, int>(tmp, j));
-                reverse_descent_map.insert(pair<int, set<int>>(j, tmp));
-            }
-        }
-        return descent_map;
-    }
+    // inline map<set<int>, int> descent_leaf_map(){
+    //     int order[nnodes];
+    //     get_postorder(order);
+    //     int num_leaves = get_num_leaves();
+    //     map<set<int>, int> descent_map;
+    //     map<int, set<int>> reverse_descent_map;
+    //     for(int i = 0; i < nnodes; i++){
+    //         int j = order[i];
+    //         set<int> tmp;
+    //         if (j < num_leaves){
+    //             tmp.insert(j);
+    //             descent_map.insert(pair<set<int>, int>(tmp, j));
+    //             reverse_descent_map.insert(pair<int, set<int>>(j, tmp));
+    //         }else{
+    //             int *child = nodes[j].child;
+    //             set<int> leaf_set1 = reverse_descent_map.find(child[0])->second;
+    //             set<int> leaf_set2 = reverse_descent_map.find(child[1])->second;
+    //             //set_union(leaf_set1->begin(), leaf_set1->end(),
+    //             //            leaf_set2->begin(), leaf_set2->end(),
+    //             //            insert_iterator<set<int>>(*tmp, tmp->begin()));
+    //             tmp.insert(leaf_set1.begin(), leaf_set1.end());
+    //             tmp.insert(leaf_set2.begin(), leaf_set2.end());
+    //             descent_map.insert(pair<set<int>, int>(tmp, j));
+    //             reverse_descent_map.insert(pair<int, set<int>>(j, tmp));
+    //         }
+    //     }
+    //     return descent_map;
+    // }
 
     inline set<int> get_descent_leaves(int node){
         set<int> leaves;

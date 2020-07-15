@@ -2062,6 +2062,7 @@ int main(int argc, char **argv)
             printError("could not read tree seq file");
             return EXIT_ERROR;
         }
+        exit(EXIT_FAILURE);
 
         if (!read_init_ts(c.ts.c_str(), &c.model, trees, seqnames, seq_region.start, seq_region.end)) {
                 printError("could not read tree seq file");
