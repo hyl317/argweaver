@@ -595,7 +595,7 @@ LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping){
 
 // TODO: exit if get_moves cannot finish within reasonable amount of time
 void run_rSPR(string &source_tree, string &target_tree, 
-                queue<shared_ptr<set<int>>> *q1, queue<shared_ptr<set<int>>> *q2){
+                deque<shared_ptr<set<int>>> *q1, deque<shared_ptr<set<int>>> *q2){
     Node *prev = build_tree(source_tree);
     Node *curr = build_tree(target_tree);
     map<string, int> label_map= map<string, int>();
@@ -2630,7 +2630,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
             continue;
         }
 
-        queue<shared_ptr<set<int>>> q1, q2;
+        deque<shared_ptr<set<int>>> q1, q2;
         run_rSPR(s_prev, s_curr, &q1, &q2);
         int num_SPR = q1.size();
         vector<LocalTreeSpr_tmp> intermediaryTrees;
@@ -2683,17 +2683,16 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         }else{
             bool success = false;
             int iter = 0;
-            LocalTree *prev_localtree_copy = prev_localtree;
+            LocalTree *prev_localtree_ptr_copy = prev_localtree;
             while (!success && iter < maxIter){
-                clean_up_intermediaryTrees(&intermediaryTrees);
+
                 if(iter > 0){
                     printLog(LOG_LOW, "iter %d: clean up previous garbage\n", iter);
-                    while(!q1.empty()){q1.pop();}
-                    while(!q2.empty()){q2.pop();}
-                    assert(q1.empty());
-                    assert(q2.empty());
+                    clean_up_intermediaryTrees(&intermediaryTrees);
+                    q1.clear();
+                    q2.clear();
                     run_rSPR(s_prev, s_curr, &q1, &q2);
-                    prev_localtree = prev_localtree_copy;
+                    prev_localtree = prev_localtree_ptr_copy;
                 }
                 iter++;
 
@@ -2739,8 +2738,8 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                     intermediaryTrees.push_back(LocalTreeSpr_tmp{intermediary_tree, mapping, Spr(spr)});
                     prev_localtree = intermediary_tree;
                     spr.set_null();
-                    q1.pop();
-                    q2.pop();
+                    q1.pop_front();
+                    q2.pop_front();
                 }
                 if (q1.empty() && q2.empty()) {success = true;}
             }
