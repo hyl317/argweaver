@@ -5,6 +5,7 @@
 #include "stdlib.h"
 #include "err.h"
 #include <iostream>
+#include <memory>
 
 // argweaver includes
 #include "compress.h"
@@ -593,7 +594,8 @@ LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping){
 }
 
 // TODO: exit if get_moves cannot finish within reasonable amount of time
-void run_rSPR(string &source_tree, string &target_tree, queue<set<int>*> *q1, queue<set<int>*> *q2){
+void run_rSPR(string &source_tree, string &target_tree, 
+                queue<shared_ptr<set<int>>> *q1, queue<shared_ptr<set<int>>> *q2){
     Node *prev = build_tree(source_tree);
     Node *curr = build_tree(target_tree);
     map<string, int> label_map= map<string, int>();
@@ -2426,6 +2428,15 @@ bool read_local_trees(const char *filename, const double *times,
 
 /////////////////////////////////// read from tsinfer ////////////////////////////////////
 
+void clean_up_intermediaryTrees(vector<LocalTreeSpr_tmp> *intermediaryTrees){
+    for(LocalTreeSpr_tmp t : *intermediaryTrees){
+        delete t.localtree;
+        delete [] t.mapping;
+    }
+    intermediaryTrees->clear();
+}
+
+
 bool read_local_tree_from_tsinfer(tsk_tree_t *tree, int *ptree, int *ages,
                                     const double *times, int ntimes, map<int, tsk_id_t> *curr_map){
     // maybe first traverse the tree upwards as you would normally do
@@ -2619,7 +2630,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
             continue;
         }
 
-        queue<set<int>*> q1, q2;
+        queue<shared_ptr<set<int>>> q1, q2;
         run_rSPR(s_prev, s_curr, &q1, &q2);
         int num_SPR = q1.size();
         vector<LocalTreeSpr_tmp> intermediaryTrees;
@@ -2659,7 +2670,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                     int recomb_time_lower_bound = prev_localtree->nodes[recomb_node].age;
                     printLog(LOG_LOW, "upper: %d\n", min(recoal_time, recomb_time_upper_bound));
                     printLog(LOG_LOW, "lower: %d\n", recomb_time_lower_bound);
-                    auto mapping = new int[nnodes];
+                    int *mapping = new int[nnodes];
                     set_up_spr(&spr, recoal_node, recomb_node, recomb_time_upper_bound,
                             recomb_time_lower_bound, recoal_time, times);
                     LocalTree *intermediary_tree = apply_spr_new(prev_localtree, spr, mapping);
@@ -2674,25 +2685,11 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
             int iter = 0;
             LocalTree *prev_localtree_copy = prev_localtree;
             while (!success && iter < maxIter){
-
-                for(LocalTreeSpr_tmp t : intermediaryTrees){
-                    delete t.localtree;
-                    delete [] mapping;
-                }
-                intermediaryTrees.clear();
-
+                clean_up_intermediaryTrees(&intermediaryTrees);
                 if(iter > 0){
                     printLog(LOG_LOW, "iter %d: clean up previous garbage\n", iter);
-                    while(!q1.empty()){
-                        auto it = q1.front();
-                        delete it;
-                        q1.pop();
-                    }
-                    while(!q2.empty()){
-                        auto it = q2.front();
-                        delete it;
-                        q2.pop();
-                    }
+                    while(!q1.empty()){q1.pop();}
+                    while(!q2.empty()){q2.pop();}
                     assert(q1.empty());
                     assert(q2.empty());
                     run_rSPR(s_prev, s_curr, &q1, &q2);
@@ -2701,8 +2698,8 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                 iter++;
 
                 while(!q1.empty()){
-                    set<int> *s1 = q1.front();
-                    set<int> *s2 = q2.front();
+                    shared_ptr<set<int>> s1 = q1.front();
+                    shared_ptr<set<int>> s2 = q2.front();
                     cout << "recombination node's descendants" << endl;
                     for(int child : *s1){
                         cout << child << " ";
@@ -2742,8 +2739,6 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                     intermediaryTrees.push_back(LocalTreeSpr_tmp{intermediary_tree, mapping, Spr(spr)});
                     prev_localtree = intermediary_tree;
                     spr.set_null();
-                    delete s1;
-                    delete s2;
                     q1.pop();
                     q2.pop();
                 }
@@ -2752,6 +2747,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
 
             if (!success){
                 printLog(LOG_LOW, "Cannot find a Valid SPR sequence within reasonable time\n");
+                clean_up_intermediaryTrees(&intermediaryTrees);
                 exit(EXIT_FAILURE);
             }
         }
@@ -2775,13 +2771,8 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         s_prev = s_curr;
         prev_localtree = localtree;
         prev_map = curr_map;
-
         // clean up before reading next tree
-        for(LocalTreeSpr_tmp t : intermediaryTrees){
-            delete t.localtree;
-            delete [] mapping;
-        }
-        intermediaryTrees.clear();
+        clean_up_intermediaryTrees(&intermediaryTrees);
     }
     
     ret = tsk_tree_free(&tree);
@@ -2791,8 +2782,6 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     //printLog(LOG_LOW, "number of invalid SPR moves: %d\n", num_invalid_spr);
     return true;
 }
-
-
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////

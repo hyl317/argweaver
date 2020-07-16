@@ -11,6 +11,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
+#include <memory>
 
 // arghmm includes
 #include "sequences.h"
@@ -498,6 +499,37 @@ public:
         return leaves;
     }
 
+    int find_mrca(shared_ptr<set<int>> leaves){
+
+        cout << "find mrca for: " << endl;
+        for(int leaf : *leaves){
+            cout << leaf << " ";
+        }
+        cout << endl;
+
+        // find mrca of leaves contained in the given set
+        if (leaves->size() == get_num_leaves()){
+            return root;
+        }else{
+            set<int> leaves_so_far;
+            int curr = *(leaves->begin());
+            leaves_so_far.insert(curr);
+            while (!includes(leaves_so_far.begin(), leaves_so_far.end(), leaves->begin(), leaves->end())){
+                cout << "curr: " << curr << endl;
+                int p = nodes[curr].parent;
+                //cout << "p: " << p;
+                assert(p != -1);
+                int *child = nodes[p].child;
+                int other = (child[1] == curr ? child[0] : child[1]);
+                //cout << ", other: " << other << endl;
+                set<int> leaves_to_insert = get_descent_leaves(other);
+                leaves_so_far.insert(leaves_to_insert.begin(), leaves_to_insert.end());
+                curr = p;
+            }
+            return curr;
+        }
+    }
+
     int find_mrca(set<int> *leaves){
 
         cout << "find mrca for: " << endl;
@@ -528,6 +560,7 @@ public:
             return curr;
         }
     }
+
 
     int nnodes;        // number of nodes in tree
     int capacity;      // capacity of nodes array
@@ -986,7 +1019,6 @@ void write_local_trees_as_bed(FILE *out, const LocalTrees *trees,
                               const ArgModel *model, int sample);
 string get_newick_rep_rSPR(const LocalTree *tree);
 void get_newick_rep_rSPR_helper(string *s, const LocalTree *tree, int node);
-
 
 //=============================================================================
 // assert functions
