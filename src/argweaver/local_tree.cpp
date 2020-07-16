@@ -2675,6 +2675,12 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
             LocalTree *prev_localtree_copy = prev_localtree;
             while (!success && iter < maxIter){
 
+                for(LocalTreeSpr_tmp t : intermediaryTrees){
+                    delete t.localtree;
+                    delete [] mapping;
+                }
+                intermediaryTrees.clear();
+
                 if(iter > 0){
                     printLog(LOG_LOW, "iter %d: clean up previous garbage\n", iter);
                     while(!q1.empty()){
@@ -2769,6 +2775,13 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         s_prev = s_curr;
         prev_localtree = localtree;
         prev_map = curr_map;
+
+        // clean up before reading next tree
+        for(LocalTreeSpr_tmp t : intermediaryTrees){
+            delete t.localtree;
+            delete [] mapping;
+        }
+        intermediaryTrees.clear();
     }
     
     ret = tsk_tree_free(&tree);

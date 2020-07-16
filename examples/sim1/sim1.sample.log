@@ -1,7 +1,7 @@
 arg-sample 1.0
-start time: Wed Jul 15 22:24:28 2020
-command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 30 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation.5.tsdate.trees --overwrite --region 1:5000-1000000
-random seed: 1594866268
+start time: Thu Jul 16 09:19:56 2020
+command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation.5.tsdate.trees --overwrite --region 1:5000-1000000
+random seed: 1594905596
 Reading ../../simulate/arg/simulation_source.5.vcf.gz 1:5000-1000000
 Read 962 sites from 969 lines of VCF file (num skipped indels=0)
 read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=5, nsites=962)
@@ -13,30 +13,10 @@ model:
   mu = 3.600000e-07
   rho = 3.200000e-07
   smc_prime = false
-  ntimes = 30
-  times = [0.000000,30.971359,71.534969,124.661680,194.242456,285.373344,404.728706,561.050045,765.786229,1033.931990,1385.126139,1845.089888,2447.510662,3236.509337,4269.871625,5623.280258,7395.857938,9717.427016,12758.017590,16740.320389,21955.996488,28787.038361,37733.746741,49451.372299,64798.105746,84897.931116,111222.945577,145701.174797,190857.780194,250000.000000]
+  ntimes = 20
+  times = [0.000000,50.955204,127.874736,243.988772,419.268952,683.863505,1083.282752,1686.226891,2596.402445,3970.359808,6044.419947,9175.321658,13901.580719,21036.114721,31806.065068,48063.865571,72605.861467,109653.281406,165578.289705,250000.000000]
   npop = 1
   popsizes = [10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
-              10000.0,
               10000.0,
               10000.0,
               10000.0,
@@ -77,888 +57,1974 @@ model:
               10000.0]
 
 Start reading tree sequence file: ../../simulate/arg/simulation.5.tsdate.trees
+26(->7) has 2 children
+1
+3
+83(->5) has 3 children
+0
+2
+4
+108(->6) has 2 children
+26
+83
 
 parsing tree 0: ((1,3),(4,(0,2)));
+20(->8) has 2 children
+1
+4
+44(->5) has 2 children
+0
+3
+88(->6) has 2 children
+2
+44
+108(->7) has 2 children
+20
+88
 
 parsing tree 1: ((2,(0,3)),(1,4));
-recomb node 5(->83)
-recoal node 6(->108)
-recomb_node: 5
-recomb_time: 5623.280258
-coal_node: 6
-coal_time: 12758.017590
+recomb node 4(->4)
+recoal node 1(->1)
+recomb_node: 4
+recomb_time: 127.874736
+coal_node: 1
+coal_time: 2596.402445
 recomb node 3(->3)
 recoal node 0(->0)
 recomb_node: 3
-recomb_time: 404.728706
+recomb_time: 127.874736
 coal_node: 0
-coal_time: 3236.509337
+coal_time: 3970.359808
+44(->5) has 2 children
+0
+3
+88(->6) has 2 children
+2
+44
+108(->7) has 2 children
+4
+88
+111(->8) has 2 children
+1
+108
 
 parsing tree 2: (1,(4,(2,(0,3))));
+recomb node 6(->88)
+recoal node 4(->4)
+-----------------------Invlid SPR moves----------------------
+iter 1: clean up previous garbage
+recomb node 6(->88)
+recoal node 4(->4)
+-----------------------Invlid SPR moves----------------------
+iter 2: clean up previous garbage
+recomb node 6(->88)
+recoal node 4(->4)
+-----------------------Invlid SPR moves----------------------
+iter 3: clean up previous garbage
+recomb node 6(->88)
+recoal node 4(->4)
+-----------------------Invlid SPR moves----------------------
+iter 4: clean up previous garbage
 recomb node 4(->4)
 recoal node 6(->88)
 recomb_node: 4
-recomb_time: 0.000000
+recomb_time: 1083.282752
 coal_node: 6
-coal_time: 12758.017590
+coal_time: 13901.580719
+44(->5) has 2 children
+0
+3
+108(->6) has 2 children
+4
+44
+111(->7) has 2 children
+1
+108
+114(->8) has 2 children
+2
+111
 
 parsing tree 3: (2,(1,(4,(0,3))));
 recomb node 2(->2)
 recoal node 8(->111)
 recomb_node: 2
-recomb_time: 1385.126139
+recomb_time: 243.988772
 coal_node: 8
-coal_time: 37733.746741
+coal_time: 48063.865571
+8(->8) has 2 children
+2
+4
+44(->5) has 2 children
+0
+3
+108(->6) has 2 children
+8
+44
+114(->7) has 2 children
+1
+108
 
 parsing tree 4: (1,((0,3),(2,4)));
 recomb node 2(->2)
 recoal node 4(->4)
 recomb_node: 2
-recomb_time: 285.373344
+recomb_time: 127.874736
 coal_node: 4
-coal_time: 3236.509337
+coal_time: 2596.402445
+44(->5) has 2 children
+0
+3
+111(->6) has 3 children
+1
+4
+44
+114(->7) has 2 children
+2
+111
 
 parsing tree 5: (2,((0,3),(1,4)));
-recomb node 2(->2)
-recoal node 7(->114)
-recomb_node: 2
-recomb_time: 30.971359
-coal_node: 7
-coal_time: 37733.746741
+recomb node 4(->4)
+recoal node 5(->44)
+-----------------------Invlid SPR moves----------------------
+iter 1: clean up previous garbage
 recomb node 4(->4)
 recoal node 1(->1)
 recomb_node: 4
-recomb_time: 3236.509337
+recomb_time: 0.000000
 coal_node: 1
-coal_time: 21955.996488
+coal_time: 21036.114721
+recomb node 5(->44)
+recoal node 8(->8)
+recomb_node: 5
+recomb_time: 9175.321658
+coal_node: 8
+coal_time: 21036.114721
+30(->8) has 2 children
+1
+2
+44(->5) has 2 children
+0
+3
+113(->6) has 2 children
+30
+44
+114(->7) has 2 children
+4
+113
 
 parsing tree 6: (4,((0,3),(1,2)));
-recomb node 1(->1)
-recoal node 5(->44)
-recomb_node: 1
-recomb_time: 3236.509337
-coal_node: 5
-coal_time: 21955.996488
+recomb node 4(->4)
+recoal node 8(->111)
+recomb_node: 4
+recomb_time: 9175.321658
+coal_node: 8
+coal_time: 48063.865571
 recomb node 2(->2)
 recoal node 1(->1)
 recomb_node: 2
-recomb_time: 285.373344
+recomb_time: 683.863505
 coal_node: 1
-coal_time: 4269.871625
+coal_time: 3970.359808
+30(->7) has 2 children
+1
+2
+89(->8) has 2 children
+3
+30
+113(->5) has 2 children
+0
+89
+114(->6) has 2 children
+4
+113
 
 parsing tree 7: (4,(0,(3,(1,2))));
-recomb node 8(->30)
-recoal node 3(->3)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
 recomb node 3(->3)
 recoal node 8(->30)
 recomb_node: 3
-recomb_time: 765.786229
+recomb_time: 50.955204
 coal_node: 8
-coal_time: 7395.857938
+coal_time: 6044.419947
+30(->6) has 2 children
+1
+2
+89(->7) has 2 children
+3
+30
+104(->8) has 2 children
+4
+89
+114(->5) has 2 children
+0
+104
 
 parsing tree 8: (0,(4,(3,(1,2))));
 recomb node 8(->89)
 recoal node 4(->4)
 recomb_node: 8
-recomb_time: 9717.427016
+recomb_time: 6044.419947
 coal_node: 4
-coal_time: 12758.017590
+coal_time: 13901.580719
+14(->8) has 2 children
+2
+3
+89(->6) has 2 children
+1
+14
+104(->7) has 2 children
+4
+89
+114(->5) has 2 children
+0
+104
 
 parsing tree 9: (0,(4,(1,(2,3))));
-recomb node 2(->2)
-recoal node 3(->3)
-recomb_node: 2
-recomb_time: 0.000000
-coal_node: 3
-coal_time: 2447.510662
+recomb node 3(->3)
+recoal node 2(->2)
+recomb_node: 3
+recomb_time: 1083.282752
+coal_node: 2
+coal_time: 2596.402445
+14(->8) has 2 children
+2
+3
+89(->5) has 2 children
+0
+14
+104(->6) has 2 children
+4
+89
+114(->7) has 2 children
+1
+104
 
 parsing tree 10: (1,(4,(0,(2,3))));
-recomb node 1(->1)
-recoal node 7(->104)
-recomb_node: 1
-recomb_time: 1845.089888
-coal_node: 7
-coal_time: 37733.746741
-recomb node 0(->0)
+recomb node 4(->4)
 recoal node 8(->14)
-recomb_node: 0
-recomb_time: 2447.510662
-coal_node: 8
-coal_time: 7395.857938
+-----------------------Invlid SPR moves----------------------
+iter 1: clean up previous garbage
+recomb node 8(->14)
+recoal node 0(->0)
+recomb_node: 8
+recomb_time: 2596.402445
+coal_node: 0
+coal_time: 6044.419947
+recomb node 6(->89)
+recoal node 4(->4)
+recomb_node: 6
+recomb_time: 9175.321658
+coal_node: 4
+coal_time: 13901.580719
+14(->7) has 2 children
+2
+3
+67(->8) has 2 children
+4
+14
+104(->5) has 2 children
+0
+67
+114(->6) has 2 children
+1
+104
 
 parsing tree 11: (1,(0,(4,(2,3))));
-recomb node 0(->0)
-recoal node 6(->104)
-recomb_node: 0
-recomb_time: 1033.931990
-coal_node: 6
-coal_time: 12758.017590
+recomb node 8(->14)
+recoal node 4(->4)
+recomb_node: 8
+recomb_time: 3970.359808
+coal_node: 4
+coal_time: 6044.419947
+14(->7) has 2 children
+2
+3
+67(->8) has 2 children
+4
+14
+110(->5) has 2 children
+0
+67
+114(->6) has 2 children
+1
+110
 
 parsing tree 12: (1,(0,(4,(2,3))));
 node_arg_id1: 5, node_arg_id2: 5, node_tsk_id: 104
-upper: 18
+upper: 12
 lower: 0
 recomb_node: 0
-recomb_time: 2447.510662
+recomb_time: 1686.226891
 coal_node: 8
-coal_time: 28787.038361
+coal_time: 31806.065068
+14(->7) has 2 children
+2
+3
+59(->5) has 2 children
+0
+1
+67(->8) has 2 children
+4
+14
+102(->6) has 2 children
+59
+67
 
 parsing tree 13: ((0,1),(4,(2,3)));
-recomb node 1(->1)
-recoal node 0(->0)
-recomb_node: 1
-recomb_time: 561.050045
-coal_node: 0
-coal_time: 3236.509337
+recomb node 8(->67)
+recoal node 6(->114)
+recomb_node: 8
+recomb_time: 6044.419947
+coal_node: 6
+coal_time: 31806.065068
+14(->7) has 2 children
+2
+3
+67(->8) has 2 children
+4
+14
+102(->6) has 2 children
+1
+67
+114(->5) has 2 children
+0
+102
 
 parsing tree 14: (0,(1,(4,(2,3))));
 recomb node 8(->67)
 recoal node 1(->1)
 -----------------------Invlid SPR moves----------------------
 iter 1: clean up previous garbage
-recomb node 1(->1)
-recoal node 8(->67)
-recomb_node: 1
-recomb_time: 765.786229
-coal_node: 8
-coal_time: 37733.746741
+recomb node 0(->0)
+recoal node 6(->102)
+recomb_node: 0
+recomb_time: 50.955204
+coal_node: 6
+coal_time: 48063.865571
+14(->8) has 2 children
+2
+3
+67(->6) has 2 children
+1
+4
+102(->7) has 2 children
+14
+67
+114(->5) has 2 children
+0
+102
 
 parsing tree 15: (0,((1,4),(2,3)));
-recomb node 1(->1)
-recoal node 4(->4)
-recomb_node: 1
-recomb_time: 5623.280258
-coal_node: 4
-coal_time: 7395.857938
+recomb node 4(->4)
+recoal node 1(->1)
+recomb_node: 4
+recomb_time: 3970.359808
+coal_node: 1
+coal_time: 6044.419947
+14(->8) has 2 children
+2
+3
+84(->5) has 2 children
+0
+14
+102(->6) has 2 children
+1
+84
+114(->7) has 2 children
+4
+102
 
 parsing tree 16: (4,(1,(0,(2,3))));
+recomb node 6(->67)
+recoal node 5(->114)
+recomb_node: 6
+recomb_time: 21036.114721
+coal_node: 5
+coal_time: 48063.865571
+recomb node 5(->114)
+recoal node 1(->1)
+-----------------------Invlid SPR moves----------------------
+iter 1: clean up previous garbage
+recomb node 6(->67)
+recoal node 5(->114)
+recomb_node: 6
+recomb_time: 9175.321658
+coal_node: 5
+coal_time: 48063.865571
+recomb node 5(->114)
+recoal node 1(->1)
+-----------------------Invlid SPR moves----------------------
+iter 2: clean up previous garbage
 recomb node 8(->14)
 recoal node 0(->0)
 recomb_node: 8
-recomb_time: 7395.857938
+recomb_time: 2596.402445
 coal_node: 0
-coal_time: 12758.017590
-recomb node 1(->1)
-recoal node 7(->102)
-recomb_node: 1
-recomb_time: 285.373344
-coal_node: 7
-coal_time: 37733.746741
+coal_time: 13901.580719
+recomb node 7(->102)
+recoal node 1(->1)
+-----------------------Invlid SPR moves----------------------
+iter 3: clean up previous garbage
+recomb node 4(->4)
+recoal node 5(->114)
+recomb_node: 4
+recomb_time: 0.000000
+coal_node: 5
+coal_time: 48063.865571
+recomb node 8(->14)
+recoal node 0(->0)
+recomb_node: 8
+recomb_time: 6044.419947
+coal_node: 0
+coal_time: 13901.580719
+27(->8) has 2 children
+1
+3
+54(->5) has 2 children
+0
+2
+102(->6) has 2 children
+27
+54
+114(->7) has 2 children
+4
+102
 
 parsing tree 17: (4,((0,2),(1,3)));
 recomb node 3(->3)
 recoal node 1(->1)
 recomb_node: 3
-recomb_time: 30.971359
+recomb_time: 1083.282752
 coal_node: 1
-coal_time: 12758.017590
+coal_time: 13901.580719
+27(->8) has 2 children
+1
+3
+54(->5) has 2 children
+0
+2
+65(->6) has 2 children
+4
+54
+102(->7) has 2 children
+27
+65
 
 parsing tree 18: ((4,(0,2)),(1,3));
 recomb node 5(->54)
 recoal node 4(->4)
 recomb_node: 5
-recomb_time: 2447.510662
+recomb_time: 3970.359808
 coal_node: 4
-coal_time: 9717.427016
+coal_time: 9175.321658
+27(->8) has 2 children
+1
+3
+40(->5) has 2 children
+0
+4
+65(->6) has 2 children
+2
+40
+102(->7) has 2 children
+27
+65
 
 parsing tree 19: ((2,(0,4)),(1,3));
+recomb node 4(->4)
+recoal node 0(->0)
+-----------------------Invlid SPR moves----------------------
+iter 1: clean up previous garbage
 recomb node 2(->2)
 recoal node 6(->65)
 recomb_node: 2
-recomb_time: 765.786229
+recomb_time: 0.000000
 coal_node: 6
-coal_time: 9717.427016
+coal_time: 9175.321658
+27(->8) has 2 children
+1
+3
+40(->5) has 2 children
+0
+4
+84(->6) has 2 children
+2
+40
+102(->7) has 2 children
+27
+84
 
 parsing tree 20: ((2,(0,4)),(1,3));
 node_arg_id1: 6, node_arg_id2: 6, node_tsk_id: 65
-upper: 17
+upper: 11
 lower: 0
 recomb_node: 2
-recomb_time: 4269.871625
+recomb_time: 683.863505
 coal_node: 5
-coal_time: 12758.017590
+coal_time: 13901.580719
+40(->5) has 2 children
+0
+4
+84(->6) has 2 children
+2
+40
+102(->7) has 2 children
+1
+84
+114(->8) has 2 children
+3
+102
 
 parsing tree 21: (3,(1,(2,(0,4))));
-recomb node 1(->1)
-recoal node 6(->84)
-recomb_node: 1
-recomb_time: 30.971359
-coal_node: 6
-coal_time: 37733.746741
+recomb node 3(->3)
+recoal node 7(->102)
+recomb_node: 3
+recomb_time: 127.874736
+coal_node: 7
+coal_time: 48063.865571
+31(->8) has 2 children
+1
+2
+40(->5) has 2 children
+0
+4
+71(->6) has 2 children
+31
+40
+114(->7) has 2 children
+3
+71
 
 parsing tree 22: (3,((0,4),(1,2)));
-recomb node 2(->2)
-recoal node 1(->1)
-recomb_node: 2
-recomb_time: 4269.871625
-coal_node: 1
-coal_time: 7395.857938
+recomb node 5(->40)
+recoal node 7(->102)
+recomb_node: 5
+recomb_time: 6044.419947
+coal_node: 7
+coal_time: 9175.321658
+31(->7) has 2 children
+1
+2
+71(->8) has 2 children
+4
+31
+102(->5) has 2 children
+0
+71
+114(->6) has 2 children
+3
+102
 
 parsing tree 23: (3,(0,(4,(1,2))));
-recomb node 0(->0)
-recoal node 6(->71)
-recomb_node: 0
-recomb_time: 0.000000
-coal_node: 6
-coal_time: 37733.746741
+recomb node 4(->4)
+recoal node 8(->31)
+recomb_node: 4
+recomb_time: 3970.359808
+coal_node: 8
+coal_time: 9175.321658
+31(->7) has 2 children
+1
+2
+45(->5) has 2 children
+0
+3
+71(->8) has 2 children
+4
+31
+102(->6) has 2 children
+45
+71
 
 parsing tree 24: ((0,3),(4,(1,2)));
-recomb node 0(->0)
-recoal node 3(->3)
-recomb_node: 0
-recomb_time: 4269.871625
-coal_node: 3
-coal_time: 9717.427016
+recomb node 3(->3)
+recoal node 0(->0)
+recomb_node: 3
+recomb_time: 50.955204
+coal_node: 0
+coal_time: 9175.321658
+31(->7) has 2 children
+1
+2
+71(->8) has 2 children
+4
+31
+99(->5) has 2 children
+0
+3
+102(->6) has 2 children
+71
+99
 
 parsing tree 25: ((0,3),(4,(1,2)));
 node_arg_id1: 5, node_arg_id2: 5, node_tsk_id: 45
-upper: 16
+upper: 10
 lower: 0
 recomb_node: 0
-recomb_time: 1845.089888
+recomb_time: 3970.359808
 coal_node: 3
-coal_time: 7395.857938
+coal_time: 6044.419947
+5(->8) has 2 children
+3
+4
+31(->7) has 2 children
+1
+2
+99(->5) has 2 children
+0
+31
+102(->6) has 2 children
+5
+99
 
 parsing tree 26: ((0,(1,2)),(3,4));
 recomb node 7(->31)
 recoal node 0(->0)
 recomb_node: 7
-recomb_time: 7395.857938
+recomb_time: 6044.419947
 coal_node: 0
-coal_time: 7395.857938
-recomb node 3(->3)
-recoal node 4(->4)
-recomb_node: 3
-recomb_time: 561.050045
-coal_node: 4
-coal_time: 1385.126139
+coal_time: 6044.419947
+recomb node 8(->71)
+recoal node 6(->102)
+recomb_node: 8
+recomb_time: 6044.419947
+coal_node: 6
+coal_time: 31806.065068
+5(->8) has 2 children
+3
+4
+31(->7) has 2 children
+1
+2
+79(->5) has 2 children
+0
+5
+102(->6) has 2 children
+31
+79
 
 parsing tree 27: ((0,(3,4)),(1,2));
 recomb node 8(->5)
 recoal node 0(->0)
-recomb_node: 8
-recomb_time: 2447.510662
-coal_node: 0
-coal_time: 7395.857938
+-----------------------Invlid SPR moves----------------------
+iter 1: clean up previous garbage
+recomb node 8(->5)
+recoal node 0(->0)
+-----------------------Invlid SPR moves----------------------
+iter 2: clean up previous garbage
+recomb node 7(->31)
+recoal node 6(->102)
+recomb_node: 7
+recomb_time: 6044.419947
+coal_node: 6
+coal_time: 31806.065068
+5(->8) has 2 children
+3
+4
+31(->6) has 2 children
+1
+2
+102(->7) has 2 children
+5
+31
+114(->5) has 2 children
+0
+102
 
 parsing tree 28: (0,((1,2),(3,4)));
 recomb node 0(->0)
 recoal node 6(->102)
 recomb_node: 0
-recomb_time: 404.728706
+recomb_time: 3970.359808
 coal_node: 6
-coal_time: 37733.746741
+coal_time: 48063.865571
+5(->7) has 2 children
+3
+4
+111(->5) has 3 children
+0
+1
+5
+114(->6) has 2 children
+2
+111
 
 parsing tree 29: (2,((0,1),(3,4)));
-recomb node 8(->5)
-recoal node 0(->0)
-recomb_node: 8
-recomb_time: 1385.126139
-coal_node: 0
-coal_time: 21955.996488
 recomb node 1(->1)
-recoal node 0(->0)
+recoal node 8(->5)
 recomb_node: 1
-recomb_time: 5623.280258
-coal_node: 0
-coal_time: 21955.996488
+recomb_time: 127.874736
+coal_node: 8
+coal_time: 21036.114721
+recomb node 0(->0)
+recoal node 1(->1)
+recomb_node: 0
+recomb_time: 50.955204
+coal_node: 1
+coal_time: 21036.114721
+46(->5) has 2 children
+0
+3
+111(->6) has 3 children
+1
+4
+46
+114(->7) has 2 children
+2
+111
 
 parsing tree 30: (2,((0,3),(1,4)));
-recomb node 3(->3)
-recoal node 0(->0)
-recomb_node: 3
-recomb_time: 30.971359
-coal_node: 0
-coal_time: 4269.871625
+recomb node 4(->4)
+recoal node 1(->1)
+recomb_node: 4
+recomb_time: 50.955204
+coal_node: 1
+coal_time: 21036.114721
 recomb node 7(->5)
 recoal node 8(->111)
 recomb_node: 7
-recomb_time: 16740.320389
+recomb_time: 21036.114721
 coal_node: 8
-coal_time: 21955.996488
+coal_time: 21036.114721
+46(->5) has 2 children
+0
+3
+72(->8) has 2 children
+1
+4
+111(->6) has 2 children
+46
+72
+114(->7) has 2 children
+2
+111
 
 parsing tree 31: (2,((0,3),(1,4)));
+32(->7) has 2 children
+1
+2
+46(->5) has 2 children
+0
+3
+72(->8) has 2 children
+4
+32
+105(->6) has 2 children
+46
+72
 
 parsing tree 32: ((0,3),(4,(1,2)));
 recomb node 2(->2)
 recoal node 1(->1)
 recomb_node: 2
-recomb_time: 561.050045
+recomb_time: 0.000000
 coal_node: 1
-coal_time: 1845.089888
+coal_time: 1686.226891
+46(->5) has 2 children
+0
+3
+72(->7) has 3 children
+1
+2
+4
+105(->6) has 2 children
+46
+72
 
 parsing tree 33: ((0,3),(4,(1,2)));
 node_arg_id1: 7, node_arg_id2: 7, node_tsk_id: 32
-upper: 11
+upper: 7
 lower: 0
 recomb_node: 1
-recomb_time: 561.050045
-coal_node: 2
-coal_time: 7395.857938
+recomb_time: 1083.282752
+coal_node: 7
+coal_time: 6044.419947
+46(->5) has 2 children
+0
+3
+105(->6) has 4 children
+1
+2
+4
+46
 
 parsing tree 34: ((0,3),(4,(1,2)));
 node_arg_id1: 8, node_arg_id2: 7, node_tsk_id: 72
-upper: 16
+upper: 10
 lower: 0
 recomb_node: 4
-recomb_time: 5623.280258
-coal_node: 7
-coal_time: 21955.996488
+recomb_time: 0.000000
+coal_node: 8
+coal_time: 21036.114721
 node_arg_id1: 7, node_arg_id2: 6, node_tsk_id: 72
-upper: 16
+upper: 10
 lower: 0
 recomb_node: 1
-recomb_time: 1385.126139
-coal_node: 2
-coal_time: 21955.996488
+recomb_time: 1686.226891
+coal_node: 7
+coal_time: 21036.114721
+60(->5) has 2 children
+0
+1
+105(->6) has 3 children
+2
+4
+60
+114(->7) has 2 children
+3
+105
 
 parsing tree 35: (3,((0,1),(2,4)));
+recomb node 1(->1)
+recoal node 7(->105)
+recomb_node: 1
+recomb_time: 50.955204
+coal_node: 7
+coal_time: 21036.114721
+recomb node 0(->0)
+recoal node 1(->1)
+recomb_node: 0
+recomb_time: 243.988772
+coal_node: 1
+coal_time: 1083.282752
+60(->5) has 2 children
+0
+1
+97(->6) has 2 children
+3
+60
+105(->7) has 2 children
+4
+97
+114(->8) has 2 children
+2
+105
+
+parsing tree 36: (2,(4,(3,(0,1))));
+recomb node 4(->4)
+recoal node 7(->114)
+recomb_node: 4
+recomb_time: 9175.321658
+coal_node: 7
+coal_time: 48063.865571
+recomb node 2(->2)
+recoal node 6(->105)
+recomb_node: 2
+recomb_time: 50.955204
+coal_node: 6
+coal_time: 48063.865571
+9(->8) has 2 children
+2
+4
+60(->5) has 2 children
+0
+1
+97(->6) has 2 children
+3
+60
+105(->7) has 2 children
+9
+97
+
+parsing tree 37: ((3,(0,1)),(2,4));
 recomb node 2(->2)
 recoal node 4(->4)
 recomb_node: 2
 recomb_time: 0.000000
 coal_node: 4
-coal_time: 21955.996488
-recomb node 0(->0)
-recoal node 1(->1)
-recomb_node: 0
-recomb_time: 0.000000
-coal_node: 1
-coal_time: 1385.126139
-
-parsing tree 36: (2,(4,(3,(0,1))));
-recomb node 4(->4)
-recoal node 3(->3)
-recomb_node: 4
-recomb_time: 561.050045
-coal_node: 3
-coal_time: 21955.996488
-recomb node 5(->60)
-recoal node 3(->3)
-recomb_node: 5
-recomb_time: 5623.280258
-coal_node: 3
-coal_time: 9717.427016
-
-parsing tree 37: ((3,(0,1)),(2,4));
-recomb node 4(->4)
-recoal node 2(->2)
-recomb_node: 4
-recomb_time: 1385.126139
-coal_node: 2
-coal_time: 1845.089888
+coal_time: 1686.226891
+60(->5) has 2 children
+0
+1
+97(->6) has 2 children
+3
+60
+105(->7) has 2 children
+2
+97
+114(->8) has 2 children
+4
+105
 
 parsing tree 38: (4,(2,(3,(0,1))));
 recomb node 2(->2)
 recoal node 6(->97)
 recomb_node: 2
-recomb_time: 285.373344
+recomb_time: 0.000000
 coal_node: 6
-coal_time: 21955.996488
+coal_time: 21036.114721
+10(->8) has 2 children
+2
+4
+60(->5) has 2 children
+0
+1
+97(->6) has 2 children
+3
+60
+105(->7) has 2 children
+10
+97
 
 parsing tree 39: ((3,(0,1)),(2,4));
-recomb node 4(->4)
-recoal node 2(->2)
-recomb_node: 4
-recomb_time: 0.000000
-coal_node: 2
-coal_time: 5623.280258
+recomb node 6(->97)
+recoal node 8(->114)
+recomb_node: 6
+recomb_time: 13901.580719
+coal_node: 8
+coal_time: 21036.114721
+10(->7) has 2 children
+2
+4
+97(->5) has 3 children
+0
+1
+3
+105(->6) has 2 children
+10
+97
 
 parsing tree 40: ((2,4),(3,(0,1)));
 node_arg_id1: 5, node_arg_id2: 5, node_tsk_id: 60
-upper: 10
+upper: 6
 lower: 0
 recomb_node: 0
-recomb_time: 285.373344
-coal_node: 1
-coal_time: 9717.427016
+recomb_time: 419.268952
+coal_node: 5
+coal_time: 9175.321658
+10(->8) has 2 children
+2
+4
+64(->5) has 2 children
+0
+1
+93(->6) has 2 children
+10
+64
+105(->7) has 2 children
+3
+93
 
 parsing tree 41: (3,((0,1),(2,4)));
 recomb node 7(->10)
 recoal node 5(->97)
 -----------------------Invlid SPR moves----------------------
 iter 1: clean up previous garbage
-recomb node 7(->10)
-recoal node 5(->97)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 5(->97)
-recoal node 7(->10)
-recomb_node: 5
-recomb_time: 9717.427016
-coal_node: 7
-coal_time: 12758.017590
+recomb node 3(->3)
+recoal node 6(->105)
+recomb_node: 3
+recomb_time: 127.874736
+coal_node: 6
+coal_time: 21036.114721
+21(->8) has 2 children
+1
+4
+64(->5) has 2 children
+0
+21
+105(->6) has 2 children
+3
+64
+114(->7) has 2 children
+2
+105
 
 parsing tree 42: (2,(3,(0,(1,4))));
-recomb node 4(->4)
-recoal node 1(->1)
-recomb_node: 4
-recomb_time: 0.000000
-coal_node: 1
-coal_time: 2447.510662
 recomb node 2(->2)
 recoal node 7(->105)
 recomb_node: 2
-recomb_time: 404.728706
+recomb_time: 3970.359808
 coal_node: 7
-coal_time: 37733.746741
+coal_time: 48063.865571
+recomb node 0(->0)
+recoal node 6(->93)
+recomb_node: 0
+recomb_time: 683.863505
+coal_node: 6
+coal_time: 9175.321658
+21(->6) has 2 children
+1
+4
+93(->7) has 2 children
+2
+21
+105(->8) has 2 children
+3
+93
+114(->5) has 2 children
+0
+105
 
 parsing tree 43: (0,(3,(2,(1,4))));
+recomb node 0(->0)
+recoal node 7(->114)
+recomb_node: 0
+recomb_time: 3970.359808
+coal_node: 7
+coal_time: 48063.865571
 recomb node 8(->21)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 6044.419947
 coal_node: 2
-coal_time: 12758.017590
-recomb node 5(->64)
-recoal node 3(->3)
-recomb_node: 5
-recomb_time: 16740.320389
-coal_node: 3
-coal_time: 21955.996488
+coal_time: 13901.580719
+93(->6) has 3 children
+1
+2
+4
+105(->7) has 2 children
+3
+93
+114(->5) has 2 children
+0
+105
 
 parsing tree 44: (0,(3,(4,(1,2))));
+recomb node 2(->2)
+recoal node 1(->1)
+-----------------------Invlid SPR moves----------------------
+iter 1: clean up previous garbage
 recomb node 1(->1)
 recoal node 2(->2)
 recomb_node: 1
-recomb_time: 194.242456
+recomb_time: 1686.226891
 coal_node: 2
-coal_time: 12758.017590
+coal_time: 13901.580719
+55(->5) has 2 children
+0
+2
+93(->6) has 3 children
+1
+4
+55
+105(->7) has 2 children
+3
+93
 
 parsing tree 45: (3,((0,2),(1,4)));
-recomb node 2(->2)
-recoal node 0(->0)
-recomb_node: 2
-recomb_time: 30.971359
-coal_node: 0
-coal_time: 4269.871625
-recomb node 3(->3)
-recoal node 5(->114)
-recomb_node: 3
-recomb_time: 124.661680
-coal_node: 5
-coal_time: 21955.996488
+recomb node 4(->4)
+recoal node 1(->1)
+recomb_node: 4
+recomb_time: 50.955204
+coal_node: 1
+coal_time: 13901.580719
+recomb node 0(->0)
+recoal node 2(->2)
+recomb_node: 0
+recomb_time: 50.955204
+coal_node: 2
+coal_time: 3970.359808
+15(->8) has 2 children
+2
+3
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+105(->7) has 2 children
+15
+93
 
 parsing tree 46: ((1,(0,4)),(2,3));
-recomb node 4(->4)
-recoal node 0(->0)
-recomb_node: 4
-recomb_time: 0.000000
-coal_node: 0
-coal_time: 1385.126139
 recomb node 2(->2)
 recoal node 3(->3)
 recomb_node: 2
-recomb_time: 0.000000
+recomb_time: 1686.226891
 coal_node: 3
-coal_time: 5623.280258
+coal_time: 6044.419947
+recomb node 1(->1)
+recoal node 8(->93)
+recomb_node: 1
+recomb_time: 683.863505
+coal_node: 8
+coal_time: 13901.580719
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+112(->7) has 2 children
+2
+93
+114(->8) has 2 children
+3
+112
 
 parsing tree 47: (3,(2,(1,(0,4))));
-recomb node 6(->93)
-recoal node 2(->2)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 2(->2)
-recoal node 6(->93)
-recomb_node: 2
-recomb_time: 1385.126139
-coal_node: 6
-coal_time: 21955.996488
+recomb node 3(->3)
+recoal node 7(->105)
+recomb_node: 3
+recomb_time: 2596.402445
+coal_node: 7
+coal_time: 48063.865571
+41(->5) has 2 children
+0
+4
+105(->6) has 2 children
+1
+41
+112(->7) has 2 children
+2
+105
+114(->8) has 2 children
+3
+112
 
 parsing tree 48: (3,(2,(1,(0,4))));
 node_arg_id1: 6, node_arg_id2: 6, node_tsk_id: 93
-upper: 18
+upper: 12
 lower: 0
 recomb_node: 1
-recomb_time: 561.050045
-coal_node: 5
-coal_time: 21955.996488
+recomb_time: 243.988772
+coal_node: 6
+coal_time: 21036.114721
+41(->5) has 2 children
+0
+4
+85(->6) has 2 children
+2
+41
+103(->7) has 2 children
+1
+85
+114(->8) has 2 children
+3
+103
 
 parsing tree 49: (3,(1,(2,(0,4))));
-recomb node 5(->41)
-recoal node 2(->2)
-recomb_node: 5
-recomb_time: 5623.280258
-coal_node: 2
-coal_time: 7395.857938
+recomb node 1(->1)
+recoal node 7(->112)
+recomb_node: 1
+recomb_time: 1686.226891
+coal_node: 7
+coal_time: 31806.065068
+16(->8) has 2 children
+2
+3
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+103(->7) has 2 children
+16
+93
 
 parsing tree 50: ((1,(0,4)),(2,3));
 recomb node 2(->2)
 recoal node 3(->3)
 recomb_node: 2
-recomb_time: 561.050045
+recomb_time: 1686.226891
 coal_node: 3
-coal_time: 12758.017590
+coal_time: 9175.321658
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+103(->7) has 2 children
+3
+93
+114(->8) has 2 children
+2
+103
 
 parsing tree 51: (2,(3,(1,(0,4))));
-recomb node 6(->93)
-recoal node 3(->3)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 6(->93)
-recoal node 3(->3)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 2(->2)
-recoal node 7(->103)
-recomb_node: 2
-recomb_time: 1845.089888
-coal_node: 7
-coal_time: 37733.746741
+recomb node 3(->3)
+recoal node 6(->93)
+recomb_node: 3
+recomb_time: 1686.226891
+coal_node: 6
+coal_time: 31806.065068
+41(->5) has 2 children
+0
+4
+77(->8) has 2 children
+1
+3
+103(->6) has 2 children
+41
+77
+114(->7) has 2 children
+2
+103
 
 parsing tree 52: (2,((0,4),(1,3)));
-recomb node 5(->41)
-recoal node 7(->103)
-recomb_node: 5
-recomb_time: 7395.857938
-coal_node: 7
-coal_time: 28787.038361
+recomb node 1(->1)
+recoal node 3(->3)
+recomb_node: 1
+recomb_time: 243.988772
+coal_node: 3
+coal_time: 9175.321658
+17(->8) has 2 children
+2
+3
+41(->5) has 2 children
+0
+4
+77(->7) has 2 children
+1
+17
+103(->6) has 2 children
+41
+77
 
 parsing tree 53: ((0,4),(1,(2,3)));
 recomb node 2(->2)
 recoal node 3(->3)
 recomb_node: 2
-recomb_time: 124.661680
+recomb_time: 3970.359808
 coal_node: 3
-coal_time: 5623.280258
+coal_time: 6044.419947
+17(->8) has 2 children
+2
+3
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+103(->7) has 2 children
+17
+93
 
 parsing tree 54: ((1,(0,4)),(2,3));
-recomb node 5(->41)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
 recomb node 1(->1)
 recoal node 5(->41)
 recomb_node: 1
-recomb_time: 30.971359
+recomb_time: 0.000000
 coal_node: 5
-coal_time: 12758.017590
+coal_time: 13901.580719
+41(->5) has 2 children
+0
+4
+93(->6) has 2 children
+1
+41
+103(->7) has 2 children
+2
+93
+114(->8) has 2 children
+3
+103
 
 parsing tree 55: (3,(2,(1,(0,4))));
 recomb node 3(->3)
 recoal node 7(->103)
 recomb_node: 3
-recomb_time: 124.661680
+recomb_time: 419.268952
 coal_node: 7
-coal_time: 37733.746741
+coal_time: 48063.865571
+33(->8) has 2 children
+1
+2
+80(->5) has 2 children
+0
+4
+103(->6) has 2 children
+33
+80
+114(->7) has 2 children
+3
+103
 
 parsing tree 56: (3,((0,4),(1,2)));
-recomb node 1(->1)
-recoal node 2(->2)
-recomb_node: 1
-recomb_time: 7395.857938
-coal_node: 2
-coal_time: 16740.320389
+recomb node 5(->41)
+recoal node 7(->103)
+recomb_node: 5
+recomb_time: 9175.321658
+coal_node: 7
+coal_time: 31806.065068
+6(->8) has 2 children
+3
+4
+33(->7) has 2 children
+1
+2
+80(->5) has 2 children
+0
+6
+103(->6) has 2 children
+33
+80
 
 parsing tree 57: ((0,(3,4)),(1,2));
 recomb node 3(->3)
 recoal node 4(->4)
 recomb_node: 3
-recomb_time: 0.000000
+recomb_time: 419.268952
 coal_node: 4
-coal_time: 1845.089888
+coal_time: 1686.226891
+6(->8) has 2 children
+3
+4
+80(->5) has 2 children
+0
+6
+103(->6) has 2 children
+1
+80
+114(->7) has 2 children
+2
+103
 
 parsing tree 58: (2,(1,(0,(3,4))));
-recomb node 5(->80)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 5(->80)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 1(->1)
-recoal node 5(->80)
-recomb_node: 1
-recomb_time: 1385.126139
-coal_node: 5
-coal_time: 28787.038361
+recomb node 2(->2)
+recoal node 6(->103)
+recomb_node: 2
+recomb_time: 3970.359808
+coal_node: 6
+coal_time: 48063.865571
+6(->8) has 2 children
+3
+4
+34(->7) has 2 children
+1
+2
+80(->5) has 2 children
+0
+6
+103(->6) has 2 children
+34
+80
 
 parsing tree 59: ((0,(3,4)),(1,2));
-recomb node 2(->2)
-recoal node 1(->1)
-recomb_node: 2
-recomb_time: 1845.089888
-coal_node: 1
-coal_time: 9717.427016
-
-parsing tree 60: (2,(1,(0,(3,4))));
-recomb node 5(->80)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 1(->1)
-recoal node 5(->80)
-recomb_node: 1
-recomb_time: 1033.931990
-coal_node: 5
-coal_time: 21955.996488
-
-parsing tree 61: ((0,(3,4)),(1,2));
 recomb node 1(->1)
 recoal node 2(->2)
 recomb_node: 1
-recomb_time: 194.242456
+recomb_time: 1686.226891
 coal_node: 2
-coal_time: 4269.871625
+coal_time: 9175.321658
+6(->8) has 2 children
+3
+4
+80(->5) has 2 children
+0
+6
+111(->6) has 2 children
+1
+80
+114(->7) has 2 children
+2
+111
+
+parsing tree 60: (2,(1,(0,(3,4))));
+recomb node 2(->2)
+recoal node 6(->103)
+recomb_node: 2
+recomb_time: 1686.226891
+coal_node: 6
+coal_time: 48063.865571
+6(->8) has 2 children
+3
+4
+35(->7) has 2 children
+1
+2
+80(->5) has 2 children
+0
+6
+111(->6) has 2 children
+35
+80
+
+parsing tree 61: ((0,(3,4)),(1,2));
+recomb node 2(->2)
+recoal node 1(->1)
+recomb_node: 2
+recomb_time: 419.268952
+coal_node: 1
+coal_time: 3970.359808
+6(->8) has 2 children
+3
+4
+80(->5) has 2 children
+0
+6
+103(->6) has 2 children
+1
+80
+114(->7) has 2 children
+2
+103
 
 parsing tree 62: (2,(1,(0,(3,4))));
 recomb node 2(->2)
 recoal node 6(->111)
 recomb_node: 2
-recomb_time: 3236.509337
+recomb_time: 127.874736
 coal_node: 6
-coal_time: 37733.746741
+coal_time: 48063.865571
+6(->8) has 2 children
+3
+4
+69(->7) has 2 children
+1
+6
+103(->5) has 2 children
+0
+69
+114(->6) has 2 children
+2
+103
 
 parsing tree 63: (2,(0,(1,(3,4))));
-recomb node 8(->6)
-recoal node 1(->1)
-recomb_node: 8
-recomb_time: 2447.510662
-coal_node: 1
-coal_time: 16740.320389
+recomb node 1(->1)
+recoal node 8(->6)
+-----------------------Invlid SPR moves----------------------
+iter 1: clean up previous garbage
+recomb node 0(->0)
+recoal node 6(->103)
+recomb_node: 0
+recomb_time: 683.863505
+coal_node: 6
+coal_time: 31806.065068
+6(->8) has 2 children
+3
+4
+56(->5) has 2 children
+0
+2
+69(->7) has 2 children
+1
+6
+103(->6) has 2 children
+56
+69
 
 parsing tree 64: ((0,2),(1,(3,4)));
 recomb node 2(->2)
 recoal node 0(->0)
 recomb_node: 2
-recomb_time: 765.786229
+recomb_time: 0.000000
 coal_node: 0
-coal_time: 3236.509337
+coal_time: 3970.359808
+6(->8) has 2 children
+3
+4
+56(->5) has 2 children
+0
+2
+100(->6) has 2 children
+1
+56
+103(->7) has 2 children
+6
+100
 
 parsing tree 65: ((1,(0,2)),(3,4));
-recomb node 1(->1)
-recoal node 5(->56)
-recomb_node: 1
-recomb_time: 561.050045
-coal_node: 5
-coal_time: 7395.857938
+recomb node 8(->6)
+recoal node 6(->103)
+recomb_node: 8
+recomb_time: 6044.419947
+coal_node: 6
+coal_time: 31806.065068
+6(->8) has 2 children
+3
+4
+56(->5) has 2 children
+0
+2
+103(->6) has 2 children
+6
+56
+114(->7) has 2 children
+1
+103
 
 parsing tree 66: (1,((0,2),(3,4)));
-recomb node 8(->6)
-recoal node 5(->56)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 8(->6)
-recoal node 5(->56)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 1(->1)
-recoal node 7(->103)
-recomb_node: 1
-recomb_time: 0.000000
-coal_node: 7
-coal_time: 37733.746741
+recomb node 5(->56)
+recoal node 8(->6)
+recomb_node: 5
+recomb_time: 6044.419947
+coal_node: 8
+coal_time: 31806.065068
+6(->8) has 2 children
+3
+4
+56(->5) has 2 children
+0
+2
+101(->6) has 2 children
+1
+56
+103(->7) has 2 children
+6
+101
 
 parsing tree 67: ((1,(0,2)),(3,4));
 recomb node 5(->56)
 recoal node 1(->1)
 recomb_node: 5
-recomb_time: 7395.857938
+recomb_time: 3970.359808
 coal_node: 1
-coal_time: 16740.320389
+coal_time: 13901.580719
+6(->8) has 2 children
+3
+4
+36(->7) has 2 children
+1
+2
+101(->5) has 2 children
+0
+36
+103(->6) has 2 children
+6
+101
 
 parsing tree 68: ((0,(1,2)),(3,4));
 recomb node 1(->1)
 recoal node 2(->2)
 recomb_node: 1
-recomb_time: 30.971359
+recomb_time: 419.268952
 coal_node: 2
-coal_time: 1033.931990
+coal_time: 1083.282752
+6(->8) has 2 children
+3
+4
+36(->6) has 2 children
+1
+2
+73(->7) has 2 children
+6
+36
+114(->5) has 2 children
+0
+73
 
 parsing tree 69: (0,((1,2),(3,4)));
-recomb node 0(->0)
-recoal node 6(->103)
-recomb_node: 0
-recomb_time: 4269.871625
-coal_node: 6
-coal_time: 37733.746741
+recomb node 7(->36)
+recoal node 8(->6)
+recomb_node: 7
+recomb_time: 2596.402445
+coal_node: 8
+coal_time: 3970.359808
+36(->6) has 2 children
+1
+2
+73(->7) has 3 children
+3
+4
+36
+114(->5) has 2 children
+0
+73
 
 parsing tree 70: (0,((1,2),(3,4)));
 node_arg_id1: 8, node_arg_id2: 7, node_tsk_id: 6
-upper: 11
+upper: 7
 lower: 0
 recomb_node: 3
-recomb_time: 124.661680
-coal_node: 4
-coal_time: 5623.280258
+recomb_time: 683.863505
+coal_node: 8
+coal_time: 3970.359808
+36(->6) has 2 children
+1
+2
+73(->7) has 2 children
+4
+36
+109(->8) has 2 children
+3
+73
+114(->5) has 2 children
+0
+109
 
 parsing tree 71: (0,(3,(4,(1,2))));
-recomb node 6(->36)
-recoal node 4(->4)
-recomb_node: 6
-recomb_time: 3236.509337
-coal_node: 4
-coal_time: 5623.280258
+recomb node 3(->3)
+recoal node 8(->73)
+recomb_node: 3
+recomb_time: 243.988772
+coal_node: 8
+coal_time: 31806.065068
+36(->7) has 2 children
+1
+2
+47(->5) has 2 children
+0
+3
+73(->8) has 2 children
+4
+36
+109(->6) has 2 children
+47
+73
 
 parsing tree 72: ((0,3),(4,(1,2)));
-recomb node 7(->73)
-recoal node 5(->114)
-recomb_node: 7
-recomb_time: 9717.427016
-coal_node: 5
-coal_time: 28787.038361
+recomb node 0(->0)
+recoal node 3(->3)
+recomb_node: 0
+recomb_time: 1686.226891
+coal_node: 3
+coal_time: 3970.359808
+11(->8) has 2 children
+2
+4
+47(->5) has 2 children
+0
+3
+73(->7) has 2 children
+1
+11
+109(->6) has 2 children
+47
+73
 
 parsing tree 73: ((0,3),(1,(2,4)));
 recomb node 2(->2)
 recoal node 4(->4)
 recomb_node: 2
-recomb_time: 194.242456
+recomb_time: 127.874736
 coal_node: 4
-coal_time: 1845.089888
+coal_time: 1686.226891
+11(->8) has 2 children
+2
+4
+73(->6) has 2 children
+1
+11
+109(->7) has 2 children
+3
+73
+114(->5) has 2 children
+0
+109
 
 parsing tree 74: (0,(3,(1,(2,4))));
 recomb node 0(->0)
 recoal node 6(->109)
 recomb_node: 0
-recomb_time: 285.373344
+recomb_time: 1686.226891
 coal_node: 6
-coal_time: 37733.746741
+coal_time: 48063.865571
+11(->8) has 2 children
+2
+4
+73(->6) has 2 children
+1
+11
+103(->7) has 2 children
+3
+73
+114(->5) has 2 children
+0
+103
 
 parsing tree 75: (0,(3,(1,(2,4))));
 node_arg_id1: 7, node_arg_id2: 7, node_tsk_id: 109
-upper: 21
+upper: 14
 lower: 0
 recomb_node: 3
-recomb_time: 21955.996488
+recomb_time: 1686.226891
 coal_node: 6
-coal_time: 28787.038361
+coal_time: 31806.065068
+11(->8) has 2 children
+2
+4
+48(->5) has 2 children
+0
+3
+73(->7) has 2 children
+1
+11
+103(->6) has 2 children
+48
+73
 
 parsing tree 76: ((0,3),(1,(2,4)));
-recomb node 3(->3)
-recoal node 0(->0)
-recomb_node: 3
-recomb_time: 1385.126139
-coal_node: 0
-coal_time: 4269.871625
+recomb node 6(->73)
+recoal node 5(->114)
+recomb_node: 6
+recomb_time: 3970.359808
+coal_node: 5
+coal_time: 31806.065068
+11(->8) has 2 children
+2
+4
+48(->5) has 2 children
+0
+3
+98(->6) has 2 children
+1
+48
+103(->7) has 2 children
+11
+98
 
 parsing tree 77: ((1,(0,3)),(2,4));
-recomb node 5(->48)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 8(->11)
-recoal node 6(->103)
-recomb_node: 8
-recomb_time: 2447.510662
-coal_node: 6
-coal_time: 28787.038361
+recomb node 1(->1)
+recoal node 5(->48)
+recomb_node: 1
+recomb_time: 683.863505
+coal_node: 5
+coal_time: 9175.321658
+11(->8) has 2 children
+2
+4
+98(->5) has 2 children
+0
+1
+103(->6) has 2 children
+11
+98
+114(->7) has 2 children
+3
+103
 
 parsing tree 78: (3,((0,1),(2,4)));
 recomb node 3(->3)
 recoal node 7(->103)
 recomb_node: 3
-recomb_time: 561.050045
+recomb_time: 243.988772
 coal_node: 7
-coal_time: 37733.746741
+coal_time: 48063.865571
+11(->8) has 2 children
+2
+4
+98(->5) has 2 children
+0
+3
+103(->6) has 2 children
+11
+98
+114(->7) has 2 children
+1
+103
 
 parsing tree 79: (1,((0,3),(2,4)));
-recomb node 0(->0)
-recoal node 8(->11)
-recomb_node: 0
-recomb_time: 1033.931990
-coal_node: 8
-coal_time: 28787.038361
+recomb node 1(->1)
+recoal node 6(->103)
+recomb_node: 1
+recomb_time: 127.874736
+coal_node: 6
+coal_time: 48063.865571
 recomb node 3(->3)
 recoal node 0(->0)
 recomb_node: 3
-recomb_time: 404.728706
+recomb_time: 419.268952
 coal_node: 0
-coal_time: 7395.857938
+coal_time: 9175.321658
+11(->8) has 2 children
+2
+4
+98(->6) has 2 children
+1
+3
+103(->7) has 2 children
+11
+98
+114(->5) has 2 children
+0
+103
 
 parsing tree 80: (0,((1,3),(2,4)));
 recomb node 8(->11)
-recoal node 7(->114)
+recoal node 1(->1)
 recomb_node: 8
-recomb_time: 5623.280258
-coal_node: 7
-coal_time: 37733.746741
-recomb node 0(->0)
-recoal node 6(->103)
-recomb_node: 0
-recomb_time: 561.050045
-coal_node: 6
-coal_time: 37733.746741
+recomb_time: 21036.114721
+coal_node: 1
+coal_time: 31806.065068
+recomb node 3(->3)
+recoal node 1(->1)
+recomb_node: 3
+recomb_time: 243.988772
+coal_node: 1
+coal_time: 9175.321658
+11(->8) has 2 children
+2
+4
+61(->5) has 2 children
+0
+1
+98(->6) has 2 children
+3
+61
+103(->7) has 2 children
+11
+98
 
 parsing tree 81: ((3,(0,1)),(2,4));
 recomb node 0(->0)
 recoal node 1(->1)
 recomb_node: 0
-recomb_time: 1385.126139
+recomb_time: 419.268952
 coal_node: 1
-coal_time: 2447.510662
+coal_time: 2596.402445
+11(->8) has 2 children
+2
+4
+28(->7) has 2 children
+1
+3
+98(->5) has 2 children
+0
+28
+103(->6) has 2 children
+11
+98
 
 parsing tree 82: ((0,(1,3)),(2,4));
-recomb node 3(->3)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 0(->0)
-recoal node 6(->98)
-recomb_node: 0
-recomb_time: 194.242456
-coal_node: 6
-coal_time: 7395.857938
+recomb node 1(->1)
+recoal node 3(->3)
+recomb_node: 1
+recomb_time: 127.874736
+coal_node: 3
+coal_time: 3970.359808
+11(->8) has 2 children
+2
+4
+28(->6) has 2 children
+1
+3
+70(->7) has 2 children
+11
+28
+114(->5) has 2 children
+0
+70
 
 parsing tree 83: (0,((1,3),(2,4)));
-recomb node 0(->0)
-recoal node 6(->103)
-recomb_node: 0
-recomb_time: 1385.126139
-coal_node: 6
-coal_time: 37733.746741
+recomb node 7(->28)
+recoal node 8(->11)
+recomb_node: 7
+recomb_time: 6044.419947
+coal_node: 8
+coal_time: 13901.580719
+28(->6) has 2 children
+1
+3
+70(->7) has 3 children
+2
+4
+28
+114(->5) has 2 children
+0
+70
 
 parsing tree 84: (0,((1,3),(2,4)));
 node_arg_id1: 8, node_arg_id2: 7, node_tsk_id: 11
-upper: 11
+upper: 7
 lower: 0
 recomb_node: 2
-recomb_time: 0.000000
-coal_node: 4
-coal_time: 12758.017590
+recomb_time: 683.863505
+coal_node: 8
+coal_time: 13901.580719
+28(->6) has 2 children
+1
+3
+70(->7) has 2 children
+4
+28
+103(->8) has 2 children
+2
+70
+114(->5) has 2 children
+0
+103
 
 parsing tree 85: (0,(2,(4,(1,3))));
 recomb node 6(->28)
 recoal node 4(->4)
 recomb_node: 6
-recomb_time: 4269.871625
+recomb_time: 6044.419947
 coal_node: 4
-coal_time: 12758.017590
+coal_time: 13901.580719
+28(->7) has 2 children
+1
+3
+57(->5) has 2 children
+0
+2
+70(->8) has 2 children
+4
+28
+103(->6) has 2 children
+57
+70
 
 parsing tree 86: ((0,2),(4,(1,3)));
-recomb node 2(->2)
-recoal node 0(->0)
-recomb_node: 2
-recomb_time: 30.971359
-coal_node: 0
-coal_time: 2447.510662
+recomb node 7(->70)
+recoal node 5(->114)
+recomb_node: 7
+recomb_time: 13901.580719
+coal_node: 5
+coal_time: 31806.065068
+28(->8) has 2 children
+1
+3
+57(->5) has 2 children
+0
+2
+86(->6) has 2 children
+4
+57
+103(->7) has 2 children
+28
+86
 
 parsing tree 87: ((4,(0,2)),(1,3));
-recomb node 7(->28)
-recoal node 6(->103)
-recomb_node: 7
-recomb_time: 9717.427016
-coal_node: 6
-coal_time: 28787.038361
+recomb node 5(->57)
+recoal node 4(->4)
+recomb_node: 5
+recomb_time: 2596.402445
+coal_node: 4
+coal_time: 6044.419947
+28(->8) has 2 children
+1
+3
+57(->5) has 2 children
+0
+2
+78(->6) has 2 children
+28
+57
+103(->7) has 2 children
+4
+78
 
 parsing tree 88: (4,((0,2),(1,3)));
-recomb node 4(->4)
-recoal node 7(->103)
-recomb_node: 4
-recomb_time: 194.242456
-coal_node: 7
-coal_time: 28787.038361
+recomb node 5(->57)
+recoal node 8(->28)
+recomb_node: 5
+recomb_time: 2596.402445
+coal_node: 8
+coal_time: 13901.580719
+57(->5) has 2 children
+0
+2
+78(->6) has 3 children
+1
+3
+57
+103(->7) has 2 children
+4
+78
 
 parsing tree 89: (4,((0,2),(1,3)));
 node_arg_id1: 8, node_arg_id2: 6, node_tsk_id: 28
-upper: 14
+upper: 9
 lower: 0
 recomb_node: 1
-recomb_time: 124.661680
-coal_node: 3
-coal_time: 12758.017590
+recomb_time: 2596.402445
+coal_node: 8
+coal_time: 13901.580719
+18(->8) has 2 children
+2
+3
+78(->6) has 2 children
+1
+18
+103(->7) has 2 children
+4
+78
+114(->5) has 2 children
+0
+103
 
 parsing tree 90: (0,(4,(1,(2,3))));
 recomb node 3(->3)
@@ -968,89 +2034,193 @@ iter 1: clean up previous garbage
 recomb node 6(->78)
 recoal node 4(->4)
 recomb_node: 6
-recomb_time: 12758.017590
+recomb_time: 13901.580719
 coal_node: 4
-coal_time: 28787.038361
+coal_time: 31806.065068
 recomb node 2(->2)
 recoal node 3(->3)
 recomb_node: 2
-recomb_time: 1845.089888
+recomb_time: 1083.282752
 coal_node: 3
-coal_time: 4269.871625
+coal_time: 3970.359808
+18(->8) has 2 children
+2
+3
+42(->5) has 2 children
+0
+4
+78(->7) has 2 children
+1
+18
+103(->6) has 2 children
+42
+78
 
 parsing tree 91: ((0,4),(1,(2,3)));
 recomb node 4(->4)
 recoal node 0(->0)
 recomb_node: 4
-recomb_time: 124.661680
+recomb_time: 3970.359808
 coal_node: 0
-coal_time: 16740.320389
+coal_time: 13901.580719
+18(->8) has 2 children
+2
+3
+62(->5) has 2 children
+0
+1
+66(->6) has 2 children
+4
+62
+103(->7) has 2 children
+18
+66
 
 parsing tree 92: ((4,(0,1)),(2,3));
 recomb node 1(->1)
 recoal node 0(->0)
 recomb_node: 1
-recomb_time: 1845.089888
+recomb_time: 50.955204
 coal_node: 0
-coal_time: 3236.509337
+coal_time: 2596.402445
+18(->7) has 2 children
+2
+3
+62(->5) has 2 children
+0
+1
+68(->8) has 2 children
+4
+18
+103(->6) has 2 children
+62
+68
 
 parsing tree 93: ((0,1),(4,(2,3)));
-recomb node 8(->18)
-recoal node 4(->4)
-recomb_node: 8
-recomb_time: 4269.871625
-coal_node: 4
-coal_time: 9717.427016
+recomb node 5(->62)
+recoal node 7(->103)
+recomb_node: 5
+recomb_time: 3970.359808
+coal_node: 7
+coal_time: 31806.065068
+18(->8) has 2 children
+2
+3
+62(->5) has 2 children
+0
+1
+90(->6) has 2 children
+18
+62
+103(->7) has 2 children
+4
+90
 
 parsing tree 94: (4,((0,1),(2,3)));
-recomb node 7(->18)
-recoal node 5(->62)
-recomb_node: 7
-recomb_time: 5623.280258
-coal_node: 5
-coal_time: 12758.017590
+recomb node 4(->4)
+recoal node 6(->103)
+recomb_node: 4
+recomb_time: 3970.359808
+coal_node: 6
+coal_time: 31806.065068
+18(->8) has 2 children
+2
+3
+22(->7) has 2 children
+1
+4
+90(->5) has 2 children
+0
+18
+103(->6) has 2 children
+22
+90
 
 parsing tree 95: ((0,(2,3)),(1,4));
 recomb node 1(->1)
 recoal node 4(->4)
 recomb_node: 1
-recomb_time: 1845.089888
+recomb_time: 1686.226891
 coal_node: 4
-coal_time: 4269.871625
+coal_time: 3970.359808
+22(->8) has 2 children
+1
+4
+58(->5) has 2 children
+0
+2
+90(->6) has 2 children
+3
+58
+103(->7) has 2 children
+22
+90
 
 parsing tree 96: ((3,(0,2)),(1,4));
-recomb node 3(->3)
-recoal node 5(->90)
-recomb_node: 3
-recomb_time: 194.242456
-coal_node: 5
-coal_time: 12758.017590
+recomb node 0(->0)
+recoal node 2(->2)
+recomb_node: 0
+recomb_time: 50.955204
+coal_node: 2
+coal_time: 2596.402445
+22(->8) has 2 children
+1
+4
+94(->5) has 2 children
+0
+22
+103(->6) has 2 children
+3
+94
+114(->7) has 2 children
+2
+103
 
 parsing tree 97: (2,(3,(0,(1,4))));
 recomb node 8(->22)
 recoal node 0(->0)
 -----------------------Invlid SPR moves----------------------
 iter 1: clean up previous garbage
-recomb node 0(->0)
-recoal node 8(->22)
-recomb_node: 0
-recomb_time: 0.000000
-coal_node: 8
-coal_time: 5623.280258
+recomb node 8(->22)
+recoal node 3(->3)
+-----------------------Invlid SPR moves----------------------
+iter 2: clean up previous garbage
+recomb node 8(->22)
+recoal node 0(->0)
+-----------------------Invlid SPR moves----------------------
+iter 3: clean up previous garbage
 recomb node 2(->2)
 recoal node 7(->103)
 recomb_node: 2
-recomb_time: 1845.089888
+recomb_time: 50.955204
 coal_node: 7
-coal_time: 37733.746741
+coal_time: 48063.865571
+recomb node 3(->3)
+recoal node 7(->103)
+recomb_node: 3
+recomb_time: 6044.419947
+coal_node: 7
+coal_time: 31806.065068
+49(->5) has 2 children
+0
+3
+81(->6) has 2 children
+4
+49
+103(->7) has 2 children
+1
+81
+114(->8) has 2 children
+2
+103
 
 parsing tree 98: (2,(1,(4,(0,3))));
 recomb node 8(->22)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 3970.359808
 coal_node: 2
-coal_time: 37733.746741
+coal_time: 48063.865571
 recomb node 6(->103)
 recoal node 4(->4)
 -----------------------Invlid SPR moves----------------------
@@ -1058,9 +2228,9 @@ iter 1: clean up previous garbage
 recomb node 8(->22)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 3970.359808
 coal_node: 2
-coal_time: 37733.746741
+coal_time: 48063.865571
 recomb node 6(->103)
 recoal node 4(->4)
 -----------------------Invlid SPR moves----------------------
@@ -1068,9 +2238,9 @@ iter 2: clean up previous garbage
 recomb node 8(->22)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 3970.359808
 coal_node: 2
-coal_time: 37733.746741
+coal_time: 48063.865571
 recomb node 6(->103)
 recoal node 4(->4)
 -----------------------Invlid SPR moves----------------------
@@ -1078,9 +2248,9 @@ iter 3: clean up previous garbage
 recomb node 8(->22)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 3970.359808
 coal_node: 2
-coal_time: 37733.746741
+coal_time: 48063.865571
 recomb node 6(->103)
 recoal node 4(->4)
 -----------------------Invlid SPR moves----------------------
@@ -1088,9 +2258,9 @@ iter 4: clean up previous garbage
 recomb node 8(->22)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 3970.359808
 coal_node: 2
-coal_time: 37733.746741
+coal_time: 48063.865571
 recomb node 6(->103)
 recoal node 4(->4)
 -----------------------Invlid SPR moves----------------------
@@ -1098,9 +2268,9 @@ iter 5: clean up previous garbage
 recomb node 8(->22)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 3970.359808
 coal_node: 2
-coal_time: 37733.746741
+coal_time: 48063.865571
 recomb node 6(->103)
 recoal node 4(->4)
 -----------------------Invlid SPR moves----------------------
@@ -1108,9 +2278,9 @@ iter 6: clean up previous garbage
 recomb node 8(->22)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 3970.359808
 coal_node: 2
-coal_time: 37733.746741
+coal_time: 48063.865571
 recomb node 6(->103)
 recoal node 4(->4)
 -----------------------Invlid SPR moves----------------------
@@ -1118,9 +2288,9 @@ iter 7: clean up previous garbage
 recomb node 8(->22)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 3970.359808
 coal_node: 2
-coal_time: 37733.746741
+coal_time: 48063.865571
 recomb node 6(->103)
 recoal node 4(->4)
 -----------------------Invlid SPR moves----------------------
@@ -1128,9 +2298,9 @@ iter 8: clean up previous garbage
 recomb node 8(->22)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 3970.359808
 coal_node: 2
-coal_time: 37733.746741
+coal_time: 48063.865571
 recomb node 6(->103)
 recoal node 4(->4)
 -----------------------Invlid SPR moves----------------------
@@ -1138,9 +2308,9 @@ iter 9: clean up previous garbage
 recomb node 8(->22)
 recoal node 2(->2)
 recomb_node: 8
-recomb_time: 4269.871625
+recomb_time: 3970.359808
 coal_node: 2
-coal_time: 37733.746741
+coal_time: 48063.865571
 recomb node 6(->103)
 recoal node 4(->4)
 -----------------------Invlid SPR moves----------------------
