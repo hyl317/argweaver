@@ -484,7 +484,7 @@ public:
     //     return descent_map;
     // }
 
-    inline set<int> get_descent_leaves(int node){
+    set<int> get_descent_leaves(int node){
         set<int> leaves;
         if (node < get_num_leaves()){
             leaves.insert(node);
@@ -498,7 +498,14 @@ public:
         return leaves;
     }
 
-    inline int find_mrca(set<int> *leaves){
+    int find_mrca(set<int> *leaves){
+
+        cout << "find mrca for: " << endl;
+        for(int leaf : *leaves){
+            cout << leaf << " ";
+        }
+        cout << endl;
+
         // find mrca of leaves contained in the given set
         if (leaves->size() == get_num_leaves()){
             return root;
@@ -507,6 +514,7 @@ public:
             int curr = *(leaves->begin());
             leaves_so_far.insert(curr);
             while (!includes(leaves_so_far.begin(), leaves_so_far.end(), leaves->begin(), leaves->end())){
+                cout << "curr: " << curr << endl;
                 int p = nodes[curr].parent;
                 //cout << "p: " << p;
                 assert(p != -1);
@@ -967,7 +975,8 @@ bool read_local_trees(const char *filename, const double *times, int ntimes,
 bool read_local_trees_from_ts(const char *ts_fileName, const double *times, int ntimes,
                       LocalTrees *trees, vector<string> &seqnames, int start_coord, int end_coord);
 bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times, int ntimes,
-                      LocalTrees *trees, vector<string> &seqnames, int start_coord, int end_coord);
+                      LocalTrees *trees, vector<string> &seqnames, int start_coord, int end_coord,
+                      int maxIter = 10);
 void write_newick_Tree_for_bedfile(FILE *out, const LocalTree *tree,
                                    const char *const *names,
                                    const ArgModel *model,

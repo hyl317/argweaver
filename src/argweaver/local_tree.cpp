@@ -579,16 +579,30 @@ LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping){
         root = prev_tree->root;
     }
     new_tree->root = root;
+
+    // debug topology of the new tree
+    cout << "root: " << new_tree->root << endl;
+    for(int i = 0; i < new_tree->nnodes; i++){
+        cout << i << " has parent " << new_tree->nodes[i].parent;
+        if (i >= new_tree->get_num_leaves()){
+            cout << " and children" << new_tree->nodes[i].child[0] << ", " << new_tree->nodes[i].child[1] << endl;
+        }else{ cout << endl;}
+    }
+
     return new_tree;
 }
 
-
-
-
-
-
-
-
+// TODO: exit if get_moves cannot finish within reasonable amount of time
+void run_rSPR(string &source_tree, string &target_tree, queue<set<int>*> *q1, queue<set<int>*> *q2){
+    Node *prev = build_tree(source_tree);
+    Node *curr = build_tree(target_tree);
+    map<string, int> label_map= map<string, int>();
+	map<int, string> reverse_label_map = map<int, string>();
+    prev->labels_to_numbers(&label_map, &reverse_label_map);
+	curr->labels_to_numbers(&label_map, &reverse_label_map);
+    get_moves(prev, curr, &label_map, &reverse_label_map, q1, q2);
+    assert(q1->size() == q2->size());
+}
 
 
 //=============================================================================
@@ -2547,7 +2561,7 @@ int find_recoal_node_id(map<set<int>, int> *descent_map, set<int> *recomb_node_s
 
 bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times, int ntimes, 
                             LocalTrees *trees, vector<string> &seqnames,
-                            int start_coord, int end_coord)
+                            int start_coord, int end_coord, int maxIter)
 {
     // for testing purpose, for now this function will write a file containing the newick rep of
     // each of the local tree with polytomy resolved
@@ -2562,7 +2576,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     seqnames.clear();
     trees->start_coord = start_coord;
     trees->end_coord = end_coord;
-    int nnodes = 2*numSamples -1;
+    int nnodes = 2*numSamples - 1;
     int iter;
     ret = tsk_tree_init(&tree, &ts, 0);
     check_tsk_error(ret);
@@ -2604,15 +2618,9 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
             prev_map = curr_map;
             continue;
         }
-        Node *prev = build_tree(s_prev);
-        Node *curr = build_tree(s_curr);
-        map<string, int> label_map= map<string, int>();
-	    map<int, string> reverse_label_map = map<int, string>();
-        prev->labels_to_numbers(&label_map, &reverse_label_map);
-		curr->labels_to_numbers(&label_map, &reverse_label_map);
+
         queue<set<int>*> q1, q2;
-        get_moves(prev, curr, &label_map, &reverse_label_map, &q1, &q2);
-        assert(q1.size() == q2.size());
+        run_rSPR(s_prev, s_curr, &q1, &q2);
         int num_SPR = q1.size();
         vector<LocalTreeSpr_tmp> intermediaryTrees;
         cout << "SPR distance: " << q1.size() << endl;
@@ -2660,57 +2668,102 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                 }
             }
         }else{
-            bool success = true;
-            while(!q1.empty()){
-                set<int> *s1 = q1.front();
-                set<int> *s2 = q2.front();
-                cout << "recombination node's descendants" << endl;
-                for(int child : *s1){
-                    cout << child << " ";
-                }
-                cout << endl;
-                cout << "recoal node's descendants" << endl;
-                for(int child : *s2){
-                    cout << child << " ";
-                }
-                cout << endl;
-                // NOTE: recomb_node and recoal_node could be swapped, need to check which one's parent disappears
-                int recomb_node = prev_localtree->find_mrca(s1);
-                int recoal_node = prev_localtree->find_mrca(s2);
-                printLog(LOG_LOW, "recomb node %d(->%d)\n", recomb_node, prev_map[recomb_node]);
-                printLog(LOG_LOW, "recoal node %d(->%d)\n", recoal_node, prev_map[recoal_node]);
+            bool success = false;
+            int iter = 0;
+            LocalTree *prev_localtree_copy = prev_localtree;
+            while (!success && iter < maxIter){
 
-                int recomb_time_lower_bound = prev_localtree->nodes[recomb_node].age;
-                int recomb_time_upper_bound = prev_localtree->nodes[prev_localtree->nodes[recomb_node].parent].age;
-                set<int> tmp;
-                set_union(s1->begin(), s1->end(), s2->begin(), s2->end(), insert_iterator<set<int>>(tmp, tmp.begin()));
-                int recoal_time = localtree->nodes[localtree->find_mrca(&tmp)].age;
-                // the second check is slightly tricky
-                // for an example, look at the transition from tree 29 to tree 30 in 5.tsdate
-                // there is a problem if we break edge 1 and re-attach it to edge 4
-                if (recoal_time < recomb_time_lower_bound || 
+                if(iter > 0){
+                    printLog(LOG_LOW, "iter %d: clean up previous garbage\n", iter);
+                    while(!q1.empty()){
+                        auto it = q1.front();
+                        delete it;
+                        q1.pop();
+                    }
+                    while(!q2.empty()){
+                        auto it = q2.front();
+                        delete it;
+                        q2.pop();
+                    }
+                    assert(q1.empty());
+                    assert(q2.empty());
+                    run_rSPR(s_prev, s_curr, &q1, &q2);
+                    prev_localtree = prev_localtree_copy;
+                }
+                iter++;
+
+                while(!q1.empty()){
+                    set<int> *s1 = q1.front();
+                    set<int> *s2 = q2.front();
+                    cout << "recombination node's descendants" << endl;
+                    for(int child : *s1){
+                        cout << child << " ";
+                    }
+                    cout << endl;
+                    cout << "recoal node's descendants" << endl;
+                    for(int child : *s2){
+                        cout << child << " ";
+                    }
+                    cout << endl;
+                    // NOTE: recomb_node and recoal_node could be swapped, need to check which one's parent disappears
+                    int recomb_node = prev_localtree->find_mrca(s1);
+                    int recoal_node = prev_localtree->find_mrca(s2);
+                    printLog(LOG_LOW, "recomb node %d(->%d)\n", recomb_node, prev_map[recomb_node]);
+                    printLog(LOG_LOW, "recoal node %d(->%d)\n", recoal_node, prev_map[recoal_node]);
+
+                    int recomb_time_lower_bound = prev_localtree->nodes[recomb_node].age;
+                    int recomb_time_upper_bound = prev_localtree->nodes[prev_localtree->nodes[recomb_node].parent].age;
+                    set<int> tmp;
+                    set_union(s1->begin(), s1->end(), s2->begin(), s2->end(), insert_iterator<set<int>>(tmp, tmp.begin()));
+                    int recoal_time = localtree->nodes[localtree->find_mrca(&tmp)].age;
+                    // the second check is slightly tricky
+                    // for an example, look at the transition from tree 29 to tree 30 in 5.tsdate
+                    // there is a problem if we break edge 1 and re-attach it to edge 4
+                    if (recoal_time < recomb_time_lower_bound || 
                             (recoal_node != prev_localtree->root &&
                             recoal_time > prev_localtree->nodes[prev_localtree->nodes[recoal_node].parent].age)){
-                    printLog(LOG_LOW, "-----------------------Invlid SPR moves----------------------\n");
-                    num_invalid_spr++;
-                    success = false;
-                    break;
-                }
-                int *mapping = new int[nnodes];
-                set_up_spr(&spr, recoal_node, recomb_node, recomb_time_upper_bound,
+                        printLog(LOG_LOW, "-----------------------Invlid SPR moves----------------------\n");
+                        //num_invalid_spr++;
+                        break;
+                    }
+                    int *mapping = new int[nnodes];
+                    set_up_spr(&spr, recoal_node, recomb_node, recomb_time_upper_bound,
                             recomb_time_lower_bound, recoal_time, times);
-                // need to store these intermediary trees somewhere because I cannot determine blocklen at this stage
-                LocalTree *intermediary_tree = apply_spr_new(prev_localtree, spr, mapping);
-                intermediaryTrees.push_back(LocalTreeSpr_tmp{intermediary_tree, mapping, Spr(spr)});
-                prev_localtree = intermediary_tree;
-                spr.set_null();
-                delete s1;
-                delete s2;
-                q1.pop();
-                q2.pop();
+                    // need to store these intermediary trees somewhere because I cannot determine blocklen at this stage
+                    LocalTree *intermediary_tree = apply_spr_new(prev_localtree, spr, mapping);
+                    intermediaryTrees.push_back(LocalTreeSpr_tmp{intermediary_tree, mapping, Spr(spr)});
+                    prev_localtree = intermediary_tree;
+                    spr.set_null();
+                    delete s1;
+                    delete s2;
+                    q1.pop();
+                    q2.pop();
+                }
+                if (q1.empty() && q2.empty()) {success = true;}
+            }
+
+            if (!success){
+                printLog(LOG_LOW, "Cannot find a Valid SPR sequence within reasonable time\n");
+                exit(EXIT_FAILURE);
             }
         }
         
+        // push back LocalTreeSpr to LocalTrees
+        // by now the last tree in intermediaryTrees should be the same as the current localTree
+        // need to fix mapping of the last tree in intermediaryTrees (replace it!)
+        // don't forget to delete as the last tree as well
+        // comment out for now, need to implement others in order to run the following
+
+        // int total_block_length = end - start;
+        // int total_num_tree = intermediaryTrees.size();
+        // int length_per_intermediary_tree = total_block_length / total_num_tree;
+        // int length_last_tree = total_block_length - (total_num_tree - 1)*length_per_intermediary_tree;
+        // for(LocalTreeSpr_tmp intermediaryTree : intermediaryTrees){
+        //     trees->trees.push_back(LocalTreeSpr(intermediaryTree.localtree, intermediaryTree.spr, 
+        //             length_per_intermediary_tree, intermediaryTree.mapping));
+        // }
+
+
         s_prev = s_curr;
         prev_localtree = localtree;
         prev_map = curr_map;
@@ -2720,7 +2773,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     check_tsk_error(ret);
     ret = tsk_treeseq_free(&ts);
     check_tsk_error(ret);
-    printLog(LOG_LOW, "number of invalid SPR moves: %d\n", num_invalid_spr);
+    //printLog(LOG_LOW, "number of invalid SPR moves: %d\n", num_invalid_spr);
     return true;
 }
 
