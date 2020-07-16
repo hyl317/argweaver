@@ -2651,9 +2651,11 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                     assert(prev_localtree->get_descent_leaves(prev_localtree->nodes[node_arg_id1].child[1]) == 
                                 localtree->get_descent_leaves(localtree->nodes[node_arg_id2].child[1]));
                     int recoal_time = localtree->nodes[node_arg_id2].age;
-                    int recomb_node = prev_localtree->nodes[node_arg_id1].child[0];
-                    int recoal_node = prev_localtree->nodes[node_arg_id1].child[1];
-                    int recomb_time_upper_bound = prev_localtree->nodes[node_arg_id1].age;
+                    LocalNode out = prev_localtree->nodes[node_arg_id1];
+                    int recomb_node = out.child[0];
+                    int recoal_node = recoal_time < prev_localtree->nodes[out.parent].age ? 
+                                    out.child[1] : node_arg_id1;
+                    int recomb_time_upper_bound = out.age;
                     int recomb_time_lower_bound = prev_localtree->nodes[recomb_node].age;
                     printLog(LOG_LOW, "upper: %d\n", min(recoal_time, recomb_time_upper_bound));
                     printLog(LOG_LOW, "lower: %d\n", recomb_time_lower_bound);
