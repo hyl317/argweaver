@@ -511,17 +511,19 @@ LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping){
         }
     }
 
+    LocalNode *nodes = new_tree->nodes;
+
     // trival case
-    if (spr.recomb_node == prev_tree->root) {
+    if (spr.recomb_node == new_tree->root) {
         assert(0); // Melissa added: how can this happen?
-        assert(spr.coal_node == prev_tree->root);
+        assert(spr.coal_node == new_tree->root);
         return new_tree;
     }
     assert(spr.recomb_node != spr.coal_node); //this will create a loop
     // recoal is the node that disappears after this SPR (ie, parent of the recomb node)
     // let's follow the convention that, in the new tree, the newly created edge has the same id as recoal in the previous tree
-    LocalNode *nodes = prev_tree->nodes;
-    LocalNode *new_nodes = new_tree->nodes;
+    
+    // recoal is also the node we are breaking
     int recoal = nodes[spr.recomb_node].parent;
 
     // find recomb node sibling and broke node parent
@@ -531,53 +533,53 @@ LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping){
     int broke_parent =  nodes[recoal].parent;
 
     // fix recomb sib pointer
-    new_nodes[recomb_sib].parent = broke_parent;
+    nodes[recomb_sib].parent = broke_parent;
 
     // fix parent of broken node
     int x = 0;
     if (broke_parent != -1) {
         c = nodes[broke_parent].child;
         x = (c[0] == recoal ? 0 : 1);
-        new_nodes[broke_parent].child[x] = recomb_sib;
+        nodes[broke_parent].child[x] = recomb_sib;
     }
 
     // reuse node as recoal
     if (spr.coal_node == recoal) {
         // we just broke coal_node, so use recomb_sib
-        new_nodes[recoal].child[other] = recomb_sib;
-        new_nodes[recoal].parent = nodes[recomb_sib].parent;
-        new_nodes[recomb_sib].parent = recoal;
+        nodes[recoal].child[other] = recomb_sib;
+        nodes[recoal].parent = nodes[recomb_sib].parent;
+        nodes[recomb_sib].parent = recoal;
         if (broke_parent != -1)
-            new_nodes[broke_parent].child[x] = recoal;
+            nodes[broke_parent].child[x] = recoal;
     } else {
-        new_nodes[recoal].child[other] = spr.coal_node;
-        new_nodes[recoal].parent = nodes[spr.coal_node].parent;
-        new_nodes[spr.coal_node].parent = recoal;
+        nodes[recoal].child[other] = spr.coal_node;
+        nodes[recoal].parent = nodes[spr.coal_node].parent;
+        nodes[spr.coal_node].parent = recoal;
 
         // fix coal_node parent
-        int parent = new_nodes[recoal].parent;
+        int parent = nodes[recoal].parent;
         if (parent != -1) {
-            c = new_nodes[parent].child;
+            c = nodes[parent].child;
             if (c[0] == spr.coal_node)
                 c[0] = recoal;
             else
                 c[1] = recoal;
         }
     }
-    
-    new_nodes[recoal].age = spr.coal_time;
+
+    nodes[recoal].age = spr.coal_time;
 
     // set new root
     int root;
-    if (spr.coal_node == prev_tree->root)
+    if (spr.coal_node == new_tree->root)
         root = recoal;
-    else if (recoal == prev_tree->root) {
+    else if (recoal == new_tree->root) {
         if (spr.coal_node == recomb_sib)
             root = recoal;
         else
             root = recomb_sib;
     } else {
-        root = prev_tree->root;
+        root = new_tree->root;
     }
     new_tree->root = root;
 
@@ -2664,8 +2666,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                     int recoal_time = localtree->nodes[node_arg_id2].age;
                     LocalNode out = prev_localtree->nodes[node_arg_id1];
                     int recomb_node = out.child[0];
-                    int recoal_node = recoal_time < prev_localtree->nodes[out.parent].age ? 
-                                    out.child[1] : node_arg_id1;
+                    int recoal_node = recoal_time < out.age ? out.child[1] : node_arg_id1;
                     int recomb_time_upper_bound = out.age;
                     int recomb_time_lower_bound = prev_localtree->nodes[recomb_node].age;
                     printLog(LOG_LOW, "upper: %d\n", min(recoal_time, recomb_time_upper_bound));
