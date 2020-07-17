@@ -1,11 +1,11 @@
 arg-sample 1.0
-start time: Thu Jul 16 21:28:27 2020
-command: ./arg-sample --vcf ../../simulate/arg/simulation_source.5.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation.5.tsdate.trees --overwrite --region 1:5000-1000000
-random seed: 1594949307
-Reading ../../simulate/arg/simulation_source.5.vcf.gz 1:5000-1000000
-Read 962 sites from 969 lines of VCF file (num skipped indels=0)
-read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=5, nsites=962)
-length of reference seq: 962
+start time: Fri Jul 17 16:20:27 2020
+command: ./arg-sample --vcf ../../simulate/arg/simulation_source.100.vcf.gz -N 10000 -r 1.6e-8 -m 1.8e-8 --ntimes 20 --maxtime 250e3 -c 20 -n 100 -o ../argweaver/examples/sim1/sim1.sample --ts ../../simulate/arg/simulation_source.100.trees --overwrite --region 1:5000-1000000
+random seed: 1595017227
+Reading ../../simulate/arg/simulation_source.100.vcf.gz 1:5000-1000000
+Read 1961 sites from 1968 lines of VCF file (num skipped indels=0)
+read input sites from VCF (chrom=1, start=4999, end=1000000, length=995001, nseqs=100, nsites=1961)
+length of reference seq: 1961
 0 sites are partially masked but otherwise invariant
 masked 0 (0.0%) positions
 
@@ -56,1166 +56,5550 @@ model:
               10000.0,
               10000.0]
 
-Start reading tree sequence file: ../../simulate/arg/simulation.5.tsdate.trees
-
-parsing tree 0: ((1,3),(4,(0,2)));
-
-parsing tree 1: ((2,(0,3)),(1,4));
-recomb node 3(->3)
-recoal node 0(->0)
-recomb_node: 3
-recomb_time: 50.955204
-coal_node: 0
-coal_time: 3970.359808
-recomb node 1(->1)
-recoal node 4(->4)
-recomb_node: 1
-recomb_time: 127.874736
-coal_node: 4
-coal_time: 2596.402445
-
-parsing tree 2: (1,(4,(2,(0,3))));
-recomb node 1(->1)
-recoal node 7(->108)
-recomb_node: 1
-recomb_time: 1083.282752
-coal_node: 7
-coal_time: 21036.114721
-
-parsing tree 3: (2,(1,(4,(0,3))));
-recomb node 2(->2)
-recoal node 8(->111)
-recomb_node: 2
-recomb_time: 3970.359808
-coal_node: 8
-coal_time: 48063.865571
-
-parsing tree 4: (1,((0,3),(2,4)));
-recomb node 2(->2)
-recoal node 4(->4)
-recomb_node: 2
-recomb_time: 683.863505
-coal_node: 4
-coal_time: 2596.402445
-
-parsing tree 5: (2,((0,3),(1,4)));
-recomb node 4(->4)
-recoal node 1(->1)
-recomb_node: 4
-recomb_time: 1686.226891
-coal_node: 1
-coal_time: 21036.114721
-recomb node 8(->8)
-recoal node 5(->44)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 2(->2)
-recoal node 7(->114)
-recomb_node: 2
-recomb_time: 683.863505
-coal_node: 7
-coal_time: 48063.865571
-recomb node 5(->44)
-recoal node 7(->114)
-recomb_node: 5
-recomb_time: 3970.359808
-coal_node: 7
-coal_time: 21036.114721
-
-parsing tree 6: (4,((0,3),(1,2)));
-recomb node 4(->4)
-recoal node 7(->114)
-recomb_node: 4
-recomb_time: 1083.282752
-coal_node: 7
-coal_time: 48063.865571
-recomb node 5(->44)
-recoal node 7(->114)
-recomb_node: 5
-recomb_time: 13901.580719
-coal_node: 7
-coal_time: 21036.114721
-
-parsing tree 7: (4,(0,(3,(1,2))));
-recomb node 3(->3)
-recoal node 8(->30)
-recomb_node: 3
-recomb_time: 1686.226891
-coal_node: 8
-coal_time: 6044.419947
-
-parsing tree 8: (0,(4,(3,(1,2))));
-recomb node 4(->4)
-recoal node 8(->89)
-recomb_node: 4
-recomb_time: 1686.226891
-coal_node: 8
-coal_time: 13901.580719
-
-parsing tree 9: (0,(4,(1,(2,3))));
-recomb node 3(->3)
-recoal node 2(->2)
-recomb_node: 3
-recomb_time: 1083.282752
-coal_node: 2
-coal_time: 2596.402445
-
-parsing tree 10: (1,(4,(0,(2,3))));
-recomb node 8(->14)
-recoal node 0(->0)
-recomb_node: 8
-recomb_time: 2596.402445
-coal_node: 0
-coal_time: 6044.419947
-recomb node 6(->89)
-recoal node 4(->4)
-recomb_node: 6
-recomb_time: 9175.321658
-coal_node: 4
-coal_time: 13901.580719
-
-parsing tree 11: (1,(0,(4,(2,3))));
-recomb node 4(->4)
-recoal node 8(->14)
-recomb_node: 4
-recomb_time: 243.988772
-coal_node: 8
-coal_time: 6044.419947
-
-parsing tree 12: (1,(0,(4,(2,3))));
-node_arg_id1: 5, node_arg_id2: 5, node_tsk_id: 104
-upper: 12
-lower: 0
-recomb_node: 0
-recomb_time: 6044.419947
-coal_node: 5
-coal_time: 31806.065068
-
-parsing tree 13: ((0,1),(4,(2,3)));
-recomb node 0(->0)
-recoal node 1(->1)
-recomb_node: 0
-recomb_time: 419.268952
-coal_node: 1
-coal_time: 2596.402445
-
-parsing tree 14: (0,(1,(4,(2,3))));
-recomb node 0(->0)
-recoal node 6(->102)
-recomb_node: 0
-recomb_time: 50.955204
-coal_node: 6
-coal_time: 48063.865571
-
-parsing tree 15: (0,((1,4),(2,3)));
-recomb node 7(->14)
-recoal node 6(->102)
-recomb_node: 7
-recomb_time: 3970.359808
-coal_node: 6
-coal_time: 31806.065068
-
-parsing tree 16: (4,(1,(0,(2,3))));
-recomb node 4(->4)
-recoal node 5(->114)
-recomb_node: 4
-recomb_time: 2596.402445
-coal_node: 5
-coal_time: 48063.865571
-recomb node 8(->14)
-recoal node 0(->0)
-recomb_node: 8
-recomb_time: 6044.419947
-coal_node: 0
-coal_time: 13901.580719
-
-parsing tree 17: (4,((0,2),(1,3)));
-recomb node 3(->3)
-recoal node 1(->1)
-recomb_node: 3
-recomb_time: 1686.226891
-coal_node: 1
-coal_time: 13901.580719
-
-parsing tree 18: ((4,(0,2)),(1,3));
-recomb node 5(->54)
-recoal node 4(->4)
-recomb_node: 5
-recomb_time: 3970.359808
-coal_node: 4
-coal_time: 9175.321658
-
-parsing tree 19: ((2,(0,4)),(1,3));
-recomb node 4(->4)
-recoal node 0(->0)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 4(->4)
-recoal node 0(->0)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 2(->2)
-recoal node 6(->65)
-recomb_node: 2
-recomb_time: 1083.282752
-coal_node: 6
-coal_time: 9175.321658
-
-parsing tree 20: ((2,(0,4)),(1,3));
-node_arg_id1: 6, node_arg_id2: 6, node_tsk_id: 65
-upper: 11
-lower: 0
-recomb_node: 2
-recomb_time: 0.000000
-coal_node: 6
-coal_time: 13901.580719
-
-parsing tree 21: (3,(1,(2,(0,4))));
-recomb node 3(->3)
-recoal node 7(->102)
-recomb_node: 3
-recomb_time: 50.955204
-coal_node: 7
-coal_time: 48063.865571
-
-parsing tree 22: (3,((0,4),(1,2)));
-recomb node 5(->40)
-recoal node 7(->102)
-recomb_node: 5
-recomb_time: 6044.419947
-coal_node: 7
-coal_time: 9175.321658
-
-parsing tree 23: (3,(0,(4,(1,2))));
-recomb node 8(->31)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 4(->4)
-recoal node 8(->31)
-recomb_node: 4
-recomb_time: 2596.402445
-coal_node: 8
-coal_time: 9175.321658
-
-parsing tree 24: ((0,3),(4,(1,2)));
-recomb node 3(->3)
-recoal node 0(->0)
-recomb_node: 3
-recomb_time: 0.000000
-coal_node: 0
-coal_time: 9175.321658
-
-parsing tree 25: ((0,3),(4,(1,2)));
-node_arg_id1: 5, node_arg_id2: 5, node_tsk_id: 45
-upper: 10
-lower: 0
-recomb_node: 0
-recomb_time: 127.874736
-coal_node: 3
-coal_time: 6044.419947
-
-parsing tree 26: ((0,(1,2)),(3,4));
-recomb node 7(->31)
-recoal node 0(->0)
-recomb_node: 7
-recomb_time: 6044.419947
-coal_node: 0
-coal_time: 6044.419947
-recomb node 3(->3)
-recoal node 4(->4)
-recomb_node: 3
-recomb_time: 1083.282752
-coal_node: 4
-coal_time: 1686.226891
-
-parsing tree 27: ((0,(3,4)),(1,2));
-recomb node 0(->0)
-recoal node 8(->5)
-recomb_node: 0
-recomb_time: 1686.226891
-coal_node: 8
-coal_time: 9175.321658
-
-parsing tree 28: (0,((1,2),(3,4)));
-recomb node 8(->5)
-recoal node 7(->31)
-recomb_node: 8
-recomb_time: 2596.402445
-coal_node: 7
-coal_time: 31806.065068
-
-parsing tree 29: (2,((0,1),(3,4)));
-recomb node 8(->5)
-recoal node 0(->0)
-recomb_node: 8
-recomb_time: 13901.580719
-coal_node: 0
-coal_time: 21036.114721
-recomb node 1(->1)
-recoal node 0(->0)
-recomb_node: 1
-recomb_time: 1083.282752
-coal_node: 0
-coal_time: 21036.114721
-
-parsing tree 30: (2,((0,3),(1,4)));
-recomb node 3(->3)
-recoal node 0(->0)
-recomb_node: 3
-recomb_time: 50.955204
-coal_node: 0
-coal_time: 3970.359808
-recomb node 4(->4)
-recoal node 1(->1)
-recomb_node: 4
-recomb_time: 0.000000
-coal_node: 1
-coal_time: 21036.114721
-
-parsing tree 31: (2,((0,3),(1,4)));
-
-parsing tree 32: ((0,3),(4,(1,2)));
-recomb node 2(->2)
-recoal node 1(->1)
-recomb_node: 2
-recomb_time: 50.955204
-coal_node: 1
-coal_time: 1686.226891
-
-parsing tree 33: ((0,3),(4,(1,2)));
-node_arg_id1: 7, node_arg_id2: 7, node_tsk_id: 32
-upper: 7
-lower: 0
-recomb_node: 1
-recomb_time: 127.874736
-coal_node: 7
-coal_time: 6044.419947
-
-parsing tree 34: ((0,3),(4,(1,2)));
-node_arg_id1: 8, node_arg_id2: 7, node_tsk_id: 72
-upper: 10
-lower: 0
-recomb_node: 4
-recomb_time: 1686.226891
-coal_node: 8
-coal_time: 21036.114721
-node_arg_id1: 7, node_arg_id2: 6, node_tsk_id: 72
-upper: 10
-lower: 0
-recomb_node: 1
-recomb_time: 243.988772
-coal_node: 7
-coal_time: 21036.114721
-
-parsing tree 35: (3,((0,1),(2,4)));
-recomb node 1(->1)
-recoal node 0(->0)
-recomb_node: 1
-recomb_time: 683.863505
-coal_node: 0
-coal_time: 1083.282752
-recomb node 7(->105)
-recoal node 6(->105)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 1(->1)
-recoal node 0(->0)
-recomb_node: 1
-recomb_time: 419.268952
-coal_node: 0
-coal_time: 1083.282752
-recomb node 7(->105)
-recoal node 6(->105)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 1(->1)
-recoal node 0(->0)
-recomb_node: 1
-recomb_time: 0.000000
-coal_node: 0
-coal_time: 1083.282752
-recomb node 7(->105)
-recoal node 6(->105)
------------------------Invlid SPR moves----------------------
-iter 3: clean up previous garbage
-recomb node 1(->1)
-recoal node 7(->105)
-recomb_node: 1
-recomb_time: 2596.402445
-coal_node: 7
-coal_time: 21036.114721
-recomb node 0(->0)
-recoal node 1(->1)
-recomb_node: 0
-recomb_time: 683.863505
-coal_node: 1
-coal_time: 1083.282752
-
-parsing tree 36: (2,(4,(3,(0,1))));
-recomb node 2(->2)
-recoal node 8(->105)
-recomb_node: 2
-recomb_time: 6044.419947
-coal_node: 8
-coal_time: 48063.865571
-recomb node 3(->3)
-recoal node 5(->60)
-recomb_node: 3
-recomb_time: 1083.282752
-coal_node: 5
-coal_time: 9175.321658
-
-parsing tree 37: ((3,(0,1)),(2,4));
-recomb node 4(->4)
-recoal node 2(->2)
-recomb_node: 4
-recomb_time: 683.863505
-coal_node: 2
-coal_time: 1686.226891
-
-parsing tree 38: (4,(2,(3,(0,1))));
-recomb node 6(->97)
-recoal node 2(->2)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 2(->2)
-recoal node 6(->97)
-recomb_node: 2
-recomb_time: 1083.282752
-coal_node: 6
-coal_time: 21036.114721
-
-parsing tree 39: ((3,(0,1)),(2,4));
-recomb node 2(->2)
-recoal node 4(->4)
-recomb_node: 2
-recomb_time: 2596.402445
-coal_node: 4
-coal_time: 6044.419947
-
-parsing tree 40: ((2,4),(3,(0,1)));
-node_arg_id1: 5, node_arg_id2: 5, node_tsk_id: 60
-upper: 6
-lower: 0
-recomb_node: 0
-recomb_time: 0.000000
-coal_node: 5
-coal_time: 9175.321658
-
-parsing tree 41: (3,((0,1),(2,4)));
-recomb node 3(->3)
-recoal node 6(->105)
-recomb_node: 3
-recomb_time: 6044.419947
-coal_node: 6
-coal_time: 21036.114721
-
-parsing tree 42: (2,(3,(0,(1,4))));
-recomb node 4(->4)
-recoal node 1(->1)
-recomb_node: 4
-recomb_time: 0.000000
-coal_node: 1
-coal_time: 2596.402445
-recomb node 5(->64)
-recoal node 3(->3)
-recomb_node: 5
-recomb_time: 9175.321658
-coal_node: 3
-coal_time: 21036.114721
-
-parsing tree 43: (0,(3,(2,(1,4))));
-recomb node 8(->21)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 2596.402445
-coal_node: 2
-coal_time: 13901.580719
-recomb node 0(->0)
-recoal node 7(->114)
-recomb_node: 0
-recomb_time: 683.863505
-coal_node: 7
-coal_time: 48063.865571
-
-parsing tree 44: (0,(3,(4,(1,2))));
-recomb node 2(->2)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 2(->2)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 4(->4)
-recoal node 7(->93)
-recomb_node: 4
-recomb_time: 1083.282752
-coal_node: 7
-coal_time: 13901.580719
-
-parsing tree 45: (3,((0,2),(1,4)));
-recomb node 4(->4)
-recoal node 1(->1)
-recomb_node: 4
-recomb_time: 127.874736
-coal_node: 1
-coal_time: 13901.580719
-recomb node 0(->0)
-recoal node 2(->2)
-recomb_node: 0
-recomb_time: 50.955204
-coal_node: 2
-coal_time: 3970.359808
-
-parsing tree 46: ((1,(0,4)),(2,3));
-recomb node 0(->0)
-recoal node 4(->4)
-recomb_node: 0
-recomb_time: 243.988772
-coal_node: 4
-coal_time: 1686.226891
-recomb node 6(->93)
-recoal node 7(->105)
-recomb_node: 6
-recomb_time: 13901.580719
-coal_node: 7
-coal_time: 21036.114721
-
-parsing tree 47: (3,(2,(1,(0,4))));
-recomb node 6(->93)
-recoal node 2(->2)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 3(->3)
-recoal node 7(->105)
-recomb_node: 3
-recomb_time: 127.874736
-coal_node: 7
-coal_time: 48063.865571
-
-parsing tree 48: (3,(2,(1,(0,4))));
-node_arg_id1: 6, node_arg_id2: 6, node_tsk_id: 93
-upper: 12
-lower: 0
-recomb_node: 1
-recomb_time: 2596.402445
-coal_node: 6
-coal_time: 21036.114721
-
-parsing tree 49: (3,(1,(2,(0,4))));
-recomb node 2(->2)
-recoal node 5(->41)
-recomb_node: 2
-recomb_time: 0.000000
-coal_node: 5
-coal_time: 6044.419947
-
-parsing tree 50: ((1,(0,4)),(2,3));
-recomb node 2(->2)
-recoal node 3(->3)
-recomb_node: 2
-recomb_time: 50.955204
-coal_node: 3
-coal_time: 9175.321658
-
-parsing tree 51: (2,(3,(1,(0,4))));
-recomb node 6(->93)
-recoal node 3(->3)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 3(->3)
-recoal node 6(->93)
-recomb_node: 3
-recomb_time: 3970.359808
-coal_node: 6
-coal_time: 31806.065068
-
-parsing tree 52: (2,((0,4),(1,3)));
-recomb node 1(->1)
-recoal node 3(->3)
-recomb_node: 1
-recomb_time: 1686.226891
-coal_node: 3
-coal_time: 9175.321658
-
-parsing tree 53: ((0,4),(1,(2,3)));
-recomb node 2(->2)
-recoal node 3(->3)
-recomb_node: 2
-recomb_time: 683.863505
-coal_node: 3
-coal_time: 6044.419947
-
-parsing tree 54: ((1,(0,4)),(2,3));
-recomb node 5(->41)
-recoal node 1(->1)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 8(->17)
-recoal node 6(->103)
-recomb_node: 8
-recomb_time: 6044.419947
-coal_node: 6
-coal_time: 31806.065068
-
-parsing tree 55: (3,(2,(1,(0,4))));
-recomb node 3(->3)
-recoal node 7(->103)
-recomb_node: 3
-recomb_time: 1686.226891
-coal_node: 7
-coal_time: 48063.865571
-
-parsing tree 56: (3,((0,4),(1,2)));
-recomb node 1(->1)
-recoal node 2(->2)
-recomb_node: 1
-recomb_time: 1083.282752
-coal_node: 2
-coal_time: 13901.580719
-
-parsing tree 57: ((0,(3,4)),(1,2));
-recomb node 3(->3)
-recoal node 4(->4)
-recomb_node: 3
-recomb_time: 50.955204
-coal_node: 4
-coal_time: 1686.226891
-
-parsing tree 58: (2,(1,(0,(3,4))));
-recomb node 2(->2)
-recoal node 6(->103)
-recomb_node: 2
-recomb_time: 127.874736
-coal_node: 6
-coal_time: 48063.865571
-
-parsing tree 59: ((0,(3,4)),(1,2));
-recomb node 5(->80)
-recoal node 7(->114)
-recomb_node: 5
-recomb_time: 6044.419947
-coal_node: 7
-coal_time: 31806.065068
-
-parsing tree 60: (2,(1,(0,(3,4))));
-recomb node 2(->2)
-recoal node 6(->103)
-recomb_node: 2
-recomb_time: 6044.419947
-coal_node: 6
-coal_time: 48063.865571
-
-parsing tree 61: ((0,(3,4)),(1,2));
-recomb node 2(->2)
-recoal node 1(->1)
-recomb_node: 2
-recomb_time: 0.000000
-coal_node: 1
-coal_time: 3970.359808
-
-parsing tree 62: (2,(1,(0,(3,4))));
-recomb node 2(->2)
-recoal node 6(->111)
-recomb_node: 2
-recomb_time: 1083.282752
-coal_node: 6
-coal_time: 48063.865571
-
-parsing tree 63: (2,(0,(1,(3,4))));
-recomb node 1(->1)
-recoal node 8(->6)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 1(->1)
-recoal node 8(->6)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 8(->6)
-recoal node 1(->1)
-recomb_node: 8
-recomb_time: 1686.226891
-coal_node: 1
-coal_time: 13901.580719
-
-parsing tree 64: ((0,2),(1,(3,4)));
-recomb node 7(->69)
-recoal node 6(->114)
-recomb_node: 7
-recomb_time: 21036.114721
-coal_node: 6
-coal_time: 31806.065068
-
-parsing tree 65: ((1,(0,2)),(3,4));
-recomb node 1(->1)
-recoal node 5(->56)
-recomb_node: 1
-recomb_time: 127.874736
-coal_node: 5
-coal_time: 9175.321658
-
-parsing tree 66: (1,((0,2),(3,4)));
-recomb node 8(->6)
-recoal node 5(->56)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 8(->6)
-recoal node 5(->56)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 8(->6)
-recoal node 5(->56)
------------------------Invlid SPR moves----------------------
-iter 3: clean up previous garbage
-recomb node 5(->56)
-recoal node 8(->6)
-recomb_node: 5
-recomb_time: 3970.359808
-coal_node: 8
-coal_time: 31806.065068
-
-parsing tree 67: ((1,(0,2)),(3,4));
-recomb node 1(->1)
-recoal node 5(->56)
-recomb_node: 1
-recomb_time: 1686.226891
-coal_node: 5
-coal_time: 13901.580719
-
-parsing tree 68: ((0,(1,2)),(3,4));
-recomb node 1(->1)
-recoal node 2(->2)
-recomb_node: 1
-recomb_time: 243.988772
-coal_node: 2
-coal_time: 1083.282752
-
-parsing tree 69: (0,((1,2),(3,4)));
-recomb node 7(->36)
-recoal node 8(->6)
-recomb_node: 7
-recomb_time: 1083.282752
-coal_node: 8
-coal_time: 3970.359808
-
-parsing tree 70: (0,((1,2),(3,4)));
-node_arg_id1: 8, node_arg_id2: 7, node_tsk_id: 6
-upper: 7
-lower: 0
-recomb_node: 3
-recomb_time: 243.988772
-coal_node: 8
-coal_time: 3970.359808
-
-parsing tree 71: (0,(3,(4,(1,2))));
-recomb node 6(->36)
-recoal node 4(->4)
-recomb_node: 6
-recomb_time: 1686.226891
-coal_node: 4
-coal_time: 3970.359808
-
-parsing tree 72: ((0,3),(4,(1,2)));
-recomb node 7(->73)
-recoal node 5(->114)
-recomb_node: 7
-recomb_time: 9175.321658
-coal_node: 5
-coal_time: 31806.065068
-
-parsing tree 73: ((0,3),(1,(2,4)));
-recomb node 4(->4)
-recoal node 2(->2)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 4(->4)
-recoal node 2(->2)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 1(->1)
-recoal node 8(->73)
-recomb_node: 1
-recomb_time: 243.988772
-coal_node: 8
-coal_time: 3970.359808
-
-parsing tree 74: (0,(3,(1,(2,4))));
-recomb node 0(->0)
-recoal node 6(->109)
-recomb_node: 0
-recomb_time: 127.874736
-coal_node: 6
-coal_time: 48063.865571
-
-parsing tree 75: (0,(3,(1,(2,4))));
-node_arg_id1: 7, node_arg_id2: 7, node_tsk_id: 109
-upper: 14
-lower: 0
-recomb_node: 3
-recomb_time: 0.000000
-coal_node: 7
-coal_time: 31806.065068
-
-parsing tree 76: ((0,3),(1,(2,4)));
-recomb node 0(->0)
-recoal node 3(->3)
-recomb_node: 0
-recomb_time: 2596.402445
-coal_node: 3
-coal_time: 3970.359808
-
-parsing tree 77: ((1,(0,3)),(2,4));
-recomb node 8(->11)
-recoal node 6(->103)
-recomb_node: 8
-recomb_time: 2596.402445
-coal_node: 6
-coal_time: 31806.065068
-
-parsing tree 78: (3,((0,1),(2,4)));
-recomb node 3(->3)
-recoal node 7(->103)
-recomb_node: 3
-recomb_time: 683.863505
-coal_node: 7
-coal_time: 48063.865571
-
-parsing tree 79: (1,((0,3),(2,4)));
-recomb node 8(->11)
-recoal node 3(->3)
-recomb_node: 8
-recomb_time: 2596.402445
-coal_node: 3
-coal_time: 31806.065068
-recomb node 0(->0)
-recoal node 3(->3)
-recomb_node: 0
-recomb_time: 127.874736
-coal_node: 3
-coal_time: 9175.321658
-
-parsing tree 80: (0,((1,3),(2,4)));
-recomb node 8(->11)
-recoal node 3(->3)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 8(->11)
-recoal node 7(->114)
-recomb_node: 8
-recomb_time: 21036.114721
-coal_node: 7
-coal_time: 48063.865571
-recomb node 0(->0)
-recoal node 6(->103)
-recomb_node: 0
-recomb_time: 243.988772
-coal_node: 6
-coal_time: 48063.865571
-
-parsing tree 81: ((3,(0,1)),(2,4));
-recomb node 0(->0)
-recoal node 1(->1)
-recomb_node: 0
-recomb_time: 243.988772
-coal_node: 1
-coal_time: 2596.402445
-
-parsing tree 82: ((0,(1,3)),(2,4));
-recomb node 0(->0)
-recoal node 6(->98)
-recomb_node: 0
-recomb_time: 50.955204
-coal_node: 6
-coal_time: 9175.321658
-
-parsing tree 83: (0,((1,3),(2,4)));
-recomb node 8(->11)
-recoal node 7(->28)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 8(->11)
-recoal node 7(->28)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 8(->11)
-recoal node 7(->28)
------------------------Invlid SPR moves----------------------
-iter 3: clean up previous garbage
-recomb node 8(->11)
-recoal node 7(->28)
------------------------Invlid SPR moves----------------------
-iter 4: clean up previous garbage
-recomb node 8(->11)
-recoal node 7(->28)
------------------------Invlid SPR moves----------------------
-iter 5: clean up previous garbage
-recomb node 8(->11)
-recoal node 7(->28)
------------------------Invlid SPR moves----------------------
-iter 6: clean up previous garbage
-recomb node 0(->0)
-recoal node 6(->103)
-recomb_node: 0
-recomb_time: 683.863505
-coal_node: 6
-coal_time: 48063.865571
-
-parsing tree 84: (0,((1,3),(2,4)));
-node_arg_id1: 8, node_arg_id2: 7, node_tsk_id: 11
-upper: 7
-lower: 0
-recomb_node: 2
-recomb_time: 127.874736
-coal_node: 8
-coal_time: 13901.580719
-
-parsing tree 85: (0,(2,(4,(1,3))));
-recomb node 2(->2)
-recoal node 8(->70)
-recomb_node: 2
-recomb_time: 3970.359808
-coal_node: 8
-coal_time: 31806.065068
-
-parsing tree 86: ((0,2),(4,(1,3)));
-recomb node 2(->2)
-recoal node 0(->0)
-recomb_node: 2
-recomb_time: 127.874736
-coal_node: 0
-coal_time: 2596.402445
-
-parsing tree 87: ((4,(0,2)),(1,3));
-recomb node 5(->57)
-recoal node 4(->4)
-recomb_node: 5
-recomb_time: 3970.359808
-coal_node: 4
-coal_time: 6044.419947
-
-parsing tree 88: (4,((0,2),(1,3)));
-recomb node 8(->28)
-recoal node 5(->57)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 4(->4)
-recoal node 7(->103)
-recomb_node: 4
-recomb_time: 127.874736
-coal_node: 7
-coal_time: 31806.065068
-
-parsing tree 89: (4,((0,2),(1,3)));
-node_arg_id1: 8, node_arg_id2: 6, node_tsk_id: 28
-upper: 9
-lower: 0
-recomb_node: 1
-recomb_time: 683.863505
-coal_node: 8
-coal_time: 13901.580719
-
-parsing tree 90: (0,(4,(1,(2,3))));
-recomb node 2(->2)
-recoal node 3(->3)
-recomb_node: 2
-recomb_time: 683.863505
-coal_node: 3
-coal_time: 3970.359808
-recomb node 4(->4)
-recoal node 6(->78)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 3(->3)
-recoal node 2(->2)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 3(->3)
-recoal node 2(->2)
------------------------Invlid SPR moves----------------------
-iter 3: clean up previous garbage
-recomb node 2(->2)
-recoal node 3(->3)
-recomb_node: 2
-recomb_time: 683.863505
-coal_node: 3
-coal_time: 3970.359808
-recomb node 0(->0)
-recoal node 7(->103)
-recomb_node: 0
-recomb_time: 6044.419947
-coal_node: 7
-coal_time: 48063.865571
-
-parsing tree 91: ((0,4),(1,(2,3)));
-recomb node 4(->4)
-recoal node 0(->0)
-recomb_node: 4
-recomb_time: 683.863505
-coal_node: 0
-coal_time: 13901.580719
-
-parsing tree 92: ((4,(0,1)),(2,3));
-recomb node 1(->1)
-recoal node 0(->0)
-recomb_node: 1
-recomb_time: 683.863505
-coal_node: 0
-coal_time: 2596.402445
-
-parsing tree 93: ((0,1),(4,(2,3)));
-recomb node 5(->62)
-recoal node 7(->103)
-recomb_node: 5
-recomb_time: 2596.402445
-coal_node: 7
-coal_time: 31806.065068
-
-parsing tree 94: (4,((0,1),(2,3)));
-recomb node 7(->18)
-recoal node 5(->62)
-recomb_node: 7
-recomb_time: 3970.359808
-coal_node: 5
-coal_time: 13901.580719
-
-parsing tree 95: ((0,(2,3)),(1,4));
-recomb node 1(->1)
-recoal node 4(->4)
-recomb_node: 1
-recomb_time: 127.874736
-coal_node: 4
-coal_time: 3970.359808
-
-parsing tree 96: ((3,(0,2)),(1,4));
-recomb node 2(->2)
-recoal node 0(->0)
-recomb_node: 2
-recomb_time: 1083.282752
-coal_node: 0
-coal_time: 2596.402445
-
-parsing tree 97: (2,(3,(0,(1,4))));
-recomb node 8(->22)
-recoal node 0(->0)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 8(->22)
-recoal node 0(->0)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 2(->2)
-recoal node 7(->103)
-recomb_node: 2
-recomb_time: 419.268952
-coal_node: 7
-coal_time: 48063.865571
-recomb node 0(->0)
-recoal node 8(->22)
-recomb_node: 0
-recomb_time: 1083.282752
-coal_node: 8
-coal_time: 6044.419947
-
-parsing tree 98: (2,(1,(4,(0,3))));
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-iter 1: clean up previous garbage
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-iter 2: clean up previous garbage
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-iter 3: clean up previous garbage
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-iter 4: clean up previous garbage
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-iter 5: clean up previous garbage
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-iter 6: clean up previous garbage
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-iter 7: clean up previous garbage
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-iter 8: clean up previous garbage
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-iter 9: clean up previous garbage
-recomb node 8(->22)
-recoal node 2(->2)
-recomb_node: 8
-recomb_time: 3970.359808
-coal_node: 2
-coal_time: 48063.865571
-recomb node 6(->103)
-recoal node 4(->4)
------------------------Invlid SPR moves----------------------
-Cannot find a Valid SPR sequence within reasonable time
+Start reading tree sequence file: ../../simulate/arg/simulation_source.100.trees
+skipping tree 0
+skipping tree 1
+skipping tree 2
+skipping tree 3
+skipping tree 4
+skipping tree 5
+skipping tree 6
+skipping tree 7
+skipping tree 8
+skipping tree 9
+skipping tree 10
+skipping tree 11
+
+tree 12: 4999 - 5495
+
+tree 13: 5495 - 7334
+case3
+
+tree 14: 7334 - 8008
+case1
+
+tree 15: 8008 - 8913
+case2
+
+tree 16: 8913 - 8926
+case2
+
+tree 17: 8926 - 9026
+case3
+
+tree 18: 9026 - 9400
+case1
+
+tree 19: 9400 - 10189
+case2
+
+tree 20: 10189 - 10278
+case1
+
+tree 21: 10278 - 10489
+case2
+
+tree 22: 10489 - 10581
+case3
+
+tree 23: 10581 - 10611
+case3
+
+tree 24: 10611 - 10701
+case3
+
+tree 25: 10701 - 12944
+case2
+
+tree 26: 12944 - 12988
+case2
+
+tree 27: 12988 - 13678
+case2
+
+tree 28: 13678 - 14853
+case1
+
+tree 29: 14853 - 15554
+case3
+
+tree 30: 15554 - 15914
+case2
+
+tree 31: 15914 - 16365
+case2
+
+tree 32: 16365 - 16501
+case1
+
+tree 33: 16501 - 16926
+case2
+
+tree 34: 16926 - 17296
+case3
+
+tree 35: 17296 - 17587
+case3
+
+tree 36: 17587 - 18313
+case3
+
+tree 37: 18313 - 20464
+case2
+
+tree 38: 20464 - 21009
+case2
+
+tree 39: 21009 - 23507
+case2
+
+tree 40: 23507 - 23556
+case2
+
+tree 41: 23556 - 23725
+case2
+
+tree 42: 23725 - 25119
+case1
+
+tree 43: 25119 - 25456
+case3
+
+tree 44: 25456 - 25503
+case1
+
+tree 45: 25503 - 26479
+case2
+
+tree 46: 26479 - 27085
+case2
+
+tree 47: 27085 - 27847
+case3
+
+tree 48: 27847 - 28762
+case3
+
+tree 49: 28762 - 29150
+case2
+
+tree 50: 29150 - 29173
+case3
+
+tree 51: 29173 - 29239
+case2
+
+tree 52: 29239 - 29471
+case3
+
+tree 53: 29471 - 30139
+case1
+
+tree 54: 30139 - 31895
+case3
+
+tree 55: 31895 - 32641
+case1
+
+tree 56: 32641 - 32865
+case1
+
+tree 57: 32865 - 33020
+case2
+
+tree 58: 33020 - 33201
+case1
+
+tree 59: 33201 - 33268
+case2
+
+tree 60: 33268 - 33367
+case1
+
+tree 61: 33367 - 33714
+case3
+
+tree 62: 33714 - 34246
+case1
+
+tree 63: 34246 - 35086
+case3
+
+tree 64: 35086 - 35368
+case3
+
+tree 65: 35368 - 35632
+case1
+
+tree 66: 35632 - 35984
+case1
+
+tree 67: 35984 - 36601
+case1
+
+tree 68: 36601 - 36969
+case3
+
+tree 69: 36969 - 37601
+case2
+
+tree 70: 37601 - 38260
+case3
+
+tree 71: 38260 - 39071
+case3
+
+tree 72: 39071 - 39181
+case3
+
+tree 73: 39181 - 39451
+case2
+
+tree 74: 39451 - 40174
+case2
+
+tree 75: 40174 - 40257
+case3
+
+tree 76: 40257 - 40788
+case2
+
+tree 77: 40788 - 41158
+case1
+
+tree 78: 41158 - 41235
+case1
+
+tree 79: 41235 - 41536
+case2
+
+tree 80: 41536 - 41749
+case2
+
+tree 81: 41749 - 42465
+case3
+
+tree 82: 42465 - 43518
+case2
+
+tree 83: 43518 - 43821
+case3
+
+tree 84: 43821 - 44971
+case2
+
+tree 85: 44971 - 45894
+case1
+
+tree 86: 45894 - 46123
+case2
+
+tree 87: 46123 - 46361
+case2
+
+tree 88: 46361 - 46719
+case2
+
+tree 89: 46719 - 48273
+case3
+
+tree 90: 48273 - 48919
+case3
+
+tree 91: 48919 - 49331
+case2
+
+tree 92: 49331 - 49465
+case3
+
+tree 93: 49465 - 50574
+case3
+
+tree 94: 50574 - 51318
+case2
+
+tree 95: 51318 - 51708
+case1
+
+tree 96: 51708 - 52443
+case1
+
+tree 97: 52443 - 53722
+case1
+
+tree 98: 53722 - 53860
+case3
+
+tree 99: 53860 - 53895
+case2
+
+tree 100: 53895 - 54270
+case1
+
+tree 101: 54270 - 54271
+case2
+
+tree 102: 54271 - 54351
+case3
+
+tree 103: 54351 - 54599
+case2
+
+tree 104: 54599 - 54926
+case2
+
+tree 105: 54926 - 56840
+case1
+
+tree 106: 56840 - 57340
+case2
+
+tree 107: 57340 - 59345
+case3
+
+tree 108: 59345 - 59877
+case3
+
+tree 109: 59877 - 60412
+case1
+
+tree 110: 60412 - 61315
+case3
+
+tree 111: 61315 - 61872
+case1
+
+tree 112: 61872 - 63022
+case2
+
+tree 113: 63022 - 63847
+case2
+
+tree 114: 63847 - 64829
+case2
+
+tree 115: 64829 - 64835
+case3
+
+tree 116: 64835 - 65490
+case3
+
+tree 117: 65490 - 65720
+case2
+
+tree 118: 65720 - 65957
+case1
+
+tree 119: 65957 - 66938
+case1
+
+tree 120: 66938 - 67420
+case2
+
+tree 121: 67420 - 67482
+case3
+
+tree 122: 67482 - 67998
+case3
+
+tree 123: 67998 - 69646
+case3
+
+tree 124: 69646 - 70473
+case3
+
+tree 125: 70473 - 70932
+case1
+
+tree 126: 70932 - 71442
+case3
+
+tree 127: 71442 - 71497
+case2
+
+tree 128: 71497 - 71784
+case2
+
+tree 129: 71784 - 71815
+case2
+
+tree 130: 71815 - 73531
+case2
+
+tree 131: 73531 - 73825
+case1
+
+tree 132: 73825 - 74888
+case3
+
+tree 133: 74888 - 75669
+case3
+
+tree 134: 75669 - 76503
+case3
+
+tree 135: 76503 - 76681
+case3
+
+tree 136: 76681 - 77435
+case2
+
+tree 137: 77435 - 77482
+case1
+
+tree 138: 77482 - 77683
+case3
+
+tree 139: 77683 - 80255
+case3
+
+tree 140: 80255 - 80276
+case3
+
+tree 141: 80276 - 80909
+case3
+
+tree 142: 80909 - 81064
+case1
+
+tree 143: 81064 - 81931
+case3
+
+tree 144: 81931 - 82764
+case2
+
+tree 145: 82764 - 82858
+case1
+
+tree 146: 82858 - 83153
+case3
+
+tree 147: 83153 - 83539
+case2
+
+tree 148: 83539 - 84041
+case2
+
+tree 149: 84041 - 84446
+case2
+
+tree 150: 84446 - 84535
+case2
+
+tree 151: 84535 - 84619
+case1
+
+tree 152: 84619 - 85683
+case2
+
+tree 153: 85683 - 86033
+case2
+
+tree 154: 86033 - 86290
+case3
+
+tree 155: 86290 - 86645
+case1
+
+tree 156: 86645 - 87007
+case2
+
+tree 157: 87007 - 87073
+case2
+
+tree 158: 87073 - 87659
+case1
+
+tree 159: 87659 - 87854
+case3
+
+tree 160: 87854 - 88677
+case3
+
+tree 161: 88677 - 89460
+case3
+
+tree 162: 89460 - 90476
+case3
+
+tree 163: 90476 - 90669
+case1
+
+tree 164: 90669 - 90875
+case2
+
+tree 165: 90875 - 91198
+case1
+
+tree 166: 91198 - 92147
+case2
+
+tree 167: 92147 - 93312
+case1
+
+tree 168: 93312 - 93844
+case1
+
+tree 169: 93844 - 95553
+case2
+
+tree 170: 95553 - 95572
+case1
+
+tree 171: 95572 - 95648
+case1
+
+tree 172: 95648 - 95822
+case3
+
+tree 173: 95822 - 96181
+case3
+
+tree 174: 96181 - 96196
+case1
+
+tree 175: 96196 - 96267
+case1
+
+tree 176: 96267 - 96392
+case3
+
+tree 177: 96392 - 97103
+case1
+
+tree 178: 97103 - 97202
+case2
+
+tree 179: 97202 - 97935
+case2
+
+tree 180: 97935 - 98671
+case3
+
+tree 181: 98671 - 98809
+case2
+
+tree 182: 98809 - 99377
+case1
+
+tree 183: 99377 - 100397
+case2
+
+tree 184: 100397 - 100462
+case3
+
+tree 185: 100462 - 100664
+case2
+
+tree 186: 100664 - 101177
+case2
+
+tree 187: 101177 - 101487
+case3
+
+tree 188: 101487 - 101524
+case2
+
+tree 189: 101524 - 102185
+case2
+
+tree 190: 102185 - 103989
+case1
+
+tree 191: 103989 - 105201
+case3
+
+tree 192: 105201 - 106469
+case3
+
+tree 193: 106469 - 107071
+case2
+
+tree 194: 107071 - 107946
+case3
+
+tree 195: 107946 - 108418
+case3
+
+tree 196: 108418 - 108657
+case1
+
+tree 197: 108657 - 108804
+case1
+
+tree 198: 108804 - 109631
+case2
+
+tree 199: 109631 - 109658
+case2
+
+tree 200: 109658 - 110102
+case2
+
+tree 201: 110102 - 112911
+case1
+
+tree 202: 112911 - 113136
+case3
+
+tree 203: 113136 - 113145
+case1
+
+tree 204: 113145 - 113211
+case3
+
+tree 205: 113211 - 113805
+case2
+
+tree 206: 113805 - 114138
+case3
+
+tree 207: 114138 - 115508
+case2
+
+tree 208: 115508 - 115553
+case2
+
+tree 209: 115553 - 115973
+case2
+
+tree 210: 115973 - 116003
+case3
+
+tree 211: 116003 - 116659
+case2
+
+tree 212: 116659 - 118739
+case2
+
+tree 213: 118739 - 119604
+case2
+
+tree 214: 119604 - 119690
+case2
+
+tree 215: 119690 - 120258
+case1
+
+tree 216: 120258 - 120979
+case2
+
+tree 217: 120979 - 121025
+case2
+
+tree 218: 121025 - 122182
+case1
+
+tree 219: 122182 - 122536
+case3
+
+tree 220: 122536 - 123462
+case2
+
+tree 221: 123462 - 123751
+case2
+
+tree 222: 123751 - 124297
+case2
+
+tree 223: 124297 - 124523
+case3
+
+tree 224: 124523 - 124881
+case3
+
+tree 225: 124881 - 125165
+case3
+
+tree 226: 125165 - 125843
+case2
+
+tree 227: 125843 - 126131
+case3
+
+tree 228: 126131 - 126296
+case2
+
+tree 229: 126296 - 126920
+case1
+
+tree 230: 126920 - 127415
+case2
+
+tree 231: 127415 - 127941
+case2
+
+tree 232: 127941 - 127994
+case3
+
+tree 233: 127994 - 128312
+case3
+
+tree 234: 128312 - 128523
+case3
+
+tree 235: 128523 - 128785
+case3
+
+tree 236: 128785 - 129229
+case2
+
+tree 237: 129229 - 130732
+case2
+
+tree 238: 130732 - 130835
+case2
+
+tree 239: 130835 - 131290
+case3
+
+tree 240: 131290 - 131596
+case1
+
+tree 241: 131596 - 132509
+case1
+
+tree 242: 132509 - 133023
+case1
+
+tree 243: 133023 - 134203
+case2
+
+tree 244: 134203 - 134524
+case2
+
+tree 245: 134524 - 134928
+case2
+
+tree 246: 134928 - 135252
+case2
+
+tree 247: 135252 - 135296
+case2
+
+tree 248: 135296 - 135467
+case3
+
+tree 249: 135467 - 135682
+case3
+
+tree 250: 135682 - 136064
+case3
+
+tree 251: 136064 - 137172
+case3
+
+tree 252: 137172 - 138238
+case3
+
+tree 253: 138238 - 138626
+case1
+
+tree 254: 138626 - 138703
+case1
+
+tree 255: 138703 - 139157
+case1
+
+tree 256: 139157 - 139425
+case2
+
+tree 257: 139425 - 139579
+case2
+
+tree 258: 139579 - 140014
+case3
+
+tree 259: 140014 - 140026
+case1
+
+tree 260: 140026 - 140606
+case3
+
+tree 261: 140606 - 141688
+case2
+
+tree 262: 141688 - 143179
+case3
+
+tree 263: 143179 - 143706
+case3
+
+tree 264: 143706 - 144050
+case3
+
+tree 265: 144050 - 144092
+case2
+
+tree 266: 144092 - 144689
+case1
+
+tree 267: 144689 - 144914
+case2
+
+tree 268: 144914 - 144969
+case2
+
+tree 269: 144969 - 146108
+case2
+
+tree 270: 146108 - 147240
+case2
+
+tree 271: 147240 - 147292
+case3
+
+tree 272: 147292 - 147626
+case2
+
+tree 273: 147626 - 147876
+case3
+
+tree 274: 147876 - 148127
+case1
+
+tree 275: 148127 - 148128
+case1
+
+tree 276: 148128 - 148349
+case1
+
+tree 277: 148349 - 149010
+case2
+
+tree 278: 149010 - 149228
+case2
+
+tree 279: 149228 - 149520
+case1
+
+tree 280: 149520 - 149981
+case3
+
+tree 281: 149981 - 151320
+case3
+
+tree 282: 151320 - 151629
+case2
+
+tree 283: 151629 - 152340
+case3
+
+tree 284: 152340 - 152480
+case3
+
+tree 285: 152480 - 152916
+case1
+
+tree 286: 152916 - 152966
+case2
+
+tree 287: 152966 - 152986
+case2
+
+tree 288: 152986 - 153762
+case3
+
+tree 289: 153762 - 153822
+case3
+
+tree 290: 153822 - 154618
+case1
+
+tree 291: 154618 - 154697
+case2
+
+tree 292: 154697 - 155224
+case3
+
+tree 293: 155224 - 155259
+case1
+
+tree 294: 155259 - 155626
+case3
+
+tree 295: 155626 - 156567
+case2
+
+tree 296: 156567 - 158693
+case3
+
+tree 297: 158693 - 158745
+case3
+
+tree 298: 158745 - 159036
+case1
+
+tree 299: 159036 - 159174
+case2
+
+tree 300: 159174 - 159624
+case2
+
+tree 301: 159624 - 159865
+case3
+
+tree 302: 159865 - 161019
+case2
+
+tree 303: 161019 - 161383
+case1
+
+tree 304: 161383 - 162047
+case3
+
+tree 305: 162047 - 162104
+case1
+
+tree 306: 162104 - 163103
+case2
+
+tree 307: 163103 - 163142
+case3
+
+tree 308: 163142 - 164845
+case1
+
+tree 309: 164845 - 165862
+case2
+
+tree 310: 165862 - 167158
+case2
+
+tree 311: 167158 - 167390
+case2
+
+tree 312: 167390 - 167524
+case2
+
+tree 313: 167524 - 167771
+case1
+
+tree 314: 167771 - 168627
+case2
+
+tree 315: 168627 - 168826
+case3
+
+tree 316: 168826 - 168849
+case3
+
+tree 317: 168849 - 169071
+case3
+
+tree 318: 169071 - 169556
+case2
+
+tree 319: 169556 - 170684
+case3
+
+tree 320: 170684 - 171113
+case2
+
+tree 321: 171113 - 172133
+case3
+
+tree 322: 172133 - 172332
+case3
+
+tree 323: 172332 - 172763
+case2
+
+tree 324: 172763 - 172887
+case1
+
+tree 325: 172887 - 172985
+case2
+
+tree 326: 172985 - 173098
+case2
+
+tree 327: 173098 - 173605
+case2
+
+tree 328: 173605 - 173835
+case3
+
+tree 329: 173835 - 174932
+case1
+
+tree 330: 174932 - 175264
+case2
+
+tree 331: 175264 - 175317
+case3
+
+tree 332: 175317 - 176005
+case2
+
+tree 333: 176005 - 176014
+case2
+
+tree 334: 176014 - 176073
+case2
+
+tree 335: 176073 - 176156
+case2
+
+tree 336: 176156 - 177081
+case3
+
+tree 337: 177081 - 177120
+case3
+
+tree 338: 177120 - 177454
+case2
+
+tree 339: 177454 - 178140
+case3
+
+tree 340: 178140 - 178742
+case3
+
+tree 341: 178742 - 181264
+case2
+
+tree 342: 181264 - 183100
+case2
+
+tree 343: 183100 - 183169
+case2
+
+tree 344: 183169 - 183599
+case2
+
+tree 345: 183599 - 183699
+case2
+
+tree 346: 183699 - 184005
+case3
+
+tree 347: 184005 - 184560
+case2
+
+tree 348: 184560 - 186914
+case3
+
+tree 349: 186914 - 188113
+case3
+
+tree 350: 188113 - 188473
+case2
+
+tree 351: 188473 - 190038
+case3
+
+tree 352: 190038 - 190151
+case2
+
+tree 353: 190151 - 191038
+case3
+
+tree 354: 191038 - 192578
+case3
+
+tree 355: 192578 - 192937
+case3
+
+tree 356: 192937 - 194355
+case3
+
+tree 357: 194355 - 194663
+case3
+
+tree 358: 194663 - 194973
+case2
+
+tree 359: 194973 - 195535
+case3
+
+tree 360: 195535 - 195610
+case2
+
+tree 361: 195610 - 195691
+case2
+
+tree 362: 195691 - 197067
+case3
+
+tree 363: 197067 - 197599
+case2
+
+tree 364: 197599 - 198458
+case1
+
+tree 365: 198458 - 200103
+case2
+
+tree 366: 200103 - 200948
+case3
+
+tree 367: 200948 - 201360
+case2
+
+tree 368: 201360 - 201814
+case3
+
+tree 369: 201814 - 201841
+case3
+
+tree 370: 201841 - 201941
+case3
+
+tree 371: 201941 - 201961
+case1
+
+tree 372: 201961 - 202424
+case1
+
+tree 373: 202424 - 202492
+case1
+
+tree 374: 202492 - 202582
+case3
+
+tree 375: 202582 - 203044
+case3
+
+tree 376: 203044 - 203125
+case2
+
+tree 377: 203125 - 203151
+case2
+
+tree 378: 203151 - 203175
+case3
+
+tree 379: 203175 - 203641
+case3
+
+tree 380: 203641 - 204696
+case2
+
+tree 381: 204696 - 205086
+case2
+
+tree 382: 205086 - 205127
+case3
+
+tree 383: 205127 - 205267
+case3
+
+tree 384: 205267 - 205335
+case1
+
+tree 385: 205335 - 206000
+case2
+
+tree 386: 206000 - 206557
+case2
+
+tree 387: 206557 - 207777
+case2
+
+tree 388: 207777 - 207975
+case3
+
+tree 389: 207975 - 207981
+case3
+
+tree 390: 207981 - 208362
+case3
+
+tree 391: 208362 - 208833
+case2
+
+tree 392: 208833 - 208968
+case2
+
+tree 393: 208968 - 208996
+case3
+
+tree 394: 208996 - 209670
+case3
+
+tree 395: 209670 - 210826
+case2
+
+tree 396: 210826 - 210999
+case3
+
+tree 397: 210999 - 211309
+case3
+
+tree 398: 211309 - 212355
+case3
+
+tree 399: 212355 - 212855
+case2
+
+tree 400: 212855 - 213147
+case3
+
+tree 401: 213147 - 213176
+case1
+
+tree 402: 213176 - 213283
+case2
+
+tree 403: 213283 - 214093
+case3
+
+tree 404: 214093 - 214229
+case3
+
+tree 405: 214229 - 214683
+case3
+
+tree 406: 214683 - 214740
+case2
+
+tree 407: 214740 - 215523
+case3
+
+tree 408: 215523 - 216133
+case3
+
+tree 409: 216133 - 216442
+case2
+
+tree 410: 216442 - 216891
+case2
+
+tree 411: 216891 - 216952
+case3
+
+tree 412: 216952 - 217323
+case2
+
+tree 413: 217323 - 217648
+case3
+
+tree 414: 217648 - 217927
+case1
+
+tree 415: 217927 - 217984
+case2
+
+tree 416: 217984 - 218520
+case2
+
+tree 417: 218520 - 219046
+case3
+
+tree 418: 219046 - 219126
+case2
+
+tree 419: 219126 - 219826
+case3
+
+tree 420: 219826 - 220182
+case3
+
+tree 421: 220182 - 221446
+case2
+
+tree 422: 221446 - 221787
+case2
+
+tree 423: 221787 - 222296
+case2
+
+tree 424: 222296 - 222316
+case3
+
+tree 425: 222316 - 222554
+case3
+
+tree 426: 222554 - 222621
+case3
+
+tree 427: 222621 - 223169
+case3
+
+tree 428: 223169 - 223376
+case3
+
+tree 429: 223376 - 223575
+case3
+
+tree 430: 223575 - 223728
+case2
+
+tree 431: 223728 - 225047
+case2
+
+tree 432: 225047 - 225095
+case1
+
+tree 433: 225095 - 225148
+case1
+
+tree 434: 225148 - 225722
+case2
+
+tree 435: 225722 - 225918
+case2
+
+tree 436: 225918 - 226503
+case3
+
+tree 437: 226503 - 227986
+case1
+
+tree 438: 227986 - 228265
+case1
+
+tree 439: 228265 - 228294
+case2
+
+tree 440: 228294 - 229992
+case3
+
+tree 441: 229992 - 230020
+case2
+
+tree 442: 230020 - 230528
+case3
+
+tree 443: 230528 - 230589
+case2
+
+tree 444: 230589 - 231304
+case3
+
+tree 445: 231304 - 231404
+case1
+
+tree 446: 231404 - 231531
+case2
+
+tree 447: 231531 - 232758
+case3
+
+tree 448: 232758 - 233840
+case3
+
+tree 449: 233840 - 234673
+case1
+
+tree 450: 234673 - 234732
+case3
+
+tree 451: 234732 - 234792
+case1
+
+tree 452: 234792 - 235685
+case1
+
+tree 453: 235685 - 236418
+case2
+
+tree 454: 236418 - 236514
+case3
+
+tree 455: 236514 - 236761
+case2
+
+tree 456: 236761 - 237195
+case2
+
+tree 457: 237195 - 237411
+case1
+
+tree 458: 237411 - 238397
+case2
+
+tree 459: 238397 - 239148
+case2
+
+tree 460: 239148 - 239327
+case2
+
+tree 461: 239327 - 239608
+case1
+
+tree 462: 239608 - 239736
+case2
+
+tree 463: 239736 - 239782
+case2
+
+tree 464: 239782 - 239854
+case2
+
+tree 465: 239854 - 240716
+case2
+
+tree 466: 240716 - 241078
+case2
+
+tree 467: 241078 - 241171
+case2
+
+tree 468: 241171 - 241727
+case3
+
+tree 469: 241727 - 241980
+case3
+
+tree 470: 241980 - 242177
+case3
+
+tree 471: 242177 - 242246
+case3
+
+tree 472: 242246 - 244528
+case3
+
+tree 473: 244528 - 244667
+case2
+
+tree 474: 244667 - 244677
+case3
+
+tree 475: 244677 - 246369
+case2
+
+tree 476: 246369 - 247180
+case2
+
+tree 477: 247180 - 247423
+case2
+
+tree 478: 247423 - 247538
+case2
+
+tree 479: 247538 - 248185
+case1
+
+tree 480: 248185 - 248765
+case3
+
+tree 481: 248765 - 248935
+case3
+
+tree 482: 248935 - 250460
+case1
+
+tree 483: 250460 - 250940
+case2
+
+tree 484: 250940 - 251020
+case3
+
+tree 485: 251020 - 252204
+case3
+
+tree 486: 252204 - 252547
+case3
+
+tree 487: 252547 - 252808
+case3
+
+tree 488: 252808 - 253525
+case3
+
+tree 489: 253525 - 253583
+case1
+
+tree 490: 253583 - 254346
+case2
+
+tree 491: 254346 - 254922
+case1
+
+tree 492: 254922 - 255324
+case3
+
+tree 493: 255324 - 255538
+case1
+
+tree 494: 255538 - 256923
+case3
+
+tree 495: 256923 - 257573
+case2
+
+tree 496: 257573 - 257866
+case3
+
+tree 497: 257866 - 258494
+case2
+
+tree 498: 258494 - 258558
+case2
+
+tree 499: 258558 - 258839
+case2
+
+tree 500: 258839 - 259113
+case2
+
+tree 501: 259113 - 259201
+case1
+
+tree 502: 259201 - 262720
+case1
+
+tree 503: 262720 - 263240
+case3
+
+tree 504: 263240 - 263508
+case2
+
+tree 505: 263508 - 264594
+case1
+
+tree 506: 264594 - 265067
+case2
+
+tree 507: 265067 - 265168
+case3
+
+tree 508: 265168 - 265281
+case3
+
+tree 509: 265281 - 265669
+case2
+
+tree 510: 265669 - 266048
+case2
+
+tree 511: 266048 - 266209
+case2
+
+tree 512: 266209 - 266337
+case3
+
+tree 513: 266337 - 266628
+case2
+
+tree 514: 266628 - 267001
+case2
+
+tree 515: 267001 - 267220
+case2
+
+tree 516: 267220 - 269060
+case3
+
+tree 517: 269060 - 269340
+case3
+
+tree 518: 269340 - 270178
+case2
+
+tree 519: 270178 - 270648
+case2
+
+tree 520: 270648 - 271157
+case3
+
+tree 521: 271157 - 271304
+case3
+
+tree 522: 271304 - 271408
+case3
+
+tree 523: 271408 - 272030
+case2
+
+tree 524: 272030 - 273367
+case3
+
+tree 525: 273367 - 274300
+case2
+
+tree 526: 274300 - 274692
+case3
+
+tree 527: 274692 - 274991
+case2
+
+tree 528: 274991 - 275408
+case2
+
+tree 529: 275408 - 275972
+case2
+
+tree 530: 275972 - 276209
+case1
+
+tree 531: 276209 - 276402
+case2
+
+tree 532: 276402 - 278960
+case2
+
+tree 533: 278960 - 279051
+case1
+
+tree 534: 279051 - 279586
+case2
+
+tree 535: 279586 - 279954
+case3
+
+tree 536: 279954 - 282006
+case2
+
+tree 537: 282006 - 282445
+case2
+
+tree 538: 282445 - 283186
+case2
+
+tree 539: 283186 - 284145
+case1
+
+tree 540: 284145 - 284872
+case1
+
+tree 541: 284872 - 285136
+case2
+
+tree 542: 285136 - 285973
+case2
+
+tree 543: 285973 - 286019
+case3
+
+tree 544: 286019 - 286108
+case2
+
+tree 545: 286108 - 286533
+case2
+
+tree 546: 286533 - 286760
+case2
+
+tree 547: 286760 - 286866
+case1
+
+tree 548: 286866 - 286989
+case3
+
+tree 549: 286989 - 288535
+case2
+
+tree 550: 288535 - 289386
+case1
+
+tree 551: 289386 - 290030
+case2
+
+tree 552: 290030 - 290997
+case2
+
+tree 553: 290997 - 291585
+case3
+
+tree 554: 291585 - 292436
+case1
+
+tree 555: 292436 - 293021
+case2
+
+tree 556: 293021 - 293148
+case1
+
+tree 557: 293148 - 293566
+case1
+
+tree 558: 293566 - 295208
+case1
+
+tree 559: 295208 - 295578
+case3
+
+tree 560: 295578 - 295643
+case1
+
+tree 561: 295643 - 295936
+case2
+
+tree 562: 295936 - 296530
+case1
+
+tree 563: 296530 - 296667
+case3
+
+tree 564: 296667 - 297107
+case3
+
+tree 565: 297107 - 297722
+case2
+
+tree 566: 297722 - 298571
+case2
+
+tree 567: 298571 - 299436
+case2
+
+tree 568: 299436 - 299947
+case2
+
+tree 569: 299947 - 300150
+case1
+
+tree 570: 300150 - 300512
+case3
+
+tree 571: 300512 - 301958
+case2
+
+tree 572: 301958 - 303965
+case2
+
+tree 573: 303965 - 303974
+case1
+
+tree 574: 303974 - 305386
+case2
+
+tree 575: 305386 - 305834
+case3
+
+tree 576: 305834 - 306199
+case3
+
+tree 577: 306199 - 306832
+case1
+
+tree 578: 306832 - 307577
+case2
+
+tree 579: 307577 - 308066
+case1
+
+tree 580: 308066 - 309437
+case3
+
+tree 581: 309437 - 310050
+case3
+
+tree 582: 310050 - 310994
+case3
+
+tree 583: 310994 - 313336
+case1
+
+tree 584: 313336 - 313456
+case1
+
+tree 585: 313456 - 314058
+case1
+
+tree 586: 314058 - 314174
+case2
+
+tree 587: 314174 - 314504
+case2
+
+tree 588: 314504 - 314545
+case1
+
+tree 589: 314545 - 314921
+case3
+
+tree 590: 314921 - 314996
+case1
+
+tree 591: 314996 - 315044
+case1
+
+tree 592: 315044 - 315090
+case1
+
+tree 593: 315090 - 317155
+case2
+
+tree 594: 317155 - 317348
+case3
+
+tree 595: 317348 - 317912
+case2
+
+tree 596: 317912 - 318213
+case1
+
+tree 597: 318213 - 318377
+case2
+
+tree 598: 318377 - 318521
+case3
+
+tree 599: 318521 - 318894
+case3
+
+tree 600: 318894 - 319361
+case2
+
+tree 601: 319361 - 320251
+case3
+
+tree 602: 320251 - 321223
+case1
+
+tree 603: 321223 - 321888
+case3
+
+tree 604: 321888 - 322585
+case2
+
+tree 605: 322585 - 323638
+case2
+
+tree 606: 323638 - 324604
+case2
+
+tree 607: 324604 - 325589
+case2
+
+tree 608: 325589 - 326832
+case1
+
+tree 609: 326832 - 327720
+case2
+
+tree 610: 327720 - 328589
+case2
+
+tree 611: 328589 - 328902
+case2
+
+tree 612: 328902 - 329213
+case1
+
+tree 613: 329213 - 329544
+case1
+
+tree 614: 329544 - 329634
+case2
+
+tree 615: 329634 - 330117
+case2
+
+tree 616: 330117 - 330137
+case1
+
+tree 617: 330137 - 330246
+case2
+
+tree 618: 330246 - 330273
+case2
+
+tree 619: 330273 - 330305
+case1
+
+tree 620: 330305 - 330473
+case3
+
+tree 621: 330473 - 331426
+case2
+
+tree 622: 331426 - 332740
+case1
+
+tree 623: 332740 - 334373
+case2
+
+tree 624: 334373 - 335170
+case2
+
+tree 625: 335170 - 335440
+case2
+
+tree 626: 335440 - 335698
+case1
+
+tree 627: 335698 - 337148
+case1
+
+tree 628: 337148 - 337230
+case1
+
+tree 629: 337230 - 337726
+case1
+
+tree 630: 337726 - 337788
+case2
+
+tree 631: 337788 - 338176
+case2
+
+tree 632: 338176 - 338612
+case2
+
+tree 633: 338612 - 339925
+case2
+
+tree 634: 339925 - 340259
+case1
+
+tree 635: 340259 - 340436
+case3
+
+tree 636: 340436 - 341684
+case2
+
+tree 637: 341684 - 341862
+case2
+
+tree 638: 341862 - 341890
+case3
+
+tree 639: 341890 - 343112
+case2
+
+tree 640: 343112 - 343412
+case1
+
+tree 641: 343412 - 344073
+case3
+
+tree 642: 344073 - 345304
+case3
+
+tree 643: 345304 - 345725
+case3
+
+tree 644: 345725 - 345789
+case2
+
+tree 645: 345789 - 348370
+case1
+
+tree 646: 348370 - 348712
+case3
+
+tree 647: 348712 - 348991
+case1
+
+tree 648: 348991 - 349015
+case1
+
+tree 649: 349015 - 349264
+case1
+
+tree 650: 349264 - 349320
+case2
+
+tree 651: 349320 - 349836
+case3
+
+tree 652: 349836 - 353577
+case2
+
+tree 653: 353577 - 354477
+case3
+
+tree 654: 354477 - 355098
+case3
+
+tree 655: 355098 - 355288
+case3
+
+tree 656: 355288 - 356419
+case1
+
+tree 657: 356419 - 356472
+case2
+
+tree 658: 356472 - 356543
+case3
+
+tree 659: 356543 - 356973
+case2
+
+tree 660: 356973 - 357339
+case3
+
+tree 661: 357339 - 357840
+case1
+
+tree 662: 357840 - 358725
+case1
+
+tree 663: 358725 - 360088
+case2
+
+tree 664: 360088 - 360473
+case2
+
+tree 665: 360473 - 361707
+case1
+
+tree 666: 361707 - 361780
+case1
+
+tree 667: 361780 - 362964
+case3
+
+tree 668: 362964 - 363161
+case2
+
+tree 669: 363161 - 363332
+case1
+
+tree 670: 363332 - 363456
+case1
+
+tree 671: 363456 - 364334
+case2
+
+tree 672: 364334 - 364586
+case2
+
+tree 673: 364586 - 366755
+case2
+
+tree 674: 366755 - 367569
+case2
+
+tree 675: 367569 - 367592
+case2
+
+tree 676: 367592 - 367632
+case1
+
+tree 677: 367632 - 367964
+case2
+
+tree 678: 367964 - 368774
+case2
+
+tree 679: 368774 - 369637
+case2
+
+tree 680: 369637 - 370179
+case3
+
+tree 681: 370179 - 370452
+case3
+
+tree 682: 370452 - 371016
+case1
+
+tree 683: 371016 - 371124
+case2
+
+tree 684: 371124 - 372613
+case3
+
+tree 685: 372613 - 374269
+case3
+
+tree 686: 374269 - 374369
+case2
+
+tree 687: 374369 - 374519
+case2
+
+tree 688: 374519 - 375366
+case2
+
+tree 689: 375366 - 376245
+case3
+
+tree 690: 376245 - 376833
+case2
+
+tree 691: 376833 - 376976
+case3
+
+tree 692: 376976 - 377048
+case3
+
+tree 693: 377048 - 377461
+case3
+
+tree 694: 377461 - 377529
+case1
+
+tree 695: 377529 - 377567
+case2
+
+tree 696: 377567 - 377744
+case2
+
+tree 697: 377744 - 378027
+case2
+
+tree 698: 378027 - 378129
+case3
+
+tree 699: 378129 - 378331
+case1
+
+tree 700: 378331 - 378878
+case3
+
+tree 701: 378878 - 379041
+case2
+
+tree 702: 379041 - 381555
+case2
+
+tree 703: 381555 - 381902
+case3
+
+tree 704: 381902 - 383053
+case2
+
+tree 705: 383053 - 383618
+case2
+
+tree 706: 383618 - 384073
+case1
+
+tree 707: 384073 - 384515
+case1
+
+tree 708: 384515 - 385018
+case1
+
+tree 709: 385018 - 389062
+case1
+
+tree 710: 389062 - 389102
+case2
+
+tree 711: 389102 - 389734
+case3
+
+tree 712: 389734 - 391167
+case3
+
+tree 713: 391167 - 391669
+case1
+
+tree 714: 391669 - 391834
+case2
+
+tree 715: 391834 - 392425
+case1
+
+tree 716: 392425 - 394528
+case2
+
+tree 717: 394528 - 395582
+case2
+
+tree 718: 395582 - 396069
+case1
+
+tree 719: 396069 - 396906
+case1
+
+tree 720: 396906 - 398142
+case3
+
+tree 721: 398142 - 398385
+case3
+
+tree 722: 398385 - 398816
+case1
+
+tree 723: 398816 - 399886
+case1
+
+tree 724: 399886 - 400057
+case2
+
+tree 725: 400057 - 400298
+case3
+
+tree 726: 400298 - 401329
+case3
+
+tree 727: 401329 - 401656
+case1
+
+tree 728: 401656 - 401886
+case2
+
+tree 729: 401886 - 404287
+case2
+
+tree 730: 404287 - 404770
+case3
+
+tree 731: 404770 - 404990
+case1
+
+tree 732: 404990 - 405196
+case1
+
+tree 733: 405196 - 405504
+case3
+
+tree 734: 405504 - 406205
+case3
+
+tree 735: 406205 - 406338
+case2
+
+tree 736: 406338 - 407048
+case2
+
+tree 737: 407048 - 407220
+case2
+
+tree 738: 407220 - 407323
+case3
+
+tree 739: 407323 - 408441
+case2
+
+tree 740: 408441 - 408736
+case2
+
+tree 741: 408736 - 409040
+case1
+
+tree 742: 409040 - 409045
+case3
+
+tree 743: 409045 - 410153
+case2
+
+tree 744: 410153 - 410416
+case2
+
+tree 745: 410416 - 410812
+case3
+
+tree 746: 410812 - 411871
+case3
+
+tree 747: 411871 - 412738
+case3
+
+tree 748: 412738 - 412814
+case3
+
+tree 749: 412814 - 413463
+case1
+
+tree 750: 413463 - 413595
+case2
+
+tree 751: 413595 - 414022
+case1
+
+tree 752: 414022 - 414617
+case1
+
+tree 753: 414617 - 414753
+case2
+
+tree 754: 414753 - 415240
+case3
+
+tree 755: 415240 - 415315
+case1
+
+tree 756: 415315 - 415402
+case2
+
+tree 757: 415402 - 416340
+case2
+
+tree 758: 416340 - 416364
+case1
+
+tree 759: 416364 - 416455
+case2
+
+tree 760: 416455 - 416602
+case1
+
+tree 761: 416602 - 417377
+case1
+
+tree 762: 417377 - 418226
+case2
+
+tree 763: 418226 - 418443
+case3
+
+tree 764: 418443 - 418564
+case3
+
+tree 765: 418564 - 418831
+case2
+
+tree 766: 418831 - 419943
+case2
+
+tree 767: 419943 - 420264
+case3
+
+tree 768: 420264 - 421253
+case1
+
+tree 769: 421253 - 421580
+case2
+
+tree 770: 421580 - 421649
+case3
+
+tree 771: 421649 - 423027
+case2
+
+tree 772: 423027 - 423664
+case3
+
+tree 773: 423664 - 424230
+case1
+
+tree 774: 424230 - 424389
+case1
+
+tree 775: 424389 - 424418
+case2
+
+tree 776: 424418 - 424537
+case1
+
+tree 777: 424537 - 424666
+case1
+
+tree 778: 424666 - 425023
+case1
+
+tree 779: 425023 - 425848
+case1
+
+tree 780: 425848 - 426549
+case1
+
+tree 781: 426549 - 426652
+case2
+
+tree 782: 426652 - 427103
+case2
+
+tree 783: 427103 - 427204
+case1
+
+tree 784: 427204 - 427490
+case1
+
+tree 785: 427490 - 427653
+case2
+
+tree 786: 427653 - 427721
+case3
+
+tree 787: 427721 - 428286
+case1
+
+tree 788: 428286 - 428318
+case2
+
+tree 789: 428318 - 429153
+case1
+
+tree 790: 429153 - 429561
+case3
+
+tree 791: 429561 - 429787
+case3
+
+tree 792: 429787 - 430477
+case3
+
+tree 793: 430477 - 430724
+case2
+
+tree 794: 430724 - 431584
+case3
+
+tree 795: 431584 - 432009
+case2
+
+tree 796: 432009 - 432883
+case2
+
+tree 797: 432883 - 432883
+case1
+
+tree 798: 432883 - 433484
+case3
+
+tree 799: 433484 - 433974
+case3
+
+tree 800: 433974 - 433980
+case2
+
+tree 801: 433980 - 435011
+case2
+
+tree 802: 435011 - 435569
+case3
+
+tree 803: 435569 - 438193
+case2
+
+tree 804: 438193 - 439907
+case2
+
+tree 805: 439907 - 440322
+case3
+
+tree 806: 440322 - 440528
+case2
+
+tree 807: 440528 - 440804
+case1
+
+tree 808: 440804 - 441002
+case2
+
+tree 809: 441002 - 441247
+case2
+
+tree 810: 441247 - 441669
+case2
+
+tree 811: 441669 - 441813
+case1
+
+tree 812: 441813 - 441831
+case3
+
+tree 813: 441831 - 441928
+case2
+
+tree 814: 441928 - 443549
+case2
+
+tree 815: 443549 - 444094
+case2
+
+tree 816: 444094 - 444291
+case3
+
+tree 817: 444291 - 444441
+case1
+
+tree 818: 444441 - 444538
+case2
+
+tree 819: 444538 - 445453
+case3
+
+tree 820: 445453 - 445515
+case1
+
+tree 821: 445515 - 445672
+case1
+
+tree 822: 445672 - 446318
+case3
+
+tree 823: 446318 - 447100
+case2
+
+tree 824: 447100 - 447299
+case2
+
+tree 825: 447299 - 448038
+case1
+
+tree 826: 448038 - 448146
+case2
+
+tree 827: 448146 - 448811
+case1
+
+tree 828: 448811 - 449093
+case3
+
+tree 829: 449093 - 449768
+case3
+
+tree 830: 449768 - 450303
+case3
+
+tree 831: 450303 - 451398
+case3
+
+tree 832: 451398 - 452400
+case2
+
+tree 833: 452400 - 453121
+case2
+
+tree 834: 453121 - 453266
+case3
+
+tree 835: 453266 - 454187
+case3
+
+tree 836: 454187 - 454219
+case2
+
+tree 837: 454219 - 456509
+case2
+
+tree 838: 456509 - 458785
+case2
+
+tree 839: 458785 - 459838
+case2
+
+tree 840: 459838 - 460507
+case3
+
+tree 841: 460507 - 461234
+case2
+
+tree 842: 461234 - 464399
+case3
+
+tree 843: 464399 - 464445
+case2
+
+tree 844: 464445 - 464794
+case3
+
+tree 845: 464794 - 467874
+case2
+
+tree 846: 467874 - 469017
+case3
+
+tree 847: 469017 - 469493
+case3
+
+tree 848: 469493 - 470333
+case1
+
+tree 849: 470333 - 470533
+case2
+
+tree 850: 470533 - 471899
+case3
+
+tree 851: 471899 - 472509
+case1
+
+tree 852: 472509 - 473242
+case2
+
+tree 853: 473242 - 477217
+case1
+
+tree 854: 477217 - 478235
+case3
+
+tree 855: 478235 - 479121
+case2
+
+tree 856: 479121 - 479336
+case3
+
+tree 857: 479336 - 480085
+case2
+
+tree 858: 480085 - 480094
+case3
+
+tree 859: 480094 - 482947
+case3
+
+tree 860: 482947 - 483284
+case2
+
+tree 861: 483284 - 483595
+case2
+
+tree 862: 483595 - 484534
+case3
+
+tree 863: 484534 - 484968
+case1
+
+tree 864: 484968 - 485190
+case2
+
+tree 865: 485190 - 485270
+case1
+
+tree 866: 485270 - 486193
+case2
+
+tree 867: 486193 - 487415
+case3
+
+tree 868: 487415 - 487854
+case3
+
+tree 869: 487854 - 488424
+case1
+
+tree 870: 488424 - 488689
+case2
+
+tree 871: 488689 - 489748
+case2
+
+tree 872: 489748 - 489759
+case1
+
+tree 873: 489759 - 490363
+case2
+
+tree 874: 490363 - 491939
+case3
+
+tree 875: 491939 - 493767
+case1
+
+tree 876: 493767 - 495166
+case2
+
+tree 877: 495166 - 495536
+case2
+
+tree 878: 495536 - 495665
+case1
+
+tree 879: 495665 - 497682
+case2
+
+tree 880: 497682 - 497865
+case2
+
+tree 881: 497865 - 499587
+case2
+
+tree 882: 499587 - 500288
+case2
+
+tree 883: 500288 - 500522
+case3
+
+tree 884: 500522 - 501198
+case2
+
+tree 885: 501198 - 501319
+case3
+
+tree 886: 501319 - 501321
+case1
+
+tree 887: 501321 - 501596
+case1
+
+tree 888: 501596 - 501944
+case3
+
+tree 889: 501944 - 502150
+case3
+
+tree 890: 502150 - 502284
+case1
+
+tree 891: 502284 - 504020
+case2
+
+tree 892: 504020 - 504167
+case1
+
+tree 893: 504167 - 506266
+case2
+
+tree 894: 506266 - 506367
+case1
+
+tree 895: 506367 - 506616
+case2
+
+tree 896: 506616 - 507226
+case1
+
+tree 897: 507226 - 507564
+case1
+
+tree 898: 507564 - 509352
+case1
+
+tree 899: 509352 - 509362
+case1
+
+tree 900: 509362 - 510267
+case2
+
+tree 901: 510267 - 510382
+case2
+
+tree 902: 510382 - 511899
+case2
+
+tree 903: 511899 - 513180
+case3
+
+tree 904: 513180 - 513525
+case2
+
+tree 905: 513525 - 513791
+case2
+
+tree 906: 513791 - 514039
+case2
+
+tree 907: 514039 - 514546
+case3
+
+tree 908: 514546 - 514559
+case1
+
+tree 909: 514559 - 514606
+case2
+
+tree 910: 514606 - 515167
+case1
+
+tree 911: 515167 - 516227
+case2
+
+tree 912: 516227 - 517286
+case3
+
+tree 913: 517286 - 518825
+case3
+
+tree 914: 518825 - 519002
+case2
+
+tree 915: 519002 - 519062
+case1
+
+tree 916: 519062 - 519971
+case2
+
+tree 917: 519971 - 523153
+case2
+
+tree 918: 523153 - 523216
+case2
+
+tree 919: 523216 - 523603
+case3
+
+tree 920: 523603 - 523717
+case1
+
+tree 921: 523717 - 523839
+case2
+
+tree 922: 523839 - 525594
+case3
+
+tree 923: 525594 - 525678
+case2
+
+tree 924: 525678 - 526216
+case2
+
+tree 925: 526216 - 526724
+case2
+
+tree 926: 526724 - 528148
+case2
+
+tree 927: 528148 - 528711
+case1
+
+tree 928: 528711 - 528851
+case2
+
+tree 929: 528851 - 528916
+case2
+
+tree 930: 528916 - 529090
+case2
+
+tree 931: 529090 - 529198
+case1
+
+tree 932: 529198 - 529314
+case2
+
+tree 933: 529314 - 529946
+case2
+
+tree 934: 529946 - 530483
+case2
+
+tree 935: 530483 - 530867
+case1
+
+tree 936: 530867 - 531159
+case3
+
+tree 937: 531159 - 531896
+case3
+
+tree 938: 531896 - 532154
+case2
+
+tree 939: 532154 - 532588
+case3
+
+tree 940: 532588 - 532927
+case1
+
+tree 941: 532927 - 533113
+case2
+
+tree 942: 533113 - 533304
+case1
+
+tree 943: 533304 - 533416
+case1
+
+tree 944: 533416 - 533729
+case2
+
+tree 945: 533729 - 534213
+case3
+
+tree 946: 534213 - 534305
+case3
+
+tree 947: 534305 - 534880
+case2
+
+tree 948: 534880 - 536343
+case3
+
+tree 949: 536343 - 536363
+case2
+
+tree 950: 536363 - 537271
+case2
+
+tree 951: 537271 - 537732
+case2
+
+tree 952: 537732 - 537852
+case2
+
+tree 953: 537852 - 538625
+case1
+
+tree 954: 538625 - 538831
+case3
+
+tree 955: 538831 - 540421
+case1
+
+tree 956: 540421 - 540731
+case3
+
+tree 957: 540731 - 541809
+case3
+
+tree 958: 541809 - 542513
+case3
+
+tree 959: 542513 - 542735
+case1
+
+tree 960: 542735 - 542750
+case2
+
+tree 961: 542750 - 542931
+case3
+
+tree 962: 542931 - 543545
+case3
+
+tree 963: 543545 - 543907
+case2
+
+tree 964: 543907 - 544983
+case2
+
+tree 965: 544983 - 545099
+case3
+
+tree 966: 545099 - 545432
+case2
+
+tree 967: 545432 - 545640
+case2
+
+tree 968: 545640 - 545755
+case2
+
+tree 969: 545755 - 546465
+case2
+
+tree 970: 546465 - 546657
+case1
+
+tree 971: 546657 - 546798
+case2
+
+tree 972: 546798 - 547389
+case2
+
+tree 973: 547389 - 548280
+case3
+
+tree 974: 548280 - 548595
+case3
+
+tree 975: 548595 - 548907
+case1
+
+tree 976: 548907 - 549216
+case3
+
+tree 977: 549216 - 549405
+case2
+
+tree 978: 549405 - 549703
+case1
+
+tree 979: 549703 - 549759
+case3
+
+tree 980: 549759 - 549765
+case3
+
+tree 981: 549765 - 550127
+case3
+
+tree 982: 550127 - 550519
+case1
+
+tree 983: 550519 - 550919
+case1
+
+tree 984: 550919 - 551036
+case2
+
+tree 985: 551036 - 551797
+case2
+
+tree 986: 551797 - 551873
+case2
+
+tree 987: 551873 - 552606
+case1
+
+tree 988: 552606 - 553944
+case3
+
+tree 989: 553944 - 554078
+case2
+
+tree 990: 554078 - 554181
+case1
+
+tree 991: 554181 - 554930
+case2
+
+tree 992: 554930 - 555674
+case3
+
+tree 993: 555674 - 556029
+case3
+
+tree 994: 556029 - 556455
+case2
+
+tree 995: 556455 - 556581
+case2
+
+tree 996: 556581 - 556895
+case2
+
+tree 997: 556895 - 557236
+case2
+
+tree 998: 557236 - 557408
+case3
+
+tree 999: 557408 - 557784
+case2
+
+tree 1000: 557784 - 558113
+case2
+
+tree 1001: 558113 - 558306
+case2
+
+tree 1002: 558306 - 558650
+case2
+
+tree 1003: 558650 - 558717
+case2
+
+tree 1004: 558717 - 559007
+case2
+
+tree 1005: 559007 - 559642
+case3
+
+tree 1006: 559642 - 560474
+case2
+
+tree 1007: 560474 - 561129
+case3
+
+tree 1008: 561129 - 561131
+case3
+
+tree 1009: 561131 - 562676
+case3
+
+tree 1010: 562676 - 563287
+case2
+
+tree 1011: 563287 - 563510
+case2
+
+tree 1012: 563510 - 564951
+case1
+
+tree 1013: 564951 - 565265
+case2
+
+tree 1014: 565265 - 565528
+case2
+
+tree 1015: 565528 - 565607
+case3
+
+tree 1016: 565607 - 567641
+case2
+
+tree 1017: 567641 - 567672
+case2
+
+tree 1018: 567672 - 567936
+case2
+
+tree 1019: 567936 - 568113
+case2
+
+tree 1020: 568113 - 568477
+case2
+
+tree 1021: 568477 - 568840
+case1
+
+tree 1022: 568840 - 570480
+case2
+
+tree 1023: 570480 - 570500
+case2
+
+tree 1024: 570500 - 570665
+case2
+
+tree 1025: 570665 - 570748
+case3
+
+tree 1026: 570748 - 572896
+case3
+
+tree 1027: 572896 - 573197
+case2
+
+tree 1028: 573197 - 574048
+case3
+
+tree 1029: 574048 - 574521
+case2
+
+tree 1030: 574521 - 575817
+case2
+
+tree 1031: 575817 - 577320
+case3
+
+tree 1032: 577320 - 577936
+case2
+
+tree 1033: 577936 - 578042
+case3
+
+tree 1034: 578042 - 579125
+case1
+
+tree 1035: 579125 - 579594
+case2
+
+tree 1036: 579594 - 580895
+case2
+
+tree 1037: 580895 - 581899
+case2
+
+tree 1038: 581899 - 582034
+case3
+
+tree 1039: 582034 - 582465
+case3
+
+tree 1040: 582465 - 583531
+case2
+
+tree 1041: 583531 - 584843
+case3
+
+tree 1042: 584843 - 585533
+case3
+
+tree 1043: 585533 - 585654
+case2
+
+tree 1044: 585654 - 586661
+case2
+
+tree 1045: 586661 - 586796
+case3
+
+tree 1046: 586796 - 586968
+case3
+
+tree 1047: 586968 - 587058
+case2
+
+tree 1048: 587058 - 587517
+case1
+
+tree 1049: 587517 - 587632
+case1
+
+tree 1050: 587632 - 588796
+case1
+
+tree 1051: 588796 - 589298
+case2
+
+tree 1052: 589298 - 591363
+case2
+
+tree 1053: 591363 - 591452
+case2
+
+tree 1054: 591452 - 591482
+case1
+
+tree 1055: 591482 - 591975
+case2
+
+tree 1056: 591975 - 592577
+case1
+
+tree 1057: 592577 - 592611
+case1
+
+tree 1058: 592611 - 592899
+case2
+
+tree 1059: 592899 - 592999
+case1
+
+tree 1060: 592999 - 593239
+case1
+
+tree 1061: 593239 - 593715
+case2
+
+tree 1062: 593715 - 593909
+case3
+
+tree 1063: 593909 - 593960
+case2
+
+tree 1064: 593960 - 594075
+case3
+
+tree 1065: 594075 - 594473
+case2
+
+tree 1066: 594473 - 595221
+case3
+
+tree 1067: 595221 - 595312
+case1
+
+tree 1068: 595312 - 596251
+case2
+
+tree 1069: 596251 - 599544
+case3
+
+tree 1070: 599544 - 599654
+case3
+
+tree 1071: 599654 - 600614
+case2
+
+tree 1072: 600614 - 601628
+case1
+
+tree 1073: 601628 - 602553
+case3
+
+tree 1074: 602553 - 604372
+case1
+
+tree 1075: 604372 - 604797
+case1
+
+tree 1076: 604797 - 605507
+case3
+
+tree 1077: 605507 - 608348
+case2
+
+tree 1078: 608348 - 608805
+case1
+
+tree 1079: 608805 - 610740
+case3
+
+tree 1080: 610740 - 610853
+case2
+
+tree 1081: 610853 - 611276
+case2
+
+tree 1082: 611276 - 612737
+case3
+
+tree 1083: 612737 - 612877
+case3
+
+tree 1084: 612877 - 613007
+case2
+
+tree 1085: 613007 - 613619
+case2
+
+tree 1086: 613619 - 614949
+case3
+
+tree 1087: 614949 - 617105
+case2
+
+tree 1088: 617105 - 617205
+case3
+
+tree 1089: 617205 - 618737
+case2
+
+tree 1090: 618737 - 620305
+case2
+
+tree 1091: 620305 - 620499
+case1
+
+tree 1092: 620499 - 620742
+case2
+
+tree 1093: 620742 - 621394
+case2
+
+tree 1094: 621394 - 621568
+case2
+
+tree 1095: 621568 - 621906
+case2
+
+tree 1096: 621906 - 621979
+case2
+
+tree 1097: 621979 - 622521
+case1
+
+tree 1098: 622521 - 622906
+case3
+
+tree 1099: 622906 - 623627
+case3
+
+tree 1100: 623627 - 624052
+case1
+
+tree 1101: 624052 - 626730
+case1
+
+tree 1102: 626730 - 626770
+case2
+
+tree 1103: 626770 - 626950
+case2
+
+tree 1104: 626950 - 627661
+case3
+
+tree 1105: 627661 - 629582
+case1
+
+tree 1106: 629582 - 630157
+case2
+
+tree 1107: 630157 - 630623
+case3
+
+tree 1108: 630623 - 631548
+case3
+
+tree 1109: 631548 - 631671
+case3
+
+tree 1110: 631671 - 631687
+case2
+
+tree 1111: 631687 - 632247
+case3
+
+tree 1112: 632247 - 632437
+case2
+
+tree 1113: 632437 - 632695
+case2
+
+tree 1114: 632695 - 634371
+case3
+
+tree 1115: 634371 - 635977
+case3
+
+tree 1116: 635977 - 636754
+case2
+
+tree 1117: 636754 - 637052
+case3
+
+tree 1118: 637052 - 638044
+case2
+
+tree 1119: 638044 - 638077
+case3
+
+tree 1120: 638077 - 639023
+case1
+
+tree 1121: 639023 - 639612
+case3
+
+tree 1122: 639612 - 640187
+case3
+
+tree 1123: 640187 - 640234
+case1
+
+tree 1124: 640234 - 640873
+case3
+
+tree 1125: 640873 - 641086
+case1
+
+tree 1126: 641086 - 641738
+case2
+
+tree 1127: 641738 - 642109
+case3
+
+tree 1128: 642109 - 644036
+case3
+
+tree 1129: 644036 - 645850
+case3
+
+tree 1130: 645850 - 646459
+case1
+
+tree 1131: 646459 - 646596
+case2
+
+tree 1132: 646596 - 646680
+case1
+
+tree 1133: 646680 - 647838
+case2
+
+tree 1134: 647838 - 648368
+case2
+
+tree 1135: 648368 - 648472
+case2
+
+tree 1136: 648472 - 649957
+case3
+
+tree 1137: 649957 - 650810
+case3
+
+tree 1138: 650810 - 651262
+case2
+
+tree 1139: 651262 - 652848
+case2
+
+tree 1140: 652848 - 653043
+case2
+
+tree 1141: 653043 - 654834
+case2
+
+tree 1142: 654834 - 655719
+case3
+
+tree 1143: 655719 - 656566
+case3
+
+tree 1144: 656566 - 658216
+case2
+
+tree 1145: 658216 - 658511
+case1
+
+tree 1146: 658511 - 659571
+case3
+
+tree 1147: 659571 - 659765
+case3
+
+tree 1148: 659765 - 660103
+case2
+
+tree 1149: 660103 - 661204
+case2
+
+tree 1150: 661204 - 662724
+case2
+
+tree 1151: 662724 - 663939
+case3
+
+tree 1152: 663939 - 664343
+case2
+
+tree 1153: 664343 - 665926
+case3
+
+tree 1154: 665926 - 666013
+case2
+
+tree 1155: 666013 - 666247
+case3
+
+tree 1156: 666247 - 666609
+case2
+
+tree 1157: 666609 - 667031
+case1
+
+tree 1158: 667031 - 667126
+case2
+
+tree 1159: 667126 - 667426
+case2
+
+tree 1160: 667426 - 667447
+case2
+
+tree 1161: 667447 - 667626
+case1
+
+tree 1162: 667626 - 667704
+case3
+
+tree 1163: 667704 - 668502
+case1
+
+tree 1164: 668502 - 668626
+case1
+
+tree 1165: 668626 - 668912
+case3
+
+tree 1166: 668912 - 669089
+case1
+
+tree 1167: 669089 - 669226
+case2
+
+tree 1168: 669226 - 669300
+case3
+
+tree 1169: 669300 - 669477
+case2
+
+tree 1170: 669477 - 669678
+case3
+
+tree 1171: 669678 - 670998
+case3
+
+tree 1172: 670998 - 671552
+case3
+
+tree 1173: 671552 - 671591
+case3
+
+tree 1174: 671591 - 671688
+case1
+
+tree 1175: 671688 - 672060
+case3
+
+tree 1176: 672060 - 672101
+case3
+
+tree 1177: 672101 - 672316
+case2
+
+tree 1178: 672316 - 672377
+case2
+
+tree 1179: 672377 - 672443
+case2
+
+tree 1180: 672443 - 672762
+case3
+
+tree 1181: 672762 - 672804
+case2
+
+tree 1182: 672804 - 672933
+case2
+
+tree 1183: 672933 - 673200
+case3
+
+tree 1184: 673200 - 673828
+case2
+
+tree 1185: 673828 - 674982
+case1
+
+tree 1186: 674982 - 675560
+case1
+
+tree 1187: 675560 - 677816
+case2
+
+tree 1188: 677816 - 677981
+case2
+
+tree 1189: 677981 - 678745
+case1
+
+tree 1190: 678745 - 678785
+case3
+
+tree 1191: 678785 - 680426
+case2
+
+tree 1192: 680426 - 680617
+case3
+
+tree 1193: 680617 - 680888
+case1
+
+tree 1194: 680888 - 680946
+case1
+
+tree 1195: 680946 - 680994
+case2
+
+tree 1196: 680994 - 682192
+case1
+
+tree 1197: 682192 - 682554
+case1
+
+tree 1198: 682554 - 683768
+case1
+
+tree 1199: 683768 - 684220
+case1
+
+tree 1200: 684220 - 684328
+case3
+
+tree 1201: 684328 - 684807
+case1
+
+tree 1202: 684807 - 685139
+case1
+
+tree 1203: 685139 - 685269
+case3
+
+tree 1204: 685269 - 686433
+case3
+
+tree 1205: 686433 - 686611
+case1
+
+tree 1206: 686611 - 686810
+case2
+
+tree 1207: 686810 - 686946
+case1
+
+tree 1208: 686946 - 687509
+case2
+
+tree 1209: 687509 - 692013
+case3
+
+tree 1210: 692013 - 692272
+case2
+
+tree 1211: 692272 - 692669
+case3
+
+tree 1212: 692669 - 693466
+case2
+
+tree 1213: 693466 - 693903
+case2
+
+tree 1214: 693903 - 694265
+case3
+
+tree 1215: 694265 - 694682
+case3
+
+tree 1216: 694682 - 694851
+case3
+
+tree 1217: 694851 - 694873
+case3
+
+tree 1218: 694873 - 695225
+case2
+
+tree 1219: 695225 - 695547
+case3
+
+tree 1220: 695547 - 695637
+case1
+
+tree 1221: 695637 - 696497
+case2
+
+tree 1222: 696497 - 696538
+case3
+
+tree 1223: 696538 - 696770
+case2
+
+tree 1224: 696770 - 696899
+case3
+
+tree 1225: 696899 - 697176
+case2
+
+tree 1226: 697176 - 698073
+case2
+
+tree 1227: 698073 - 698499
+case3
+
+tree 1228: 698499 - 698706
+case2
+
+tree 1229: 698706 - 699582
+case1
+
+tree 1230: 699582 - 700308
+case2
+
+tree 1231: 700308 - 700683
+case2
+
+tree 1232: 700683 - 701053
+case3
+
+tree 1233: 701053 - 703164
+case2
+
+tree 1234: 703164 - 703226
+case1
+
+tree 1235: 703226 - 703254
+case3
+
+tree 1236: 703254 - 703283
+case2
+
+tree 1237: 703283 - 703350
+case2
+
+tree 1238: 703350 - 703947
+case2
+
+tree 1239: 703947 - 705549
+case2
+
+tree 1240: 705549 - 706553
+case1
+
+tree 1241: 706553 - 707353
+case3
+
+tree 1242: 707353 - 708176
+case2
+
+tree 1243: 708176 - 708476
+case1
+
+tree 1244: 708476 - 709213
+case2
+
+tree 1245: 709213 - 709429
+case2
+
+tree 1246: 709429 - 711363
+case3
+
+tree 1247: 711363 - 711968
+case2
+
+tree 1248: 711968 - 712183
+case3
+
+tree 1249: 712183 - 712303
+case2
+
+tree 1250: 712303 - 712892
+case1
+
+tree 1251: 712892 - 713407
+case2
+
+tree 1252: 713407 - 713872
+case1
+
+tree 1253: 713872 - 714387
+case2
+
+tree 1254: 714387 - 714804
+case1
+
+tree 1255: 714804 - 714928
+case1
+
+tree 1256: 714928 - 715143
+case1
+
+tree 1257: 715143 - 715445
+case3
+
+tree 1258: 715445 - 715567
+case1
+
+tree 1259: 715567 - 715568
+case2
+
+tree 1260: 715568 - 715792
+case1
+
+tree 1261: 715792 - 716307
+case3
+
+tree 1262: 716307 - 716410
+case2
+
+tree 1263: 716410 - 716746
+case2
+
+tree 1264: 716746 - 717209
+case2
+
+tree 1265: 717209 - 717367
+case2
+
+tree 1266: 717367 - 718003
+case2
+
+tree 1267: 718003 - 718234
+case1
+
+tree 1268: 718234 - 718462
+case1
+
+tree 1269: 718462 - 718990
+case3
+
+tree 1270: 718990 - 719582
+case3
+
+tree 1271: 719582 - 719631
+case1
+
+tree 1272: 719631 - 719853
+case2
+
+tree 1273: 719853 - 720025
+case1
+
+tree 1274: 720025 - 720143
+case1
+
+tree 1275: 720143 - 720402
+case2
+
+tree 1276: 720402 - 720562
+case2
+
+tree 1277: 720562 - 721330
+case1
+
+tree 1278: 721330 - 721391
+case1
+
+tree 1279: 721391 - 722008
+case3
+
+tree 1280: 722008 - 722518
+case3
+
+tree 1281: 722518 - 722882
+case1
+
+tree 1282: 722882 - 723116
+case3
+
+tree 1283: 723116 - 723251
+case3
+
+tree 1284: 723251 - 723924
+case2
+
+tree 1285: 723924 - 724406
+case2
+
+tree 1286: 724406 - 728225
+case1
+
+tree 1287: 728225 - 729418
+case1
+
+tree 1288: 729418 - 729536
+case3
+
+tree 1289: 729536 - 729940
+case2
+
+tree 1290: 729940 - 730083
+case1
+
+tree 1291: 730083 - 730135
+case3
+
+tree 1292: 730135 - 731106
+case3
+
+tree 1293: 731106 - 731875
+case3
+
+tree 1294: 731875 - 731967
+case2
+
+tree 1295: 731967 - 732530
+case2
+
+tree 1296: 732530 - 732977
+case3
+
+tree 1297: 732977 - 733328
+case2
+
+tree 1298: 733328 - 733621
+case2
+
+tree 1299: 733621 - 734216
+case1
+
+tree 1300: 734216 - 736190
+case1
+
+tree 1301: 736190 - 736482
+case3
+
+tree 1302: 736482 - 736867
+case3
+
+tree 1303: 736867 - 737122
+case1
+
+tree 1304: 737122 - 737478
+case2
+
+tree 1305: 737478 - 737691
+case1
+
+tree 1306: 737691 - 739619
+case2
+
+tree 1307: 739619 - 740312
+case3
+
+tree 1308: 740312 - 740722
+case3
+
+tree 1309: 740722 - 741642
+case2
+
+tree 1310: 741642 - 742577
+case2
+
+tree 1311: 742577 - 743228
+case2
+
+tree 1312: 743228 - 743596
+case3
+
+tree 1313: 743596 - 743644
+case2
+
+tree 1314: 743644 - 747242
+case2
+
+tree 1315: 747242 - 748643
+case2
+
+tree 1316: 748643 - 749276
+case1
+
+tree 1317: 749276 - 749751
+case2
+
+tree 1318: 749751 - 750186
+case3
+
+tree 1319: 750186 - 750392
+case2
+
+tree 1320: 750392 - 750841
+case1
+
+tree 1321: 750841 - 751874
+case3
+
+tree 1322: 751874 - 751922
+case1
+
+tree 1323: 751922 - 752645
+case3
+
+tree 1324: 752645 - 753775
+case2
+
+tree 1325: 753775 - 754497
+case2
+
+tree 1326: 754497 - 755140
+case3
+
+tree 1327: 755140 - 755151
+case1
+
+tree 1328: 755151 - 756327
+case3
+
+tree 1329: 756327 - 756513
+case1
+
+tree 1330: 756513 - 757828
+case2
+
+tree 1331: 757828 - 758646
+case3
+
+tree 1332: 758646 - 758678
+case3
+
+tree 1333: 758678 - 758858
+case3
+
+tree 1334: 758858 - 759232
+case1
+
+tree 1335: 759232 - 760822
+case3
+
+tree 1336: 760822 - 761652
+case3
+
+tree 1337: 761652 - 761869
+case1
+
+tree 1338: 761869 - 762089
+case1
+
+tree 1339: 762089 - 762185
+case1
+
+tree 1340: 762185 - 762419
+case3
+
+tree 1341: 762419 - 762459
+case1
+
+tree 1342: 762459 - 762704
+case1
+
+tree 1343: 762704 - 762731
+case1
+
+tree 1344: 762731 - 763684
+case3
+
+tree 1345: 763684 - 764011
+case3
+
+tree 1346: 764011 - 764741
+case1
+
+tree 1347: 764741 - 765462
+case1
+
+tree 1348: 765462 - 765795
+case1
+
+tree 1349: 765795 - 766321
+case2
+
+tree 1350: 766321 - 767650
+case3
+
+tree 1351: 767650 - 767970
+case2
+
+tree 1352: 767970 - 768470
+case2
+
+tree 1353: 768470 - 769051
+case3
+
+tree 1354: 769051 - 769785
+case3
+
+tree 1355: 769785 - 770236
+case3
+
+tree 1356: 770236 - 770482
+case2
+
+tree 1357: 770482 - 770749
+case1
+
+tree 1358: 770749 - 771200
+case3
+
+tree 1359: 771200 - 771536
+case2
+
+tree 1360: 771536 - 772228
+case1
+
+tree 1361: 772228 - 772775
+case1
+
+tree 1362: 772775 - 774610
+case3
+
+tree 1363: 774610 - 775446
+case2
+
+tree 1364: 775446 - 775753
+case1
+
+tree 1365: 775753 - 775820
+case2
+
+tree 1366: 775820 - 776086
+case1
+
+tree 1367: 776086 - 776219
+case2
+
+tree 1368: 776219 - 777242
+case2
+
+tree 1369: 777242 - 777577
+case1
+
+tree 1370: 777577 - 777724
+case2
+
+tree 1371: 777724 - 779681
+case1
+
+tree 1372: 779681 - 779992
+case2
+
+tree 1373: 779992 - 780202
+case1
+
+tree 1374: 780202 - 780734
+case3
+
+tree 1375: 780734 - 781487
+case1
+
+tree 1376: 781487 - 781775
+case2
+
+tree 1377: 781775 - 783439
+case3
+
+tree 1378: 783439 - 783446
+case2
+
+tree 1379: 783446 - 783530
+case1
+
+tree 1380: 783530 - 784009
+case1
+
+tree 1381: 784009 - 784046
+case3
+
+tree 1382: 784046 - 785187
+case1
+
+tree 1383: 785187 - 785837
+case2
+
+tree 1384: 785837 - 786317
+case2
+
+tree 1385: 786317 - 789595
+case2
+
+tree 1386: 789595 - 789666
+case3
+
+tree 1387: 789666 - 790722
+case1
+
+tree 1388: 790722 - 791319
+case2
+
+tree 1389: 791319 - 791330
+case2
+
+tree 1390: 791330 - 791956
+case1
+
+tree 1391: 791956 - 792323
+case3
+
+tree 1392: 792323 - 792721
+case1
+
+tree 1393: 792721 - 792744
+case2
+
+tree 1394: 792744 - 793073
+case3
+
+tree 1395: 793073 - 793610
+case1
+
+tree 1396: 793610 - 793990
+case2
+
+tree 1397: 793990 - 794603
+case1
+
+tree 1398: 794603 - 795147
+case2
+
+tree 1399: 795147 - 795519
+case3
+
+tree 1400: 795519 - 795737
+case3
+
+tree 1401: 795737 - 795844
+case1
+
+tree 1402: 795844 - 796577
+case3
+
+tree 1403: 796577 - 798121
+case1
+
+tree 1404: 798121 - 798173
+case3
+
+tree 1405: 798173 - 798269
+case3
+
+tree 1406: 798269 - 798719
+case2
+
+tree 1407: 798719 - 798765
+case2
+
+tree 1408: 798765 - 798875
+case1
+
+tree 1409: 798875 - 799331
+case2
+
+tree 1410: 799331 - 799558
+case2
+
+tree 1411: 799558 - 799623
+case1
+
+tree 1412: 799623 - 800463
+case3
+
+tree 1413: 800463 - 800562
+case2
+
+tree 1414: 800562 - 800797
+case2
+
+tree 1415: 800797 - 801224
+case1
+
+tree 1416: 801224 - 801495
+case1
+
+tree 1417: 801495 - 802427
+case2
+
+tree 1418: 802427 - 802554
+case3
+
+tree 1419: 802554 - 802592
+case3
+
+tree 1420: 802592 - 802977
+case2
+
+tree 1421: 802977 - 803306
+case2
+
+tree 1422: 803306 - 803438
+case3
+
+tree 1423: 803438 - 803640
+case1
+
+tree 1424: 803640 - 803646
+case2
+
+tree 1425: 803646 - 803686
+case3
+
+tree 1426: 803686 - 804206
+case2
+
+tree 1427: 804206 - 805485
+case2
+
+tree 1428: 805485 - 805591
+case2
+
+tree 1429: 805591 - 806513
+case3
+
+tree 1430: 806513 - 806889
+case1
+
+tree 1431: 806889 - 807163
+case2
+
+tree 1432: 807163 - 807220
+case3
+
+tree 1433: 807220 - 807241
+case3
+
+tree 1434: 807241 - 807307
+case1
+
+tree 1435: 807307 - 807507
+case2
+
+tree 1436: 807507 - 807523
+case2
+
+tree 1437: 807523 - 808703
+case3
+
+tree 1438: 808703 - 809513
+case3
+
+tree 1439: 809513 - 810032
+case3
+
+tree 1440: 810032 - 810377
+case3
+
+tree 1441: 810377 - 810969
+case2
+
+tree 1442: 810969 - 811546
+case2
+
+tree 1443: 811546 - 812136
+case2
+
+tree 1444: 812136 - 813516
+case1
+
+tree 1445: 813516 - 814360
+case1
+
+tree 1446: 814360 - 814469
+case2
+
+tree 1447: 814469 - 815859
+case2
+
+tree 1448: 815859 - 815928
+case2
+
+tree 1449: 815928 - 816237
+case3
+
+tree 1450: 816237 - 816402
+case2
+
+tree 1451: 816402 - 817092
+case3
+
+tree 1452: 817092 - 818129
+case2
+
+tree 1453: 818129 - 818684
+case3
+
+tree 1454: 818684 - 818924
+case2
+
+tree 1455: 818924 - 818976
+case1
+
+tree 1456: 818976 - 819272
+case3
+
+tree 1457: 819272 - 819445
+case2
+
+tree 1458: 819445 - 819597
+case3
+
+tree 1459: 819597 - 819827
+case2
+
+tree 1460: 819827 - 820170
+case2
+
+tree 1461: 820170 - 820319
+case2
+
+tree 1462: 820319 - 820699
+case1
+
+tree 1463: 820699 - 820944
+case1
+
+tree 1464: 820944 - 821273
+case2
+
+tree 1465: 821273 - 821778
+case2
+
+tree 1466: 821778 - 822213
+case3
+
+tree 1467: 822213 - 822414
+case3
+
+tree 1468: 822414 - 822570
+case2
+
+tree 1469: 822570 - 822669
+case1
+
+tree 1470: 822669 - 822974
+case3
+
+tree 1471: 822974 - 824769
+case3
+
+tree 1472: 824769 - 825212
+case3
+
+tree 1473: 825212 - 825426
+case3
+
+tree 1474: 825426 - 825463
+case2
+
+tree 1475: 825463 - 826119
+case2
+
+tree 1476: 826119 - 826129
+case1
+
+tree 1477: 826129 - 826433
+case2
+
+tree 1478: 826433 - 826480
+case1
+
+tree 1479: 826480 - 827755
+case2
+
+tree 1480: 827755 - 828215
+case1
+
+tree 1481: 828215 - 829097
+case2
+
+tree 1482: 829097 - 829885
+case2
+
+tree 1483: 829885 - 830119
+case1
+
+tree 1484: 830119 - 830751
+case2
+
+tree 1485: 830751 - 830800
+case3
+
+tree 1486: 830800 - 831277
+case2
+
+tree 1487: 831277 - 831389
+case2
+
+tree 1488: 831389 - 833281
+case2
+
+tree 1489: 833281 - 833397
+case2
+
+tree 1490: 833397 - 834376
+case2
+
+tree 1491: 834376 - 834939
+case2
+
+tree 1492: 834939 - 835234
+case2
+
+tree 1493: 835234 - 835402
+case1
+
+tree 1494: 835402 - 835419
+case1
+
+tree 1495: 835419 - 835946
+case1
+
+tree 1496: 835946 - 835972
+case3
+
+tree 1497: 835972 - 837620
+case3
+
+tree 1498: 837620 - 837910
+case3
+
+tree 1499: 837910 - 838418
+case2
+
+tree 1500: 838418 - 839090
+case1
+
+tree 1501: 839090 - 839432
+case3
+
+tree 1502: 839432 - 839945
+case3
+
+tree 1503: 839945 - 840498
+case2
+
+tree 1504: 840498 - 840612
+case2
+
+tree 1505: 840612 - 840976
+case2
+
+tree 1506: 840976 - 841131
+case1
+
+tree 1507: 841131 - 841876
+case3
+
+tree 1508: 841876 - 842395
+case1
+
+tree 1509: 842395 - 842429
+case1
+
+tree 1510: 842429 - 842925
+case3
+
+tree 1511: 842925 - 843649
+case2
+
+tree 1512: 843649 - 843876
+case2
+
+tree 1513: 843876 - 843915
+case3
+
+tree 1514: 843915 - 844123
+case3
+
+tree 1515: 844123 - 844685
+case1
+
+tree 1516: 844685 - 844821
+case3
+
+tree 1517: 844821 - 845257
+case3
+
+tree 1518: 845257 - 845403
+case1
+
+tree 1519: 845403 - 845765
+case3
+
+tree 1520: 845765 - 846061
+case3
+
+tree 1521: 846061 - 847396
+case2
+
+tree 1522: 847396 - 847442
+case2
+
+tree 1523: 847442 - 847600
+case1
+
+tree 1524: 847600 - 847612
+case1
+
+tree 1525: 847612 - 847783
+case2
+
+tree 1526: 847783 - 848168
+case3
+
+tree 1527: 848168 - 848545
+case2
+
+tree 1528: 848545 - 849013
+case2
+
+tree 1529: 849013 - 849825
+case2
+
+tree 1530: 849825 - 850321
+case3
+
+tree 1531: 850321 - 850468
+case3
+
+tree 1532: 850468 - 850599
+case2
+
+tree 1533: 850599 - 851028
+case2
+
+tree 1534: 851028 - 851064
+case1
+
+tree 1535: 851064 - 851866
+case3
+
+tree 1536: 851866 - 852101
+case1
+
+tree 1537: 852101 - 852370
+case1
+
+tree 1538: 852370 - 852601
+case3
+
+tree 1539: 852601 - 852801
+case3
+
+tree 1540: 852801 - 852802
+case2
+
+tree 1541: 852802 - 853053
+case1
+
+tree 1542: 853053 - 853314
+case3
+
+tree 1543: 853314 - 853413
+case1
+
+tree 1544: 853413 - 853961
+case2
+
+tree 1545: 853961 - 854499
+case3
+
+tree 1546: 854499 - 855037
+case3
+
+tree 1547: 855037 - 855368
+case2
+
+tree 1548: 855368 - 855487
+case2
+
+tree 1549: 855487 - 856077
+case3
+
+tree 1550: 856077 - 856162
+case3
+
+tree 1551: 856162 - 856923
+case3
+
+tree 1552: 856923 - 857120
+case1
+
+tree 1553: 857120 - 857262
+case2
+
+tree 1554: 857262 - 857328
+case1
+
+tree 1555: 857328 - 857957
+case2
+
+tree 1556: 857957 - 858867
+case2
+
+tree 1557: 858867 - 860177
+case3
+
+tree 1558: 860177 - 860323
+case2
+
+tree 1559: 860323 - 862224
+case3
+
+tree 1560: 862224 - 863461
+case2
+
+tree 1561: 863461 - 863854
+case3
+
+tree 1562: 863854 - 863936
+case2
+
+tree 1563: 863936 - 863985
+case3
+
+tree 1564: 863985 - 864502
+case1
+
+tree 1565: 864502 - 864553
+case1
+
+tree 1566: 864553 - 865555
+case1
+
+tree 1567: 865555 - 865789
+case1
+
+tree 1568: 865789 - 866009
+case2
+
+tree 1569: 866009 - 866566
+case3
+
+tree 1570: 866566 - 866852
+case2
+
+tree 1571: 866852 - 866940
+case3
+
+tree 1572: 866940 - 867711
+case1
+
+tree 1573: 867711 - 867810
+case2
+
+tree 1574: 867810 - 868183
+case1
+
+tree 1575: 868183 - 869109
+case2
+
+tree 1576: 869109 - 869266
+case2
+
+tree 1577: 869266 - 869373
+case1
+
+tree 1578: 869373 - 869969
+case2
+
+tree 1579: 869969 - 870250
+case2
+
+tree 1580: 870250 - 870662
+case2
+
+tree 1581: 870662 - 871031
+case3
+
+tree 1582: 871031 - 871215
+case2
+
+tree 1583: 871215 - 873625
+case2
+
+tree 1584: 873625 - 873893
+case1
+
+tree 1585: 873893 - 873942
+case2
+
+tree 1586: 873942 - 874164
+case2
+
+tree 1587: 874164 - 874306
+case2
+
+tree 1588: 874306 - 874468
+case1
+
+tree 1589: 874468 - 874475
+case3
+
+tree 1590: 874475 - 874622
+case3
+
+tree 1591: 874622 - 875134
+case1
+
+tree 1592: 875134 - 875426
+case2
+
+tree 1593: 875426 - 875791
+case3
+
+tree 1594: 875791 - 875976
+case2
+
+tree 1595: 875976 - 876451
+case3
+
+tree 1596: 876451 - 879334
+case2
+
+tree 1597: 879334 - 879606
+case2
+
+tree 1598: 879606 - 879680
+case2
+
+tree 1599: 879680 - 879988
+case2
+
+tree 1600: 879988 - 880339
+case2
+
+tree 1601: 880339 - 880466
+case2
+
+tree 1602: 880466 - 880769
+case2
+
+tree 1603: 880769 - 880781
+case3
+
+tree 1604: 880781 - 880882
+case2
+
+tree 1605: 880882 - 881007
+case2
+
+tree 1606: 881007 - 881113
+case2
+
+tree 1607: 881113 - 882003
+case1
+
+tree 1608: 882003 - 883127
+case2
+
+tree 1609: 883127 - 884159
+case1
+
+tree 1610: 884159 - 884552
+case2
+
+tree 1611: 884552 - 884698
+case1
+
+tree 1612: 884698 - 885057
+case3
+
+tree 1613: 885057 - 886118
+case3
+
+tree 1614: 886118 - 886196
+case1
+
+tree 1615: 886196 - 886328
+case2
+
+tree 1616: 886328 - 886550
+case1
+
+tree 1617: 886550 - 887049
+case1
+
+tree 1618: 887049 - 887926
+case2
+
+tree 1619: 887926 - 888948
+case1
+
+tree 1620: 888948 - 889052
+case2
+
+tree 1621: 889052 - 889300
+case1
+
+tree 1622: 889300 - 889948
+case2
+
+tree 1623: 889948 - 890238
+case1
+
+tree 1624: 890238 - 892241
+case2
+
+tree 1625: 892241 - 893021
+case3
+
+tree 1626: 893021 - 894015
+case1
+
+tree 1627: 894015 - 894411
+case3
+
+tree 1628: 894411 - 894497
+case3
+
+tree 1629: 894497 - 895131
+case1
+
+tree 1630: 895131 - 895977
+case3
+
+tree 1631: 895977 - 896225
+case2
+
+tree 1632: 896225 - 896612
+case1
+
+tree 1633: 896612 - 897328
+case3
+
+tree 1634: 897328 - 897798
+case2
+
+tree 1635: 897798 - 897981
+case1
+
+tree 1636: 897981 - 898646
+case1
+
+tree 1637: 898646 - 899415
+case2
+
+tree 1638: 899415 - 899807
+case3
+
+tree 1639: 899807 - 901329
+case3
+
+tree 1640: 901329 - 901825
+case2
+
+tree 1641: 901825 - 902039
+case3
+
+tree 1642: 902039 - 902333
+case2
+
+tree 1643: 902333 - 902870
+case3
+
+tree 1644: 902870 - 903533
+case1
+
+tree 1645: 903533 - 903562
+case3
+
+tree 1646: 903562 - 904466
+case2
+
+tree 1647: 904466 - 904769
+case2
+
+tree 1648: 904769 - 905870
+case2
+
+tree 1649: 905870 - 905875
+case1
+
+tree 1650: 905875 - 906195
+case3
+
+tree 1651: 906195 - 906503
+case1
+
+tree 1652: 906503 - 906663
+case1
+
+tree 1653: 906663 - 907540
+case2
+
+tree 1654: 907540 - 907685
+case2
+
+tree 1655: 907685 - 907841
+case3
+
+tree 1656: 907841 - 909180
+case2
+
+tree 1657: 909180 - 909973
+case1
+
+tree 1658: 909973 - 910308
+case2
+
+tree 1659: 910308 - 911431
+case3
+
+tree 1660: 911431 - 911625
+case2
+
+tree 1661: 911625 - 913553
+case3
+
+tree 1662: 913553 - 913598
+case2
+
+tree 1663: 913598 - 914075
+case2
+
+tree 1664: 914075 - 914772
+case1
+
+tree 1665: 914772 - 914874
+case2
+
+tree 1666: 914874 - 915186
+case3
+
+tree 1667: 915186 - 915673
+case1
+
+tree 1668: 915673 - 916005
+case1
+
+tree 1669: 916005 - 916211
+case3
+
+tree 1670: 916211 - 916667
+case3
+
+tree 1671: 916667 - 918202
+case3
+
+tree 1672: 918202 - 918616
+case2
+
+tree 1673: 918616 - 919604
+case2
+
+tree 1674: 919604 - 920003
+case3
+
+tree 1675: 920003 - 920475
+case3
+
+tree 1676: 920475 - 920819
+case2
+
+tree 1677: 920819 - 921132
+case2
+
+tree 1678: 921132 - 922748
+case2
+
+tree 1679: 922748 - 922938
+case1
+
+tree 1680: 922938 - 924168
+case2
+
+tree 1681: 924168 - 925513
+case3
+
+tree 1682: 925513 - 925721
+case2
+
+tree 1683: 925721 - 926796
+case2
+
+tree 1684: 926796 - 927504
+case3
+
+tree 1685: 927504 - 927512
+case2
+
+tree 1686: 927512 - 927513
+case2
+
+tree 1687: 927513 - 927543
+case2
+
+tree 1688: 927543 - 927636
+case1
+
+tree 1689: 927636 - 928124
+case2
+
+tree 1690: 928124 - 928252
+case3
+
+tree 1691: 928252 - 928568
+case2
+
+tree 1692: 928568 - 928951
+case3
+
+tree 1693: 928951 - 928953
+case1
+
+tree 1694: 928953 - 933489
+case2
+
+tree 1695: 933489 - 933695
+case3
+
+tree 1696: 933695 - 935947
+case1
+
+tree 1697: 935947 - 936002
+case3
+
+tree 1698: 936002 - 936370
+case2
+
+tree 1699: 936370 - 936861
+case1
+
+tree 1700: 936861 - 937657
+case2
+
+tree 1701: 937657 - 938280
+case1
+
+tree 1702: 938280 - 938883
+case3
+
+tree 1703: 938883 - 939407
+case3
+
+tree 1704: 939407 - 939536
+case2
+
+tree 1705: 939536 - 940268
+case1
+
+tree 1706: 940268 - 941037
+case1
+
+tree 1707: 941037 - 941395
+case1
+
+tree 1708: 941395 - 941815
+case3
+
+tree 1709: 941815 - 942028
+case2
+
+tree 1710: 942028 - 942494
+case3
+
+tree 1711: 942494 - 944223
+case3
+
+tree 1712: 944223 - 947533
+case2
+
+tree 1713: 947533 - 951078
+case2
+
+tree 1714: 951078 - 953093
+case3
+
+tree 1715: 953093 - 953661
+case3
+
+tree 1716: 953661 - 954469
+case1
+
+tree 1717: 954469 - 958137
+case3
+
+tree 1718: 958137 - 958955
+case1
+
+tree 1719: 958955 - 959744
+case2
+
+tree 1720: 959744 - 960430
+case2
+
+tree 1721: 960430 - 960634
+case1
+
+tree 1722: 960634 - 960791
+case1
+
+tree 1723: 960791 - 961018
+case1
+
+tree 1724: 961018 - 961076
+case3
+
+tree 1725: 961076 - 961784
+case2
+
+tree 1726: 961784 - 962060
+case1
+
+tree 1727: 962060 - 962113
+case2
+
+tree 1728: 962113 - 962374
+case1
+
+tree 1729: 962374 - 963077
+case2
+
+tree 1730: 963077 - 963551
+case2
+
+tree 1731: 963551 - 964310
+case3
+
+tree 1732: 964310 - 965046
+case3
+
+tree 1733: 965046 - 966507
+case3
+
+tree 1734: 966507 - 966594
+case1
+
+tree 1735: 966594 - 966821
+case3
+
+tree 1736: 966821 - 967101
+case2
+
+tree 1737: 967101 - 967304
+case1
+
+tree 1738: 967304 - 968371
+case3
+
+tree 1739: 968371 - 968408
+case3
+
+tree 1740: 968408 - 968427
+case2
+
+tree 1741: 968427 - 968705
+case2
+
+tree 1742: 968705 - 969347
+case3
+
+tree 1743: 969347 - 969695
+case2
+
+tree 1744: 969695 - 970782
+case1
+
+tree 1745: 970782 - 971216
+case2
+
+tree 1746: 971216 - 974126
+case2
+
+tree 1747: 974126 - 974269
+case1
+
+tree 1748: 974269 - 977308
+case3
+
+tree 1749: 977308 - 977645
+case3
+
+tree 1750: 977645 - 978772
+case2
+
+tree 1751: 978772 - 979602
+case2
+
+tree 1752: 979602 - 979976
+case2
+
+tree 1753: 979976 - 980607
+case3
+
+tree 1754: 980607 - 981287
+case1
+
+tree 1755: 981287 - 981355
+case2
+
+tree 1756: 981355 - 982062
+case3
+
+tree 1757: 982062 - 982485
+case3
+
+tree 1758: 982485 - 982738
+case2
+
+tree 1759: 982738 - 984380
+case3
+
+tree 1760: 984380 - 984990
+case2
+
+tree 1761: 984990 - 985440
+case1
+
+tree 1762: 985440 - 985660
+case2
+
+tree 1763: 985660 - 987326
+case1
+
+tree 1764: 987326 - 987491
+case3
+
+tree 1765: 987491 - 988866
+case1
+
+tree 1766: 988866 - 991854
+case2
+
+tree 1767: 991854 - 992180
+case1
+
+tree 1768: 992180 - 992310
+case2
+
+tree 1769: 992310 - 993630
+case2
+
+tree 1770: 993630 - 993738
+case2
+
+tree 1771: 993738 - 994316
+case2
+
+tree 1772: 994316 - 996394
+case2
+
+tree 1773: 996394 - 996939
+case3
+
+tree 1774: 996939 - 997117
+case1
+
+tree 1775: 997117 - 998001
+case1
+
+tree 1776: 998001 - 998060
+case1
+
+tree 1777: 998060 - 999058
+case3
+
+tree 1778: 999058 - 999393
+case2
+
+tree 1779: 999393 - 999628
+case1
+
+tree 1780: 999628 - 1000000
+case3
+number of samples in the tree sequences: 100
+number of local trees in the tree sequences: 1781
+total number of local trees read: 1769
+tree sequence starat at 4999 and ends at 1000000
+max memory usage: 17.0 MB
+
+Climb Search (0 iterations)
+-----------------------------
+
+saving first ARG...
+
+prior:      -29951.059585
+likelihood: -1403446.030559
+joint:      -1433397.090143
+nrecombs:   1768
+noncompats: 0
+arglen:     201529738983.002045
+max memory: 17.3 MB
+
+print stats done
+output tree seq file name: ../argweaver/examples/sim1/sim1.sample.0.ts
+log_local_trees done
+Resample All Branches (100 iterations)
+--------------------------------------
+sample 1
+resample_arg_regions: accept=0.272727
+sample time:   8.7 s
+
+prior:      -31231.251026
+likelihood: -1403315.697838
+joint:      -1434546.948864
+nrecombs:   1930
+noncompats: 0
+arglen:     190347470827.413177
+max memory: 30.9 MB
+
+sample 2
+resample_arg_regions: accept=0.325000
+sample time:   8.3 s
+
+prior:      -31598.807550
+likelihood: -1403279.910407
+joint:      -1434878.717958
+nrecombs:   1976
+noncompats: 0
+arglen:     183146266129.475494
+max memory: 32.5 MB
+
+sample 3
+forward (652 states,   1974 blocks):   3.1 s
+trace:                               537.2 ms
+sample_phase tsk_27_1 tsk_27_2 size=6 264 frac_switch=0.166667 0.000000
+add thread:                          302.4 ms
+resample_arg_leaf: accept=1.000000
+sample time:   3.9 s
+
+prior:      -31637.274663
+likelihood: -1403279.911889
+joint:      -1434917.186551
+nrecombs:   1978
+noncompats: 0
+arglen:     183146564136.146515
+max memory: 274.8 MB
+
+sample 4
+forward (649 states,   1977 blocks):   3.0 s
+trace:                               474.4 ms
+sample_phase tsk_7_2 tsk_7_1 size=7 380 frac_switch=0.142857 0.000000
+add thread:                          308.8 ms
+resample_arg_leaf: accept=1.000000
+sample time:   3.8 s
+
+prior:      -31633.595257
+likelihood: -1403278.818528
+joint:      -1434912.413785
+nrecombs:   1978
+noncompats: 0
+arglen:     183109340544.562317
+max memory: 275.3 MB
+
+sample 5
+forward (653 states,   1979 blocks):   3.0 s
+trace:                               434.1 ms
+sample_phase tsk_44_2 tsk_44_1 size=8 344 frac_switch=0.000000 0.000000
+add thread:                          304.4 ms
+resample_arg_leaf: accept=1.000000
+sample time:   3.8 s
+
+prior:      -31633.595257
+likelihood: -1403278.818528
+joint:      -1434912.413785
+nrecombs:   1978
+noncompats: 0
+arglen:     183109340544.562317
+max memory: 275.9 MB
+
+sample 6
+forward (651 states,   1973 blocks):   3.0 s
+trace:                               534.5 ms
+sample_phase tsk_48_1 tsk_48_2 size=10 339 frac_switch=0.400000 0.000000
+add thread:                          307.5 ms
+resample_arg_leaf: accept=1.000000
+sample time:   3.9 s
+
+prior:      -31589.728942
+likelihood: -1403276.761017
+joint:      -1434866.489958
+nrecombs:   1976
+noncompats: 0
+arglen:     182808586022.408722
+max memory: 275.9 MB
+
+sample 7
+forward (654 states,   1977 blocks):   3.0 s
+trace:                               464.1 ms
+sample_phase tsk_5_1 tsk_5_2 size=3 422 frac_switch=0.000000 0.000000
+add thread:                          304.4 ms
+resample_arg_leaf: accept=1.000000
+sample time:   3.8 s
+
+prior:      -31592.543998
+likelihood: -1403277.563000
+joint:      -1434870.106998
+nrecombs:   1976
+noncompats: 0
+arglen:     182859286501.219543
+max memory: 275.9 MB
+
+sample 8
+forward (654 states,   1969 blocks):   3.0 s
+trace:                               485.4 ms
+sample_phase tsk_36_1 tsk_36_2 size=5 417 frac_switch=0.400000 0.000000
+add thread:                          310.1 ms
+resample_arg_leaf: accept=1.000000
+sample time:   3.8 s
+
+prior:      -31604.869768
+likelihood: -1403281.664072
+joint:      -1434886.533841
+nrecombs:   1977
+noncompats: 0
+arglen:     182966671785.790985
+max memory: 275.9 MB
+
+sample 9
+resample_arg_regions: accept=0.375000
+sample time:   7.8 s
+
+prior:      -31765.746340
+likelihood: -1403267.345238
+joint:      -1435033.091578
+nrecombs:   1998
+noncompats: 1
+arglen:     183114899125.255219
+max memory: 275.9 MB
+
+sample 10
+resample_arg_regions: accept=0.410000
+sample time:   8.0 s
+
+prior:      -31482.866881
+likelihood: -1403293.066675
+joint:      -1434775.933556
+nrecombs:   1972
+noncompats: 2
+arglen:     180234298827.135223
+max memory: 275.9 MB
+
+output tree seq file name: ../argweaver/examples/sim1/sim1.sample.10.ts
+can't unambiguous map mutation at site 16199
+can't unambiguous map mutation at site 31962
+can't unambiguous map mutation at site 32524
+can't unambiguous map mutation at site 45014
+can't unambiguous map mutation at site 56757
+can't unambiguous map mutation at site 72887
+can't unambiguous map mutation at site 120452
+can't unambiguous map mutation at site 126743
+can't unambiguous map mutation at site 128351
+can't unambiguous map mutation at site 258618
+can't unambiguous map mutation at site 260777
+can't unambiguous map mutation at site 261616
+can't unambiguous map mutation at site 262148
+can't unambiguous map mutation at site 320218
+can't unambiguous map mutation at site 332065
+can't unambiguous map mutation at site 335430
+can't unambiguous map mutation at site 495208
+can't unambiguous map mutation at site 498534
+can't unambiguous map mutation at site 522350
+can't unambiguous map mutation at site 533101
+can't unambiguous map mutation at site 549115
+can't unambiguous map mutation at site 561110
+can't unambiguous map mutation at site 567393
+can't unambiguous map mutation at site 568023
+can't unambiguous map mutation at site 577326
+can't unambiguous map mutation at site 578090
+can't unambiguous map mutation at site 579969
+can't unambiguous map mutation at site 675850
+can't unambiguous map mutation at site 683252
+can't unambiguous map mutation at site 713864
+can't unambiguous map mutation at site 715184
+can't unambiguous map mutation at site 719808
+can't unambiguous map mutation at site 818352
+can't unambiguous map mutation at site 970702
+sample 11
+resample_arg_regions: accept=0.333333
+sample time:   7.1 s
+
+prior:      -31739.601709
+likelihood: -1403264.498700
+joint:      -1435004.100409
+nrecombs:   1996
+noncompats: 1
+arglen:     181606778830.578674
+max memory: 275.9 MB
+
+sample 12
+resample_arg_regions: accept=0.322222
+sample time:   7.9 s
+
+prior:      -31689.408289
+likelihood: -1403259.121265
+joint:      -1434948.529554
+nrecombs:   1994
+noncompats: 1
+arglen:     180621697477.553009
+max memory: 275.9 MB
+
+sample 13
