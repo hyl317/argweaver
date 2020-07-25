@@ -485,7 +485,7 @@ public:
     //     return descent_map;
     // }
 
-    set<int> get_descent_leaves(int node){
+    set<int> get_descent_leaves(int node) const{
         set<int> leaves;
         if (node < get_num_leaves()){
             leaves.insert(node);
@@ -499,13 +499,13 @@ public:
         return leaves;
     }
 
-    int find_mrca(shared_ptr<set<int>> leaves){
+    int find_mrca(shared_ptr<set<int>> leaves) const{
 
-        cout << "find mrca for: " << endl;
-        for(int leaf : *leaves){
-            cout << leaf << " ";
-        }
-        cout << endl;
+        //cout << "find mrca for: " << endl;
+        //for(int leaf : *leaves){
+        //    cout << leaf << " ";
+        //}
+        //cout << endl;
 
         // find mrca of leaves contained in the given set
         if (leaves->size() == get_num_leaves()){
@@ -515,13 +515,10 @@ public:
             int curr = *(leaves->begin());
             leaves_so_far.insert(curr);
             while (!includes(leaves_so_far.begin(), leaves_so_far.end(), leaves->begin(), leaves->end())){
-                cout << "curr: " << curr << endl;
                 int p = nodes[curr].parent;
-                //cout << "p: " << p;
                 assert(p != -1);
                 int *child = nodes[p].child;
                 int other = (child[1] == curr ? child[0] : child[1]);
-                //cout << ", other: " << other << endl;
                 set<int> leaves_to_insert = get_descent_leaves(other);
                 leaves_so_far.insert(leaves_to_insert.begin(), leaves_to_insert.end());
                 curr = p;
@@ -530,13 +527,13 @@ public:
         }
     }
 
-    int find_mrca(set<int> *leaves){
+    int find_mrca(set<int> *leaves) const{
 
-        cout << "find mrca for: " << endl;
-        for(int leaf : *leaves){
-            cout << leaf << " ";
-        }
-        cout << endl;
+        //cout << "find mrca for: " << endl;
+        //for(int leaf : *leaves){
+        //    cout << leaf << " ";
+        //}
+        //cout << endl;
 
         // find mrca of leaves contained in the given set
         if (leaves->size() == get_num_leaves()){
@@ -1007,6 +1004,8 @@ bool read_local_trees(const char *filename, const double *times, int ntimes,
                       LocalTrees *trees, vector<string> &seqnames);
 bool read_local_trees_from_ts(const char *ts_fileName, const double *times, int ntimes,
                       LocalTrees *trees, vector<string> &seqnames, int start_coord, int end_coord);
+void node_mapping(const LocalTree *lasttree, const LocalTree *localtree, int *mapping);
+void display_localtree(const LocalTree *localtree);
 bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times, int ntimes,
                       LocalTrees *trees, vector<string> &seqnames, int start_coord, int end_coord,
                       int maxIter = 10);

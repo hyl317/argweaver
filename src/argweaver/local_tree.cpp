@@ -500,6 +500,10 @@ void set_up_spr(Spr *spr, int coal_node, int recomb_node, int recomb_time_upper_
 
 // NOTE: the last argument int *times is there only for debugging purpose
 LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping){
+
+    //printLog(LOG_LOW, "tree before SPR:\n");
+    //display_localtree(prev_tree);
+
     LocalTree *new_tree = new LocalTree(*prev_tree); // use copy constructor
 
     for(int i = 0; i < prev_tree->nnodes; i++){
@@ -584,13 +588,8 @@ LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping){
     new_tree->root = root;
 
     // debug topology of the new tree
-    cout << "root: " << new_tree->root << endl;
-    for(int i = 0; i < new_tree->nnodes; i++){
-        cout << i << " has parent " << new_tree->nodes[i].parent;
-        if (i >= new_tree->get_num_leaves()){
-            cout << " and children" << new_tree->nodes[i].child[0] << ", " << new_tree->nodes[i].child[1] << endl;
-        }else{ cout << endl;}
-    }
+    printLog(LOG_LOW, "tree after SPR:\n");
+    display_localtree(new_tree);
 
     return new_tree;
 }
@@ -2749,6 +2748,55 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                 printLog(LOG_LOW, "Cannot find a Valid SPR sequence within reasonable time\n");
                 clean_up_intermediaryTrees(&intermediaryTrees);
                 exit(EXIT_FAILURE);
+            }else{
+                // adjust node ages (add "internal" SPR) because rSPR ignores node age
+                LocalTree *lasttree = intermediaryTrees.back().localtree;
+
+#ifdef DEBUG                
+                printLog(LOG_LOW, "display last tree in intermediaryTrees\n");
+                display_localtree(lasttree);
+                printLog(LOG_LOW, "display target tree\n");
+                display_localtree(localtree);
+#endif
+                // map nodes from lasttree to current localtree
+                // we assume lasttree and current localtree have exactly the same topology, which should be guaranteed by rSPR
+                // TODO: better to add a check for topology
+                int mapping1[nnodes];
+                node_mapping(lasttree, localtree, mapping1);
+                
+                // compare lasttree to localtree, determine which set of nodes need recoalescent to go to the right timing
+                set<int> up, down;
+                for(int i = 0; i < nnodes; i++){
+                    int age1 = lasttree->nodes[i].age;
+                    int age2 = localtree->nodes[mapping1[i]].age;
+                    if (age1 < age2){up.insert(i);}
+                    if (age2 < age1){down.insert(i);}
+                }
+
+                printLog(LOG_LOW, "number of nodes needing coalesce up: %d\n", up.size());
+                printLog(LOG_LOW, "number of nodes needing coalesce down: %d\n", down.size());
+
+                if (up.empty() && down.empty()){
+                    // adjust mapping; in this case, the lasttree is exactly the same as localtree
+                    // in this case, I want to lasttree with localtree and adjust mapping accordingly
+                    int *mapping0 = intermediaryTrees.back().mapping;
+                    int new_map[nnodes];
+                    for(int i = 0; i < nnodes; i++){
+                        new_map[i] = mapping0[i] == -1? -1 : mapping1[mapping0[i]];
+                    }
+                    memcpy(mapping0, new_map, sizeof(int)*nnodes);
+                    LocalTree *tmp = intermediaryTrees.back().localtree;
+                    delete tmp;
+                    intermediaryTrees.back().localtree = new LocalTree(*localtree);
+                    printLog(LOG_LOW, "display last tree in the vector\n");
+                    display_localtree(intermediaryTrees.back().localtree); 
+                    for(int i = 0; i < nnodes; i++){
+                        printLog(LOG_LOW, "%d->%d\n", i, intermediaryTrees.back().mapping[i]);
+                    }
+
+                }else{
+                    // add additional SPRs for internal coalescent
+                }
             }
         }
         
@@ -2771,18 +2819,54 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         s_prev = s_curr;
         prev_localtree = localtree;
         prev_map = curr_map;
-        // clean up before reading next tree
-        clean_up_intermediaryTrees(&intermediaryTrees);
+        // don't want to clean up because LocalTreeSpr points to the same LocalTree and mapping object as in intermediaryTrees
+        //clean_up_intermediaryTrees(&intermediaryTrees);
     }
     
     ret = tsk_tree_free(&tree);
     check_tsk_error(ret);
     ret = tsk_treeseq_free(&ts);
     check_tsk_error(ret);
-    //printLog(LOG_LOW, "number of invalid SPR moves: %d\n", num_invalid_spr);
     return true;
 }
 
+
+void node_mapping(const LocalTree *source_tree, const LocalTree *target_tree, int *mapping){
+    bool visited[target_tree->nnodes];
+    fill(mapping, mapping + target_tree->nnodes, -1);
+    fill(visited, visited + target_tree->nnodes, false);
+    for(int j = 0; j < target_tree->get_num_leaves(); j++){
+        //printLog(LOG_LOW, "tracing from leaf %d\n", j);
+        mapping[j] = j;
+        int p1 = source_tree->nodes[j].parent;
+        int p2 = target_tree->nodes[j].parent;
+        mapping[p1] = p2;
+        //printLog(LOG_LOW, "%d->%d\n", p1, p2);
+        while (p1 != source_tree->root && !visited[p1]){
+            assert(p2 != target_tree->root);
+            visited[p1] = true;
+            p1 = source_tree->nodes[p1].parent;
+            p2 = target_tree->nodes[p2].parent;
+            mapping[p1] = p2;
+            //printLog(LOG_LOW, "%d->%d\n", p1, p2);
+        }
+    }
+    // check mapping (for debugging purpose now; could be removed later)
+    for(int i = 0; i < target_tree->nnodes; i++){
+        assert(source_tree->get_descent_leaves(i) == target_tree->get_descent_leaves(mapping[i]));
+    }
+}
+
+// For my debugging purpose only
+void display_localtree(const LocalTree *localtree){
+    for(int i = 0; i < localtree->nnodes; i++){
+        cout << i << " has parent " << localtree->nodes[i].parent;
+        if (i >= localtree->get_num_leaves()){
+            cout << " and children " << localtree->nodes[i].child[0] << ", " << \
+                    localtree->nodes[i].child[1] << endl;
+        }else{ cout << endl;}
+    }
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -2984,10 +3068,10 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
         int start = floor(tree.left);
         int end = floor(tree.right);
         if (end < start_coord){
-            printLog(LOG_LOW, "skipping tree %d\n", tsk_tree_get_index(&tree));
+            //printLog(LOG_LOW, "skipping tree %d\n", tsk_tree_get_index(&tree));
             continue;
         }else if (start >= end_coord){
-            printLog(LOG_LOW, "ignoring local tree from %d\n", tsk_tree_get_index(&tree));
+            //printLog(LOG_LOW, "ignoring local tree from %d\n", tsk_tree_get_index(&tree));
             break;
         }else if (start < start_coord){
             start = start_coord;

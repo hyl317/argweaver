@@ -228,6 +228,7 @@ public:
                     " according to PL score in VCF file", ADVANCED_OPT));
         config.add(new ConfigParam<string>("", "--ts", "<tree sequence file>", &ts, 
                     "path to tskit tree sequence file."));
+        config.add(new ConfigSwitch("", "record_ts", &record_ts, "record sampled args in tree sequence format"));
 
 #ifdef ARGWEAVER_MPI
         config.add(new ConfigSwitch
@@ -567,6 +568,7 @@ public:
     string out_prefix;
     string arg_file;
     string ts;
+    bool record_ts;
     //    string cr_file;
     string subregion_str;
     string age_file;
@@ -940,9 +942,10 @@ bool log_local_trees(const ArgModel *model, const Sequences *sequences,
                       model->pop_tree != NULL,
                       *self_recomb_ptr, self_recombs);
     
-    string out_ts_file = get_out_ts_file(*config, iter);
-    printLog(LOG_LOW, "output tree seq file name: %s\n", out_ts_file.c_str());
-    write_local_trees_ts(out_ts_file.c_str(), trees, sequences, sites_mapping, model->times);
+    if (config->record_ts){
+        string out_ts_file = get_out_ts_file(*config, iter);
+        write_local_trees_ts(out_ts_file.c_str(), trees, sequences, sites_mapping, model->times);
+    }
 
     // testing for now; output coal records version
     /*    string out_cr_file = get_out_cr_file(*config, iter);
@@ -2058,11 +2061,11 @@ int main(int argc, char **argv)
         trees_ptr = unique_ptr<LocalTrees>(trees);
         vector<string> seqnames;
 
-        //if(!read_init_tsinfer(c.ts.c_str(), &c.model, trees, seqnames, seq_region.start, seq_region.end)){
-        //    printError("could not read tree seq file");
-        //    return EXIT_ERROR;
-        //}
-        //exit(EXIT_FAILURE);
+        if(!read_init_tsinfer(c.ts.c_str(), &c.model, trees, seqnames, seq_region.start, seq_region.end)){
+            printError("could not read tree seq file");
+            return EXIT_ERROR;
+        }
+        exit(EXIT_FAILURE);
 
         if (!read_init_ts(c.ts.c_str(), &c.model, trees, seqnames, seq_region.start, seq_region.end)) {
                 printError("could not read tree seq file");
