@@ -2776,26 +2776,65 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                 printLog(LOG_LOW, "number of nodes needing coalesce up: %d\n", up.size());
                 printLog(LOG_LOW, "number of nodes needing coalesce down: %d\n", down.size());
 
-                if (up.empty() && down.empty()){
-                    // adjust mapping; in this case, the lasttree is exactly the same as localtree
-                    // in this case, I want to lasttree with localtree and adjust mapping accordingly
-                    int *mapping0 = intermediaryTrees.back().mapping;
-                    int new_map[nnodes];
+                if(!up.empty()){
+                    int preorder[nnodes];
+                    int norder;
+                    lasttree->get_preorder(lasttree->root, preorder, norder);
                     for(int i = 0; i < nnodes; i++){
-                        new_map[i] = mapping0[i] == -1? -1 : mapping1[mapping0[i]];
+                        int node = preorder[i];
+                        if (up.find(node) != up.end()){
+                            assert(node >= lasttree->get_num_leaves()); // leaf node cannot change time
+                            int recoal_time = localtree->nodes[mapping1[node]].age;
+                            int recomb_node = lasttree->nodes[node].child[0];
+                            set_up_spr(&spr, node, recomb_node, lasttree->nodes[node].age, lasttree->nodes[recomb_node].age,
+                                            recoal_time, times);
+                            int *mapping = new int[nnodes];
+                            LocalTree *intermediary_tree = apply_spr_new(prev_localtree, spr, mapping);
+                            intermediaryTrees.push_back(LocalTreeSpr_tmp{intermediary_tree, mapping, Spr(spr)});
+                            prev_localtree = intermediary_tree;
+                            spr.set_null();
+                            // this sort of internal coalescent that doesn't alter tree topology
+                            // so we don't need to update mapping1
+                        }
                     }
-                    memcpy(mapping0, new_map, sizeof(int)*nnodes);
-                    LocalTree *tmp = intermediaryTrees.back().localtree;
-                    delete tmp;
-                    intermediaryTrees.back().localtree = new LocalTree(*localtree);
-                    printLog(LOG_LOW, "display last tree in the vector\n");
-                    display_localtree(intermediaryTrees.back().localtree); 
-                    for(int i = 0; i < nnodes; i++){
-                        printLog(LOG_LOW, "%d->%d\n", i, intermediaryTrees.back().mapping[i]);
-                    }
+                }
 
-                }else{
-                    // add additional SPRs for internal coalescent
+                if(!down.empty()){
+                    int postorder[nnodes];
+                    lasttree->get_postorder(postorder);
+                    for(int i = 0; i < nnodes; i++){
+                        int node = postorder[i];
+                        if (down.find(node) != down.end()){
+                            assert(node >= lasttree->get_num_leaves());
+                            int recomb_node = lasttree->nodes[node].child[0];
+                            int recoal_node = lasttree->nodes[node].child[1];
+                            int recoal_time = localtree->nodes[mapping1[node]].age;
+                            set_up_spr(&spr, recoal_node, recomb_node, recoal_time, 
+                                    prev_localtree->nodes[recomb_node].age, recoal_time, times);
+                            int *mapping = new int[nnodes];
+                            LocalTree *intermediary_tree = apply_spr_new(prev_localtree, spr, mapping);
+                            intermediaryTrees.push_back(LocalTreeSpr_tmp{intermediary_tree, mapping, Spr(spr)});
+                            prev_localtree = intermediary_tree;
+                            spr.set_null();
+                        }
+                    }
+                }
+
+                // adjust mapping; in this case, the lasttree is exactly the same as localtree
+                // in this case, I want to lasttree with localtree and adjust mapping accordingly
+                int *mapping0 = intermediaryTrees.back().mapping;
+                int new_map[nnodes];
+                for(int i = 0; i < nnodes; i++){
+                    new_map[i] = mapping0[i] == -1? -1 : mapping1[mapping0[i]];
+                }
+                memcpy(mapping0, new_map, sizeof(int)*nnodes);
+                LocalTree *tmp = intermediaryTrees.back().localtree;
+                delete tmp;
+                intermediaryTrees.back().localtree = new LocalTree(*localtree);
+                printLog(LOG_LOW, "display last tree in the vector\n");
+                display_localtree(intermediaryTrees.back().localtree); 
+                for(int i = 0; i < nnodes; i++){
+                    printLog(LOG_LOW, "%d->%d\n", i, intermediaryTrees.back().mapping[i]);
                 }
             }
         }
@@ -2806,15 +2845,15 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         // don't forget to delete as the last tree as well
         // comment out for now, need to implement others in order to run the following
 
-        // int total_block_length = end - start;
-        // int total_num_tree = intermediaryTrees.size();
-        // int length_per_intermediary_tree = total_block_length / total_num_tree;
-        // int length_last_tree = total_block_length - (total_num_tree - 1)*length_per_intermediary_tree;
-        // for(LocalTreeSpr_tmp intermediaryTree : intermediaryTrees){
-        //     trees->trees.push_back(LocalTreeSpr(intermediaryTree.localtree, intermediaryTree.spr, 
-        //             length_per_intermediary_tree, intermediaryTree.mapping));
-        // }
-
+        int total_block_length = end - start;
+        int total_num_tree = intermediaryTrees.size();
+        int length_per_intermediary_tree = total_block_length / total_num_tree;
+        int length_last_tree = total_block_length - (total_num_tree - 1)*length_per_intermediary_tree;
+        for(LocalTreeSpr_tmp intermediaryTree : intermediaryTrees){
+             trees->trees.push_back(LocalTreeSpr(intermediaryTree.localtree, intermediaryTree.spr, 
+                     length_per_intermediary_tree, intermediaryTree.mapping));
+        }
+        trees->trees.back().blocklen = length_last_tree;
 
         s_prev = s_curr;
         prev_localtree = localtree;
