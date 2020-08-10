@@ -228,7 +228,7 @@ public:
                     " according to PL score in VCF file", ADVANCED_OPT));
         config.add(new ConfigParam<string>("", "--ts", "<tree sequence file>", &ts, 
                     "path to tskit tree sequence file."));
-        config.add(new ConfigSwitch("", "record_ts", &record_ts, "record sampled args in tree sequence format"));
+        config.add(new ConfigSwitch("", "--record_ts", &record_ts, "record sampled args in tree sequence format"));
 
 #ifdef ARGWEAVER_MPI
         config.add(new ConfigSwitch
@@ -1173,15 +1173,8 @@ void resample_arg_all(ArgModel *model, Sequences *sequences, LocalTrees *trees,
                       const TrackNullValue *maskmap_orig)
 {
 
-    //for debugging purpose
-#ifdef DEBUG
-    printLog(LOG_LOW, "--------------resample_arg_all----------------\n");
-#endif
-
     // setup search options
     bool do_leaf[config->niters+1];
-    //int window = 100000;
-    //int niters = 10;
     int window = config->resample_window;
     int niters = config->resample_window_iters;
     window /= config->compress_seq;

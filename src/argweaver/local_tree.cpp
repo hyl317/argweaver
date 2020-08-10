@@ -588,8 +588,8 @@ LocalTree* apply_spr_new(LocalTree *prev_tree, const Spr &spr, int *mapping){
     new_tree->root = root;
 
     // debug topology of the new tree
-    printLog(LOG_LOW, "tree after SPR:\n");
-    display_localtree(new_tree);
+    //printLog(LOG_LOW, "tree after SPR:\n");
+    //display_localtree(new_tree);
 
     return new_tree;
 }
@@ -2600,6 +2600,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
     spr.set_null();
     int *mapping = NULL;
     int num_invalid_spr = 0;
+    int carryOn = 0;
     for(iter = tsk_tree_first(&tree); iter == 1; iter = tsk_tree_next(&tree)){
         int start = floor(tree.left);
         int end = floor(tree.right);
@@ -2615,6 +2616,8 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
             end = end_coord;
         }
 
+        start -= carryOn;
+        assert(start >= start_coord);
         int ptree[nnodes];
         int ages[nnodes];
         map<int, tsk_id_t> curr_map;
@@ -2622,6 +2625,7 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         LocalTree *localtree = new LocalTree(ptree, nnodes, ages);
         string s_curr = get_newick_rep_rSPR(localtree);
         printLog(LOG_LOW, "\nparsing tree %d: %s\n", tsk_tree_get_index(&tree), s_curr.c_str());
+        printLog(LOG_LOW, "range:%d-%d\n", start, end);
         if (s_prev.empty()){
             s_prev = s_curr;
             trees->trees.push_back(LocalTreeSpr(localtree, spr, end - start, mapping));
@@ -2675,12 +2679,13 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
                     set<int> tmp;
                     set_union(s1->begin(), s1->end(), s2->begin(), s2->end(), insert_iterator<set<int>>(tmp, tmp.begin()));
                     int recoal_time = localtree->nodes[localtree->find_mrca(&tmp)].age;
-                    // the second check is slightly tricky
+                    // the second check is for checking if recoal_time is within branch
                     // for an example, look at the transition from tree 29 to tree 30 in 5.tsdate
                     // there is a problem if we break edge 1 and re-attach it to edge 4
                     if (recoal_time < recomb_time_lower_bound || 
                             (recoal_node != prev_localtree->root &&
-                            recoal_time > prev_localtree->nodes[prev_localtree->nodes[recoal_node].parent].age)){
+                            recoal_time > prev_localtree->nodes[prev_localtree->nodes[recoal_node].parent].age) ||
+                            recoal_time < prev_localtree->nodes[recoal_node].age){
                         printLog(LOG_LOW, "-----------------------Invlid SPR moves----------------------\n");
                         break;
                     }
@@ -2771,19 +2776,21 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
 
             // adjust mapping; in this case, the lasttree is exactly the same as localtree
             // in this case, I want to lasttree with localtree and adjust mapping accordingly
-            int *mapping0 = intermediaryTrees.back().mapping;
-            int new_map[nnodes];
-            for(int i = 0; i < nnodes; i++){
-                new_map[i] = mapping0[i] == -1? -1 : mapping1[mapping0[i]];
-            }
-            memcpy(mapping0, new_map, sizeof(int)*nnodes);
-            LocalTree *tmp = intermediaryTrees.back().localtree;
-            delete tmp;
-            intermediaryTrees.back().localtree = new LocalTree(*localtree);
-            printLog(LOG_LOW, "display last tree in the vector\n");
-            display_localtree(intermediaryTrees.back().localtree); 
-            for(int i = 0; i < nnodes; i++){
-                printLog(LOG_LOW, "%d->%d\n", i, intermediaryTrees.back().mapping[i]);
+            if (!intermediaryTrees.empty()){
+                int *mapping0 = intermediaryTrees.back().mapping;
+                int new_map[nnodes];
+                for(int i = 0; i < nnodes; i++){
+                    new_map[i] = mapping0[i] == -1? -1 : mapping1[mapping0[i]];
+                }
+                memcpy(mapping0, new_map, sizeof(int)*nnodes);
+                LocalTree *tmp = intermediaryTrees.back().localtree;
+                delete tmp;
+                intermediaryTrees.back().localtree = new LocalTree(*localtree);
+                //printLog(LOG_LOW, "display last tree in the vector\n");
+                //display_localtree(intermediaryTrees.back().localtree); 
+                //for(int i = 0; i < nnodes; i++){
+                    //printLog(LOG_LOW, "%d->%d\n", i, intermediaryTrees.back().mapping[i]);
+                //}
             }
         }
         
@@ -2793,15 +2800,18 @@ bool read_local_trees_from_tsinfer(const char *ts_fileName, const double *times,
         // don't forget to delete as the last tree as well
         // comment out for now, need to implement others in order to run the following
 
-        int total_block_length = end - start;
-        int total_num_tree = intermediaryTrees.size();
-        int length_per_intermediary_tree = total_block_length / total_num_tree;
-        int length_last_tree = total_block_length - (total_num_tree - 1)*length_per_intermediary_tree;
-        for(LocalTreeSpr_tmp intermediaryTree : intermediaryTrees){
-             trees->trees.push_back(LocalTreeSpr(intermediaryTree.localtree, intermediaryTree.spr, 
+        if (!intermediaryTrees.empty()){
+            int total_block_length = end - start;
+            int total_num_tree = intermediaryTrees.size();
+            int length_per_intermediary_tree = total_block_length / total_num_tree;
+            int length_last_tree = total_block_length - (total_num_tree - 1)*length_per_intermediary_tree;
+            for(LocalTreeSpr_tmp intermediaryTree : intermediaryTrees){
+                trees->trees.push_back(LocalTreeSpr(intermediaryTree.localtree, intermediaryTree.spr, 
                      length_per_intermediary_tree, intermediaryTree.mapping));
-        }
-        trees->trees.back().blocklen = length_last_tree;
+            }
+            trees->trees.back().blocklen = length_last_tree;
+            carryOn = 0;
+        }else{carryOn = end - start;}
 
         s_prev = s_curr;
         prev_localtree = localtree;
@@ -2884,12 +2894,12 @@ void traverse_upwards(tsk_tree_t *tree, int* ptree, int* ages, map<tsk_id_t, int
             if (visited.find(p) == visited.end()){
                  if (tsk_treeseq_is_sample(tree->tree_sequence, u)){
                     ptree[u] = p;
-                    //printLog(LOG_HIGH, "%d gets parent %d\n", u, p);
+                    //printLog(LOG_LOW, "%d gets parent %d\n", u, p);
                 } else{
                     ptree[order + num_samples] = p;
                     mapping->insert(pair<tsk_id_t, int>(u, order + num_samples));
                     tsk_tree_get_time(tree, u, &ages_tmp[order + num_samples]);
-                    //printLog(LOG_HIGH, "%d gets parent %d\n", order+num_samples, p);
+                    //printLog(LOG_LOW, "%d gets parent %d\n", order+num_samples, p);
                     order++;
                 }
                 visited.insert(p);
@@ -2903,7 +2913,7 @@ void traverse_upwards(tsk_tree_t *tree, int* ptree, int* ages, map<tsk_id_t, int
                 ptree[tmp] = p;
                 mapping->insert(pair<tsk_id_t, int>(u, tmp));
                 tsk_tree_get_time(tree, u, &ages_tmp[tmp]);
-                //printLog(LOG_HIGH, "%d gets parent %d\n", u, p);
+                //printLog(LOG_LOW, "%d gets parent %d\n", u, p);
                 break;
             }
            
@@ -2916,7 +2926,8 @@ void traverse_upwards(tsk_tree_t *tree, int* ptree, int* ages, map<tsk_id_t, int
         if (ptree[i] != -1){
             ptree[i] = mapping->at(ptree[i]);
         }
-        ages[i] = find_time(ages_tmp[i], times, ntimes);
+        // enforce nodes[i].age < ntimes-1
+        ages[i] = min(find_time(ages_tmp[i], times, ntimes), ntimes-2);
     }
 
 
@@ -3061,10 +3072,10 @@ bool identify_1SPR(Spr *spr, int *mapping, const map<tsk_id_t, int> *prev, const
         int start = floor(tree.left);
         int end = floor(tree.right);
         if (end < start_coord){
-            //printLog(LOG_LOW, "skipping tree %d\n", tsk_tree_get_index(&tree));
+            printLog(LOG_LOW, "skipping tree %d\n", tsk_tree_get_index(&tree));
             continue;
         }else if (start >= end_coord){
-            //printLog(LOG_LOW, "ignoring local tree from %d\n", tsk_tree_get_index(&tree));
+            printLog(LOG_LOW, "ignoring local tree from %d\n", tsk_tree_get_index(&tree));
             break;
         }else if (start < start_coord){
             start = start_coord;
@@ -3272,8 +3283,8 @@ bool assert_spr(const LocalTree *last_tree, const LocalTree *tree,
     LocalNode *nodes = tree->nodes;
     static int count=0;
     count++;
-    display_localtree(last_tree);
-    printLog(LOG_LOW, "recoal node: %d\n", spr->coal_node);
+    //display_localtree(last_tree);
+    //printLog(LOG_LOW, "recoal node: %d\n", spr->coal_node);
 
     if (spr->is_null()) {
         // just check that mapping is 1-to-1
@@ -3529,7 +3540,7 @@ bool assert_trees(const LocalTrees *trees, const PopulationTree *pop_tree,
     for (LocalTrees::const_iterator it=trees->begin();
          it != trees->end(); ++it)
     {   
-        printLog(LOG_LOW, "asserting tree %d\n", id++);
+        //printLog(LOG_LOW, "asserting tree %d\n", id++);
         LocalTree *tree = it->tree;
         const Spr *spr = &it->spr;
         const int *mapping = it->mapping;
